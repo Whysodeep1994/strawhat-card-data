@@ -1,0 +1,22 @@
+{
+  "name": "Portgas.D.Ace has no [Rush] with another Leader",
+  "rules": ["10-1-1-1"],
+  "setup": {
+    "p1": {
+      "hand": ["ST15-005"],
+      "don": {
+        "active": 5
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "legal.p1.attack": 1
+  }
+}

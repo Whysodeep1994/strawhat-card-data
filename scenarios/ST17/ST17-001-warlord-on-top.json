@@ -1,0 +1,31 @@
+{
+  "name": "Crocodile draws 2 and puts 1 back when the top card is a Warlord",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["ST17-001"],
+      "don": {
+        "active": 4
+      },
+      "deck": ["ST17-002", "TEST-FILLER", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.1"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p1.hand.0.cardId": "ST17-002",
+    "p1.deck": 2,
+    "p1.deck.0.cardId": "TEST-FILLER"
+  }
+}

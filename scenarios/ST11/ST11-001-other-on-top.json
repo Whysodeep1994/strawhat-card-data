@@ -1,0 +1,26 @@
+{
+  "name": "Uta puts a card that isn't {FILM} at the bottom",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "leader": {
+        "card": "ST11-001",
+        "don": 1
+      },
+      "deck": ["TEST-FILLER", "ST16-005"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    }
+  ],
+  "expect": {
+    "p1.hand": 0,
+    "p1.deck.0.cardId": "ST16-005",
+    "p1.deck.1.cardId": "TEST-FILLER"
+  }
+}

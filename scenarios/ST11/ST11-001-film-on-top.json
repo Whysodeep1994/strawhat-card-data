@@ -1,0 +1,30 @@
+{
+  "name": "Uta adds a revealed {FILM} card when attacking with DON!!",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "leader": {
+        "card": "ST11-001",
+        "don": 1
+      },
+      "deck": ["ST16-005", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.0"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p1.hand.0.cardId": "ST16-005"
+  }
+}
