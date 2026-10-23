@@ -1,0 +1,36 @@
+{
+  "name": "Catarina Devon gains [Double Attack] with a {Blackbeard Pirates} Leader",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "OP09-081",
+      "characters": ["OP09-084"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "chooseOne",
+      "player": "p1",
+      "option": 0
+    },
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 2
+  }
+}

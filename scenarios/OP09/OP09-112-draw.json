@@ -1,0 +1,23 @@
+{
+  "name": "Belo Betty draws with 2 or less Life",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP09-112"],
+      "don": {
+        "active": 3
+      },
+      "life": 2
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.hand": 1
+  }
+}

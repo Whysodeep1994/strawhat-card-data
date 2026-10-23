@@ -1,0 +1,31 @@
+{
+  "name": "Lim sets itself active with 3 rested Characters",
+  "rules": ["10-2-7"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "OP09-037",
+          "rested": true
+        },
+        {
+          "card": "TEST-FILLER",
+          "rested": true
+        },
+        {
+          "card": "TEST-FILLER",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "endTurn",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "p1.characters.0.rested": false
+  }
+}

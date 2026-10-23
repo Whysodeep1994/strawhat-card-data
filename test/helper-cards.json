@@ -136,5 +136,40 @@
         ]
       }
     ]
+  },
+  {
+    "id": "TEST-LEADER-4000",
+    "name": "Test Leader 4000",
+    "category": "leader",
+    "colors": ["red"],
+    "life": 4,
+    "power": 4000
+  },
+  {
+    "id": "TEST-LEADER-KID",
+    "name": "Test Kid Leader",
+    "category": "leader",
+    "colors": ["purple"],
+    "life": 4,
+    "power": 7000,
+    "types": ["Kid Pirates"]
+  },
+  {
+    "id": "TEST-LEADER-RA",
+    "name": "Test Revolutionary Leader",
+    "category": "leader",
+    "colors": ["yellow"],
+    "life": 4,
+    "power": 5000,
+    "types": ["Revolutionary Army"]
+  },
+  {
+    "id": "TEST-LEADER-EGGHEAD",
+    "name": "Test Egghead Leader",
+    "category": "leader",
+    "colors": ["yellow"],
+    "life": 4,
+    "power": 5000,
+    "types": ["Egghead"]
   }
 ]

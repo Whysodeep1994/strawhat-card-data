@@ -1,0 +1,45 @@
+{
+  "name": "Brook [Trigger] makes an opponent with 6 cards trash 2",
+  "rules": ["10-1-5"],
+  "setup": {
+    "p1": {
+      "hand": [
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER"
+      ]
+    },
+    "p2": {
+      "leader": "TEST-LEADER-EGGHEAD",
+      "life": ["OP09-111", "TEST-FILLER", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0", "p1.hand.1"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 4
+  }
+}

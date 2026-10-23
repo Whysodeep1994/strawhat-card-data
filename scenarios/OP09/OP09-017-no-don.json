@@ -1,0 +1,30 @@
+{
+  "name": "Wire has no [Rush] without DON!!",
+  "rules": ["10-1-1-1"],
+  "setup": {
+    "p1": {
+      "leader": "TEST-LEADER-KID",
+      "hand": ["OP09-017"],
+      "don": {
+        "active": 4
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader",
+      "illegal": true
+    }
+  ],
+  "expect": {
+    "p2.life": 4
+  }
+}

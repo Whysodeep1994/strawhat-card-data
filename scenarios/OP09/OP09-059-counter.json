@@ -1,0 +1,47 @@
+{
+  "name": "Murder at the Steam Bath gives +3000, then trashes 2 from hand and 2 from deck",
+  "rules": ["10-2-4"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "hand": ["OP09-059", "TEST-FILLER", "TEST-FILLER"],
+      "don": {
+        "active": 2
+      }
+    },
+    "p2": {}
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p2",
+      "attacker": "p2.leader",
+      "target": "p1.leader"
+    },
+    {
+      "type": "counterEvent",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.leader"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0", "p1.hand.1"]
+    },
+    {
+      "type": "pass",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "p1.life": 4,
+    "p1.trash": 5,
+    "p1.deck": 18
+  }
+}

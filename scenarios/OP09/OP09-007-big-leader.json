@@ -1,0 +1,23 @@
+{
+  "name": "Heat can't power up a 5000 power Leader",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP09-007"],
+      "don": {
+        "active": 3
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "modifiers": 0,
+    "prompt.kind": "main"
+  }
+}

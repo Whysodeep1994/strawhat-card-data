@@ -1,0 +1,29 @@
+{
+  "name": "Tony Tony.Chopper sets an {ODYSSEY} Character active at the end of the turn",
+  "rules": ["10-2-7"],
+  "setup": {
+    "p1": {
+      "characters": [
+        "OP09-029",
+        {
+          "card": "OP09-038",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "endTurn",
+      "player": "p1"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.1"]
+    }
+  ],
+  "expect": {
+    "p1.characters.1.rested": false
+  }
+}

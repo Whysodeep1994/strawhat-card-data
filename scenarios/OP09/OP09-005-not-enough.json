@@ -1,0 +1,25 @@
+{
+  "name": "Silvers Rayleigh draws nothing against only 1 big Character",
+  "rules": ["8-3-2-1"],
+  "setup": {
+    "p1": {
+      "hand": ["OP09-005"],
+      "don": {
+        "active": 5
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C5-5000", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.hand": 0
+  }
+}

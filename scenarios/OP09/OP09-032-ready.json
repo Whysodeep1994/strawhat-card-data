@@ -1,0 +1,29 @@
+{
+  "name": "Donquixote Rosinante sets itself active and can block",
+  "rules": ["10-2-16"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "characters": [
+        {
+          "card": "OP09-032",
+          "rested": true
+        }
+      ]
+    },
+    "p2": {}
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p2",
+      "attacker": "p2.leader",
+      "target": "p1.leader"
+    }
+  ],
+  "expect": {
+    "p1.characters.0.rested": false,
+    "prompt.kind": "block"
+  }
+}
