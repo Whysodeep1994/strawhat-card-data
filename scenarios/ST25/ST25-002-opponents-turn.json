@@ -1,0 +1,31 @@
+{
+  "name": "Cabaji is 6000 on your opponent's turn and survives a 5000 attack",
+  "rules": ["10-2-12"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "characters": [
+        {
+          "card": "ST25-002",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p2",
+      "attacker": "p2.leader",
+      "target": "p1.characters.0"
+    },
+    {
+      "type": "pass",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "p1.characters": 1
+  }
+}

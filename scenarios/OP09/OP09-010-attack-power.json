@@ -1,0 +1,25 @@
+{
+  "name": "Bonk Punch gets +2000 when attacking with 1 DON!!",
+  "rules": ["10-2-5", "10-2-9"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "OP09-010",
+          "don": 1
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    }
+  ],
+  "expect": {
+    "modifiers.0.power": 2000
+  }
+}

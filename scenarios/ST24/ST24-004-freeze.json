@@ -1,0 +1,45 @@
+{
+  "name": "Law & Bepo rests a Character that stays rested, and with 2 rested gives the Leader +2000",
+  "rules": ["10-2-6", "6-2-4"],
+  "setup": {
+    "p1": {
+      "hand": ["ST24-004"],
+      "don": {
+        "active": 10
+      }
+    },
+    "p2": {
+      "characters": [
+        "TEST-FILLER",
+        {
+          "card": "TEST-FILLER",
+          "rested": true
+        }
+      ],
+      "don": {
+        "deck": 10
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    },
+    {
+      "type": "endTurn",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "p2.characters.0.rested": true,
+    "p2.characters.1.rested": false,
+    "modifiers.1.power": 2000
+  }
+}

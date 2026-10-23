@@ -1,0 +1,36 @@
+{
+  "name": "Yasopp gives 1 rested DON!!, once per turn",
+  "rules": ["10-2-2", "10-2-13"],
+  "setup": {
+    "p1": {
+      "characters": ["ST23-005"],
+      "don": {
+        "rested": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.leader"]
+    },
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0,
+      "illegal": true
+    }
+  ],
+  "expect": {
+    "p1.leader.givenDon": 1,
+    "p1.donRested": 1
+  }
+}

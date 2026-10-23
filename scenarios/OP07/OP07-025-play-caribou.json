@@ -1,0 +1,29 @@
+{
+  "name": "Coribou plays [Caribou] from hand rested",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP07-025", "OP07-023"],
+      "don": {
+        "active": 3
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 2,
+    "p1.characters.1.cardId": "OP07-023",
+    "p1.characters.1.rested": true
+  }
+}
