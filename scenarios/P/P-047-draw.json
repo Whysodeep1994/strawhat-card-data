@@ -1,0 +1,24 @@
+{
+  "name": "Luffy with 1 DON!! draws 1 when attacking with 3 or fewer cards in hand",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "leader": {
+        "card": "P-047",
+        "don": 1
+      },
+      "hand": ["TEST-FILLER", "TEST-FILLER", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    }
+  ],
+  "expect": {
+    "p1.hand": 4
+  }
+}

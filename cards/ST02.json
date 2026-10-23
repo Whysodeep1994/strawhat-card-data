@@ -1,0 +1,40 @@
+[
+  {
+    "id": "ST02-001",
+    "name": "Eustass\"Captain\"Kid",
+    "category": "leader",
+    "colors": ["green"],
+    "life": 5,
+    "power": 5000,
+    "types": ["Supernovas", "Kid Pirates"],
+    "attribute": "Special",
+    "rarity": "L",
+    "blockIcon": 1,
+    "text": "[Activate: Main] [Once Per Turn]  ③ (You may rest the specified number of DON!! cards in your cost area.) You may trash 1 card from your hand: Set this Leader as active.",
+    "image": "images/ST02-001.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569002",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "oncePerTurn": true,
+        "costs": [
+          {
+            "restDon": 3
+          },
+          {
+            "trashFromHand": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "setActive",
+            "target": {
+              "side": "this"
+            }
+          }
+        ],
+        "optional": true
+      }
+    ]
+  }
+]

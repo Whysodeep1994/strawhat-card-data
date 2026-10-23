@@ -1,0 +1,27 @@
+{
+  "name": "Kid can't activate without a card to trash",
+  "rules": ["8-3-1-3"],
+  "setup": {
+    "p1": {
+      "leader": {
+        "card": "ST02-001",
+        "rested": true
+      },
+      "don": {
+        "active": 3
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 0,
+      "illegal": true
+    }
+  ],
+  "expect": {
+    "p1.leader.rested": true
+  }
+}

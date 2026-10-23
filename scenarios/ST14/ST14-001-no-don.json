@@ -1,0 +1,33 @@
+{
+  "name": "Luffy without DON!! gives no cost or power",
+  "rules": ["8-3-2-3"],
+  "setup": {
+    "p1": {
+      "leader": "ST14-001",
+      "characters": [
+        {
+          "card": "TEST-C7-7000",
+          "rested": true
+        }
+      ]
+    },
+    "p2": {
+      "leader": "TEST-LEADER-6000"
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 4
+  }
+}

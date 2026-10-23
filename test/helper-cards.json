@@ -32,6 +32,14 @@
     "power": 1000
   },
   {
+    "id": "TEST-C0-1000",
+    "name": "Test Cost 0",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 0,
+    "power": 1000
+  },
+  {
     "id": "TEST-C5-5000",
     "name": "Test 5000",
     "category": "character",
