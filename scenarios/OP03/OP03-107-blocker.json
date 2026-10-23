@@ -1,0 +1,25 @@
+{
+  "name": "Charlotte Galette is a [Blocker]",
+  "rules": ["10-1-4"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "characters": ["OP03-107"]
+    },
+    "p2": {
+      "characters": ["TEST-C5-5000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p2",
+      "attacker": "p2.characters.0",
+      "target": "p1.leader"
+    }
+  ],
+  "expect": {
+    "legal.p1.block": 1
+  }
+}

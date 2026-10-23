@@ -1,0 +1,38 @@
+{
+  "name": "Tashigi played on an earlier turn trashes nothing",
+  "rules": ["8-3-3"],
+  "setup": {
+    "p1": {
+      "leader": "OP02-093",
+      "characters": ["ST19-003"],
+      "hand": ["OP02-117"],
+      "don": {
+        "active": 1
+      }
+    },
+    "p2": {
+      "characters": ["TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    },
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 1
+    }
+  ],
+  "expect": {
+    "p2.characters": 1
+  }
+}

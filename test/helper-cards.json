@@ -101,5 +101,21 @@
         ]
       }
     ]
+  },
+  {
+    "id": "TEST-C4-4000",
+    "name": "Test 4000",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 4,
+    "power": 4000
+  },
+  {
+    "id": "TEST-C6-6000",
+    "name": "Test 6000",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 6,
+    "power": 6000
   }
 ]

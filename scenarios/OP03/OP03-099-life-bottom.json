@@ -1,0 +1,43 @@
+{
+  "name": "Katakuri moves the opponent's top Life card to the bottom, then gains +1000",
+  "rules": ["10-2-5", "3-10-3"],
+  "setup": {
+    "p1": {
+      "leader": {
+        "card": "OP03-099",
+        "don": 1
+      }
+    },
+    "p2": {
+      "leader": "TEST-LEADER-7000",
+      "life": ["TEST-C5-5000", "TEST-FILLER", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.leader"]
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.hand.0.cardId": "TEST-FILLER",
+    "p2.life": 2,
+    "p2.life.1.cardId": "TEST-C5-5000"
+  }
+}

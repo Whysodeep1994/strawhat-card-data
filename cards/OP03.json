@@ -111,5 +111,376 @@
     "image": "images/OP03-010.png",
     "source": "https://en.onepiece-cardgame.com/cardlist/?series=569103",
     "keywords": ["blocker"]
+  },
+  {
+    "id": "OP03-079",
+    "name": "Vergo",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 5,
+    "power": 5000,
+    "counter": 2000,
+    "types": ["Navy", "Donquixote Pirates"],
+    "attribute": "Strike",
+    "rarity": "UC",
+    "blockIcon": 1,
+    "text": "[DON!! x1] This Character cannot be K.O.'d in battle.",
+    "image": "images/OP03-079.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569103",
+    "effects": [
+      {
+        "timing": "permanent",
+        "conditions": [
+          {
+            "donAtLeast": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "grantStatus",
+            "target": {
+              "side": "this"
+            },
+            "status": "cannotBeKOdInBattle"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP03-089",
+    "name": "Brannew",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 2,
+    "power": 3000,
+    "counter": 1000,
+    "types": ["Navy"],
+    "attribute": "Wisdom",
+    "rarity": "R",
+    "blockIcon": 1,
+    "text": "[On Play] Look at 3 cards from the top of your deck; reveal up to 1 {Navy} type card other than [Brannew] and add it to your hand. Then, trash the rest.",
+    "image": "images/OP03-089.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569103",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "searchDeck",
+            "look": 3,
+            "take": 1,
+            "filter": {
+              "type": "Navy",
+              "notName": "Brannew"
+            },
+            "rest": "trash"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP03-099",
+    "name": "Charlotte Katakuri",
+    "category": "leader",
+    "colors": ["yellow"],
+    "life": 5,
+    "power": 5000,
+    "types": ["Big Mom Pirates"],
+    "attribute": "Strike",
+    "rarity": "L",
+    "blockIcon": 1,
+    "text": "[DON!! x1] [When Attacking] Look at up to 1 card from the top of your or your opponent's Life cards, and place it at the top or bottom of the Life cards. Then, this Leader gains +1000 power during this battle.",
+    "image": "images/OP03-099.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569103",
+    "effects": [
+      {
+        "timing": "whenAttacking",
+        "conditions": [
+          {
+            "donAtLeast": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "arrangeLife"
+          },
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "this"
+            },
+            "amount": 1000,
+            "duration": "battle"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP03-106",
+    "name": "Charlotte Opera",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 4,
+    "power": 6000,
+    "counter": 1000,
+    "types": ["Big Mom Pirates"],
+    "attribute": "Special",
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "",
+    "image": "images/OP03-106.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569103"
+  },
+  {
+    "id": "OP03-107",
+    "name": "Charlotte Galette",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 2,
+    "power": 2000,
+    "counter": 1000,
+    "types": ["Big Mom Pirates"],
+    "attribute": "Special",
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)",
+    "image": "images/OP03-107.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569103",
+    "keywords": ["blocker"]
+  },
+  {
+    "id": "OP03-110",
+    "name": "Charlotte Smoothie",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 4,
+    "power": 5000,
+    "counter": 1000,
+    "types": ["Big Mom Pirates"],
+    "attribute": "Special",
+    "rarity": "R",
+    "blockIcon": 1,
+    "text": "[When Attacking] You may add 1 card from the top or bottom of your Life cards to your hand: This Character gains +2000 power during this battle.",
+    "trigger": "[Trigger] You may trash 1 card from your hand: Play this card.",
+    "image": "images/OP03-110.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569103",
+    "effects": [
+      {
+        "timing": "whenAttacking",
+        "optional": true,
+        "costs": [
+          {
+            "lifeToHand": 1,
+            "from": "topOrBottom"
+          }
+        ],
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "this"
+            },
+            "amount": 2000,
+            "duration": "battle"
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "optional": true,
+        "costs": [
+          {
+            "trashFromHand": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "playThis"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP03-112",
+    "name": "Charlotte Pudding",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 1,
+    "power": 2000,
+    "counter": 1000,
+    "types": ["Big Mom Pirates"],
+    "attribute": "Wisdom",
+    "rarity": "R",
+    "blockIcon": 1,
+    "text": "[On Play] Look at 4 cards from the top of your deck; reveal up to 1 [Sanji] or {Big Mom Pirates} type card other than [Charlotte Pudding] and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+    "image": "images/OP03-112.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569103",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "searchDeck",
+            "look": 4,
+            "take": 1,
+            "filter": {
+              "anyOf": [
+                {
+                  "name": "Sanji"
+                },
+                {
+                  "type": "Big Mom Pirates"
+                }
+              ],
+              "notName": "Charlotte Pudding"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP03-115",
+    "name": "Streusen",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 1,
+    "power": 1000,
+    "counter": 2000,
+    "types": ["Big Mom Pirates"],
+    "attribute": "Slash",
+    "rarity": "R",
+    "blockIcon": 1,
+    "text": "[On Play] You may trash 1 card with a [Trigger] from your hand: K.O. up to 1 of your opponent's Characters with a cost of 1 or less.",
+    "image": "images/OP03-115.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569103",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "optional": true,
+        "costs": [
+          {
+            "trashFromHand": 1,
+            "filter": {
+              "hasTrigger": true
+            }
+          }
+        ],
+        "steps": [
+          {
+            "do": "ko",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "costAtMost": 1
+              },
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP03-118",
+    "name": "Ikoku Sovereignty",
+    "category": "event",
+    "colors": ["yellow"],
+    "cost": 2,
+    "types": ["The Four Emperors", "Big Mom Pirates"],
+    "rarity": "UC",
+    "blockIcon": 1,
+    "text": "[Counter] Up to 1 of your Leader or Character cards gains +5000 power during this battle.",
+    "trigger": "[Trigger] You may trash 2 cards from your hand: Add up to 1 card from the top of your deck to the top of your Life cards.",
+    "image": "images/OP03-118.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569103",
+    "effects": [
+      {
+        "timing": "counter",
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "self",
+              "zone": "leaderOrCharacters",
+              "upTo": true
+            },
+            "amount": 5000,
+            "duration": "battle"
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "optional": true,
+        "costs": [
+          {
+            "trashFromHand": 2
+          }
+        ],
+        "steps": [
+          {
+            "do": "deckToLife",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP03-121",
+    "name": "Thunder Bolt",
+    "category": "event",
+    "colors": ["yellow"],
+    "cost": 2,
+    "types": ["The Four Emperors", "Big Mom Pirates"],
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "[Main] You may trash 1 card from the top of your Life cards: K.O. up to 1 of your opponent's Characters with a cost of 5 or less.",
+    "trigger": "[Trigger] K.O. up to 1 of your opponent's Characters with a cost of 5 or less.",
+    "image": "images/OP03-121.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569103",
+    "effects": [
+      {
+        "timing": "main",
+        "optional": true,
+        "costs": [
+          {
+            "trashLife": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "ko",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "costAtMost": 5
+              },
+              "upTo": true
+            }
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "ko",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "costAtMost": 5
+              },
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
   }
 ]

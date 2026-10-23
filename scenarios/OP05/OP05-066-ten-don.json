@@ -1,0 +1,38 @@
+{
+  "name": "Jinbe gains +1000 on the opponent's turn with 10 DON!!, so a 6000 attacker doesn't K.O. it",
+  "rules": ["10-1-4", "8-3-2-5"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "characters": ["OP05-066"],
+      "don": {
+        "active": 10
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C6-6000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p2",
+      "attacker": "p2.characters.0",
+      "target": "p1.leader"
+    },
+    {
+      "type": "block",
+      "player": "p1",
+      "blocker": "p1.characters.0"
+    },
+    {
+      "type": "pass",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "p1.characters": 1,
+    "p1.life": 4
+  }
+}

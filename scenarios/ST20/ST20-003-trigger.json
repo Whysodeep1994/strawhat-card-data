@@ -1,0 +1,46 @@
+{
+  "name": "Charlotte Brulee's [Trigger] moves a Life card to the bottom, then goes to hand",
+  "rules": ["10-1-5", "3-10-3"],
+  "setup": {
+    "p1": {
+      "characters": ["TEST-C5-5000"],
+      "life": ["TEST-C7-7000", "TEST-FILLER", "TEST-FILLER"]
+    },
+    "p2": {
+      "life": ["ST20-003", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p1.leader"]
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p2.hand.0.cardId": "ST20-003",
+    "p2.trash": 0,
+    "p1.life.2.cardId": "TEST-C7-7000",
+    "limbo": null
+  }
+}

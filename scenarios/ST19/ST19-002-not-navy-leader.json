@@ -1,0 +1,28 @@
+{
+  "name": "Sengoku's cost can be paid without a Navy Leader, but nothing is drawn",
+  "rules": ["8-3-3"],
+  "setup": {
+    "p1": {
+      "hand": ["ST19-002", "OP02-116", "OP02-109"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.hand": 0,
+    "p1.trash": 2
+  }
+}

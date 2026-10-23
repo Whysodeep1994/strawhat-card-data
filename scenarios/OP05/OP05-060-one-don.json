@@ -1,0 +1,32 @@
+{
+  "name": "With 1 DON!! on the field, Luffy's Life card still goes to hand but no DON!! is added",
+  "rules": ["8-3-3"],
+  "setup": {
+    "p1": {
+      "leader": "OP05-060",
+      "don": {
+        "active": 1,
+        "deck": 5
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p1.life": 3,
+    "p1.donActive": 1,
+    "p1.donDeck": 5
+  }
+}

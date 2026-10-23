@@ -1,0 +1,33 @@
+{
+  "name": "With 3 DON!! on the field, Luffy adds the top Life card to hand and adds 1 active DON!!",
+  "rules": ["10-2-2", "10-2-13", "8-3-3"],
+  "setup": {
+    "p1": {
+      "leader": "OP05-060",
+      "don": {
+        "active": 3,
+        "deck": 5
+      },
+      "life": ["TEST-C5-5000", "TEST-FILLER", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.hand.0.cardId": "TEST-C5-5000",
+    "p1.life": 2,
+    "p1.donActive": 4,
+    "p1.donDeck": 4
+  }
+}

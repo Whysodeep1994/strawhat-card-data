@@ -1,0 +1,50 @@
+{
+  "name": "Hina with 1 DON!! is cost 8 on the opponent's turn, out of Thunder Bolt's range",
+  "rules": ["8-3-2-5"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "characters": [
+        {
+          "card": "ST19-004",
+          "don": 1
+        },
+        "TEST-C5-5000"
+      ]
+    },
+    "p2": {
+      "hand": ["OP03-121"],
+      "don": {
+        "active": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p2",
+      "card": "p2.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p1.characters.0"],
+      "illegal": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p1.characters.1"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 1,
+    "p1.characters.0.cardId": "ST19-004"
+  }
+}

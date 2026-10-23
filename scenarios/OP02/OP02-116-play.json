@@ -1,0 +1,22 @@
+{
+  "name": "Yamakaji is played for 3",
+  "rules": ["6-5-3-1"],
+  "setup": {
+    "p1": {
+      "hand": ["OP02-116"],
+      "don": {
+        "active": 3
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.characters": 1
+  }
+}

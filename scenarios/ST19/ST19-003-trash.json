@@ -1,0 +1,43 @@
+{
+  "name": "Tashigi gives \u22124 cost with a Smoker Leader, then trashes the cost 0 Character",
+  "rules": ["10-2-6", "10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "OP02-093",
+      "hand": ["ST19-003"],
+      "don": {
+        "active": 5
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C4-4000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    },
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 1
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 0,
+    "p2.trash": 1
+  }
+}

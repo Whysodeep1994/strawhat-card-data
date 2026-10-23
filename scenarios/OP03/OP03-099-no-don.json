@@ -1,0 +1,20 @@
+{
+  "name": "Katakuri without DON!! does nothing when attacking",
+  "rules": ["8-3-2-3"],
+  "setup": {
+    "p1": {
+      "leader": "OP03-099"
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    }
+  ],
+  "expect": {
+    "prompt.kind": "counter"
+  }
+}

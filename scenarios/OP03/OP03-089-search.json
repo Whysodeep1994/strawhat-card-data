@@ -1,0 +1,36 @@
+{
+  "name": "Brannew adds a Navy card other than Brannew from the top 3 and trashes the rest",
+  "rules": ["11-3-1"],
+  "setup": {
+    "p1": {
+      "hand": ["OP03-089"],
+      "don": {
+        "active": 2
+      },
+      "deck": ["OP03-089", "OP02-116", "TEST-FILLER", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.0"],
+      "illegal": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.1"]
+    }
+  ],
+  "expect": {
+    "p1.hand.0.cardId": "OP02-116",
+    "p1.trash": 2,
+    "p1.deck": 1
+  }
+}

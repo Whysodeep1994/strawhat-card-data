@@ -1,0 +1,36 @@
+{
+  "name": "Helmeppo gives \u22122 cost; reaching cost 0 gives it +2000 for the battle",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": ["OP02-113"]
+    },
+    "p2": {
+      "characters": ["OP02-108"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 3
+  }
+}

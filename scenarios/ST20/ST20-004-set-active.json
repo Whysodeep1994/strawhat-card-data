@@ -1,0 +1,50 @@
+{
+  "name": "Charlotte Pudding adds a Life card to hand to set a cost 3 or less Big Mom Pirates Character active",
+  "rules": ["10-2-6", "8-1-2"],
+  "setup": {
+    "p1": {
+      "hand": ["ST20-004"],
+      "characters": [
+        {
+          "card": "OP03-107",
+          "rested": true
+        },
+        {
+          "card": "OP03-106",
+          "rested": true
+        }
+      ],
+      "don": {
+        "active": 3
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.1"],
+      "illegal": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters.0.rested": false,
+    "p1.hand": 1,
+    "p1.life": 3
+  }
+}
