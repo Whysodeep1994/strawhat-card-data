@@ -1,0 +1,36 @@
+{
+  "name": "Diable Jambe can only pick {Straw Hat Crew} cards",
+  "rules": ["8-4-4-4"],
+  "setup": {
+    "p1": {
+      "leader": "ST01-001",
+      "characters": ["ST01-009"],
+      "hand": ["ST01-016"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.0"],
+      "illegal": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": []
+    }
+  ],
+  "expect": {
+    "modifiers": 0,
+    "p1.trash": 1
+  }
+}

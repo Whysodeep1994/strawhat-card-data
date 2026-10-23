@@ -1,0 +1,29 @@
+{
+  "name": "Monkey.D.Luffy with 2 DON!! stops all [Blocker]",
+  "rules": ["10-1-4-1", "8-3-2-3"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "ST01-012",
+          "don": 2
+        }
+      ]
+    },
+    "p2": {
+      "characters": ["TEST-BLOCKER-2000", "TEST-BLOCKER-5000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    }
+  ],
+  "expect": {
+    "legal.p2.block": 0,
+    "prompt.kind": "counter"
+  }
+}

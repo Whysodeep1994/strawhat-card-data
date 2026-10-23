@@ -1,0 +1,45 @@
+{
+  "name": "Gum-Gum Jet Pistol's [Trigger] uses its [Main] effect",
+  "rules": ["10-1-5"],
+  "setup": {
+    "p1": {
+      "characters": ["ST01-010", "TEST-C7-7000"]
+    },
+    "p2": {
+      "life": ["ST01-015"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p1.characters.1"],
+      "illegal": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p1.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 1,
+    "p1.characters.0.cardId": "TEST-C7-7000",
+    "p2.trash": 1
+  }
+}

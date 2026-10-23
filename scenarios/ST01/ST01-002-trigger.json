@@ -1,0 +1,35 @@
+{
+  "name": "Usopp's [Trigger] plays it from Life",
+  "rules": ["10-1-5-3"],
+  "setup": {
+    "p1": {
+      "characters": ["ST01-010"]
+    },
+    "p2": {
+      "life": ["ST01-002"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p2.characters": 1,
+    "p2.characters.0.cardId": "ST01-002",
+    "p2.life": 0,
+    "p2.hand": 0
+  }
+}
