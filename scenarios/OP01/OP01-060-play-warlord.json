@@ -1,0 +1,40 @@
+{
+  "name": "Doflamingo plays a revealed Warlord rested",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "leader": {
+        "card": "OP01-060",
+        "don": 2
+      },
+      "don": {
+        "active": 1
+      },
+      "deck": ["ST03-002", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 1,
+    "p1.characters.0.cardId": "ST03-002",
+    "p1.characters.0.rested": true,
+    "p1.donActive": 0
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "Shanks costs 3 less against an 8000 base power Character, and gives a {Red-Haired Pirates} Leader +2000",
+  "rules": ["2-7-6", "10-2-6"],
+  "setup": {
+    "p1": {
+      "leader": "OP09-001",
+      "hand": ["ST23-002"],
+      "don": {
+        "active": 6
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C8-8000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.characters": 1,
+    "p1.donActive": 0,
+    "modifiers.0.power": 2000,
+    "modifiers.0.endsTurn": 4
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "Thunder Bolt trashes the top Life card to K.O. a cost 5 or less Character",
+  "rules": ["10-2-3", "8-1-2"],
+  "setup": {
+    "p1": {
+      "hand": ["OP03-121"],
+      "don": {
+        "active": 2
+      },
+      "life": ["TEST-C7-7000", "TEST-FILLER"]
+    },
+    "p2": {
+      "characters": ["TEST-C5-5000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.life": 1,
+    "p1.trash.0.cardId": "TEST-C7-7000",
+    "p2.characters": 0
+  }
+}

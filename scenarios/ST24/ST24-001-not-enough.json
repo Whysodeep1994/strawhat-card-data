@@ -1,0 +1,25 @@
+{
+  "name": "Capone\"Gang\"Bege does nothing with 5 rested cards",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["ST24-001"],
+      "don": {
+        "active": 2,
+        "rested": 3
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.hand": 0,
+    "p1.trash": 0,
+    "p1.deck": 20
+  }
+}

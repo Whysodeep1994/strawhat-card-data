@@ -1,0 +1,37 @@
+{
+  "name": "Charlotte Linlin: the opponent chooses to trash their top Life card",
+  "rules": ["10-2-6", "8-1-2"],
+  "setup": {
+    "p1": {
+      "hand": ["ST20-005", "TEST-FILLER"],
+      "don": {
+        "active": 6
+      }
+    },
+    "p2": {
+      "hand": ["TEST-FILLER", "TEST-FILLER", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "chooseOne",
+      "player": "p2",
+      "option": 1
+    }
+  ],
+  "expect": {
+    "p2.life": 3,
+    "p2.trash": 1,
+    "p2.hand": 3
+  }
+}

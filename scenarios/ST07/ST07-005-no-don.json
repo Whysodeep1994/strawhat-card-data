@@ -1,0 +1,21 @@
+{
+  "name": "Charlotte Daifuku without DON!! does nothing when attacking",
+  "rules": ["8-3-2-3"],
+  "setup": {
+    "p1": {
+      "characters": ["ST07-005"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    }
+  ],
+  "expect": {
+    "prompt.kind": "counter",
+    "p1.hand": 0
+  }
+}

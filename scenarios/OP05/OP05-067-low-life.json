@@ -1,0 +1,24 @@
+{
+  "name": "Zoro-Juurou with 3 Life adds 1 active DON!! when attacking",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": ["OP05-067"],
+      "life": 3,
+      "don": {
+        "deck": 5
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    }
+  ],
+  "expect": {
+    "p1.donActive": 1
+  }
+}

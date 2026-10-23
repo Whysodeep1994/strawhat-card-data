@@ -1,0 +1,20 @@
+{
+  "name": "Atmos does nothing without an [Edward.Newgate] Leader",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": ["ST15-001"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    }
+  ],
+  "expect": {
+    "modifiers": 0
+  }
+}

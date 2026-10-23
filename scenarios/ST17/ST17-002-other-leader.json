@@ -1,0 +1,38 @@
+{
+  "name": "Trafalgar Law's return needs a Warlords Leader",
+  "rules": ["8-3-3"],
+  "setup": {
+    "p1": {
+      "hand": ["ST17-002"],
+      "don": {
+        "active": 4
+      },
+      "characters": ["TEST-FILLER"]
+    },
+    "p2": {
+      "characters": ["ST17-005"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p2.characters": 1,
+    "prompt.kind": "main"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "Where the Wind Blows [Trigger] sets {FILM} Characters active",
+  "rules": ["10-1-5"],
+  "setup": {
+    "p2": {
+      "characters": [
+        {
+          "card": "ST16-005",
+          "rested": true
+        }
+      ],
+      "life": ["P-058", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p2.characters.0.rested": false
+  }
+}

@@ -1,0 +1,230 @@
+[
+  {
+    "id": "ST20-001",
+    "name": "Charlotte Katakuri",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 5,
+    "power": 6000,
+    "counter": 1000,
+    "types": ["Big Mom Pirates"],
+    "attribute": "Strike",
+    "rarity": "SR",
+    "blockIcon": 3,
+    "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)\n[Activate: Main] [Once Per Turn] You may turn 1 card from the top of your Life cards face-up: Give up to 1 rested DON!! card to your Leader or 1 of your Characters.",
+    "image": "images/ST20-001.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569020",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "activateMain",
+        "oncePerTurn": true,
+        "optional": true,
+        "costs": [
+          {
+            "lifeFaceUp": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "giveRestedDon",
+            "target": {
+              "side": "self",
+              "zone": "leaderOrCharacters",
+              "upTo": true
+            },
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "notes": "The cost turns the top Life card face-up, so it can't be paid while the top card is already face-up."
+  },
+  {
+    "id": "ST20-002",
+    "name": "Charlotte Cracker",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 4,
+    "power": 5000,
+    "counter": 1000,
+    "types": ["Big Mom Pirates"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[Once Per Turn] If this Character would be K.O.'d by an effect, you may trash 1 card from the top of your Life cards instead.",
+    "trigger": "[Trigger] You may trash 1 card from your hand: Play this card.",
+    "image": "images/ST20-002.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569020",
+    "effects": [
+      {
+        "timing": "replaceRemoval",
+        "replaces": {
+          "side": "this",
+          "removal": "ko"
+        },
+        "oncePerTurn": true,
+        "optional": true,
+        "costs": [
+          {
+            "trashLife": 1
+          }
+        ],
+        "steps": []
+      },
+      {
+        "timing": "trigger",
+        "optional": true,
+        "costs": [
+          {
+            "trashFromHand": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "playThis"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST20-003",
+    "name": "Charlotte Brulee",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 3,
+    "power": 3000,
+    "counter": 2000,
+    "types": ["Big Mom Pirates"],
+    "attribute": "Special",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "",
+    "trigger": "[Trigger] Look at up to 1 card from the top of your or your opponent's Life cards, and place it at the top or bottom of the Life cards. Then, add this card to your hand.",
+    "image": "images/ST20-003.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569020",
+    "effects": [
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "arrangeLife"
+          },
+          {
+            "do": "addThisToHand"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST20-004",
+    "name": "Charlotte Pudding",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 3,
+    "power": 2000,
+    "counter": 1000,
+    "types": ["Big Mom Pirates"],
+    "attribute": "Wisdom",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[On Play] You may add 1 card from the top of your Life cards to your hand: Set up to 1 of your {Big Mom Pirates} type Characters with a cost of 3 or less as active.",
+    "trigger": "[Trigger] Rest up to 1 of your opponent's Characters with a cost of 3 or less.",
+    "image": "images/ST20-004.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569020",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "optional": true,
+        "costs": [
+          {
+            "lifeToHand": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "setActive",
+            "target": {
+              "side": "self",
+              "filter": {
+                "type": "Big Mom Pirates",
+                "costAtMost": 3
+              },
+              "upTo": true
+            }
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "rest",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "costAtMost": 3
+              },
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST20-005",
+    "name": "Charlotte Linlin",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 6,
+    "power": 7000,
+    "types": ["The Four Emperors", "Big Mom Pirates"],
+    "attribute": "Special",
+    "rarity": "SR",
+    "blockIcon": 3,
+    "text": "[On Play] You may trash 1 card from your hand: Your opponent chooses one:\n• Your opponent trashes 2 cards from their hand.\n• Trash 1 card from the top of your opponent's Life cards.",
+    "image": "images/ST20-005.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569020",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "optional": true,
+        "costs": [
+          {
+            "trashFromHand": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "chooseOne",
+            "chooser": "opponent",
+            "options": [
+              {
+                "label": "Trash 2 cards from your hand",
+                "steps": [
+                  {
+                    "do": "opponentTrashesFromHand",
+                    "count": 2
+                  }
+                ]
+              },
+              {
+                "label": "Trash the top card of your Life cards",
+                "steps": [
+                  {
+                    "do": "trashLife",
+                    "side": "opponent",
+                    "count": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

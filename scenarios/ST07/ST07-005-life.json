@@ -1,0 +1,39 @@
+{
+  "name": "Charlotte Daifuku adds a Life card to hand, then the top deck card to Life",
+  "rules": ["10-2-5", "8-1-2"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "ST07-005",
+          "don": 1
+        }
+      ],
+      "life": ["TEST-C5-5000", "TEST-FILLER"],
+      "deck": ["TEST-C7-7000", "TEST-FILLER", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": false
+    }
+  ],
+  "expect": {
+    "p1.hand.0.cardId": "TEST-C5-5000",
+    "p1.life": 2,
+    "p1.life.0.cardId": "TEST-C7-7000"
+  }
+}

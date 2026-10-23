@@ -1,0 +1,35 @@
+{
+  "name": "Vergo with 1 DON!! can't be K.O.'d in battle",
+  "rules": ["10-2-1", "7-1-4-2"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "characters": [
+        {
+          "card": "OP03-079",
+          "rested": true,
+          "don": 1
+        }
+      ]
+    },
+    "p2": {
+      "characters": ["TEST-C7-7000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p2",
+      "attacker": "p2.characters.0",
+      "target": "p1.characters.0"
+    },
+    {
+      "type": "pass",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "p1.characters": 1
+  }
+}

@@ -1,5 +1,357 @@
 [
   {
+    "id": "OP07-019",
+    "name": "Jewelry Bonney",
+    "category": "leader",
+    "colors": ["green"],
+    "life": 5,
+    "power": 5000,
+    "types": ["Supernovas", "Bonney Pirates"],
+    "attribute": "Special",
+    "rarity": "L",
+    "blockIcon": 2,
+    "text": "[On Your Opponent's Attack] [Once Per Turn] ➀ (You may rest the specified number of DON!! cards in your cost area.): Rest up to 1 of your opponent's Leader or Character cards.",
+    "image": "images/OP07-019.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569107",
+    "effects": [
+      {
+        "timing": "onOpponentsAttack",
+        "oncePerTurn": true,
+        "optional": true,
+        "costs": [
+          {
+            "restDon": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "rest",
+            "target": {
+              "side": "opponent",
+              "zone": "leaderOrCharacters",
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP07-021",
+    "name": "Urouge",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 4,
+    "power": 5000,
+    "counter": 1000,
+    "types": ["Supernovas", "Fallen Monk Pirates"],
+    "attribute": "Strike",
+    "rarity": "R",
+    "blockIcon": 2,
+    "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)\n[End of Your Turn] Set up to 1 of your DON!! cards as active.",
+    "image": "images/OP07-021.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569107",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "endOfYourTurn",
+        "steps": [
+          {
+            "do": "setDonActive",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP07-023",
+    "name": "Caribou",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 4,
+    "power": 5000,
+    "counter": 1000,
+    "types": ["Supernovas", "Caribou Pirates"],
+    "attribute": "Special",
+    "rarity": "UC",
+    "blockIcon": 2,
+    "text": "If you have 6 or more rested DON!! cards, this Character gains +1000 power.\n[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)",
+    "image": "images/OP07-023.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569107",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "permanent",
+        "conditions": [
+          {
+            "donRestedAtLeast": 6
+          }
+        ],
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "this"
+            },
+            "amount": 1000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP07-025",
+    "name": "Coribou",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 3,
+    "power": 3000,
+    "types": ["Supernovas", "Caribou Pirates"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 2,
+    "text": "[On Play] Play up to 1 [Caribou] with a cost of 4 or less from your hand rested.",
+    "image": "images/OP07-025.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569107",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "playFromHand",
+            "filter": {
+              "name": "Caribou",
+              "costAtMost": 4
+            },
+            "rested": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP07-031",
+    "name": "Bartolomeo",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 3,
+    "power": 4000,
+    "counter": 1000,
+    "types": ["Supernovas", "Barto Club"],
+    "attribute": "Special",
+    "rarity": "UC",
+    "blockIcon": 2,
+    "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)\n[Your Turn] [Once Per Turn] If a Character is rested by your effect, draw 1 card and trash 1 card from your hand.",
+    "image": "images/OP07-031.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569107",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "characterRestedByYourEffect",
+        "conditions": [
+          {
+            "yourTurn": true
+          }
+        ],
+        "oncePerTurn": true,
+        "steps": [
+          {
+            "do": "draw",
+            "count": 1
+          },
+          {
+            "do": "trashFromHand",
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "notes": "Counts any Character, yours or your opponent's, rested by your effects, including a \"rest this Character\" cost."
+  },
+  {
+    "id": "OP07-033",
+    "name": "Monkey.D.Luffy",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 5,
+    "power": 6000,
+    "counter": 1000,
+    "types": ["Supernovas", "Straw Hat Crew"],
+    "attribute": "Strike",
+    "rarity": "UC",
+    "blockIcon": 2,
+    "text": "If you have 3 or more Characters, your Characters with a cost of 3 or less other than [Monkey.D.Luffy] cannot be K.O.'d by your opponent's effects.",
+    "image": "images/OP07-033.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569107",
+    "effects": [
+      {
+        "timing": "permanent",
+        "conditions": [
+          {
+            "charactersAtLeast": 3
+          }
+        ],
+        "steps": [
+          {
+            "do": "grantStatus",
+            "target": {
+              "side": "self",
+              "zone": "characters",
+              "filter": {
+                "costAtMost": 3,
+                "notName": "Monkey.D.Luffy"
+              }
+            },
+            "status": "cannotBeKOdByOpponentsEffects"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP07-034",
+    "name": "Roronoa Zoro",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 1,
+    "power": 2000,
+    "counter": 1000,
+    "types": ["Supernovas", "Straw Hat Crew"],
+    "attribute": "Slash",
+    "rarity": "UC",
+    "blockIcon": 2,
+    "text": "[When Attacking] If you have 3 or more Characters, this Character gains +2000 power during this turn.",
+    "image": "images/OP07-034.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569107",
+    "effects": [
+      {
+        "timing": "whenAttacking",
+        "conditions": [
+          {
+            "charactersAtLeast": 3
+          }
+        ],
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "this"
+            },
+            "amount": 2000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP07-036",
+    "name": "Demonic Aura Nine-Sword Style Asura Demon Nine Flash",
+    "category": "event",
+    "colors": ["green"],
+    "cost": 2,
+    "types": ["Supernovas", "Straw Hat Crew"],
+    "rarity": "R",
+    "blockIcon": 2,
+    "text": "[Main] Up to 1 of your Leader or Character cards gains +3000 power during this turn. Then, you may rest 1 of your Characters with a cost of 3 or more. If you do, rest up to 1 of your opponent's Characters with a cost of 5 or less.",
+    "trigger": "[Trigger] Rest up to 1 of your opponent's Characters with a cost of 4 or less.",
+    "image": "images/OP07-036.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569107",
+    "effects": [
+      {
+        "timing": "main",
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "self",
+              "zone": "leaderOrCharacters",
+              "upTo": true
+            },
+            "amount": 3000
+          },
+          {
+            "do": "rest",
+            "target": {
+              "side": "self",
+              "filter": {
+                "costAtLeast": 3
+              },
+              "upTo": true
+            },
+            "ifYouDo": [
+              {
+                "do": "rest",
+                "target": {
+                  "side": "opponent",
+                  "filter": {
+                    "costAtMost": 5
+                  },
+                  "upTo": true
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "rest",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "costAtMost": 4
+              },
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ],
+    "notes": "\"You may rest 1 of your Characters\" is an up-to-1 rest; choosing none skips the \"If you do\" part."
+  },
+  {
+    "id": "OP07-037",
+    "name": "More Pizza!!",
+    "category": "event",
+    "colors": ["green"],
+    "cost": 1,
+    "types": ["Supernovas", "Bonney Pirates"],
+    "rarity": "UC",
+    "blockIcon": 2,
+    "text": "[Main] Look at 5 cards from the top of your deck; reveal up to 1 {Supernovas} type card other than [More Pizza!!] and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+    "trigger": "[Trigger] Draw 1 card.",
+    "image": "images/OP07-037.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569107",
+    "effects": [
+      {
+        "timing": "main",
+        "steps": [
+          {
+            "do": "searchDeck",
+            "look": 5,
+            "take": 1,
+            "filter": {
+              "type": "Supernovas",
+              "notName": "More Pizza!!"
+            }
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "draw",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "OP07-116",
     "name": "Blaze Slice",
     "category": "event",

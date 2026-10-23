@@ -1,5 +1,363 @@
 [
   {
+    "id": "OP09-001",
+    "name": "Shanks",
+    "category": "leader",
+    "colors": ["red"],
+    "life": 5,
+    "power": 5000,
+    "types": ["The Four Emperors", "Red-Haired Pirates"],
+    "attribute": "Slash",
+    "rarity": "L",
+    "blockIcon": 3,
+    "text": "[Once Per Turn] This effect can be activated when your opponent attacks. Give up to 1 of your opponent's Leader or Character cards −1000 power during this turn.",
+    "image": "images/OP09-001.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569109",
+    "effects": [
+      {
+        "timing": "onOpponentsAttack",
+        "oncePerTurn": true,
+        "optional": true,
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "opponent",
+              "zone": "leaderOrCharacters",
+              "upTo": true
+            },
+            "amount": -1000
+          }
+        ]
+      }
+    ],
+    "notes": "\"This effect can be activated when your opponent attacks\" is the older wording of [On Your Opponent's Attack]. It is optional, so declining does not use up [Once Per Turn]."
+  },
+  {
+    "id": "OP09-006",
+    "name": "Howling Gab",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 5,
+    "power": 7000,
+    "counter": 1000,
+    "types": ["Red-Haired Pirates"],
+    "attribute": "Special",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "",
+    "image": "images/OP09-006.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569109"
+  },
+  {
+    "id": "OP09-010",
+    "name": "Bonk Punch",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 4,
+    "power": 5000,
+    "counter": 1000,
+    "types": ["Red-Haired Pirates"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[On Play] Play up to 1 [Monster] from your hand.\n[DON!! x1] [When Attacking] This Character gains +2000 power during this turn.",
+    "image": "images/OP09-010.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569109",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "playFromHand",
+            "filter": {
+              "name": "Monster"
+            }
+          }
+        ]
+      },
+      {
+        "timing": "whenAttacking",
+        "conditions": [
+          {
+            "donAtLeast": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "this"
+            },
+            "amount": 2000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP09-011",
+    "name": "Hongo",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 3,
+    "power": 3000,
+    "counter": 2000,
+    "types": ["Red-Haired Pirates"],
+    "attribute": "Strike",
+    "rarity": "UC",
+    "blockIcon": 3,
+    "text": "[Activate: Main] You may rest this Character: If your Leader has the {Red-Haired Pirates} type, give up to 1 of your opponent's Characters −2000 power during this turn.",
+    "image": "images/OP09-011.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569109",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "optional": true,
+        "costs": [
+          {
+            "restThis": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "leaderHasType": "Red-Haired Pirates"
+              }
+            ],
+            "steps": [
+              {
+                "do": "powerUp",
+                "target": {
+                  "side": "opponent",
+                  "upTo": true
+                },
+                "amount": -2000
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP09-012",
+    "name": "Monster",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 3,
+    "power": 4000,
+    "counter": 1000,
+    "types": ["Animal", "Red-Haired Pirates"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "If your Character [Bonk Punch] would be K.O.'d by an effect, you may trash this Character instead.",
+    "image": "images/OP09-012.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569109",
+    "effects": [
+      {
+        "timing": "replaceRemoval",
+        "replaces": {
+          "side": "self",
+          "filter": {
+            "name": "Bonk Punch"
+          },
+          "removal": "ko"
+        },
+        "optional": true,
+        "costs": [
+          {
+            "trashThis": true
+          }
+        ],
+        "steps": []
+      }
+    ]
+  },
+  {
+    "id": "OP09-013",
+    "name": "Yasopp",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 5,
+    "power": 6000,
+    "counter": 1000,
+    "types": ["Red-Haired Pirates"],
+    "attribute": "Ranged",
+    "rarity": "R",
+    "blockIcon": 3,
+    "text": "[On Play] Up to 1 of your Leader gains +1000 power until the end of your opponent's next turn.\n[DON!! x1] [When Attacking] Give up to 1 of your opponent's Characters −1000 power during this turn.",
+    "image": "images/OP09-013.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569109",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "self",
+              "zone": "leader",
+              "upTo": true
+            },
+            "amount": 1000,
+            "duration": "opponentsNextTurn"
+          }
+        ]
+      },
+      {
+        "timing": "whenAttacking",
+        "conditions": [
+          {
+            "donAtLeast": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "opponent",
+              "upTo": true
+            },
+            "amount": -1000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP09-014",
+    "name": "Limejuice",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 3,
+    "power": 3000,
+    "counter": 2000,
+    "types": ["Red-Haired Pirates"],
+    "attribute": "Special",
+    "rarity": "UC",
+    "blockIcon": 3,
+    "text": "[On Play] Your opponent cannot activate up to 1 [Blocker] Character that has 4000 power or less during this turn.",
+    "image": "images/OP09-014.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569109",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "grantStatus",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "keyword": "blocker",
+                "powerAtMost": 4000
+              },
+              "upTo": true
+            },
+            "status": "cannotBlock"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP09-015",
+    "name": "Lucky.Roux",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 4,
+    "power": 5000,
+    "counter": 1000,
+    "types": ["Red-Haired Pirates"],
+    "attribute": "Ranged",
+    "rarity": "R",
+    "blockIcon": 3,
+    "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)\n[On K.O.] If your Leader has the {Red-Haired Pirates} type, K.O. up to 1 of your opponent's Characters with a base power of 6000 or less.",
+    "image": "images/OP09-015.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569109",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "onKO",
+        "conditions": [
+          {
+            "leaderHasType": "Red-Haired Pirates"
+          }
+        ],
+        "steps": [
+          {
+            "do": "ko",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "basePowerAtMost": 6000
+              },
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP09-016",
+    "name": "Rockstar",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 4,
+    "power": 6000,
+    "counter": 1000,
+    "types": ["Red-Haired Pirates"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "",
+    "image": "images/OP09-016.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569109"
+  },
+  {
+    "id": "OP09-020",
+    "name": "Come On!! We'll Fight You!!",
+    "category": "event",
+    "colors": ["red"],
+    "cost": 1,
+    "types": ["The Four Emperors", "Red-Haired Pirates"],
+    "rarity": "R",
+    "blockIcon": 3,
+    "text": "[Main] Look at 5 cards from the top of your deck; reveal up to 1 {Red-Haired Pirates} type card other than [Come On!! We'll Fight You!!] and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+    "trigger": "[Trigger] Draw 1 card.",
+    "image": "images/OP09-020.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569109",
+    "effects": [
+      {
+        "timing": "main",
+        "steps": [
+          {
+            "do": "searchDeck",
+            "look": 5,
+            "take": 1,
+            "filter": {
+              "type": "Red-Haired Pirates",
+              "notName": "Come On!! We'll Fight You!!"
+            }
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "draw",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "OP09-035",
     "name": "Portgas.D.Ace",
     "category": "character",
@@ -42,6 +400,331 @@
         ]
       }
     ]
+  },
+  {
+    "id": "OP09-042",
+    "name": "Buggy",
+    "category": "leader",
+    "colors": ["blue"],
+    "life": 5,
+    "power": 5000,
+    "types": ["The Four Emperors", "Cross Guild"],
+    "attribute": "Slash",
+    "rarity": "L",
+    "blockIcon": 3,
+    "text": "[Activate: Main] You may rest 5 of your DON!! cards and trash 1 card from your hand: Play up to 1 {Cross Guild} type Character card from your hand.",
+    "image": "images/OP09-042.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569109",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "optional": true,
+        "costs": [
+          {
+            "restDon": 5
+          },
+          {
+            "trashFromHand": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "playFromHand",
+            "filter": {
+              "category": "character",
+              "type": "Cross Guild"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP09-043",
+    "name": "Alvida",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 5,
+    "power": 6000,
+    "counter": 1000,
+    "types": ["Cross Guild"],
+    "attribute": "Strike",
+    "rarity": "UC",
+    "blockIcon": 3,
+    "text": "[On K.O.] If your Leader has the {Cross Guild} type, play up to 1 Character card with a cost of 5 or less other than [Alvida] from your hand.",
+    "image": "images/OP09-043.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569109",
+    "effects": [
+      {
+        "timing": "onKO",
+        "conditions": [
+          {
+            "leaderHasType": "Cross Guild"
+          }
+        ],
+        "steps": [
+          {
+            "do": "playFromHand",
+            "filter": {
+              "category": "character",
+              "costAtMost": 5,
+              "notName": "Alvida"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP09-045",
+    "name": "Cabaji",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 5,
+    "power": 5000,
+    "counter": 2000,
+    "types": ["Cross Guild"],
+    "attribute": "Slash",
+    "rarity": "UC",
+    "blockIcon": 3,
+    "text": "If you have a [Buggy] or [Mohji] Character, this Character cannot be K.O.'d in battle.",
+    "image": "images/OP09-045.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569109",
+    "effects": [
+      {
+        "timing": "permanent",
+        "conditions": [
+          {
+            "count": {
+              "side": "self",
+              "filter": {
+                "anyOf": [
+                  {
+                    "name": "Buggy"
+                  },
+                  {
+                    "name": "Mohji"
+                  }
+                ]
+              }
+            },
+            "atLeast": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "grantStatus",
+            "target": {
+              "side": "this"
+            },
+            "status": "cannotBeKOdInBattle"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP09-051",
+    "name": "Buggy",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 10,
+    "power": 12000,
+    "types": ["The Four Emperors", "Cross Guild"],
+    "attribute": "Slash",
+    "rarity": "R",
+    "blockIcon": 3,
+    "text": "[On Play] Place up to 1 of your opponent's Characters at the bottom of the owner's deck. Then, if you do not have 5 Characters with a cost of 5 or more, place this Character at the bottom of the owner's deck.",
+    "image": "images/OP09-051.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569109",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "returnToDeckBottom",
+            "target": {
+              "side": "opponent",
+              "upTo": true
+            }
+          },
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "count": {
+                  "side": "self",
+                  "filter": {
+                    "costAtLeast": 5
+                  }
+                },
+                "atMost": 4
+              }
+            ],
+            "steps": [
+              {
+                "do": "returnToDeckBottom",
+                "target": {
+                  "side": "this"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP09-053",
+    "name": "Mohji",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 5,
+    "power": 5000,
+    "counter": 2000,
+    "types": ["Cross Guild"],
+    "attribute": "Wisdom",
+    "rarity": "UC",
+    "blockIcon": 3,
+    "text": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 [Richie] and add it to your hand. Then, place the rest at the bottom of your deck in any order and play up to 1 [Richie] from your hand.",
+    "image": "images/OP09-053.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569109",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "searchDeck",
+            "look": 5,
+            "take": 1,
+            "filter": {
+              "name": "Richie"
+            }
+          },
+          {
+            "do": "playFromHand",
+            "filter": {
+              "name": "Richie"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP09-054",
+    "name": "Richie",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 2,
+    "power": 2000,
+    "counter": 1000,
+    "types": ["Animal", "Cross Guild"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)",
+    "image": "images/OP09-054.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569109",
+    "keywords": ["blocker"]
+  },
+  {
+    "id": "OP09-055",
+    "name": "Mr.1(Daz.Bonez)",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 5,
+    "power": 7000,
+    "counter": 1000,
+    "types": ["Cross Guild", "Former Baroque Works"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "",
+    "image": "images/OP09-055.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569109"
+  },
+  {
+    "id": "OP09-056",
+    "name": "Mr.3(Galdino)",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 1,
+    "power": 2000,
+    "counter": 1000,
+    "types": ["Cross Guild", "Former Baroque Works"],
+    "attribute": "Special",
+    "rarity": "R",
+    "blockIcon": 3,
+    "text": "[On Play] Look at 4 cards from the top of your deck; reveal up to 1 {Cross Guild} type card or card with a type including \"Baroque Works\" other than [Mr.3(Galdino)] and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+    "image": "images/OP09-056.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569109",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "searchDeck",
+            "look": 4,
+            "take": 1,
+            "filter": {
+              "anyOf": [
+                {
+                  "type": "Cross Guild"
+                },
+                {
+                  "typeIncludes": "Baroque Works"
+                }
+              ],
+              "notName": "Mr.3(Galdino)"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP09-057",
+    "name": "Cross Guild",
+    "category": "event",
+    "colors": ["blue"],
+    "cost": 1,
+    "types": ["Cross Guild"],
+    "rarity": "R",
+    "blockIcon": 3,
+    "text": "[Main] Look at 4 cards from the top of your deck; reveal up to 1 {Cross Guild} type card and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+    "trigger": "[Trigger] Activate this card's [Main] effect.",
+    "image": "images/OP09-057.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569109",
+    "effects": [
+      {
+        "timing": "main",
+        "steps": [
+          {
+            "do": "searchDeck",
+            "look": 4,
+            "take": 1,
+            "filter": {
+              "type": "Cross Guild"
+            }
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "searchDeck",
+            "look": 4,
+            "take": 1,
+            "filter": {
+              "type": "Cross Guild"
+            }
+          }
+        ]
+      }
+    ],
+    "notes": "[Trigger] \"Activate this card's [Main] effect\" repeats the [Main] steps."
   },
   {
     "id": "OP09-081",

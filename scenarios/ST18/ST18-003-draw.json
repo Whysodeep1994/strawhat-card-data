@@ -1,0 +1,23 @@
+{
+  "name": "San-Gorou with 8 DON!! draws 1 when attacking",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": ["ST18-003"],
+      "don": {
+        "active": 8
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    }
+  ],
+  "expect": {
+    "p1.hand": 1
+  }
+}

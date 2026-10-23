@@ -1,0 +1,46 @@
+{
+  "name": "Smoker trashes a black Navy card so 2 cost 4 or less Characters can't attack next turn",
+  "rules": ["10-2-6", "8-1-2"],
+  "setup": {
+    "p1": {
+      "hand": ["ST19-001", "OP02-116"],
+      "don": {
+        "active": 6
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C4-4000", "TEST-FILLER", "TEST-C5-5000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.2"],
+      "illegal": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0", "p2.characters.1"]
+    },
+    {
+      "type": "endTurn",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "legal.p2.attack": 2,
+    "p1.trash.0.cardId": "OP02-116"
+  }
+}

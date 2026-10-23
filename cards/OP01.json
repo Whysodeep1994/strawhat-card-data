@@ -1,0 +1,131 @@
+[
+  {
+    "id": "OP01-060",
+    "name": "Donquixote Doflamingo",
+    "category": "leader",
+    "colors": ["blue"],
+    "life": 5,
+    "power": 5000,
+    "types": ["The Seven Warlords of the Sea", "Donquixote Pirates"],
+    "attribute": "Special",
+    "rarity": "L",
+    "blockIcon": 1,
+    "text": "[DON!! x2] [When Attacking] ➀ (You may rest the specified number of DON!! cards in your cost area.): Reveal 1 card from the top of your deck. If that card is a {The Seven Warlords of the Sea} type Character card with a cost of 4 or less, you may play that card rested.",
+    "image": "images/OP01-060.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569101",
+    "effects": [
+      {
+        "timing": "whenAttacking",
+        "conditions": [
+          {
+            "donAtLeast": 2
+          }
+        ],
+        "optional": true,
+        "costs": [
+          {
+            "restDon": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "playFromDeckTop",
+            "filter": {
+              "category": "character",
+              "type": "The Seven Warlords of the Sea",
+              "costAtMost": 4
+            },
+            "rested": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP01-073",
+    "name": "Donquixote Doflamingo",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 3,
+    "power": 4000,
+    "counter": 1000,
+    "types": ["The Seven Warlords of the Sea", "Donquixote Pirates"],
+    "attribute": "Special",
+    "rarity": "R",
+    "blockIcon": 1,
+    "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)\n[On Play] Look at 5 cards from the top of your deck and place them at the top or bottom of the deck in any order.",
+    "image": "images/OP01-073.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569101",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "arrangeDeckTop",
+            "look": 5,
+            "bottom": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP01-086",
+    "name": "Overheat",
+    "category": "event",
+    "colors": ["blue"],
+    "cost": 2,
+    "types": ["The Seven Warlords of the Sea", "Donquixote Pirates"],
+    "rarity": "R",
+    "blockIcon": 1,
+    "text": "[Counter] Up to 1 of your Leader or Character cards gains +4000 power during this battle. Then, return up to 1 active Character with a cost of 3 or less to the owner's hand.",
+    "trigger": "[Trigger] Return up to 1 Character with a cost of 4 or less to the owner's hand.",
+    "image": "images/OP01-086.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569101",
+    "errata": true,
+    "effects": [
+      {
+        "timing": "counter",
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "self",
+              "zone": "leaderOrCharacters",
+              "upTo": true
+            },
+            "amount": 4000,
+            "duration": "battle"
+          },
+          {
+            "do": "returnToHand",
+            "target": {
+              "side": "any",
+              "filter": {
+                "rested": false,
+                "costAtMost": 3
+              },
+              "upTo": true
+            }
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "returnToHand",
+            "target": {
+              "side": "any",
+              "filter": {
+                "costAtMost": 4
+              },
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

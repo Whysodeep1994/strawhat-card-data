@@ -1,0 +1,37 @@
+{
+  "name": "New Genesis adds a {FILM} card other than [New Genesis] and sets 1 DON!! active",
+  "rules": ["10-2-3", "11-2-1"],
+  "setup": {
+    "p1": {
+      "leader": "ST11-001",
+      "hand": ["ST11-004"],
+      "don": {
+        "active": 1
+      },
+      "deck": ["ST11-004", "ST16-005", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.0"],
+      "illegal": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.1"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p1.hand.0.cardId": "ST16-005",
+    "p1.donActive": 1
+  }
+}

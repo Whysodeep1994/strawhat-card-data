@@ -1,0 +1,26 @@
+{
+  "name": "O-Robi with 7 DON!! on the field K.O.s nothing",
+  "rules": ["8-3-3"],
+  "setup": {
+    "p1": {
+      "hand": ["OP05-063"],
+      "don": {
+        "active": 7
+      }
+    },
+    "p2": {
+      "characters": ["TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p2.characters": 1,
+    "prompt.kind": "main"
+  }
+}

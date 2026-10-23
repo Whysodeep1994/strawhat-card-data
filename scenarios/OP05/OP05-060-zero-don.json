@@ -1,0 +1,36 @@
+{
+  "name": "With 0 DON!! on the field, Luffy adds 1 active DON!!, once per turn",
+  "rules": ["8-3-3", "10-2-13"],
+  "setup": {
+    "p1": {
+      "leader": "OP05-060",
+      "don": {
+        "deck": 5
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 0,
+      "illegal": true
+    }
+  ],
+  "expect": {
+    "p1.donActive": 1,
+    "legal.p1.activate": 0
+  }
+}

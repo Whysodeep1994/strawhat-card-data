@@ -1,0 +1,52 @@
+{
+  "name": "Fleeting Lullaby's [Trigger] works on the opponent's turn",
+  "rules": ["10-1-5", "6-2-3"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "TEST-FILLER",
+          "rested": true
+        }
+      ]
+    },
+    "p2": {
+      "leader": "ST11-001",
+      "life": ["P-057", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p1.characters.0"]
+    },
+    {
+      "type": "endTurn",
+      "player": "p1"
+    },
+    {
+      "type": "endTurn",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "turnPlayer": "p1",
+    "p1.characters.0.rested": true
+  }
+}

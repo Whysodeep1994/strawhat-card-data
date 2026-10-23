@@ -1,0 +1,32 @@
+{
+  "name": "Uso-Hachi with only 7 DON!! on the field rests nothing",
+  "rules": ["8-3-3"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "OP05-061",
+          "don": 1
+        }
+      ],
+      "don": {
+        "active": 6
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C4-4000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    }
+  ],
+  "expect": {
+    "p2.characters.0.rested": false,
+    "prompt.kind": "counter"
+  }
+}
