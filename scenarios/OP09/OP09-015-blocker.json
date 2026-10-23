@@ -1,0 +1,22 @@
+{
+  "name": "Lucky.Roux has [Blocker]",
+  "rules": ["10-1-4-1"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "characters": ["OP09-015"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p2",
+      "attacker": "p2.leader",
+      "target": "p1.leader"
+    }
+  ],
+  "expect": {
+    "prompt.kind": "block"
+  }
+}

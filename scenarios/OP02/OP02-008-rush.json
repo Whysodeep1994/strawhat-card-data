@@ -1,0 +1,21 @@
+{
+  "name": "Jozu gains [Rush] with DON!!, 2 or less Life and a Whitebeard Pirates Leader",
+  "rules": ["10-1-1-1"],
+  "setup": {
+    "p1": {
+      "leader": "OP02-001",
+      "life": 2,
+      "characters": [
+        {
+          "card": "OP02-008",
+          "don": 1,
+          "playedThisTurn": true
+        }
+      ]
+    }
+  },
+  "actions": [],
+  "expect": {
+    "legal.p1.attack": 2
+  }
+}

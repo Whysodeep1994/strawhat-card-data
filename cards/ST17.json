@@ -1,0 +1,198 @@
+[
+  {
+    "id": "ST17-001",
+    "name": "Crocodile",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 4,
+    "power": 5000,
+    "counter": 1000,
+    "types": ["The Seven Warlords of the Sea", "Baroque Works"],
+    "attribute": "Special",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[On Play] Reveal 1 card from the top of your deck. If that card is a {The Seven Warlords of the Sea} type card, draw 2 cards and place 1 card from your hand at the top of your deck.",
+    "image": "images/ST17-001.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569017",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "deckTopMatches": {
+                  "type": "The Seven Warlords of the Sea"
+                }
+              }
+            ],
+            "steps": [
+              {
+                "do": "draw",
+                "count": 2
+              },
+              {
+                "do": "handToDeckTop",
+                "count": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST17-002",
+    "name": "Trafalgar Law",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 4,
+    "power": 5000,
+    "counter": 1000,
+    "types": ["The Seven Warlords of the Sea", "Heart Pirates"],
+    "attribute": "Slash",
+    "rarity": "SR",
+    "blockIcon": 3,
+    "text": "[On Play] You may return 1 of your Characters to the owner's hand: If your Leader has the {The Seven Warlords of the Sea} type, return up to 1 Character with a cost of 4 or less to the owner's hand.",
+    "image": "images/ST17-002.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569017",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "optional": true,
+        "costs": [
+          {
+            "returnOwnCharacter": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "leaderHasType": "The Seven Warlords of the Sea"
+              }
+            ],
+            "steps": [
+              {
+                "do": "returnToHand",
+                "target": {
+                  "side": "any",
+                  "filter": {
+                    "costAtMost": 4
+                  },
+                  "upTo": true
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST17-003",
+    "name": "Buggy",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 1,
+    "power": 2000,
+    "counter": 2000,
+    "types": ["The Seven Warlords of the Sea", "Buggy's Delivery"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[On Play] Look at 3 cards from the top of your deck and place them at the top of your deck in any order.",
+    "image": "images/ST17-003.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569017",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "arrangeDeckTop",
+            "look": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST17-004",
+    "name": "Boa Hancock",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 4,
+    "power": 6000,
+    "types": ["The Seven Warlords of the Sea", "Kuja Pirates"],
+    "attribute": "Special",
+    "rarity": "SR",
+    "blockIcon": 3,
+    "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)\n[On Play] Look at 3 cards from the top of your deck and place them at the top or bottom of your deck in any order. Then, give up to 1 rested DON!! card to 1 of your {The Seven Warlords of the Sea} type Leader or Character cards.",
+    "image": "images/ST17-004.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569017",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "arrangeDeckTop",
+            "look": 3,
+            "bottom": true
+          },
+          {
+            "do": "giveRestedDon",
+            "target": {
+              "side": "self",
+              "zone": "leaderOrCharacters",
+              "filter": {
+                "type": "The Seven Warlords of the Sea"
+              }
+            },
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST17-005",
+    "name": "Marshall.D.Teach",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 2,
+    "power": 3000,
+    "counter": 1000,
+    "types": ["The Seven Warlords of the Sea", "Blackbeard Pirates"],
+    "attribute": "Special",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[Activate: Main] [Once Per Turn] You may place 1 card from your hand at the top of your deck: Give up to 2 rested DON!! cards to your Leader or 1 of your Characters.",
+    "image": "images/ST17-005.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569017",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "oncePerTurn": true,
+        "optional": true,
+        "costs": [
+          {
+            "handToDeckTop": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "giveRestedDon",
+            "target": {
+              "side": "self",
+              "zone": "leaderOrCharacters"
+            },
+            "count": 2
+          }
+        ]
+      }
+    ]
+  }
+]

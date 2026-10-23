@@ -1,0 +1,198 @@
+[
+  {
+    "id": "ST16-001",
+    "name": "Uta",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 4,
+    "power": 6000,
+    "types": ["FILM"],
+    "attribute": "Special",
+    "rarity": "SR",
+    "blockIcon": 3,
+    "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)\n[Activate: Main] [Once Per Turn] You may trash 1 {FILM} type card from your hand: Give up to 1 rested DON!! card to your Leader or 1 of your Characters.",
+    "image": "images/ST16-001.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569016",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "activateMain",
+        "oncePerTurn": true,
+        "optional": true,
+        "costs": [
+          {
+            "trashFromHand": 1,
+            "filter": {
+              "type": "FILM"
+            }
+          }
+        ],
+        "steps": [
+          {
+            "do": "giveRestedDon",
+            "target": {
+              "side": "self",
+              "zone": "leaderOrCharacters"
+            },
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST16-002",
+    "name": "Gordon",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 2,
+    "counter": 1000,
+    "types": ["FILM"],
+    "attribute": "Wisdom",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)\n[On Your Opponent's Attack] You may trash any number of {Music} type cards from your hand. Your Leader or 1 of your Characters gains +1000 power during this battle for every card trashed.",
+    "image": "images/ST16-002.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569016",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "onOpponentsAttack",
+        "steps": [
+          {
+            "do": "trashFromHand",
+            "count": 10,
+            "upTo": true,
+            "filter": {
+              "type": "Music"
+            }
+          },
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "self",
+              "zone": "leaderOrCharacters"
+            },
+            "amount": 1000,
+            "duration": "battle",
+            "perPrevious": true
+          }
+        ]
+      }
+    ],
+    "notes": "ST11-005 lists its type as \"音楽/FILM\" on the official English card list, so it doesn't count as {Music} here until Bandai fixes the listing."
+  },
+  {
+    "id": "ST16-003",
+    "name": "Charlotte Katakuri",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 3,
+    "power": 4000,
+    "counter": 1000,
+    "types": ["FILM", "Big Mom Pirates"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "If your Leader has the {FILM} type and you have 6 or more rested cards, this Character gains +2000 power.",
+    "image": "images/ST16-003.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569016",
+    "effects": [
+      {
+        "timing": "permanent",
+        "conditions": [
+          {
+            "leaderHasType": "FILM"
+          },
+          {
+            "restedCardsAtLeast": 6
+          }
+        ],
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "this"
+            },
+            "amount": 2000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST16-004",
+    "name": "Shanks",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 9,
+    "power": 11000,
+    "types": ["FILM", "The Four Emperors", "Red-Haired Pirates"],
+    "attribute": "Slash",
+    "rarity": "SR",
+    "blockIcon": 3,
+    "text": "[On Play] K.O. up to 1 of your opponent's rested Characters.",
+    "image": "images/ST16-004.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569016",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "ko",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "rested": true
+              },
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST16-005",
+    "name": "Monkey.D.Luffy",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 2,
+    "power": 3000,
+    "counter": 2000,
+    "types": ["FILM", "Supernovas", "Straw Hat Crew"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "If you have a rested [Uta], this Character gains +1000 power.",
+    "image": "images/ST16-005.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569016",
+    "effects": [
+      {
+        "timing": "permanent",
+        "conditions": [
+          {
+            "count": {
+              "side": "self",
+              "zone": "leaderOrCharacters",
+              "filter": {
+                "name": "Uta",
+                "rested": true
+              }
+            },
+            "atLeast": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "this"
+            },
+            "amount": 1000
+          }
+        ]
+      }
+    ]
+  }
+]

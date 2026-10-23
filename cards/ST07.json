@@ -12,8 +12,8 @@
     "rarity": "C",
     "blockIcon": 1,
     "text": "[DON!! x1] [When Attacking] You may add 1 card from the top or bottom of your Life cards to your hand: Add up to 1 card from the top of your deck to the top of your Life cards.",
-    "image": "images/ST07-005_r1.png",
-    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569020",
+    "image": "images/ST07-005.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569007",
     "effects": [
       {
         "timing": "whenAttacking",
@@ -51,7 +51,7 @@
     "rarity": "C",
     "blockIcon": 1,
     "text": "",
-    "image": "images/ST07-014_r1.png",
-    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569020"
+    "image": "images/ST07-014.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569007"
   }
 ]

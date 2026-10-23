@@ -11,8 +11,8 @@
     "rarity": "L",
     "blockIcon": 2,
     "text": "[Activate: Main] [Once Per Turn] You may add 1 card from the top of your Life cards to your hand: If you have 0 or 3 or more DON!! cards on your field, add up to 1 DON!! card from your DON!! deck and set it as active.",
-    "image": "images/OP05-060_p3.png",
-    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569018",
+    "image": "images/OP05-060.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569105",
     "effects": [
       {
         "timing": "activateMain",
@@ -61,10 +61,10 @@
     "types": ["Straw Hat Crew"],
     "attribute": "Ranged",
     "rarity": "UC",
-    "blockIcon": 2,
+    "blockIcon": 1,
     "text": "[DON!! x1] [When Attacking] If you have 8 or more DON!! cards on your field, rest up to 1 of your opponent's Characters with a cost of 4 or less.",
-    "image": "images/OP05-061_r1.png",
-    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569018",
+    "image": "images/OP05-061.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569105",
     "effects": [
       {
         "timing": "whenAttacking",
@@ -109,10 +109,10 @@
     "types": ["Straw Hat Crew"],
     "attribute": "Strike",
     "rarity": "C",
-    "blockIcon": 2,
+    "blockIcon": 1,
     "text": "[On Play] If you have 8 or more DON!! cards on your field, K.O. up to 1 of your opponent's Characters with a cost of 3 or less.",
-    "image": "images/OP05-063_r1.png",
-    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569018",
+    "image": "images/OP05-063.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569105",
     "effects": [
       {
         "timing": "onPlay",
@@ -152,10 +152,10 @@
     "types": ["Fish-Man", "Straw Hat Crew"],
     "attribute": "Strike",
     "rarity": "C",
-    "blockIcon": 2,
+    "blockIcon": 1,
     "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)\n[Opponent's Turn] If you have 10 DON!! cards on your field, this Character gains +1000 power.",
-    "image": "images/OP05-066_r1.png",
-    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569018",
+    "image": "images/OP05-066.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569105",
     "keywords": ["blocker"],
     "effects": [
       {
@@ -191,10 +191,10 @@
     "types": ["Straw Hat Crew"],
     "attribute": "Slash",
     "rarity": "R",
-    "blockIcon": 2,
+    "blockIcon": 1,
     "text": "[When Attacking] If you have 3 or less Life cards, add up to 1 DON!! card from your DON!! deck and set it as active.",
-    "image": "images/OP05-067_r1.png",
-    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569018",
+    "image": "images/OP05-067.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569105",
     "effects": [
       {
         "timing": "whenAttacking",
@@ -228,10 +228,10 @@
     "types": ["Animal", "Straw Hat Crew"],
     "attribute": "Wisdom",
     "rarity": "C",
-    "blockIcon": 2,
+    "blockIcon": 1,
     "text": "[On Play] If you have 8 or more DON!! cards on your field, set up to 1 of your purple {Straw Hat Crew} type Characters with 6000 power or less as active.",
-    "image": "images/OP05-068_r1.png",
-    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569018",
+    "image": "images/OP05-068.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569105",
     "effects": [
       {
         "timing": "onPlay",
@@ -273,10 +273,10 @@
     "types": ["Straw Hat Crew"],
     "attribute": "Strike",
     "rarity": "UC",
-    "blockIcon": 2,
+    "blockIcon": 1,
     "text": "[DON!! x1] If you have 8 or more DON!! cards on your field, this Character gains [Rush].\n(This card can attack on the turn in which it is played.)",
-    "image": "images/OP05-070_r1.png",
-    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569018",
+    "image": "images/OP05-070.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569105",
     "effects": [
       {
         "timing": "permanent",
@@ -310,10 +310,10 @@
     "types": ["Straw Hat Crew"],
     "attribute": "Slash",
     "rarity": "C",
-    "blockIcon": 2,
+    "blockIcon": 1,
     "text": "[On Play] If you have 8 or more DON!! cards on your field, give up to 2 of your opponent's Characters −2000 power during this turn.",
-    "image": "images/OP05-072_r1.png",
-    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569018",
+    "image": "images/OP05-072.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569105",
     "effects": [
       {
         "timing": "onPlay",
@@ -352,8 +352,8 @@
     "blockIcon": 2,
     "text": "[Main] Look at 3 cards from the top of your deck; reveal up to 1 {Straw Hat Crew}, {Kid Pirates}, or {Heart Pirates} type card and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
     "trigger": "[Trigger] Activate this card's [Main] effect.",
-    "image": "images/OP05-076_p1.png",
-    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569018",
+    "image": "images/OP05-076.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569105",
     "effects": [
       {
         "timing": "main",

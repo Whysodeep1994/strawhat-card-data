@@ -1,0 +1,220 @@
+[
+  {
+    "id": "ST24-001",
+    "name": "Capone\"Gang\"Bege",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 2,
+    "power": 1000,
+    "counter": 1000,
+    "types": ["Supernovas", "Firetank Pirates"],
+    "attribute": "Ranged",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)\n[On Play] If you have 6 or more rested cards, draw 1 card and trash 1 card from your hand.",
+    "image": "images/ST24-001.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569024",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "onPlay",
+        "conditions": [
+          {
+            "restedCardsAtLeast": 6
+          }
+        ],
+        "steps": [
+          {
+            "do": "draw",
+            "count": 1
+          },
+          {
+            "do": "trashFromHand",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST24-002",
+    "name": "Kid & Killer",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 2,
+    "power": 2000,
+    "counter": 1000,
+    "types": ["Supernovas", "Kid Pirates"],
+    "attribute": "Slash/Special",
+    "rarity": "SR",
+    "blockIcon": 3,
+    "text": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 {Supernovas} type card and add it to your hand. Then, place the rest at the bottom of your deck in any order.\n[On Your Opponent's Attack] You may trash this Character: Set up to 1 of your DON!! cards as active.",
+    "image": "images/ST24-002.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569024",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "searchDeck",
+            "look": 5,
+            "take": 1,
+            "filter": {
+              "type": "Supernovas"
+            }
+          }
+        ]
+      },
+      {
+        "timing": "onOpponentsAttack",
+        "optional": true,
+        "costs": [
+          {
+            "trashThis": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "setDonActive",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST24-003",
+    "name": "Basil Hawkins",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 4,
+    "power": 4000,
+    "counter": 2000,
+    "types": ["Supernovas", "Hawkins Pirates"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[End of Your Turn] Set up to 1 of your DON!! cards as active.",
+    "image": "images/ST24-003.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569024",
+    "effects": [
+      {
+        "timing": "endOfYourTurn",
+        "steps": [
+          {
+            "do": "setDonActive",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST24-004",
+    "name": "Law & Bepo",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 10,
+    "power": 11000,
+    "types": ["Minks", "Supernovas", "Heart Pirates"],
+    "attribute": "Slash/Strike",
+    "rarity": "SR",
+    "blockIcon": 3,
+    "text": "[On Play] Rest up to 1 of your opponent's Characters and that Character will not become active in your opponent's next Refresh Phase. Then, if your opponent has 2 or more rested Characters, your Leader gains +2000 power until the end of your opponent's next End Phase.",
+    "image": "images/ST24-004.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569024",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "rest",
+            "target": {
+              "side": "opponent",
+              "upTo": true
+            },
+            "stayRested": true
+          },
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "count": {
+                  "side": "opponent",
+                  "filter": {
+                    "rested": true
+                  }
+                },
+                "atLeast": 2
+              }
+            ],
+            "steps": [
+              {
+                "do": "powerUp",
+                "target": {
+                  "side": "self",
+                  "zone": "leader"
+                },
+                "amount": 2000,
+                "duration": "opponentsNextTurn"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST24-005",
+    "name": "X.Drake",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 5,
+    "power": 5000,
+    "counter": 2000,
+    "types": ["Supernovas", "Navy", "Drake Pirates"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[On Play] If your Leader has the {Supernovas} type, rest up to 1 of your opponent's Characters with a cost of 5 or less. Then, set up to 1 of your DON!! cards as active at the end of this turn.",
+    "image": "images/ST24-005.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569024",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "leaderHasType": "Supernovas"
+              }
+            ],
+            "steps": [
+              {
+                "do": "rest",
+                "target": {
+                  "side": "opponent",
+                  "filter": {
+                    "costAtMost": 5
+                  },
+                  "upTo": true
+                }
+              }
+            ]
+          },
+          {
+            "do": "atEndOfTurn",
+            "steps": [
+              {
+                "do": "setDonActive",
+                "count": 1
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "notes": "\"Then, set up to 1 of your DON!! cards as active at the end of this turn\" is a new sentence, so it happens even if the Leader isn't {Supernovas}."
+  }
+]

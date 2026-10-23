@@ -1,0 +1,35 @@
+{
+  "name": "Tot Musica rests an Uta to rest 2 of the opponent's DON!!",
+  "rules": ["10-2-3"],
+  "setup": {
+    "p1": {
+      "leader": "ST11-001",
+      "hand": ["P-060"],
+      "don": {
+        "active": 2
+      }
+    },
+    "p2": {
+      "don": {
+        "active": 4
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.leader.rested": true,
+    "p2.donActive": 2,
+    "p2.donRested": 2
+  }
+}

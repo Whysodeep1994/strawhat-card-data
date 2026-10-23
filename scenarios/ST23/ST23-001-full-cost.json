@@ -1,0 +1,23 @@
+{
+  "name": "Without a 10000 power Character, Uta costs 6",
+  "rules": ["2-7-1"],
+  "setup": {
+    "p1": {
+      "hand": ["ST23-001"],
+      "don": {
+        "active": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0",
+      "illegal": true
+    }
+  ],
+  "expect": {
+    "p1.hand": 1
+  }
+}

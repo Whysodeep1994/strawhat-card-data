@@ -1,0 +1,223 @@
+[
+  {
+    "id": "ST15-001",
+    "name": "Atmos",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 4,
+    "power": 5000,
+    "counter": 1000,
+    "types": ["Whitebeard Pirates"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[When Attacking] If your Leader is [Edward.Newgate], you cannot add Life cards to your hand using your own effects during this turn.",
+    "image": "images/ST15-001.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569015",
+    "effects": [
+      {
+        "timing": "whenAttacking",
+        "conditions": [
+          {
+            "leaderIs": "Edward.Newgate"
+          }
+        ],
+        "steps": [
+          {
+            "do": "noLifeToHand"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST15-002",
+    "name": "Edward.Newgate",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 7,
+    "power": 8000,
+    "types": ["The Four Emperors", "Whitebeard Pirates"],
+    "attribute": "Special",
+    "rarity": "SR",
+    "blockIcon": 3,
+    "text": "[On Play] Give up to 1 rested DON!! card to your Leader or 1 of your Characters.\n[Activate: Main] You may rest this Character: K.O. up to 1 of your opponent's Characters with 5000 power or less.",
+    "image": "images/ST15-002.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569015",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "giveRestedDon",
+            "target": {
+              "side": "self",
+              "zone": "leaderOrCharacters"
+            },
+            "count": 1
+          }
+        ]
+      },
+      {
+        "timing": "activateMain",
+        "optional": true,
+        "costs": [
+          {
+            "restThis": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "ko",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "powerAtMost": 5000
+              },
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST15-003",
+    "name": "Kingdew",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 3,
+    "power": 4000,
+    "counter": 1000,
+    "types": ["Whitebeard Pirates"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)\n[Opponent's Turn] When this Character is K.O.'d by an effect, up to 1 of your Leader gains +2000 power during this turn.",
+    "image": "images/ST15-003.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569015",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "koByEffect",
+        "conditions": [
+          {
+            "opponentsTurn": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "self",
+              "zone": "leader",
+              "upTo": true
+            },
+            "amount": 2000
+          }
+        ]
+      }
+    ],
+    "notes": "\"When this Character is K.O.'d by an effect\" is the koByEffect timing; [Opponent's Turn] is checked when it is K.O.'d."
+  },
+  {
+    "id": "ST15-004",
+    "name": "Thatch",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 1,
+    "power": 2000,
+    "counter": 2000,
+    "types": ["Whitebeard Pirates"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[On Play] If your Leader's type includes \"Whitebeard Pirates\", give up to 1 of your opponent's Characters −2000 power during this turn. Then, add 1 card from the top of your Life cards to your hand.",
+    "image": "images/ST15-004.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569015",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "leaderHasType": "Whitebeard Pirates"
+              }
+            ],
+            "steps": [
+              {
+                "do": "powerUp",
+                "target": {
+                  "side": "opponent",
+                  "upTo": true
+                },
+                "amount": -2000
+              }
+            ]
+          },
+          {
+            "do": "lifeToHand",
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "notes": "The \"If\" covers only the first sentence, so the Life card is added with any Leader."
+  },
+  {
+    "id": "ST15-005",
+    "name": "Portgas.D.Ace",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 5,
+    "power": 6000,
+    "counter": 1000,
+    "types": ["Whitebeard Pirates"],
+    "attribute": "Special",
+    "rarity": "SR",
+    "blockIcon": 3,
+    "text": "If your Leader's type includes \"Whitebeard Pirates\", this Character gains [Rush].\n(This card can attack on the turn in which it is played.)\n[Once Per Turn] If this Character would be removed from the field by your opponent's effect, you may give this Character −2000 power during this turn instead.",
+    "image": "images/ST15-005.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569015",
+    "effects": [
+      {
+        "timing": "permanent",
+        "conditions": [
+          {
+            "leaderHasType": "Whitebeard Pirates"
+          }
+        ],
+        "steps": [
+          {
+            "do": "grantKeyword",
+            "target": {
+              "side": "this"
+            },
+            "keyword": "rush"
+          }
+        ]
+      },
+      {
+        "timing": "replaceRemoval",
+        "replaces": {
+          "side": "this",
+          "removal": "remove",
+          "byOpponent": true
+        },
+        "oncePerTurn": true,
+        "optional": true,
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "this"
+            },
+            "amount": -2000
+          }
+        ]
+      }
+    ]
+  }
+]

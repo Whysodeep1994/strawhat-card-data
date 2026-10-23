@@ -1,0 +1,35 @@
+{
+  "name": "Bartolomeo rests to set another {FILM} Character active",
+  "rules": ["10-2-7"],
+  "setup": {
+    "p1": {
+      "characters": [
+        "P-029",
+        {
+          "card": "ST16-005",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "endTurn",
+      "player": "p1"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.1"]
+    }
+  ],
+  "expect": {
+    "p1.characters.0.rested": true,
+    "p1.characters.1.rested": false
+  }
+}

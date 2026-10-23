@@ -1,5 +1,78 @@
 [
   {
+    "id": "P-029",
+    "name": "Bartolomeo",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 2,
+    "power": 3000,
+    "counter": 1000,
+    "types": ["FILM", "Supernovas", "Barto Club"],
+    "attribute": "Special",
+    "rarity": "P",
+    "blockIcon": 1,
+    "text": "[End of Your Turn] You may rest this Character: Set up to 1 of your {FILM} type Characters other than [Bartolomeo] as active.",
+    "image": "images/P-029.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569901",
+    "effects": [
+      {
+        "timing": "endOfYourTurn",
+        "optional": true,
+        "costs": [
+          {
+            "restThis": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "setActive",
+            "target": {
+              "side": "self",
+              "filter": {
+                "type": "FILM",
+                "notName": "Bartolomeo"
+              },
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "P-030",
+    "name": "Jinbe",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 4,
+    "power": 5000,
+    "counter": 1000,
+    "types": ["Fish-Man", "The Seven Warlords of the Sea", "The Sun Pirates"],
+    "attribute": "Strike",
+    "rarity": "P",
+    "blockIcon": 1,
+    "text": "[On K.O.] Place up to 1 Character with a cost of 3 or less at the bottom of the owner's deck.",
+    "image": "images/P-030.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569901",
+    "effects": [
+      {
+        "timing": "onKO",
+        "steps": [
+          {
+            "do": "returnToDeckBottom",
+            "target": {
+              "side": "any",
+              "filter": {
+                "costAtMost": 3
+              },
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "P-041",
     "name": "Monkey.D.Luffy",
     "category": "character",
@@ -12,7 +85,314 @@
     "rarity": "P",
     "blockIcon": 2,
     "text": "",
-    "image": "images/P-041_r1.png",
-    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569018"
+    "image": "images/P-041.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569901"
+  },
+  {
+    "id": "P-057",
+    "name": "Fleeting Lullaby",
+    "category": "event",
+    "colors": ["green"],
+    "cost": 3,
+    "types": ["Music", "FILM"],
+    "rarity": "P",
+    "blockIcon": 2,
+    "text": "[Main] If your Leader is [Uta], up to 2 of your opponent's rested Characters with a cost of 4 or less will not become active in your opponent's next Refresh Phase.",
+    "trigger": "[Trigger] Activate this card's [Main] effect.",
+    "image": "images/P-057.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569901",
+    "effects": [
+      {
+        "timing": "main",
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "leaderIs": "Uta"
+              }
+            ],
+            "steps": [
+              {
+                "do": "rest",
+                "target": {
+                  "side": "opponent",
+                  "filter": {
+                    "rested": true,
+                    "costAtMost": 4
+                  },
+                  "count": 2,
+                  "upTo": true
+                },
+                "stayRested": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "leaderIs": "Uta"
+              }
+            ],
+            "steps": [
+              {
+                "do": "rest",
+                "target": {
+                  "side": "opponent",
+                  "filter": {
+                    "rested": true,
+                    "costAtMost": 4
+                  },
+                  "count": 2,
+                  "upTo": true
+                },
+                "stayRested": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "P-058",
+    "name": "Where the Wind Blows",
+    "category": "event",
+    "colors": ["green"],
+    "cost": 2,
+    "types": ["Music", "FILM"],
+    "rarity": "P",
+    "blockIcon": 2,
+    "text": "[Main] If your Leader is [Uta], set all of your {FILM} type Characters as active at the end of this turn.",
+    "trigger": "[Trigger] Set all of your {FILM} type Characters as active.",
+    "image": "images/P-058.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569901",
+    "effects": [
+      {
+        "timing": "main",
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "leaderIs": "Uta"
+              }
+            ],
+            "steps": [
+              {
+                "do": "atEndOfTurn",
+                "steps": [
+                  {
+                    "do": "setActive",
+                    "target": {
+                      "side": "self",
+                      "filter": {
+                        "type": "FILM"
+                      },
+                      "count": 5
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "setActive",
+            "target": {
+              "side": "self",
+              "filter": {
+                "type": "FILM"
+              },
+              "count": 5
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "P-059",
+    "name": "The World's Continuation",
+    "category": "event",
+    "colors": ["green"],
+    "cost": 2,
+    "types": ["Music", "FILM"],
+    "rarity": "P",
+    "blockIcon": 2,
+    "text": "[Counter] If your Leader is [Uta], you may return any number of Characters on your field to the owner's hand. Up to 1 of your Leader or Character cards gains +2000 power during this battle for every returned Character.",
+    "image": "images/P-059.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569901",
+    "effects": [
+      {
+        "timing": "counter",
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "leaderIs": "Uta"
+              }
+            ],
+            "steps": [
+              {
+                "do": "returnToHand",
+                "target": {
+                  "side": "self",
+                  "count": 5,
+                  "upTo": true
+                }
+              },
+              {
+                "do": "powerUp",
+                "target": {
+                  "side": "self",
+                  "zone": "leaderOrCharacters",
+                  "upTo": true
+                },
+                "amount": 2000,
+                "duration": "battle",
+                "perPrevious": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "P-060",
+    "name": "Tot Musica",
+    "category": "event",
+    "colors": ["green"],
+    "cost": 2,
+    "types": ["Music", "FILM"],
+    "rarity": "P",
+    "blockIcon": 2,
+    "text": "[Main] You may rest 1 of your [Uta] cards: Rest up to 2 of your opponent's DON!! cards.",
+    "image": "images/P-060.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569901",
+    "effects": [
+      {
+        "timing": "main",
+        "optional": true,
+        "costs": [
+          {
+            "restOwn": {
+              "name": "Uta"
+            }
+          }
+        ],
+        "steps": [
+          {
+            "do": "restOpponentDon",
+            "count": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "P-061",
+    "name": "Monkey.D.Luffy",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 8,
+    "power": 10000,
+    "counter": 1000,
+    "types": ["FILM", "Straw Hat Crew"],
+    "attribute": "Strike",
+    "rarity": "P",
+    "blockIcon": 2,
+    "text": "",
+    "image": "images/P-061.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569901"
+  },
+  {
+    "id": "P-084",
+    "name": "Buggy",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 7,
+    "power": 8000,
+    "types": ["The Four Emperors", "Cross Guild"],
+    "attribute": "Slash",
+    "rarity": "P",
+    "blockIcon": 3,
+    "text": "This Character cannot attack.\nIf your Leader is [Buggy], all Characters with a cost of 3 or 4 cannot attack.\n[On Play] Play up to 1 {Cross Guild} type Character card with a cost of 6 or less from your hand.",
+    "image": "images/P-084.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569025",
+    "effects": [
+      {
+        "timing": "permanent",
+        "steps": [
+          {
+            "do": "grantStatus",
+            "target": {
+              "side": "this"
+            },
+            "status": "cannotAttack"
+          }
+        ]
+      },
+      {
+        "timing": "permanent",
+        "conditions": [
+          {
+            "leaderIs": "Buggy"
+          }
+        ],
+        "steps": [
+          {
+            "do": "grantStatus",
+            "target": {
+              "side": "self",
+              "zone": "characters",
+              "filter": {
+                "costAtLeast": 3,
+                "costAtMost": 4
+              }
+            },
+            "status": "cannotAttack"
+          },
+          {
+            "do": "grantStatus",
+            "target": {
+              "side": "opponent",
+              "zone": "characters",
+              "filter": {
+                "costAtLeast": 3,
+                "costAtMost": 4
+              }
+            },
+            "status": "cannotAttack"
+          }
+        ]
+      },
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "playFromHand",
+            "filter": {
+              "category": "character",
+              "type": "Cross Guild",
+              "costAtMost": 6
+            }
+          }
+        ]
+      }
+    ],
+    "notes": "\"All Characters with a cost of 3 or 4\" means both players' Characters, by current cost."
   }
 ]
