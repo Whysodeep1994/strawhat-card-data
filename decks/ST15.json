@@ -1,0 +1,22 @@
+{
+  "id": "ST15",
+  "name": "RED Edward.Newgate",
+  "leader": "OP02-001",
+  "cards": {
+    "OP02-008": 4,
+    "OP02-018": 4,
+    "OP02-019": 4,
+    "OP02-023": 4,
+    "OP03-003": 4,
+    "OP03-006": 4,
+    "OP03-007": 4,
+    "OP03-009": 4,
+    "OP03-010": 4,
+    "ST15-001": 4,
+    "ST15-002": 2,
+    "ST15-003": 4,
+    "ST15-004": 2,
+    "ST15-005": 2
+  },
+  "source": "https://onepiece.limitlesstcg.com/cards/ST15"
+}
