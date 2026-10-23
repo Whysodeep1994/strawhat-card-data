@@ -1,0 +1,38 @@
+{
+  "name": "Brook returns DON!! when attacking to give 2 Characters −2000",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": ["OP09-073"],
+      "don": {
+        "active": 1
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C5-5000", "TEST-C4-4000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0", "p2.characters.1"]
+    }
+  ],
+  "expect": {
+    "modifiers.0.power": -2000,
+    "modifiers.1.power": -2000,
+    "p1.donDeck": 1
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "Dereshi! adds 2 [Trigger] cards other than [Dereshi!]",
+  "rules": ["10-2-3"],
+  "setup": {
+    "p1": {
+      "hand": ["OP09-117"],
+      "don": {
+        "active": 3
+      },
+      "deck": ["OP09-019", "OP09-117", "OP09-115", "TEST-FILLER", "TEST-FILLER", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.0", "p1.deck.2"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 2,
+    "p1.deck": 4
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Nico Robin trashes a [Trigger] card when attacking to add a rested DON!!",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "leader": "OP09-062",
+      "hand": ["OP09-019", "TEST-FILLER"],
+      "don": {
+        "active": 0,
+        "deck": 5
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.donRested": 1,
+    "p1.hand": 1,
+    "p1.trash": 1
+  }
+}

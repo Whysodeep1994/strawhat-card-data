@@ -1,0 +1,38 @@
+{
+  "name": "Lim rests 3 DON!! to add a rested DON!! and play an {ODYSSEY} Character",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "OP09-022",
+      "hand": ["OP09-038"],
+      "don": {
+        "active": 3,
+        "deck": 5
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 1
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 1,
+    "p1.characters.0.rested": true,
+    "p1.donRested": 4,
+    "p1.donDeck": 4
+  }
+}

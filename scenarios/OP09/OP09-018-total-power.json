@@ -1,0 +1,37 @@
+{
+  "name": "Get Out of Here! K.O.s 2 Characters with a total of 4000 power or less",
+  "rules": ["4-8"],
+  "setup": {
+    "p1": {
+      "hand": ["OP09-018"],
+      "don": {
+        "active": 3
+      }
+    },
+    "p2": {
+      "characters": ["TEST-FILLER", "TEST-BLOCKER-2000", "TEST-C4-4000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.1", "p2.characters.2"],
+      "illegal": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0", "p2.characters.1"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 1,
+    "p2.characters.0.cardId": "TEST-C4-4000"
+  }
+}

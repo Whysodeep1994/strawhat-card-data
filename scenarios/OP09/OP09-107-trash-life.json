@@ -1,0 +1,23 @@
+{
+  "name": "Nico Robin trashes the top of the opponent's Life when they have 3 or more",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP09-107"],
+      "don": {
+        "active": 6
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p2.life": 3,
+    "p2.trash": 1
+  }
+}

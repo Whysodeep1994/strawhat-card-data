@@ -1,0 +1,28 @@
+{
+  "name": "Donquixote Doflamingo sets itself active with 2 rested Characters",
+  "rules": ["10-2-7"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "OP09-031",
+          "rested": true
+        },
+        {
+          "card": "TEST-FILLER",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "endTurn",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "p1.characters.0.rested": false,
+    "p1.characters.1.rested": true
+  }
+}
