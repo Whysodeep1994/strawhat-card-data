@@ -727,6 +727,248 @@
     "notes": "[Trigger] \"Activate this card's [Main] effect\" repeats the [Main] steps."
   },
   {
+    "id": "OP09-061",
+    "name": "Monkey.D.Luffy",
+    "category": "leader",
+    "colors": ["purple", "black"],
+    "life": 4,
+    "power": 5000,
+    "types": ["The Four Emperors", "Straw Hat Crew"],
+    "attribute": "Strike",
+    "rarity": "L",
+    "blockIcon": 3,
+    "text": "[DON!! x1] All of your Characters gain +1 cost.\n[Your Turn] [Once Per Turn] When 2 or more DON!! cards on your field are returned to your DON!! deck, add up to 1 DON!! card from your DON!! deck and set it as active, and add up to 1 additional DON!! card and rest it.",
+    "image": "images/OP09-061.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569109",
+    "effects": [
+      {
+        "timing": "permanent",
+        "conditions": [
+          {
+            "donAtLeast": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "costChange",
+            "target": {
+              "side": "self",
+              "zone": "characters"
+            },
+            "amount": 1
+          }
+        ]
+      },
+      {
+        "timing": "donReturned",
+        "returnedAtLeast": 2,
+        "conditions": [
+          {
+            "yourTurn": true
+          }
+        ],
+        "oncePerTurn": true,
+        "steps": [
+          {
+            "do": "addDon",
+            "count": 1
+          },
+          {
+            "do": "addDon",
+            "count": 1,
+            "rested": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP09-063",
+    "name": "Usopp",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 4,
+    "power": 6000,
+    "counter": 1000,
+    "types": ["Straw Hat Crew"],
+    "attribute": "Ranged",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "",
+    "image": "images/OP09-063.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569109"
+  },
+  {
+    "id": "OP09-070",
+    "name": "Nami",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 3,
+    "power": 2000,
+    "counter": 2000,
+    "types": ["Straw Hat Crew"],
+    "attribute": "Special",
+    "rarity": "UC",
+    "blockIcon": 3,
+    "text": "[On Play] You may return 1 or more DON!! cards from your field to your DON!! deck: Give up to 2 rested DON!! cards to your Leader or 1 of your Characters.",
+    "image": "images/OP09-070.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569109",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "optional": true,
+        "costs": [
+          {
+            "donMinus": 1,
+            "orMore": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "giveRestedDon",
+            "target": {
+              "side": "self",
+              "zone": "leaderOrCharacters",
+              "upTo": true
+            },
+            "count": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP09-076",
+    "name": "Roronoa Zoro",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 3,
+    "power": 5000,
+    "types": ["Straw Hat Crew"],
+    "attribute": "Slash",
+    "rarity": "R",
+    "blockIcon": 3,
+    "text": "[On Play] You may return 1 or more DON!! cards from your field to your DON!! deck: Add up to 1 DON!! card from your DON!! deck and set it as active.",
+    "image": "images/OP09-076.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569109",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "optional": true,
+        "costs": [
+          {
+            "donMinus": 1,
+            "orMore": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "addDon",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP09-077",
+    "name": "Gum-Gum Lightning",
+    "category": "event",
+    "colors": ["purple"],
+    "cost": 2,
+    "types": ["The Four Emperors", "Straw Hat Crew"],
+    "rarity": "UC",
+    "blockIcon": 3,
+    "text": "[Main] DON!! −2 (You may return the specified number of DON!! cards from your field to your DON!! deck.): K.O. up to 1 of your opponent's Characters with 6000 power or less.",
+    "trigger": "[Trigger] Add up to 1 DON!! card from your DON!! deck and set it as active.",
+    "image": "images/OP09-077.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569109",
+    "effects": [
+      {
+        "timing": "main",
+        "costs": [
+          {
+            "donMinus": 2
+          }
+        ],
+        "steps": [
+          {
+            "do": "ko",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "powerAtMost": 6000
+              },
+              "upTo": true
+            }
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "addDon",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP09-078",
+    "name": "Gum-Gum Giant",
+    "category": "event",
+    "colors": ["purple"],
+    "cost": 1,
+    "types": ["The Four Emperors", "Straw Hat Crew"],
+    "rarity": "R",
+    "blockIcon": 3,
+    "text": "[Counter] DON!! −2, You may trash 1 card from your hand: If your Leader has the {Straw Hat Crew} type, up to 1 of your Leader or Character cards gains +4000 power during this battle. Then, draw 2 cards.",
+    "image": "images/OP09-078.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569109",
+    "effects": [
+      {
+        "timing": "counter",
+        "costs": [
+          {
+            "donMinus": 2
+          },
+          {
+            "trashFromHand": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "leaderHasType": "Straw Hat Crew"
+              }
+            ],
+            "steps": [
+              {
+                "do": "powerUp",
+                "target": {
+                  "side": "self",
+                  "zone": "leaderOrCharacters",
+                  "upTo": true
+                },
+                "amount": 4000,
+                "duration": "battle"
+              },
+              {
+                "do": "draw",
+                "count": 2
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "notes": "\"Then, draw 2 cards\" is read as part of the \"If your Leader has the {Straw Hat Crew} type\" sentence."
+  },
+  {
     "id": "OP09-081",
     "name": "Marshall.D.Teach",
     "category": "leader",

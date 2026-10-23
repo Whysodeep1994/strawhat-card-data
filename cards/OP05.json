@@ -142,6 +142,22 @@
     ]
   },
   {
+    "id": "OP05-065",
+    "name": "San-Gorou",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 6,
+    "power": 8000,
+    "counter": 1000,
+    "types": ["Straw Hat Crew"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "",
+    "image": "images/OP05-065.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569105"
+  },
+  {
     "id": "OP05-066",
     "name": "Jinbe",
     "category": "character",
