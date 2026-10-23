@@ -1,0 +1,41 @@
+{
+  "name": "Law places a 3000-power Character at the bottom and plays a cost 4 Character",
+  "rules": ["8-3-1-6"],
+  "setup": {
+    "p1": {
+      "leader": "ST10-001",
+      "hand": ["TEST-C4-4000", "TEST-C5-5000"],
+      "don": {
+        "active": 3
+      }
+    },
+    "p2": {
+      "characters": ["TEST-BLOCKER-2000", "TEST-C4-4000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 0
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 1,
+    "p2.deck": 21,
+    "p1.characters": 1,
+    "p1.characters.0.cardId": "TEST-C4-4000",
+    "p1.donDeck": 3
+  }
+}

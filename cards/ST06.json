@@ -1,0 +1,44 @@
+[
+  {
+    "id": "ST06-001",
+    "name": "Sakazuki",
+    "category": "leader",
+    "colors": ["black"],
+    "life": 5,
+    "power": 5000,
+    "types": ["Navy"],
+    "attribute": "Special",
+    "rarity": "L",
+    "blockIcon": 1,
+    "text": "[Activate: Main] [Once Per Turn] ③ (You may rest the specified number of DON!! cards in your cost area.) You may trash 1 card from your hand: K.O. up to 1 of your opponent's Characters with a cost of 0.",
+    "image": "images/ST06-001.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569006",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "oncePerTurn": true,
+        "costs": [
+          {
+            "restDon": 3
+          },
+          {
+            "trashFromHand": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "ko",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "costAtMost": 0
+              },
+              "upTo": true
+            }
+          }
+        ],
+        "optional": true
+      }
+    ]
+  }
+]

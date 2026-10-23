@@ -1,0 +1,31 @@
+{
+  "name": "Kid returns 1 DON!! when attacking to gain +2000",
+  "rules": ["8-3-1-6"],
+  "setup": {
+    "p1": {
+      "leader": "ST10-003",
+      "life": 3,
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.donDeck": 1,
+    "modifiers": 1,
+    "modifiers.0.power": 2000
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Shanks gives only your {FILM} Characters +2000",
+  "rules": ["8-3-1-6"],
+  "setup": {
+    "p1": {
+      "leader": "ST05-001",
+      "characters": ["P-061", "TEST-FILLER"],
+      "don": {
+        "active": 3
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 0
+    }
+  ],
+  "expect": {
+    "modifiers": 1,
+    "modifiers.0.power": 2000,
+    "modifiers.0.target": "c2",
+    "p1.donDeck": 3
+  }
+}

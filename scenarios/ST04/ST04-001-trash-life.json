@@ -1,0 +1,25 @@
+{
+  "name": "Kaido returns DON!! −7 to trash 1 of the opponent's Life cards",
+  "rules": ["8-3-1-6"],
+  "setup": {
+    "p1": {
+      "leader": "ST04-001",
+      "don": {
+        "active": 7
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 0
+    }
+  ],
+  "expect": {
+    "p2.life": 3,
+    "p2.trash": 1,
+    "p1.donDeck": 7
+  }
+}
