@@ -1,0 +1,38 @@
+{
+  "name": "Sabo adds a 7000-power Character to Life face-up to give a Character +2000",
+  "rules": ["3-10-2-1"],
+  "setup": {
+    "p1": {
+      "leader": {
+        "card": "ST13-001",
+        "don": 1
+      },
+      "characters": ["TEST-C7-7000", "TEST-C5-5000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 1,
+    "p1.life": 5,
+    "p1.life.0.faceUp": true,
+    "modifiers.0.power": 2000,
+    "modifiers.0.endsTurn": 4
+  }
+}

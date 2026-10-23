@@ -1,0 +1,45 @@
+{
+  "name": "Luffy with 0 Life trashes 1 card to add 2 cost 5 Characters from hand and trash to Life face-up",
+  "rules": ["3-10-2-1"],
+  "setup": {
+    "p1": {
+      "leader": {
+        "card": "ST13-003",
+        "don": 2
+      },
+      "life": 0,
+      "hand": ["TEST-FILLER", "TEST-C5-5000"],
+      "trash": ["TEST-C5-5000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 1
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0", "p1.trash.1"]
+    }
+  ],
+  "expect": {
+    "p1.life": 2,
+    "p1.life.0.faceUp": true,
+    "p1.hand": 0,
+    "p1.trash": 1,
+    "p1.trash.0.cardId": "TEST-FILLER"
+  }
+}

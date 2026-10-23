@@ -1,0 +1,32 @@
+{
+  "name": "Ace with 2 DON!! adds a cost 5 Character from the top 5 to Life face-up",
+  "rules": ["3-10-2-1"],
+  "setup": {
+    "p1": {
+      "leader": {
+        "card": "ST13-002",
+        "don": 2
+      },
+      "deck": ["TEST-FILLER", "TEST-C5-5000", "TEST-C4-4000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 0
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.1"]
+    }
+  ],
+  "expect": {
+    "p1.life": 5,
+    "p1.life.0.cardId": "TEST-C5-5000",
+    "p1.life.0.faceUp": true,
+    "p1.deck": 2
+  }
+}
