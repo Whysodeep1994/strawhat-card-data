@@ -1,0 +1,28 @@
+{
+  "name": "Kid has 4000 power on your turn with 4 or more Life",
+  "rules": ["8-3-2-4"],
+  "setup": {
+    "p1": {
+      "leader": "ST10-003",
+      "life": 4
+    },
+    "p2": {
+      "leader": "TEST-LEADER"
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 4
+  }
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "ST05-001",
+    "name": "Shanks",
+    "category": "leader",
+    "colors": ["purple"],
+    "life": 5,
+    "power": 5000,
+    "types": ["FILM", "The Four Emperors", "Red-Haired Pirates"],
+    "attribute": "Slash",
+    "rarity": "L",
+    "blockIcon": 1,
+    "text": "[Activate: Main] [Once Per Turn] DON!! −3 (You may return the specified number of DON!! cards from your field to your DON!! deck.): All of your {FILM} type Characters gain +2000 power during this turn.",
+    "image": "images/ST05-001.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569005",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "oncePerTurn": true,
+        "costs": [
+          {
+            "donMinus": 3
+          }
+        ],
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "self",
+              "filter": {
+                "type": "FILM"
+              },
+              "count": 10
+            },
+            "amount": 2000
+          }
+        ]
+      }
+    ],
+    "notes": "\"All of your {FILM} type Characters\": count 10 without upTo picks every matching Character."
+  }
+]

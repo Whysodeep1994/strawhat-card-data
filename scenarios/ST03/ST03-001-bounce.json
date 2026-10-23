@@ -1,0 +1,34 @@
+{
+  "name": "Crocodile returns DON!! −4 to bounce a Character with a cost of 5 or less",
+  "rules": ["8-3-1-6"],
+  "setup": {
+    "p1": {
+      "leader": "ST03-001",
+      "don": {
+        "active": 4
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C5-5000", "TEST-C6-6000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 0
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.hand": 1,
+    "p2.characters": 1,
+    "p2.characters.0.cardId": "TEST-C6-6000",
+    "p1.donDeck": 4
+  }
+}

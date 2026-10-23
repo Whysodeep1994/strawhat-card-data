@@ -1,5 +1,44 @@
 [
   {
+    "id": "ST03-001",
+    "name": "Crocodile",
+    "category": "leader",
+    "colors": ["blue"],
+    "life": 5,
+    "power": 5000,
+    "types": ["The Seven Warlords of the Sea", "Baroque Works"],
+    "attribute": "Special",
+    "rarity": "L",
+    "blockIcon": 1,
+    "text": "[Activate: Main] [Once Per Turn] DON!! −4 (You may return the specified number of DON!! cards from your field to your DON!! deck.): Return up to 1 Character with a cost of 5 or less to the owner's hand.",
+    "image": "images/ST03-001.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569003",
+    "errata": true,
+    "effects": [
+      {
+        "timing": "activateMain",
+        "oncePerTurn": true,
+        "costs": [
+          {
+            "donMinus": 4
+          }
+        ],
+        "steps": [
+          {
+            "do": "returnToHand",
+            "target": {
+              "side": "any",
+              "filter": {
+                "costAtMost": 5
+              },
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "ST03-002",
     "name": "Edward Weevil",
     "category": "character",

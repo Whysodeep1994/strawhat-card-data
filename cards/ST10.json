@@ -1,0 +1,141 @@
+[
+  {
+    "id": "ST10-001",
+    "name": "Trafalgar Law",
+    "category": "leader",
+    "colors": ["red", "purple"],
+    "life": 4,
+    "power": 5000,
+    "types": ["Heart Pirates"],
+    "attribute": "Slash",
+    "rarity": "L",
+    "blockIcon": 2,
+    "text": "[Activate: Main] [Once Per Turn] DON!! −3 (You may return the specified number of DON!! cards from your field to your DON!! deck.): Place up to 1 of your opponent's Characters with 3000 power or less at the bottom of the owner's deck, and play up to 1 Character card with a cost of 4 or less from your hand.",
+    "image": "images/ST10-001.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569010",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "oncePerTurn": true,
+        "costs": [
+          {
+            "donMinus": 3
+          }
+        ],
+        "steps": [
+          {
+            "do": "returnToDeckBottom",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "powerAtMost": 3000
+              },
+              "upTo": true
+            }
+          },
+          {
+            "do": "playFromHand",
+            "filter": {
+              "category": "character",
+              "costAtMost": 4
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST10-002",
+    "name": "Monkey.D.Luffy",
+    "category": "leader",
+    "colors": ["red", "purple"],
+    "life": 3,
+    "power": 6000,
+    "types": ["Straw Hat Crew"],
+    "attribute": "Strike",
+    "rarity": "L",
+    "blockIcon": 2,
+    "text": "[Activate: Main] [Once Per Turn] If you have 0 DON!! cards on your field or 8 or more DON!! cards on your field, add up to 1 DON!! card from your DON!! deck and set it as active.",
+    "image": "images/ST10-002.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569010",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "oncePerTurn": true,
+        "conditions": [
+          {
+            "anyOf": [
+              {
+                "donOnFieldAtMost": 0
+              },
+              {
+                "donOnFieldAtLeast": 8
+              }
+            ]
+          }
+        ],
+        "steps": [
+          {
+            "do": "addDon",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST10-003",
+    "name": "Eustass\"Captain\"Kid",
+    "category": "leader",
+    "colors": ["red", "purple"],
+    "life": 5,
+    "power": 5000,
+    "types": ["Kid Pirates"],
+    "attribute": "Special",
+    "rarity": "L",
+    "blockIcon": 2,
+    "text": "[Your Turn] If you have 4 or more Life cards, give this Leader −1000 power.\n[When Attacking] DON!! −1 (You may return the specified number of DON!! cards from your field to your DON!! deck.): This Leader gains +2000 power during this turn.",
+    "image": "images/ST10-003.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569010",
+    "effects": [
+      {
+        "timing": "permanent",
+        "conditions": [
+          {
+            "yourTurn": true
+          },
+          {
+            "lifeAtLeast": 4
+          }
+        ],
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "this"
+            },
+            "amount": -1000
+          }
+        ]
+      },
+      {
+        "timing": "whenAttacking",
+        "optional": true,
+        "costs": [
+          {
+            "donMinus": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "this"
+            },
+            "amount": 2000
+          }
+        ]
+      }
+    ]
+  }
+]

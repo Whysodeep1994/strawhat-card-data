@@ -1,0 +1,27 @@
+{
+  "name": "Luffy rests 1 DON!! to gain [Rush]",
+  "rules": ["10-1-1"],
+  "setup": {
+    "p1": {
+      "hand": ["ST30-012"],
+      "don": {
+        "active": 5
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "legal.p1.attack": 2
+  }
+}

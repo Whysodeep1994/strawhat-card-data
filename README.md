@@ -1,7 +1,5 @@
 # Strawhat Simulator card data
 
-Official One Piece Card Game cards for [Strawhat Simulator](https://github.com/Whysodeep1994/strawhat-simulator):
-exact card text, exact card art, and real card numbers (`ST01-001` is the real ST01-001), plus
 the effect data the rules engine runs and a scenario test for every card.
 
 The simulator is free and will never be monetized. It exists to give players a better way to play.
@@ -18,34 +16,6 @@ The simulator is free and will never be monetized. It exists to give players a b
 | `decks/<STxx>.json`      | Official starter deck lists: `leader` plus 50 `cards` as card number → copies, and `source`. |
 | `engine.json`            | The engine commit the scenarios run against.                                                 |
 | `test/helper-cards.json` | Made-up `TEST-` cards used as opponents and fillers in scenarios.                            |
-
-Effects use the format in the engine's
-[docs/CARD_EFFECTS.md](https://github.com/Whysodeep1994/strawhat-simulator/blob/main/docs/CARD_EFFECTS.md),
-and scenarios use its
-[docs/SCENARIOS.md](https://github.com/Whysodeep1994/strawhat-simulator/blob/main/docs/SCENARIOS.md).
-
-## Card fields
-
-Official fields come straight from the
-[official card list](https://en.onepiece-cardgame.com/cardlist/): `id`, `name`, `category`,
-`colors`, `cost` or `life`, `power`, `counter`, `types`, `attribute`, `rarity`, `blockIcon`,
-`text`, `trigger`, `image`, `source`. `errata: true` means the official site lists an errata for
-the card; `text` is always the current official wording.
-
-Hand-written fields: `keywords`, `effects`, and `notes` (why an effect is written the way it is).
-
-## Adding a set
-
-1. Find the set's `series` number in the official card list URL.
-2. Run `NODE_USE_ENV_PROXY=1 pnpm import ST02 569002` (the proxy variable is only needed behind a
-   proxy). This writes `cards/ST02.json` and downloads the art. Running it again refreshes the
-   official fields and keeps your `keywords` and `effects`.
-   For reprints, list the card numbers after the series to import only those cards from the
-   set they belong to, keeping that set's other cards: for example
-   `pnpm import OP02 569102 OP02-001 OP02-008` for two OP-02 cards in a starter deck.
-3. Write `keywords` and `effects` for each card, and at least one scenario per card in
-   `scenarios/ST02/`, named `ST02-001-what-it-checks.json`.
-4. Run `pnpm status`, then `pnpm check`. Every card must say "tested".
 
 ## Running the tests
 

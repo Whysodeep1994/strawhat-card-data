@@ -1,0 +1,33 @@
+{
+  "name": "Zoro can attack Characters the turn it is played",
+  "rules": ["10-1-2"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "ST29-014",
+          "playedThisTurn": true
+        }
+      ]
+    },
+    "p2": {
+      "characters": [
+        {
+          "card": "TEST-C4-4000",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.characters.0"
+    }
+  ],
+  "expect": {
+    "prompt.kind": "counter"
+  }
+}

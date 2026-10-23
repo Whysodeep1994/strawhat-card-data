@@ -1,0 +1,28 @@
+{
+  "name": "Luffy with 2 Life draws 1 and trashes 1 when attacking",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "leader": "ST29-001",
+      "life": 2,
+      "hand": ["TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p1.trash": 1
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Luffy draws nothing with 4 cards in hand",
+  "rules": ["8-3-2-1"],
+  "setup": {
+    "p1": {
+      "leader": {
+        "card": "P-047",
+        "don": 1
+      },
+      "hand": ["TEST-FILLER", "TEST-FILLER", "TEST-FILLER", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    }
+  ],
+  "expect": {
+    "p1.hand": 4
+  }
+}

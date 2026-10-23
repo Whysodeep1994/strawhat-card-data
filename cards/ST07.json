@@ -1,5 +1,53 @@
 [
   {
+    "id": "ST07-001",
+    "name": "Charlotte Linlin",
+    "category": "leader",
+    "colors": ["yellow"],
+    "life": 5,
+    "power": 5000,
+    "types": ["The Four Emperors", "Big Mom Pirates"],
+    "attribute": "Special",
+    "rarity": "L",
+    "blockIcon": 1,
+    "text": "[DON!! x2] [When Attacking] You may add 1 card from the top or bottom of your Life cards to your hand: If you have 2 or less Life cards, add up to 1 card from your hand to the top of your Life cards.",
+    "image": "images/ST07-001.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569007",
+    "effects": [
+      {
+        "timing": "whenAttacking",
+        "conditions": [
+          {
+            "donAtLeast": 2
+          }
+        ],
+        "optional": true,
+        "costs": [
+          {
+            "lifeToHand": 1,
+            "from": "topOrBottom"
+          }
+        ],
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "lifeAtMost": 2
+              }
+            ],
+            "steps": [
+              {
+                "do": "handToLife",
+                "count": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "ST07-005",
     "name": "Charlotte Daifuku",
     "category": "character",
