@@ -1,0 +1,27 @@
+{
+  "name": "Nami without DON!! doesn't trash after dealing damage",
+  "rules": ["8-3-2-3"],
+  "setup": {
+    "p1": {
+      "leader": "P-117",
+      "deck": 1
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "winner": null,
+    "p1.deck": 1,
+    "p2.life": 3
+  }
+}

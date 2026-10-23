@@ -1,0 +1,36 @@
+{
+  "name": "Linlin with 4 Life adds a Life card but can't put one back",
+  "rules": ["8-3-3"],
+  "setup": {
+    "p1": {
+      "leader": {
+        "card": "ST07-001",
+        "don": 2
+      },
+      "life": 4,
+      "hand": ["TEST-C5-5000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": false
+    }
+  ],
+  "expect": {
+    "p1.life": 3,
+    "p1.hand": 2
+  }
+}
