@@ -1,0 +1,38 @@
+{
+  "name": "Alvida is cost 5 with 2 base cost 5+ Characters, out of reach of cost 4 or less",
+  "rules": ["2-7-6"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "characters": ["ST25-001", "OP09-055", "OP09-043"]
+    },
+    "p2": {
+      "hand": ["OP07-036"],
+      "characters": ["TEST-C5-5000"],
+      "don": {
+        "active": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p2",
+      "card": "p2.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": []
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": []
+    }
+  ],
+  "expect": {
+    "p1.characters.0.rested": false
+  }
+}

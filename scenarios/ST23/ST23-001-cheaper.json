@@ -1,0 +1,24 @@
+{
+  "name": "Uta costs 4 less while you have a Character with 10000 power or more",
+  "rules": ["2-7-6"],
+  "setup": {
+    "p1": {
+      "characters": ["TEST-C9-10000"],
+      "hand": ["ST23-001"],
+      "don": {
+        "active": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.characters": 2,
+    "p1.donActive": 0
+  }
+}

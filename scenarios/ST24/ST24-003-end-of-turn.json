@@ -1,0 +1,27 @@
+{
+  "name": "Basil Hawkins sets 1 DON!! active at the end of your turn",
+  "rules": ["10-2-7"],
+  "setup": {
+    "p1": {
+      "characters": ["ST24-003"],
+      "don": {
+        "rested": 2
+      }
+    },
+    "p2": {
+      "don": {
+        "deck": 10
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "endTurn",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "p1.donActive": 1,
+    "p1.donRested": 1
+  }
+}

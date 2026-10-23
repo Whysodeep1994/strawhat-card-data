@@ -64,5 +64,42 @@
     "cost": 4,
     "power": 5000,
     "keywords": ["blocker"]
+  },
+  {
+    "id": "TEST-C8-8000",
+    "name": "Test 8000",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 8,
+    "power": 8000
+  },
+  {
+    "id": "TEST-C9-10000",
+    "name": "Test 10000",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 9,
+    "power": 10000
+  },
+  {
+    "id": "TEST-KO-EVENT",
+    "name": "Test K.O. Event",
+    "category": "event",
+    "colors": ["red"],
+    "cost": 0,
+    "effects": [
+      {
+        "timing": "main",
+        "steps": [
+          {
+            "do": "ko",
+            "target": {
+              "side": "opponent",
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
   }
 ]

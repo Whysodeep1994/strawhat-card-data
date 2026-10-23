@@ -1,0 +1,234 @@
+[
+  {
+    "id": "ST23-001",
+    "name": "Uta",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 6,
+    "power": 4000,
+    "counter": 2000,
+    "types": ["FILM"],
+    "attribute": "Special",
+    "rarity": "SR",
+    "blockIcon": 3,
+    "text": "If you have a Character with 10000 power or more, give this card in your hand \u22124 cost.\n[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)",
+    "image": "images/ST23-001.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569023",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "permanent",
+        "zone": "hand",
+        "conditions": [
+          {
+            "count": {
+              "side": "self",
+              "filter": {
+                "powerAtLeast": 10000
+              }
+            },
+            "atLeast": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "costChange",
+            "target": {
+              "side": "this"
+            },
+            "amount": -4
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST23-002",
+    "name": "Shanks",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 9,
+    "power": 10000,
+    "types": ["The Four Emperors", "Red-Haired Pirates"],
+    "attribute": "Slash",
+    "rarity": "SR",
+    "blockIcon": 3,
+    "text": "If your opponent has a Character with 8000 base power or more, give this card in your hand \u22123 cost.\n[On Play] If your Leader has the {Red-Haired Pirates} type or is [Uta], your Leader gains +2000 power until the end of your opponent's next End Phase.",
+    "image": "images/ST23-002.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569023",
+    "effects": [
+      {
+        "timing": "permanent",
+        "zone": "hand",
+        "conditions": [
+          {
+            "count": {
+              "side": "opponent",
+              "filter": {
+                "basePowerAtLeast": 8000
+              }
+            },
+            "atLeast": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "costChange",
+            "target": {
+              "side": "this"
+            },
+            "amount": -3
+          }
+        ]
+      },
+      {
+        "timing": "onPlay",
+        "conditions": [
+          {
+            "anyOf": [
+              {
+                "leaderHasType": "Red-Haired Pirates"
+              },
+              {
+                "leaderIs": "Uta"
+              }
+            ]
+          }
+        ],
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "self",
+              "zone": "leader"
+            },
+            "amount": 2000,
+            "duration": "opponentsNextTurn"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST23-003",
+    "name": "Benn.Beckman",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 4,
+    "power": 5000,
+    "counter": 1000,
+    "types": ["Red-Haired Pirates"],
+    "attribute": "Ranged",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[On Play] You may trash 1 card from your hand: If your Leader has the {Red-Haired Pirates} type, K.O. up to 1 of your opponent's Characters with 4000 base power or less.",
+    "image": "images/ST23-003.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569023",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "optional": true,
+        "costs": [
+          {
+            "trashFromHand": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "leaderHasType": "Red-Haired Pirates"
+              }
+            ],
+            "steps": [
+              {
+                "do": "ko",
+                "target": {
+                  "side": "opponent",
+                  "filter": {
+                    "basePowerAtMost": 4000
+                  },
+                  "upTo": true
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST23-004",
+    "name": "Monkey.D.Luffy",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 1,
+    "power": 2000,
+    "counter": 1000,
+    "types": ["FILM", "Supernovas", "Straw Hat Crew"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[Activate: Main] You may rest 1 of your DON!! cards and this Character: Give up to 1 of your opponent's Characters \u22121000 power during this turn.",
+    "image": "images/ST23-004.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569023",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "optional": true,
+        "costs": [
+          {
+            "restDon": 1
+          },
+          {
+            "restThis": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "opponent",
+              "upTo": true
+            },
+            "amount": -1000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST23-005",
+    "name": "Yasopp",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 1,
+    "power": 1000,
+    "counter": 1000,
+    "types": ["Red-Haired Pirates"],
+    "attribute": "Ranged",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[Activate: Main] [Once Per Turn] Give up to 1 rested DON!! card to your Leader or 1 of your Characters.",
+    "image": "images/ST23-005.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569023",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "oncePerTurn": true,
+        "steps": [
+          {
+            "do": "giveRestedDon",
+            "target": {
+              "side": "self",
+              "zone": "leaderOrCharacters",
+              "upTo": true
+            },
+            "count": 1
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,48 @@
+{
+  "name": "Alvida, K.O.'d with a {Cross Guild} Leader, plays a cost 5 or less Character other than [Alvida]",
+  "rules": ["10-2-17"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "leader": "OP09-042",
+      "characters": [
+        {
+          "card": "OP09-043",
+          "rested": true
+        }
+      ],
+      "hand": ["OP09-043", "OP09-055"]
+    },
+    "p2": {
+      "characters": ["TEST-C7-7000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p2",
+      "attacker": "p2.characters.0",
+      "target": "p1.characters.0"
+    },
+    {
+      "type": "pass",
+      "player": "p1"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"],
+      "illegal": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.1"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 1,
+    "p1.characters.0.cardId": "OP09-055"
+  }
+}
