@@ -1,0 +1,25 @@
+{
+  "name": "Tony Tony.Chopper is played for 1 DON!!",
+  "rules": ["6-5-3-1", "2-7-2"],
+  "setup": {
+    "p1": {
+      "hand": ["ST01-006"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.characters": 1,
+    "p1.characters.0.cardId": "ST01-006",
+    "p1.donActive": 0,
+    "p1.donRested": 1
+  }
+}

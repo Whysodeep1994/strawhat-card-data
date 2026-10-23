@@ -1,0 +1,68 @@
+[
+  {
+    "id": "TEST-LEADER",
+    "name": "Test Leader",
+    "category": "leader",
+    "colors": ["red"],
+    "power": 5000,
+    "life": 5
+  },
+  {
+    "id": "TEST-LEADER-6000",
+    "name": "Test Leader 6000",
+    "category": "leader",
+    "colors": ["red"],
+    "power": 6000,
+    "life": 5
+  },
+  {
+    "id": "TEST-LEADER-7000",
+    "name": "Test Leader 7000",
+    "category": "leader",
+    "colors": ["red"],
+    "power": 7000,
+    "life": 5
+  },
+  {
+    "id": "TEST-FILLER",
+    "name": "Test Filler",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 1,
+    "power": 1000
+  },
+  {
+    "id": "TEST-C5-5000",
+    "name": "Test 5000",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 5,
+    "power": 5000
+  },
+  {
+    "id": "TEST-C7-7000",
+    "name": "Test 7000",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 7,
+    "power": 7000
+  },
+  {
+    "id": "TEST-BLOCKER-2000",
+    "name": "Test Blocker 2000",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 2,
+    "power": 2000,
+    "keywords": ["blocker"]
+  },
+  {
+    "id": "TEST-BLOCKER-5000",
+    "name": "Test Blocker 5000",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 4,
+    "power": 5000,
+    "keywords": ["blocker"]
+  }
+]

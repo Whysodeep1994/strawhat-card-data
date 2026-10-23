@@ -1,0 +1,38 @@
+{
+  "name": "Diable Jambe stops [Blocker] against a {Straw Hat Crew} attacker this turn",
+  "rules": ["10-2-3", "10-1-4-1"],
+  "setup": {
+    "p1": {
+      "leader": "ST01-001",
+      "hand": ["ST01-016"],
+      "don": {
+        "active": 1
+      }
+    },
+    "p2": {
+      "characters": ["TEST-BLOCKER-2000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.leader"]
+    },
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    }
+  ],
+  "expect": {
+    "legal.p2.block": 0,
+    "prompt.kind": "counter"
+  }
+}

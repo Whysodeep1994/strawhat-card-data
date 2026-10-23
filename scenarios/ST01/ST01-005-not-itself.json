@@ -1,0 +1,40 @@
+{
+  "name": "Jinbe can't power up itself",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "ST01-005",
+          "don": 1
+        }
+      ]
+    },
+    "p2": {
+      "leader": "TEST-LEADER-6000"
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.0"],
+      "illegal": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": []
+    }
+  ],
+  "expect": {
+    "modifiers": 0,
+    "prompt.kind": "counter"
+  }
+}

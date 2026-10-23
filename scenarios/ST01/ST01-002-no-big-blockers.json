@@ -1,0 +1,40 @@
+{
+  "name": "Usopp with 2 DON!! stops [Blocker] Characters with 5000+ power",
+  "rules": ["10-1-4-1", "8-3-2-3"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "ST01-002",
+          "don": 2
+        }
+      ]
+    },
+    "p2": {
+      "characters": ["TEST-BLOCKER-5000", "TEST-BLOCKER-2000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "block",
+      "player": "p2",
+      "blocker": "p2.characters.0",
+      "illegal": true
+    },
+    {
+      "type": "block",
+      "player": "p2",
+      "blocker": "p2.characters.1"
+    }
+  ],
+  "expect": {
+    "p2.characters.0.rested": false,
+    "p2.characters.1.rested": true
+  }
+}

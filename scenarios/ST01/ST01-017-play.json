@@ -1,0 +1,23 @@
+{
+  "name": "Thousand Sunny is played for 2 DON!!",
+  "rules": ["3-8-5-1", "6-5-3-1"],
+  "setup": {
+    "p1": {
+      "hand": ["ST01-017"],
+      "don": {
+        "active": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.stage.cardId": "ST01-017",
+    "p1.donActive": 0
+  }
+}

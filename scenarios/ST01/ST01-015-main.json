@@ -1,0 +1,38 @@
+{
+  "name": "Gum-Gum Jet Pistol K.O.s a Character with 6000 power or less",
+  "rules": ["10-2-3", "8-4-4-4"],
+  "setup": {
+    "p1": {
+      "hand": ["ST01-015"],
+      "don": {
+        "active": 4
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C7-7000", "ST01-010"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"],
+      "illegal": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.1"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 1,
+    "p2.characters.0.cardId": "TEST-C7-7000",
+    "p1.trash": 1
+  }
+}

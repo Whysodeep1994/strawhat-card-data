@@ -1,0 +1,47 @@
+{
+  "name": "Jinbe with 1 DON!! gives another card +1000 when attacking",
+  "rules": ["10-2-5", "8-3-2-3"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "ST01-005",
+          "don": 1
+        }
+      ]
+    },
+    "p2": {
+      "leader": "TEST-LEADER-6000"
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.leader"]
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 2
+  }
+}

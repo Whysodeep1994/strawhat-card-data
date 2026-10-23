@@ -1,0 +1,23 @@
+{
+  "name": "strawhat-card-data",
+  "private": true,
+  "description": "Official One Piece Card Game card data for Strawhat Simulator, with a scenario test for every card.",
+  "type": "module",
+  "packageManager": "pnpm@10.28.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "engine": "node scripts/fetch-engine.mjs",
+    "pretest": "node scripts/fetch-engine.mjs",
+    "test": "vitest run",
+    "status": "node scripts/status.mjs",
+    "format": "prettier --write .",
+    "check": "prettier --check . && node scripts/status.mjs --check && pnpm test",
+    "import": "node scripts/import-set.mjs"
+  },
+  "devDependencies": {
+    "prettier": "3.6.2",
+    "vitest": "3.2.4"
+  }
+}

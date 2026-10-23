@@ -1,0 +1,40 @@
+{
+  "name": "Guard Point's [Trigger] gives +1000 for the turn",
+  "rules": ["10-1-5"],
+  "setup": {
+    "p1": {
+      "characters": ["ST01-010"]
+    },
+    "p2": {
+      "life": ["ST01-014"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.leader"]
+    }
+  ],
+  "expect": {
+    "p2.life": 0,
+    "p2.trash": 1,
+    "modifiers.0.power": 1000,
+    "modifiers.0.until": "turn"
+  }
+}
