@@ -1,0 +1,22 @@
+{
+  "name": "Luffy with 4 Life draws nothing when attacking",
+  "rules": ["8-3-3"],
+  "setup": {
+    "p1": {
+      "leader": "ST29-001",
+      "hand": ["TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p1.trash": 0
+  }
+}
