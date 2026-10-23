@@ -1,0 +1,37 @@
+{
+  "name": "Professor Clover [Trigger] activates its [On Play] effect",
+  "rules": ["10-1-5"],
+  "setup": {
+    "p1": {},
+    "p2": {
+      "leader": "OP09-062",
+      "deck": ["OP09-019", "TEST-FILLER", "TEST-FILLER"],
+      "life": ["OP09-102", "TEST-FILLER", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.deck.0"]
+    }
+  ],
+  "expect": {
+    "p2.hand": 1
+  }
+}

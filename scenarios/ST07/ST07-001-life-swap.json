@@ -1,0 +1,42 @@
+{
+  "name": "Linlin with 2 DON!! adds a Life card to hand, then puts a card from hand on top of Life",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "leader": {
+        "card": "ST07-001",
+        "don": 2
+      },
+      "life": 3,
+      "hand": ["TEST-C5-5000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": false
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.life": 3,
+    "p1.life.0.cardId": "TEST-C5-5000",
+    "p1.hand": 1
+  }
+}

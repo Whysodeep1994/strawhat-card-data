@@ -1,0 +1,15 @@
+{
+  "name": "Marshall.D.Teach can only negate on the turn it was played",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "OP09-081",
+      "characters": ["OP09-093"],
+      "hand": ["TEST-FILLER"]
+    }
+  },
+  "actions": [],
+  "expect": {
+    "legal.p1.activate": 1
+  }
+}

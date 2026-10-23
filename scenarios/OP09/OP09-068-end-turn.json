@@ -1,0 +1,39 @@
+{
+  "name": "Tony Tony.Chopper returns DON!! to stand up and gain [Blocker]",
+  "rules": ["10-2-7"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "OP09-068",
+          "rested": true
+        }
+      ],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "endTurn",
+      "player": "p1"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "attack",
+      "player": "p2",
+      "attacker": "p2.leader",
+      "target": "p1.leader"
+    }
+  ],
+  "expect": {
+    "p1.characters.0.rested": false,
+    "p1.donDeck": 1,
+    "prompt.kind": "block"
+  }
+}

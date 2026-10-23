@@ -1,0 +1,33 @@
+{
+  "name": "Jean Bart K.O.s a cost 3 Character when the opponent has more DON!!",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP09-066"],
+      "don": {
+        "active": 4
+      }
+    },
+    "p2": {
+      "characters": ["TEST-FILLER"],
+      "don": {
+        "active": 5
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 0
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "Koala takes a Life card to play a {Revolutionary Army} Character, then draws",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP09-103", "OP09-112"],
+      "don": {
+        "active": 6
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": false
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 2,
+    "p1.hand": 2,
+    "p1.life": 3
+  }
+}

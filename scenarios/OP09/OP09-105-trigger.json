@@ -1,0 +1,34 @@
+{
+  "name": "Sanji [Trigger] adds a deck card to Life and trashes 2 with an {Egghead} Leader",
+  "rules": ["10-1-5"],
+  "setup": {
+    "p1": {},
+    "p2": {
+      "leader": "TEST-LEADER-EGGHEAD",
+      "hand": ["TEST-FILLER", "TEST-FILLER"],
+      "life": ["OP09-105", "TEST-FILLER", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p2.life": 3,
+    "p2.hand": 0,
+    "p2.trash": 3
+  }
+}
