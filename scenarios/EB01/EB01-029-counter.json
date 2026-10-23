@@ -1,0 +1,36 @@
+{
+  "name": "Sorry. I'm a Goner. returns a Character when the top card costs 4 or more",
+  "rules": ["10-2-4"],
+  "setup": {
+    "p2": {
+      "characters": ["TEST-FILLER"],
+      "hand": ["EB01-029"],
+      "don": {
+        "active": 1
+      },
+      "deck": ["TEST-C5-5000", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "counterEvent",
+      "player": "p2",
+      "card": "p2.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.hand": 1,
+    "p2.deck.1.cardId": "TEST-C5-5000"
+  }
+}

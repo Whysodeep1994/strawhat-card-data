@@ -1,0 +1,48 @@
+{
+  "name": "Off-White gives +4000, then searches for a {Donquixote Pirates} Character",
+  "rules": ["10-2-4"],
+  "setup": {
+    "p1": {
+      "leader": "TEST-LEADER-7000"
+    },
+    "p2": {
+      "hand": ["EB01-019"],
+      "don": {
+        "active": 2
+      },
+      "deck": ["OP01-073", "TEST-FILLER", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "counterEvent",
+      "player": "p2",
+      "card": "p2.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.leader"]
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.deck.0"]
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 4,
+    "p2.hand": 1,
+    "p2.hand.0.cardId": "OP01-073"
+  }
+}

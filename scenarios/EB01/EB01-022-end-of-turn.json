@@ -1,0 +1,19 @@
+{
+  "name": "Inazuma draws 2 at the end of the turn with 2 or less cards in hand",
+  "rules": ["10-2-7"],
+  "setup": {
+    "p1": {
+      "characters": ["EB01-022"],
+      "hand": ["TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "endTurn",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "p1.hand": 3
+  }
+}

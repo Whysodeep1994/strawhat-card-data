@@ -1,0 +1,44 @@
+{
+  "name": "Kingdom Come [Trigger] K.O.s up to the total Life cost",
+  "rules": ["10-1-5"],
+  "setup": {
+    "p1": {
+      "characters": ["TEST-C5-5000", "TEST-C7-7000"],
+      "life": 3
+    },
+    "p2": {
+      "life": ["EB01-059", "TEST-FILLER", "TEST-FILLER", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p1.characters.1"],
+      "illegal": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p1.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 1
+  }
+}

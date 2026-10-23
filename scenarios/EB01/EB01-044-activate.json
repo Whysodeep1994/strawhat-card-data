@@ -1,0 +1,26 @@
+{
+  "name": "Funkfreed rests to give a [Spandam] +3000",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["EB01-044"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.characters.0.rested": true,
+    "modifiers": 0
+  }
+}

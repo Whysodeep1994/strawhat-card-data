@@ -1,0 +1,43 @@
+{
+  "name": "Just Shut Up and Come with Us!!!! plays an {Animal} from the top 5",
+  "rules": ["10-2-4"],
+  "setup": {
+    "turnPlayer": "p1",
+    "p2": {
+      "hand": ["EB01-009"],
+      "don": {
+        "active": 1
+      },
+      "deck": ["TEST-FILLER", "EB01-006", "EB01-018"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "counterEvent",
+      "player": "p2",
+      "card": "p2.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.deck.2"],
+      "illegal": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.deck.1"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 1,
+    "p2.characters.0.cardId": "EB01-006",
+    "p2.deck": 2
+  }
+}

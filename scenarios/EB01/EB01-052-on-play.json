@@ -1,0 +1,35 @@
+{
+  "name": "Viola puts the opponent's Life back in a new order",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["EB01-052"],
+      "don": {
+        "active": 2
+      }
+    },
+    "p2": {
+      "life": ["TEST-C5-5000", "TEST-C7-7000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "chooseOne",
+      "player": "p1",
+      "option": 0
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.life.1", "p2.life.0"]
+    }
+  ],
+  "expect": {
+    "p2.life.0.cardId": "TEST-C7-7000"
+  }
+}

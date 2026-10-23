@@ -1,0 +1,36 @@
+{
+  "name": "Kid & Killer has Rush and +2000 when the opponent has 2 or less Life",
+  "rules": ["10-1-1", "10-2-5"],
+  "setup": {
+    "p1": {
+      "hand": ["EB01-003"],
+      "don": {
+        "active": 4
+      }
+    },
+    "p2": {
+      "leader": "TEST-LEADER-7000",
+      "life": 2
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 1
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "Oh Come My Way moves the attack to your Character",
+  "rules": ["10-2-4"],
+  "setup": {
+    "p2": {
+      "leader": "EB01-061",
+      "characters": ["TEST-C7-7000"],
+      "hand": ["EB01-038"],
+      "don": {
+        "active": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "counterEvent",
+      "player": "p2",
+      "card": "p2.hand.0"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 4,
+    "p2.characters": 1,
+    "p2.donRested": 0
+  }
+}

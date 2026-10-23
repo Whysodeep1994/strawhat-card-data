@@ -1,0 +1,36 @@
+{
+  "name": "Chambres returns a Character and plays a different color one",
+  "rules": ["10-2-3"],
+  "setup": {
+    "p1": {
+      "leader": "EB01-003",
+      "characters": ["TEST-FILLER"],
+      "hand": ["EB01-020", "EB01-015", "EB01-005"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.1"],
+      "illegal": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters.0.cardId": "EB01-015",
+    "p1.hand": 2
+  }
+}

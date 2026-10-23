@@ -1,0 +1,33 @@
+{
+  "name": "Laboon rests to give −4 cost",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["EB01-048"]
+    },
+    "p2": {
+      "characters": ["TEST-C5-5000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "modifiers.0.cost": -4
+  }
+}

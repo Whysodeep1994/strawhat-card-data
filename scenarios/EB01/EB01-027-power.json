@@ -1,0 +1,29 @@
+{
+  "name": "Mr.1 gains +1000 for every 2 Events in the trash with a Baroque Works Leader",
+  "rules": ["8-1-3-3"],
+  "setup": {
+    "p1": {
+      "leader": "EB01-061",
+      "characters": ["EB01-027"],
+      "trash": ["EB01-028", "EB01-029", "TEST-FILLER"]
+    },
+    "p2": {
+      "leader": "TEST-LEADER-7000"
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 3
+  }
+}
