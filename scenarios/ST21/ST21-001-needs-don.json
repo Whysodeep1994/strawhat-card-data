@@ -1,0 +1,17 @@
+{
+  "name": "Luffy's effect needs 1 DON!! given",
+  "rules": ["8-3-2-3"],
+  "setup": {
+    "p1": {
+      "leader": "ST21-001",
+      "characters": ["TEST-FILLER"],
+      "don": {
+        "rested": 2
+      }
+    }
+  },
+  "actions": [],
+  "expect": {
+    "legal.p1.activate": 0
+  }
+}

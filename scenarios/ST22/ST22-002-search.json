@@ -1,0 +1,30 @@
+{
+  "name": "Izo adds a Whitebeard Pirates card from the top 5",
+  "rules": ["11-2-1"],
+  "setup": {
+    "p1": {
+      "hand": ["ST22-002"],
+      "don": {
+        "active": 1
+      },
+      "deck": ["TEST-FILLER", "ST22-004", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.1"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p1.hand.0.cardId": "ST22-004",
+    "p1.deck": 2
+  }
+}

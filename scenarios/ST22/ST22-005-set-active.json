@@ -1,0 +1,37 @@
+{
+  "name": "Oden rests 3 DON!! and returns another Character to set itself active",
+  "rules": ["8-3-1"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "ST22-005",
+          "rested": true
+        },
+        "TEST-FILLER"
+      ],
+      "don": {
+        "active": 3
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 1
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.characters.0.rested": false,
+    "p1.characters": 1,
+    "p1.hand": 1,
+    "p1.donRested": 3
+  }
+}

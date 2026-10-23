@@ -1,0 +1,37 @@
+{
+  "name": "Fire Fist reveals 2, draws 1, and places a cost 5 Character at the bottom of its owner's deck",
+  "rules": ["8-3-1"],
+  "setup": {
+    "p1": {
+      "hand": ["ST22-017", "ST22-004", "ST22-010"],
+      "don": {
+        "active": 5
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C5-5000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 0,
+    "p2.deck": 21,
+    "p1.hand": 3
+  }
+}

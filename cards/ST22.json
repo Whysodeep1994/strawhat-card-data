@@ -1,0 +1,684 @@
+[
+  {
+    "id": "ST22-001",
+    "name": "Ace & Newgate",
+    "category": "leader",
+    "colors": ["blue"],
+    "life": 5,
+    "power": 5000,
+    "types": ["The Four Emperors", "Whitebeard Pirates"],
+    "attribute": "Special",
+    "rarity": "L",
+    "blockIcon": 3,
+    "text": "[Activate: Main] [Once Per Turn] You may reveal 1 card with a type including \"Whitebeard Pirates\" from your hand: Draw 1 card and place the revealed card at the top of your deck.",
+    "image": "images/ST22-001.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569022",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "oncePerTurn": true,
+        "optional": true,
+        "costs": [
+          {
+            "revealFromHand": 1,
+            "filter": {
+              "typeIncludes": "Whitebeard Pirates"
+            }
+          }
+        ],
+        "steps": [
+          {
+            "do": "draw",
+            "count": 1
+          },
+          {
+            "do": "revealedToDeckTop"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST22-002",
+    "name": "Izo",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 1,
+    "counter": 1000,
+    "types": ["Land of Wano", "Whitebeard Pirates"],
+    "attribute": "Ranged",
+    "rarity": "SR",
+    "blockIcon": 3,
+    "text": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 card with a type including \"Whitebeard Pirates\" other than [Izo] and add it to your hand. Then, place the rest at the bottom of your deck in any order.\n[On Your Opponent's Attack] You may trash this Character: Draw 1 card and place 1 card from your hand at the bottom of your deck.",
+    "image": "images/ST22-002.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569022",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "searchDeck",
+            "look": 5,
+            "take": 1,
+            "filter": {
+              "typeIncludes": "Whitebeard Pirates",
+              "notName": "Izo"
+            }
+          }
+        ]
+      },
+      {
+        "timing": "onOpponentsAttack",
+        "optional": true,
+        "costs": [
+          {
+            "trashThis": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "draw",
+            "count": 1
+          },
+          {
+            "do": "handToDeckBottom",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST22-003",
+    "name": "Edward.Newgate",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 9,
+    "power": 10000,
+    "types": ["The Four Emperors", "Whitebeard Pirates"],
+    "attribute": "Special",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[Double Attack] (This card deals 2 damage.)\n[On Play] Reveal 1 card from the top of your deck. If that card's type includes \"Whitebeard Pirates\", draw 2 cards.",
+    "image": "images/ST22-003.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569022",
+    "keywords": ["doubleAttack"],
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "deckTopMatches": {
+                  "typeIncludes": "Whitebeard Pirates"
+                }
+              }
+            ],
+            "steps": [
+              {
+                "do": "draw",
+                "count": 2
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST22-004",
+    "name": "Elmy",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 3,
+    "power": 5000,
+    "counter": 1000,
+    "types": ["Whitebeard Pirates Allies"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "",
+    "image": "images/ST22-004.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569022"
+  },
+  {
+    "id": "ST22-005",
+    "name": "Kouzuki Oden",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 7,
+    "power": 8000,
+    "types": ["Land of Wano", "Kouzuki Clan", "Whitebeard Pirates"],
+    "attribute": "Slash",
+    "rarity": "SR",
+    "blockIcon": 3,
+    "text": "If this Character would be removed from the field by your opponent's effect, you may trash 2 cards from your hand instead.\n[Activate: Main] [Once Per Turn] You may rest 3 of your DON!! cards and return 1 of your Characters other than this Character to the owner's hand: Set this Character as active.",
+    "image": "images/ST22-005.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569022",
+    "effects": [
+      {
+        "timing": "replaceRemoval",
+        "replaces": {
+          "side": "this",
+          "removal": "remove",
+          "byOpponent": true
+        },
+        "optional": true,
+        "costs": [
+          {
+            "trashFromHand": 2
+          }
+        ],
+        "steps": []
+      },
+      {
+        "timing": "activateMain",
+        "oncePerTurn": true,
+        "optional": true,
+        "costs": [
+          {
+            "restDon": 3
+          },
+          {
+            "returnOwnCharacter": 1,
+            "filter": {
+              "notThis": true
+            }
+          }
+        ],
+        "steps": [
+          {
+            "do": "setActive",
+            "target": {
+              "side": "this"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST22-006",
+    "name": "Jozu",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 7,
+    "power": 8000,
+    "counter": 1000,
+    "types": ["Whitebeard Pirates"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[On Play] Reveal 1 card from the top of your deck. If that card's type includes \"Whitebeard Pirates\", draw 2 cards and trash 1 card from your hand.",
+    "image": "images/ST22-006.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569022",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "deckTopMatches": {
+                  "typeIncludes": "Whitebeard Pirates"
+                }
+              }
+            ],
+            "steps": [
+              {
+                "do": "draw",
+                "count": 2
+              },
+              {
+                "do": "trashFromHand",
+                "count": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST22-007",
+    "name": "Squard",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 1,
+    "power": 2000,
+    "counter": 1000,
+    "types": ["Whitebeard Pirates Allies"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[Activate: Main] [Once Per Turn] Reveal 1 card from the top of your deck. If that card's type includes \"Whitebeard Pirates\", give up to 1 rested DON!! card to your Leader or 1 of your Characters.",
+    "image": "images/ST22-007.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569022",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "oncePerTurn": true,
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "deckTopMatches": {
+                  "typeIncludes": "Whitebeard Pirates"
+                }
+              }
+            ],
+            "steps": [
+              {
+                "do": "giveRestedDon",
+                "target": {
+                  "side": "self",
+                  "zone": "leaderOrCharacters",
+                  "upTo": true
+                },
+                "count": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST22-008",
+    "name": "Decalvan Brothers",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 2,
+    "power": 4000,
+    "counter": 1000,
+    "types": ["Whitebeard Pirates Allies"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "",
+    "image": "images/ST22-008.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569022"
+  },
+  {
+    "id": "ST22-009",
+    "name": "Vista",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 1,
+    "power": 1000,
+    "types": ["Whitebeard Pirates"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)",
+    "image": "images/ST22-009.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569022",
+    "keywords": ["blocker"]
+  },
+  {
+    "id": "ST22-010",
+    "name": "Portgas.D.Ace",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 5,
+    "power": 6000,
+    "counter": 2000,
+    "types": ["Whitebeard Pirates"],
+    "attribute": "Special",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "",
+    "image": "images/ST22-010.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569022"
+  },
+  {
+    "id": "ST22-011",
+    "name": "Whitey Bay",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 1,
+    "power": 1000,
+    "counter": 2000,
+    "types": ["Whitebeard Pirates"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[Your Turn] [On Play] You may reveal 2 cards with a type including \"Whitebeard Pirates\" from your hand: Up to 1 of your Leader with a type including \"Whitebeard Pirates\" gains +2000 power during this turn.",
+    "image": "images/ST22-011.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569022",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "conditions": [
+          {
+            "yourTurn": true
+          }
+        ],
+        "optional": true,
+        "costs": [
+          {
+            "revealFromHand": 2,
+            "filter": {
+              "typeIncludes": "Whitebeard Pirates"
+            }
+          }
+        ],
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "self",
+              "zone": "leader",
+              "filter": {
+                "typeIncludes": "Whitebeard Pirates"
+              },
+              "upTo": true
+            },
+            "amount": 2000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST22-012",
+    "name": "Marco",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 4,
+    "power": 5000,
+    "counter": 1000,
+    "types": ["Whitebeard Pirates"],
+    "attribute": "Special",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[Once Per Turn] If this Character would be K.O.'d by your opponent's effect, you may trash 1 card from your hand instead.\n[When Attacking] Reveal 1 card from the top of your deck. If that card's type includes \"Whitebeard Pirates\", this Character gains +1000 power until the end of your opponent's next turn.",
+    "image": "images/ST22-012.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569022",
+    "effects": [
+      {
+        "timing": "replaceRemoval",
+        "replaces": {
+          "side": "this",
+          "removal": "ko",
+          "byOpponent": true
+        },
+        "oncePerTurn": true,
+        "optional": true,
+        "costs": [
+          {
+            "trashFromHand": 1
+          }
+        ],
+        "steps": []
+      },
+      {
+        "timing": "whenAttacking",
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "deckTopMatches": {
+                  "typeIncludes": "Whitebeard Pirates"
+                }
+              }
+            ],
+            "steps": [
+              {
+                "do": "powerUp",
+                "target": {
+                  "side": "this"
+                },
+                "amount": 1000,
+                "duration": "opponentsNextTurn"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST22-013",
+    "name": "LittleOars Jr.",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 5,
+    "power": 7000,
+    "counter": 1000,
+    "types": ["Giant", "Whitebeard Pirates Allies"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "",
+    "image": "images/ST22-013.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569022"
+  },
+  {
+    "id": "ST22-014",
+    "name": "A.O.",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 4,
+    "power": 6000,
+    "counter": 1000,
+    "types": ["Whitebeard Pirates Allies"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "",
+    "image": "images/ST22-014.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569022"
+  },
+  {
+    "id": "ST22-015",
+    "name": "I Am Whitebeard!!",
+    "category": "event",
+    "colors": ["blue"],
+    "cost": 8,
+    "types": ["The Four Emperors", "Whitebeard Pirates"],
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[Main] If your Leader's type includes \"Whitebeard Pirates\", play up to 1 [Edward.Newgate] from your hand. Then, you may add 1 card from the top or bottom of your Life cards to your hand. If you do, up to 1 of your Leader gains +2000 power until the end of your opponent's next turn.",
+    "image": "images/ST22-015.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569022",
+    "effects": [
+      {
+        "timing": "main",
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "leaderTypeIncludes": "Whitebeard Pirates"
+              }
+            ],
+            "steps": [
+              {
+                "do": "playFromHand",
+                "filter": {
+                  "name": "Edward.Newgate"
+                }
+              }
+            ]
+          },
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "lifeAtLeast": 1
+              }
+            ],
+            "steps": [
+              {
+                "do": "chooseOne",
+                "options": [
+                  {
+                    "label": "Add the top Life card to your hand and give your Leader +2000 power",
+                    "steps": [
+                      {
+                        "do": "lifeToHand",
+                        "count": 1
+                      },
+                      {
+                        "do": "powerUp",
+                        "target": {
+                          "side": "self",
+                          "zone": "leader",
+                          "upTo": true
+                        },
+                        "amount": 2000,
+                        "duration": "opponentsNextTurn"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Add the bottom Life card to your hand and give your Leader +2000 power",
+                    "steps": [
+                      {
+                        "do": "lifeToHand",
+                        "count": 1,
+                        "fromBottom": true
+                      },
+                      {
+                        "do": "powerUp",
+                        "target": {
+                          "side": "self",
+                          "zone": "leader",
+                          "upTo": true
+                        },
+                        "amount": 2000,
+                        "duration": "opponentsNextTurn"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Don't add a Life card",
+                    "steps": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "notes": "\"You may add 1 card from the top or bottom of your Life cards ... If you do\" is a choice of top, bottom, or neither."
+  },
+  {
+    "id": "ST22-016",
+    "name": "Take That Back!! Take Back What You Said!!",
+    "category": "event",
+    "colors": ["blue"],
+    "cost": 1,
+    "types": ["Whitebeard Pirates"],
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[Counter] Reveal 1 card from the top of your deck. If that card's type includes \"Whitebeard Pirates\", up to 1 of your Leader or Character cards gains +4000 power during this battle.",
+    "trigger": "[Trigger] Draw 1 card.",
+    "image": "images/ST22-016.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569022",
+    "effects": [
+      {
+        "timing": "counter",
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "deckTopMatches": {
+                  "typeIncludes": "Whitebeard Pirates"
+                }
+              }
+            ],
+            "steps": [
+              {
+                "do": "powerUp",
+                "target": {
+                  "side": "self",
+                  "zone": "leaderOrCharacters",
+                  "upTo": true
+                },
+                "amount": 4000,
+                "duration": "battle"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "draw",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST22-017",
+    "name": "Fire Fist",
+    "category": "event",
+    "colors": ["blue"],
+    "cost": 5,
+    "types": ["Whitebeard Pirates"],
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[Main] You may reveal 2 cards with a type including \"Whitebeard Pirates\" from your hand: Draw 1 card. Then, place up to 1 Character with a cost of 5 or less at the bottom of the owner's deck.",
+    "trigger": "[Trigger] Return up to 1 Character with a cost of 3 or less to the owner's hand.",
+    "image": "images/ST22-017.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569022",
+    "effects": [
+      {
+        "timing": "main",
+        "optional": true,
+        "costs": [
+          {
+            "revealFromHand": 2,
+            "filter": {
+              "typeIncludes": "Whitebeard Pirates"
+            }
+          }
+        ],
+        "steps": [
+          {
+            "do": "draw",
+            "count": 1
+          },
+          {
+            "do": "returnToDeckBottom",
+            "target": {
+              "side": "any",
+              "filter": {
+                "costAtMost": 5
+              },
+              "upTo": true
+            }
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "returnToHand",
+            "target": {
+              "side": "any",
+              "filter": {
+                "costAtMost": 3
+              },
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
