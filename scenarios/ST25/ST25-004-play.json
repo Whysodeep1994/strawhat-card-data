@@ -1,0 +1,39 @@
+{
+  "name": "Buggy trashes 1 card and itself to play a cost 6 or less {Cross Guild} Character",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "OP09-042",
+      "characters": ["ST25-004"],
+      "hand": ["TEST-FILLER", "OP09-055"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 1,
+    "p1.characters.0.cardId": "OP09-055",
+    "p1.trash": 2
+  }
+}

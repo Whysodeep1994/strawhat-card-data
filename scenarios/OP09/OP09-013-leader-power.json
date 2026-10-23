@@ -1,0 +1,28 @@
+{
+  "name": "Yasopp gives your Leader +1000 until the end of your opponent's next turn",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP09-013"],
+      "don": {
+        "active": 5
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.leader"]
+    }
+  ],
+  "expect": {
+    "modifiers.0.power": 1000,
+    "modifiers.0.endsTurn": 4
+  }
+}

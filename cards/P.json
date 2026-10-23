@@ -1,0 +1,79 @@
+[
+  {
+    "id": "P-084",
+    "name": "Buggy",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 7,
+    "power": 8000,
+    "types": ["The Four Emperors", "Cross Guild"],
+    "attribute": "Slash",
+    "rarity": "P",
+    "blockIcon": 3,
+    "text": "This Character cannot attack.\nIf your Leader is [Buggy], all Characters with a cost of 3 or 4 cannot attack.\n[On Play] Play up to 1 {Cross Guild} type Character card with a cost of 6 or less from your hand.",
+    "image": "images/P-084.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569025",
+    "effects": [
+      {
+        "timing": "permanent",
+        "steps": [
+          {
+            "do": "grantStatus",
+            "target": {
+              "side": "this"
+            },
+            "status": "cannotAttack"
+          }
+        ]
+      },
+      {
+        "timing": "permanent",
+        "conditions": [
+          {
+            "leaderIs": "Buggy"
+          }
+        ],
+        "steps": [
+          {
+            "do": "grantStatus",
+            "target": {
+              "side": "self",
+              "zone": "characters",
+              "filter": {
+                "costAtLeast": 3,
+                "costAtMost": 4
+              }
+            },
+            "status": "cannotAttack"
+          },
+          {
+            "do": "grantStatus",
+            "target": {
+              "side": "opponent",
+              "zone": "characters",
+              "filter": {
+                "costAtLeast": 3,
+                "costAtMost": 4
+              }
+            },
+            "status": "cannotAttack"
+          }
+        ]
+      },
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "playFromHand",
+            "filter": {
+              "category": "character",
+              "type": "Cross Guild",
+              "costAtMost": 6
+            }
+          }
+        ]
+      }
+    ],
+    "notes": "\"All Characters with a cost of 3 or 4\" means both players' Characters, by current cost."
+  }
+]

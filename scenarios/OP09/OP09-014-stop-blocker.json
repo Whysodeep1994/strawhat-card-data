@@ -1,0 +1,43 @@
+{
+  "name": "Limejuice stops 1 [Blocker] with 4000 power or less for the turn",
+  "rules": ["10-1-4-1"],
+  "setup": {
+    "p1": {
+      "hand": ["OP09-014"],
+      "don": {
+        "active": 3
+      }
+    },
+    "p2": {
+      "characters": ["TEST-BLOCKER-2000", "TEST-BLOCKER-5000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.1"],
+      "illegal": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    },
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    }
+  ],
+  "expect": {
+    "prompt.kind": "block",
+    "legal.p2.block": 1
+  }
+}

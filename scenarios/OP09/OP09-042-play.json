@@ -1,0 +1,42 @@
+{
+  "name": "Buggy (Leader) rests 5 DON!! and trashes 1 to play a {Cross Guild} Character",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "OP09-042",
+      "hand": ["OP09-055", "TEST-FILLER"],
+      "don": {
+        "active": 5
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.1"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 1,
+    "p1.characters.0.cardId": "OP09-055",
+    "p1.donRested": 5,
+    "p1.trash": 1
+  }
+}

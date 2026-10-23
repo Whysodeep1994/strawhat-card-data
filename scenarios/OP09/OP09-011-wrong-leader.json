@@ -1,0 +1,29 @@
+{
+  "name": "Hongo still rests, but does nothing without a {Red-Haired Pirates} Leader",
+  "rules": ["8-3-3"],
+  "setup": {
+    "p1": {
+      "characters": ["OP09-011"]
+    },
+    "p2": {
+      "characters": ["TEST-C5-5000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.characters.0.rested": true,
+    "modifiers": 0
+  }
+}

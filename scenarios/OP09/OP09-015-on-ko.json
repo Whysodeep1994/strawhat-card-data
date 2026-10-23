@@ -1,0 +1,53 @@
+{
+  "name": "Lucky.Roux, K.O.'d with a {Red-Haired Pirates} Leader, K.O.s a Character with base power 6000 or less",
+  "rules": ["10-2-17"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "leader": "OP09-001",
+      "characters": [
+        {
+          "card": "OP09-015",
+          "rested": true
+        }
+      ]
+    },
+    "p2": {
+      "characters": ["TEST-C7-7000", "TEST-C5-5000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p2",
+      "attacker": "p2.characters.0",
+      "target": "p1.characters.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": false
+    },
+    {
+      "type": "pass",
+      "player": "p1"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"],
+      "illegal": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.1"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 0,
+    "p2.characters": 1,
+    "p2.characters.0.cardId": "TEST-C7-7000"
+  }
+}
