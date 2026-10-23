@@ -1,0 +1,21 @@
+{
+  "name": "Oden can't return itself to pay its own cost",
+  "rules": ["8-3-1-3"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "ST22-005",
+          "rested": true
+        }
+      ],
+      "don": {
+        "active": 3
+      }
+    }
+  },
+  "actions": [],
+  "expect": {
+    "legal.p1.activate": 0
+  }
+}

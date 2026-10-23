@@ -1,0 +1,28 @@
+{
+  "name": "Ace & Newgate reveals a Whitebeard Pirates card, draws 1, and puts the revealed card on top",
+  "rules": ["11-2-1"],
+  "setup": {
+    "p1": {
+      "leader": "ST22-001",
+      "hand": ["ST22-004", "TEST-FILLER"],
+      "deck": ["TEST-C4-4000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.hand": 2,
+    "p1.deck.0.cardId": "ST22-004"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "Marco gains +1000 when attacking if the top card is a Whitebeard Pirates card",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": ["ST22-012"],
+      "deck": ["ST22-004"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    }
+  ],
+  "expect": {
+    "modifiers": 1
+  }
+}
