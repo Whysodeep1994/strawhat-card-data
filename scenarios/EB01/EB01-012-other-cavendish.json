@@ -1,0 +1,25 @@
+{
+  "name": "Cavendish does nothing with another [Cavendish]",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "leader": "EB01-003",
+      "characters": ["EB01-012"],
+      "hand": ["EB01-012"],
+      "don": {
+        "active": 5,
+        "rested": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.donActive": 0
+  }
+}

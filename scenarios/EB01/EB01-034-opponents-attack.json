@@ -1,0 +1,33 @@
+{
+  "name": "Ms. Wednesday turns a returned DON!! into an active one with a Baroque Works Leader",
+  "rules": ["10-2-16"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "leader": "EB01-061",
+      "characters": ["EB01-034"],
+      "don": {
+        "rested": 1,
+        "deck": 5
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p2",
+      "attacker": "p2.leader",
+      "target": "p1.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.donActive": 1,
+    "p1.donRested": 0
+  }
+}

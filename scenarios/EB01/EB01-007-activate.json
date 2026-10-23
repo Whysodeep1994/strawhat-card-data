@@ -1,0 +1,29 @@
+{
+  "name": "Yamato gives a rested DON!! once per turn",
+  "rules": ["10-2-2", "10-2-13"],
+  "setup": {
+    "p1": {
+      "characters": ["EB01-007"],
+      "don": {
+        "rested": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters.0.givenDon": 1,
+    "legal.p1.activate": 0
+  }
+}

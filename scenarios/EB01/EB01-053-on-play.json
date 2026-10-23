@@ -1,0 +1,36 @@
+{
+  "name": "Gastino puts a cost 3 or less Character into the opponent's Life face-up",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["EB01-053"],
+      "don": {
+        "active": 3
+      }
+    },
+    "p2": {
+      "characters": ["TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": false
+    }
+  ],
+  "expect": {
+    "p2.life": 5,
+    "p2.life.0.faceUp": true
+  }
+}

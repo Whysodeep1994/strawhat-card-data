@@ -1,0 +1,41 @@
+{
+  "name": "Scarlet plays a {Dressrosa} Character rested and gives −2 cost",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["EB01-042"],
+      "hand": ["EB01-052"]
+    },
+    "p2": {
+      "characters": ["TEST-C5-5000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters.0.cardId": "EB01-052",
+    "p1.characters.0.rested": true,
+    "modifiers.0.cost": -2
+  }
+}

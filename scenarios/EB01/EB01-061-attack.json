@@ -1,0 +1,44 @@
+{
+  "name": "Mr.2.Bon.Kurei copies the selected Character's power",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "hand": ["EB01-061"],
+      "characters": ["EB01-061"],
+      "don": {
+        "active": 4,
+        "deck": 5
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C7-7000"],
+      "leader": "TEST-LEADER-7000"
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 3,
+    "p1.donActive": 1
+  }
+}
