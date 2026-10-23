@@ -1,0 +1,46 @@
+{
+  "name": "Marshall.D.Teach adds a black card from the trash when K.O.'d",
+  "rules": ["10-2-17"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "characters": [
+        {
+          "card": "ST27-005",
+          "rested": true
+        }
+      ],
+      "trash": ["OP09-086", "TEST-FILLER"]
+    },
+    "p2": {
+      "characters": [
+        {
+          "card": "TEST-C7-7000",
+          "don": 1
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p2",
+      "attacker": "p2.characters.0",
+      "target": "p1.characters.0"
+    },
+    {
+      "type": "pass",
+      "player": "p1"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.trash.1"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p1.hand.0.cardId": "OP09-086"
+  }
+}

@@ -1,0 +1,428 @@
+[
+  {
+    "id": "OP09-035",
+    "name": "Portgas.D.Ace",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 5,
+    "power": 5000,
+    "counter": 2000,
+    "types": ["ODYSSEY", "Whitebeard Pirates"],
+    "attribute": "Special",
+    "rarity": "UC",
+    "blockIcon": 3,
+    "text": "[On Play] If you have 2 or more rested Characters, rest up to 1 of your opponent's Characters with a cost of 5 or less.",
+    "image": "images/OP09-035.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569109",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "conditions": [
+          {
+            "count": {
+              "side": "self",
+              "filter": {
+                "rested": true
+              }
+            },
+            "atLeast": 2
+          }
+        ],
+        "steps": [
+          {
+            "do": "rest",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "costAtMost": 5
+              },
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP09-081",
+    "name": "Marshall.D.Teach",
+    "category": "leader",
+    "colors": ["black"],
+    "life": 5,
+    "power": 5000,
+    "types": ["The Four Emperors", "Blackbeard Pirates"],
+    "attribute": "Special",
+    "rarity": "L",
+    "blockIcon": 3,
+    "text": "Your [On Play] effects are negated.\n[Activate: Main] You may trash 1 card from your hand: Your opponent's [On Play] effects are negated until the end of your opponent's next turn.",
+    "image": "images/OP09-081.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569109",
+    "effects": [
+      {
+        "timing": "permanent",
+        "steps": [
+          {
+            "do": "negateOnPlay",
+            "side": "self"
+          }
+        ]
+      },
+      {
+        "timing": "activateMain",
+        "costs": [
+          {
+            "trashFromHand": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "negateOnPlay",
+            "side": "opponent",
+            "duration": "opponentsNextTurn"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP09-083",
+    "name": "Van Augur",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 5,
+    "power": 6000,
+    "counter": 1000,
+    "types": ["Blackbeard Pirates"],
+    "attribute": "Ranged",
+    "rarity": "R",
+    "blockIcon": 3,
+    "text": "[Activate: Main] You may rest this Character: If your Leader has the {Blackbeard Pirates} type, give up to 1 of your opponent's Characters −3 cost during this turn.\n[On K.O.] Draw 1 card.",
+    "image": "images/OP09-083.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569109",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "costs": [
+          {
+            "restThis": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "leaderHasType": "Blackbeard Pirates"
+              }
+            ],
+            "steps": [
+              {
+                "do": "costChange",
+                "target": {
+                  "side": "opponent",
+                  "upTo": true
+                },
+                "amount": -3
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "timing": "onKO",
+        "steps": [
+          {
+            "do": "draw",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP09-086",
+    "name": "Jesus Burgess",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 4,
+    "power": 5000,
+    "counter": 1000,
+    "types": ["Blackbeard Pirates"],
+    "attribute": "Strike",
+    "rarity": "R",
+    "blockIcon": 3,
+    "text": "This Character cannot be K.O.'d by your opponent's effects.\nIf your Leader has the {Blackbeard Pirates} type, this Character gains +1000 power for every 4 cards in your trash.",
+    "image": "images/OP09-086.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569109",
+    "effects": [
+      {
+        "timing": "permanent",
+        "steps": [
+          {
+            "do": "grantStatus",
+            "target": {
+              "side": "this"
+            },
+            "status": "cannotBeKOdByOpponentsEffects"
+          }
+        ]
+      },
+      {
+        "timing": "permanent",
+        "conditions": [
+          {
+            "leaderHasType": "Blackbeard Pirates"
+          }
+        ],
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "this"
+            },
+            "amount": 1000,
+            "perTrash": 4
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP09-088",
+    "name": "Shiryu",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 3,
+    "power": 4000,
+    "counter": 2000,
+    "types": ["Blackbeard Pirates"],
+    "attribute": "Slash",
+    "rarity": "UC",
+    "blockIcon": 3,
+    "text": "[DON!! x1] [When Attacking] You may trash 2 cards from your hand: Draw 2 cards.",
+    "image": "images/OP09-088.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569109",
+    "effects": [
+      {
+        "timing": "whenAttacking",
+        "conditions": [
+          {
+            "donAtLeast": 1
+          }
+        ],
+        "optional": true,
+        "costs": [
+          {
+            "trashFromHand": 2
+          }
+        ],
+        "steps": [
+          {
+            "do": "draw",
+            "count": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP09-089",
+    "name": "Stronger",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 1,
+    "counter": 2000,
+    "types": ["Animal", "Blackbeard Pirates"],
+    "attribute": "Wisdom",
+    "rarity": "UC",
+    "blockIcon": 3,
+    "text": "[Activate: Main] You may trash 1 card from your hand and trash this Character: If your Leader has the {Blackbeard Pirates} type, draw 1 card. Then, give up to 1 of your opponent's Characters –2 cost during this turn.",
+    "image": "images/OP09-089.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569109",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "costs": [
+          {
+            "trashFromHand": 1
+          },
+          {
+            "trashThis": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "leaderHasType": "Blackbeard Pirates"
+              }
+            ],
+            "steps": [
+              {
+                "do": "draw",
+                "count": 1
+              },
+              {
+                "do": "costChange",
+                "target": {
+                  "side": "opponent",
+                  "upTo": true
+                },
+                "amount": -2
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP09-090",
+    "name": "Doc Q",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 2,
+    "counter": 1000,
+    "types": ["Blackbeard Pirates"],
+    "attribute": "Special",
+    "rarity": "R",
+    "blockIcon": 3,
+    "text": "[Activate: Main] You may rest this Character: If your Leader has the {Blackbeard Pirates} type, K.O. up to 1 of your opponent's Characters with a cost of 1 or less.\n[On K.O.] Draw 1 card.",
+    "image": "images/OP09-090.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569109",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "costs": [
+          {
+            "restThis": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "leaderHasType": "Blackbeard Pirates"
+              }
+            ],
+            "steps": [
+              {
+                "do": "ko",
+                "target": {
+                  "side": "opponent",
+                  "filter": {
+                    "costAtMost": 1
+                  },
+                  "upTo": true
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "timing": "onKO",
+        "steps": [
+          {
+            "do": "draw",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP09-091",
+    "name": "Vasco Shot",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 2,
+    "power": 2000,
+    "counter": 1000,
+    "types": ["Blackbeard Pirates"],
+    "attribute": "Special",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)",
+    "image": "images/OP09-091.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569109",
+    "keywords": ["blocker"]
+  },
+  {
+    "id": "OP09-095",
+    "name": "Laffitte",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 1,
+    "power": 1000,
+    "counter": 1000,
+    "types": ["Blackbeard Pirates"],
+    "attribute": "Strike",
+    "rarity": "R",
+    "blockIcon": 3,
+    "text": "[Activate: Main] You may rest 1 of your DON!! cards and this Character: Look at 5 cards from the top of your deck; reveal up to 1 {Blackbeard Pirates} type card and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+    "image": "images/OP09-095.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569109",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "costs": [
+          {
+            "restDon": 1
+          },
+          {
+            "restThis": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "searchDeck",
+            "look": 5,
+            "take": 1,
+            "filter": {
+              "type": "Blackbeard Pirates"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP09-099",
+    "name": "Fullalead",
+    "category": "stage",
+    "colors": ["black"],
+    "cost": 1,
+    "types": ["Blackbeard Pirates"],
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[Activate: Main] You may trash 1 card from your hand and rest this Stage: Look at 3 cards from the top of your deck; reveal up to 1 {Blackbeard Pirates} type card and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+    "image": "images/OP09-099.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569109",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "costs": [
+          {
+            "trashFromHand": 1
+          },
+          {
+            "restThis": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "searchDeck",
+            "look": 3,
+            "take": 1,
+            "filter": {
+              "type": "Blackbeard Pirates"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

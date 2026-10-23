@@ -1,0 +1,35 @@
+{
+  "name": "Yamato Leader gives 2 rested DON!! to a Character when the opponent has 3 Life",
+  "rules": ["10-2-2", "10-2-13"],
+  "setup": {
+    "p1": {
+      "leader": "OP06-022",
+      "characters": ["TEST-FILLER"],
+      "don": {
+        "rested": 3
+      }
+    },
+    "p2": {
+      "life": 3
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 0
+    },
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 0,
+      "illegal": true
+    }
+  ],
+  "expect": {
+    "p1.characters.0.givenDon": 2,
+    "p1.donRested": 1
+  }
+}

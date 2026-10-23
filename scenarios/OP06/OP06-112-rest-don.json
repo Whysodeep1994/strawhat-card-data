@@ -1,0 +1,33 @@
+{
+  "name": "Raizo trashes 1 card to rest 1 of the opponent's DON!!",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": ["OP06-112"],
+      "hand": ["TEST-FILLER"]
+    },
+    "p2": {
+      "don": {
+        "active": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p2.donActive": 1,
+    "p2.donRested": 1,
+    "p1.trash": 1
+  }
+}

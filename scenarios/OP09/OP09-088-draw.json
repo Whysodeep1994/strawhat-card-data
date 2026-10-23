@@ -1,0 +1,38 @@
+{
+  "name": "Shiryu with 1 DON!! may trash 2 cards to draw 2 when attacking",
+  "rules": ["10-2-5", "10-2-9", "8-3-1"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "OP09-088",
+          "don": 1
+        }
+      ],
+      "hand": ["TEST-FILLER", "TEST-FILLER", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0", "p1.hand.1"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 3,
+    "p1.trash": 2,
+    "p1.deck": 18
+  }
+}

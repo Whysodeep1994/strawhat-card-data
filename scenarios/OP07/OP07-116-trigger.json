@@ -1,0 +1,38 @@
+{
+  "name": "Blaze Slice's [Trigger] rests a cost 4 or less Character",
+  "rules": ["10-1-5"],
+  "setup": {
+    "p1": {
+      "characters": ["TEST-C7-7000", "TEST-BLOCKER-5000"]
+    },
+    "p2": {
+      "life": ["OP07-116"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p1.characters.1"]
+    }
+  ],
+  "expect": {
+    "p1.characters.1.rested": true,
+    "p2.trash": 1
+  }
+}

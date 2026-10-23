@@ -1,0 +1,42 @@
+{
+  "name": "Inuarashi K.O.s a Character with a cost up to the opponent's Life count",
+  "rules": ["10-2-5", "10-2-9"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "OP06-100",
+          "don": 2
+        }
+      ],
+      "hand": ["TEST-FILLER"]
+    },
+    "p2": {
+      "characters": ["TEST-C5-5000", "TEST-BLOCKER-5000"],
+      "life": 4
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.1"]
+    }
+  ],
+  "expect": {
+    "p1.trash": 1,
+    "p2.characters": 1,
+    "p2.characters.0.cardId": "TEST-C5-5000"
+  }
+}

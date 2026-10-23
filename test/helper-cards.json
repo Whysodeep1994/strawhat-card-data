@@ -64,5 +64,24 @@
     "cost": 4,
     "power": 5000,
     "keywords": ["blocker"]
+  },
+  {
+    "id": "TEST-ONPLAY-DRAW",
+    "name": "Test On Play Draw",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 1,
+    "power": 1000,
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "draw",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 ]

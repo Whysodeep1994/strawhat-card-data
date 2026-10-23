@@ -1,0 +1,29 @@
+{
+  "name": "Yamato with 2 DON!! has 5000 power on your turn",
+  "rules": ["10-2-9", "10-2-11"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "ST28-005",
+          "don": 2
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 3
+  }
+}

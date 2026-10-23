@@ -1,0 +1,38 @@
+{
+  "name": "Teach trashes 1 card to negate the opponent's [On Play] through their next turn",
+  "rules": ["8-2-1-1", "10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "OP09-081",
+      "hand": ["TEST-FILLER"]
+    },
+    "p2": {
+      "hand": ["TEST-ONPLAY-DRAW"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 1
+    },
+    {
+      "type": "endTurn",
+      "player": "p1"
+    },
+    {
+      "type": "playCard",
+      "player": "p2",
+      "card": "p2.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.trash": 1,
+    "p2.characters": 1,
+    "p2.hand": 1
+  }
+}

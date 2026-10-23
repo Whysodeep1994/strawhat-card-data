@@ -1,0 +1,44 @@
+{
+  "name": "Stronger trashes itself and a card to draw 1 and give \u22122 cost",
+  "rules": ["10-2-2", "2-7-1"],
+  "setup": {
+    "p1": {
+      "leader": "OP09-081",
+      "characters": ["OP09-089", "OP09-090"],
+      "hand": ["TEST-FILLER"]
+    },
+    "p2": {
+      "characters": ["TEST-BLOCKER-2000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    },
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.trash": 2,
+    "p1.hand": 1,
+    "p1.characters": 1,
+    "p2.characters": 0
+  }
+}

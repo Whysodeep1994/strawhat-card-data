@@ -1,0 +1,29 @@
+[
+  {
+    "id": "ST13-016",
+    "name": "Yamato",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 5,
+    "power": 4000,
+    "counter": 2000,
+    "types": ["Land of Wano"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 2,
+    "text": "[Rush] (This card can attack on the turn in which it is played.)\n[On Play] Look at all your Life cards; place 1 at the top of your deck and place the rest back in your Life area in any order.",
+    "image": "images/ST13-016.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569013",
+    "keywords": ["rush"],
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "lifeToDeckTop"
+          }
+        ]
+      }
+    ]
+  }
+]

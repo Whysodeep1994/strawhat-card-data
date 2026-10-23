@@ -1,0 +1,243 @@
+[
+  {
+    "id": "ST28-001",
+    "name": "Ashura Doji",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 3,
+    "power": 3000,
+    "counter": 1000,
+    "types": ["Land of Wano", "The Akazaya Nine"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[On Play] If your Leader has the {Land of Wano} type and your opponent has 3 or more Life cards, K.O. up to 1 of your opponent's Characters with a base cost of 5 or less.",
+    "image": "images/ST28-001.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569028",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "conditions": [
+          {
+            "leaderHasType": "Land of Wano"
+          },
+          {
+            "opponentLifeAtLeast": 3
+          }
+        ],
+        "steps": [
+          {
+            "do": "ko",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "baseCostAtMost": 5
+              },
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST28-002",
+    "name": "Izo",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 2,
+    "power": 1000,
+    "counter": 1000,
+    "types": ["Land of Wano", "Former Whitebeard Pirates"],
+    "attribute": "Ranged",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[DON!! x2] This Character gains [Blocker].\n[On Play] Your {Land of Wano} type Leader gains [Banish] during this turn.",
+    "image": "images/ST28-002.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569028",
+    "effects": [
+      {
+        "timing": "permanent",
+        "conditions": [
+          {
+            "donAtLeast": 2
+          }
+        ],
+        "steps": [
+          {
+            "do": "grantKeyword",
+            "target": {
+              "side": "this"
+            },
+            "keyword": "blocker"
+          }
+        ]
+      },
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "grantKeyword",
+            "target": {
+              "side": "self",
+              "zone": "leader",
+              "filter": {
+                "type": "Land of Wano"
+              }
+            },
+            "keyword": "banish"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST28-003",
+    "name": "Kin'emon",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 4,
+    "power": 5000,
+    "counter": 2000,
+    "types": ["Land of Wano", "The Akazaya Nine"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "",
+    "trigger": "[Trigger] If your Leader has the {Land of Wano} type and your opponent has 3 or less Life cards, play this card.",
+    "image": "images/ST28-003.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569028",
+    "effects": [
+      {
+        "timing": "trigger",
+        "conditions": [
+          {
+            "leaderHasType": "Land of Wano"
+          },
+          {
+            "opponentLifeAtMost": 3
+          }
+        ],
+        "steps": [
+          {
+            "do": "playThis"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST28-004",
+    "name": "Kouzuki Momonosuke",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 6,
+    "power": 7000,
+    "types": ["Land of Wano", "Kouzuki Clan"],
+    "attribute": "Slash",
+    "rarity": "SR",
+    "blockIcon": 3,
+    "text": "[Your Turn] If you have 2 or less Life cards, your Leader gains +1000 power.\n[Activate: Main] [Once Per Turn] You may return 2 total of your currently given DON!! cards to your cost area rested: This Character gains [Rush] and +1000 power during this turn.\n(This card can attack on the turn in which it is played.)",
+    "image": "images/ST28-004.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569028",
+    "effects": [
+      {
+        "timing": "permanent",
+        "conditions": [
+          {
+            "yourTurn": true
+          },
+          {
+            "lifeAtMost": 2
+          }
+        ],
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "self",
+              "zone": "leader"
+            },
+            "amount": 1000
+          }
+        ]
+      },
+      {
+        "timing": "activateMain",
+        "oncePerTurn": true,
+        "costs": [
+          {
+            "returnGivenDon": 2
+          }
+        ],
+        "steps": [
+          {
+            "do": "grantKeyword",
+            "target": {
+              "side": "this"
+            },
+            "keyword": "rush"
+          },
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "this"
+            },
+            "amount": 1000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST28-005",
+    "name": "Yamato",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 1,
+    "counter": 1000,
+    "types": ["Land of Wano"],
+    "attribute": "Strike",
+    "rarity": "SR",
+    "blockIcon": 3,
+    "text": "[DON!! x2] [Your Turn] This Character gains +3000 power.\n[On Play] Look at 5 cards from the top of your deck; reveal up to 1 {Land of Wano} type card with a cost of 2 or more and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+    "image": "images/ST28-005.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569028",
+    "effects": [
+      {
+        "timing": "permanent",
+        "conditions": [
+          {
+            "donAtLeast": 2
+          },
+          {
+            "yourTurn": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "this"
+            },
+            "amount": 3000
+          }
+        ]
+      },
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "searchDeck",
+            "look": 5,
+            "take": 1,
+            "filter": {
+              "type": "Land of Wano",
+              "costAtLeast": 2
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

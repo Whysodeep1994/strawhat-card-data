@@ -1,0 +1,38 @@
+{
+  "name": "Momonosuke returns 2 given DON!! to gain [Rush] and +1000",
+  "rules": ["10-2-2", "10-1-1"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "ST28-004",
+          "don": 2,
+          "playedThisTurn": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 1
+    },
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p1.donRested": 2,
+    "p1.characters.0.givenDon": 0,
+    "p2.life": 3
+  }
+}
