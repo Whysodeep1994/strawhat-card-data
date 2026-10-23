@@ -1,0 +1,36 @@
+{
+  "name": "Gum-Gum Mole Pistol gives −5000 then K.O.s with a 6000 power Character out",
+  "rules": ["8-3-3"],
+  "setup": {
+    "p1": {
+      "hand": ["ST21-017"],
+      "characters": ["ST21-008"],
+      "don": {
+        "active": 4
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C6-6000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 0
+  }
+}

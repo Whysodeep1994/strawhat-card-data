@@ -1,0 +1,30 @@
+{
+  "name": "Bonney without DON!! draws nothing when K.O.'d",
+  "rules": ["8-3-2-3"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "characters": ["ST21-004"],
+      "hand": []
+    },
+    "p2": {
+      "hand": ["TEST-KO-EVENT"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p2",
+      "card": "p2.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p1.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 0
+  }
+}

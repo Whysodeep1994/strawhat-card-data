@@ -1,0 +1,18 @@
+{
+  "name": "Zoro without DON!! can't attack the turn it is played (only the Leader can)",
+  "rules": ["3-7-4"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "ST21-015",
+          "playedThisTurn": true
+        }
+      ]
+    }
+  },
+  "actions": [],
+  "expect": {
+    "legal.p1.attack": 1
+  }
+}

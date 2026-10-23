@@ -1,0 +1,19 @@
+{
+  "name": "Zoro with 2 DON!! has [Rush] (the Leader can attack too)",
+  "rules": ["10-1-1"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "ST21-015",
+          "don": 2,
+          "playedThisTurn": true
+        }
+      ]
+    }
+  },
+  "actions": [],
+  "expect": {
+    "legal.p1.attack": 2
+  }
+}
