@@ -1,0 +1,16 @@
+{
+  "name": "Soba Mask costs 7 without a 7000 power San-Gorou or Sanji",
+  "rules": ["6-5-3-1"],
+  "setup": {
+    "p1": {
+      "hand": ["ST26-001"],
+      "don": {
+        "active": 2
+      }
+    }
+  },
+  "actions": [],
+  "expect": {
+    "legal.p1.playCard": 0
+  }
+}

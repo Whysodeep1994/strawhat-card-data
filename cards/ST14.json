@@ -1,0 +1,18 @@
+[
+  {
+    "id": "ST14-010",
+    "name": "Brook",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 5,
+    "power": 7000,
+    "counter": 1000,
+    "types": ["Straw Hat Crew"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 2,
+    "text": "",
+    "image": "images/ST14-010.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569014"
+  }
+]

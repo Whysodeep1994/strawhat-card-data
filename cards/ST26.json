@@ -1,0 +1,291 @@
+[
+  {
+    "id": "ST26-001",
+    "name": "Soba Mask",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 7,
+    "power": 9000,
+    "types": ["Straw Hat Crew"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "If you have a [San-Gorou] or [Sanji] Character with 7000 base power or more, give this card in your hand −5 cost.\n[On Play] Return all of your [San-Gorou] and [Sanji] Characters to the owner's hand.",
+    "image": "images/ST26-001.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569026",
+    "effects": [
+      {
+        "timing": "permanent",
+        "zone": "hand",
+        "conditions": [
+          {
+            "count": {
+              "side": "self",
+              "filter": {
+                "anyOf": [
+                  {
+                    "name": "San-Gorou"
+                  },
+                  {
+                    "name": "Sanji"
+                  }
+                ],
+                "basePowerAtLeast": 7000
+              }
+            }
+          }
+        ],
+        "steps": [
+          {
+            "do": "costChange",
+            "target": {
+              "side": "this"
+            },
+            "amount": -5
+          }
+        ]
+      },
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "returnToHand",
+            "target": {
+              "side": "self",
+              "filter": {
+                "anyOf": [
+                  {
+                    "name": "San-Gorou"
+                  },
+                  {
+                    "name": "Sanji"
+                  }
+                ]
+              },
+              "count": 5
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST26-002",
+    "name": "Tony Tony.Chopper",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 3,
+    "power": 4000,
+    "counter": 1000,
+    "types": ["Animal", "Straw Hat Crew"],
+    "attribute": "Wisdom",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)\n[On Play] DON!! −2 (You may return the specified number of DON!! cards from your field to your DON!! deck.): Rest up to 1 of your opponent's DON!! cards or Characters with a cost of 1 or less.",
+    "image": "images/ST26-002.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569026",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "onPlay",
+        "optional": true,
+        "costs": [
+          {
+            "donMinus": 2
+          }
+        ],
+        "steps": [
+          {
+            "do": "chooseOne",
+            "options": [
+              {
+                "label": "Rest 1 of your opponent's DON!! cards",
+                "steps": [
+                  {
+                    "do": "restOpponentDon",
+                    "count": 1
+                  }
+                ]
+              },
+              {
+                "label": "Rest 1 of your opponent's Characters with a cost of 1 or less",
+                "steps": [
+                  {
+                    "do": "rest",
+                    "target": {
+                      "side": "opponent",
+                      "filter": {
+                        "costAtMost": 1
+                      },
+                      "upTo": true
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "notes": "\"Rest up to 1 of your opponent's DON!! cards or Characters\" is a choice between the two kinds of card."
+  },
+  {
+    "id": "ST26-003",
+    "name": "Nico Robin",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 3,
+    "power": 4000,
+    "counter": 2000,
+    "types": ["Straw Hat Crew"],
+    "attribute": "Strike",
+    "rarity": "SR",
+    "blockIcon": 3,
+    "text": "[On Play] DON!! −2 (You may return the specified number of DON!! cards from your field to your DON!! deck.): Add up to 1 DON!! card from your DON!! deck and set it as active.",
+    "image": "images/ST26-003.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569026",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "optional": true,
+        "costs": [
+          {
+            "donMinus": 2
+          }
+        ],
+        "steps": [
+          {
+            "do": "addDon",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST26-004",
+    "name": "General Franky",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 8,
+    "power": 10000,
+    "types": ["Straw Hat Crew"],
+    "attribute": "Ranged",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[On Play] DON!! −2 (You may return the specified number of DON!! cards from your field to your DON!! deck.): Give up to 2 of your opponent's Characters −2000 power during this turn.",
+    "image": "images/ST26-004.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569026",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "optional": true,
+        "costs": [
+          {
+            "donMinus": 2
+          }
+        ],
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "opponent",
+              "count": 2,
+              "upTo": true
+            },
+            "amount": -2000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST26-005",
+    "name": "Monkey.D.Luffy",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 6,
+    "power": 7000,
+    "types": ["Straw Hat Crew"],
+    "attribute": "Strike",
+    "rarity": "SR",
+    "blockIcon": 3,
+    "text": "[On Play]/[When Attacking] DON!! −2 (You may return the specified number of DON!! cards from your field to your DON!! deck.): If your Leader is multicolored and your opponent has 5 or more DON!! cards on their field, your {Straw Hat Crew} type Leader's base power becomes 7000 until the end of your opponent's next End Phase.",
+    "image": "images/ST26-005.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569026",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "optional": true,
+        "costs": [
+          {
+            "donMinus": 2
+          }
+        ],
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "leaderMulticolored": true
+              },
+              {
+                "opponentDonOnFieldAtLeast": 5
+              }
+            ],
+            "steps": [
+              {
+                "do": "setBasePower",
+                "target": {
+                  "side": "self",
+                  "zone": "leader",
+                  "filter": {
+                    "type": "Straw Hat Crew"
+                  }
+                },
+                "power": 7000,
+                "duration": "opponentsNextTurn"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "timing": "whenAttacking",
+        "optional": true,
+        "costs": [
+          {
+            "donMinus": 2
+          }
+        ],
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "leaderMulticolored": true
+              },
+              {
+                "opponentDonOnFieldAtLeast": 5
+              }
+            ],
+            "steps": [
+              {
+                "do": "setBasePower",
+                "target": {
+                  "side": "self",
+                  "zone": "leader",
+                  "filter": {
+                    "type": "Straw Hat Crew"
+                  }
+                },
+                "power": 7000,
+                "duration": "opponentsNextTurn"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

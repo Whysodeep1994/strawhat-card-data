@@ -30,6 +30,9 @@ const decksDir = join(root, "decks");
 const files = existsSync(decksDir) ? readdirSync(decksDir).filter((f) => f.endsWith(".json")) : [];
 
 describe("decks", () => {
+  // Keeps the suite valid while no deck lists have been added yet.
+  it("reads every deck file", () => expect(files.every((f) => f.endsWith(".json"))).toBe(true));
+
   for (const file of files) {
     const deck = readJson<Deck>(join(root, "decks", file));
     describe(`${deck.id} ${deck.name}`, () => {

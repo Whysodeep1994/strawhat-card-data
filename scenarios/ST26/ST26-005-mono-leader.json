@@ -1,0 +1,47 @@
+{
+  "name": "Luffy does nothing with a single-colour Leader",
+  "rules": ["8-3-3"],
+  "setup": {
+    "p1": {
+      "hand": ["ST26-005"],
+      "don": {
+        "active": 8
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C6-6000"],
+      "don": {
+        "active": 5
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "endTurn",
+      "player": "p1"
+    },
+    {
+      "type": "attack",
+      "player": "p2",
+      "attacker": "p2.characters.0",
+      "target": "p1.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "p1.life": 3
+  }
+}
