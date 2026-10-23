@@ -1,0 +1,28 @@
+{
+  "name": "Jinbe trashes a 6000 power Character to draw 2",
+  "rules": ["8-3-1"],
+  "setup": {
+    "p1": {
+      "hand": ["ST30-006", "ST30-005"],
+      "don": {
+        "active": 5
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.hand": 2,
+    "p1.trash": 1
+  }
+}

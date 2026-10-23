@@ -1,0 +1,28 @@
+{
+  "name": "Ace gives an opponent's Character −1000 when attacking",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": ["ST30-007"]
+    },
+    "p2": {
+      "characters": ["TEST-C4-4000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "modifiers": 1
+  }
+}

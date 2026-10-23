@@ -1,0 +1,27 @@
+{
+  "name": "Newgate gives 6000 base power Characters +1000 on your turn",
+  "rules": ["8-3-2-4"],
+  "setup": {
+    "p1": {
+      "characters": ["ST30-003", "ST30-005"]
+    },
+    "p2": {
+      "leader": "TEST-LEADER-7000"
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.1",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 3
+  }
+}
