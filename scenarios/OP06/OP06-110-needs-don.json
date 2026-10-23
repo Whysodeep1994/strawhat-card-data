@@ -1,0 +1,29 @@
+{
+  "name": "Nekomamushi without DON!! can't attack an active Character",
+  "rules": ["10-2-9"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "OP06-110",
+          "don": 1
+        }
+      ]
+    },
+    "p2": {
+      "characters": ["TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.characters.0",
+      "illegal": true
+    }
+  ],
+  "expect": {
+    "p2.characters": 1
+  }
+}

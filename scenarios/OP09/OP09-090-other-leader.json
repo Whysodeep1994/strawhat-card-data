@@ -1,0 +1,25 @@
+{
+  "name": "Doc Q does nothing without a Blackbeard Pirates Leader",
+  "rules": ["8-3-3"],
+  "setup": {
+    "p1": {
+      "characters": ["OP09-090"]
+    },
+    "p2": {
+      "characters": ["TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    }
+  ],
+  "expect": {
+    "p1.characters.0.rested": true,
+    "p2.characters": 1,
+    "prompt.kind": "main"
+  }
+}

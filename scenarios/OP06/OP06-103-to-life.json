@@ -1,0 +1,41 @@
+{
+  "name": "Kawamatsu adds a 0 power Character to the bottom of Life face-up",
+  "rules": ["10-2-5", "3-10-2-1"],
+  "setup": {
+    "p1": {
+      "characters": ["OP06-103", "ST28-005"],
+      "hand": ["TEST-FILLER", "TEST-FILLER"],
+      "life": 2
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.1"]
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.characters": 1,
+    "p1.life": 3,
+    "p1.life.2.cardId": "ST28-005",
+    "p1.life.2.faceUp": true,
+    "p1.trash": 2
+  }
+}

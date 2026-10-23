@@ -1,0 +1,247 @@
+[
+  {
+    "id": "ST27-001",
+    "name": "Avalo Pizarro",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 1,
+    "power": 1000,
+    "counter": 1000,
+    "types": ["Blackbeard Pirates"],
+    "attribute": "Special",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[Activate: Main] [Once Per Turn] You may rest 1 of your [Fullalead] cards: If your Leader has the {Blackbeard Pirates} type, this Character gains +4000 power during this turn.\n[On K.O.] Draw 1 card.",
+    "image": "images/ST27-001.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569027",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "oncePerTurn": true,
+        "costs": [
+          {
+            "restOwn": {
+              "name": "Fullalead"
+            }
+          }
+        ],
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "leaderHasType": "Blackbeard Pirates"
+              }
+            ],
+            "steps": [
+              {
+                "do": "powerUp",
+                "target": {
+                  "side": "this"
+                },
+                "amount": 4000
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "timing": "onKO",
+        "steps": [
+          {
+            "do": "draw",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST27-002",
+    "name": "Catarina Devon",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 1,
+    "power": 1000,
+    "counter": 2000,
+    "types": ["Blackbeard Pirates"],
+    "attribute": "Special",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[Activate: Main] You may trash this Character: If your Leader has the {Blackbeard Pirates} type, give up to 1 of your opponent's Characters −1 cost during this turn.\n[On K.O.] Draw 1 card.",
+    "image": "images/ST27-002.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569027",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "costs": [
+          {
+            "trashThis": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "leaderHasType": "Blackbeard Pirates"
+              }
+            ],
+            "steps": [
+              {
+                "do": "costChange",
+                "target": {
+                  "side": "opponent",
+                  "upTo": true
+                },
+                "amount": -1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "timing": "onKO",
+        "steps": [
+          {
+            "do": "draw",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST27-003",
+    "name": "Kuzan",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 6,
+    "power": 6000,
+    "counter": 1000,
+    "types": ["Blackbeard Pirates", "Former Navy"],
+    "attribute": "Special",
+    "rarity": "SR",
+    "blockIcon": 3,
+    "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)\n[On K.O.] Play up to 1 {Blackbeard Pirates} type Character card with a cost of 5 or less from your trash rested.",
+    "image": "images/ST27-003.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569027",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "onKO",
+        "steps": [
+          {
+            "do": "playFromTrash",
+            "rested": true,
+            "filter": {
+              "category": "character",
+              "type": "Blackbeard Pirates",
+              "costAtMost": 5
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST27-004",
+    "name": "Sanjuan.Wolf",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 4,
+    "power": 6000,
+    "counter": 1000,
+    "types": ["Giant", "Blackbeard Pirates"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "If your Leader has the {Blackbeard Pirates} type, this Character gains [Blocker] and +1 cost for every 4 cards in your trash.\n(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)\n[On Play] Trash 1 card from your hand.",
+    "image": "images/ST27-004.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569027",
+    "effects": [
+      {
+        "timing": "permanent",
+        "conditions": [
+          {
+            "leaderHasType": "Blackbeard Pirates"
+          }
+        ],
+        "steps": [
+          {
+            "do": "grantKeyword",
+            "target": {
+              "side": "this"
+            },
+            "keyword": "blocker"
+          },
+          {
+            "do": "costChange",
+            "target": {
+              "side": "this"
+            },
+            "amount": 1,
+            "perTrash": 4
+          }
+        ]
+      },
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "trashFromHand",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST27-005",
+    "name": "Marshall.D.Teach",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 7,
+    "power": 8000,
+    "types": ["The Four Emperors", "Blackbeard Pirates"],
+    "attribute": "Special",
+    "rarity": "SR",
+    "blockIcon": 3,
+    "text": "[Activate: Main] You may rest this Character: K.O. up to 1 Character with a cost of 3 or less.\n[On K.O.] Add up to 1 black card from your trash to your hand.",
+    "image": "images/ST27-005.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569027",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "costs": [
+          {
+            "restThis": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "ko",
+            "target": {
+              "side": "any",
+              "filter": {
+                "costAtMost": 3
+              },
+              "upTo": true
+            }
+          }
+        ]
+      },
+      {
+        "timing": "onKO",
+        "steps": [
+          {
+            "do": "trashToHand",
+            "filter": {
+              "color": "black"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

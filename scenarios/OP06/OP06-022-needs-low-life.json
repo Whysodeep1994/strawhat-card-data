@@ -1,0 +1,25 @@
+{
+  "name": "Yamato Leader's effect needs the opponent at 3 or less Life",
+  "rules": ["8-3-2-1"],
+  "setup": {
+    "p1": {
+      "leader": "OP06-022",
+      "characters": ["TEST-FILLER"],
+      "don": {
+        "rested": 3
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 0,
+      "illegal": true
+    }
+  ],
+  "expect": {
+    "legal.p1.activate": 0
+  }
+}

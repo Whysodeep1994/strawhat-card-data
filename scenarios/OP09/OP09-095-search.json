@@ -1,0 +1,40 @@
+{
+  "name": "Laffitte rests 1 DON!! and itself to search for a Blackbeard Pirates card",
+  "rules": ["10-2-2", "8-3-1-5"],
+  "setup": {
+    "p1": {
+      "characters": ["OP09-095"],
+      "don": {
+        "active": 1
+      },
+      "deck": [
+        "TEST-FILLER",
+        "OP09-091",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER"
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.1"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p1.hand.0.cardId": "OP09-091",
+    "p1.donRested": 1,
+    "p1.characters.0.rested": true,
+    "p1.deck": 5
+  }
+}

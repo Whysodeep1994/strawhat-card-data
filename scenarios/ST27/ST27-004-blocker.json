@@ -1,0 +1,26 @@
+{
+  "name": "Sanjuan.Wolf gains [Blocker] with a Blackbeard Pirates Leader",
+  "rules": ["10-1-4", "8-1-3-3"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "leader": "OP09-081",
+      "characters": ["ST27-004"]
+    },
+    "p2": {
+      "characters": ["TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p2",
+      "attacker": "p2.characters.0",
+      "target": "p1.leader"
+    }
+  ],
+  "expect": {
+    "legal.p1.block": 1
+  }
+}

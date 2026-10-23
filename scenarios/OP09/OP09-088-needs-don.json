@@ -1,0 +1,22 @@
+{
+  "name": "Shiryu's effect needs 1 DON!!",
+  "rules": ["10-2-9"],
+  "setup": {
+    "p1": {
+      "characters": ["OP09-088"],
+      "hand": ["TEST-FILLER", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    }
+  ],
+  "expect": {
+    "prompt.kind": "counter",
+    "p1.hand": 2
+  }
+}

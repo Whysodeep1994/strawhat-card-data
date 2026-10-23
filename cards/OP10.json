@@ -1,0 +1,18 @@
+[
+  {
+    "id": "OP10-084",
+    "name": "Sanjuan.Wolf",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 5,
+    "power": 7000,
+    "counter": 1000,
+    "types": ["Giant", "Blackbeard Pirates"],
+    "attribute": "Special",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "",
+    "image": "images/OP10-084.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569110"
+  }
+]

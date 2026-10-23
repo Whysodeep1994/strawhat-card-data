@@ -1,0 +1,343 @@
+[
+  {
+    "id": "OP06-022",
+    "name": "Yamato",
+    "category": "leader",
+    "colors": ["green", "yellow"],
+    "life": 4,
+    "power": 5000,
+    "types": ["Land of Wano"],
+    "attribute": "Strike",
+    "rarity": "L",
+    "blockIcon": 2,
+    "text": "[Double Attack] (This card deals 2 damage.)\n[Activate: Main] [Once Per Turn] If your opponent has 3 or less Life cards, give up to 2 rested DON!! cards to 1 of your Characters.",
+    "image": "images/OP06-022.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569106",
+    "keywords": ["doubleAttack"],
+    "effects": [
+      {
+        "timing": "activateMain",
+        "oncePerTurn": true,
+        "conditions": [
+          {
+            "opponentLifeAtMost": 3
+          }
+        ],
+        "steps": [
+          {
+            "do": "giveRestedDon",
+            "target": {
+              "side": "self",
+              "zone": "characters"
+            },
+            "count": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP06-100",
+    "name": "Inuarashi",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 4,
+    "power": 5000,
+    "counter": 1000,
+    "types": ["Minks", "Land of Wano", "The Akazaya Nine"],
+    "attribute": "Slash",
+    "rarity": "UC",
+    "blockIcon": 2,
+    "text": "[DON!! x2] [When Attacking] You may trash 1 card from your hand: K.O. up to 1 of your opponent's Characters with a cost equal to or less than the number of your opponent's Life cards.",
+    "trigger": "[Trigger] If your opponent has 3 or less Life cards, play this card.",
+    "image": "images/OP06-100.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569106",
+    "effects": [
+      {
+        "timing": "whenAttacking",
+        "conditions": [
+          {
+            "donAtLeast": 2
+          }
+        ],
+        "optional": true,
+        "costs": [
+          {
+            "trashFromHand": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "ko",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "costAtMostOpponentLife": true
+              },
+              "upTo": true
+            }
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "conditions": [
+          {
+            "opponentLifeAtMost": 3
+          }
+        ],
+        "steps": [
+          {
+            "do": "playThis"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP06-103",
+    "name": "Kawamatsu",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 3,
+    "power": 5000,
+    "types": ["Fish-Man", "Land of Wano", "The Akazaya Nine"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 2,
+    "text": "[When Attacking] You may trash 2 cards from your hand: Add up to 1 of your Characters with 0 power to the top or bottom of the owner's Life cards face-up.",
+    "trigger": "[Trigger] If your opponent has 3 or less Life cards, play this card.",
+    "image": "images/OP06-103.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569106",
+    "effects": [
+      {
+        "timing": "whenAttacking",
+        "optional": true,
+        "costs": [
+          {
+            "trashFromHand": 2
+          }
+        ],
+        "steps": [
+          {
+            "do": "characterToLife",
+            "faceUp": true,
+            "target": {
+              "side": "self",
+              "filter": {
+                "powerAtMost": 0
+              },
+              "upTo": true
+            }
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "conditions": [
+          {
+            "opponentLifeAtMost": 3
+          }
+        ],
+        "steps": [
+          {
+            "do": "playThis"
+          }
+        ]
+      }
+    ],
+    "notes": "A Character with 0 power is checked by its current power."
+  },
+  {
+    "id": "OP06-104",
+    "name": "Kikunojo",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 4,
+    "power": 6000,
+    "types": ["Land of Wano", "The Akazaya Nine"],
+    "attribute": "Slash",
+    "rarity": "R",
+    "blockIcon": 2,
+    "text": "[On K.O.] If your opponent has 3 or less Life cards, add up to 1 card from the top of your deck to the top of your Life cards.",
+    "trigger": "[Trigger] If your opponent has 3 or less Life cards, play this card.",
+    "image": "images/OP06-104.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569106",
+    "effects": [
+      {
+        "timing": "onKO",
+        "conditions": [
+          {
+            "opponentLifeAtMost": 3
+          }
+        ],
+        "steps": [
+          {
+            "do": "deckToLife",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "conditions": [
+          {
+            "opponentLifeAtMost": 3
+          }
+        ],
+        "steps": [
+          {
+            "do": "playThis"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP06-109",
+    "name": "Denjiro",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 5,
+    "power": 6000,
+    "types": ["Land of Wano", "The Akazaya Nine"],
+    "attribute": "Slash",
+    "rarity": "UC",
+    "blockIcon": 2,
+    "text": "[DON!! x2] If your opponent has 3 or less Life cards, this Character cannot be K.O.'d by effects.",
+    "trigger": "[Trigger] If your opponent has 3 or less Life cards, play this card.",
+    "image": "images/OP06-109.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569106",
+    "effects": [
+      {
+        "timing": "permanent",
+        "conditions": [
+          {
+            "donAtLeast": 2
+          },
+          {
+            "opponentLifeAtMost": 3
+          }
+        ],
+        "steps": [
+          {
+            "do": "grantStatus",
+            "target": {
+              "side": "this"
+            },
+            "status": "cannotBeKOdByEffects"
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "conditions": [
+          {
+            "opponentLifeAtMost": 3
+          }
+        ],
+        "steps": [
+          {
+            "do": "playThis"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP06-110",
+    "name": "Nekomamushi",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 4,
+    "power": 5000,
+    "counter": 1000,
+    "types": ["Minks", "Land of Wano", "The Akazaya Nine"],
+    "attribute": "Slash",
+    "rarity": "UC",
+    "blockIcon": 2,
+    "text": "[DON!! x2] This Character can also attack your opponent's active Characters.",
+    "trigger": "[Trigger] If your opponent has 3 or less Life cards, play this card.",
+    "image": "images/OP06-110.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569106",
+    "effects": [
+      {
+        "timing": "permanent",
+        "conditions": [
+          {
+            "donAtLeast": 2
+          }
+        ],
+        "steps": [
+          {
+            "do": "grantKeyword",
+            "target": {
+              "side": "this"
+            },
+            "keyword": "canAttackActive"
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "conditions": [
+          {
+            "opponentLifeAtMost": 3
+          }
+        ],
+        "steps": [
+          {
+            "do": "playThis"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP06-112",
+    "name": "Raizo",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 3,
+    "power": 4000,
+    "counter": 1000,
+    "types": ["Land of Wano", "The Akazaya Nine"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 2,
+    "text": "[When Attacking] You may trash 1 card from your hand: Rest up to 1 of your opponent's DON!! cards.",
+    "trigger": "[Trigger] If your opponent has 3 or less Life cards, play this card.",
+    "image": "images/OP06-112.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569106",
+    "effects": [
+      {
+        "timing": "whenAttacking",
+        "optional": true,
+        "costs": [
+          {
+            "trashFromHand": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "restOpponentDon",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "conditions": [
+          {
+            "opponentLifeAtMost": 3
+          }
+        ],
+        "steps": [
+          {
+            "do": "playThis"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,33 @@
+{
+  "name": "Ashura Doji K.O.s a Character with a base cost of 5 or less",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "leader": "OP06-022",
+      "hand": ["ST28-001"],
+      "don": {
+        "active": 3
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C5-5000", "TEST-C7-7000"],
+      "life": 3
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 1,
+    "p2.characters.0.cardId": "TEST-C7-7000"
+  }
+}

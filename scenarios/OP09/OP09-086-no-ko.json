@@ -1,0 +1,26 @@
+{
+  "name": "Jesus Burgess can't be K.O.'d by the opponent's effects",
+  "rules": ["10-2-1"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "characters": ["OP09-086"]
+    },
+    "p2": {
+      "characters": ["ST27-005"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p2",
+      "card": "p2.characters.0",
+      "effect": 0
+    }
+  ],
+  "expect": {
+    "p1.characters": 1,
+    "prompt.kind": "main"
+  }
+}

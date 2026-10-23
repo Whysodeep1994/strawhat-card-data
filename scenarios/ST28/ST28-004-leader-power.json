@@ -1,0 +1,28 @@
+{
+  "name": "Momonosuke gives the Leader +1000 on your turn at 2 or less Life",
+  "rules": ["10-2-11", "8-1-3-3"],
+  "setup": {
+    "p1": {
+      "characters": ["ST28-004"],
+      "life": 2
+    },
+    "p2": {
+      "leader": "TEST-LEADER-6000"
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 3
+  }
+}
