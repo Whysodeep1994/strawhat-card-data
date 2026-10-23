@@ -1,0 +1,40 @@
+{
+  "name": "Charlotte Smoothie adds the bottom Life card to hand for +2000",
+  "rules": ["10-2-5", "8-1-2"],
+  "setup": {
+    "p1": {
+      "characters": ["OP03-110"],
+      "life": ["TEST-C5-5000", "TEST-FILLER", "TEST-C7-7000"]
+    },
+    "p2": {
+      "leader": "TEST-LEADER-7000"
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p1.hand.0.cardId": "TEST-C7-7000",
+    "p1.life": 2,
+    "p2.life": 3
+  }
+}

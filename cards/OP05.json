@@ -1,0 +1,406 @@
+[
+  {
+    "id": "OP05-060",
+    "name": "Monkey.D.Luffy",
+    "category": "leader",
+    "colors": ["purple"],
+    "life": 5,
+    "power": 5000,
+    "types": ["Straw Hat Crew"],
+    "attribute": "Strike",
+    "rarity": "L",
+    "blockIcon": 2,
+    "text": "[Activate: Main] [Once Per Turn] You may add 1 card from the top of your Life cards to your hand: If you have 0 or 3 or more DON!! cards on your field, add up to 1 DON!! card from your DON!! deck and set it as active.",
+    "image": "images/OP05-060_p3.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569018",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "oncePerTurn": true,
+        "optional": true,
+        "costs": [
+          {
+            "lifeToHand": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "anyOf": [
+                  {
+                    "donOnFieldAtMost": 0
+                  },
+                  {
+                    "donOnFieldAtLeast": 3
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              {
+                "do": "addDon",
+                "count": 1
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "notes": "The DON!! check happens after the Life card is added to hand, as the text orders it."
+  },
+  {
+    "id": "OP05-061",
+    "name": "Uso-Hachi",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 3,
+    "power": 4000,
+    "counter": 2000,
+    "types": ["Straw Hat Crew"],
+    "attribute": "Ranged",
+    "rarity": "UC",
+    "blockIcon": 2,
+    "text": "[DON!! x1] [When Attacking] If you have 8 or more DON!! cards on your field, rest up to 1 of your opponent's Characters with a cost of 4 or less.",
+    "image": "images/OP05-061_r1.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569018",
+    "effects": [
+      {
+        "timing": "whenAttacking",
+        "conditions": [
+          {
+            "donAtLeast": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "donOnFieldAtLeast": 8
+              }
+            ],
+            "steps": [
+              {
+                "do": "rest",
+                "target": {
+                  "side": "opponent",
+                  "filter": {
+                    "costAtMost": 4
+                  },
+                  "upTo": true
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP05-063",
+    "name": "O-Robi",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 4,
+    "power": 5000,
+    "counter": 1000,
+    "types": ["Straw Hat Crew"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 2,
+    "text": "[On Play] If you have 8 or more DON!! cards on your field, K.O. up to 1 of your opponent's Characters with a cost of 3 or less.",
+    "image": "images/OP05-063_r1.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569018",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "donOnFieldAtLeast": 8
+              }
+            ],
+            "steps": [
+              {
+                "do": "ko",
+                "target": {
+                  "side": "opponent",
+                  "filter": {
+                    "costAtMost": 3
+                  },
+                  "upTo": true
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP05-066",
+    "name": "Jinbe",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 5,
+    "power": 6000,
+    "counter": 1000,
+    "types": ["Fish-Man", "Straw Hat Crew"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 2,
+    "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)\n[Opponent's Turn] If you have 10 DON!! cards on your field, this Character gains +1000 power.",
+    "image": "images/OP05-066_r1.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569018",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "permanent",
+        "conditions": [
+          {
+            "opponentsTurn": true
+          },
+          {
+            "donOnFieldAtLeast": 10
+          }
+        ],
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "this"
+            },
+            "amount": 1000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP05-067",
+    "name": "Zoro-Juurou",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 3,
+    "power": 4000,
+    "counter": 1000,
+    "types": ["Straw Hat Crew"],
+    "attribute": "Slash",
+    "rarity": "R",
+    "blockIcon": 2,
+    "text": "[When Attacking] If you have 3 or less Life cards, add up to 1 DON!! card from your DON!! deck and set it as active.",
+    "image": "images/OP05-067_r1.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569018",
+    "effects": [
+      {
+        "timing": "whenAttacking",
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "lifeAtMost": 3
+              }
+            ],
+            "steps": [
+              {
+                "do": "addDon",
+                "count": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP05-068",
+    "name": "Chopa-Emon",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 2,
+    "power": 3000,
+    "counter": 1000,
+    "types": ["Animal", "Straw Hat Crew"],
+    "attribute": "Wisdom",
+    "rarity": "C",
+    "blockIcon": 2,
+    "text": "[On Play] If you have 8 or more DON!! cards on your field, set up to 1 of your purple {Straw Hat Crew} type Characters with 6000 power or less as active.",
+    "image": "images/OP05-068_r1.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569018",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "donOnFieldAtLeast": 8
+              }
+            ],
+            "steps": [
+              {
+                "do": "setActive",
+                "target": {
+                  "side": "self",
+                  "filter": {
+                    "color": "purple",
+                    "type": "Straw Hat Crew",
+                    "powerAtMost": 6000
+                  },
+                  "upTo": true
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP05-070",
+    "name": "Fra-Nosuke",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 5,
+    "power": 4000,
+    "counter": 2000,
+    "types": ["Straw Hat Crew"],
+    "attribute": "Strike",
+    "rarity": "UC",
+    "blockIcon": 2,
+    "text": "[DON!! x1] If you have 8 or more DON!! cards on your field, this Character gains [Rush].\n(This card can attack on the turn in which it is played.)",
+    "image": "images/OP05-070_r1.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569018",
+    "effects": [
+      {
+        "timing": "permanent",
+        "conditions": [
+          {
+            "donAtLeast": 1
+          },
+          {
+            "donOnFieldAtLeast": 8
+          }
+        ],
+        "steps": [
+          {
+            "do": "grantKeyword",
+            "target": {
+              "side": "this"
+            },
+            "keyword": "rush"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP05-072",
+    "name": "Hone-Kichi",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 4,
+    "power": 6000,
+    "types": ["Straw Hat Crew"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 2,
+    "text": "[On Play] If you have 8 or more DON!! cards on your field, give up to 2 of your opponent's Characters −2000 power during this turn.",
+    "image": "images/OP05-072_r1.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569018",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "donOnFieldAtLeast": 8
+              }
+            ],
+            "steps": [
+              {
+                "do": "powerUp",
+                "target": {
+                  "side": "opponent",
+                  "count": 2,
+                  "upTo": true
+                },
+                "amount": -2000
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP05-076",
+    "name": "When You're at Sea You Fight against Pirates!!",
+    "category": "event",
+    "colors": ["purple"],
+    "cost": 1,
+    "types": ["Land of Wano"],
+    "rarity": "R",
+    "blockIcon": 2,
+    "text": "[Main] Look at 3 cards from the top of your deck; reveal up to 1 {Straw Hat Crew}, {Kid Pirates}, or {Heart Pirates} type card and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+    "trigger": "[Trigger] Activate this card's [Main] effect.",
+    "image": "images/OP05-076_p1.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569018",
+    "effects": [
+      {
+        "timing": "main",
+        "steps": [
+          {
+            "do": "searchDeck",
+            "look": 3,
+            "take": 1,
+            "filter": {
+              "anyOf": [
+                {
+                  "type": "Straw Hat Crew"
+                },
+                {
+                  "type": "Kid Pirates"
+                },
+                {
+                  "type": "Heart Pirates"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "searchDeck",
+            "look": 3,
+            "take": 1,
+            "filter": {
+              "anyOf": [
+                {
+                  "type": "Straw Hat Crew"
+                },
+                {
+                  "type": "Kid Pirates"
+                },
+                {
+                  "type": "Heart Pirates"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

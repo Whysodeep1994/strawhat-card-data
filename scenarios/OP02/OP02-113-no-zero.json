@@ -1,0 +1,32 @@
+{
+  "name": "Helmeppo stays at 3000 when no Character reaches cost 0",
+  "rules": ["8-3-3"],
+  "setup": {
+    "p1": {
+      "characters": ["OP02-113"]
+    },
+    "p2": {
+      "characters": ["TEST-C4-4000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 4
+  }
+}

@@ -1,0 +1,57 @@
+[
+  {
+    "id": "ST07-005",
+    "name": "Charlotte Daifuku",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 4,
+    "power": 5000,
+    "counter": 1000,
+    "types": ["Big Mom Pirates"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "[DON!! x1] [When Attacking] You may add 1 card from the top or bottom of your Life cards to your hand: Add up to 1 card from the top of your deck to the top of your Life cards.",
+    "image": "images/ST07-005_r1.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569020",
+    "effects": [
+      {
+        "timing": "whenAttacking",
+        "conditions": [
+          {
+            "donAtLeast": 1
+          }
+        ],
+        "optional": true,
+        "costs": [
+          {
+            "lifeToHand": 1,
+            "from": "topOrBottom"
+          }
+        ],
+        "steps": [
+          {
+            "do": "deckToLife",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST07-014",
+    "name": "Pekoms",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 3,
+    "power": 5000,
+    "counter": 1000,
+    "types": ["Minks", "Big Mom Pirates"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "",
+    "image": "images/ST07-014_r1.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569020"
+  }
+]

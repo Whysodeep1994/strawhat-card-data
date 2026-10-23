@@ -1,0 +1,30 @@
+{
+  "name": "Fra-Nosuke with 7 DON!! on the field doesn't have [Rush]",
+  "rules": ["10-1-1-1"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "OP05-070",
+          "don": 1,
+          "playedThisTurn": true
+        }
+      ],
+      "don": {
+        "active": 6
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader",
+      "illegal": true
+    }
+  ],
+  "expect": {
+    "legal.p1.attack": 1
+  }
+}

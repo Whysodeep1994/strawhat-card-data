@@ -1,0 +1,319 @@
+[
+  {
+    "id": "OP02-093",
+    "name": "Smoker",
+    "category": "leader",
+    "colors": ["black"],
+    "life": 5,
+    "power": 5000,
+    "types": ["Navy"],
+    "attribute": "Special",
+    "rarity": "L",
+    "blockIcon": 1,
+    "text": "[DON!! x1] [Activate: Main] [Once Per Turn] Give up to 1 of your opponent's Characters −1 cost during this turn. Then, if there is a Character with a cost of 0, this Leader gains +1000 power during this turn.",
+    "image": "images/OP02-093_p2.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569019",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "conditions": [
+          {
+            "donAtLeast": 1
+          }
+        ],
+        "oncePerTurn": true,
+        "steps": [
+          {
+            "do": "costChange",
+            "target": {
+              "side": "opponent",
+              "upTo": true
+            },
+            "amount": -1,
+            "duration": "turn"
+          },
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "anyOf": [
+                  {
+                    "count": {
+                      "side": "opponent",
+                      "filter": {
+                        "costAtMost": 0
+                      }
+                    },
+                    "atLeast": 1
+                  },
+                  {
+                    "count": {
+                      "side": "self",
+                      "filter": {
+                        "costAtMost": 0
+                      }
+                    },
+                    "atLeast": 1
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              {
+                "do": "powerUp",
+                "target": {
+                  "side": "this"
+                },
+                "amount": 1000
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "notes": "\"A Character with a cost of 0\" counts either player's Characters."
+  },
+  {
+    "id": "OP02-098",
+    "name": "Koby",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 3,
+    "power": 4000,
+    "counter": 1000,
+    "types": ["Navy"],
+    "attribute": "Strike",
+    "rarity": "R",
+    "blockIcon": 1,
+    "text": "[On Play] You may trash 1 card from your hand: K.O. up to 1 of your opponent's Characters with a cost of 3 or less.",
+    "image": "images/OP02-098_r1.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569019",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "optional": true,
+        "costs": [
+          {
+            "trashFromHand": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "ko",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "costAtMost": 3
+              },
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP02-106",
+    "name": "Tsuru",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 1,
+    "counter": 2000,
+    "types": ["Navy"],
+    "attribute": "Wisdom",
+    "rarity": "UC",
+    "blockIcon": 1,
+    "text": "[On Play] Give up to 1 of your opponent's Characters −2 cost during this turn.",
+    "image": "images/OP02-106_r1.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569019",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "costChange",
+            "target": {
+              "side": "opponent",
+              "upTo": true
+            },
+            "amount": -2,
+            "duration": "turn"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP02-108",
+    "name": "Donquixote Rosinante",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 2,
+    "power": 2000,
+    "counter": 1000,
+    "types": ["Navy", "Donquixote Pirates"],
+    "attribute": "Special",
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)",
+    "image": "images/OP02-108_r1.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569019",
+    "keywords": ["blocker"]
+  },
+  {
+    "id": "OP02-109",
+    "name": "Jaguar.D.Saul",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 4,
+    "power": 6000,
+    "counter": 1000,
+    "types": ["Giant", "Navy"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "",
+    "image": "images/OP02-109_r1.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569019"
+  },
+  {
+    "id": "OP02-113",
+    "name": "Helmeppo",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 3,
+    "power": 3000,
+    "counter": 1000,
+    "types": ["Navy"],
+    "attribute": "Slash",
+    "rarity": "UC",
+    "blockIcon": 1,
+    "text": "[When Attacking] Give up to 1 of your opponent's Characters −2 cost during this turn. Then, if there is a Character with a cost of 0, this Character gains +2000 power during this battle.",
+    "trigger": "[Trigger] Play this card.",
+    "image": "images/OP02-113_r1.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569019",
+    "effects": [
+      {
+        "timing": "whenAttacking",
+        "steps": [
+          {
+            "do": "costChange",
+            "target": {
+              "side": "opponent",
+              "upTo": true
+            },
+            "amount": -2,
+            "duration": "turn"
+          },
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "anyOf": [
+                  {
+                    "count": {
+                      "side": "opponent",
+                      "filter": {
+                        "costAtMost": 0
+                      }
+                    },
+                    "atLeast": 1
+                  },
+                  {
+                    "count": {
+                      "side": "self",
+                      "filter": {
+                        "costAtMost": 0
+                      }
+                    },
+                    "atLeast": 1
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              {
+                "do": "powerUp",
+                "target": {
+                  "side": "this"
+                },
+                "amount": 2000,
+                "duration": "battle"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "playThis"
+          }
+        ]
+      }
+    ],
+    "notes": "\"A Character with a cost of 0\" counts either player's Characters."
+  },
+  {
+    "id": "OP02-116",
+    "name": "Yamakaji",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 3,
+    "power": 5000,
+    "counter": 1000,
+    "types": ["Navy"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "",
+    "image": "images/OP02-116_r1.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569019"
+  },
+  {
+    "id": "OP02-117",
+    "name": "Ice Age",
+    "category": "event",
+    "colors": ["black"],
+    "cost": 1,
+    "types": ["Navy"],
+    "rarity": "UC",
+    "blockIcon": 1,
+    "text": "[Main] Give up to 1 of your opponent's Characters −5 cost during this turn.",
+    "trigger": "[Trigger] K.O. up to 1 of your opponent's Characters with a cost of 3 or less.",
+    "image": "images/OP02-117_r1.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569019",
+    "effects": [
+      {
+        "timing": "main",
+        "steps": [
+          {
+            "do": "costChange",
+            "target": {
+              "side": "opponent",
+              "upTo": true
+            },
+            "amount": -5,
+            "duration": "turn"
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "ko",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "costAtMost": 3
+              },
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

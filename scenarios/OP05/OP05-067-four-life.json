@@ -1,0 +1,24 @@
+{
+  "name": "Zoro-Juurou with 4 Life adds no DON!!",
+  "rules": ["8-3-3"],
+  "setup": {
+    "p1": {
+      "characters": ["OP05-067"],
+      "life": 4,
+      "don": {
+        "deck": 5
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    }
+  ],
+  "expect": {
+    "p1.donActive": 0
+  }
+}

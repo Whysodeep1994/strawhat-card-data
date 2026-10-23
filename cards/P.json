@@ -1,0 +1,18 @@
+[
+  {
+    "id": "P-041",
+    "name": "Monkey.D.Luffy",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 10,
+    "power": 12000,
+    "counter": 1000,
+    "types": ["The Four Emperors", "Straw Hat Crew"],
+    "attribute": "Strike",
+    "rarity": "P",
+    "blockIcon": 2,
+    "text": "",
+    "image": "images/P-041_r1.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569018"
+  }
+]
