@@ -1,0 +1,28 @@
+{
+  "name": "Inazuma adds a 6000 power Character from the top 5",
+  "rules": ["11-2-1"],
+  "setup": {
+    "p1": {
+      "hand": ["ST30-002"],
+      "don": {
+        "active": 1
+      },
+      "deck": ["TEST-FILLER", "ST30-005", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.1"]
+    }
+  ],
+  "expect": {
+    "p1.hand.0.cardId": "ST30-005"
+  }
+}

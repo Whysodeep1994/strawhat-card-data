@@ -1,0 +1,35 @@
+{
+  "name": "Mr.3 rests to give 2 rested DON!! to each of 2 6000 base power Characters",
+  "rules": ["6-5-5"],
+  "setup": {
+    "p1": {
+      "characters": ["ST30-014", "ST30-005", "ST30-013"],
+      "don": {
+        "rested": 4
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.1", "p1.characters.2"]
+    }
+  ],
+  "expect": {
+    "p1.characters.1.givenDon": 2,
+    "p1.characters.2.givenDon": 2,
+    "p1.characters.0.rested": true
+  }
+}

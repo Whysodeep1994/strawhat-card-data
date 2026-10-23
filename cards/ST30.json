@@ -1,0 +1,720 @@
+[
+  {
+    "id": "ST30-001",
+    "name": "Luffy & Ace",
+    "category": "leader",
+    "colors": ["red", "green"],
+    "life": 4,
+    "power": 6000,
+    "types": ["Impel Down", "Whitebeard Pirates", "Straw Hat Crew"],
+    "attribute": "Strike/Special",
+    "rarity": "L",
+    "blockIcon": 5,
+    "text": "If you have a Character with 7000 base power or more, give this Leader −2000 power.\n[Opponent's Turn] All of your [Portgas.D.Ace] and [Monkey.D.Luffy] cards gain +3000 power.",
+    "image": "images/ST30-001.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569030",
+    "effects": [
+      {
+        "timing": "permanent",
+        "conditions": [
+          {
+            "count": {
+              "side": "self",
+              "filter": {
+                "basePowerAtLeast": 7000
+              }
+            }
+          }
+        ],
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "this"
+            },
+            "amount": -2000
+          }
+        ]
+      },
+      {
+        "timing": "permanent",
+        "conditions": [
+          {
+            "opponentsTurn": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "self",
+              "zone": "leaderOrCharacters",
+              "filter": {
+                "anyOf": [
+                  {
+                    "name": "Portgas.D.Ace"
+                  },
+                  {
+                    "name": "Monkey.D.Luffy"
+                  }
+                ]
+              }
+            },
+            "amount": 3000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST30-002",
+    "name": "Inazuma",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 1,
+    "power": 2000,
+    "counter": 1000,
+    "types": ["Impel Down", "Revolutionary Army"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 5,
+    "text": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 Character card with 6000 power and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+    "image": "images/ST30-002.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569030",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "searchDeck",
+            "look": 5,
+            "take": 1,
+            "filter": {
+              "category": "character",
+              "powerAtLeast": 6000,
+              "powerAtMost": 6000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST30-003",
+    "name": "Edward.Newgate",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 8,
+    "power": 6000,
+    "counter": 1000,
+    "types": ["The Four Emperors", "Whitebeard Pirates"],
+    "attribute": "Special",
+    "rarity": "C",
+    "blockIcon": 5,
+    "text": "[Your Turn] All of your Characters with 6000 base power gain +1000 power.",
+    "image": "images/ST30-003.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569030",
+    "effects": [
+      {
+        "timing": "permanent",
+        "conditions": [
+          {
+            "yourTurn": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "self",
+              "zone": "characters",
+              "filter": {
+                "basePowerAtLeast": 6000,
+                "basePowerAtMost": 6000
+              }
+            },
+            "amount": 1000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST30-004",
+    "name": "Emporio.Ivankov",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 1,
+    "power": 2000,
+    "counter": 1000,
+    "types": ["Impel Down", "Revolutionary Army"],
+    "attribute": "Special",
+    "rarity": "C",
+    "blockIcon": 5,
+    "text": "[On Play] You may reveal 2 Character cards with 6000 power from your hand: Draw 3 cards and trash 2 cards from your hand.",
+    "image": "images/ST30-004.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569030",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "optional": true,
+        "costs": [
+          {
+            "revealFromHand": 2,
+            "filter": {
+              "category": "character",
+              "powerAtLeast": 6000,
+              "powerAtMost": 6000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "do": "draw",
+            "count": 3
+          },
+          {
+            "do": "trashFromHand",
+            "count": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST30-005",
+    "name": "Jozu",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 5,
+    "power": 6000,
+    "counter": 2000,
+    "types": ["Whitebeard Pirates"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 5,
+    "text": "",
+    "image": "images/ST30-005.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569030"
+  },
+  {
+    "id": "ST30-006",
+    "name": "Jinbe",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 5,
+    "power": 6000,
+    "counter": 1000,
+    "types": ["Fish-Man", "Impel Down", "The Sun Pirates"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 5,
+    "text": "[On Play] You may trash 1 Character card with 6000 power from your hand: Draw 2 cards.",
+    "image": "images/ST30-006.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569030",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "optional": true,
+        "costs": [
+          {
+            "trashFromHand": 1,
+            "filter": {
+              "category": "character",
+              "powerAtLeast": 6000,
+              "powerAtMost": 6000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "do": "draw",
+            "count": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST30-007",
+    "name": "Portgas.D.Ace",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 4,
+    "power": 6000,
+    "types": ["Whitebeard Pirates"],
+    "attribute": "Special",
+    "rarity": "SR",
+    "blockIcon": 5,
+    "text": "[On Play] You may rest 1 of your DON!! cards: This Character gains [Rush] during this turn.\n(This card can attack on the turn in which it is played.)\n[When Attacking] Give up to 1 of your opponent's Characters −1000 power during this turn.",
+    "image": "images/ST30-007.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569030",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "optional": true,
+        "costs": [
+          {
+            "restDon": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "grantKeyword",
+            "target": {
+              "side": "this"
+            },
+            "keyword": "rush"
+          }
+        ]
+      },
+      {
+        "timing": "whenAttacking",
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "opponent",
+              "upTo": true
+            },
+            "amount": -1000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST30-008",
+    "name": "Marco",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 5,
+    "power": 6000,
+    "counter": 1000,
+    "types": ["Whitebeard Pirates"],
+    "attribute": "Special",
+    "rarity": "C",
+    "blockIcon": 5,
+    "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)\n[On K.O.] You may trash 1 Character card with 6000 power from your hand: Play this Character card from your trash rested.",
+    "image": "images/ST30-008.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569030",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "onKO",
+        "optional": true,
+        "costs": [
+          {
+            "trashFromHand": 1,
+            "filter": {
+              "category": "character",
+              "powerAtLeast": 6000,
+              "powerAtMost": 6000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "do": "playThis",
+            "rested": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST30-009",
+    "name": "LittleOars Jr.",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 1,
+    "power": 2000,
+    "counter": 1000,
+    "types": ["Giant", "Whitebeard Pirates Allies"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 5,
+    "text": "If your Character with 6000 base power would be removed from the field by your opponent's effect, you may trash this Character and draw 1 card instead.",
+    "image": "images/ST30-009.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569030",
+    "effects": [
+      {
+        "timing": "replaceRemoval",
+        "replaces": {
+          "side": "self",
+          "filter": {
+            "basePowerAtLeast": 6000,
+            "basePowerAtMost": 6000
+          },
+          "removal": "remove",
+          "byOpponent": true
+        },
+        "optional": true,
+        "costs": [
+          {
+            "trashThis": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "draw",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST30-010",
+    "name": "Crocodile",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 6,
+    "power": 6000,
+    "counter": 1000,
+    "types": ["Impel Down", "Former Baroque Works"],
+    "attribute": "Special",
+    "rarity": "C",
+    "blockIcon": 5,
+    "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)\n[On Play] Up to 1 of your opponent's rested Characters will not become active in your opponent's next Refresh Phase.",
+    "image": "images/ST30-010.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569030",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "grantStatus",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "rested": true
+              },
+              "upTo": true
+            },
+            "status": "noRefresh",
+            "duration": "opponentsNextTurn"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST30-011",
+    "name": "Buggy",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 2,
+    "power": 1000,
+    "counter": 1000,
+    "types": ["Impel Down", "Buggy Pirates"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 5,
+    "text": "If your Character with 6000 base power would be removed from the field by your opponent's effect, you may rest this Character instead.\n[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)",
+    "image": "images/ST30-011.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569030",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "replaceRemoval",
+        "replaces": {
+          "side": "self",
+          "filter": {
+            "basePowerAtLeast": 6000,
+            "basePowerAtMost": 6000
+          },
+          "removal": "remove",
+          "byOpponent": true
+        },
+        "optional": true,
+        "costs": [
+          {
+            "restThis": true
+          }
+        ],
+        "steps": []
+      }
+    ]
+  },
+  {
+    "id": "ST30-012",
+    "name": "Monkey.D.Luffy",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 4,
+    "power": 6000,
+    "types": ["Impel Down", "Straw Hat Crew"],
+    "attribute": "Strike",
+    "rarity": "SR",
+    "blockIcon": 5,
+    "text": "[On Play] You may rest 1 of your DON!! cards: This Character gains [Rush] during this turn.\n(This card can attack on the turn in which it is played.)\n[When Attacking] Rest up to 1 of your opponent's [Blocker] Characters.",
+    "image": "images/ST30-012.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569030",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "optional": true,
+        "costs": [
+          {
+            "restDon": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "grantKeyword",
+            "target": {
+              "side": "this"
+            },
+            "keyword": "rush"
+          }
+        ]
+      },
+      {
+        "timing": "whenAttacking",
+        "steps": [
+          {
+            "do": "rest",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "keyword": "blocker"
+              },
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST30-013",
+    "name": "Mr.2.Bon.Kurei(Bentham)",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 4,
+    "power": 6000,
+    "counter": 1000,
+    "types": ["Impel Down", "Former Baroque Works"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 5,
+    "text": "",
+    "image": "images/ST30-013.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569030"
+  },
+  {
+    "id": "ST30-014",
+    "name": "Mr.3(Galdino)",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 2,
+    "power": 3000,
+    "counter": 2000,
+    "types": ["Impel Down", "Former Baroque Works"],
+    "attribute": "Special",
+    "rarity": "C",
+    "blockIcon": 5,
+    "text": "[Activate: Main] You may rest this Character: Give up to 2 of your Characters with 6000 base power up to 2 rested DON!! cards each.",
+    "image": "images/ST30-014.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569030",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "optional": true,
+        "costs": [
+          {
+            "restThis": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "giveRestedDon",
+            "target": {
+              "side": "self",
+              "filter": {
+                "basePowerAtLeast": 6000,
+                "basePowerAtMost": 6000
+              },
+              "count": 2,
+              "upTo": true
+            },
+            "count": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST30-015",
+    "name": "The Name of This Era Is \"Whitebeard\"!!",
+    "category": "event",
+    "colors": ["red"],
+    "cost": 1,
+    "types": ["Whitebeard Pirates"],
+    "rarity": "C",
+    "blockIcon": 5,
+    "text": "[Counter] If you have 2 or more Characters with 6000 base power, up to 1 of your Leader or Character cards gains +4000 power during this battle.",
+    "trigger": "[Trigger] K.O. up to 1 of your opponent's Characters with 6000 power or less.",
+    "image": "images/ST30-015.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569030",
+    "effects": [
+      {
+        "timing": "counter",
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "count": {
+                  "side": "self",
+                  "filter": {
+                    "basePowerAtLeast": 6000,
+                    "basePowerAtMost": 6000
+                  }
+                },
+                "atLeast": 2
+              }
+            ],
+            "steps": [
+              {
+                "do": "powerUp",
+                "target": {
+                  "side": "self",
+                  "zone": "leaderOrCharacters",
+                  "upTo": true
+                },
+                "amount": 4000,
+                "duration": "battle"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "ko",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "powerAtMost": 6000
+              },
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST30-016",
+    "name": "Can You Still Fight, Luffy?! Of Course!!",
+    "category": "event",
+    "colors": ["red"],
+    "cost": 1,
+    "types": ["Whitebeard Pirates", "Straw Hat Crew"],
+    "rarity": "C",
+    "blockIcon": 5,
+    "text": "[Counter] Up to 1 of your Leader or Character cards gains +3000 power during this battle. Then, if you have [Portgas.D.Ace] and [Monkey.D.Luffy] Characters with 6000 base power, draw 1 card.",
+    "image": "images/ST30-016.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569030",
+    "effects": [
+      {
+        "timing": "counter",
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "self",
+              "zone": "leaderOrCharacters",
+              "upTo": true
+            },
+            "amount": 3000,
+            "duration": "battle"
+          },
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "count": {
+                  "side": "self",
+                  "filter": {
+                    "name": "Portgas.D.Ace",
+                    "basePowerAtLeast": 6000,
+                    "basePowerAtMost": 6000
+                  }
+                }
+              },
+              {
+                "count": {
+                  "side": "self",
+                  "filter": {
+                    "name": "Monkey.D.Luffy",
+                    "basePowerAtLeast": 6000,
+                    "basePowerAtMost": 6000
+                  }
+                }
+              }
+            ],
+            "steps": [
+              {
+                "do": "draw",
+                "count": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST30-017",
+    "name": "And You Get Yourself in Big Trouble!!",
+    "category": "event",
+    "colors": ["red"],
+    "cost": 1,
+    "types": ["Whitebeard Pirates"],
+    "rarity": "C",
+    "blockIcon": 5,
+    "text": "[Main] Look at 5 cards from the top of your deck; reveal up to 1 Character card with 6000 power and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+    "trigger": "[Trigger] Activate this card's [Main] effect.",
+    "image": "images/ST30-017.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569030",
+    "effects": [
+      {
+        "timing": "main",
+        "steps": [
+          {
+            "do": "searchDeck",
+            "look": 5,
+            "take": 1,
+            "filter": {
+              "category": "character",
+              "powerAtLeast": 6000,
+              "powerAtMost": 6000
+            }
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "searchDeck",
+            "look": 5,
+            "take": 1,
+            "filter": {
+              "category": "character",
+              "powerAtLeast": 6000,
+              "powerAtMost": 6000
+            }
+          }
+        ]
+      }
+    ],
+    "notes": "[Trigger] Activate this card's [Main] effect: the [Main] steps are repeated under the trigger."
+  }
+]
