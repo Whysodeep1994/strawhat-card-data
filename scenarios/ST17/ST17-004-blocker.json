@@ -1,0 +1,25 @@
+{
+  "name": "Boa Hancock can block",
+  "rules": ["10-1-4-1"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "characters": ["ST17-004"]
+    },
+    "p2": {
+      "characters": ["TEST-C5-5000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p2",
+      "attacker": "p2.characters.0",
+      "target": "p1.leader"
+    }
+  ],
+  "expect": {
+    "legal.p1.block": 1
+  }
+}

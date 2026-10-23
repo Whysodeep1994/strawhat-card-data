@@ -1,0 +1,41 @@
+{
+  "name": "Backlight: K.O. up to 1 rested Character with a cost of 5 or less",
+  "rules": ["10-2-3"],
+  "setup": {
+    "p1": {
+      "leader": "ST11-001",
+      "hand": ["ST11-003"],
+      "don": {
+        "active": 2
+      }
+    },
+    "p2": {
+      "characters": [
+        {
+          "card": "TEST-C5-5000",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "chooseOne",
+      "player": "p1",
+      "option": 1
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 0
+  }
+}

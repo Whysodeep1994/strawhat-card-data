@@ -1,0 +1,42 @@
+{
+  "name": "Kingdew K.O.'d by an opponent's effect gives the Leader +2000",
+  "rules": ["10-2-1-1"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "characters": ["ST15-003"]
+    },
+    "p2": {
+      "characters": ["ST15-002"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p2",
+      "card": "p2.characters.0",
+      "effect": 1
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p1.characters.0"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.leader"]
+    }
+  ],
+  "expect": {
+    "p1.trash": 1,
+    "modifiers": 1,
+    "modifiers.0.power": 2000
+  }
+}

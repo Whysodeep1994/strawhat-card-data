@@ -1,0 +1,115 @@
+[
+  {
+    "id": "OP03-003",
+    "name": "Izo",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 1,
+    "power": 2000,
+    "counter": 1000,
+    "types": ["Land of Wano", "Whitebeard Pirates"],
+    "attribute": "Ranged",
+    "rarity": "R",
+    "blockIcon": 1,
+    "text": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 card with a type including \"Whitebeard Pirates\" other than [Izo] and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+    "image": "images/OP03-003.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569103",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "searchDeck",
+            "look": 5,
+            "take": 1,
+            "filter": {
+              "typeIncludes": "Whitebeard Pirates",
+              "notName": "Izo"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP03-006",
+    "name": "Speed Jil",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 4,
+    "power": 6000,
+    "counter": 1000,
+    "types": ["Whitebeard Pirates"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "",
+    "image": "images/OP03-006.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569103"
+  },
+  {
+    "id": "OP03-007",
+    "name": "Namule",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 3,
+    "power": 5000,
+    "counter": 1000,
+    "types": ["Fish-Man", "Whitebeard Pirates"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "",
+    "image": "images/OP03-007.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569103"
+  },
+  {
+    "id": "OP03-009",
+    "name": "Haruta",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 2,
+    "power": 3000,
+    "counter": 1000,
+    "types": ["Whitebeard Pirates"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "[Activate: Main] [Once Per Turn] Give up to 1 rested DON!! card to your Leader or 1 of your Characters.",
+    "image": "images/OP03-009.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569103",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "oncePerTurn": true,
+        "steps": [
+          {
+            "do": "giveRestedDon",
+            "target": {
+              "side": "self",
+              "zone": "leaderOrCharacters"
+            },
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP03-010",
+    "name": "Fossa",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 2,
+    "power": 2000,
+    "counter": 1000,
+    "types": ["Whitebeard Pirates"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)",
+    "image": "images/OP03-010.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569103",
+    "keywords": ["blocker"]
+  }
+]

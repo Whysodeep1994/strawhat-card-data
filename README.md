@@ -39,6 +39,9 @@ Hand-written fields: `keywords`, `effects`, and `notes` (why an effect is writte
 2. Run `NODE_USE_ENV_PROXY=1 pnpm import ST02 569002` (the proxy variable is only needed behind a
    proxy). This writes `cards/ST02.json` and downloads the art. Running it again refreshes the
    official fields and keeps your `keywords` and `effects`.
+   For reprints, list the card numbers after the series to import only those cards from the
+   set they belong to, keeping that set's other cards: for example
+   `pnpm import OP02 569102 OP02-001 OP02-008` for two OP-02 cards in a starter deck.
 3. Write `keywords` and `effects` for each card, and at least one scenario per card in
    `scenarios/ST02/`, named `ST02-001-what-it-checks.json`.
 4. Run `pnpm status`, then `pnpm check`. Every card must say "tested".

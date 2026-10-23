@@ -1,11 +1,14 @@
 // Imports one set from the official card list into cards/<SET>.json and images/.
 //
 //   node scripts/import-set.mjs ST01 569001
+//   node scripts/import-set.mjs OP02 569102 OP02-001 OP02-008
 //
 // The second argument is the "series" number from the card list URL on
 // https://en.onepiece-cardgame.com/cardlist/. Official fields (name, stats,
 // text, art) are refreshed every run. Hand-written fields (keywords, effects)
 // are kept, so re-running after an errata only changes what Bandai changed.
+// Card numbers after the series import only those cards (for example the
+// reprints in a starter deck) and keep the set's other cards in the file.
 // Behind a proxy, run with NODE_USE_ENV_PROXY=1.
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
@@ -13,9 +16,9 @@ import { fileURLToPath } from "node:url";
 
 const SITE = "https://en.onepiece-cardgame.com";
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
-const [set, series] = process.argv.slice(2);
+const [set, series, ...only] = process.argv.slice(2);
 if (!set || !series) {
-  console.error("Usage: node scripts/import-set.mjs <SET> <series number>");
+  console.error("Usage: node scripts/import-set.mjs <SET> <series number> [card numbers]");
   process.exit(1);
 }
 
@@ -78,24 +81,29 @@ const page = await res.text();
 const found = [...page.matchAll(/<dl class="modalCol" id="([^"]+)">([\s\S]*?)<\/dl>/g)]
   // Alternate art prints (ids like ST01-012_p1) share their card's data.
   .filter(([, id]) => id.startsWith(set) && !id.includes("_"))
+  .filter(([, id]) => only.length === 0 || only.includes(id))
   .map(([, id, body]) => parseCard(id, body));
 if (found.length === 0) throw new Error(`No ${set} cards found in series ${series}`);
+const missing = only.filter((id) => !found.some((c) => c.id === id));
+if (missing.length > 0) throw new Error(`Not in series ${series}: ${missing.join(", ")}`);
 
 const file = join(root, "cards", `${set}.json`);
 const existing = existsSync(file) ? JSON.parse(readFileSync(file, "utf8")) : [];
 const handWritten = new Map(
   existing.map((c) => [c.id, { keywords: c.keywords, effects: c.effects, notes: c.notes }]),
 );
-const cards = found.map((c) => {
+const imported = found.map((c) => {
   const kept = handWritten.get(c.id) ?? {};
   return Object.fromEntries(Object.entries({ ...c, ...kept }).filter(([, v]) => v !== undefined));
 });
+const others = only.length === 0 ? [] : existing.filter((c) => !only.includes(c.id));
+const cards = [...others, ...imported].sort((a, b) => a.id.localeCompare(b.id));
 
 mkdirSync(join(root, "images"), { recursive: true });
-for (const card of cards) {
+for (const card of imported) {
   const art = await fetch(`${SITE}/images/cardlist/card/${card.image.slice("images/".length)}`);
   if (!art.ok) throw new Error(`${card.id}: art returned ${art.status}`);
   writeFileSync(join(root, card.image), Buffer.from(await art.arrayBuffer()));
 }
 writeFileSync(file, JSON.stringify(cards, null, 2) + "\n");
-console.log(`Imported ${cards.length} ${set} cards into cards/${set}.json and images/.`);
+console.log(`Imported ${imported.length} ${set} cards into cards/${set}.json and images/.`);

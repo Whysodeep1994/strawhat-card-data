@@ -1,0 +1,20 @@
+{
+  "name": "Edward.Newgate adds 1 Life card to hand at the end of the turn",
+  "rules": ["10-2-7"],
+  "setup": {
+    "p1": {
+      "leader": "OP02-001"
+    }
+  },
+  "actions": [
+    {
+      "type": "endTurn",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "p1.life": 3,
+    "p1.hand": 1,
+    "turnPlayer": "p2"
+  }
+}

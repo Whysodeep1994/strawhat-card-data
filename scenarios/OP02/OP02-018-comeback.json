@@ -1,0 +1,45 @@
+{
+  "name": "Marco comes back rested from the trash with 2 or less Life",
+  "rules": ["10-2-17"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "life": 2,
+      "hand": ["OP03-006"],
+      "characters": ["OP02-018"]
+    },
+    "p2": {
+      "characters": ["ST15-002"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p2",
+      "card": "p2.characters.0",
+      "effect": 1
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p1.characters.0"]
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.characters": 1,
+    "p1.characters.0.rested": true,
+    "p1.trash": 1,
+    "p1.trash.0.cardId": "OP03-006"
+  }
+}

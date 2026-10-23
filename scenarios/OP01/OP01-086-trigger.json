@@ -1,0 +1,39 @@
+{
+  "name": "Overheat's [Trigger] returns a cost 4 or less Character",
+  "rules": ["10-1-5"],
+  "setup": {
+    "p1": {
+      "characters": ["ST17-005"]
+    },
+    "p2": {
+      "life": ["OP01-086", "TEST-FILLER", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p1.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p1.characters": 0,
+    "p2.trash": 1
+  }
+}

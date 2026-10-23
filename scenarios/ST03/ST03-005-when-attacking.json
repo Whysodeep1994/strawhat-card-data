@@ -1,0 +1,33 @@
+{
+  "name": "Dracule Mihawk draws 2 and trashes 2 when attacking with DON!!",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "ST03-005",
+          "don": 1
+        }
+      ],
+      "hand": ["TEST-C5-5000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.1", "p1.hand.2"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p1.hand.0.cardId": "TEST-C5-5000",
+    "p1.trash": 2
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "Jozu has no [Rush] with 3 Life",
+  "rules": ["10-1-1-1"],
+  "setup": {
+    "p1": {
+      "leader": "OP02-001",
+      "life": 3,
+      "characters": [
+        {
+          "card": "OP02-008",
+          "don": 1,
+          "playedThisTurn": true
+        }
+      ]
+    }
+  },
+  "actions": [],
+  "expect": {
+    "legal.p1.attack": 1
+  }
+}
