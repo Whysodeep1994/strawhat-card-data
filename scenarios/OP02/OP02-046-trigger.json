@@ -1,16 +1,10 @@
 {
   "name": "Its Trigger plays a vanilla Character",
-  "rules": [
-    "10-1-5"
-  ],
+  "rules": ["10-1-5"],
   "setup": {
     "p2": {
-      "hand": [
-        "OP02-043"
-      ],
-      "life": [
-        "OP02-046"
-      ]
+      "hand": ["OP02-043"],
+      "life": ["OP02-046"]
     }
   },
   "actions": [
@@ -32,9 +26,7 @@
     {
       "type": "choose",
       "player": "p2",
-      "cards": [
-        "p2.hand.0"
-      ]
+      "cards": ["p2.hand.0"]
     }
   ],
   "expect": {

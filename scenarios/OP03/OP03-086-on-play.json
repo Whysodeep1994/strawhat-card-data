@@ -1,19 +1,11 @@
 {
   "name": "Spandam finds a CP card and trashes the rest",
-  "rules": [
-    "10-2-6"
-  ],
+  "rules": ["10-2-6"],
   "setup": {
     "p1": {
       "leader": "OP03-076",
-      "hand": [
-        "OP03-086"
-      ],
-      "deck": [
-        "TEST-FILLER",
-        "OP03-087",
-        "TEST-FILLER"
-      ],
+      "hand": ["OP03-086"],
+      "deck": ["TEST-FILLER", "OP03-087", "TEST-FILLER"],
       "don": {
         "active": 1
       }
@@ -28,9 +20,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p1.deck.1"
-      ]
+      "cards": ["p1.deck.1"]
     }
   ],
   "expect": {

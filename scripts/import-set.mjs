@@ -96,7 +96,7 @@ const handWritten = new Map(
     c.id,
     {
       keywords: c.keywords,
-      alsoNamed: c.alsoNamed,
+      aliases: c.aliases,
       anyNumberInDeck: c.anyNumberInDeck,
       effects: c.effects,
       notes: c.notes,

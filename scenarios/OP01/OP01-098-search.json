@@ -1,18 +1,10 @@
 {
   "name": "Kurozumi Orochi finds SMILE in the deck",
-  "rules": [
-    "10-2-6"
-  ],
+  "rules": ["10-2-6"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP01-098"
-      ],
-      "deck": [
-        "TEST-FILLER",
-        "TEST-FILLER",
-        "OP01-116"
-      ],
+      "hand": ["OP01-098"],
+      "deck": ["TEST-FILLER", "TEST-FILLER", "OP01-116"],
       "don": {
         "active": 1
       }
@@ -27,9 +19,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p1.deck.2"
-      ]
+      "cards": ["p1.deck.2"]
     }
   ],
   "expect": {

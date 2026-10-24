@@ -1,14 +1,9 @@
 {
   "name": "Mr.2 finds a Baroque Works Event",
-  "rules": [
-    "10-2-5"
-  ],
+  "rules": ["10-2-5"],
   "setup": {
     "p1": {
-      "deck": [
-        "OP01-083",
-        "OP01-090"
-      ],
+      "deck": ["OP01-083", "OP01-090"],
       "characters": [
         {
           "card": "OP01-084",
@@ -27,9 +22,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p1.deck.1"
-      ]
+      "cards": ["p1.deck.1"]
     }
   ],
   "expect": {

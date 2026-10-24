@@ -1,26 +1,19 @@
 {
   "name": "Kuro rests 2 East Blue Characters to set himself active and rest a Character",
-  "rules": [
-    "10-2-2"
-  ],
+  "rules": ["10-2-2"],
   "setup": {
     "p1": {
       "leader": {
         "card": "OP03-021",
         "rested": true
       },
-      "characters": [
-        "OP03-023",
-        "OP03-035"
-      ],
+      "characters": ["OP03-023", "OP03-035"],
       "don": {
         "active": 3
       }
     },
     "p2": {
-      "characters": [
-        "TEST-C5-5000"
-      ]
+      "characters": ["TEST-C5-5000"]
     }
   },
   "actions": [
@@ -38,9 +31,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p2.characters.0"
-      ]
+      "cards": ["p2.characters.0"]
     }
   ],
   "expect": {

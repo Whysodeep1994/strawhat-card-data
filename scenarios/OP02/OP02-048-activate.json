@@ -1,14 +1,10 @@
 {
   "name": "Land of Wano sets a DON!! active",
-  "rules": [
-    "10-2-2"
-  ],
+  "rules": ["10-2-2"],
   "setup": {
     "p1": {
       "stage": "OP02-048",
-      "hand": [
-        "OP02-042"
-      ],
+      "hand": ["OP02-042"],
       "don": {
         "rested": 2
       }

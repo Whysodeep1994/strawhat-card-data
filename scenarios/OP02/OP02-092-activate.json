@@ -1,17 +1,11 @@
 {
   "name": "Impel Down finds an Impel Down card",
-  "rules": [
-    "10-2-2"
-  ],
+  "rules": ["10-2-2"],
   "setup": {
     "p1": {
       "stage": "OP02-092",
-      "hand": [
-        "TEST-FILLER"
-      ],
-      "deck": [
-        "OP02-086"
-      ]
+      "hand": ["TEST-FILLER"],
+      "deck": ["OP02-086"]
     }
   },
   "actions": [
@@ -29,9 +23,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p1.deck.0"
-      ]
+      "cards": ["p1.deck.0"]
     }
   ],
   "expect": {

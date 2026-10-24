@@ -1,22 +1,16 @@
 {
   "name": "Nojiko returns a Character for Nami",
-  "rules": [
-    "10-2-6"
-  ],
+  "rules": ["10-2-6"],
   "setup": {
     "p1": {
       "leader": "OP03-040",
-      "hand": [
-        "OP03-048"
-      ],
+      "hand": ["OP03-048"],
       "don": {
         "active": 2
       }
     },
     "p2": {
-      "characters": [
-        "TEST-C5-5000"
-      ]
+      "characters": ["TEST-C5-5000"]
     }
   },
   "actions": [
@@ -28,9 +22,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p2.characters.0"
-      ]
+      "cards": ["p2.characters.0"]
     }
   ],
   "expect": {

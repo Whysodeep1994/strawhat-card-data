@@ -1,14 +1,10 @@
 {
   "name": "Zambai returns a DON!! to draw",
-  "rules": [
-    "10-2-6"
-  ],
+  "rules": ["10-2-6"],
   "setup": {
     "p1": {
       "leader": "OP03-058",
-      "hand": [
-        "OP03-063"
-      ],
+      "hand": ["OP03-063"],
       "don": {
         "active": 4
       }

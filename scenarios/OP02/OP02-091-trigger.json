@@ -1,8 +1,6 @@
 {
   "name": "Its Trigger makes the opponent return a DON!!",
-  "rules": [
-    "10-1-5"
-  ],
+  "rules": ["10-1-5"],
   "setup": {
     "p1": {
       "don": {
@@ -10,9 +8,7 @@
       }
     },
     "p2": {
-      "life": [
-        "OP02-091"
-      ]
+      "life": ["OP02-091"]
     }
   },
   "actions": [

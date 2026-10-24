@@ -1,15 +1,10 @@
 {
   "name": "Hatchan's Trigger plays it for an East Blue Leader",
-  "rules": [
-    "10-1-5"
-  ],
+  "rules": ["10-1-5"],
   "setup": {
     "p2": {
       "leader": "OP03-021",
-      "life": [
-        "OP03-033",
-        "TEST-FILLER"
-      ]
+      "life": ["OP03-033", "TEST-FILLER"]
     }
   },
   "actions": [

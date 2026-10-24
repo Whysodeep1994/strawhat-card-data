@@ -1,14 +1,9 @@
 {
   "name": "Radical Beam's Trigger gives +1000",
-  "rules": [
-    "10-1-5"
-  ],
+  "rules": ["10-1-5"],
   "setup": {
     "p2": {
-      "life": [
-        "OP01-029",
-        "TEST-FILLER"
-      ]
+      "life": ["OP01-029", "TEST-FILLER"]
     }
   },
   "actions": [
@@ -30,9 +25,7 @@
     {
       "type": "choose",
       "player": "p2",
-      "cards": [
-        "p2.leader"
-      ]
+      "cards": ["p2.leader"]
     }
   ],
   "expect": {

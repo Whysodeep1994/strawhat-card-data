@@ -1,8 +1,6 @@
 {
   "name": "Arlong does nothing more if the card isn't an Event",
-  "rules": [
-    "10-2-2"
-  ],
+  "rules": ["10-2-2"],
   "setup": {
     "p1": {
       "characters": [
@@ -13,10 +11,7 @@
       ]
     },
     "p2": {
-      "hand": [
-        "OP01-027",
-        "TEST-FILLER"
-      ]
+      "hand": ["OP01-027", "TEST-FILLER"]
     }
   },
   "actions": [
@@ -34,9 +29,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p2.hand.1"
-      ]
+      "cards": ["p2.hand.1"]
     }
   ],
   "expect": {

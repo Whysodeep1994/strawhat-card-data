@@ -1,17 +1,10 @@
 {
   "name": "Kokoro finds a Water Seven card",
-  "rules": [
-    "10-2-6"
-  ],
+  "rules": ["10-2-6"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP03-062"
-      ],
-      "deck": [
-        "OP03-062",
-        "OP03-061"
-      ],
+      "hand": ["OP03-062"],
+      "deck": ["OP03-062", "OP03-061"],
       "don": {
         "active": 1
       }
@@ -26,9 +19,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p1.deck.1"
-      ]
+      "cards": ["p1.deck.1"]
     }
   ],
   "expect": {

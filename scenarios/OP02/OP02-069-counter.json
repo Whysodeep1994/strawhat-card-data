@@ -1,13 +1,9 @@
 {
   "name": "DEATH WINK gives +6000 and draws up to 2 cards in hand",
-  "rules": [
-    "10-2-4"
-  ],
+  "rules": ["10-2-4"],
   "setup": {
     "p2": {
-      "hand": [
-        "OP02-069"
-      ],
+      "hand": ["OP02-069"],
       "don": {
         "active": 3
       }
@@ -28,9 +24,7 @@
     {
       "type": "choose",
       "player": "p2",
-      "cards": [
-        "p2.leader"
-      ]
+      "cards": ["p2.leader"]
     }
   ],
   "expect": {

@@ -1,16 +1,10 @@
 {
   "name": "Garp plays a red cost 1 Character",
-  "rules": [
-    "10-2-5"
-  ],
+  "rules": ["10-2-5"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP03-005"
-      ],
-      "characters": [
-        "OP03-014"
-      ]
+      "hand": ["OP03-005"],
+      "characters": ["OP03-014"]
     }
   },
   "actions": [
@@ -23,9 +17,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p1.hand.0"
-      ]
+      "cards": ["p1.hand.0"]
     }
   ],
   "expect": {

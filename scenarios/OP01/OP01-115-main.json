@@ -1,22 +1,16 @@
 {
   "name": "Elephant's Marchoo K.O.s and adds an active DON!!",
-  "rules": [
-    "10-2-3"
-  ],
+  "rules": ["10-2-3"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP01-115"
-      ],
+      "hand": ["OP01-115"],
       "don": {
         "active": 4,
         "deck": 2
       }
     },
     "p2": {
-      "characters": [
-        "OP01-012"
-      ]
+      "characters": ["OP01-012"]
     }
   },
   "actions": [
@@ -28,9 +22,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p2.characters.0"
-      ]
+      "cards": ["p2.characters.0"]
     }
   ],
   "expect": {

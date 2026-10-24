@@ -1,13 +1,9 @@
 {
   "name": "Basil Hawkins adds a rested DON!!",
-  "rules": [
-    "10-2-6"
-  ],
+  "rules": ["10-2-6"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP01-106"
-      ],
+      "hand": ["OP01-106"],
       "don": {
         "active": 4,
         "deck": 2

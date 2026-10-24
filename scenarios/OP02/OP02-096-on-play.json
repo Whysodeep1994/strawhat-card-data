@@ -1,13 +1,9 @@
 {
   "name": "Kuzan draws 1",
-  "rules": [
-    "10-2-6"
-  ],
+  "rules": ["10-2-6"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP02-096"
-      ],
+      "hand": ["OP02-096"],
       "don": {
         "active": 4
       }

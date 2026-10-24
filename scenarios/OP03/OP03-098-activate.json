@@ -1,17 +1,13 @@
 {
   "name": "Enies Lobby gives −2 cost",
-  "rules": [
-    "10-2-2"
-  ],
+  "rules": ["10-2-2"],
   "setup": {
     "p1": {
       "leader": "OP03-076",
       "stage": "OP03-098"
     },
     "p2": {
-      "characters": [
-        "TEST-C5-5000"
-      ]
+      "characters": ["TEST-C5-5000"]
     }
   },
   "actions": [
@@ -29,9 +25,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p2.characters.0"
-      ]
+      "cards": ["p2.characters.0"]
     }
   ],
   "expect": {

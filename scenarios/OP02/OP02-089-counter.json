@@ -1,13 +1,9 @@
 {
   "name": "Judgment of Hell gives the attacker −3000",
-  "rules": [
-    "10-2-4"
-  ],
+  "rules": ["10-2-4"],
   "setup": {
     "p2": {
-      "hand": [
-        "OP02-089"
-      ],
+      "hand": ["OP02-089"],
       "don": {
         "active": 3
       }
@@ -33,9 +29,7 @@
     {
       "type": "choose",
       "player": "p2",
-      "cards": [
-        "p1.leader"
-      ]
+      "cards": ["p1.leader"]
     }
   ],
   "expect": {

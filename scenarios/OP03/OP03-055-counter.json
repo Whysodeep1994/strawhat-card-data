@@ -1,19 +1,12 @@
 {
   "name": "Giant Gavel trashes a card to give the Leader +4000",
-  "rules": [
-    "10-2-4"
-  ],
+  "rules": ["10-2-4"],
   "setup": {
     "p1": {
-      "characters": [
-        "TEST-C8-8000"
-      ]
+      "characters": ["TEST-C8-8000"]
     },
     "p2": {
-      "hand": [
-        "OP03-055",
-        "TEST-FILLER"
-      ],
+      "hand": ["OP03-055", "TEST-FILLER"],
       "don": {
         "active": 1
       }
@@ -39,9 +32,7 @@
     {
       "type": "choose",
       "player": "p2",
-      "cards": [
-        "p2.leader"
-      ]
+      "cards": ["p2.leader"]
     },
     {
       "type": "chooseOne",

@@ -1,17 +1,10 @@
 {
   "name": "Luffy does it again when attacking",
-  "rules": [
-    "10-2-5"
-  ],
+  "rules": ["10-2-5"],
   "setup": {
     "p1": {
-      "hand": [
-        "TEST-FILLER",
-        "TEST-FILLER"
-      ],
-      "characters": [
-        "OP02-062"
-      ]
+      "hand": ["TEST-FILLER", "TEST-FILLER"],
+      "characters": ["OP02-062"]
     }
   },
   "actions": [

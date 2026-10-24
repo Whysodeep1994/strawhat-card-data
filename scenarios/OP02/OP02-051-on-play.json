@@ -1,19 +1,10 @@
 {
   "name": "Ivankov draws up to 3 cards and plays a blue Impel Down Character",
-  "rules": [
-    "10-2-6"
-  ],
+  "rules": ["10-2-6"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP02-051",
-        "OP02-050"
-      ],
-      "deck": [
-        "OP02-058",
-        "TEST-FILLER",
-        "TEST-FILLER"
-      ],
+      "hand": ["OP02-051", "OP02-050"],
+      "deck": ["OP02-058", "TEST-FILLER", "TEST-FILLER"],
       "don": {
         "active": 7
       }
@@ -28,9 +19,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p1.hand.0"
-      ]
+      "cards": ["p1.hand.0"]
     }
   ],
   "expect": {

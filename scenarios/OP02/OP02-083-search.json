@@ -1,16 +1,10 @@
 {
   "name": "Hannyabal finds a purple Impel Down card",
-  "rules": [
-    "10-2-6"
-  ],
+  "rules": ["10-2-6"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP02-083"
-      ],
-      "deck": [
-        "OP02-086"
-      ],
+      "hand": ["OP02-083"],
+      "deck": ["OP02-086"],
       "don": {
         "active": 1
       }
@@ -25,9 +19,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p1.deck.0"
-      ]
+      "cards": ["p1.deck.0"]
     }
   ],
   "expect": {

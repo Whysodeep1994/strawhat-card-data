@@ -1,18 +1,12 @@
 {
   "name": "Miss Doublefinger draws when K.O.'d",
-  "rules": [
-    "10-2-17"
-  ],
+  "rules": ["10-2-17"],
   "setup": {
     "p1": {
-      "hand": [
-        "TEST-KO-EVENT"
-      ]
+      "hand": ["TEST-KO-EVENT"]
     },
     "p2": {
-      "characters": [
-        "OP01-080"
-      ]
+      "characters": ["OP01-080"]
     }
   },
   "actions": [
@@ -24,9 +18,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p2.characters.0"
-      ]
+      "cards": ["p2.characters.0"]
     }
   ],
   "expect": {

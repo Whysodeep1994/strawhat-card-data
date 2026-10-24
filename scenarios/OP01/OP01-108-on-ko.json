@@ -1,21 +1,13 @@
 {
   "name": "Hitokiri Kamazo K.O.s a cost 5 Character when K.O.'d",
-  "rules": [
-    "10-2-17"
-  ],
+  "rules": ["10-2-17"],
   "setup": {
     "p1": {
-      "hand": [
-        "TEST-KO-EVENT"
-      ],
-      "characters": [
-        "TEST-C5-5000"
-      ]
+      "hand": ["TEST-KO-EVENT"],
+      "characters": ["TEST-C5-5000"]
     },
     "p2": {
-      "characters": [
-        "OP01-108"
-      ],
+      "characters": ["OP01-108"],
       "don": {
         "active": 1
       }
@@ -30,9 +22,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p2.characters.0"
-      ]
+      "cards": ["p2.characters.0"]
     },
     {
       "type": "confirm",
@@ -42,9 +32,7 @@
     {
       "type": "choose",
       "player": "p2",
-      "cards": [
-        "p1.characters.0"
-      ]
+      "cards": ["p1.characters.0"]
     }
   ],
   "expect": {

@@ -1,15 +1,11 @@
 {
   "name": "New Kama Land draws 1 and trashes cards",
-  "rules": [
-    "10-2-2"
-  ],
+  "rules": ["10-2-2"],
   "setup": {
     "p1": {
       "leader": "OP02-049",
       "stage": "OP02-070",
-      "hand": [
-        "TEST-FILLER"
-      ]
+      "hand": ["TEST-FILLER"]
     }
   },
   "actions": [
@@ -27,16 +23,12 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p1.hand.0"
-      ]
+      "cards": ["p1.hand.0"]
     },
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p1.hand.0"
-      ]
+      "cards": ["p1.hand.0"]
     }
   ],
   "expect": {

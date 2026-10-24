@@ -1,8 +1,6 @@
 {
   "name": "Chopper rests a cost 2 Character",
-  "rules": [
-    "10-2-5"
-  ],
+  "rules": ["10-2-5"],
   "setup": {
     "p1": {
       "characters": [
@@ -13,9 +11,7 @@
       ]
     },
     "p2": {
-      "characters": [
-        "OP02-033"
-      ]
+      "characters": ["OP02-033"]
     }
   },
   "actions": [
@@ -28,9 +24,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p2.characters.0"
-      ]
+      "cards": ["p2.characters.0"]
     }
   ],
   "expect": {

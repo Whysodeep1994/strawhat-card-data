@@ -1,21 +1,10 @@
 {
   "name": "Nami finds a Straw Hat Crew card",
-  "rules": [
-    "10-2-6"
-  ],
+  "rules": ["10-2-6"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP01-016"
-      ],
-      "deck": [
-        "TEST-FILLER",
-        "OP01-016",
-        "OP01-013",
-        "TEST-FILLER",
-        "TEST-FILLER",
-        "TEST-FILLER"
-      ],
+      "hand": ["OP01-016"],
+      "deck": ["TEST-FILLER", "OP01-016", "OP01-013", "TEST-FILLER", "TEST-FILLER", "TEST-FILLER"],
       "don": {
         "active": 1
       }
@@ -30,9 +19,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p1.deck.2"
-      ]
+      "cards": ["p1.deck.2"]
     }
   ],
   "expect": {

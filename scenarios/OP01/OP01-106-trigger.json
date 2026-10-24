@@ -1,13 +1,9 @@
 {
   "name": "Basil Hawkins' Trigger plays it",
-  "rules": [
-    "10-1-5"
-  ],
+  "rules": ["10-1-5"],
   "setup": {
     "p2": {
-      "life": [
-        "OP01-106"
-      ],
+      "life": ["OP01-106"],
       "don": {
         "deck": 2
       }

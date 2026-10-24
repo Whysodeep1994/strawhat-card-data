@@ -1,21 +1,15 @@
 {
   "name": "Helmeppo sets a vanilla Character's cost to 0",
-  "rules": [
-    "10-2-6"
-  ],
+  "rules": ["10-2-6"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP03-091"
-      ],
+      "hand": ["OP03-091"],
       "don": {
         "active": 1
       }
     },
     "p2": {
-      "characters": [
-        "TEST-C5-5000"
-      ]
+      "characters": ["TEST-C5-5000"]
     }
   },
   "actions": [
@@ -27,9 +21,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p2.characters.0"
-      ]
+      "cards": ["p2.characters.0"]
     }
   ],
   "expect": {

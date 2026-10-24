@@ -1,22 +1,16 @@
 {
   "name": "Tempest Kick K.O.s a Stage",
-  "rules": [
-    "10-2-3"
-  ],
+  "rules": ["10-2-3"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP03-096"
-      ],
+      "hand": ["OP03-096"],
       "don": {
         "active": 2
       }
     },
     "p2": {
       "stage": "OP03-075",
-      "characters": [
-        "TEST-C5-5000"
-      ]
+      "characters": ["TEST-C5-5000"]
     }
   },
   "actions": [
@@ -28,9 +22,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p2.stage"
-      ]
+      "cards": ["p2.stage"]
     }
   ],
   "expect": {

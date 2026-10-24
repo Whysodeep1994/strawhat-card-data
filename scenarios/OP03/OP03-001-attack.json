@@ -1,16 +1,10 @@
 {
   "name": "Ace trashes 2 Events to gain +2000 when attacking",
-  "rules": [
-    "10-2-5"
-  ],
+  "rules": ["10-2-5"],
   "setup": {
     "p1": {
       "leader": "OP03-001",
-      "hand": [
-        "OP03-019",
-        "OP03-016",
-        "TEST-FILLER"
-      ]
+      "hand": ["OP03-019", "OP03-016", "TEST-FILLER"]
     }
   },
   "actions": [
@@ -23,10 +17,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p1.hand.0",
-        "p1.hand.1"
-      ]
+      "cards": ["p1.hand.0", "p1.hand.1"]
     }
   ],
   "expect": {

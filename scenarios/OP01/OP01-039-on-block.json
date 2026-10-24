@@ -1,8 +1,6 @@
 {
   "name": "Killer draws when it blocks with 3 Characters",
-  "rules": [
-    "10-2-15"
-  ],
+  "rules": ["10-2-15"],
   "setup": {
     "p2": {
       "characters": [

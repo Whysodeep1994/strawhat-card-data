@@ -1,14 +1,9 @@
 {
   "name": "Kaya draws 2 and trashes 2",
-  "rules": [
-    "10-2-6"
-  ],
+  "rules": ["10-2-6"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP03-044",
-        "OP03-052"
-      ],
+      "hand": ["OP03-044", "OP03-052"],
       "don": {
         "active": 1
       }
@@ -23,10 +18,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p1.hand.0",
-        "p1.hand.1"
-      ]
+      "cards": ["p1.hand.0", "p1.hand.1"]
     }
   ],
   "expect": {

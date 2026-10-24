@@ -1,8 +1,6 @@
 {
   "name": "Ace's effect doesn't happen when a Character is attacked",
-  "rules": [
-    "8-3-1"
-  ],
+  "rules": ["8-3-1"],
   "setup": {
     "p1": {
       "characters": [
@@ -13,9 +11,7 @@
     },
     "p2": {
       "leader": "OP03-001",
-      "hand": [
-        "OP03-019"
-      ],
+      "hand": ["OP03-019"],
       "characters": [
         {
           "card": "TEST-FILLER",

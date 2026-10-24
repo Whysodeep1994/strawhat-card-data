@@ -1,14 +1,9 @@
 {
   "name": "Gum-Gum Rain trashes a card for +3000",
-  "rules": [
-    "10-2-4"
-  ],
+  "rules": ["10-2-4"],
   "setup": {
     "p2": {
-      "hand": [
-        "OP02-068",
-        "TEST-FILLER"
-      ]
+      "hand": ["OP02-068", "TEST-FILLER"]
     }
   },
   "actions": [
@@ -31,9 +26,7 @@
     {
       "type": "choose",
       "player": "p2",
-      "cards": [
-        "p2.leader"
-      ]
+      "cards": ["p2.leader"]
     }
   ],
   "expect": {

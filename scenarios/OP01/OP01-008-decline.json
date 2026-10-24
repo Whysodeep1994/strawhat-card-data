@@ -1,13 +1,9 @@
 {
   "name": "Cavendish can't attack without paying",
-  "rules": [
-    "10-2-6"
-  ],
+  "rules": ["10-2-6"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP01-008"
-      ],
+      "hand": ["OP01-008"],
       "don": {
         "active": 4
       }

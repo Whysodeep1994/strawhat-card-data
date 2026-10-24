@@ -1,13 +1,9 @@
 {
   "name": "Gaimon trashes 3 cards and himself when you deal damage",
-  "rules": [
-    "8-1-3-1"
-  ],
+  "rules": ["8-1-3-1"],
   "setup": {
     "p1": {
-      "characters": [
-        "OP03-043"
-      ]
+      "characters": ["OP03-043"]
     }
   },
   "actions": [

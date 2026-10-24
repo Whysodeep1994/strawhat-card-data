@@ -1,20 +1,14 @@
 {
   "name": "Linlin adds a Life card with 1 Life",
-  "rules": [
-    "10-2-5"
-  ],
+  "rules": ["10-2-5"],
   "setup": {
     "p1": {
       "leader": {
         "card": "OP03-077",
         "don": 2
       },
-      "hand": [
-        "TEST-FILLER"
-      ],
-      "life": [
-        "TEST-FILLER"
-      ],
+      "hand": ["TEST-FILLER"],
+      "life": ["TEST-FILLER"],
       "don": {
         "active": 2
       }

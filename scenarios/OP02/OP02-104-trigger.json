@@ -1,14 +1,9 @@
 {
   "name": "The Trigger plays this card",
-  "rules": [
-    "10-1-5"
-  ],
+  "rules": ["10-1-5"],
   "setup": {
     "p2": {
-      "life": [
-        "OP02-104",
-        "TEST-FILLER"
-      ]
+      "life": ["OP02-104", "TEST-FILLER"]
     }
   },
   "actions": [

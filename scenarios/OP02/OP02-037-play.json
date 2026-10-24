@@ -1,14 +1,9 @@
 {
   "name": "Nico Robin plays a cost 2 FILM Character",
-  "rules": [
-    "10-2-6"
-  ],
+  "rules": ["10-2-6"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP02-037",
-        "OP02-033"
-      ],
+      "hand": ["OP02-037", "OP02-033"],
       "don": {
         "active": 3
       }
@@ -23,9 +18,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p1.hand.0"
-      ]
+      "cards": ["p1.hand.0"]
     }
   ],
   "expect": {

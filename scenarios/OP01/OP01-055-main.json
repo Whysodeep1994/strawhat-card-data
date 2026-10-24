@@ -1,17 +1,10 @@
 {
   "name": "You Can Be My Samurai!! rests 2 Characters to draw 2",
-  "rules": [
-    "10-2-3"
-  ],
+  "rules": ["10-2-3"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP01-055"
-      ],
-      "characters": [
-        "TEST-FILLER",
-        "TEST-FILLER"
-      ],
+      "hand": ["OP01-055"],
+      "characters": ["TEST-FILLER", "TEST-FILLER"],
       "don": {
         "active": 1
       }

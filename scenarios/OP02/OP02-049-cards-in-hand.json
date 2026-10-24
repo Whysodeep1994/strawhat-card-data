@@ -1,14 +1,10 @@
 {
   "name": "Ivankov doesn't draw with cards in hand",
-  "rules": [
-    "10-2-7"
-  ],
+  "rules": ["10-2-7"],
   "setup": {
     "p1": {
       "leader": "OP02-049",
-      "hand": [
-        "TEST-FILLER"
-      ]
+      "hand": ["TEST-FILLER"]
     }
   },
   "actions": [

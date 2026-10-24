@@ -1,13 +1,9 @@
 {
   "name": "Thunder Bagua's Trigger adds an active DON!!",
-  "rules": [
-    "10-1-5"
-  ],
+  "rules": ["10-1-5"],
   "setup": {
     "p2": {
-      "life": [
-        "OP01-119"
-      ],
+      "life": ["OP01-119"],
       "don": {
         "deck": 2
       }

@@ -1,14 +1,9 @@
 {
   "name": "Wanda plays a Minks Character",
-  "rules": [
-    "10-2-6"
-  ],
+  "rules": ["10-2-6"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP02-044",
-        "OP02-032"
-      ],
+      "hand": ["OP02-044", "OP02-032"],
       "don": {
         "active": 2
       }
@@ -23,9 +18,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p1.hand.0"
-      ]
+      "cards": ["p1.hand.0"]
     }
   ],
   "expect": {

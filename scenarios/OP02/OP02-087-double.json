@@ -1,13 +1,9 @@
 {
   "name": "Minotaur deals 2 damage",
-  "rules": [
-    "10-1-2-1"
-  ],
+  "rules": ["10-1-2-1"],
   "setup": {
     "p1": {
-      "characters": [
-        "OP02-087"
-      ]
+      "characters": ["OP02-087"]
     }
   },
   "actions": [

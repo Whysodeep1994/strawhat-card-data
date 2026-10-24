@@ -1,21 +1,15 @@
 {
   "name": "Page One can attack active Characters",
-  "rules": [
-    "10-2-2"
-  ],
+  "rules": ["10-2-2"],
   "setup": {
     "p1": {
-      "characters": [
-        "OP01-112"
-      ],
+      "characters": ["OP01-112"],
       "don": {
         "active": 1
       }
     },
     "p2": {
-      "characters": [
-        "TEST-FILLER"
-      ]
+      "characters": ["TEST-FILLER"]
     }
   },
   "actions": [

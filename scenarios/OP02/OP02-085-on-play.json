@@ -1,13 +1,9 @@
 {
   "name": "Magellan makes the opponent return a DON!!",
-  "rules": [
-    "10-2-6"
-  ],
+  "rules": ["10-2-6"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP02-085"
-      ],
+      "hand": ["OP02-085"],
       "don": {
         "active": 6
       }

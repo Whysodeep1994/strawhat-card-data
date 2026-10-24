@@ -1,13 +1,9 @@
 {
   "name": "Kurozumi Higurashi can block",
-  "rules": [
-    "10-1-4-1"
-  ],
+  "rules": ["10-1-4-1"],
   "setup": {
     "p2": {
-      "characters": [
-        "OP01-100"
-      ]
+      "characters": ["OP01-100"]
     }
   },
   "actions": [

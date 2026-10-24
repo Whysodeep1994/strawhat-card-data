@@ -1,13 +1,9 @@
 {
   "name": "Sanji's Pilaf draws 2",
-  "rules": [
-    "10-2-3"
-  ],
+  "rules": ["10-2-3"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP03-056"
-      ],
+      "hand": ["OP03-056"],
       "don": {
         "active": 3
       }

@@ -1,17 +1,10 @@
 {
   "name": "Mr.1 adds a blue cost 1 Event from the trash",
-  "rules": [
-    "10-2-6"
-  ],
+  "rules": ["10-2-6"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP02-063"
-      ],
-      "trash": [
-        "OP02-067",
-        "OP02-066"
-      ],
+      "hand": ["OP02-063"],
+      "trash": ["OP02-067", "OP02-066"],
       "don": {
         "active": 1
       }
@@ -26,9 +19,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p1.trash.1"
-      ]
+      "cards": ["p1.trash.1"]
     }
   ],
   "expect": {

@@ -1,19 +1,11 @@
 {
   "name": "Air Door plays a CP Character from the top 5",
-  "rules": [
-    "10-2-3"
-  ],
+  "rules": ["10-2-3"],
   "setup": {
     "p1": {
       "leader": "OP03-076",
-      "hand": [
-        "OP03-094"
-      ],
-      "deck": [
-        "TEST-FILLER",
-        "OP03-085",
-        "TEST-FILLER"
-      ],
+      "hand": ["OP03-094"],
+      "deck": ["TEST-FILLER", "OP03-085", "TEST-FILLER"],
       "don": {
         "active": 4
       }
@@ -28,9 +20,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p1.deck.1"
-      ]
+      "cards": ["p1.deck.1"]
     }
   ],
   "expect": {

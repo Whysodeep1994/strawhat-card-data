@@ -1,13 +1,9 @@
 {
   "name": "Ulti-Mortar's Trigger adds an active DON!!",
-  "rules": [
-    "10-1-5"
-  ],
+  "rules": ["10-1-5"],
   "setup": {
     "p2": {
-      "life": [
-        "OP01-118"
-      ],
+      "life": ["OP01-118"],
       "don": {
         "deck": 2
       }

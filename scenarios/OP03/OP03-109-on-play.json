@@ -1,13 +1,9 @@
 {
   "name": "Chiffon trashes a Life card to add the top card of the deck",
-  "rules": [
-    "10-2-6"
-  ],
+  "rules": ["10-2-6"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP03-109"
-      ],
+      "hand": ["OP03-109"],
       "don": {
         "active": 2
       }

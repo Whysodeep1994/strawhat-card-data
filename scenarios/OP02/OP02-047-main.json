@@ -1,21 +1,15 @@
 {
   "name": "Paradise Totsuka rests a cost 4 Character",
-  "rules": [
-    "10-2-3"
-  ],
+  "rules": ["10-2-3"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP02-047"
-      ],
+      "hand": ["OP02-047"],
       "don": {
         "active": 1
       }
     },
     "p2": {
-      "characters": [
-        "TEST-C4-4000"
-      ]
+      "characters": ["TEST-C4-4000"]
     }
   },
   "actions": [
@@ -27,9 +21,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p2.characters.0"
-      ]
+      "cards": ["p2.characters.0"]
     }
   ],
   "expect": {

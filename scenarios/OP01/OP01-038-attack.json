@@ -1,8 +1,6 @@
 {
   "name": "Kanjuro K.O.s a rested cost 2 Character",
-  "rules": [
-    "10-2-5"
-  ],
+  "rules": ["10-2-5"],
   "setup": {
     "p1": {
       "characters": [
@@ -31,9 +29,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p2.characters.0"
-      ]
+      "cards": ["p2.characters.0"]
     }
   ],
   "expect": {

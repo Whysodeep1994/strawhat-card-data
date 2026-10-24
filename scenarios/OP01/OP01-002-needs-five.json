@@ -1,17 +1,11 @@
 {
   "name": "Law does nothing with fewer than 5 Characters",
-  "rules": [
-    "10-2-2"
-  ],
+  "rules": ["10-2-2"],
   "setup": {
     "p1": {
       "leader": "OP01-002",
-      "hand": [
-        "OP01-076"
-      ],
-      "characters": [
-        "OP01-036"
-      ],
+      "hand": ["OP01-076"],
+      "characters": ["OP01-036"],
       "don": {
         "active": 2
       }

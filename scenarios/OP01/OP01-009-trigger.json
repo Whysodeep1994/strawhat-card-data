@@ -1,14 +1,9 @@
 {
   "name": "Carrot's Trigger plays it",
-  "rules": [
-    "10-1-5"
-  ],
+  "rules": ["10-1-5"],
   "setup": {
     "p2": {
-      "life": [
-        "OP01-009",
-        "TEST-FILLER"
-      ]
+      "life": ["OP01-009", "TEST-FILLER"]
     }
   },
   "actions": [

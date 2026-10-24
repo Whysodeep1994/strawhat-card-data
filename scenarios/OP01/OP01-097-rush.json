@@ -1,21 +1,15 @@
 {
   "name": "Queen gains Rush and gives −2000",
-  "rules": [
-    "10-2-6"
-  ],
+  "rules": ["10-2-6"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP01-097"
-      ],
+      "hand": ["OP01-097"],
       "don": {
         "active": 7
       }
     },
     "p2": {
-      "characters": [
-        "TEST-C4-4000"
-      ]
+      "characters": ["TEST-C4-4000"]
     }
   },
   "actions": [
@@ -32,9 +26,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p2.characters.0"
-      ]
+      "cards": ["p2.characters.0"]
     },
     {
       "type": "attack",

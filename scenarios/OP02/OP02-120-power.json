@@ -1,16 +1,10 @@
 {
   "name": "Uta gives the Leader and all Characters +1000 until the next turn",
-  "rules": [
-    "10-2-6"
-  ],
+  "rules": ["10-2-6"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP02-120"
-      ],
-      "characters": [
-        "TEST-FILLER"
-      ],
+      "hand": ["OP02-120"],
+      "characters": ["TEST-FILLER"],
       "don": {
         "active": 8
       }

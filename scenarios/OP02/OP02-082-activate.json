@@ -1,13 +1,9 @@
 {
   "name": "Byrnndi World returns 8 DON!! for +792000",
-  "rules": [
-    "10-2-2"
-  ],
+  "rules": ["10-2-2"],
   "setup": {
     "p1": {
-      "characters": [
-        "OP02-082"
-      ],
+      "characters": ["OP02-082"],
       "don": {
         "active": 8
       }

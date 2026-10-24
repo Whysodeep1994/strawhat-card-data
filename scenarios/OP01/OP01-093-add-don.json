@@ -1,13 +1,9 @@
 {
   "name": "Ulti adds a rested DON!!",
-  "rules": [
-    "10-2-6"
-  ],
+  "rules": ["10-2-6"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP01-093"
-      ],
+      "hand": ["OP01-093"],
       "don": {
         "active": 3,
         "deck": 5

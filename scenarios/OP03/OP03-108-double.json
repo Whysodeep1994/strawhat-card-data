@@ -1,13 +1,9 @@
 {
   "name": "Cracker gains Double Attack with less Life",
-  "rules": [
-    "10-1-2-1"
-  ],
+  "rules": ["10-1-2-1"],
   "setup": {
     "p1": {
-      "life": [
-        "TEST-FILLER"
-      ],
+      "life": ["TEST-FILLER"],
       "characters": [
         {
           "card": "OP03-108",

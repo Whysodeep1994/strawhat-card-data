@@ -1,19 +1,13 @@
 {
   "name": "Tilestone adds a rested DON!! when K.O.'d",
-  "rules": [
-    "10-2-17"
-  ],
+  "rules": ["10-2-17"],
   "setup": {
     "p1": {
-      "hand": [
-        "TEST-KO-EVENT"
-      ]
+      "hand": ["TEST-KO-EVENT"]
     },
     "p2": {
       "leader": "OP03-058",
-      "characters": [
-        "OP03-064"
-      ],
+      "characters": ["OP03-064"],
       "don": {
         "deck": 5
       }
@@ -28,9 +22,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p2.characters.0"
-      ]
+      "cards": ["p2.characters.0"]
     }
   ],
   "expect": {

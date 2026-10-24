@@ -1,8 +1,6 @@
 {
   "name": "Lulu adds a rested DON!!",
-  "rules": [
-    "10-2-5"
-  ],
+  "rules": ["10-2-5"],
   "setup": {
     "p1": {
       "leader": "OP03-058",

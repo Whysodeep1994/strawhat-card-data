@@ -1,8 +1,6 @@
 {
   "name": "Zephyr returns 4 DON!! to K.O. a cost 3 Character",
-  "rules": [
-    "10-2-5"
-  ],
+  "rules": ["10-2-5"],
   "setup": {
     "p1": {
       "leader": "OP02-072",
@@ -11,9 +9,7 @@
       }
     },
     "p2": {
-      "characters": [
-        "OP02-077"
-      ]
+      "characters": ["OP02-077"]
     }
   },
   "actions": [
@@ -31,9 +27,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p2.characters.0"
-      ]
+      "cards": ["p2.characters.0"]
     }
   ],
   "expect": {

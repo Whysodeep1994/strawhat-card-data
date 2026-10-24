@@ -1,25 +1,19 @@
 {
   "name": "Kaido adds an active DON!! when an opponent's Character is K.O.'d",
-  "rules": [
-    "8-1-3-1"
-  ],
+  "rules": ["8-1-3-1"],
   "setup": {
     "p1": {
       "leader": {
         "card": "OP01-061",
         "don": 1
       },
-      "hand": [
-        "TEST-KO-EVENT"
-      ],
+      "hand": ["TEST-KO-EVENT"],
       "don": {
         "deck": 5
       }
     },
     "p2": {
-      "characters": [
-        "TEST-FILLER"
-      ]
+      "characters": ["TEST-FILLER"]
     }
   },
   "actions": [
@@ -31,9 +25,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p2.characters.0"
-      ]
+      "cards": ["p2.characters.0"]
     }
   ],
   "expect": {

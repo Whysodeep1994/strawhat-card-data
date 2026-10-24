@@ -1,17 +1,10 @@
 {
   "name": "Lucci returns 2 CP cards to gain Rush",
-  "rules": [
-    "10-2-6"
-  ],
+  "rules": ["10-2-6"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP03-092"
-      ],
-      "trash": [
-        "OP03-087",
-        "OP03-085"
-      ],
+      "hand": ["OP03-092"],
+      "trash": ["OP03-087", "OP03-085"],
       "don": {
         "active": 6
       }

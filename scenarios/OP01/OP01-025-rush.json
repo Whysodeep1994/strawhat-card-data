@@ -1,13 +1,9 @@
 {
   "name": "Zoro can attack the turn it is played",
-  "rules": [
-    "10-1-1-1"
-  ],
+  "rules": ["10-1-1-1"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP01-025"
-      ],
+      "hand": ["OP01-025"],
       "don": {
         "active": 3
       }

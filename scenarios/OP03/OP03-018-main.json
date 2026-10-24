@@ -1,23 +1,15 @@
 {
   "name": "Fire Fist trashes an Event to K.O. two Characters",
-  "rules": [
-    "10-2-3"
-  ],
+  "rules": ["10-2-3"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP03-018",
-        "OP03-019"
-      ],
+      "hand": ["OP03-018", "OP03-019"],
       "don": {
         "active": 3
       }
     },
     "p2": {
-      "characters": [
-        "TEST-C5-5000",
-        "TEST-C4-4000"
-      ]
+      "characters": ["TEST-C5-5000", "TEST-C4-4000"]
     }
   },
   "actions": [
@@ -34,16 +26,12 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p2.characters.0"
-      ]
+      "cards": ["p2.characters.0"]
     },
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p2.characters.0"
-      ]
+      "cards": ["p2.characters.0"]
     }
   ],
   "expect": {

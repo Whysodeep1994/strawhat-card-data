@@ -1,23 +1,16 @@
 {
   "name": "Gin rests 2 Characters",
-  "rules": [
-    "10-2-6"
-  ],
+  "rules": ["10-2-6"],
   "setup": {
     "p1": {
       "leader": "OP03-021",
-      "hand": [
-        "OP03-024"
-      ],
+      "hand": ["OP03-024"],
       "don": {
         "active": 4
       }
     },
     "p2": {
-      "characters": [
-        "TEST-C4-4000",
-        "TEST-FILLER"
-      ]
+      "characters": ["TEST-C4-4000", "TEST-FILLER"]
     }
   },
   "actions": [
@@ -29,10 +22,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p2.characters.0",
-        "p2.characters.1"
-      ]
+      "cards": ["p2.characters.0", "p2.characters.1"]
     }
   ],
   "expect": {

@@ -1,22 +1,15 @@
 {
   "name": "Jack makes the opponent trash a card",
-  "rules": [
-    "10-2-5"
-  ],
+  "rules": ["10-2-5"],
   "setup": {
     "p1": {
-      "characters": [
-        "OP01-102"
-      ],
+      "characters": ["OP01-102"],
       "don": {
         "active": 1
       }
     },
     "p2": {
-      "hand": [
-        "TEST-FILLER",
-        "TEST-FILLER"
-      ]
+      "hand": ["TEST-FILLER", "TEST-FILLER"]
     }
   },
   "actions": [
@@ -34,9 +27,7 @@
     {
       "type": "choose",
       "player": "p2",
-      "cards": [
-        "p2.hand.0"
-      ]
+      "cards": ["p2.hand.0"]
     }
   ],
   "expect": {

@@ -1,14 +1,10 @@
 {
   "name": "Napoleon gives Linlin +1000",
-  "rules": [
-    "10-2-2"
-  ],
+  "rules": ["10-2-2"],
   "setup": {
     "p1": {
       "leader": "OP03-077",
-      "characters": [
-        "OP03-117"
-      ]
+      "characters": ["OP03-117"]
     }
   },
   "actions": [
@@ -26,9 +22,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p1.leader"
-      ]
+      "cards": ["p1.leader"]
     }
   ],
   "expect": {

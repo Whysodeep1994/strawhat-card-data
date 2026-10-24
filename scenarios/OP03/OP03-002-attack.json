@@ -1,8 +1,6 @@
 {
   "name": "Adio stops a 2000 power Blocker",
-  "rules": [
-    "10-2-5"
-  ],
+  "rules": ["10-2-5"],
   "setup": {
     "p1": {
       "characters": [
@@ -13,9 +11,7 @@
       ]
     },
     "p2": {
-      "characters": [
-        "TEST-BLOCKER-2000"
-      ]
+      "characters": ["TEST-BLOCKER-2000"]
     }
   },
   "actions": [

@@ -1,13 +1,9 @@
 {
   "name": "Moby Dick's Trigger plays it",
-  "rules": [
-    "10-1-5"
-  ],
+  "rules": ["10-1-5"],
   "setup": {
     "p2": {
-      "life": [
-        "OP02-024"
-      ]
+      "life": ["OP02-024"]
     }
   },
   "actions": [

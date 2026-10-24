@@ -1,22 +1,16 @@
 {
   "name": "Cross Fire gives −4000",
-  "rules": [
-    "10-2-3"
-  ],
+  "rules": ["10-2-3"],
   "setup": {
     "p1": {
       "leader": "OP03-001",
-      "hand": [
-        "OP03-017"
-      ],
+      "hand": ["OP03-017"],
       "don": {
         "active": 2
       }
     },
     "p2": {
-      "characters": [
-        "TEST-C5-5000"
-      ]
+      "characters": ["TEST-C5-5000"]
     }
   },
   "actions": [
@@ -28,9 +22,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p2.characters.0"
-      ]
+      "cards": ["p2.characters.0"]
     }
   ],
   "expect": {

@@ -1,14 +1,9 @@
 {
   "name": "Luffy gains Rush",
-  "rules": [
-    "10-2-6"
-  ],
+  "rules": ["10-2-6"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP03-070",
-        "OP03-066"
-      ],
+      "hand": ["OP03-070", "OP03-066"],
       "don": {
         "active": 7
       }

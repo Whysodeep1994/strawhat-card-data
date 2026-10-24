@@ -1,17 +1,10 @@
 {
   "name": "Buggy finds a red Event",
-  "rules": [
-    "10-2-6"
-  ],
+  "rules": ["10-2-6"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP03-008"
-      ],
-      "deck": [
-        "TEST-FILLER",
-        "OP03-019"
-      ],
+      "hand": ["OP03-008"],
+      "deck": ["TEST-FILLER", "OP03-019"],
       "don": {
         "active": 1
       }
@@ -26,9 +19,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p1.deck.1"
-      ]
+      "cards": ["p1.deck.1"]
     }
   ],
   "expect": {

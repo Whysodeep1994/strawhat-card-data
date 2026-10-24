@@ -1,21 +1,13 @@
 {
   "name": "Marco trashes an Event to come back rested",
-  "rules": [
-    "10-2-17"
-  ],
+  "rules": ["10-2-17"],
   "setup": {
     "p1": {
-      "hand": [
-        "TEST-KO-EVENT"
-      ]
+      "hand": ["TEST-KO-EVENT"]
     },
     "p2": {
-      "hand": [
-        "OP03-019"
-      ],
-      "characters": [
-        "OP03-013"
-      ]
+      "hand": ["OP03-019"],
+      "characters": ["OP03-013"]
     }
   },
   "actions": [
@@ -27,9 +19,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p2.characters.0"
-      ]
+      "cards": ["p2.characters.0"]
     },
     {
       "type": "confirm",

@@ -1,13 +1,9 @@
 {
   "name": "Fiery Doll gives the Leader +4000",
-  "rules": [
-    "10-2-3"
-  ],
+  "rules": ["10-2-3"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP03-019"
-      ],
+      "hand": ["OP03-019"],
       "don": {
         "active": 2
       }

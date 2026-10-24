@@ -1,16 +1,12 @@
 {
   "name": "Radical Beam gives +4000 with 2 or less Life",
-  "rules": [
-    "10-2-4"
-  ],
+  "rules": ["10-2-4"],
   "setup": {
     "p1": {
       "leader": "TEST-LEADER-7000"
     },
     "p2": {
-      "hand": [
-        "OP01-029"
-      ],
+      "hand": ["OP01-029"],
       "life": 2,
       "don": {
         "active": 1
@@ -32,9 +28,7 @@
     {
       "type": "choose",
       "player": "p2",
-      "cards": [
-        "p2.leader"
-      ]
+      "cards": ["p2.leader"]
     }
   ],
   "expect": {

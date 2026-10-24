@@ -1,13 +1,9 @@
 {
   "name": "A Character with no effect can be played",
-  "rules": [
-    "6-5-3-1"
-  ],
+  "rules": ["6-5-3-1"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP03-085"
-      ],
+      "hand": ["OP03-085"],
       "don": {
         "active": 5
       }

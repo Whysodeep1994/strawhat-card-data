@@ -1,25 +1,16 @@
 {
   "name": "Kaku returns 2 CP cards to K.O. a Character",
-  "rules": [
-    "10-2-6"
-  ],
+  "rules": ["10-2-6"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP03-080"
-      ],
-      "trash": [
-        "OP03-087",
-        "OP03-085"
-      ],
+      "hand": ["OP03-080"],
+      "trash": ["OP03-087", "OP03-085"],
       "don": {
         "active": 5
       }
     },
     "p2": {
-      "characters": [
-        "TEST-FILLER"
-      ]
+      "characters": ["TEST-FILLER"]
     }
   },
   "actions": [
@@ -36,9 +27,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p2.characters.0"
-      ]
+      "cards": ["p2.characters.0"]
     }
   ],
   "expect": {

@@ -1,8 +1,6 @@
 {
   "name": "Sanji takes a Life card to add the top card of the deck to Life",
-  "rules": [
-    "10-2-5"
-  ],
+  "rules": ["10-2-5"],
   "setup": {
     "p1": {
       "characters": [

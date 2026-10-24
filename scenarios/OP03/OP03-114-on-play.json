@@ -1,14 +1,10 @@
 {
   "name": "Linlin adds a Life card and trashes an opposing Life card",
-  "rules": [
-    "10-2-6"
-  ],
+  "rules": ["10-2-6"],
   "setup": {
     "p1": {
       "leader": "OP03-077",
-      "hand": [
-        "OP03-114"
-      ],
+      "hand": ["OP03-114"],
       "don": {
         "active": 10
       }

@@ -1,22 +1,15 @@
 {
   "name": "Kaku gains Banish",
-  "rules": [
-    "10-2-5"
-  ],
+  "rules": ["10-2-5"],
   "setup": {
     "p1": {
-      "characters": [
-        "OP03-059"
-      ],
+      "characters": ["OP03-059"],
       "don": {
         "active": 1
       }
     },
     "p2": {
-      "life": [
-        "OP03-016",
-        "TEST-FILLER"
-      ]
+      "life": ["OP03-016", "TEST-FILLER"]
     }
   },
   "actions": [

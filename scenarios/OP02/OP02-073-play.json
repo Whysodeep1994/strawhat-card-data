@@ -1,14 +1,9 @@
 {
   "name": "Little Sadi plays a Jailer Beast",
-  "rules": [
-    "10-2-6"
-  ],
+  "rules": ["10-2-6"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP02-073",
-        "OP02-086"
-      ],
+      "hand": ["OP02-073", "OP02-086"],
       "don": {
         "active": 3
       }
@@ -23,9 +18,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p1.hand.0"
-      ]
+      "cards": ["p1.hand.0"]
     }
   ],
   "expect": {

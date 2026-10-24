@@ -1,8 +1,6 @@
 {
   "name": "Nico Robin K.O.s a 3000 power Character",
-  "rules": [
-    "10-2-5"
-  ],
+  "rules": ["10-2-5"],
   "setup": {
     "p1": {
       "characters": [
@@ -13,10 +11,7 @@
       ]
     },
     "p2": {
-      "characters": [
-        "OP01-012",
-        "OP01-004"
-      ]
+      "characters": ["OP01-012", "OP01-004"]
     }
   },
   "actions": [
@@ -29,9 +24,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p2.characters.1"
-      ]
+      "cards": ["p2.characters.1"]
     }
   ],
   "expect": {

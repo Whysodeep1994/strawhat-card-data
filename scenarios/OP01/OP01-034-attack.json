@@ -1,8 +1,6 @@
 {
   "name": "Inuarashi sets 1 DON!! active",
-  "rules": [
-    "10-2-5"
-  ],
+  "rules": ["10-2-5"],
   "setup": {
     "p1": {
       "characters": [

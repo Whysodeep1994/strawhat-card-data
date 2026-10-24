@@ -1,14 +1,10 @@
 {
   "name": "Kin'emon makes the next Land of Wano Character cost 1 less",
-  "rules": [
-    "10-2-2"
-  ],
+  "rules": ["10-2-2"],
   "setup": {
     "p1": {
       "leader": "OP02-025",
-      "hand": [
-        "OP02-042"
-      ],
+      "hand": ["OP02-042"],
       "don": {
         "active": 3
       }

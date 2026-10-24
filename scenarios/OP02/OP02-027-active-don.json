@@ -1,21 +1,15 @@
 {
   "name": "Inuarashi can be removed while a DON!! is active",
-  "rules": [
-    "8-1-3-3"
-  ],
+  "rules": ["8-1-3-3"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP02-067"
-      ],
+      "hand": ["OP02-067"],
       "don": {
         "active": 2
       }
     },
     "p2": {
-      "characters": [
-        "OP02-027"
-      ],
+      "characters": ["OP02-027"],
       "don": {
         "active": 1,
         "rested": 3
@@ -31,9 +25,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p2.characters.0"
-      ]
+      "cards": ["p2.characters.0"]
     }
   ],
   "expect": {

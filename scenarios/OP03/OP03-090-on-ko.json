@@ -1,21 +1,13 @@
 {
   "name": "Blueno plays a CP Character from the trash rested",
-  "rules": [
-    "10-2-17"
-  ],
+  "rules": ["10-2-17"],
   "setup": {
     "p1": {
-      "hand": [
-        "TEST-KO-EVENT"
-      ]
+      "hand": ["TEST-KO-EVENT"]
     },
     "p2": {
-      "trash": [
-        "OP03-082"
-      ],
-      "characters": [
-        "OP03-090"
-      ]
+      "trash": ["OP03-082"],
+      "characters": ["OP03-090"]
     }
   },
   "actions": [
@@ -27,16 +19,12 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p2.characters.0"
-      ]
+      "cards": ["p2.characters.0"]
     },
     {
       "type": "choose",
       "player": "p2",
-      "cards": [
-        "p2.trash.1"
-      ]
+      "cards": ["p2.trash.1"]
     }
   ],
   "expect": {

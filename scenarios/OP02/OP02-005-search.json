@@ -1,17 +1,10 @@
 {
   "name": "Curly.Dadan finds a red cost 1 Character",
-  "rules": [
-    "10-2-6"
-  ],
+  "rules": ["10-2-6"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP02-005"
-      ],
-      "deck": [
-        "OP02-003",
-        "OP02-016"
-      ],
+      "hand": ["OP02-005"],
+      "deck": ["OP02-003", "OP02-016"],
       "don": {
         "active": 2
       }
@@ -26,9 +19,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p1.deck.1"
-      ]
+      "cards": ["p1.deck.1"]
     }
   ],
   "expect": {

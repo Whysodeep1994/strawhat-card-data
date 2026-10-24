@@ -1,18 +1,12 @@
 {
   "name": "Morley stops cost 5 Blockers with 1 or less cards in hand",
-  "rules": [
-    "10-2-5"
-  ],
+  "rules": ["10-2-5"],
   "setup": {
     "p1": {
-      "characters": [
-        "OP02-061"
-      ]
+      "characters": ["OP02-061"]
     },
     "p2": {
-      "characters": [
-        "OP02-012"
-      ]
+      "characters": ["OP02-012"]
     }
   },
   "actions": [

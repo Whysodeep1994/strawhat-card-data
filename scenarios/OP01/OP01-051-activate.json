@@ -1,16 +1,10 @@
 {
   "name": "Kid rests to play a cost 3 Character",
-  "rules": [
-    "10-2-2"
-  ],
+  "rules": ["10-2-2"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP01-033"
-      ],
-      "characters": [
-        "OP01-051"
-      ]
+      "hand": ["OP01-033"],
+      "characters": ["OP01-051"]
     }
   },
   "actions": [
@@ -28,9 +22,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p1.hand.0"
-      ]
+      "cards": ["p1.hand.0"]
     }
   ],
   "expect": {

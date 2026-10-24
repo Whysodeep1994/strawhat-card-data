@@ -1,8 +1,6 @@
 {
   "name": "Oden sets itself active",
-  "rules": [
-    "10-2-2"
-  ],
+  "rules": ["10-2-2"],
   "setup": {
     "p1": {
       "characters": [

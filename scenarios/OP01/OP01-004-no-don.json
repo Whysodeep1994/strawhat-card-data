@@ -1,18 +1,12 @@
 {
   "name": "Usopp doesn't draw without DON!!",
-  "rules": [
-    "10-2-4"
-  ],
+  "rules": ["10-2-4"],
   "setup": {
     "p1": {
-      "characters": [
-        "OP01-004"
-      ]
+      "characters": ["OP01-004"]
     },
     "p2": {
-      "hand": [
-        "OP01-029"
-      ],
+      "hand": ["OP01-029"],
       "don": {
         "active": 1
       }
@@ -33,9 +27,7 @@
     {
       "type": "choose",
       "player": "p2",
-      "cards": [
-        "p2.leader"
-      ]
+      "cards": ["p2.leader"]
     },
     {
       "type": "pass",

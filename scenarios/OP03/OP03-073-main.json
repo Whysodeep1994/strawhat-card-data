@@ -1,22 +1,16 @@
 {
   "name": "Hull Dismantler Slash K.O.s a cost 2 Character",
-  "rules": [
-    "10-2-3"
-  ],
+  "rules": ["10-2-3"],
   "setup": {
     "p1": {
       "leader": "OP03-058",
-      "hand": [
-        "OP03-073"
-      ],
+      "hand": ["OP03-073"],
       "don": {
         "active": 2
       }
     },
     "p2": {
-      "characters": [
-        "TEST-BLOCKER-2000"
-      ]
+      "characters": ["TEST-BLOCKER-2000"]
     }
   },
   "actions": [
@@ -33,9 +27,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p2.characters.0"
-      ]
+      "cards": ["p2.characters.0"]
     }
   ],
   "expect": {

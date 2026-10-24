@@ -1,8 +1,6 @@
 {
   "name": "Nami trashes the top card when her attack deals damage",
-  "rules": [
-    "attackDealsDamage"
-  ],
+  "rules": ["attackDealsDamage"],
   "setup": {
     "p1": {
       "leader": {

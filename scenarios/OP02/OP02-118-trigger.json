@@ -1,16 +1,12 @@
 {
   "name": "Its Trigger K.O.s a cost 3 Stage",
-  "rules": [
-    "10-1-5"
-  ],
+  "rules": ["10-1-5"],
   "setup": {
     "p1": {
       "stage": "OP02-092"
     },
     "p2": {
-      "life": [
-        "OP02-118"
-      ]
+      "life": ["OP02-118"]
     }
   },
   "actions": [
@@ -32,9 +28,7 @@
     {
       "type": "choose",
       "player": "p2",
-      "cards": [
-        "p1.stage"
-      ]
+      "cards": ["p1.stage"]
     }
   ],
   "expect": {

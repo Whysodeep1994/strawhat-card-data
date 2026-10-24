@@ -1,13 +1,9 @@
 {
   "name": "Yamato deals 2 damage and trashes both Life cards",
-  "rules": [
-    "10-1-2-1"
-  ],
+  "rules": ["10-1-2-1"],
   "setup": {
     "p1": {
-      "characters": [
-        "OP01-121"
-      ]
+      "characters": ["OP01-121"]
     }
   },
   "actions": [

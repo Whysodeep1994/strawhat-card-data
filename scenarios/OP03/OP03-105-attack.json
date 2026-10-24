@@ -1,13 +1,9 @@
 {
   "name": "Oven trashes a Trigger card to gain +3000",
-  "rules": [
-    "10-2-5"
-  ],
+  "rules": ["10-2-5"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP03-116"
-      ],
+      "hand": ["OP03-116"],
       "characters": [
         {
           "card": "OP03-105",

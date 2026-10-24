@@ -1,18 +1,12 @@
 {
   "name": "Hina stops a Character from attacking this turn",
-  "rules": [
-    "10-2-15"
-  ],
+  "rules": ["10-2-15"],
   "setup": {
     "p1": {
-      "characters": [
-        "TEST-C6-6000"
-      ]
+      "characters": ["TEST-C6-6000"]
     },
     "p2": {
-      "characters": [
-        "OP02-110"
-      ]
+      "characters": ["OP02-110"]
     }
   },
   "actions": [
@@ -30,9 +24,7 @@
     {
       "type": "choose",
       "player": "p2",
-      "cards": [
-        "p1.characters.0"
-      ]
+      "cards": ["p1.characters.0"]
     },
     {
       "type": "pass",

@@ -1,14 +1,9 @@
 {
   "name": "Oni Giri gives +6000 and plays a vanilla Character",
-  "rules": [
-    "10-2-4"
-  ],
+  "rules": ["10-2-4"],
   "setup": {
     "p2": {
-      "hand": [
-        "OP02-045",
-        "OP02-028"
-      ],
+      "hand": ["OP02-045", "OP02-028"],
       "don": {
         "active": 3
       }
@@ -29,16 +24,12 @@
     {
       "type": "choose",
       "player": "p2",
-      "cards": [
-        "p2.leader"
-      ]
+      "cards": ["p2.leader"]
     },
     {
       "type": "choose",
       "player": "p2",
-      "cards": [
-        "p2.hand.0"
-      ]
+      "cards": ["p2.hand.0"]
     }
   ],
   "expect": {

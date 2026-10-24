@@ -1,16 +1,10 @@
 {
   "name": "Magura gives a red cost 1 Character +3000",
-  "rules": [
-    "10-2-6"
-  ],
+  "rules": ["10-2-6"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP02-016"
-      ],
-      "characters": [
-        "OP02-014"
-      ],
+      "hand": ["OP02-016"],
+      "characters": ["OP02-014"],
       "don": {
         "active": 1
       }
@@ -25,9 +19,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p1.characters.0"
-      ]
+      "cards": ["p1.characters.0"]
     }
   ],
   "expect": {

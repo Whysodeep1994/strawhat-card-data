@@ -1,19 +1,12 @@
 {
   "name": "Minozebra has Banish",
-  "rules": [
-    "10-1-3-1"
-  ],
+  "rules": ["10-1-3-1"],
   "setup": {
     "p1": {
-      "characters": [
-        "OP03-068"
-      ]
+      "characters": ["OP03-068"]
     },
     "p2": {
-      "life": [
-        "OP03-016",
-        "TEST-FILLER"
-      ]
+      "life": ["OP03-016", "TEST-FILLER"]
     }
   },
   "actions": [

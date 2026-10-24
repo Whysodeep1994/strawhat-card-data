@@ -1,19 +1,12 @@
 {
   "name": "Shanks stops 2000 power Blockers",
-  "rules": [
-    "10-2-5"
-  ],
+  "rules": ["10-2-5"],
   "setup": {
     "p1": {
-      "characters": [
-        "OP01-120"
-      ]
+      "characters": ["OP01-120"]
     },
     "p2": {
-      "characters": [
-        "TEST-BLOCKER-2000",
-        "TEST-BLOCKER-5000"
-      ]
+      "characters": ["TEST-BLOCKER-2000", "TEST-BLOCKER-5000"]
     }
   },
   "actions": [

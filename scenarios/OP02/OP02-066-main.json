@@ -1,16 +1,10 @@
 {
   "name": "Impel Down All Stars trashes 2 to draw 2",
-  "rules": [
-    "10-2-3"
-  ],
+  "rules": ["10-2-3"],
   "setup": {
     "p1": {
       "leader": "OP02-049",
-      "hand": [
-        "OP02-066",
-        "TEST-FILLER",
-        "TEST-FILLER"
-      ],
+      "hand": ["OP02-066", "TEST-FILLER", "TEST-FILLER"],
       "don": {
         "active": 1
       }

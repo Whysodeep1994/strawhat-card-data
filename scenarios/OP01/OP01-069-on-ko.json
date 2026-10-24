@@ -1,24 +1,13 @@
 {
   "name": "Caesar Clown plays Smiley from the deck when K.O.'d",
-  "rules": [
-    "10-2-17"
-  ],
+  "rules": ["10-2-17"],
   "setup": {
     "p1": {
-      "hand": [
-        "TEST-KO-EVENT"
-      ]
+      "hand": ["TEST-KO-EVENT"]
     },
     "p2": {
-      "deck": [
-        "TEST-FILLER",
-        "TEST-FILLER",
-        "OP01-072",
-        "TEST-FILLER"
-      ],
-      "characters": [
-        "OP01-069"
-      ]
+      "deck": ["TEST-FILLER", "TEST-FILLER", "OP01-072", "TEST-FILLER"],
+      "characters": ["OP01-069"]
     }
   },
   "actions": [
@@ -30,16 +19,12 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p2.characters.0"
-      ]
+      "cards": ["p2.characters.0"]
     },
     {
       "type": "choose",
       "player": "p2",
-      "cards": [
-        "p2.deck.2"
-      ]
+      "cards": ["p2.deck.2"]
     }
   ],
   "expect": {

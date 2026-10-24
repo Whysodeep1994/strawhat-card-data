@@ -1,17 +1,10 @@
 {
   "name": "Penguin doesn't play Shachi if you have one",
-  "rules": [
-    "10-2-6"
-  ],
+  "rules": ["10-2-6"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP01-050",
-        "OP01-044"
-      ],
-      "characters": [
-        "OP01-044"
-      ],
+      "hand": ["OP01-050", "OP01-044"],
+      "characters": ["OP01-044"],
       "don": {
         "active": 3
       }

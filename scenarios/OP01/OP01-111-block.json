@@ -1,13 +1,9 @@
 {
   "name": "Black Maria gains +1000 when she blocks",
-  "rules": [
-    "10-2-15"
-  ],
+  "rules": ["10-2-15"],
   "setup": {
     "p2": {
-      "characters": [
-        "OP01-111"
-      ],
+      "characters": ["OP01-111"],
       "don": {
         "active": 1
       }

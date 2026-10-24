@@ -1,14 +1,10 @@
 {
   "name": "Iceburg plays a Galley-La Company Character",
-  "rules": [
-    "10-2-2"
-  ],
+  "rules": ["10-2-2"],
   "setup": {
     "p1": {
       "leader": "OP03-058",
-      "hand": [
-        "OP03-064"
-      ],
+      "hand": ["OP03-064"],
       "don": {
         "active": 1
       }
@@ -29,9 +25,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p1.hand.0"
-      ]
+      "cards": ["p1.hand.0"]
     }
   ],
   "expect": {

@@ -1,21 +1,15 @@
 {
   "name": "Sogeking returns a Character, draws 2 and trashes 2",
-  "rules": [
-    "10-2-6"
-  ],
+  "rules": ["10-2-6"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP03-122"
-      ],
+      "hand": ["OP03-122"],
       "don": {
         "active": 7
       }
     },
     "p2": {
-      "characters": [
-        "TEST-C6-6000"
-      ]
+      "characters": ["TEST-C6-6000"]
     }
   },
   "actions": [
@@ -27,9 +21,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p2.characters.0"
-      ]
+      "cards": ["p2.characters.0"]
     }
   ],
   "expect": {

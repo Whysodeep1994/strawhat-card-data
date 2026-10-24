@@ -1,8 +1,6 @@
 {
   "name": "Kin'emon sets an Akazaya Nine Character active",
-  "rules": [
-    "10-2-5"
-  ],
+  "rules": ["10-2-5"],
   "setup": {
     "p1": {
       "characters": [
@@ -27,9 +25,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p1.characters.1"
-      ]
+      "cards": ["p1.characters.1"]
     }
   ],
   "expect": {

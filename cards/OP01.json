@@ -3,15 +3,10 @@
     "id": "OP01-001",
     "name": "Roronoa Zoro",
     "category": "leader",
-    "colors": [
-      "red"
-    ],
+    "colors": ["red"],
     "life": 5,
     "power": 5000,
-    "types": [
-      "Supernovas",
-      "Straw Hat Crew"
-    ],
+    "types": ["Supernovas", "Straw Hat Crew"],
     "attribute": "Slash",
     "rarity": "L",
     "blockIcon": 1,
@@ -46,16 +41,10 @@
     "id": "OP01-002",
     "name": "Trafalgar Law",
     "category": "leader",
-    "colors": [
-      "red",
-      "green"
-    ],
+    "colors": ["red", "green"],
     "life": 4,
     "power": 5000,
-    "types": [
-      "Supernovas",
-      "Heart Pirates"
-    ],
+    "types": ["Supernovas", "Heart Pirates"],
     "attribute": "Slash",
     "rarity": "L",
     "blockIcon": 1,
@@ -93,7 +82,7 @@
                   "category": "character",
                   "costAtMost": 5
                 },
-                "differentColorFromChosen": true
+                "differentColor": true
               }
             ]
           }
@@ -105,16 +94,10 @@
     "id": "OP01-003",
     "name": "Monkey.D.Luffy",
     "category": "leader",
-    "colors": [
-      "red",
-      "green"
-    ],
+    "colors": ["red", "green"],
     "life": 4,
     "power": 5000,
-    "types": [
-      "Supernovas",
-      "Straw Hat Crew"
-    ],
+    "types": ["Supernovas", "Straw Hat Crew"],
     "attribute": "Strike",
     "rarity": "L",
     "blockIcon": 1,
@@ -166,15 +149,11 @@
     "id": "OP01-004",
     "name": "Usopp",
     "category": "character",
-    "colors": [
-      "red"
-    ],
+    "colors": ["red"],
     "cost": 2,
     "power": 3000,
     "counter": 2000,
-    "types": [
-      "Straw Hat Crew"
-    ],
+    "types": ["Straw Hat Crew"],
     "attribute": "Ranged",
     "rarity": "R",
     "blockIcon": 1,
@@ -206,14 +185,10 @@
     "id": "OP01-005",
     "name": "Uta",
     "category": "character",
-    "colors": [
-      "red"
-    ],
+    "colors": ["red"],
     "cost": 4,
     "power": 4000,
-    "types": [
-      "FILM"
-    ],
+    "types": ["FILM"],
     "attribute": "Special",
     "rarity": "R",
     "blockIcon": 1,
@@ -242,14 +217,10 @@
     "id": "OP01-006",
     "name": "Otama",
     "category": "character",
-    "colors": [
-      "red"
-    ],
+    "colors": ["red"],
     "cost": 1,
     "counter": 2000,
-    "types": [
-      "Land of Wano"
-    ],
+    "types": ["Land of Wano"],
     "attribute": "Special",
     "rarity": "UC",
     "blockIcon": 1,
@@ -277,16 +248,11 @@
     "id": "OP01-007",
     "name": "Caribou",
     "category": "character",
-    "colors": [
-      "red"
-    ],
+    "colors": ["red"],
     "cost": 3,
     "power": 4000,
     "counter": 1000,
-    "types": [
-      "Supernovas",
-      "Caribou Pirates"
-    ],
+    "types": ["Supernovas", "Caribou Pirates"],
     "attribute": "Special",
     "rarity": "C",
     "blockIcon": 1,
@@ -316,15 +282,10 @@
     "id": "OP01-008",
     "name": "Cavendish",
     "category": "character",
-    "colors": [
-      "red"
-    ],
+    "colors": ["red"],
     "cost": 4,
     "power": 5000,
-    "types": [
-      "Supernovas",
-      "Beautiful Pirates"
-    ],
+    "types": ["Supernovas", "Beautiful Pirates"],
     "attribute": "Slash",
     "rarity": "C",
     "blockIcon": 1,
@@ -356,15 +317,11 @@
     "id": "OP01-009",
     "name": "Carrot",
     "category": "character",
-    "colors": [
-      "red"
-    ],
+    "colors": ["red"],
     "cost": 2,
     "power": 3000,
     "counter": 1000,
-    "types": [
-      "Minks"
-    ],
+    "types": ["Minks"],
     "attribute": "Strike",
     "rarity": "C",
     "blockIcon": 1,
@@ -386,16 +343,11 @@
     "id": "OP01-010",
     "name": "Komachiyo",
     "category": "character",
-    "colors": [
-      "red"
-    ],
+    "colors": ["red"],
     "cost": 1,
     "power": 3000,
     "counter": 1000,
-    "types": [
-      "Animal",
-      "Land of Wano"
-    ],
+    "types": ["Animal", "Land of Wano"],
     "attribute": "Strike",
     "rarity": "C",
     "blockIcon": 1,
@@ -407,15 +359,11 @@
     "id": "OP01-011",
     "name": "Gordon",
     "category": "character",
-    "colors": [
-      "red"
-    ],
+    "colors": ["red"],
     "cost": 2,
     "power": 3000,
     "counter": 2000,
-    "types": [
-      "FILM"
-    ],
+    "types": ["FILM"],
     "attribute": "Wisdom",
     "rarity": "UC",
     "blockIcon": 1,
@@ -444,15 +392,11 @@
     "id": "OP01-012",
     "name": "Sai",
     "category": "character",
-    "colors": [
-      "red"
-    ],
+    "colors": ["red"],
     "cost": 2,
     "power": 4000,
     "counter": 1000,
-    "types": [
-      "Happosui Army"
-    ],
+    "types": ["Happosui Army"],
     "attribute": "Slash",
     "rarity": "C",
     "blockIcon": 1,
@@ -464,15 +408,11 @@
     "id": "OP01-013",
     "name": "Sanji",
     "category": "character",
-    "colors": [
-      "red"
-    ],
+    "colors": ["red"],
     "cost": 2,
     "power": 3000,
     "counter": 2000,
-    "types": [
-      "Straw Hat Crew"
-    ],
+    "types": ["Straw Hat Crew"],
     "attribute": "Strike",
     "rarity": "R",
     "blockIcon": 1,
@@ -512,15 +452,10 @@
     "id": "OP01-014",
     "name": "Jinbe",
     "category": "character",
-    "colors": [
-      "red"
-    ],
+    "colors": ["red"],
     "cost": 4,
     "power": 5000,
-    "types": [
-      "Fish-Man",
-      "Straw Hat Crew"
-    ],
+    "types": ["Fish-Man", "Straw Hat Crew"],
     "attribute": "Strike",
     "rarity": "UC",
     "blockIcon": 1,
@@ -528,9 +463,7 @@
     "image": "images/OP01-014.png",
     "source": "https://en.onepiece-cardgame.com/cardlist/?series=569101",
     "errata": true,
-    "keywords": [
-      "blocker"
-    ],
+    "keywords": ["blocker"],
     "effects": [
       {
         "timing": "onBlock",
@@ -556,16 +489,11 @@
     "id": "OP01-015",
     "name": "Tony Tony.Chopper",
     "category": "character",
-    "colors": [
-      "red"
-    ],
+    "colors": ["red"],
     "cost": 3,
     "power": 4000,
     "counter": 1000,
-    "types": [
-      "Animal",
-      "Straw Hat Crew"
-    ],
+    "types": ["Animal", "Straw Hat Crew"],
     "attribute": "Wisdom",
     "rarity": "UC",
     "blockIcon": 1,
@@ -605,15 +533,11 @@
     "id": "OP01-016",
     "name": "Nami",
     "category": "character",
-    "colors": [
-      "red"
-    ],
+    "colors": ["red"],
     "cost": 1,
     "power": 2000,
     "counter": 1000,
-    "types": [
-      "Straw Hat Crew"
-    ],
+    "types": ["Straw Hat Crew"],
     "attribute": "Special",
     "rarity": "R",
     "blockIcon": 1,
@@ -642,15 +566,11 @@
     "id": "OP01-017",
     "name": "Nico Robin",
     "category": "character",
-    "colors": [
-      "red"
-    ],
+    "colors": ["red"],
     "cost": 3,
     "power": 4000,
     "counter": 1000,
-    "types": [
-      "Straw Hat Crew"
-    ],
+    "types": ["Straw Hat Crew"],
     "attribute": "Strike",
     "rarity": "R",
     "blockIcon": 1,
@@ -685,16 +605,11 @@
     "id": "OP01-018",
     "name": "Hajrudin",
     "category": "character",
-    "colors": [
-      "red"
-    ],
+    "colors": ["red"],
     "cost": 4,
     "power": 6000,
     "counter": 1000,
-    "types": [
-      "Giant",
-      "New Giant Pirates"
-    ],
+    "types": ["Giant", "New Giant Pirates"],
     "attribute": "Strike",
     "rarity": "C",
     "blockIcon": 1,
@@ -706,25 +621,18 @@
     "id": "OP01-019",
     "name": "Bartolomeo",
     "category": "character",
-    "colors": [
-      "red"
-    ],
+    "colors": ["red"],
     "cost": 2,
     "power": 2000,
     "counter": 1000,
-    "types": [
-      "Supernovas",
-      "Barto Club"
-    ],
+    "types": ["Supernovas", "Barto Club"],
     "attribute": "Special",
     "rarity": "C",
     "blockIcon": 1,
     "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)\n[DON!! x2] [Opponent's Turn] This Character gains +3000 power.",
     "image": "images/OP01-019.png",
     "source": "https://en.onepiece-cardgame.com/cardlist/?series=569101",
-    "keywords": [
-      "blocker"
-    ],
+    "keywords": ["blocker"],
     "effects": [
       {
         "timing": "permanent",
@@ -752,15 +660,11 @@
     "id": "OP01-020",
     "name": "Hyogoro",
     "category": "character",
-    "colors": [
-      "red"
-    ],
+    "colors": ["red"],
     "cost": 2,
     "power": 3000,
     "counter": 1000,
-    "types": [
-      "Land of Wano"
-    ],
+    "types": ["Land of Wano"],
     "attribute": "Strike",
     "rarity": "C",
     "blockIcon": 1,
@@ -794,14 +698,10 @@
     "id": "OP01-021",
     "name": "Franky",
     "category": "character",
-    "colors": [
-      "red"
-    ],
+    "colors": ["red"],
     "cost": 3,
     "power": 4000,
-    "types": [
-      "Straw Hat Crew"
-    ],
+    "types": ["Straw Hat Crew"],
     "attribute": "Ranged",
     "rarity": "UC",
     "blockIcon": 1,
@@ -832,15 +732,11 @@
     "id": "OP01-022",
     "name": "Brook",
     "category": "character",
-    "colors": [
-      "red"
-    ],
+    "colors": ["red"],
     "cost": 4,
     "power": 5000,
     "counter": 1000,
-    "types": [
-      "Straw Hat Crew"
-    ],
+    "types": ["Straw Hat Crew"],
     "attribute": "Slash",
     "rarity": "UC",
     "blockIcon": 1,
@@ -873,15 +769,11 @@
     "id": "OP01-023",
     "name": "Marco",
     "category": "character",
-    "colors": [
-      "red"
-    ],
+    "colors": ["red"],
     "cost": 3,
     "power": 5000,
     "counter": 1000,
-    "types": [
-      "Former Whitebeard Pirates"
-    ],
+    "types": ["Former Whitebeard Pirates"],
     "attribute": "Special",
     "rarity": "C",
     "blockIcon": 1,
@@ -893,16 +785,11 @@
     "id": "OP01-024",
     "name": "Monkey.D.Luffy",
     "category": "character",
-    "colors": [
-      "red"
-    ],
+    "colors": ["red"],
     "cost": 2,
     "power": 3000,
     "counter": 1000,
-    "types": [
-      "Supernovas",
-      "Straw Hat Crew"
-    ],
+    "types": ["Supernovas", "Straw Hat Crew"],
     "attribute": "Strike",
     "rarity": "SR",
     "blockIcon": 1,
@@ -950,37 +837,25 @@
     "id": "OP01-025",
     "name": "Roronoa Zoro",
     "category": "character",
-    "colors": [
-      "red"
-    ],
+    "colors": ["red"],
     "cost": 3,
     "power": 5000,
-    "types": [
-      "Supernovas",
-      "Straw Hat Crew"
-    ],
+    "types": ["Supernovas", "Straw Hat Crew"],
     "attribute": "Slash",
     "rarity": "SR",
     "blockIcon": 1,
     "text": "[Rush] (This card can attack on the turn in which it is played.)",
     "image": "images/OP01-025.png",
     "source": "https://en.onepiece-cardgame.com/cardlist/?series=569101",
-    "keywords": [
-      "rush"
-    ]
+    "keywords": ["rush"]
   },
   {
     "id": "OP01-026",
     "name": "Gum-Gum Fire-Fist Pistol Red Hawk",
     "category": "event",
-    "colors": [
-      "red"
-    ],
+    "colors": ["red"],
     "cost": 2,
-    "types": [
-      "Supernovas",
-      "Straw Hat Crew"
-    ],
+    "types": ["Supernovas", "Straw Hat Crew"],
     "rarity": "R",
     "blockIcon": 1,
     "text": "[Counter] Up to 1 of your Leader or Character cards gains +4000 power during this battle. Then, K.O. up to 1 of your opponent's Characters with 4000 power or less.",
@@ -1034,14 +909,9 @@
     "id": "OP01-027",
     "name": "Round Table",
     "category": "event",
-    "colors": [
-      "red"
-    ],
+    "colors": ["red"],
     "cost": 4,
-    "types": [
-      "Supernovas",
-      "Beautiful Pirates"
-    ],
+    "types": ["Supernovas", "Beautiful Pirates"],
     "rarity": "C",
     "blockIcon": 1,
     "text": "[Main] Give up to 1 of your opponent's Characters −10000 power during this turn.",
@@ -1068,13 +938,9 @@
     "id": "OP01-028",
     "name": "Green Star Rafflesia",
     "category": "event",
-    "colors": [
-      "red"
-    ],
+    "colors": ["red"],
     "cost": 1,
-    "types": [
-      "Straw Hat Crew"
-    ],
+    "types": ["Straw Hat Crew"],
     "rarity": "C",
     "blockIcon": 1,
     "text": "[Counter] Give up to 1 of your opponent's Leader or Character cards −2000 power during this turn.",
@@ -1117,13 +983,9 @@
     "id": "OP01-029",
     "name": "Radical Beam!!",
     "category": "event",
-    "colors": [
-      "red"
-    ],
+    "colors": ["red"],
     "cost": 1,
-    "types": [
-      "Straw Hat Crew"
-    ],
+    "types": ["Straw Hat Crew"],
     "rarity": "UC",
     "blockIcon": 1,
     "text": "[Counter] Up to 1 of your Leader or Character cards gains +2000 power during this battle. Then, if you have 2 or less Life cards, that card gains an additional +2000 power.",
@@ -1185,13 +1047,9 @@
     "id": "OP01-030",
     "name": "In Two Years!! At the Sabaody Archipelago!!",
     "category": "event",
-    "colors": [
-      "red"
-    ],
+    "colors": ["red"],
     "cost": 1,
-    "types": [
-      "Straw Hat Crew"
-    ],
+    "types": ["Straw Hat Crew"],
     "rarity": "UC",
     "blockIcon": 1,
     "text": "[Main] Look at 5 cards from the top of your deck; reveal up to 1 {Straw Hat Crew} type Character card and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
@@ -1234,15 +1092,10 @@
     "id": "OP01-031",
     "name": "Kouzuki Oden",
     "category": "leader",
-    "colors": [
-      "green"
-    ],
+    "colors": ["green"],
     "life": 5,
     "power": 5000,
-    "types": [
-      "Land of Wano",
-      "Kouzuki Clan"
-    ],
+    "types": ["Land of Wano", "Kouzuki Clan"],
     "attribute": "Slash",
     "rarity": "L",
     "blockIcon": 1,
@@ -1275,16 +1128,11 @@
     "id": "OP01-032",
     "name": "Ashura Doji",
     "category": "character",
-    "colors": [
-      "green"
-    ],
+    "colors": ["green"],
     "cost": 3,
     "power": 4000,
     "counter": 1000,
-    "types": [
-      "Land of Wano",
-      "The Akazaya Nine"
-    ],
+    "types": ["Land of Wano", "The Akazaya Nine"],
     "attribute": "Slash",
     "rarity": "UC",
     "blockIcon": 1,
@@ -1324,16 +1172,11 @@
     "id": "OP01-033",
     "name": "Izo",
     "category": "character",
-    "colors": [
-      "green"
-    ],
+    "colors": ["green"],
     "cost": 3,
     "power": 3000,
     "counter": 2000,
-    "types": [
-      "Land of Wano",
-      "Former Whitebeard Pirates"
-    ],
+    "types": ["Land of Wano", "Former Whitebeard Pirates"],
     "attribute": "Ranged",
     "rarity": "UC",
     "blockIcon": 1,
@@ -1363,17 +1206,11 @@
     "id": "OP01-034",
     "name": "Inuarashi",
     "category": "character",
-    "colors": [
-      "green"
-    ],
+    "colors": ["green"],
     "cost": 3,
     "power": 4000,
     "counter": 1000,
-    "types": [
-      "Minks",
-      "Land of Wano",
-      "The Akazaya Nine"
-    ],
+    "types": ["Minks", "Land of Wano", "The Akazaya Nine"],
     "attribute": "Slash",
     "rarity": "C",
     "blockIcon": 1,
@@ -1402,15 +1239,10 @@
     "id": "OP01-035",
     "name": "Okiku",
     "category": "character",
-    "colors": [
-      "green"
-    ],
+    "colors": ["green"],
     "cost": 3,
     "power": 5000,
-    "types": [
-      "Land of Wano",
-      "The Akazaya Nine"
-    ],
+    "types": ["Land of Wano", "The Akazaya Nine"],
     "attribute": "Slash",
     "rarity": "R",
     "blockIcon": 1,
@@ -1446,15 +1278,11 @@
     "id": "OP01-036",
     "name": "Otsuru",
     "category": "character",
-    "colors": [
-      "green"
-    ],
+    "colors": ["green"],
     "cost": 1,
     "power": 3000,
     "counter": 1000,
-    "types": [
-      "Land of Wano"
-    ],
+    "types": ["Land of Wano"],
     "attribute": "Wisdom",
     "rarity": "C",
     "blockIcon": 1,
@@ -1466,17 +1294,11 @@
     "id": "OP01-037",
     "name": "Kawamatsu",
     "category": "character",
-    "colors": [
-      "green"
-    ],
+    "colors": ["green"],
     "cost": 2,
     "power": 3000,
     "counter": 1000,
-    "types": [
-      "Fish-Man",
-      "Land of Wano",
-      "The Akazaya Nine"
-    ],
+    "types": ["Fish-Man", "Land of Wano", "The Akazaya Nine"],
     "attribute": "Slash",
     "rarity": "C",
     "blockIcon": 1,
@@ -1499,16 +1321,11 @@
     "id": "OP01-038",
     "name": "Kanjuro",
     "category": "character",
-    "colors": [
-      "green"
-    ],
+    "colors": ["green"],
     "cost": 2,
     "power": 3000,
     "counter": 1000,
-    "types": [
-      "Land of Wano",
-      "The Akazaya Nine"
-    ],
+    "types": ["Land of Wano", "The Akazaya Nine"],
     "attribute": "Slash",
     "rarity": "C",
     "blockIcon": 1,
@@ -1554,25 +1371,18 @@
     "id": "OP01-039",
     "name": "Killer",
     "category": "character",
-    "colors": [
-      "green"
-    ],
+    "colors": ["green"],
     "cost": 2,
     "power": 2000,
     "counter": 1000,
-    "types": [
-      "Supernovas",
-      "Kid Pirates"
-    ],
+    "types": ["Supernovas", "Kid Pirates"],
     "attribute": "Slash",
     "rarity": "UC",
     "blockIcon": 1,
     "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)\n[DON!! x1] [On Block] If you have 3 or more Characters, draw 1 card.",
     "image": "images/OP01-039.png",
     "source": "https://en.onepiece-cardgame.com/cardlist/?series=569101",
-    "keywords": [
-      "blocker"
-    ],
+    "keywords": ["blocker"],
     "effects": [
       {
         "timing": "onBlock",
@@ -1604,15 +1414,10 @@
     "id": "OP01-040",
     "name": "Kin'emon",
     "category": "character",
-    "colors": [
-      "green"
-    ],
+    "colors": ["green"],
     "cost": 6,
     "power": 6000,
-    "types": [
-      "Land of Wano",
-      "The Akazaya Nine"
-    ],
+    "types": ["Land of Wano", "The Akazaya Nine"],
     "attribute": "Slash",
     "rarity": "SR",
     "blockIcon": 1,
@@ -1673,15 +1478,10 @@
     "id": "OP01-041",
     "name": "Kouzuki Momonosuke",
     "category": "character",
-    "colors": [
-      "green"
-    ],
+    "colors": ["green"],
     "cost": 1,
     "counter": 1000,
-    "types": [
-      "Land of Wano",
-      "Kouzuki Clan"
-    ],
+    "types": ["Land of Wano", "Kouzuki Clan"],
     "attribute": "Slash",
     "rarity": "R",
     "blockIcon": 1,
@@ -1718,15 +1518,10 @@
     "id": "OP01-042",
     "name": "Komurasaki",
     "category": "character",
-    "colors": [
-      "green"
-    ],
+    "colors": ["green"],
     "cost": 1,
     "counter": 1000,
-    "types": [
-      "Land of Wano",
-      "Kouzuki Clan"
-    ],
+    "types": ["Land of Wano", "Kouzuki Clan"],
     "attribute": "Wisdom",
     "rarity": "UC",
     "blockIcon": 1,
@@ -1774,15 +1569,11 @@
     "id": "OP01-043",
     "name": "Shinobu",
     "category": "character",
-    "colors": [
-      "green"
-    ],
+    "colors": ["green"],
     "cost": 3,
     "power": 5000,
     "counter": 1000,
-    "types": [
-      "Land of Wano"
-    ],
+    "types": ["Land of Wano"],
     "attribute": "Special",
     "rarity": "C",
     "blockIcon": 1,
@@ -1794,15 +1585,11 @@
     "id": "OP01-044",
     "name": "Shachi",
     "category": "character",
-    "colors": [
-      "green"
-    ],
+    "colors": ["green"],
     "cost": 3,
     "power": 4000,
     "counter": 1000,
-    "types": [
-      "Heart Pirates"
-    ],
+    "types": ["Heart Pirates"],
     "attribute": "Strike",
     "rarity": "C",
     "blockIcon": 1,
@@ -1810,9 +1597,7 @@
     "image": "images/OP01-044.png",
     "source": "https://en.onepiece-cardgame.com/cardlist/?series=569101",
     "errata": true,
-    "keywords": [
-      "blocker"
-    ],
+    "keywords": ["blocker"],
     "effects": [
       {
         "timing": "onPlay",
@@ -1847,15 +1632,11 @@
     "id": "OP01-045",
     "name": "Jean Bart",
     "category": "character",
-    "colors": [
-      "green"
-    ],
+    "colors": ["green"],
     "cost": 4,
     "power": 6000,
     "counter": 1000,
-    "types": [
-      "Heart Pirates"
-    ],
+    "types": ["Heart Pirates"],
     "attribute": "Strike",
     "rarity": "C",
     "blockIcon": 1,
@@ -1867,15 +1648,10 @@
     "id": "OP01-046",
     "name": "Denjiro",
     "category": "character",
-    "colors": [
-      "green"
-    ],
+    "colors": ["green"],
     "cost": 5,
     "power": 7000,
-    "types": [
-      "Land of Wano",
-      "The Akazaya Nine"
-    ],
+    "types": ["Land of Wano", "The Akazaya Nine"],
     "attribute": "Slash",
     "rarity": "R",
     "blockIcon": 1,
@@ -1913,15 +1689,10 @@
     "id": "OP01-047",
     "name": "Trafalgar Law",
     "category": "character",
-    "colors": [
-      "green"
-    ],
+    "colors": ["green"],
     "cost": 5,
     "power": 6000,
-    "types": [
-      "Supernovas",
-      "Heart Pirates"
-    ],
+    "types": ["Supernovas", "Heart Pirates"],
     "attribute": "Slash",
     "rarity": "SR",
     "blockIcon": 1,
@@ -1929,9 +1700,7 @@
     "image": "images/OP01-047.png",
     "source": "https://en.onepiece-cardgame.com/cardlist/?series=569101",
     "errata": true,
-    "keywords": [
-      "blocker"
-    ],
+    "keywords": ["blocker"],
     "effects": [
       {
         "timing": "onPlay",
@@ -1957,17 +1726,11 @@
     "id": "OP01-048",
     "name": "Nekomamushi",
     "category": "character",
-    "colors": [
-      "green"
-    ],
+    "colors": ["green"],
     "cost": 2,
     "power": 3000,
     "counter": 1000,
-    "types": [
-      "Minks",
-      "Land of Wano",
-      "The Akazaya Nine"
-    ],
+    "types": ["Minks", "Land of Wano", "The Akazaya Nine"],
     "attribute": "Slash",
     "rarity": "C",
     "blockIcon": 1,
@@ -1997,16 +1760,11 @@
     "id": "OP01-049",
     "name": "Bepo",
     "category": "character",
-    "colors": [
-      "green"
-    ],
+    "colors": ["green"],
     "cost": 4,
     "power": 4000,
     "counter": 2000,
-    "types": [
-      "Minks",
-      "Heart Pirates"
-    ],
+    "types": ["Minks", "Heart Pirates"],
     "attribute": "Strike",
     "rarity": "R",
     "blockIcon": 1,
@@ -2040,15 +1798,11 @@
     "id": "OP01-050",
     "name": "Penguin",
     "category": "character",
-    "colors": [
-      "green"
-    ],
+    "colors": ["green"],
     "cost": 3,
     "power": 2000,
     "counter": 1000,
-    "types": [
-      "Heart Pirates"
-    ],
+    "types": ["Heart Pirates"],
     "attribute": "Strike",
     "rarity": "C",
     "blockIcon": 1,
@@ -2056,9 +1810,7 @@
     "image": "images/OP01-050.png",
     "source": "https://en.onepiece-cardgame.com/cardlist/?series=569101",
     "errata": true,
-    "keywords": [
-      "blocker"
-    ],
+    "keywords": ["blocker"],
     "effects": [
       {
         "timing": "onPlay",
@@ -2093,15 +1845,10 @@
     "id": "OP01-051",
     "name": "Eustass\"Captain\"Kid",
     "category": "character",
-    "colors": [
-      "green"
-    ],
+    "colors": ["green"],
     "cost": 8,
     "power": 8000,
-    "types": [
-      "Supernovas",
-      "Kid Pirates"
-    ],
+    "types": ["Supernovas", "Kid Pirates"],
     "attribute": "Special",
     "rarity": "SR",
     "blockIcon": 1,
@@ -2158,16 +1905,11 @@
     "id": "OP01-052",
     "name": "Raizo",
     "category": "character",
-    "colors": [
-      "green"
-    ],
+    "colors": ["green"],
     "cost": 3,
     "power": 4000,
     "counter": 1000,
-    "types": [
-      "Land of Wano",
-      "The Akazaya Nine"
-    ],
+    "types": ["Land of Wano", "The Akazaya Nine"],
     "attribute": "Slash",
     "rarity": "UC",
     "blockIcon": 1,
@@ -2207,15 +1949,11 @@
     "id": "OP01-053",
     "name": "Wire",
     "category": "character",
-    "colors": [
-      "green"
-    ],
+    "colors": ["green"],
     "cost": 2,
     "power": 4000,
     "counter": 1000,
-    "types": [
-      "Kid Pirates"
-    ],
+    "types": ["Kid Pirates"],
     "attribute": "Slash",
     "rarity": "C",
     "blockIcon": 1,
@@ -2227,17 +1965,11 @@
     "id": "OP01-054",
     "name": "X.Drake",
     "category": "character",
-    "colors": [
-      "green"
-    ],
+    "colors": ["green"],
     "cost": 5,
     "power": 6000,
     "counter": 1000,
-    "types": [
-      "Supernovas",
-      "Navy",
-      "Drake Pirates"
-    ],
+    "types": ["Supernovas", "Navy", "Drake Pirates"],
     "attribute": "Slash",
     "rarity": "R",
     "blockIcon": 1,
@@ -2268,14 +2000,9 @@
     "id": "OP01-055",
     "name": "You Can Be My Samurai!!",
     "category": "event",
-    "colors": [
-      "green"
-    ],
+    "colors": ["green"],
     "cost": 1,
-    "types": [
-      "Land of Wano",
-      "Kouzuki Clan"
-    ],
+    "types": ["Land of Wano", "Kouzuki Clan"],
     "rarity": "C",
     "blockIcon": 1,
     "text": "[Main] You may rest 2 of your Characters: Draw 2 cards.",
@@ -2303,14 +2030,9 @@
     "id": "OP01-056",
     "name": "Demon Face",
     "category": "event",
-    "colors": [
-      "green"
-    ],
+    "colors": ["green"],
     "cost": 6,
-    "types": [
-      "Supernovas",
-      "Hawkins Pirates"
-    ],
+    "types": ["Supernovas", "Hawkins Pirates"],
     "rarity": "UC",
     "blockIcon": 1,
     "text": "[Main] K.O. up to 2 of your opponent's rested Characters with a cost of 5 or less.",
@@ -2341,14 +2063,9 @@
     "id": "OP01-057",
     "name": "Paradise Waterfall",
     "category": "event",
-    "colors": [
-      "green"
-    ],
+    "colors": ["green"],
     "cost": 1,
-    "types": [
-      "Land of Wano",
-      "Kouzuki Clan"
-    ],
+    "types": ["Land of Wano", "Kouzuki Clan"],
     "rarity": "UC",
     "blockIcon": 1,
     "text": "[Counter] Up to 1 of your Leader or Character cards gains +2000 power during this battle. Then, set up to 1 of your Characters as active.",
@@ -2401,14 +2118,9 @@
     "id": "OP01-058",
     "name": "Punk Gibson",
     "category": "event",
-    "colors": [
-      "green"
-    ],
+    "colors": ["green"],
     "cost": 2,
-    "types": [
-      "Supernovas",
-      "Kid Pirates"
-    ],
+    "types": ["Supernovas", "Kid Pirates"],
     "rarity": "R",
     "blockIcon": 1,
     "text": "[Counter] Up to 1 of your Leader or Character cards gains +4000 power during this battle. Then, rest up to 1 of your opponent's Characters with a cost of 4 or less.",
@@ -2460,13 +2172,9 @@
     "id": "OP01-059",
     "name": "BE-BENG!!",
     "category": "event",
-    "colors": [
-      "green"
-    ],
+    "colors": ["green"],
     "cost": 3,
-    "types": [
-      "Land of Wano"
-    ],
+    "types": ["Land of Wano"],
     "rarity": "C",
     "blockIcon": 1,
     "text": "[Main] You may trash 1 {Land of Wano} type card from your hand: Set up to 1 of your {Land of Wano} type Character cards with a cost of 3 or less as active.",
@@ -2506,15 +2214,10 @@
     "id": "OP01-060",
     "name": "Donquixote Doflamingo",
     "category": "leader",
-    "colors": [
-      "blue"
-    ],
+    "colors": ["blue"],
     "life": 5,
     "power": 5000,
-    "types": [
-      "The Seven Warlords of the Sea",
-      "Donquixote Pirates"
-    ],
+    "types": ["The Seven Warlords of the Sea", "Donquixote Pirates"],
     "attribute": "Special",
     "rarity": "L",
     "blockIcon": 1,
@@ -2553,16 +2256,10 @@
     "id": "OP01-061",
     "name": "Kaido",
     "category": "leader",
-    "colors": [
-      "blue",
-      "purple"
-    ],
+    "colors": ["blue", "purple"],
     "life": 4,
     "power": 5000,
-    "types": [
-      "The Four Emperors",
-      "Animal Kingdom Pirates"
-    ],
+    "types": ["The Four Emperors", "Animal Kingdom Pirates"],
     "attribute": "Strike",
     "rarity": "L",
     "blockIcon": 1,
@@ -2595,16 +2292,10 @@
     "id": "OP01-062",
     "name": "Crocodile",
     "category": "leader",
-    "colors": [
-      "blue",
-      "purple"
-    ],
+    "colors": ["blue", "purple"],
     "life": 4,
     "power": 5000,
-    "types": [
-      "The Seven Warlords of the Sea",
-      "Baroque Works"
-    ],
+    "types": ["The Seven Warlords of the Sea", "Baroque Works"],
     "attribute": "Special",
     "rarity": "L",
     "blockIcon": 1,
@@ -2637,16 +2328,11 @@
     "id": "OP01-063",
     "name": "Arlong",
     "category": "character",
-    "colors": [
-      "blue"
-    ],
+    "colors": ["blue"],
     "cost": 4,
     "power": 5000,
     "counter": 1000,
-    "types": [
-      "Fish-Man",
-      "Arlong Pirates"
-    ],
+    "types": ["Fish-Man", "Arlong Pirates"],
     "attribute": "Slash",
     "rarity": "UC",
     "blockIcon": 1,
@@ -2691,15 +2377,11 @@
     "id": "OP01-064",
     "name": "Alvida",
     "category": "character",
-    "colors": [
-      "blue"
-    ],
+    "colors": ["blue"],
     "cost": 2,
     "power": 3000,
     "counter": 2000,
-    "types": [
-      "Buggy Pirates"
-    ],
+    "types": ["Buggy Pirates"],
     "attribute": "Strike",
     "rarity": "C",
     "blockIcon": 1,
@@ -2740,17 +2422,11 @@
     "id": "OP01-065",
     "name": "Vergo",
     "category": "character",
-    "colors": [
-      "blue"
-    ],
+    "colors": ["blue"],
     "cost": 5,
     "power": 7000,
     "counter": 1000,
-    "types": [
-      "Navy",
-      "Donquixote Pirates",
-      "Punk Hazard"
-    ],
+    "types": ["Navy", "Donquixote Pirates", "Punk Hazard"],
     "attribute": "Strike",
     "rarity": "C",
     "blockIcon": 1,
@@ -2762,15 +2438,11 @@
     "id": "OP01-066",
     "name": "Krieg",
     "category": "character",
-    "colors": [
-      "blue"
-    ],
+    "colors": ["blue"],
     "cost": 4,
     "power": 6000,
     "counter": 1000,
-    "types": [
-      "Krieg Pirates"
-    ],
+    "types": ["Krieg Pirates"],
     "attribute": "Slash",
     "rarity": "C",
     "blockIcon": 1,
@@ -2782,25 +2454,18 @@
     "id": "OP01-067",
     "name": "Crocodile",
     "category": "character",
-    "colors": [
-      "blue"
-    ],
+    "colors": ["blue"],
     "cost": 7,
     "power": 7000,
     "counter": 1000,
-    "types": [
-      "The Seven Warlords of the Sea",
-      "Baroque Works"
-    ],
+    "types": ["The Seven Warlords of the Sea", "Baroque Works"],
     "attribute": "Special",
     "rarity": "SR",
     "blockIcon": 1,
     "text": "[Banish] (When this card deals damage, the target card is trashed without activating its Trigger.)\n[DON!! x1] Give blue Events in your hand −1 cost.",
     "image": "images/OP01-067.png",
     "source": "https://en.onepiece-cardgame.com/cardlist/?series=569101",
-    "keywords": [
-      "banish"
-    ],
+    "keywords": ["banish"],
     "effects": [
       {
         "timing": "permanent",
@@ -2826,16 +2491,11 @@
     "id": "OP01-068",
     "name": "Gecko Moria",
     "category": "character",
-    "colors": [
-      "blue"
-    ],
+    "colors": ["blue"],
     "cost": 4,
     "power": 5000,
     "counter": 1000,
-    "types": [
-      "The Seven Warlords of the Sea",
-      "Thriller Bark Pirates"
-    ],
+    "types": ["The Seven Warlords of the Sea", "Thriller Bark Pirates"],
     "attribute": "Special",
     "rarity": "R",
     "blockIcon": 1,
@@ -2869,16 +2529,11 @@
     "id": "OP01-069",
     "name": "Caesar Clown",
     "category": "character",
-    "colors": [
-      "blue"
-    ],
+    "colors": ["blue"],
     "cost": 4,
     "power": 5000,
     "counter": 1000,
-    "types": [
-      "Scientist",
-      "Punk Hazard"
-    ],
+    "types": ["Scientist", "Punk Hazard"],
     "attribute": "Special",
     "rarity": "R",
     "blockIcon": 1,
@@ -2905,14 +2560,10 @@
     "id": "OP01-070",
     "name": "Dracule Mihawk",
     "category": "character",
-    "colors": [
-      "blue"
-    ],
+    "colors": ["blue"],
     "cost": 9,
     "power": 9000,
-    "types": [
-      "The Seven Warlords of the Sea"
-    ],
+    "types": ["The Seven Warlords of the Sea"],
     "attribute": "Slash",
     "rarity": "SR",
     "blockIcon": 1,
@@ -2942,15 +2593,10 @@
     "id": "OP01-071",
     "name": "Jinbe",
     "category": "character",
-    "colors": [
-      "blue"
-    ],
+    "colors": ["blue"],
     "cost": 4,
     "power": 2000,
-    "types": [
-      "Fish-Man",
-      "Straw Hat Crew"
-    ],
+    "types": ["Fish-Man", "Straw Hat Crew"],
     "attribute": "Strike",
     "rarity": "R",
     "blockIcon": 1,
@@ -2989,16 +2635,11 @@
     "id": "OP01-072",
     "name": "Smiley",
     "category": "character",
-    "colors": [
-      "blue"
-    ],
+    "colors": ["blue"],
     "cost": 3,
     "power": 1000,
     "counter": 1000,
-    "types": [
-      "Biological Weapon",
-      "Punk Hazard"
-    ],
+    "types": ["Biological Weapon", "Punk Hazard"],
     "attribute": "Special",
     "rarity": "C",
     "blockIcon": 1,
@@ -3035,25 +2676,18 @@
     "id": "OP01-073",
     "name": "Donquixote Doflamingo",
     "category": "character",
-    "colors": [
-      "blue"
-    ],
+    "colors": ["blue"],
     "cost": 3,
     "power": 4000,
     "counter": 1000,
-    "types": [
-      "The Seven Warlords of the Sea",
-      "Donquixote Pirates"
-    ],
+    "types": ["The Seven Warlords of the Sea", "Donquixote Pirates"],
     "attribute": "Special",
     "rarity": "R",
     "blockIcon": 1,
     "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)\n[On Play] Look at 5 cards from the top of your deck and place them at the top or bottom of the deck in any order.",
     "image": "images/OP01-073.png",
     "source": "https://en.onepiece-cardgame.com/cardlist/?series=569101",
-    "keywords": [
-      "blocker"
-    ],
+    "keywords": ["blocker"],
     "effects": [
       {
         "timing": "onPlay",
@@ -3071,16 +2705,11 @@
     "id": "OP01-074",
     "name": "Bartholomew Kuma",
     "category": "character",
-    "colors": [
-      "blue"
-    ],
+    "colors": ["blue"],
     "cost": 4,
     "power": 5000,
     "counter": 1000,
-    "types": [
-      "The Seven Warlords of the Sea",
-      "Revolutionary Army"
-    ],
+    "types": ["The Seven Warlords of the Sea", "Revolutionary Army"],
     "attribute": "Strike",
     "rarity": "R",
     "blockIcon": 1,
@@ -3088,9 +2717,7 @@
     "image": "images/OP01-074.png",
     "source": "https://en.onepiece-cardgame.com/cardlist/?series=569101",
     "errata": true,
-    "keywords": [
-      "blocker"
-    ],
+    "keywords": ["blocker"],
     "effects": [
       {
         "timing": "onKO",
@@ -3110,39 +2737,28 @@
     "id": "OP01-075",
     "name": "Pacifista",
     "category": "character",
-    "colors": [
-      "blue"
-    ],
+    "colors": ["blue"],
     "cost": 4,
     "power": 5000,
-    "types": [
-      "Biological Weapon",
-      "Navy"
-    ],
+    "types": ["Biological Weapon", "Navy"],
     "attribute": "Special",
     "rarity": "C",
     "blockIcon": 1,
     "text": "Under the rules of this game, you may have any number of this card in your deck.\n[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)",
     "image": "images/OP01-075.png",
     "source": "https://en.onepiece-cardgame.com/cardlist/?series=569101",
-    "keywords": [
-      "blocker"
-    ],
+    "keywords": ["blocker"],
     "anyNumberInDeck": true
   },
   {
     "id": "OP01-076",
     "name": "Bellamy",
     "category": "character",
-    "colors": [
-      "blue"
-    ],
+    "colors": ["blue"],
     "cost": 2,
     "power": 4000,
     "counter": 1000,
-    "types": [
-      "Dressrosa"
-    ],
+    "types": ["Dressrosa"],
     "attribute": "Strike",
     "rarity": "C",
     "blockIcon": 1,
@@ -3154,15 +2770,11 @@
     "id": "OP01-077",
     "name": "Perona",
     "category": "character",
-    "colors": [
-      "blue"
-    ],
+    "colors": ["blue"],
     "cost": 1,
     "power": 2000,
     "counter": 1000,
-    "types": [
-      "Thriller Bark Pirates"
-    ],
+    "types": ["Thriller Bark Pirates"],
     "attribute": "Special",
     "rarity": "UC",
     "blockIcon": 1,
@@ -3186,25 +2798,18 @@
     "id": "OP01-078",
     "name": "Boa Hancock",
     "category": "character",
-    "colors": [
-      "blue"
-    ],
+    "colors": ["blue"],
     "cost": 4,
     "power": 5000,
     "counter": 1000,
-    "types": [
-      "The Seven Warlords of the Sea",
-      "Kuja Pirates"
-    ],
+    "types": ["The Seven Warlords of the Sea", "Kuja Pirates"],
     "attribute": "Special",
     "rarity": "SR",
     "blockIcon": 1,
     "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)\n[DON!! x1] [When Attacking]/[On Block] Draw 1 card if you have 5 or less cards in your hand.",
     "image": "images/OP01-078.png",
     "source": "https://en.onepiece-cardgame.com/cardlist/?series=569101",
-    "keywords": [
-      "blocker"
-    ],
+    "keywords": ["blocker"],
     "effects": [
       {
         "timing": "whenAttacking",
@@ -3260,15 +2865,11 @@
     "id": "OP01-079",
     "name": "Ms. All Sunday",
     "category": "character",
-    "colors": [
-      "blue"
-    ],
+    "colors": ["blue"],
     "cost": 3,
     "power": 1000,
     "counter": 1000,
-    "types": [
-      "Baroque Works"
-    ],
+    "types": ["Baroque Works"],
     "attribute": "Strike",
     "rarity": "R",
     "blockIcon": 1,
@@ -3276,9 +2877,7 @@
     "image": "images/OP01-079.png",
     "source": "https://en.onepiece-cardgame.com/cardlist/?series=569101",
     "errata": true,
-    "keywords": [
-      "blocker"
-    ],
+    "keywords": ["blocker"],
     "effects": [
       {
         "timing": "onKO",
@@ -3307,15 +2906,11 @@
     "id": "OP01-080",
     "name": "Miss Doublefinger(Zala)",
     "category": "character",
-    "colors": [
-      "blue"
-    ],
+    "colors": ["blue"],
     "cost": 3,
     "power": 4000,
     "counter": 1000,
-    "types": [
-      "Baroque Works"
-    ],
+    "types": ["Baroque Works"],
     "attribute": "Slash",
     "rarity": "C",
     "blockIcon": 1,
@@ -3338,15 +2933,11 @@
     "id": "OP01-081",
     "name": "Mocha",
     "category": "character",
-    "colors": [
-      "blue"
-    ],
+    "colors": ["blue"],
     "cost": 3,
     "power": 5000,
     "counter": 1000,
-    "types": [
-      "Punk Hazard"
-    ],
+    "types": ["Punk Hazard"],
     "attribute": "Strike",
     "rarity": "C",
     "blockIcon": 1,
@@ -3358,16 +2949,11 @@
     "id": "OP01-082",
     "name": "Monet",
     "category": "character",
-    "colors": [
-      "blue"
-    ],
+    "colors": ["blue"],
     "cost": 2,
     "power": 3000,
     "counter": 1000,
-    "types": [
-      "Donquixote Pirates",
-      "Punk Hazard"
-    ],
+    "types": ["Donquixote Pirates", "Punk Hazard"],
     "attribute": "Special",
     "rarity": "C",
     "blockIcon": 1,
@@ -3390,15 +2976,11 @@
     "id": "OP01-083",
     "name": "Mr.1(Daz.Bonez)",
     "category": "character",
-    "colors": [
-      "blue"
-    ],
+    "colors": ["blue"],
     "cost": 2,
     "power": 3000,
     "counter": 1000,
-    "types": [
-      "Baroque Works"
-    ],
+    "types": ["Baroque Works"],
     "attribute": "Slash",
     "rarity": "UC",
     "blockIcon": 1,
@@ -3442,15 +3024,11 @@
     "id": "OP01-084",
     "name": "Mr.2.Bon.Kurei(Bentham)",
     "category": "character",
-    "colors": [
-      "blue"
-    ],
+    "colors": ["blue"],
     "cost": 3,
     "power": 4000,
     "counter": 2000,
-    "types": [
-      "Baroque Works"
-    ],
+    "types": ["Baroque Works"],
     "attribute": "Strike",
     "rarity": "UC",
     "blockIcon": 1,
@@ -3484,15 +3062,11 @@
     "id": "OP01-085",
     "name": "Mr.3(Galdino)",
     "category": "character",
-    "colors": [
-      "blue"
-    ],
+    "colors": ["blue"],
     "cost": 2,
     "power": 3000,
     "counter": 1000,
-    "types": [
-      "Baroque Works"
-    ],
+    "types": ["Baroque Works"],
     "attribute": "Special",
     "rarity": "UC",
     "blockIcon": 1,
@@ -3534,14 +3108,9 @@
     "id": "OP01-086",
     "name": "Overheat",
     "category": "event",
-    "colors": [
-      "blue"
-    ],
+    "colors": ["blue"],
     "cost": 2,
-    "types": [
-      "The Seven Warlords of the Sea",
-      "Donquixote Pirates"
-    ],
+    "types": ["The Seven Warlords of the Sea", "Donquixote Pirates"],
     "rarity": "R",
     "blockIcon": 1,
     "text": "[Counter] Up to 1 of your Leader or Character cards gains +4000 power during this battle. Then, return up to 1 active Character with a cost of 3 or less to the owner's hand.",
@@ -3597,13 +3166,9 @@
     "id": "OP01-087",
     "name": "Officer Agents",
     "category": "event",
-    "colors": [
-      "blue"
-    ],
+    "colors": ["blue"],
     "cost": 2,
-    "types": [
-      "Baroque Works"
-    ],
+    "types": ["Baroque Works"],
     "rarity": "C",
     "blockIcon": 1,
     "text": "[Counter] Play up to 1 {Baroque Works} type Character card with a cost of 3 or less from your hand.",
@@ -3644,14 +3209,9 @@
     "id": "OP01-088",
     "name": "Desert Spada",
     "category": "event",
-    "colors": [
-      "blue"
-    ],
+    "colors": ["blue"],
     "cost": 1,
-    "types": [
-      "The Seven Warlords of the Sea",
-      "Baroque Works"
-    ],
+    "types": ["The Seven Warlords of the Sea", "Baroque Works"],
     "rarity": "UC",
     "blockIcon": 1,
     "text": "[Counter] Up to 1 of your Leader or Character cards gains +2000 power during this battle. Then, look at 3 cards from the top of your deck and place them at the top or bottom of the deck in any order.",
@@ -3699,14 +3259,9 @@
     "id": "OP01-089",
     "name": "Crescent Cutlass",
     "category": "event",
-    "colors": [
-      "blue"
-    ],
+    "colors": ["blue"],
     "cost": 3,
-    "types": [
-      "The Seven Warlords of the Sea",
-      "Baroque Works"
-    ],
+    "types": ["The Seven Warlords of the Sea", "Baroque Works"],
     "rarity": "C",
     "blockIcon": 1,
     "text": "[Counter] If your Leader has the {The Seven Warlords of the Sea} type, return up to 1 Character with a cost of 5 or less to the owner's hand.",
@@ -3745,13 +3300,9 @@
     "id": "OP01-090",
     "name": "Baroque Works",
     "category": "event",
-    "colors": [
-      "blue"
-    ],
+    "colors": ["blue"],
     "cost": 1,
-    "types": [
-      "Baroque Works"
-    ],
+    "types": ["Baroque Works"],
     "rarity": "UC",
     "blockIcon": 1,
     "text": "[Main] Look at 5 cards from the top of your deck; reveal up to 1 {Baroque Works} type card other than [Baroque Works] and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
@@ -3779,14 +3330,10 @@
     "id": "OP01-091",
     "name": "King",
     "category": "leader",
-    "colors": [
-      "purple"
-    ],
+    "colors": ["purple"],
     "life": 5,
     "power": 5000,
-    "types": [
-      "Animal Kingdom Pirates"
-    ],
+    "types": ["Animal Kingdom Pirates"],
     "attribute": "Special",
     "rarity": "L",
     "blockIcon": 1,
@@ -3821,15 +3368,11 @@
     "id": "OP01-092",
     "name": "Urashima",
     "category": "character",
-    "colors": [
-      "purple"
-    ],
+    "colors": ["purple"],
     "cost": 7,
     "power": 9000,
     "counter": 1000,
-    "types": [
-      "Land of Wano"
-    ],
+    "types": ["Land of Wano"],
     "attribute": "Strike",
     "rarity": "C",
     "blockIcon": 1,
@@ -3841,14 +3384,10 @@
     "id": "OP01-093",
     "name": "Ulti",
     "category": "character",
-    "colors": [
-      "purple"
-    ],
+    "colors": ["purple"],
     "cost": 2,
     "power": 3000,
-    "types": [
-      "Animal Kingdom Pirates"
-    ],
+    "types": ["Animal Kingdom Pirates"],
     "attribute": "Strike",
     "rarity": "R",
     "blockIcon": 1,
@@ -3879,15 +3418,10 @@
     "id": "OP01-094",
     "name": "Kaido",
     "category": "character",
-    "colors": [
-      "purple"
-    ],
+    "colors": ["purple"],
     "cost": 10,
     "power": 12000,
-    "types": [
-      "The Four Emperors",
-      "Animal Kingdom Pirates"
-    ],
+    "types": ["The Four Emperors", "Animal Kingdom Pirates"],
     "attribute": "Strike",
     "rarity": "SR",
     "blockIcon": 1,
@@ -3932,15 +3466,11 @@
     "id": "OP01-095",
     "name": "Kyoshirou",
     "category": "character",
-    "colors": [
-      "purple"
-    ],
+    "colors": ["purple"],
     "cost": 5,
     "power": 6000,
     "counter": 1000,
-    "types": [
-      "Land of Wano"
-    ],
+    "types": ["Land of Wano"],
     "attribute": "Slash",
     "rarity": "UC",
     "blockIcon": 1,
@@ -3973,14 +3503,10 @@
     "id": "OP01-096",
     "name": "King",
     "category": "character",
-    "colors": [
-      "purple"
-    ],
+    "colors": ["purple"],
     "cost": 7,
     "power": 7000,
-    "types": [
-      "Animal Kingdom Pirates"
-    ],
+    "types": ["Animal Kingdom Pirates"],
     "attribute": "Special",
     "rarity": "SR",
     "blockIcon": 1,
@@ -4026,15 +3552,11 @@
     "id": "OP01-097",
     "name": "Queen",
     "category": "character",
-    "colors": [
-      "purple"
-    ],
+    "colors": ["purple"],
     "cost": 6,
     "power": 5000,
     "counter": 1000,
-    "types": [
-      "Animal Kingdom Pirates"
-    ],
+    "types": ["Animal Kingdom Pirates"],
     "attribute": "Strike",
     "rarity": "R",
     "blockIcon": 1,
@@ -4075,16 +3597,11 @@
     "id": "OP01-098",
     "name": "Kurozumi Orochi",
     "category": "character",
-    "colors": [
-      "purple"
-    ],
+    "colors": ["purple"],
     "cost": 1,
     "power": 2000,
     "counter": 2000,
-    "types": [
-      "Land of Wano",
-      "Kurozumi Clan"
-    ],
+    "types": ["Land of Wano", "Kurozumi Clan"],
     "attribute": "Wisdom",
     "rarity": "UC",
     "blockIcon": 1,
@@ -4110,16 +3627,11 @@
     "id": "OP01-099",
     "name": "Kurozumi Semimaru",
     "category": "character",
-    "colors": [
-      "purple"
-    ],
+    "colors": ["purple"],
     "cost": 2,
     "power": 3000,
     "counter": 1000,
-    "types": [
-      "Land of Wano",
-      "Kurozumi Clan"
-    ],
+    "types": ["Land of Wano", "Kurozumi Clan"],
     "attribute": "Special",
     "rarity": "C",
     "blockIcon": 1,
@@ -4150,39 +3662,28 @@
     "id": "OP01-100",
     "name": "Kurozumi Higurashi",
     "category": "character",
-    "colors": [
-      "purple"
-    ],
+    "colors": ["purple"],
     "cost": 2,
     "power": 3000,
     "counter": 1000,
-    "types": [
-      "Land of Wano",
-      "Kurozumi Clan"
-    ],
+    "types": ["Land of Wano", "Kurozumi Clan"],
     "attribute": "Special",
     "rarity": "C",
     "blockIcon": 1,
     "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)",
     "image": "images/OP01-100.png",
     "source": "https://en.onepiece-cardgame.com/cardlist/?series=569101",
-    "keywords": [
-      "blocker"
-    ]
+    "keywords": ["blocker"]
   },
   {
     "id": "OP01-101",
     "name": "Sasaki",
     "category": "character",
-    "colors": [
-      "purple"
-    ],
+    "colors": ["purple"],
     "cost": 3,
     "power": 4000,
     "counter": 2000,
-    "types": [
-      "Animal Kingdom Pirates"
-    ],
+    "types": ["Animal Kingdom Pirates"],
     "attribute": "Slash",
     "rarity": "UC",
     "blockIcon": 1,
@@ -4218,15 +3719,11 @@
     "id": "OP01-102",
     "name": "Jack",
     "category": "character",
-    "colors": [
-      "purple"
-    ],
+    "colors": ["purple"],
     "cost": 3,
     "power": 4000,
     "counter": 1000,
-    "types": [
-      "Animal Kingdom Pirates"
-    ],
+    "types": ["Animal Kingdom Pirates"],
     "attribute": "Strike",
     "rarity": "R",
     "blockIcon": 1,
@@ -4255,16 +3752,11 @@
     "id": "OP01-103",
     "name": "Scratchmen Apoo",
     "category": "character",
-    "colors": [
-      "purple"
-    ],
+    "colors": ["purple"],
     "cost": 4,
     "power": 6000,
     "counter": 1000,
-    "types": [
-      "Animal Kingdom Pirates",
-      "On-Air Pirates"
-    ],
+    "types": ["Animal Kingdom Pirates", "On-Air Pirates"],
     "attribute": "Ranged",
     "rarity": "C",
     "blockIcon": 1,
@@ -4276,16 +3768,11 @@
     "id": "OP01-104",
     "name": "Speed",
     "category": "character",
-    "colors": [
-      "purple"
-    ],
+    "colors": ["purple"],
     "cost": 2,
     "power": 3000,
     "counter": 1000,
-    "types": [
-      "Animal Kingdom Pirates",
-      "SMILE"
-    ],
+    "types": ["Animal Kingdom Pirates", "SMILE"],
     "attribute": "Strike",
     "rarity": "C",
     "blockIcon": 1,
@@ -4308,16 +3795,11 @@
     "id": "OP01-105",
     "name": "Bao Huang",
     "category": "character",
-    "colors": [
-      "purple"
-    ],
+    "colors": ["purple"],
     "cost": 2,
     "power": 3000,
     "counter": 1000,
-    "types": [
-      "Animal Kingdom Pirates",
-      "SMILE"
-    ],
+    "types": ["Animal Kingdom Pirates", "SMILE"],
     "attribute": "Wisdom",
     "rarity": "C",
     "blockIcon": 1,
@@ -4340,16 +3822,11 @@
     "id": "OP01-106",
     "name": "Basil Hawkins",
     "category": "character",
-    "colors": [
-      "purple"
-    ],
+    "colors": ["purple"],
     "cost": 4,
     "power": 2000,
     "counter": 1000,
-    "types": [
-      "Animal Kingdom Pirates",
-      "Hawkins Pirates"
-    ],
+    "types": ["Animal Kingdom Pirates", "Hawkins Pirates"],
     "attribute": "Slash",
     "rarity": "UC",
     "blockIcon": 1,
@@ -4383,16 +3860,11 @@
     "id": "OP01-107",
     "name": "Babanuki",
     "category": "character",
-    "colors": [
-      "purple"
-    ],
+    "colors": ["purple"],
     "cost": 5,
     "power": 7000,
     "counter": 1000,
-    "types": [
-      "Animal Kingdom Pirates",
-      "SMILE"
-    ],
+    "types": ["Animal Kingdom Pirates", "SMILE"],
     "attribute": "Ranged",
     "rarity": "C",
     "blockIcon": 1,
@@ -4404,17 +3876,11 @@
     "id": "OP01-108",
     "name": "Hitokiri Kamazo",
     "category": "character",
-    "colors": [
-      "purple"
-    ],
+    "colors": ["purple"],
     "cost": 4,
     "power": 5000,
     "counter": 1000,
-    "types": [
-      "Supernovas",
-      "Kid Pirates",
-      "SMILE"
-    ],
+    "types": ["Supernovas", "Kid Pirates", "SMILE"],
     "attribute": "Slash",
     "rarity": "UC",
     "blockIcon": 1,
@@ -4450,15 +3916,11 @@
     "id": "OP01-109",
     "name": "Who's.Who",
     "category": "character",
-    "colors": [
-      "purple"
-    ],
+    "colors": ["purple"],
     "cost": 2,
     "power": 3000,
     "counter": 1000,
-    "types": [
-      "Animal Kingdom Pirates"
-    ],
+    "types": ["Animal Kingdom Pirates"],
     "attribute": "Slash",
     "rarity": "UC",
     "blockIcon": 1,
@@ -4495,16 +3957,11 @@
     "id": "OP01-110",
     "name": "Fukurokuju",
     "category": "character",
-    "colors": [
-      "purple"
-    ],
+    "colors": ["purple"],
     "cost": 6,
     "power": 8000,
     "counter": 1000,
-    "types": [
-      "Land of Wano",
-      "Animal Kingdom Pirates"
-    ],
+    "types": ["Land of Wano", "Animal Kingdom Pirates"],
     "attribute": "Special",
     "rarity": "C",
     "blockIcon": 1,
@@ -4516,24 +3973,18 @@
     "id": "OP01-111",
     "name": "Black Maria",
     "category": "character",
-    "colors": [
-      "purple"
-    ],
+    "colors": ["purple"],
     "cost": 4,
     "power": 5000,
     "counter": 1000,
-    "types": [
-      "Animal Kingdom Pirates"
-    ],
+    "types": ["Animal Kingdom Pirates"],
     "attribute": "Special",
     "rarity": "R",
     "blockIcon": 1,
     "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)\n[On Block] DON!! −1 (You may return the specified number of DON!! cards from your field to your DON!! deck.): This Character gains +1000 power during this turn.",
     "image": "images/OP01-111.png",
     "source": "https://en.onepiece-cardgame.com/cardlist/?series=569101",
-    "keywords": [
-      "blocker"
-    ],
+    "keywords": ["blocker"],
     "effects": [
       {
         "timing": "onBlock",
@@ -4559,15 +4010,11 @@
     "id": "OP01-112",
     "name": "Page One",
     "category": "character",
-    "colors": [
-      "purple"
-    ],
+    "colors": ["purple"],
     "cost": 4,
     "power": 5000,
     "counter": 1000,
-    "types": [
-      "Animal Kingdom Pirates"
-    ],
+    "types": ["Animal Kingdom Pirates"],
     "attribute": "Strike",
     "rarity": "R",
     "blockIcon": 1,
@@ -4600,16 +4047,11 @@
     "id": "OP01-113",
     "name": "Holedem",
     "category": "character",
-    "colors": [
-      "purple"
-    ],
+    "colors": ["purple"],
     "cost": 3,
     "power": 4000,
     "counter": 1000,
-    "types": [
-      "Animal Kingdom Pirates",
-      "SMILE"
-    ],
+    "types": ["Animal Kingdom Pirates", "SMILE"],
     "attribute": "Special",
     "rarity": "C",
     "blockIcon": 1,
@@ -4634,17 +4076,11 @@
     "id": "OP01-114",
     "name": "X.Drake",
     "category": "character",
-    "colors": [
-      "purple"
-    ],
+    "colors": ["purple"],
     "cost": 5,
     "power": 5000,
     "counter": 2000,
-    "types": [
-      "Navy",
-      "Drake Pirates",
-      "Animal Kingdom Pirates"
-    ],
+    "types": ["Navy", "Drake Pirates", "Animal Kingdom Pirates"],
     "attribute": "Slash",
     "rarity": "R",
     "blockIcon": 1,
@@ -4673,14 +4109,9 @@
     "id": "OP01-115",
     "name": "Elephant's Marchoo",
     "category": "event",
-    "colors": [
-      "purple"
-    ],
+    "colors": ["purple"],
     "cost": 4,
-    "types": [
-      "Animal Kingdom Pirates",
-      "SMILE"
-    ],
+    "types": ["Animal Kingdom Pirates", "SMILE"],
     "rarity": "C",
     "blockIcon": 1,
     "text": "[Main] K.O. up to 1 of your opponent's Characters with a cost of 2 or less, then add up to 1 DON!! card from your DON!! deck and set it as active.",
@@ -4733,14 +4164,9 @@
     "id": "OP01-116",
     "name": "Artificial Devil Fruit SMILE",
     "category": "event",
-    "colors": [
-      "purple"
-    ],
+    "colors": ["purple"],
     "cost": 2,
-    "types": [
-      "Animal Kingdom Pirates",
-      "SMILE"
-    ],
+    "types": ["Animal Kingdom Pirates", "SMILE"],
     "rarity": "UC",
     "blockIcon": 1,
     "text": "[Main] Look at 5 cards from the top of your deck; play up to 1 {SMILE} type Character card with a cost of 3 or less. Then, place the rest at the bottom of your deck in any order.",
@@ -4787,14 +4213,9 @@
     "id": "OP01-117",
     "name": "Sheep's Horn",
     "category": "event",
-    "colors": [
-      "purple"
-    ],
+    "colors": ["purple"],
     "cost": 2,
-    "types": [
-      "Animal Kingdom Pirates",
-      "SMILE"
-    ],
+    "types": ["Animal Kingdom Pirates", "SMILE"],
     "rarity": "C",
     "blockIcon": 1,
     "text": "[Main] DON!! −1 (You may return the specified number of DON!! cards from your field to your DON!! deck.): Rest up to 1 of your opponent's Characters with a cost of 6 or less.",
@@ -4829,13 +4250,9 @@
     "id": "OP01-118",
     "name": "Ulti-Mortar",
     "category": "event",
-    "colors": [
-      "purple"
-    ],
+    "colors": ["purple"],
     "cost": 1,
-    "types": [
-      "Animal Kingdom Pirates"
-    ],
+    "types": ["Animal Kingdom Pirates"],
     "rarity": "UC",
     "blockIcon": 1,
     "text": "[Counter] DON!! −2 (You may return the specified number of DON!! cards from your field to your DON!! deck.): Up to 1 of your Leader or Character cards gains +2000 power during this battle. Then, draw 1 card.",
@@ -4884,14 +4301,9 @@
     "id": "OP01-119",
     "name": "Thunder Bagua",
     "category": "event",
-    "colors": [
-      "purple"
-    ],
+    "colors": ["purple"],
     "cost": 2,
-    "types": [
-      "The Four Emperors",
-      "Animal Kingdom Pirates"
-    ],
+    "types": ["The Four Emperors", "Animal Kingdom Pirates"],
     "rarity": "R",
     "blockIcon": 1,
     "text": "[Counter] Up to 1 of your Leader or Character cards gains +4000 power during this battle. Then, if you have 2 or less Life cards, add up to 1 DON!! card from your DON!! deck and rest it.",
@@ -4945,24 +4357,17 @@
     "id": "OP01-120",
     "name": "Shanks",
     "category": "character",
-    "colors": [
-      "red"
-    ],
+    "colors": ["red"],
     "cost": 9,
     "power": 10000,
-    "types": [
-      "The Four Emperors",
-      "Red-Haired Pirates"
-    ],
+    "types": ["The Four Emperors", "Red-Haired Pirates"],
     "attribute": "Slash",
     "rarity": "SEC",
     "blockIcon": 1,
     "text": "[Rush] (This card can attack on the turn in which it is played.)\n[When Attacking] Your opponent cannot activate a [Blocker] Character that has 2000 or less power during this battle.",
     "image": "images/OP01-120.png",
     "source": "https://en.onepiece-cardgame.com/cardlist/?series=569101",
-    "keywords": [
-      "rush"
-    ],
+    "keywords": ["rush"],
     "effects": [
       {
         "timing": "whenAttacking",
@@ -4985,27 +4390,18 @@
     "id": "OP01-121",
     "name": "Yamato",
     "category": "character",
-    "colors": [
-      "green"
-    ],
+    "colors": ["green"],
     "cost": 5,
     "power": 5000,
     "counter": 1000,
-    "types": [
-      "Land of Wano"
-    ],
+    "types": ["Land of Wano"],
     "attribute": "Strike",
     "rarity": "SEC",
     "blockIcon": 1,
     "text": "Also treat this card's name as [Kouzuki Oden] according to the rules.\n[Double Attack] (This card deals 2 damage.)\n[Banish] (When this card deals damage, the target card is trashed without activating its Trigger.)",
     "image": "images/OP01-121.png",
     "source": "https://en.onepiece-cardgame.com/cardlist/?series=569101",
-    "keywords": [
-      "doubleAttack",
-      "banish"
-    ],
-    "alsoNamed": [
-      "Kouzuki Oden"
-    ]
+    "keywords": ["doubleAttack", "banish"],
+    "aliases": ["Kouzuki Oden"]
   }
 ]

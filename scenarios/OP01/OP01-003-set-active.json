@@ -1,8 +1,6 @@
 {
   "name": "Luffy sets a Straw Hat Crew Character active and gives it +1000",
-  "rules": [
-    "10-2-2"
-  ],
+  "rules": ["10-2-2"],
   "setup": {
     "p1": {
       "leader": "OP01-003",
@@ -27,9 +25,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p1.characters.0"
-      ]
+      "cards": ["p1.characters.0"]
     }
   ],
   "expect": {

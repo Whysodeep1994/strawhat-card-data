@@ -1,8 +1,6 @@
 {
   "name": "With 1 DON!!, Curiel can attack a Character the turn it is played",
-  "rules": [
-    "10-1-1-1"
-  ],
+  "rules": ["10-1-1-1"],
   "setup": {
     "p1": {
       "characters": [

@@ -1,23 +1,15 @@
 {
   "name": "Bao Huang reveals 2 cards from the opponent's hand",
-  "rules": [
-    "11-2-1"
-  ],
+  "rules": ["11-2-1"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP01-105"
-      ],
+      "hand": ["OP01-105"],
       "don": {
         "active": 2
       }
     },
     "p2": {
-      "hand": [
-        "TEST-FILLER",
-        "OP01-010",
-        "TEST-FILLER"
-      ]
+      "hand": ["TEST-FILLER", "OP01-010", "TEST-FILLER"]
     }
   },
   "actions": [
@@ -29,10 +21,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p2.hand.0",
-        "p2.hand.1"
-      ]
+      "cards": ["p2.hand.0", "p2.hand.1"]
     }
   ],
   "expect": {

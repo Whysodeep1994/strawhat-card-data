@@ -1,14 +1,9 @@
 {
   "name": "Teach trashes a red 4000 power Character to draw and gain +1000",
-  "rules": [
-    "10-2-5"
-  ],
+  "rules": ["10-2-5"],
   "setup": {
     "p1": {
-      "characters": [
-        "OP03-012",
-        "TEST-C5-5000"
-      ]
+      "characters": ["OP03-012", "TEST-C5-5000"]
     }
   },
   "actions": [
@@ -26,9 +21,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p1.characters.1"
-      ]
+      "cards": ["p1.characters.1"]
     }
   ],
   "expect": {

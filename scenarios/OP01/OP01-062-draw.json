@@ -1,17 +1,13 @@
 {
   "name": "Crocodile draws when you activate an Event",
-  "rules": [
-    "8-1-3-1"
-  ],
+  "rules": ["8-1-3-1"],
   "setup": {
     "p1": {
       "leader": {
         "card": "OP01-062",
         "don": 1
       },
-      "hand": [
-        "TEST-KO-EVENT"
-      ]
+      "hand": ["TEST-KO-EVENT"]
     }
   },
   "actions": [

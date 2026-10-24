@@ -1,15 +1,9 @@
 {
   "name": "Kingbaum trashes a Life card to play itself",
-  "rules": [
-    "10-1-5"
-  ],
+  "rules": ["10-1-5"],
   "setup": {
     "p2": {
-      "life": [
-        "OP03-100",
-        "TEST-FILLER",
-        "TEST-FILLER"
-      ]
+      "life": ["OP03-100", "TEST-FILLER", "TEST-FILLER"]
     }
   },
   "actions": [

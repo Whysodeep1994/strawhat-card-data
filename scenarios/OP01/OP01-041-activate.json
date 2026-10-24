@@ -1,17 +1,10 @@
 {
   "name": "Momonosuke finds a Land of Wano card",
-  "rules": [
-    "10-2-2"
-  ],
+  "rules": ["10-2-2"],
   "setup": {
     "p1": {
-      "deck": [
-        "OP01-036",
-        "TEST-FILLER"
-      ],
-      "characters": [
-        "OP01-041"
-      ],
+      "deck": ["OP01-036", "TEST-FILLER"],
+      "characters": ["OP01-041"],
       "don": {
         "active": 1
       }
@@ -32,9 +25,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p1.deck.0"
-      ]
+      "cards": ["p1.deck.0"]
     }
   ],
   "expect": {

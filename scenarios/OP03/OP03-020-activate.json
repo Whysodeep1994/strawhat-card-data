@@ -1,16 +1,11 @@
 {
   "name": "Striker finds an Event for Ace",
-  "rules": [
-    "10-2-2"
-  ],
+  "rules": ["10-2-2"],
   "setup": {
     "p1": {
       "leader": "OP03-001",
       "stage": "OP03-020",
-      "deck": [
-        "TEST-FILLER",
-        "OP03-019"
-      ],
+      "deck": ["TEST-FILLER", "OP03-019"],
       "don": {
         "active": 2
       }
@@ -31,9 +26,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p1.deck.1"
-      ]
+      "cards": ["p1.deck.1"]
     }
   ],
   "expect": {

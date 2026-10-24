@@ -1,24 +1,16 @@
 {
   "name": "One, Two, Jango rests a Character and gives +1000",
-  "rules": [
-    "10-2-3"
-  ],
+  "rules": ["10-2-3"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP03-039"
-      ],
-      "characters": [
-        "TEST-FILLER"
-      ],
+      "hand": ["OP03-039"],
+      "characters": ["TEST-FILLER"],
       "don": {
         "active": 1
       }
     },
     "p2": {
-      "characters": [
-        "TEST-FILLER"
-      ]
+      "characters": ["TEST-FILLER"]
     }
   },
   "actions": [
@@ -30,16 +22,12 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p2.characters.0"
-      ]
+      "cards": ["p2.characters.0"]
     },
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p1.characters.0"
-      ]
+      "cards": ["p1.characters.0"]
     }
   ],
   "expect": {

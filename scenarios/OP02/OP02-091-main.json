@@ -1,13 +1,9 @@
 {
   "name": "Venom Road adds an active DON!!",
-  "rules": [
-    "10-2-3"
-  ],
+  "rules": ["10-2-3"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP02-091"
-      ],
+      "hand": ["OP02-091"],
       "don": {
         "active": 3,
         "deck": 2

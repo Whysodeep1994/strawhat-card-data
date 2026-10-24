@@ -1,8 +1,6 @@
 {
   "name": "Galley-La Company adds a rested DON!! for Iceburg",
-  "rules": [
-    "10-2-2"
-  ],
+  "rules": ["10-2-2"],
   "setup": {
     "p1": {
       "leader": "OP03-058",

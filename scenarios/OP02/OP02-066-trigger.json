@@ -1,13 +1,9 @@
 {
   "name": "Its Trigger draws 2",
-  "rules": [
-    "10-1-5"
-  ],
+  "rules": ["10-1-5"],
   "setup": {
     "p2": {
-      "life": [
-        "OP02-066"
-      ]
+      "life": ["OP02-066"]
     }
   },
   "actions": [

@@ -1,13 +1,9 @@
 {
   "name": "This Character can block",
-  "rules": [
-    "10-1-4-1"
-  ],
+  "rules": ["10-1-4-1"],
   "setup": {
     "p2": {
-      "characters": [
-        "OP02-038"
-      ]
+      "characters": ["OP02-038"]
     }
   },
   "actions": [

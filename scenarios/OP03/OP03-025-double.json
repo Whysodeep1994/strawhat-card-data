@@ -1,8 +1,6 @@
 {
   "name": "Krieg with 1 DON!! deals 2 damage",
-  "rules": [
-    "10-1-2-1"
-  ],
+  "rules": ["10-1-2-1"],
   "setup": {
     "p1": {
       "characters": [

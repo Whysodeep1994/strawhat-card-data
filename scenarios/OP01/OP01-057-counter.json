@@ -1,13 +1,9 @@
 {
   "name": "Paradise Waterfall gives +2000 and sets a Character active",
-  "rules": [
-    "10-2-4"
-  ],
+  "rules": ["10-2-4"],
   "setup": {
     "p2": {
-      "hand": [
-        "OP01-057"
-      ],
+      "hand": ["OP01-057"],
       "characters": [
         {
           "card": "TEST-FILLER",
@@ -34,16 +30,12 @@
     {
       "type": "choose",
       "player": "p2",
-      "cards": [
-        "p2.leader"
-      ]
+      "cards": ["p2.leader"]
     },
     {
       "type": "choose",
       "player": "p2",
-      "cards": [
-        "p2.characters.0"
-      ]
+      "cards": ["p2.characters.0"]
     }
   ],
   "expect": {

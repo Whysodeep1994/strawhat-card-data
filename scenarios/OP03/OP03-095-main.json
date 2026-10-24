@@ -1,22 +1,15 @@
 {
   "name": "Soap Sheep gives 2 Characters −2 cost",
-  "rules": [
-    "10-2-3"
-  ],
+  "rules": ["10-2-3"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP03-095"
-      ],
+      "hand": ["OP03-095"],
       "don": {
         "active": 1
       }
     },
     "p2": {
-      "characters": [
-        "TEST-C5-5000",
-        "TEST-C4-4000"
-      ]
+      "characters": ["TEST-C5-5000", "TEST-C4-4000"]
     }
   },
   "actions": [
@@ -28,10 +21,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p2.characters.0",
-        "p2.characters.1"
-      ]
+      "cards": ["p2.characters.0", "p2.characters.1"]
     }
   ],
   "expect": {

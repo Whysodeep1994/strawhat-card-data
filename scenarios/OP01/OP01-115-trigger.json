@@ -1,18 +1,12 @@
 {
   "name": "Elephant's Marchoo's Trigger works too",
-  "rules": [
-    "10-1-5"
-  ],
+  "rules": ["10-1-5"],
   "setup": {
     "p1": {
-      "characters": [
-        "OP01-012"
-      ]
+      "characters": ["OP01-012"]
     },
     "p2": {
-      "life": [
-        "OP01-115"
-      ],
+      "life": ["OP01-115"],
       "don": {
         "deck": 2
       }
@@ -37,9 +31,7 @@
     {
       "type": "choose",
       "player": "p2",
-      "cards": [
-        "p1.characters.0"
-      ]
+      "cards": ["p1.characters.0"]
     }
   ],
   "expect": {

@@ -1,18 +1,12 @@
 {
   "name": "Rubber Band of Doom gives +2000 and trashes a card",
-  "rules": [
-    "10-2-4"
-  ],
+  "rules": ["10-2-4"],
   "setup": {
     "p1": {
-      "characters": [
-        "TEST-C6-6000"
-      ]
+      "characters": ["TEST-C6-6000"]
     },
     "p2": {
-      "hand": [
-        "OP03-054"
-      ],
+      "hand": ["OP03-054"],
       "don": {
         "active": 1
       }
@@ -33,9 +27,7 @@
     {
       "type": "choose",
       "player": "p2",
-      "cards": [
-        "p2.leader"
-      ]
+      "cards": ["p2.leader"]
     },
     {
       "type": "chooseOne",

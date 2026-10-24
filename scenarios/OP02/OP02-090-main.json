@@ -1,21 +1,15 @@
 {
   "name": "Hydra gives −3000",
-  "rules": [
-    "10-2-3"
-  ],
+  "rules": ["10-2-3"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP02-090"
-      ],
+      "hand": ["OP02-090"],
       "don": {
         "active": 2
       }
     },
     "p2": {
-      "characters": [
-        "TEST-C4-4000"
-      ]
+      "characters": ["TEST-C4-4000"]
     }
   },
   "actions": [
@@ -32,9 +26,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p2.characters.0"
-      ]
+      "cards": ["p2.characters.0"]
     }
   ],
   "expect": {

@@ -1,17 +1,10 @@
 {
   "name": "Baroque Works finds a Baroque Works card",
-  "rules": [
-    "10-2-3"
-  ],
+  "rules": ["10-2-3"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP01-090"
-      ],
-      "deck": [
-        "OP01-090",
-        "OP01-083"
-      ],
+      "hand": ["OP01-090"],
+      "deck": ["OP01-090", "OP01-083"],
       "don": {
         "active": 1
       }
@@ -26,9 +19,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p1.deck.1"
-      ]
+      "cards": ["p1.deck.1"]
     }
   ],
   "expect": {

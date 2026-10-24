@@ -1,18 +1,12 @@
 {
   "name": "Its Trigger returns too",
-  "rules": [
-    "10-1-5"
-  ],
+  "rules": ["10-1-5"],
   "setup": {
     "p1": {
-      "characters": [
-        "TEST-C4-4000"
-      ]
+      "characters": ["TEST-C4-4000"]
     },
     "p2": {
-      "life": [
-        "OP02-067"
-      ]
+      "life": ["OP02-067"]
     }
   },
   "actions": [
@@ -34,9 +28,7 @@
     {
       "type": "choose",
       "player": "p2",
-      "cards": [
-        "p1.characters.0"
-      ]
+      "cards": ["p1.characters.0"]
     }
   ],
   "expect": {

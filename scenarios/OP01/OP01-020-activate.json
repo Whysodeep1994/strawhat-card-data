@@ -1,13 +1,9 @@
 {
   "name": "Hyogoro rests to give +2000",
-  "rules": [
-    "10-2-2"
-  ],
+  "rules": ["10-2-2"],
   "setup": {
     "p1": {
-      "characters": [
-        "OP01-020"
-      ]
+      "characters": ["OP01-020"]
     }
   },
   "actions": [
@@ -20,9 +16,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p1.leader"
-      ]
+      "cards": ["p1.leader"]
     }
   ],
   "expect": {

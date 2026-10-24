@@ -1,8 +1,6 @@
 {
   "name": "Brook gives 2 Characters −2000",
-  "rules": [
-    "10-2-5"
-  ],
+  "rules": ["10-2-5"],
   "setup": {
     "p1": {
       "characters": [
@@ -13,10 +11,7 @@
       ]
     },
     "p2": {
-      "characters": [
-        "TEST-C4-4000",
-        "TEST-C6-6000"
-      ]
+      "characters": ["TEST-C4-4000", "TEST-C6-6000"]
     }
   },
   "actions": [
@@ -29,10 +24,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p2.characters.0",
-        "p2.characters.1"
-      ]
+      "cards": ["p2.characters.0", "p2.characters.1"]
     }
   ],
   "expect": {

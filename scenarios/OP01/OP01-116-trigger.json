@@ -1,17 +1,10 @@
 {
   "name": "SMILE's Trigger plays a SMILE Character",
-  "rules": [
-    "10-1-5"
-  ],
+  "rules": ["10-1-5"],
   "setup": {
     "p2": {
-      "deck": [
-        "OP01-113",
-        "TEST-FILLER"
-      ],
-      "life": [
-        "OP01-116"
-      ]
+      "deck": ["OP01-113", "TEST-FILLER"],
+      "life": ["OP01-116"]
     }
   },
   "actions": [
@@ -33,9 +26,7 @@
     {
       "type": "choose",
       "player": "p2",
-      "cards": [
-        "p2.deck.0"
-      ]
+      "cards": ["p2.deck.0"]
     }
   ],
   "expect": {

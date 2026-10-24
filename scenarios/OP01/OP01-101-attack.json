@@ -1,13 +1,9 @@
 {
   "name": "Sasaki trashes a card to add a rested DON!!",
-  "rules": [
-    "10-2-5"
-  ],
+  "rules": ["10-2-5"],
   "setup": {
     "p1": {
-      "hand": [
-        "TEST-FILLER"
-      ],
+      "hand": ["TEST-FILLER"],
       "characters": [
         {
           "card": "OP01-101",

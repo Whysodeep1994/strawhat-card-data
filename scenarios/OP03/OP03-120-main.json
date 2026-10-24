@@ -1,13 +1,9 @@
 {
   "name": "Tropical Torment trashes an opposing Life card",
-  "rules": [
-    "10-2-3"
-  ],
+  "rules": ["10-2-3"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP03-120"
-      ],
+      "hand": ["OP03-120"],
       "don": {
         "active": 3
       }

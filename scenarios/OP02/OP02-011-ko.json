@@ -1,21 +1,15 @@
 {
   "name": "Vista K.O.s a 3000 power Character",
-  "rules": [
-    "10-2-6"
-  ],
+  "rules": ["10-2-6"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP02-011"
-      ],
+      "hand": ["OP02-011"],
       "don": {
         "active": 3
       }
     },
     "p2": {
-      "characters": [
-        "OP02-097"
-      ]
+      "characters": ["OP02-097"]
     }
   },
   "actions": [
@@ -27,9 +21,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p2.characters.0"
-      ]
+      "cards": ["p2.characters.0"]
     }
   ],
   "expect": {

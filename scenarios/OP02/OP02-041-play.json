@@ -1,14 +1,9 @@
 {
   "name": "Luffy plays a cost 4 FILM Character",
-  "rules": [
-    "10-2-6"
-  ],
+  "rules": ["10-2-6"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP02-041",
-        "OP02-043"
-      ],
+      "hand": ["OP02-041", "OP02-043"],
       "don": {
         "active": 7
       }
@@ -23,9 +18,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p1.hand.0"
-      ]
+      "cards": ["p1.hand.0"]
     }
   ],
   "expect": {

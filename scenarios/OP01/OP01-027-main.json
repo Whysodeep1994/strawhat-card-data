@@ -1,21 +1,15 @@
 {
   "name": "Round Table gives −10000",
-  "rules": [
-    "10-2-3"
-  ],
+  "rules": ["10-2-3"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP01-027"
-      ],
+      "hand": ["OP01-027"],
       "don": {
         "active": 4
       }
     },
     "p2": {
-      "characters": [
-        "TEST-C9-10000"
-      ]
+      "characters": ["TEST-C9-10000"]
     }
   },
   "actions": [
@@ -27,9 +21,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p2.characters.0"
-      ]
+      "cards": ["p2.characters.0"]
     }
   ],
   "expect": {

@@ -1,22 +1,15 @@
 {
   "name": "Sakazuki trashes a card to K.O. a cost 5 Character",
-  "rules": [
-    "10-2-6"
-  ],
+  "rules": ["10-2-6"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP02-099",
-        "TEST-FILLER"
-      ],
+      "hand": ["OP02-099", "TEST-FILLER"],
       "don": {
         "active": 6
       }
     },
     "p2": {
-      "characters": [
-        "TEST-C5-5000"
-      ]
+      "characters": ["TEST-C5-5000"]
     }
   },
   "actions": [
@@ -33,9 +26,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p2.characters.0"
-      ]
+      "cards": ["p2.characters.0"]
     }
   ],
   "expect": {

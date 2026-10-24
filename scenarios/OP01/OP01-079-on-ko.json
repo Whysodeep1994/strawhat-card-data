@@ -1,22 +1,14 @@
 {
   "name": "Ms. All Sunday adds an Event from the trash when K.O.'d",
-  "rules": [
-    "10-2-17"
-  ],
+  "rules": ["10-2-17"],
   "setup": {
     "p1": {
-      "hand": [
-        "TEST-KO-EVENT"
-      ]
+      "hand": ["TEST-KO-EVENT"]
     },
     "p2": {
       "leader": "OP01-062",
-      "trash": [
-        "OP01-090"
-      ],
-      "characters": [
-        "OP01-079"
-      ]
+      "trash": ["OP01-090"],
+      "characters": ["OP01-079"]
     }
   },
   "actions": [
@@ -28,16 +20,12 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p2.characters.0"
-      ]
+      "cards": ["p2.characters.0"]
     },
     {
       "type": "choose",
       "player": "p2",
-      "cards": [
-        "p2.trash.1"
-      ]
+      "cards": ["p2.trash.1"]
     }
   ],
   "expect": {

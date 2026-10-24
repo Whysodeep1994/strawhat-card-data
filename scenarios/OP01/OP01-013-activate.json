@@ -1,13 +1,9 @@
 {
   "name": "Sanji takes a Life card for +2000 and 2 rested DON!!",
-  "rules": [
-    "10-2-2"
-  ],
+  "rules": ["10-2-2"],
   "setup": {
     "p1": {
-      "characters": [
-        "OP01-013"
-      ],
+      "characters": ["OP01-013"],
       "don": {
         "rested": 3
       }

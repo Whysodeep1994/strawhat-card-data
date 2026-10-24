@@ -1,13 +1,9 @@
 {
   "name": "Issho makes the opponent trash 2 cards",
-  "rules": [
-    "10-2-6"
-  ],
+  "rules": ["10-2-6"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP03-078"
-      ],
+      "hand": ["OP03-078"],
       "don": {
         "active": 8
       }
@@ -32,10 +28,7 @@
     {
       "type": "choose",
       "player": "p2",
-      "cards": [
-        "p2.hand.0",
-        "p2.hand.1"
-      ]
+      "cards": ["p2.hand.0", "p2.hand.1"]
     }
   ],
   "expect": {

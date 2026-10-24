@@ -1,8 +1,6 @@
 {
   "name": "Denjiro sets 2 DON!! active with Oden as Leader",
-  "rules": [
-    "10-2-5"
-  ],
+  "rules": ["10-2-5"],
   "setup": {
     "p1": {
       "leader": "OP01-031",

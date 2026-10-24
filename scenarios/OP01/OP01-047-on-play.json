@@ -1,17 +1,10 @@
 {
   "name": "Law returns a Character to play one with cost 3 or less",
-  "rules": [
-    "10-2-6"
-  ],
+  "rules": ["10-2-6"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP01-047",
-        "OP01-033"
-      ],
-      "characters": [
-        "OP01-012"
-      ],
+      "hand": ["OP01-047", "OP01-033"],
+      "characters": ["OP01-012"],
       "don": {
         "active": 5
       }
@@ -31,16 +24,12 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p1.characters.0"
-      ]
+      "cards": ["p1.characters.0"]
     },
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p1.hand.0"
-      ]
+      "cards": ["p1.hand.0"]
     }
   ],
   "expect": {

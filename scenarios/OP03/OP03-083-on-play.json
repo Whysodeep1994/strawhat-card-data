@@ -1,13 +1,9 @@
 {
   "name": "Corgy trashes 2 of the top 5 cards",
-  "rules": [
-    "10-2-6"
-  ],
+  "rules": ["10-2-6"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP03-083"
-      ],
+      "hand": ["OP03-083"],
       "don": {
         "active": 1
       }
@@ -22,10 +18,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p1.deck.0",
-        "p1.deck.1"
-      ]
+      "cards": ["p1.deck.0", "p1.deck.1"]
     }
   ],
   "expect": {

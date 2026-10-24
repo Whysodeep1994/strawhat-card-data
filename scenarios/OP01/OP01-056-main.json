@@ -1,13 +1,9 @@
 {
   "name": "Demon Face K.O.s 2 rested Characters",
-  "rules": [
-    "10-2-3"
-  ],
+  "rules": ["10-2-3"],
   "setup": {
     "p1": {
-      "hand": [
-        "OP01-056"
-      ],
+      "hand": ["OP01-056"],
       "don": {
         "active": 6
       }
@@ -35,10 +31,7 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": [
-        "p2.characters.0",
-        "p2.characters.1"
-      ]
+      "cards": ["p2.characters.0", "p2.characters.1"]
     }
   ],
   "expect": {
