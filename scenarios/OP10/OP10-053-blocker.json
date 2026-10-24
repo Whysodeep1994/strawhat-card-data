@@ -1,0 +1,23 @@
+{
+  "name": "Bian gains [Blocker] with another {The Tontattas}",
+  "rules": ["10-1-4"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "characters": ["OP10-053", "OP10-044"]
+    },
+    "p2": {}
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p2",
+      "attacker": "p2.leader",
+      "target": "p1.leader"
+    }
+  ],
+  "expect": {
+    "legal.p1.block": 1
+  }
+}

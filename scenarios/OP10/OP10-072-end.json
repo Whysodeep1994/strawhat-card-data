@@ -1,0 +1,22 @@
+{
+  "name": "Donquixote Rosinante sets 2 DON!! active at the end of the turn with 7 DON!!",
+  "rules": ["10-2-7"],
+  "setup": {
+    "p1": {
+      "characters": ["OP10-072"],
+      "don": {
+        "active": 0,
+        "rested": 7
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "endTurn",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "p1.donActive": 2
+  }
+}

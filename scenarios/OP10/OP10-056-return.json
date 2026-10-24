@@ -1,0 +1,39 @@
+{
+  "name": "Mansherry rests the Leader and returns a cost 4 {Dressrosa} to return a cost 4 Character",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "leader": "OP10-042",
+      "characters": ["OP10-045"],
+      "hand": ["OP10-056"],
+      "don": {
+        "active": 2
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C4-4000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p2.hand": 1,
+    "p1.leader.rested": true
+  }
+}

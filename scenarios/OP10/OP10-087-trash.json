@@ -1,0 +1,35 @@
+{
+  "name": "Tony Tony.Chopper makes the opponent trash 1 when they have 5 cards",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "OP10-042",
+      "characters": ["OP10-087"]
+    },
+    "p2": {
+      "hand": ["TEST-FILLER", "TEST-FILLER", "TEST-FILLER", "TEST-FILLER", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.hand.0"]
+    }
+  ],
+  "expect": {
+    "p2.hand": 4,
+    "p1.trash": 2
+  }
+}

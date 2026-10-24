@@ -1,0 +1,38 @@
+{
+  "name": "Bellamy rests 2 DON!! on block to add an active DON!!",
+  "rules": ["10-2-15"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "characters": ["OP10-077"],
+      "don": {
+        "active": 2,
+        "deck": 1
+      }
+    },
+    "p2": {}
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p2",
+      "attacker": "p2.leader",
+      "target": "p1.leader"
+    },
+    {
+      "type": "block",
+      "player": "p1",
+      "blocker": "p1.characters.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.donActive": 1,
+    "p1.donRested": 2
+  }
+}

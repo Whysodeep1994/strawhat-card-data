@@ -1,0 +1,22 @@
+{
+  "name": "Kin'emon (0) needs a 1000 power Kin'emon in the trash",
+  "rules": ["8-3-1"],
+  "setup": {
+    "p1": {
+      "characters": ["OP10-027"],
+      "trash": ["OP10-027"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0,
+      "illegal": true
+    }
+  ],
+  "expect": {
+    "p1.characters": 1
+  }
+}

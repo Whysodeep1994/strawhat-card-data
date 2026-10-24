@@ -1,0 +1,31 @@
+{
+  "name": "Hack adds a {Revolutionary Army} Character when attacking with 1 DON!!",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "OP10-051",
+          "don": 1
+        }
+      ],
+      "deck": ["TEST-FILLER", "OP10-047", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.1"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 1
+  }
+}

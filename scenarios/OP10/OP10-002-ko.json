@@ -1,0 +1,39 @@
+{
+  "name": "Caesar Clown returns a {Punk Hazard} Character to K.O. a 4000 power Character",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "leader": {
+        "card": "OP10-002",
+        "don": 2
+      },
+      "characters": ["OP10-017"]
+    },
+    "p2": {
+      "characters": ["TEST-C4-4000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 0,
+    "p1.hand": 1,
+    "p2.characters": 0
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "Sugar rests itself and 1 DON!! to add a {Donquixote Pirates} card",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["OP10-065"],
+      "don": {
+        "active": 1
+      },
+      "deck": ["OP10-073", "TEST-FILLER", "TEST-FILLER", "TEST-FILLER", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.0"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p1.donRested": 1
+  }
+}

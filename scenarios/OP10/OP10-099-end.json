@@ -1,0 +1,36 @@
+{
+  "name": "Eustass\"Captain\"Kid turns a Life card face-up to set a {Supernovas} Character active with [Blocker]",
+  "rules": ["10-2-7"],
+  "setup": {
+    "p1": {
+      "leader": "OP10-099",
+      "characters": [
+        {
+          "card": "OP10-101",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "endTurn",
+      "player": "p1"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters.0.rested": false,
+    "p1.life.0.faceUp": true,
+    "modifiers.0.keyword": "blocker"
+  }
+}

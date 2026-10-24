@@ -1,0 +1,26 @@
+{
+  "name": "Smoker sets 2 DON!! active with a 7000 power Character",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "OP10-001",
+      "characters": ["OP10-013"],
+      "don": {
+        "active": 0,
+        "rested": 3
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 1
+    }
+  ],
+  "expect": {
+    "p1.donActive": 2,
+    "p1.donRested": 1
+  }
+}
