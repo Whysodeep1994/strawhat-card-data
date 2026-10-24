@@ -1,0 +1,266 @@
+[
+  {
+    "id": "ST35-001",
+    "name": "Hack",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 4,
+    "power": 4000,
+    "counter": 1000,
+    "types": ["Fish-Man", "Dressrosa", "Revolutionary Army"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 5,
+    "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)\n[On Play] K.O. up to 1 of your opponent's Characters with 2000 base power or less.",
+    "image": "images/ST35-001.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569035",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "ko",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "basePowerAtMost": 2000
+              },
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST35-002",
+    "name": "Lindbergh",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 4,
+    "power": 4000,
+    "counter": 2000,
+    "types": ["Minks", "Revolutionary Army"],
+    "attribute": "Special",
+    "rarity": "C",
+    "blockIcon": 5,
+    "text": "[On Play] Give up to 1 of your opponent's Characters −3000 power during this turn.",
+    "image": "images/ST35-002.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569035",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "opponent",
+              "upTo": true
+            },
+            "amount": -3000,
+            "duration": "turn"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST35-003",
+    "name": "Karasu",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 3,
+    "power": 4000,
+    "counter": 2000,
+    "types": ["Revolutionary Army"],
+    "attribute": "Special",
+    "rarity": "C",
+    "blockIcon": 5,
+    "text": "[When Attacking] You may trash 2 cards from the top of your deck: If your opponent has 7 or more cards in their hand, your opponent trashes 1 card from their hand.",
+    "image": "images/ST35-003.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569035",
+    "effects": [
+      {
+        "timing": "whenAttacking",
+        "optional": true,
+        "costs": [
+          {
+            "trashFromDeckTop": 2
+          }
+        ],
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "opponentHandAtLeast": 7
+              }
+            ],
+            "steps": [
+              {
+                "do": "opponentTrashesFromHand",
+                "count": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST35-004",
+    "name": "Koala",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 7,
+    "power": 6000,
+    "counter": 1000,
+    "types": ["Dressrosa", "Revolutionary Army"],
+    "attribute": "Strike",
+    "rarity": "SR",
+    "blockIcon": 5,
+    "text": "This Character gains [Blocker] and +1 cost.\n[On Play] Give up to 1 rested DON!! card to your Leader. Then, play up to 1 Character card with 4000 power or less and the {Revolutionary Army} type from your hand or trash.",
+    "image": "images/ST35-004.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569035",
+    "effects": [
+      {
+        "timing": "permanent",
+        "steps": [
+          {
+            "do": "grantKeyword",
+            "target": {
+              "side": "this"
+            },
+            "keyword": "blocker"
+          },
+          {
+            "do": "costChange",
+            "target": {
+              "side": "this"
+            },
+            "amount": 1
+          }
+        ]
+      },
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "giveRestedDon",
+            "target": {
+              "side": "self",
+              "zone": "leader"
+            },
+            "count": 1
+          },
+          {
+            "do": "chooseOne",
+            "options": [
+              {
+                "label": "Play from your hand",
+                "steps": [
+                  {
+                    "do": "playFromHand",
+                    "filter": {
+                      "category": "character",
+                      "powerAtMost": 4000,
+                      "type": "Revolutionary Army"
+                    }
+                  }
+                ]
+              },
+              {
+                "label": "Play from your trash",
+                "steps": [
+                  {
+                    "do": "playFromTrash",
+                    "filter": {
+                      "category": "character",
+                      "powerAtMost": 4000,
+                      "type": "Revolutionary Army"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST35-005",
+    "name": "Bartholomew Kuma",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 5,
+    "power": 5000,
+    "counter": 1000,
+    "types": ["Revolutionary Army"],
+    "attribute": "Strike",
+    "rarity": "SR",
+    "blockIcon": 5,
+    "text": "This Character gains +3 cost.\n[On Play] Give up to 1 rested DON!! card to your Leader. Then, play up to 1 Character card with 4000 power or less and the {Revolutionary Army} type from your hand or trash.",
+    "image": "images/ST35-005.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569035",
+    "effects": [
+      {
+        "timing": "permanent",
+        "steps": [
+          {
+            "do": "costChange",
+            "target": {
+              "side": "this"
+            },
+            "amount": 3
+          }
+        ]
+      },
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "giveRestedDon",
+            "target": {
+              "side": "self",
+              "zone": "leader"
+            },
+            "count": 1
+          },
+          {
+            "do": "chooseOne",
+            "options": [
+              {
+                "label": "Play from your hand",
+                "steps": [
+                  {
+                    "do": "playFromHand",
+                    "filter": {
+                      "category": "character",
+                      "powerAtMost": 4000,
+                      "type": "Revolutionary Army"
+                    }
+                  }
+                ]
+              },
+              {
+                "label": "Play from your trash",
+                "steps": [
+                  {
+                    "do": "playFromTrash",
+                    "filter": {
+                      "category": "character",
+                      "powerAtMost": 4000,
+                      "type": "Revolutionary Army"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

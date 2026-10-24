@@ -1,0 +1,16 @@
+{
+  "name": "Borsalino costs 6 when nothing was trashed",
+  "rules": ["2-7-6"],
+  "setup": {
+    "p1": {
+      "hand": ["ST33-004"],
+      "don": {
+        "active": 3
+      }
+    }
+  },
+  "actions": [],
+  "expect": {
+    "legal.p1.playCard": 0
+  }
+}

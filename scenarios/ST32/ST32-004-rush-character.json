@@ -1,0 +1,27 @@
+{
+  "name": "Rayleigh can attack Characters the turn he is played with a <Slash> Leader",
+  "rules": ["10-1-6"],
+  "setup": {
+    "p1": {
+      "leader": "TEST-LEADER-SLASH",
+      "characters": [
+        {
+          "card": "ST32-004",
+          "playedThisTurn": true
+        }
+      ]
+    },
+    "p2": {
+      "characters": [
+        {
+          "card": "TEST-C0-1000",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [],
+  "expect": {
+    "legal.p1.attack": 3
+  }
+}

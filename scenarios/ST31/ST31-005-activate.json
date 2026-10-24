@@ -1,0 +1,30 @@
+{
+  "name": "Thousand Sunny rests to give a rested DON!! to Luffy",
+  "rules": ["8-3-1"],
+  "setup": {
+    "p1": {
+      "leader": "ST01-001",
+      "stage": "ST31-005",
+      "don": {
+        "rested": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.stage",
+      "effect": 1
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.stage.rested": true,
+    "p1.leader.givenDon": 1
+  }
+}
