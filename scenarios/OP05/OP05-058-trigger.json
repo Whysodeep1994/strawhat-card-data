@@ -1,0 +1,32 @@
+{
+  "name": "It's a Waste of Human Life!!'s [Trigger] clears cost 2 or less Characters",
+  "rules": ["10-1-5"],
+  "setup": {
+    "p1": {
+      "characters": ["TEST-FILLER", "TEST-C4-4000"]
+    },
+    "p2": {
+      "life": ["OP05-058", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.characters": 1
+  }
+}

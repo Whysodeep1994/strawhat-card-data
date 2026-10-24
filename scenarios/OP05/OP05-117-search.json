@@ -1,0 +1,41 @@
+{
+  "name": "Upper Yard finds a {Sky Island} card when played",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP05-117"],
+      "don": {
+        "active": 1
+      },
+      "deck": [
+        "OP05-108",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER"
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.0"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p1.stage.cardId": "OP05-117"
+  }
+}

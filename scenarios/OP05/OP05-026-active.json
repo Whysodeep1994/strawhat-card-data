@@ -1,0 +1,36 @@
+{
+  "name": "Sarquiss rests a cost 4 Character to set itself active",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "OP05-026",
+          "don": 1
+        },
+        "TEST-C4-4000"
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p1.characters.0.rested": false,
+    "p1.characters.1.rested": true
+  }
+}

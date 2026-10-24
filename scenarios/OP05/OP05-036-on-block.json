@@ -1,0 +1,37 @@
+{
+  "name": "Monet rests an opposing cost 4 Character when it blocks",
+  "rules": ["10-2-15"],
+  "setup": {
+    "p1": {
+      "characters": ["TEST-C4-4000"]
+    },
+    "p2": {
+      "characters": ["OP05-036"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "block",
+      "player": "p2",
+      "blocker": "p2.characters.0"
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p1.characters.0"]
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p1.characters.0.rested": true
+  }
+}

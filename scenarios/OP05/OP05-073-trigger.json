@@ -1,0 +1,39 @@
+{
+  "name": "Miss Doublefinger's [Trigger] returns 1 DON!! to play her",
+  "rules": ["10-1-5"],
+  "setup": {
+    "p2": {
+      "don": {
+        "active": 1
+      },
+      "life": ["OP05-073", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p2.characters": 1,
+    "p2.donActive": 0,
+    "p2.donDeck": 1
+  }
+}

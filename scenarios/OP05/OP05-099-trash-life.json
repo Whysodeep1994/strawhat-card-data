@@ -1,0 +1,35 @@
+{
+  "name": "Amazon makes the attacker choose to trash a Life card",
+  "rules": ["10-2-16"],
+  "setup": {
+    "p2": {
+      "characters": ["OP05-099"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    },
+    {
+      "type": "chooseOne",
+      "player": "p1",
+      "option": 0
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p1.life": 3,
+    "p2.characters.0.rested": true
+  }
+}

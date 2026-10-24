@@ -1,0 +1,31 @@
+{
+  "name": "Kotori K.O.s a Character when you have Hotori",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP05-103"],
+      "don": {
+        "active": 3
+      },
+      "characters": ["OP05-111"]
+    },
+    "p2": {
+      "characters": ["TEST-C4-4000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 0
+  }
+}
