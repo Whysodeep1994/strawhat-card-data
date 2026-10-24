@@ -1,0 +1,39 @@
+{
+  "name": "Without Your Help... gives +1000 and plays a [Sanji] at 1 Life",
+  "rules": ["10-2-4"],
+  "setup": {
+    "p2": {
+      "life": 1,
+      "hand": ["EB02-059", "EB02-054"],
+      "don": {
+        "active": 4
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "counterEvent",
+      "player": "p2",
+      "card": "p2.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.leader"]
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.hand.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 1
+  }
+}

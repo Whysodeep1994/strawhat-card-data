@@ -1,0 +1,30 @@
+{
+  "name": "Monkey.D.Luffy returns 2 active DON!! to set itself active and take a Life card",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": ["EB02-061"],
+      "don": {
+        "active": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.characters.0.rested": false,
+    "p1.hand": 1,
+    "p1.life": 3
+  }
+}

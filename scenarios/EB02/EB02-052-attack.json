@@ -1,0 +1,33 @@
+{
+  "name": "Enel trashes a card when attacking to add a Life card at 1 Life and gain +1000",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": ["EB02-052"],
+      "hand": ["TEST-FILLER"],
+      "life": 1
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p1.life": 2,
+    "modifiers.0.power": 1000,
+    "p2.life": 3
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Sabo rests to give a {Revolutionary Army} Character +2000",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["EB02-002", "EB02-002"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.characters.0.rested": true,
+    "modifiers": 0
+  }
+}

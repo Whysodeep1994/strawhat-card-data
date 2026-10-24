@@ -5,7 +5,7 @@
 //
 // The second argument is the "series" number from the card list URL on
 // https://en.onepiece-cardgame.com/cardlist/. Official fields (name, stats,
-// text, art) are refreshed every run. Hand-written fields (keywords, effects)
+// text, art) are refreshed every run. Hand-written fields (aliases, keywords, effects)
 // are kept, so re-running after an errata only changes what Bandai changed.
 // Card numbers after the series import only those cards (for example the
 // reprints in a starter deck) and keep the set's other cards in the file.
@@ -90,7 +90,10 @@ if (missing.length > 0) throw new Error(`Not in series ${series}: ${missing.join
 const file = join(root, "cards", `${set}.json`);
 const existing = existsSync(file) ? JSON.parse(readFileSync(file, "utf8")) : [];
 const handWritten = new Map(
-  existing.map((c) => [c.id, { keywords: c.keywords, effects: c.effects, notes: c.notes }]),
+  existing.map((c) => [
+    c.id,
+    { aliases: c.aliases, keywords: c.keywords, effects: c.effects, notes: c.notes },
+  ]),
 );
 const imported = found.map((c) => {
   const kept = handWritten.get(c.id) ?? {};

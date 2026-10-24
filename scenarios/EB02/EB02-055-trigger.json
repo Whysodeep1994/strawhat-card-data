@@ -1,0 +1,29 @@
+{
+  "name": "Jinbe [Trigger] needs a {Fish-Man} or {Merfolk} Leader",
+  "rules": ["10-1-5"],
+  "setup": {
+    "p2": {
+      "life": ["EB02-055", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p2.characters": 0
+  }
+}

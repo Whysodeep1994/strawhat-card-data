@@ -26,6 +26,11 @@ pnpm check
 
 `pnpm test` first downloads the engine at the commit in `engine.json` into `.engine/`.
 
+## Hand-written fields
+
+Re-running the importer keeps `keywords`, `effects`, and `aliases`. `aliases` lists other names a
+card counts as ("Also treat this card's name as [Tony Tony.Chopper] according to the rules").
+
 ## Ownership
 
 Card art, card text, and card names are © Eiichiro Oda/Shueisha, Toei Animation, and BANDAI.
