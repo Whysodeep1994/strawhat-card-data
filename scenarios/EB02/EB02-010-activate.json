@@ -1,0 +1,27 @@
+{
+  "name": "Monkey.D.Luffy sets 2 DON!! active when all Characters are {Straw Hat Crew}",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "EB02-010",
+      "characters": ["EB02-017"],
+      "don": {
+        "active": 1,
+        "rested": 4
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 0
+    }
+  ],
+  "expect": {
+    "p1.donActive": 3,
+    "p1.donRested": 0,
+    "modifiers.0.power": 1000
+  }
+}

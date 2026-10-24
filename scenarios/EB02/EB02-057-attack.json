@@ -1,0 +1,45 @@
+{
+  "name": "Mad Treasure takes a Life card to put an opponent's Character into their Life face-up",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": ["EB02-057"]
+    },
+    "p2": {
+      "characters": ["TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": false
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": false
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p2.life": 5,
+    "p2.life.0.faceUp": true
+  }
+}

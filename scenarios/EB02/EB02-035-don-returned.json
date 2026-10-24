@@ -1,0 +1,25 @@
+{
+  "name": "Sanji & Pudding adds an active DON!! when 2 DON!! are returned",
+  "rules": ["8-1-3-1"],
+  "setup": {
+    "p1": {
+      "leader": "EB02-010",
+      "characters": ["EB02-035"],
+      "don": {
+        "active": 4,
+        "deck": 6
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 0
+    }
+  ],
+  "expect": {
+    "p1.donDeck": 7
+  }
+}

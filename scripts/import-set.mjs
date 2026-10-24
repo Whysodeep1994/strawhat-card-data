@@ -5,7 +5,7 @@
 //
 // The second argument is the "series" number from the card list URL on
 // https://en.onepiece-cardgame.com/cardlist/. Official fields (name, stats,
-// text, art) are refreshed every run. Hand-written fields (keywords, effects)
+// text, art) are refreshed every run. Hand-written fields (aliases, keywords, effects)
 // are kept, so re-running after an errata only changes what Bandai changed.
 // Card numbers after the series import only those cards (for example the
 // reprints in a starter deck) and keep the set's other cards in the file.
