@@ -1,0 +1,30 @@
+{
+  "name": "Nekomamushi with 8 DON!! K.O.s a 3000 base power or less Character",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP13-071"],
+      "don": {
+        "active": 8
+      }
+    },
+    "p2": {
+      "characters": ["TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 0
+  }
+}

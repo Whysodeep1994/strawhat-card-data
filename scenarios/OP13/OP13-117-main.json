@@ -1,0 +1,36 @@
+{
+  "name": "Gum-Gum Dawn Stamp turns a Life card face-up to K.O. a base cost 6 or less Character",
+  "rules": ["10-2-3"],
+  "setup": {
+    "p1": {
+      "hand": ["OP13-117"],
+      "don": {
+        "active": 5
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C6-6000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 0,
+    "p1.life.0.faceUp": true
+  }
+}

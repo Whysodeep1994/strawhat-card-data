@@ -1,0 +1,38 @@
+{
+  "name": "Brilliant Punk returns your Character to return a cost 6 or less Character",
+  "rules": ["10-2-3"],
+  "setup": {
+    "p1": {
+      "hand": ["OP13-059"],
+      "characters": ["OP13-045"],
+      "don": {
+        "active": 4
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C6-6000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p2.hand": 1,
+    "p2.characters": 0
+  }
+}

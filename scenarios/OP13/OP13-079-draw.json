@@ -1,0 +1,27 @@
+{
+  "name": "Imu trashes 1 card from your hand to draw 1",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "OP13-079",
+      "hand": ["TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 2
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p1.trash": 1
+  }
+}

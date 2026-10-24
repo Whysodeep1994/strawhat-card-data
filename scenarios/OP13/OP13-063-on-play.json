@@ -1,0 +1,27 @@
+{
+  "name": "Kouzuki Oden with a given DON!! adds 1 DON!! rested",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "leader": {
+        "card": "TEST-LEADER",
+        "don": 1
+      },
+      "hand": ["OP13-063"],
+      "don": {
+        "active": 5,
+        "deck": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.donRested": 6
+  }
+}
