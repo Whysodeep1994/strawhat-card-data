@@ -1,0 +1,41 @@
+{
+  "name": "Baby 5 plays a 6000 power Character rested when K.O.'d",
+  "rules": ["10-2-17"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "characters": [
+        {
+          "card": "EB05-004",
+          "rested": true
+        }
+      ],
+      "hand": ["TEST-C6-6000"]
+    },
+    "p2": {
+      "characters": ["TEST-C8-8000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p2",
+      "attacker": "p2.characters.0",
+      "target": "p1.characters.0"
+    },
+    {
+      "type": "pass",
+      "player": "p1"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 1,
+    "p1.characters.0.rested": true
+  }
+}

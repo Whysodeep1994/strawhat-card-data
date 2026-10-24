@@ -1,0 +1,43 @@
+{
+  "name": "Speed adds 2 {SMILE} cards and plays 2 {SMILE} Characters",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["EB05-035"],
+      "don": {
+        "active": 7
+      },
+      "deck": ["TEST-SMILE", "TEST-SMILE", "TEST-FILLER", "TEST-FILLER", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.0", "p1.deck.1"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 3
+  }
+}

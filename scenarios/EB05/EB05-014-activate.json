@@ -1,0 +1,30 @@
+{
+  "name": "Shirahoshi rests to give a {Neptunian} Character [Rush]",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["EB05-014", "TEST-NEPTUNIAN"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 1
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.1"]
+    }
+  ],
+  "expect": {
+    "modifiers.0.keyword": "rush"
+  }
+}

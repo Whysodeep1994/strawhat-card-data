@@ -1,0 +1,27 @@
+{
+  "name": "Baby 5 reveals 2 Events to draw 2",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["EB05-004", "EB05-009", "EB05-009"],
+      "don": {
+        "active": 4
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.hand": 4
+  }
+}

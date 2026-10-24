@@ -1,0 +1,28 @@
+{
+  "name": "Russian gives [Senor Pink] +3000",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["EB05-038"],
+      "characters": ["TEST-PINK"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.0"]
+    }
+  ],
+  "expect": {
+    "modifiers.0.power": 3000
+  }
+}

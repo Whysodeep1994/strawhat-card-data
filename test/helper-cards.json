@@ -345,5 +345,124 @@
     "power": 5000,
     "life": 4,
     "types": ["Straw Hat Crew"]
+  },
+  {
+    "id": "TEST-LEADER-SHIRAHOSHI",
+    "name": "Shirahoshi",
+    "category": "leader",
+    "colors": ["green"],
+    "power": 5000,
+    "life": 4,
+    "types": ["Merfolk"]
+  },
+  {
+    "id": "TEST-LEADER-ROBIN",
+    "name": "Nico Robin",
+    "category": "leader",
+    "colors": ["yellow"],
+    "power": 5000,
+    "life": 4,
+    "types": ["Straw Hat Crew"],
+    "attribute": "Wisdom"
+  },
+  {
+    "id": "TEST-LEADER-NAMI",
+    "name": "Nami",
+    "category": "leader",
+    "colors": ["blue"],
+    "power": 5000,
+    "life": 4,
+    "types": ["Straw Hat Crew"]
+  },
+  {
+    "id": "TEST-LEADER-VINSMOKE",
+    "name": "Test Leader Vinsmoke",
+    "category": "leader",
+    "colors": ["purple"],
+    "power": 5000,
+    "life": 4,
+    "types": ["The Vinsmoke Family"]
+  },
+  {
+    "id": "TEST-LEADER-DONQUIXOTE",
+    "name": "Test Leader Donquixote",
+    "category": "leader",
+    "colors": ["purple"],
+    "power": 5000,
+    "life": 4,
+    "types": ["Donquixote Pirates"]
+  },
+  {
+    "id": "TEST-LEADER-IMPEL",
+    "name": "Test Leader Impel Down",
+    "category": "leader",
+    "colors": ["blue"],
+    "power": 5000,
+    "life": 4,
+    "types": ["Impel Down"]
+  },
+  {
+    "id": "TEST-LEADER-BAROQUE",
+    "name": "Test Leader Baroque",
+    "category": "leader",
+    "colors": ["black"],
+    "power": 5000,
+    "life": 4,
+    "types": ["Baroque Works"]
+  },
+  {
+    "id": "TEST-WISDOM-3000",
+    "name": "Test Scholar",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 2,
+    "power": 3000,
+    "types": [],
+    "attribute": "Wisdom"
+  },
+  {
+    "id": "TEST-PINK",
+    "name": "Senor Pink",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 3,
+    "power": 4000,
+    "types": []
+  },
+  {
+    "id": "TEST-CROSS-GUILD",
+    "name": "Test Cross Guild",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 3,
+    "power": 4000,
+    "types": ["Cross Guild"]
+  },
+  {
+    "id": "TEST-SMILE",
+    "name": "Test SMILE",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 2,
+    "power": 3000,
+    "types": ["SMILE"]
+  },
+  {
+    "id": "TEST-NEPTUNIAN",
+    "name": "Test Neptunian",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 2,
+    "power": 3000,
+    "types": ["Neptunian"]
+  },
+  {
+    "id": "TEST-THRILLER",
+    "name": "Test Thriller",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 2,
+    "power": 3000,
+    "types": ["Thriller Bark Pirates"]
   }
 ]
