@@ -1,0 +1,45 @@
+{
+  "name": "Boa Hancock bottoms a Character to give the Leader and a Character a DON!!",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["EB03-026", "TEST-FILLER", "TEST-C5-5000"],
+      "don": {
+        "rested": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 1
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.1"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.leader"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 2,
+    "p1.leader.givenDon": 1,
+    "p1.characters.0.givenDon": 1
+  }
+}

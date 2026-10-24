@@ -1,0 +1,32 @@
+{
+  "name": "Vinsmoke Reiju does nothing without a [Sanji] Leader",
+  "rules": ["10-2-6", "8-3-3"],
+  "setup": {
+    "p1": {
+      "hand": ["EB03-031"],
+      "don": {
+        "active": 5
+      },
+      "trash": ["TEST-KO-EVENT"]
+    },
+    "p2": {
+      "characters": ["TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p2.characters": 1,
+    "p1.donRested": 4
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Tashigi rests a DON!! and trashes a card to set itself active at the end of your turn",
+  "rules": ["10-2-7"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "EB03-018",
+          "rested": true
+        }
+      ],
+      "hand": ["TEST-FILLER"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "endTurn",
+      "player": "p1"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.characters.0.rested": false,
+    "p1.hand": 0
+  }
+}

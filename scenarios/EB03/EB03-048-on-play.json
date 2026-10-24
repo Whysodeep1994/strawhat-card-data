@@ -1,0 +1,23 @@
+{
+  "name": "Rebecca finds no {Dressrosa} Stage and puts the cards back",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["EB03-048"],
+      "don": {
+        "active": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.deck": 20,
+    "p1.hand": 0
+  }
+}

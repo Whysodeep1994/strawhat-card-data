@@ -1,0 +1,42 @@
+{
+  "name": "Hina trashes a card to return a 6000 base power Character",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["EB03-025", "TEST-FILLER"],
+      "don": {
+        "active": 5
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C6-6000", "TEST-C5-5000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.1"],
+      "illegal": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.hand": 1,
+    "p2.characters": 1
+  }
+}
