@@ -1,0 +1,39 @@
+{
+  "name": "Zeff trashes 4 from the deck when the opponent blocks",
+  "rules": ["8-1-3-1"],
+  "setup": {
+    "p1": {
+      "leader": "P-117",
+      "characters": ["OP06-048"]
+    },
+    "p2": {
+      "characters": ["TEST-BLOCKER-2000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "block",
+      "player": "p2",
+      "blocker": "p2.characters.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p1.trash": 4,
+    "p1.deck": 16
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Dosun gains +2000 and takes a Life card",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "leader": "OP06-020",
+      "characters": ["OP06-030"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p1.life": 3,
+    "p2.life": 3
+  }
+}

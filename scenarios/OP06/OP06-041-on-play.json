@@ -1,0 +1,27 @@
+{
+  "name": "The Ark Noah rests all of the opponent's Characters",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP06-041"],
+      "don": {
+        "active": 6
+      }
+    },
+    "p2": {
+      "characters": ["TEST-FILLER", "TEST-C7-7000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.stage.cardId": "OP06-041",
+    "p2.characters.0.rested": true,
+    "p2.characters.1.rested": true
+  }
+}

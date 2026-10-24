@@ -1,0 +1,19 @@
+{
+  "name": "Oars cannot attack",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "characters": ["OP06-083"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader",
+      "illegal": true
+    }
+  ],
+  "expect": {}
+}

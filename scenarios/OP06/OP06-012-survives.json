@@ -1,0 +1,33 @@
+{
+  "name": "Bear.King can't be K.O.'d in battle while the opponent has a 6000 base power Leader",
+  "rules": ["7-1-4-2"],
+  "setup": {
+    "p1": {
+      "leader": "TEST-LEADER-6000",
+      "characters": ["TEST-C8-8000"]
+    },
+    "p2": {
+      "characters": [
+        {
+          "card": "OP06-012",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.characters.0"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.characters": 1
+  }
+}
