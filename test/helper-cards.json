@@ -219,5 +219,41 @@
     "cost": 5,
     "power": 6000,
     "types": ["GERMA 66"]
+  },
+  {
+    "id": "TEST-LEADER-SLASH",
+    "name": "Test Leader Slash",
+    "category": "leader",
+    "colors": ["green"],
+    "power": 5000,
+    "life": 4,
+    "attribute": "Slash"
+  },
+  {
+    "id": "TEST-LEADER-NAVY",
+    "name": "Test Leader Navy",
+    "category": "leader",
+    "colors": ["blue"],
+    "power": 5000,
+    "life": 4,
+    "types": ["Navy"]
+  },
+  {
+    "id": "TEST-LEADER-BMP",
+    "name": "Test Leader Big Mom Pirates",
+    "category": "leader",
+    "colors": ["black"],
+    "power": 5000,
+    "life": 4,
+    "types": ["Big Mom Pirates"]
+  },
+  {
+    "id": "TEST-LEADER-SUPERNOVAS",
+    "name": "Test Leader Supernovas",
+    "category": "leader",
+    "colors": ["yellow"],
+    "power": 5000,
+    "life": 4,
+    "types": ["Supernovas"]
   }
 ]

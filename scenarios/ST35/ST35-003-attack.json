@@ -1,0 +1,43 @@
+{
+  "name": "Trashing 2 from the deck makes an opponent with 7 cards trash 1",
+  "rules": ["8-3-1-3"],
+  "setup": {
+    "p1": {
+      "characters": ["ST35-003"]
+    },
+    "p2": {
+      "hand": [
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER"
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.trash": 2,
+    "p1.deck": 18,
+    "p2.hand": 6
+  }
+}

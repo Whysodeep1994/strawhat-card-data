@@ -1,0 +1,238 @@
+[
+  {
+    "id": "ST32-001",
+    "name": "Kin'emon",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 1,
+    "power": 2000,
+    "counter": 1000,
+    "types": ["Land of Wano", "The Akazaya Nine"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 5,
+    "text": "[On Play] You may rest your  attribute Leader or 1 of your DON!! cards: Draw 2 cards and trash 1 card from your hand.",
+    "image": "images/ST32-001.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569032",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "optional": true,
+        "costs": [
+          {
+            "oneOf": [
+              {
+                "restOwn": {
+                  "category": "leader",
+                  "attribute": "Slash"
+                }
+              },
+              {
+                "restDon": 1
+              }
+            ]
+          }
+        ],
+        "steps": [
+          {
+            "do": "draw",
+            "count": 2
+          },
+          {
+            "do": "trashFromHand",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST32-002",
+    "name": "Kouzuki Oden",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 5,
+    "power": 6000,
+    "counter": 1000,
+    "types": ["Land of Wano", "Kouzuki Clan"],
+    "attribute": "Slash",
+    "rarity": "SR",
+    "blockIcon": 5,
+    "text": "[On Play] Draw 1 card and up to 1 of your opponent's Characters with a base cost of 6 or less cannot be rested until the end of your opponent's next End Phase.",
+    "image": "images/ST32-002.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569032",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "draw",
+            "count": 1
+          },
+          {
+            "do": "grantStatus",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "baseCostAtMost": 6
+              },
+              "upTo": true
+            },
+            "status": "cannotBeRested",
+            "duration": "opponentsNextTurn"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST32-003",
+    "name": "Dracule Mihawk",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 6,
+    "power": 7000,
+    "types": ["Muggy Kingdom", "The Seven Warlords of the Sea"],
+    "attribute": "Slash",
+    "rarity": "SR",
+    "blockIcon": 5,
+    "text": "[Your Turn] When this Character becomes rested, draw 1 card and trash 1 card from your hand.\n[On Play] If your Leader has the  attribute, play up to 1 Character card with a cost of 5 or less that is either [Perona] or has the  attribute from your hand.",
+    "image": "images/ST32-003.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569032",
+    "effects": [
+      {
+        "timing": "becomesRested",
+        "conditions": [
+          {
+            "yourTurn": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "draw",
+            "count": 1
+          },
+          {
+            "do": "trashFromHand",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "timing": "onPlay",
+        "conditions": [
+          {
+            "leaderAttribute": "Slash"
+          }
+        ],
+        "steps": [
+          {
+            "do": "playFromHand",
+            "filter": {
+              "category": "character",
+              "costAtMost": 5,
+              "anyOf": [
+                {
+                  "name": "Perona"
+                },
+                {
+                  "attribute": "Slash"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST32-004",
+    "name": "Silvers Rayleigh",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 4,
+    "power": 5000,
+    "counter": 1000,
+    "types": ["Former Roger Pirates"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 5,
+    "text": "If your Leader has the  attribute, this Character gains [Rush: Character].\n(This card can attack Characters on the turn in which it is played.)\n[On Play] Rest up to 2 of your opponent's Characters with a cost of 2 or less.",
+    "image": "images/ST32-004.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569032",
+    "effects": [
+      {
+        "timing": "permanent",
+        "conditions": [
+          {
+            "leaderAttribute": "Slash"
+          }
+        ],
+        "steps": [
+          {
+            "do": "grantKeyword",
+            "target": {
+              "side": "this"
+            },
+            "keyword": "rushCharacter"
+          }
+        ]
+      },
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "rest",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "costAtMost": 2
+              },
+              "count": 2,
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST32-005",
+    "name": "Roronoa Zoro",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 1,
+    "power": 2000,
+    "counter": 2000,
+    "types": ["Supernovas", "Straw Hat Crew"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 5,
+    "text": "[Rush: Character] (This card can attack Characters on the turn in which it is played.)\n[On Play] If your Leader has the  attribute, rest up to 1 of your opponent's Characters with a cost of 2 or less.",
+    "image": "images/ST32-005.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569032",
+    "keywords": ["rushCharacter"],
+    "effects": [
+      {
+        "timing": "onPlay",
+        "conditions": [
+          {
+            "leaderAttribute": "Slash"
+          }
+        ],
+        "steps": [
+          {
+            "do": "rest",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "costAtMost": 2
+              },
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,241 @@
+[
+  {
+    "id": "ST31-001",
+    "name": "Sanji",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 5,
+    "power": 3000,
+    "counter": 1000,
+    "types": ["Straw Hat Crew"],
+    "attribute": "Strike",
+    "rarity": "SR",
+    "blockIcon": 5,
+    "text": "[DON!! x2] This Character gains [Rush].\n(This card can attack on the turn in which it is played.)\n[On Play] Draw 1 card and play up to 1 {Straw Hat Crew} type Character card with a cost of 5 or less other than [Sanji] from your hand.",
+    "image": "images/ST31-001.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569031",
+    "effects": [
+      {
+        "timing": "permanent",
+        "conditions": [
+          {
+            "donAtLeast": 2
+          }
+        ],
+        "steps": [
+          {
+            "do": "grantKeyword",
+            "target": {
+              "side": "this"
+            },
+            "keyword": "rush"
+          }
+        ]
+      },
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "draw",
+            "count": 1
+          },
+          {
+            "do": "playFromHand",
+            "filter": {
+              "category": "character",
+              "type": "Straw Hat Crew",
+              "costAtMost": 5,
+              "notName": "Sanji"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST31-002",
+    "name": "Jinbe",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 5,
+    "power": 6000,
+    "counter": 1000,
+    "types": ["Fish-Man", "Straw Hat Crew"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 5,
+    "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)\n[On Play] Draw 1 card and play up to 1 {Straw Hat Crew} type card with a cost of 1 from your hand.",
+    "image": "images/ST31-002.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569031",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "draw",
+            "count": 1
+          },
+          {
+            "do": "playFromHand",
+            "filter": {
+              "type": "Straw Hat Crew",
+              "costAtLeast": 1,
+              "costAtMost": 1
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST31-003",
+    "name": "Brook",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 2,
+    "power": 3000,
+    "counter": 1000,
+    "types": ["Straw Hat Crew"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 5,
+    "text": "[Opponent's Turn] If you have a total of 3 or more given DON!! cards, this Character gains [Blocker] and +3000 power.\n(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)",
+    "image": "images/ST31-003.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569031",
+    "effects": [
+      {
+        "timing": "permanent",
+        "conditions": [
+          {
+            "opponentsTurn": true
+          },
+          {
+            "givenDonAtLeast": 3
+          }
+        ],
+        "steps": [
+          {
+            "do": "grantKeyword",
+            "target": {
+              "side": "this"
+            },
+            "keyword": "blocker"
+          },
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "this"
+            },
+            "amount": 3000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST31-004",
+    "name": "Monkey.D.Luffy",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 7,
+    "power": 9000,
+    "types": ["The Four Emperors", "Straw Hat Crew"],
+    "attribute": "Strike",
+    "rarity": "SR",
+    "blockIcon": 5,
+    "text": "If you have a total of 3 or more given DON!! cards, this Character gains [Rush].\n(This card can attack on the turn in which it is played.)\n[On Play] For every {Straw Hat Crew} type card on your field, give up to 1 of your opponent's Characters −1000 power during this turn.",
+    "image": "images/ST31-004.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569031",
+    "effects": [
+      {
+        "timing": "permanent",
+        "conditions": [
+          {
+            "givenDonAtLeast": 3
+          }
+        ],
+        "steps": [
+          {
+            "do": "grantKeyword",
+            "target": {
+              "side": "this"
+            },
+            "keyword": "rush"
+          }
+        ]
+      },
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "opponent",
+              "upTo": true
+            },
+            "amount": -1000,
+            "duration": "turn",
+            "perCount": {
+              "side": "self",
+              "zone": "field",
+              "filter": {
+                "type": "Straw Hat Crew"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST31-005",
+    "name": "Thousand Sunny",
+    "category": "stage",
+    "colors": ["red"],
+    "cost": 1,
+    "types": ["Straw Hat Crew"],
+    "rarity": "C",
+    "blockIcon": 5,
+    "text": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 {Straw Hat Crew} type card and add it to your hand. Then, place the rest at the bottom of your deck in any order.\n[Activate: Main] You may rest this Stage: Give up to 1 rested DON!! card to 1 of your [Monkey.D.Luffy] cards.",
+    "image": "images/ST31-005.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569031",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "searchDeck",
+            "look": 5,
+            "take": 1,
+            "filter": {
+              "type": "Straw Hat Crew"
+            }
+          }
+        ]
+      },
+      {
+        "timing": "activateMain",
+        "optional": true,
+        "costs": [
+          {
+            "restThis": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "giveRestedDon",
+            "target": {
+              "side": "self",
+              "zone": "leaderOrCharacters",
+              "filter": {
+                "name": "Monkey.D.Luffy"
+              }
+            },
+            "count": 1
+          }
+        ]
+      }
+    ]
+  }
+]
