@@ -3427,7 +3427,7 @@
         "timing": "onPlay",
         "steps": [
           {
-            "do": "deckToTrash",
+            "do": "trashDeckTop",
             "count": 1
           }
         ]
