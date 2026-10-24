@@ -1,0 +1,36 @@
+{
+  "name": "We Are! adds a cost 4 or more card from the top 4",
+  "rules": ["10-2-3"],
+  "setup": {
+    "p1": {
+      "hand": ["EB02-020"],
+      "don": {
+        "active": 2
+      },
+      "deck": ["TEST-FILLER", "TEST-C5-5000", "TEST-C4-4000", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.0"],
+      "illegal": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.2"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p1.hand.0.cardId": "TEST-C4-4000",
+    "p1.deck": 3
+  }
+}

@@ -179,5 +179,45 @@
     "life": 4,
     "power": 5000,
     "types": ["Egghead"]
+  },
+  {
+    "id": "TEST-BOUNCE-EVENT",
+    "name": "Test Bounce Event",
+    "category": "event",
+    "colors": ["red"],
+    "cost": 0,
+    "text": "[Main] Return up to 1 of your opponent's Characters to the owner's hand.",
+    "effects": [
+      {
+        "timing": "main",
+        "steps": [
+          {
+            "do": "returnToHand",
+            "target": {
+              "side": "opponent",
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "TEST-GERMA-3000",
+    "name": "Test Vinsmoke",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 2,
+    "power": 3000,
+    "types": ["GERMA 66"]
+  },
+  {
+    "id": "TEST-GERMA-6000",
+    "name": "Test Vinsmoke",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 5,
+    "power": 6000,
+    "types": ["GERMA 66"]
   }
 ]

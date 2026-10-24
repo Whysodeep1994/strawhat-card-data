@@ -1,0 +1,36 @@
+{
+  "name": "BRAND NEW WORLD [Trigger] activates its [Main] effect",
+  "rules": ["10-1-5"],
+  "setup": {
+    "p2": {
+      "life": ["EB02-040", "TEST-FILLER"],
+      "deck": ["TEST-C5-5000", "TEST-FILLER", "TEST-FILLER", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.deck.0"]
+    }
+  ],
+  "expect": {
+    "p2.hand": 1,
+    "p2.hand.0.cardId": "TEST-C5-5000"
+  }
+}
