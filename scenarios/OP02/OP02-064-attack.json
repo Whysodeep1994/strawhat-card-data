@@ -1,0 +1,45 @@
+{
+  "name": "Mr.2 sends a cost 2 Character away, then itself after the battle",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "hand": ["TEST-FILLER"],
+      "characters": [
+        {
+          "card": "OP02-064",
+          "don": 1
+        }
+      ]
+    },
+    "p2": {
+      "characters": ["OP02-060"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.characters": 0,
+    "p1.characters": 0,
+    "p2.life": 3
+  }
+}

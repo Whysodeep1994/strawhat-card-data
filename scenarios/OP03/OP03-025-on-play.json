@@ -1,0 +1,44 @@
+{
+  "name": "Krieg trashes a card to K.O. 2 rested Characters",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP03-025", "TEST-FILLER"],
+      "don": {
+        "active": 6
+      }
+    },
+    "p2": {
+      "characters": [
+        {
+          "card": "TEST-C4-4000",
+          "rested": true
+        },
+        {
+          "card": "TEST-FILLER",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0", "p2.characters.1"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 0
+  }
+}

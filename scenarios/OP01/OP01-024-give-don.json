@@ -1,0 +1,23 @@
+{
+  "name": "Luffy gives itself 2 rested DON!!",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["OP01-024"],
+      "don": {
+        "rested": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 1
+    }
+  ],
+  "expect": {
+    "p1.characters.0.givenDon": 2
+  }
+}

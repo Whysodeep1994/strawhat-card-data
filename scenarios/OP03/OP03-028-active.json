@@ -1,0 +1,38 @@
+{
+  "name": "Jango sets an East Blue Character active",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP03-028"],
+      "characters": [
+        {
+          "card": "OP03-023",
+          "rested": true
+        }
+      ],
+      "don": {
+        "active": 5
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "chooseOne",
+      "player": "p1",
+      "option": 0
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters.0.rested": false
+  }
+}

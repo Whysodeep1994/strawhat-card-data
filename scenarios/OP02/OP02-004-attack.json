@@ -1,0 +1,33 @@
+{
+  "name": "Newgate K.O.s a 3000 power Character",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "OP02-004",
+          "don": 2
+        }
+      ]
+    },
+    "p2": {
+      "characters": ["OP02-097"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 0
+  }
+}

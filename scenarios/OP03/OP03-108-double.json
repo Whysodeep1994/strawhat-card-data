@@ -1,0 +1,30 @@
+{
+  "name": "Cracker gains Double Attack with less Life",
+  "rules": ["10-1-2-1"],
+  "setup": {
+    "p1": {
+      "life": ["TEST-FILLER"],
+      "characters": [
+        {
+          "card": "OP03-108",
+          "don": 1
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 2
+  }
+}

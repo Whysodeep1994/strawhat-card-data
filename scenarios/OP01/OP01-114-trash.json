@@ -1,0 +1,31 @@
+{
+  "name": "X.Drake makes the opponent trash a card",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP01-114"],
+      "don": {
+        "active": 6
+      }
+    },
+    "p2": {
+      "hand": ["TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p2.hand": 0,
+    "p2.trash": 1
+  }
+}
