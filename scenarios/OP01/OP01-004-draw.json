@@ -1,0 +1,51 @@
+{
+  "name": "Usopp draws when the opponent uses a Counter Event on your turn",
+  "rules": [
+    "10-2-4"
+  ],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "OP01-004",
+          "don": 1
+        }
+      ]
+    },
+    "p2": {
+      "hand": [
+        "OP01-029"
+      ],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "counterEvent",
+      "player": "p2",
+      "card": "p2.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": [
+        "p2.leader"
+      ]
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p1.hand": 1
+  }
+}

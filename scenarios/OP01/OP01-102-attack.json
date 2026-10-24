@@ -1,0 +1,46 @@
+{
+  "name": "Jack makes the opponent trash a card",
+  "rules": [
+    "10-2-5"
+  ],
+  "setup": {
+    "p1": {
+      "characters": [
+        "OP01-102"
+      ],
+      "don": {
+        "active": 1
+      }
+    },
+    "p2": {
+      "hand": [
+        "TEST-FILLER",
+        "TEST-FILLER"
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": [
+        "p2.hand.0"
+      ]
+    }
+  ],
+  "expect": {
+    "p2.hand": 1,
+    "p1.donDeck": 1
+  }
+}

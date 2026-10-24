@@ -1,0 +1,34 @@
+{
+  "name": "Sanji takes a Life card for +2000 and 2 rested DON!!",
+  "rules": [
+    "10-2-2"
+  ],
+  "setup": {
+    "p1": {
+      "characters": [
+        "OP01-013"
+      ],
+      "don": {
+        "rested": 3
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.life": 3,
+    "p1.characters.0.givenDon": 2,
+    "power.p1.characters.0": 7000
+  }
+}

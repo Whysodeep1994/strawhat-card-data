@@ -1,0 +1,37 @@
+{
+  "name": "Bepo plays a Heart Pirates Character",
+  "rules": [
+    "10-2-5"
+  ],
+  "setup": {
+    "p1": {
+      "hand": [
+        "OP01-045"
+      ],
+      "characters": [
+        {
+          "card": "OP01-049",
+          "don": 1
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": [
+        "p1.hand.0"
+      ]
+    }
+  ],
+  "expect": {
+    "p1.characters": 2
+  }
+}

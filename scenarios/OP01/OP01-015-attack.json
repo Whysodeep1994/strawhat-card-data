@@ -1,0 +1,46 @@
+{
+  "name": "Chopper trashes a card to get a Straw Hat Crew Character back",
+  "rules": [
+    "10-2-5"
+  ],
+  "setup": {
+    "p1": {
+      "hand": [
+        "TEST-FILLER"
+      ],
+      "trash": [
+        "OP01-013"
+      ],
+      "characters": [
+        {
+          "card": "OP01-015",
+          "don": 1
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": [
+        "p1.trash.1"
+      ]
+    }
+  ],
+  "expect": {
+    "p1.hand.0.cardId": "OP01-013",
+    "p1.trash": 1
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "name": "Jinbe plays a red cost 2 Character when it blocks",
+  "rules": [
+    "10-2-15"
+  ],
+  "setup": {
+    "p1": {
+      "characters": [
+        "TEST-C4-4000"
+      ]
+    },
+    "p2": {
+      "hand": [
+        "OP01-012"
+      ],
+      "characters": [
+        {
+          "card": "OP01-014",
+          "don": 1
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "block",
+      "player": "p2",
+      "blocker": "p2.characters.0"
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": [
+        "p2.hand.0"
+      ]
+    }
+  ],
+  "expect": {
+    "p2.characters": 2,
+    "p2.hand": 0
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "You Can Be My Samurai!! rests 2 Characters to draw 2",
+  "rules": [
+    "10-2-3"
+  ],
+  "setup": {
+    "p1": {
+      "hand": [
+        "OP01-055"
+      ],
+      "characters": [
+        "TEST-FILLER",
+        "TEST-FILLER"
+      ],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.hand": 2,
+    "p1.characters.0.rested": true,
+    "p1.characters.1.rested": true
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "A Character with no effect can be played",
+  "rules": [
+    "6-5-3-1"
+  ],
+  "setup": {
+    "p1": {
+      "hand": [
+        "OP01-092"
+      ],
+      "don": {
+        "active": 7
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.characters": 1,
+    "p1.donActive": 0
+  }
+}

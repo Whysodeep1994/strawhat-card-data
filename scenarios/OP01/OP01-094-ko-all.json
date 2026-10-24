@@ -1,0 +1,43 @@
+{
+  "name": "Kaido K.O.s all other Characters",
+  "rules": [
+    "10-2-6"
+  ],
+  "setup": {
+    "p1": {
+      "leader": "OP01-061",
+      "hand": [
+        "OP01-094"
+      ],
+      "characters": [
+        "TEST-FILLER"
+      ],
+      "don": {
+        "active": 10
+      }
+    },
+    "p2": {
+      "characters": [
+        "TEST-FILLER",
+        "TEST-C9-10000"
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.characters": 1,
+    "p2.characters": 0,
+    "p1.donDeck": 6
+  }
+}

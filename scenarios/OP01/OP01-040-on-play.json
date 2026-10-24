@@ -1,0 +1,35 @@
+{
+  "name": "Kin'emon plays an Akazaya Nine Character with Oden as Leader",
+  "rules": [
+    "10-2-6"
+  ],
+  "setup": {
+    "p1": {
+      "leader": "OP01-031",
+      "hand": [
+        "OP01-040",
+        "OP01-037"
+      ],
+      "don": {
+        "active": 6
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": [
+        "p1.hand.0"
+      ]
+    }
+  ],
+  "expect": {
+    "p1.characters": 2
+  }
+}

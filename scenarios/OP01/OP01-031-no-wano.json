@@ -1,0 +1,21 @@
+{
+  "name": "Oden can't activate without a Land of Wano card",
+  "rules": [
+    "10-2-2"
+  ],
+  "setup": {
+    "p1": {
+      "leader": "OP01-031",
+      "hand": [
+        "TEST-FILLER"
+      ],
+      "don": {
+        "rested": 3
+      }
+    }
+  },
+  "actions": [],
+  "expect": {
+    "legal.p1.activate": 0
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "Mihawk places a cost 7 Character at the bottom of the deck",
+  "rules": [
+    "10-2-6"
+  ],
+  "setup": {
+    "p1": {
+      "hand": [
+        "OP01-070"
+      ],
+      "don": {
+        "active": 9
+      }
+    },
+    "p2": {
+      "characters": [
+        "TEST-C7-7000"
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": [
+        "p2.characters.0"
+      ]
+    }
+  ],
+  "expect": {
+    "p2.characters": 0,
+    "p2.deck": 21
+  }
+}

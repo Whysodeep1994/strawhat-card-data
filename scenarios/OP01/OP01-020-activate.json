@@ -1,0 +1,32 @@
+{
+  "name": "Hyogoro rests to give +2000",
+  "rules": [
+    "10-2-2"
+  ],
+  "setup": {
+    "p1": {
+      "characters": [
+        "OP01-020"
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": [
+        "p1.leader"
+      ]
+    }
+  ],
+  "expect": {
+    "p1.characters.0.rested": true,
+    "power.p1.leader": 7000
+  }
+}

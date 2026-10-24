@@ -1,0 +1,31 @@
+{
+  "name": "Denjiro sets 2 DON!! active with Oden as Leader",
+  "rules": [
+    "10-2-5"
+  ],
+  "setup": {
+    "p1": {
+      "leader": "OP01-031",
+      "characters": [
+        {
+          "card": "OP01-046",
+          "don": 1
+        }
+      ],
+      "don": {
+        "rested": 3
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    }
+  ],
+  "expect": {
+    "p1.donActive": 2
+  }
+}

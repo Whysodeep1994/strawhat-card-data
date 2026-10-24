@@ -1,0 +1,40 @@
+{
+  "name": "SMILE plays a SMILE Character from the top 5",
+  "rules": [
+    "10-2-3"
+  ],
+  "setup": {
+    "p1": {
+      "hand": [
+        "OP01-116"
+      ],
+      "deck": [
+        "TEST-FILLER",
+        "OP01-113",
+        "TEST-FILLER"
+      ],
+      "don": {
+        "active": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": [
+        "p1.deck.1"
+      ]
+    }
+  ],
+  "expect": {
+    "p1.characters": 1,
+    "p1.characters.0.cardId": "OP01-113",
+    "p1.deck": 2
+  }
+}

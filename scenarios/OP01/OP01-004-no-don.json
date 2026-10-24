@@ -1,0 +1,48 @@
+{
+  "name": "Usopp doesn't draw without DON!!",
+  "rules": [
+    "10-2-4"
+  ],
+  "setup": {
+    "p1": {
+      "characters": [
+        "OP01-004"
+      ]
+    },
+    "p2": {
+      "hand": [
+        "OP01-029"
+      ],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "counterEvent",
+      "player": "p2",
+      "card": "p2.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": [
+        "p2.leader"
+      ]
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p1.hand": 0
+  }
+}

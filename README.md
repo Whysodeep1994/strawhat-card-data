@@ -32,7 +32,7 @@ Official fields come straight from the
 `text`, `trigger`, `image`, `source`. `errata: true` means the official site lists an errata for
 the card; `text` is always the current official wording.
 
-Hand-written fields: `keywords`, `effects`, and `notes` (why an effect is written the way it is).
+Hand-written fields: `keywords`, `alsoNamed` ("also treat this card's name as"), `anyNumberInDeck`, `effects`, and `notes` (why an effect is written the way it is).
 
 ## Adding a set
 

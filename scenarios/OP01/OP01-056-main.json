@@ -1,0 +1,47 @@
+{
+  "name": "Demon Face K.O.s 2 rested Characters",
+  "rules": [
+    "10-2-3"
+  ],
+  "setup": {
+    "p1": {
+      "hand": [
+        "OP01-056"
+      ],
+      "don": {
+        "active": 6
+      }
+    },
+    "p2": {
+      "characters": [
+        {
+          "card": "TEST-C5-5000",
+          "rested": true
+        },
+        {
+          "card": "TEST-FILLER",
+          "rested": true
+        },
+        "TEST-FILLER"
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": [
+        "p2.characters.0",
+        "p2.characters.1"
+      ]
+    }
+  ],
+  "expect": {
+    "p2.characters": 1
+  }
+}

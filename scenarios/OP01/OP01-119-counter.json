@@ -1,0 +1,42 @@
+{
+  "name": "Thunder Bagua gives +4000 and adds DON!! with 2 Life",
+  "rules": [
+    "10-2-4"
+  ],
+  "setup": {
+    "p2": {
+      "hand": [
+        "OP01-119"
+      ],
+      "life": 2,
+      "don": {
+        "active": 2,
+        "deck": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "counterEvent",
+      "player": "p2",
+      "card": "p2.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": [
+        "p2.leader"
+      ]
+    }
+  ],
+  "expect": {
+    "power.p2.leader": 9000,
+    "p2.donRested": 3
+  }
+}

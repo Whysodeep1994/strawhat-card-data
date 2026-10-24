@@ -1,0 +1,33 @@
+{
+  "name": "Ulti adds a rested DON!!",
+  "rules": [
+    "10-2-6"
+  ],
+  "setup": {
+    "p1": {
+      "hand": [
+        "OP01-093"
+      ],
+      "don": {
+        "active": 3,
+        "deck": 5
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.donRested": 4,
+    "p1.donDeck": 4
+  }
+}

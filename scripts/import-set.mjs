@@ -25,6 +25,8 @@ if (!set || !series) {
 const decode = (s) =>
   s
     .replace(/<br\s*\/?>/g, "\n")
+    // Some cards print attributes as raw "<Slash>", which would look like a tag.
+    .replace(/<(Slash|Strike|Ranged|Special|Wisdom)>/g, "&lt;$1&gt;")
     .replace(/<[^>]+>/g, "")
     .replace(/&quot;/g, '"')
     .replace(/&#0?39;/g, "'")
@@ -90,7 +92,16 @@ if (missing.length > 0) throw new Error(`Not in series ${series}: ${missing.join
 const file = join(root, "cards", `${set}.json`);
 const existing = existsSync(file) ? JSON.parse(readFileSync(file, "utf8")) : [];
 const handWritten = new Map(
-  existing.map((c) => [c.id, { keywords: c.keywords, effects: c.effects, notes: c.notes }]),
+  existing.map((c) => [
+    c.id,
+    {
+      keywords: c.keywords,
+      alsoNamed: c.alsoNamed,
+      anyNumberInDeck: c.anyNumberInDeck,
+      effects: c.effects,
+      notes: c.notes,
+    },
+  ]),
 );
 const imported = found.map((c) => {
   const kept = handWritten.get(c.id) ?? {};

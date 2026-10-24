@@ -1,0 +1,23 @@
+{
+  "name": "King gives the opponent's Characters −1000 with 10 DON!!",
+  "rules": [
+    "8-1-3-3"
+  ],
+  "setup": {
+    "p1": {
+      "leader": "OP01-091",
+      "don": {
+        "active": 10
+      }
+    },
+    "p2": {
+      "characters": [
+        "TEST-C4-4000"
+      ]
+    }
+  },
+  "actions": [],
+  "expect": {
+    "power.p2.characters.0": 3000
+  }
+}

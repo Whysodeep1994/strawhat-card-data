@@ -1,0 +1,45 @@
+{
+  "name": "Ulti-Mortar gives +2000 and draws",
+  "rules": [
+    "10-2-4"
+  ],
+  "setup": {
+    "p2": {
+      "hand": [
+        "OP01-118"
+      ],
+      "don": {
+        "active": 3
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "counterEvent",
+      "player": "p2",
+      "card": "p2.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": [
+        "p2.leader"
+      ]
+    }
+  ],
+  "expect": {
+    "power.p2.leader": 7000,
+    "p2.hand": 1
+  }
+}
