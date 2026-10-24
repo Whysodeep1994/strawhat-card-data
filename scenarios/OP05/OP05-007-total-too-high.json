@@ -1,5 +1,5 @@
 {
-  "name": "Sabo can't go over 4000 total power: the second pick is dropped",
+  "name": "Sabo can't pick more than 4000 total power",
   "rules": ["10-2-6"],
   "setup": {
     "p1": {
@@ -21,7 +21,13 @@
     {
       "type": "choose",
       "player": "p1",
-      "cards": ["p2.characters.0", "p2.characters.1"]
+      "cards": ["p2.characters.0", "p2.characters.1"],
+      "illegal": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
     }
   ],
   "expect": {
