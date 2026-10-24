@@ -1,0 +1,36 @@
+{
+  "name": "Sogeking draws 2, bottoms 2 and returns a cost 1 Character",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["EB02-024", "TEST-FILLER"],
+      "don": {
+        "active": 4
+      }
+    },
+    "p2": {
+      "characters": ["TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0", "p1.hand.1"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p2.hand": 1
+  }
+}

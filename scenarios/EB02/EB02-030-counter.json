@@ -1,0 +1,44 @@
+{
+  "name": "And That's When... lets a Character survive a battle K.O. by trashing a card",
+  "rules": ["10-2-4", "8-1-3-4"],
+  "setup": {
+    "p2": {
+      "characters": [
+        {
+          "card": "TEST-C4-4000",
+          "rested": true
+        }
+      ],
+      "hand": ["EB02-030", "TEST-FILLER"],
+      "don": {
+        "active": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.characters.0"
+    },
+    {
+      "type": "counterEvent",
+      "player": "p2",
+      "card": "p2.hand.0"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p2.characters": 1,
+    "p2.hand": 0
+  }
+}
