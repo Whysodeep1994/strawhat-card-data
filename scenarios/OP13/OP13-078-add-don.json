@@ -1,0 +1,44 @@
+{
+  "name": "Oro Jackson adds a DON!! when your Roger Pirates Character is removed by your opponent",
+  "rules": ["10-2-1"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "stage": "OP13-078",
+      "characters": ["OP13-065"],
+      "don": {
+        "deck": 2
+      }
+    },
+    "p2": {
+      "hand": ["OP13-059"],
+      "characters": ["TEST-FILLER"],
+      "don": {
+        "active": 4
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p2",
+      "card": "p2.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p1.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 0,
+    "p1.donRested": 1,
+    "p1.donDeck": 1
+  }
+}

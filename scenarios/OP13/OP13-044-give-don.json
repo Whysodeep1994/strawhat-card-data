@@ -1,0 +1,29 @@
+{
+  "name": "Curiel gives 1 rested DON!! to a Whitebeard Pirates card when attacking",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "leader": "OP13-002",
+      "characters": ["OP13-044"],
+      "don": {
+        "rested": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters.0.givenDon": 1
+  }
+}

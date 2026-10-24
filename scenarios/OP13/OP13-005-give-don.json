@@ -1,0 +1,24 @@
+{
+  "name": "Inazuma gives 1 rested DON!! to your Leader",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP13-005"],
+      "don": {
+        "active": 4,
+        "rested": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.leader.givenDon": 1,
+    "p1.donRested": 4
+  }
+}

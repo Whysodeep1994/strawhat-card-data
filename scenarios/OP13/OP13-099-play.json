@@ -1,0 +1,35 @@
+{
+  "name": "The Empty Throne plays a black Five Elders Character up to your DON!! count",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "stage": "OP13-099",
+      "hand": ["OP13-091"],
+      "don": {
+        "active": 6
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.stage",
+      "effect": 1
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 1,
+    "p1.donActive": 3
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Roger's DON!! Phase gives 1 of the placed DON!! to the Leader",
+  "rules": ["6-4-1"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "leader": "OP13-003",
+      "don": {
+        "deck": 10
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "endTurn",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p1.leader.givenDon": 1,
+    "p1.donActive": 1
+  }
+}

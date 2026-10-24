@@ -1,0 +1,41 @@
+{
+  "name": "Five Elders trashes your Characters and plays Five Elders with different names",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "OP13-079",
+      "characters": ["OP13-082"],
+      "hand": ["TEST-FILLER"],
+      "trash": ["OP13-083", "OP13-083", "OP13-089"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.trash.2"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.trash.3"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 2
+  }
+}

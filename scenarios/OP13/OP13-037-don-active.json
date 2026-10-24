@@ -1,0 +1,23 @@
+{
+  "name": "Roronoa Zoro with a Straw Hat Leader sets 2 DON!! active",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "leader": "OP13-001",
+      "hand": ["OP13-037"],
+      "don": {
+        "active": 4
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.donActive": 2
+  }
+}

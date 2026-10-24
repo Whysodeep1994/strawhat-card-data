@@ -1,0 +1,25 @@
+{
+  "name": "Jewelry Bonney doesn't react to a Character without a [Trigger]",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "leader": "OP13-100",
+      "hand": ["OP13-101"],
+      "don": {
+        "active": 5,
+        "rested": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.leader.givenDon": 0,
+    "prompt.kind": "main"
+  }
+}

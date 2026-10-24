@@ -1,0 +1,28 @@
+{
+  "name": "Silvers Rayleigh adds an active DON!! at the end of the turn",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP13-066"],
+      "don": {
+        "active": 8,
+        "deck": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "endTurn",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "p1.donDeck": 0,
+    "p1.donActive": 1
+  }
+}
