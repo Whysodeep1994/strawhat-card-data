@@ -1,0 +1,31 @@
+{
+  "name": "Strawberry stops cost 5 Blockers when a cost 0 Character exists",
+  "rules": [
+    "10-2-5"
+  ],
+  "setup": {
+    "p1": {
+      "characters": [
+        "OP02-101",
+        "OP02-121"
+      ]
+    },
+    "p2": {
+      "characters": [
+        "OP02-012",
+        "TEST-C5-5000"
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    }
+  ],
+  "expect": {
+    "prompt.kind": "counter"
+  }
+}

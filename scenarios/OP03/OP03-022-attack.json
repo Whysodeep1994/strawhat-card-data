@@ -1,0 +1,43 @@
+{
+  "name": "Arlong plays a cost 4 Character with a Trigger",
+  "rules": [
+    "10-2-5"
+  ],
+  "setup": {
+    "p1": {
+      "leader": {
+        "card": "OP03-022",
+        "don": 2
+      },
+      "hand": [
+        "OP03-026"
+      ],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": [
+        "p1.hand.0"
+      ]
+    }
+  ],
+  "expect": {
+    "p1.characters": 1
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Kaku gains Banish",
+  "rules": [
+    "10-2-5"
+  ],
+  "setup": {
+    "p1": {
+      "characters": [
+        "OP03-059"
+      ],
+      "don": {
+        "active": 1
+      }
+    },
+    "p2": {
+      "life": [
+        "OP03-016",
+        "TEST-FILLER"
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.trash": 1,
+    "p2.hand": 0
+  }
+}

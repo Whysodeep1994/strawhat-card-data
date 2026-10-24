@@ -1,0 +1,43 @@
+{
+  "name": "Law returns itself to play a cost 3 Character",
+  "rules": [
+    "10-2-2"
+  ],
+  "setup": {
+    "p1": {
+      "hand": [
+        "OP02-028"
+      ],
+      "characters": [
+        "OP02-035"
+      ],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": [
+        "p1.hand.0"
+      ]
+    }
+  ],
+  "expect": {
+    "p1.characters.0.cardId": "OP02-028",
+    "p1.hand.0.cardId": "OP02-035"
+  }
+}

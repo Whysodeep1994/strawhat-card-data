@@ -1,0 +1,60 @@
+{
+  "name": "Yasakani Sacred Jewel stops a Character being K.O.'d in this battle",
+  "rules": [
+    "10-2-4"
+  ],
+  "setup": {
+    "p1": {
+      "characters": [
+        "TEST-C4-4000"
+      ]
+    },
+    "p2": {
+      "hand": [
+        "OP02-118",
+        "TEST-FILLER"
+      ],
+      "characters": [
+        {
+          "card": "TEST-FILLER",
+          "rested": true
+        }
+      ],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.characters.0"
+    },
+    {
+      "type": "counterEvent",
+      "player": "p2",
+      "card": "p2.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": [
+        "p2.characters.0"
+      ]
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.characters": 1
+  }
+}

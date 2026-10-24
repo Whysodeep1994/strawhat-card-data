@@ -1,0 +1,40 @@
+{
+  "name": "Kalifa draws 2 and trashes 1",
+  "rules": [
+    "10-2-5"
+  ],
+  "setup": {
+    "p1": {
+      "characters": [
+        "OP03-060"
+      ],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": [
+        "p1.hand.0"
+      ]
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p1.trash": 1
+  }
+}

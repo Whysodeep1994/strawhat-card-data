@@ -1,0 +1,36 @@
+{
+  "name": "Buggy isn't K.O.'d in battle by a <Slash> card",
+  "rules": [
+    "8-1-3-3"
+  ],
+  "setup": {
+    "p1": {
+      "characters": [
+        "OP03-006"
+      ]
+    },
+    "p2": {
+      "characters": [
+        {
+          "card": "OP03-032",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.characters.0"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.characters": 1
+  }
+}

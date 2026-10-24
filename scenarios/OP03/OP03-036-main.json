@@ -1,0 +1,46 @@
+{
+  "name": "Out-of-the-Bag sets Kuro active",
+  "rules": [
+    "10-2-3"
+  ],
+  "setup": {
+    "p1": {
+      "leader": {
+        "card": "OP03-021",
+        "rested": true
+      },
+      "hand": [
+        "OP03-036"
+      ],
+      "characters": [
+        "OP03-023"
+      ],
+      "don": {
+        "active": 3
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": [
+        "p1.leader"
+      ]
+    }
+  ],
+  "expect": {
+    "p1.leader.rested": false,
+    "p1.characters.0.rested": true
+  }
+}

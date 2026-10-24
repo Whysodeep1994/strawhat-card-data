@@ -1,0 +1,37 @@
+{
+  "name": "Usopp trashes 7 cards when his attack deals damage",
+  "rules": [
+    "attackDealsDamage"
+  ],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "OP03-041",
+          "don": 1,
+          "playedThisTurn": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.trash": 7
+  }
+}

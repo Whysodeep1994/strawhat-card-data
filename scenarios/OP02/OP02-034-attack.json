@@ -1,0 +1,39 @@
+{
+  "name": "Chopper rests a cost 2 Character",
+  "rules": [
+    "10-2-5"
+  ],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "OP02-034",
+          "don": 1
+        }
+      ]
+    },
+    "p2": {
+      "characters": [
+        "OP02-033"
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": [
+        "p2.characters.0"
+      ]
+    }
+  ],
+  "expect": {
+    "p2.characters.0.rested": true
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "Curiel can't attack a Leader the turn it is played",
+  "rules": [
+    "10-1-1-1"
+  ],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "OP03-004",
+          "don": 1,
+          "playedThisTurn": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader",
+      "illegal": true
+    }
+  ],
+  "expect": {
+    "p2.life": 4
+  }
+}

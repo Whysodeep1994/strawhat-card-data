@@ -1,0 +1,26 @@
+{
+  "name": "Sanji's Pilaf draws 2",
+  "rules": [
+    "10-2-3"
+  ],
+  "setup": {
+    "p1": {
+      "hand": [
+        "OP03-056"
+      ],
+      "don": {
+        "active": 3
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.hand": 2
+  }
+}

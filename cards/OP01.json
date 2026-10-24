@@ -154,7 +154,7 @@
           {
             "do": "powerUp",
             "target": {
-              "side": "chosen"
+              "side": "that"
             },
             "amount": 1000
           }
@@ -1156,7 +1156,7 @@
               {
                 "do": "powerUp",
                 "target": {
-                  "side": "chosen"
+                  "side": "that"
                 },
                 "amount": 2000,
                 "duration": "battle"
@@ -2811,14 +2811,10 @@
         ],
         "steps": [
           {
-            "do": "costChange",
-            "target": {
-              "side": "self",
-              "zone": "hand",
-              "filter": {
-                "category": "event",
-                "color": "blue"
-              }
+            "do": "handCostChange",
+            "filter": {
+              "category": "event",
+              "color": "blue"
             },
             "amount": -1
           }

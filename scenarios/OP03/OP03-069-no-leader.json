@@ -1,0 +1,35 @@
+{
+  "name": "Minorhinoceros does nothing without an Impel Down Leader",
+  "rules": [
+    "10-2-17"
+  ],
+  "setup": {
+    "p1": {
+      "hand": [
+        "TEST-KO-EVENT"
+      ]
+    },
+    "p2": {
+      "characters": [
+        "OP03-069"
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": [
+        "p2.characters.0"
+      ]
+    }
+  ],
+  "expect": {
+    "p2.hand": 0
+  }
+}

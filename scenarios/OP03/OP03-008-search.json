@@ -1,0 +1,37 @@
+{
+  "name": "Buggy finds a red Event",
+  "rules": [
+    "10-2-6"
+  ],
+  "setup": {
+    "p1": {
+      "hand": [
+        "OP03-008"
+      ],
+      "deck": [
+        "TEST-FILLER",
+        "OP03-019"
+      ],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": [
+        "p1.deck.1"
+      ]
+    }
+  ],
+  "expect": {
+    "p1.hand.0.cardId": "OP03-019"
+  }
+}

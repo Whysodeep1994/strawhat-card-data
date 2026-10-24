@@ -1,0 +1,29 @@
+{
+  "name": "Morley stops cost 5 Blockers with 1 or less cards in hand",
+  "rules": [
+    "10-2-5"
+  ],
+  "setup": {
+    "p1": {
+      "characters": [
+        "OP02-061"
+      ]
+    },
+    "p2": {
+      "characters": [
+        "OP02-012"
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    }
+  ],
+  "expect": {
+    "prompt.kind": "counter"
+  }
+}

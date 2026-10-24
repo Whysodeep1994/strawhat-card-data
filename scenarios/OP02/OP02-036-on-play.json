@@ -1,0 +1,42 @@
+{
+  "name": "Nami finds a FILM card",
+  "rules": [
+    "10-2-6"
+  ],
+  "setup": {
+    "p1": {
+      "hand": [
+        "OP02-036"
+      ],
+      "deck": [
+        "OP02-028",
+        "TEST-FILLER"
+      ],
+      "don": {
+        "active": 4
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": [
+        "p1.deck.0"
+      ]
+    }
+  ],
+  "expect": {
+    "p1.hand.0.cardId": "OP02-028"
+  }
+}

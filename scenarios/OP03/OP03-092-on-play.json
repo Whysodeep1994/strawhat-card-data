@@ -1,0 +1,45 @@
+{
+  "name": "Lucci returns 2 CP cards to gain Rush",
+  "rules": [
+    "10-2-6"
+  ],
+  "setup": {
+    "p1": {
+      "hand": [
+        "OP03-092"
+      ],
+      "trash": [
+        "OP03-087",
+        "OP03-085"
+      ],
+      "don": {
+        "active": 6
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 3
+  }
+}

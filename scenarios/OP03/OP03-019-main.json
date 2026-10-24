@@ -1,0 +1,26 @@
+{
+  "name": "Fiery Doll gives the Leader +4000",
+  "rules": [
+    "10-2-3"
+  ],
+  "setup": {
+    "p1": {
+      "hand": [
+        "OP03-019"
+      ],
+      "don": {
+        "active": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "power.p1.leader": 9000
+  }
+}
