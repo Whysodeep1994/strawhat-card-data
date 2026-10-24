@@ -1,0 +1,25 @@
+{
+  "name": "Trafalgar Law needs a total Character cost of 5 or more",
+  "rules": ["8-3-2-1"],
+  "setup": {
+    "p1": {
+      "leader": {
+        "card": "OP10-022",
+        "don": 1
+      },
+      "characters": ["OP10-026"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 0,
+      "illegal": true
+    }
+  ],
+  "expect": {
+    "p1.characters": 1
+  }
+}

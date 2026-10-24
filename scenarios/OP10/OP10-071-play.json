@@ -1,0 +1,33 @@
+{
+  "name": "Donquixote Doflamingo returns 1 DON!! to play a {Donquixote Pirates} Character",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP10-071", "OP10-073"],
+      "don": {
+        "active": 8
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 2,
+    "p1.donDeck": 1
+  }
+}

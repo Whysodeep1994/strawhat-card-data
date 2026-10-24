@@ -1,0 +1,35 @@
+{
+  "name": "Monkey.D.Luffy places 3 trash cards at the deck bottom to make the opponent trash 1",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": ["OP10-118"],
+      "trash": ["TEST-FILLER", "TEST-FILLER", "TEST-FILLER"]
+    },
+    "p2": {
+      "hand": ["TEST-FILLER", "TEST-FILLER", "TEST-FILLER", "TEST-FILLER", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.trash": 0,
+    "p2.hand": 4
+  }
+}

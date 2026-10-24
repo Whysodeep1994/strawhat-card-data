@@ -255,5 +255,59 @@
     "power": 5000,
     "life": 4,
     "types": ["Supernovas"]
+  },
+  {
+    "id": "TEST-LEADER-ODYSSEY",
+    "name": "Test ODYSSEY Leader",
+    "category": "leader",
+    "colors": ["green"],
+    "power": 5000,
+    "life": 4,
+    "types": ["ODYSSEY"]
+  },
+  {
+    "id": "TEST-LEADER-BLACKBEARD",
+    "name": "Test Blackbeard Pirates Leader",
+    "category": "leader",
+    "colors": ["black"],
+    "power": 5000,
+    "life": 4,
+    "types": ["Blackbeard Pirates"]
+  },
+  {
+    "id": "TEST-LEADER-GERMA",
+    "name": "Test GERMA 66 Leader",
+    "category": "leader",
+    "colors": ["purple"],
+    "power": 5000,
+    "life": 4,
+    "types": ["GERMA 66"]
+  },
+  {
+    "id": "TEST-LEADER-DONQUIXOTE",
+    "name": "Test Donquixote Pirates Leader",
+    "category": "leader",
+    "colors": ["purple"],
+    "power": 5000,
+    "life": 4,
+    "types": ["Donquixote Pirates"]
+  },
+  {
+    "id": "TEST-LEADER-PUNK-HAZARD",
+    "name": "Test Punk Hazard Leader",
+    "category": "leader",
+    "colors": ["red"],
+    "power": 5000,
+    "life": 4,
+    "types": ["Punk Hazard"]
+  },
+  {
+    "id": "TEST-KINEMON-6",
+    "name": "Kin'emon",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 6,
+    "power": 7000,
+    "types": ["Land of Wano", "The Akazaya Nine"]
   }
 ]

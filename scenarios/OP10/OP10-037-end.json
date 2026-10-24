@@ -1,0 +1,29 @@
+{
+  "name": "Lim sets an {ODYSSEY} Character active at the end of your turn",
+  "rules": ["10-2-7"],
+  "setup": {
+    "p1": {
+      "characters": [
+        "OP10-037",
+        {
+          "card": "OP10-033",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "endTurn",
+      "player": "p1"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.1"]
+    }
+  ],
+  "expect": {
+    "p1.characters.1.rested": false
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "Eustass\"Captain\"Kid draws and trashes at the end of the turn when the opponent has 2 Life",
+  "rules": ["10-2-7"],
+  "setup": {
+    "p1": {
+      "characters": ["OP10-112"],
+      "hand": ["TEST-FILLER"]
+    },
+    "p2": {
+      "life": 2
+    }
+  },
+  "actions": [
+    {
+      "type": "endTurn",
+      "player": "p1"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p1.trash": 1
+  }
+}

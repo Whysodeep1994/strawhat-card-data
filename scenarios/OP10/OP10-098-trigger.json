@@ -1,0 +1,43 @@
+{
+  "name": "Liberation [Trigger] negates a Leader and a Character",
+  "rules": ["10-1-5"],
+  "setup": {
+    "p1": {
+      "characters": ["OP10-086"]
+    },
+    "p2": {
+      "life": ["OP10-098", "TEST-FILLER", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p1.leader"]
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p1.characters.0"]
+    }
+  ],
+  "expect": {
+    "modifiers": 2,
+    "modifiers.1.status": "negated"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "Kouzuki Momonosuke trashes itself to add 2 {The Akazaya Nine} cards",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["OP10-028"],
+      "don": {
+        "active": 2
+      },
+      "deck": ["OP10-026", "OP10-027", "TEST-FILLER", "TEST-FILLER", "TEST-FILLER", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.0", "p1.deck.1"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 2,
+    "p1.trash": 1,
+    "p1.characters": 0
+  }
+}

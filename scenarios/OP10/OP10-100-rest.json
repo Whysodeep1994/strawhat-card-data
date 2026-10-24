@@ -1,0 +1,35 @@
+{
+  "name": "Inazuma rests a Character with a cost up to the total Life",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "OP10-100",
+          "don": 1
+        }
+      ],
+      "life": 1
+    },
+    "p2": {
+      "characters": ["TEST-C5-5000"],
+      "life": 4
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters.0.rested": true
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "Sugar sets 1 DON!! active at the end of the turn with a 6000 {Donquixote Pirates}",
+  "rules": ["10-2-7"],
+  "setup": {
+    "p1": {
+      "leader": "OP10-003",
+      "characters": ["OP10-073"],
+      "don": {
+        "active": 0,
+        "rested": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "endTurn",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "turnPlayer": "p2",
+    "p1.donActive": 1,
+    "p1.donRested": 1
+  }
+}
