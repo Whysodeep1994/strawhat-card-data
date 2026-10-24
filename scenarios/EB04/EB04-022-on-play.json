@@ -1,0 +1,43 @@
+{
+  "name": "Issho trashes 2 to make the opponent place 2 cards at the bottom of their deck",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["EB04-022", "TEST-FILLER", "TEST-FILLER"],
+      "don": {
+        "active": 5
+      }
+    },
+    "p2": {
+      "hand": [
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER"
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.hand.0", "p2.hand.1"]
+    }
+  ],
+  "expect": {
+    "p2.hand": 4,
+    "p1.trash": 2
+  }
+}

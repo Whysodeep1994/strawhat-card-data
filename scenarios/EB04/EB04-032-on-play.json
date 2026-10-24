@@ -1,0 +1,28 @@
+{
+  "name": "Queen trashes an {Animal Kingdom Pirates} card to draw 2",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["EB04-032", "EB04-031"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.hand": 2,
+    "p1.trash": 1
+  }
+}

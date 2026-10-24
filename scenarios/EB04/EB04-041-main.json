@@ -1,0 +1,29 @@
+{
+  "name": "Stealth Black plays a [Sanji] from the trash with a [Sanji] Leader and 4 DON!!",
+  "rules": ["10-2-3"],
+  "setup": {
+    "p1": {
+      "leader": "TEST-LEADER-SANJI",
+      "hand": ["EB04-041"],
+      "trash": ["EB04-052"],
+      "don": {
+        "active": 4
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.trash.1"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 1
+  }
+}

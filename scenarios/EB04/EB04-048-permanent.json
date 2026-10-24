@@ -1,0 +1,41 @@
+{
+  "name": "Rob Lucci gains +2 cost for every 5 trash cards with a CP Leader",
+  "rules": ["8-1-3-3"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "leader": "TEST-LEADER-CP",
+      "characters": ["EB04-048", "TEST-FILLER"],
+      "trash": ["TEST-FILLER", "TEST-FILLER", "TEST-FILLER", "TEST-FILLER", "TEST-FILLER"]
+    },
+    "p2": {
+      "hand": ["EB03-022"],
+      "don": {
+        "active": 6
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p2",
+      "card": "p2.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p1.characters.0"],
+      "illegal": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p1.characters.1"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 1,
+    "p1.characters.0.cardId": "EB04-048"
+  }
+}

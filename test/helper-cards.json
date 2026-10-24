@@ -255,5 +255,95 @@
     "power": 5000,
     "life": 4,
     "types": ["Supernovas"]
+  },
+  {
+    "id": "TEST-LEADER-MINKS",
+    "name": "Test Leader Minks",
+    "category": "leader",
+    "colors": ["green"],
+    "power": 5000,
+    "life": 4,
+    "types": ["Minks"]
+  },
+  {
+    "id": "TEST-LEADER-FISHMAN",
+    "name": "Test Leader Fish-Man",
+    "category": "leader",
+    "colors": ["green"],
+    "power": 5000,
+    "life": 4,
+    "types": ["Fish-Man"]
+  },
+  {
+    "id": "TEST-LEADER-FOXY",
+    "name": "Test Leader Foxy",
+    "category": "leader",
+    "colors": ["purple"],
+    "power": 5000,
+    "life": 4,
+    "types": ["Foxy Pirates"]
+  },
+  {
+    "id": "TEST-LEADER-CP",
+    "name": "Test Leader CP",
+    "category": "leader",
+    "colors": ["black"],
+    "power": 5000,
+    "life": 4,
+    "types": ["CP9"]
+  },
+  {
+    "id": "TEST-LEADER-WANO",
+    "name": "Test Leader Wano",
+    "category": "leader",
+    "colors": ["green"],
+    "power": 5000,
+    "life": 4,
+    "types": ["Land of Wano"]
+  },
+  {
+    "id": "TEST-MINKS-2000",
+    "name": "Test Mink",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 1,
+    "power": 2000,
+    "types": ["Minks"]
+  },
+  {
+    "id": "TEST-GREEN-C6",
+    "name": "Test Green 6",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 6,
+    "power": 6000,
+    "types": []
+  },
+  {
+    "id": "TEST-NAVY-C1",
+    "name": "Test Marine",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 1,
+    "power": 1000,
+    "types": ["Navy"]
+  },
+  {
+    "id": "TEST-LEADER-AKP",
+    "name": "Test Leader Animal Kingdom",
+    "category": "leader",
+    "colors": ["purple"],
+    "power": 5000,
+    "life": 4,
+    "types": ["Animal Kingdom Pirates"]
+  },
+  {
+    "id": "TEST-LEADER-SANJI",
+    "name": "Sanji",
+    "category": "leader",
+    "colors": ["purple"],
+    "power": 5000,
+    "life": 4,
+    "types": ["Straw Hat Crew"]
   }
 ]

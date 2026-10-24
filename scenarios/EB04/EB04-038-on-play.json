@@ -1,0 +1,29 @@
+{
+  "name": "Rosinante & Law draws 1 and adds an active DON!! with no more DON!! than the opponent",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["EB04-038"],
+      "don": {
+        "active": 6,
+        "deck": 1
+      }
+    },
+    "p2": {
+      "don": {
+        "active": 6
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p1.donActive": 1
+  }
+}
