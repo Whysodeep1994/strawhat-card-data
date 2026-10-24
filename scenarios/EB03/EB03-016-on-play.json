@@ -1,0 +1,41 @@
+{
+  "name": "Kouzuki Hiyori draws with a [Kouzuki Oden] Leader, then trashes itself to give a DON!!",
+  "rules": ["10-2-6", "10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "EB01-001",
+      "hand": ["EB03-016"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 1
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.leader"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p1.leader.givenDon": 1,
+    "p1.trash": 1
+  }
+}

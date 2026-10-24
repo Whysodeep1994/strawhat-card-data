@@ -1,0 +1,30 @@
+{
+  "name": "S-Snake adds a [Trigger] Character from hand to Life face-up",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "leader": "TEST-LEADER-EGGHEAD",
+      "hand": ["EB03-059", "EB03-058"],
+      "don": {
+        "active": 6
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.life": 5,
+    "p1.life.0.faceUp": true,
+    "p1.hand": 0
+  }
+}

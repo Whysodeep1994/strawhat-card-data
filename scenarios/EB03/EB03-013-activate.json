@@ -1,0 +1,41 @@
+{
+  "name": "Carrot K.O.s a rested Character on the turn it was played",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "hand": ["EB03-013"],
+      "don": {
+        "active": 6
+      }
+    },
+    "p2": {
+      "characters": [
+        {
+          "card": "TEST-C5-5000",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 0
+  }
+}
