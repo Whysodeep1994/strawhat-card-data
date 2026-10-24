@@ -1,0 +1,43 @@
+{
+  "name": "Charlotte Linlin adds a Life card and puts an opponent's Character into their Life",
+  "rules": ["8-3-1"],
+  "setup": {
+    "p1": {
+      "hand": ["OP08-069", "TEST-FILLER"],
+      "don": {
+        "active": 10
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C6-6000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": false
+    }
+  ],
+  "expect": {
+    "p1.life": 5,
+    "p1.trash": 1,
+    "p2.characters": 0,
+    "p2.life": 5
+  }
+}

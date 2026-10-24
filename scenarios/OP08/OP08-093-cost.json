@@ -1,0 +1,36 @@
+{
+  "name": "X.Drake with 1 DON!! has +2 cost, so Charlotte Opera can't K.O. him",
+  "rules": ["10-2-11"],
+  "setup": {
+    "p1": {
+      "hand": ["OP08-102", "TEST-FILLER"],
+      "don": {
+        "active": 6
+      }
+    },
+    "p2": {
+      "characters": [
+        {
+          "card": "OP08-093",
+          "don": 1
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p2.characters": 1,
+    "prompt.kind": "main"
+  }
+}

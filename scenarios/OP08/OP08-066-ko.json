@@ -1,0 +1,36 @@
+{
+  "name": "Charlotte Brulee adds a rested DON!! when K.O.'d",
+  "rules": ["10-2-3"],
+  "setup": {
+    "p1": {
+      "characters": ["TEST-C7-7000"]
+    },
+    "p2": {
+      "characters": [
+        {
+          "card": "OP08-066",
+          "rested": true
+        }
+      ],
+      "don": {
+        "deck": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.characters.0"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.characters": 0,
+    "p2.donRested": 1
+  }
+}

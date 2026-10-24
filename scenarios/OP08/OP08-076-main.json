@@ -1,0 +1,27 @@
+{
+  "name": "It's to Die For... adds 2 active DON!! when the opponent has a 6000 power Character",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "hand": ["OP08-076"],
+      "don": {
+        "active": 3,
+        "deck": 2
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C6-6000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.donActive": 2,
+    "p1.donDeck": 0
+  }
+}

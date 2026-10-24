@@ -1,0 +1,38 @@
+{
+  "name": "Kalgara plays a {Shandian Warrior} Character and adds a Life card to hand",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": {
+        "card": "OP08-098",
+        "don": 1
+      },
+      "hand": ["OP08-099"],
+      "don": {
+        "active": 5
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p1.characters": 1,
+    "p1.hand": 1,
+    "p1.life": 3
+  }
+}

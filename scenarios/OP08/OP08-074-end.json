@@ -1,0 +1,33 @@
+{
+  "name": "Black Maria returns DON!! at the end of the turn to match the opponent",
+  "rules": ["10-2-13"],
+  "setup": {
+    "p1": {
+      "characters": ["OP08-074"],
+      "don": {
+        "deck": 5
+      }
+    },
+    "p2": {
+      "don": {
+        "active": 3
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "endTurn",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "p1.donRested": 3,
+    "p1.donDeck": 2
+  }
+}

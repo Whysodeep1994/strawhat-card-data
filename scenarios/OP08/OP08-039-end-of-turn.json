@@ -1,0 +1,29 @@
+{
+  "name": "Zou sets a Minks Character active at the end of your turn",
+  "rules": ["10-2-11"],
+  "setup": {
+    "p1": {
+      "stage": "OP08-039",
+      "characters": [
+        {
+          "card": "OP08-027",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "endTurn",
+      "player": "p1"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters.0.rested": false
+  }
+}

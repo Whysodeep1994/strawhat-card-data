@@ -1,0 +1,39 @@
+{
+  "name": "Kaido & Linlin returns 10 DON!! to K.O. all other Characters",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["OP08-119", "TEST-FILLER"],
+      "don": {
+        "active": 10
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C5-5000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p1.characters": 1,
+    "p2.characters": 0,
+    "p1.life": 5,
+    "p2.life": 2,
+    "p1.donDeck": 10
+  }
+}

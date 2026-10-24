@@ -1,0 +1,60 @@
+{
+  "name": "Viscount Hiyoko returns 1 DON!! when K.O.'d on the opponent's turn to play Count Niwatori from the deck",
+  "rules": ["10-2-3"],
+  "setup": {
+    "p1": {
+      "characters": ["TEST-C7-7000"]
+    },
+    "p2": {
+      "characters": [
+        {
+          "card": "OP08-073",
+          "rested": true
+        }
+      ],
+      "deck": [
+        "OP08-071",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER"
+      ],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.characters.0"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.deck.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 1,
+    "p2.characters.0.cardId": "OP08-071",
+    "p2.deck": 10
+  }
+}

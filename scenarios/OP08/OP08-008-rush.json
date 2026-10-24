@@ -1,0 +1,43 @@
+{
+  "name": "Dalton adds a Life card to hand to gain [Rush]",
+  "rules": ["10-1-1"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "OP08-008",
+          "don": 1,
+          "playedThisTurn": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 1
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p1.life": 3,
+    "p1.hand": 1,
+    "p2.life": 3
+  }
+}

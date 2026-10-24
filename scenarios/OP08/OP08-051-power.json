@@ -1,0 +1,28 @@
+{
+  "name": "Buckin gives Edward Weevil +2000",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "hand": ["OP08-051"],
+      "don": {
+        "active": 1
+      },
+      "characters": ["OP08-042"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.0"]
+    }
+  ],
+  "expect": {
+    "modifiers.0.power": 2000
+  }
+}
