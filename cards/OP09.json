@@ -4183,6 +4183,7 @@
         "steps": [
           {
             "do": "handToLife",
+            "count": 1,
             "faceUp": true,
             "filter": {
               "category": "character",

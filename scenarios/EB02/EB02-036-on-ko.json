@@ -1,0 +1,42 @@
+{
+  "name": "Nico Robin returns 1 DON!! when K.O.'d to search for a {Straw Hat Crew} card",
+  "rules": ["10-2-17"],
+  "setup": {
+    "p1": {
+      "hand": ["TEST-KO-EVENT"]
+    },
+    "p2": {
+      "characters": ["EB02-036"],
+      "don": {
+        "active": 1
+      },
+      "deck": ["EB02-017", "TEST-FILLER", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.deck.0"]
+    }
+  ],
+  "expect": {
+    "p2.hand": 1,
+    "p2.donActive": 0
+  }
+}
