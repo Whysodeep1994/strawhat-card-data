@@ -1,0 +1,39 @@
+{
+  "name": "Charlotte Oven guesses wrong and only adds a rested DON!!",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["OP11-066"],
+      "don": {
+        "active": 0,
+        "deck": 2
+      }
+    },
+    "p2": {
+      "characters": ["TEST-FILLER"],
+      "deck": ["TEST-C4-4000", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "chooseOne",
+      "player": "p1",
+      "option": 2
+    }
+  ],
+  "expect": {
+    "p2.characters": 1,
+    "p1.donRested": 1
+  }
+}

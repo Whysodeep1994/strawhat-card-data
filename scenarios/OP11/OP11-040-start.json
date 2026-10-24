@@ -1,0 +1,53 @@
+{
+  "name": "Luffy adds a {Straw Hat Crew} card at the start of the turn with 8 DON!!",
+  "rules": ["6-2-1"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "leader": "OP11-040",
+      "don": {
+        "active": 8
+      },
+      "deck": [
+        "TEST-FILLER",
+        "OP11-053",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER"
+      ]
+    },
+    "p2": {}
+  },
+  "actions": [
+    {
+      "type": "endTurn",
+      "player": "p2"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.1"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": []
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.0", "p1.deck.1", "p1.deck.2", "p1.deck.3"]
+    }
+  ],
+  "expect": {
+    "turnPlayer": "p1",
+    "p1.hand": 2
+  }
+}

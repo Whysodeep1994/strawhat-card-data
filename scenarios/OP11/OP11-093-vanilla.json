@@ -1,0 +1,24 @@
+{
+  "name": "Bogard has no effect and attacks for 7000",
+  "rules": ["7-1-4-1"],
+  "setup": {
+    "p1": {
+      "characters": ["OP11-093"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 3
+  }
+}

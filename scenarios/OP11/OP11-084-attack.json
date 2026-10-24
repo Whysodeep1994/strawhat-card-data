@@ -1,0 +1,42 @@
+{
+  "name": "Kuzan lets a {Navy} Character attack active Characters",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": ["OP11-084", "OP11-093"]
+    },
+    "p2": {
+      "characters": ["TEST-C4-4000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.1"]
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.1",
+      "target": "p2.characters.0"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.characters": 0
+  }
+}

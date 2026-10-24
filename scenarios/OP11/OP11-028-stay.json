@@ -1,0 +1,40 @@
+{
+  "name": "Lord of the Coast keeps a rested Character rested in the next Refresh Phase",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP11-028"],
+      "don": {
+        "active": 4
+      }
+    },
+    "p2": {
+      "characters": [
+        {
+          "card": "TEST-C4-4000",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    },
+    {
+      "type": "endTurn",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "turnPlayer": "p2",
+    "p2.characters.0.rested": true
+  }
+}

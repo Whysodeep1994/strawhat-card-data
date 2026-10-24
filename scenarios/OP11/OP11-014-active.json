@@ -1,0 +1,43 @@
+{
+  "name": "Borsalino lets a {Navy} Character attack an active Character",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["OP11-014", "OP11-005"]
+    },
+    "p2": {
+      "characters": ["TEST-C4-4000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.1"]
+    },
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.1",
+      "target": "p2.characters.0"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.characters": 0
+  }
+}

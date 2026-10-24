@@ -1,0 +1,40 @@
+{
+  "name": "Gotti places a cost 1 Character at the bottom of the owner's deck",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": ["OP11-050"],
+      "hand": ["OP11-042"]
+    },
+    "p2": {
+      "characters": ["TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "chooseOne",
+      "player": "p1",
+      "option": 1
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 0,
+    "p2.deck": 21
+  }
+}

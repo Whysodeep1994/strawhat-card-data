@@ -1,0 +1,28 @@
+{
+  "name": "Vinsmoke Judge gives {GERMA 66} Characters +1000",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["OP11-044", "TEST-GERMA-3000", "TEST-FILLER"],
+      "hand": ["TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.characters.0.power": 9000,
+    "p1.characters.1.power": 4000,
+    "p1.characters.2.power": 1000
+  }
+}

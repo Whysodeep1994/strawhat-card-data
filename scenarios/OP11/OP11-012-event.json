@@ -1,0 +1,34 @@
+{
+  "name": "Franky gives all your Characters +2000 when the opponent uses an Event on your turn",
+  "rules": ["8-1-3-1"],
+  "setup": {
+    "p1": {
+      "characters": ["OP11-012", "TEST-FILLER"]
+    },
+    "p2": {
+      "hand": ["TEST-COUNTER-EVENT"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "counterEvent",
+      "player": "p2",
+      "card": "p2.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.leader"]
+    }
+  ],
+  "expect": {
+    "p1.characters.0.power": 6000,
+    "p1.characters.1.power": 3000
+  }
+}

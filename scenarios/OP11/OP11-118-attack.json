@@ -1,0 +1,44 @@
+{
+  "name": "Monkey.D.Luffy trashes a card to return a cost 4 Character and give a rested DON!!",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": ["OP11-118"],
+      "hand": ["TEST-FILLER"],
+      "don": {
+        "active": 0,
+        "rested": 1
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C4-4000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.hand": 1,
+    "p1.characters.0.givenDon": 1
+  }
+}

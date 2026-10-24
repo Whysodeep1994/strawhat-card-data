@@ -1,0 +1,33 @@
+{
+  "name": "Randolph gives a {Big Mom Pirates} Character +2 cost when a DON!! returns",
+  "rules": ["8-1-3-1"],
+  "setup": {
+    "p1": {
+      "characters": ["OP11-077", "OP11-072"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.1",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.1"]
+    }
+  ],
+  "expect": {
+    "p1.characters.1.cost": 5
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Camie trashes a Life card from each player when the opponent uses an Event",
+  "rules": ["8-1-3-1"],
+  "setup": {
+    "p1": {
+      "characters": ["OP11-102"]
+    },
+    "p2": {
+      "hand": ["TEST-COUNTER-EVENT"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "counterEvent",
+      "player": "p2",
+      "card": "p2.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.leader"]
+    }
+  ],
+  "expect": {
+    "p1.life": 3,
+    "p2.life": 3
+  }
+}

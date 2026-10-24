@@ -1,0 +1,44 @@
+{
+  "name": "Charlotte Linlin returns 5 DON!! and guesses right for +2000",
+  "rules": ["10-2-4"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "characters": ["OP11-073"],
+      "don": {
+        "active": 5
+      }
+    },
+    "p2": {
+      "deck": ["TEST-FILLER", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p2",
+      "attacker": "p2.leader",
+      "target": "p1.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "chooseOne",
+      "player": "p1",
+      "option": 1
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.leader"]
+    }
+  ],
+  "expect": {
+    "p1.leader.power": 7000,
+    "p1.donDeck": 5
+  }
+}

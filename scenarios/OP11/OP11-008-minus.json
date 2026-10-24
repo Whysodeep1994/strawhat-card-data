@@ -1,0 +1,37 @@
+{
+  "name": "Doll trashes a card to give −6000 with a {Navy} Leader",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "leader": "TEST-LEADER-NAVY",
+      "hand": ["OP11-008", "TEST-FILLER"],
+      "don": {
+        "active": 4
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C7-7000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.trash": 1,
+    "p2.characters.0.power": 1000
+  }
+}

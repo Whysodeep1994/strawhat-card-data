@@ -309,5 +309,109 @@
     "cost": 6,
     "power": 7000,
     "types": ["Land of Wano", "The Akazaya Nine"]
+  },
+  {
+    "id": "TEST-LEADER-IMPEL-DOWN",
+    "name": "Test Impel Down Leader",
+    "category": "leader",
+    "colors": ["purple"],
+    "power": 5000,
+    "life": 4,
+    "types": ["Impel Down"]
+  },
+  {
+    "id": "TEST-LEADER-VINSMOKE",
+    "name": "Test Vinsmoke Leader",
+    "category": "leader",
+    "colors": ["blue"],
+    "power": 5000,
+    "life": 4,
+    "types": ["The Vinsmoke Family"]
+  },
+  {
+    "id": "TEST-SPECIAL-5000",
+    "name": "Test Special",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 4,
+    "power": 5000,
+    "attribute": "Special"
+  },
+  {
+    "id": "TEST-SLASH-5000",
+    "name": "Test Slash",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 4,
+    "power": 5000,
+    "attribute": "Slash"
+  },
+  {
+    "id": "TEST-KO-CHAR",
+    "name": "Test K.O. Character",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 1,
+    "power": 1000,
+    "attribute": "Strike",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "ko",
+            "target": {
+              "side": "opponent",
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "TEST-REST-EVENT",
+    "name": "Test Rest Event",
+    "category": "event",
+    "colors": ["green"],
+    "cost": 0,
+    "effects": [
+      {
+        "timing": "main",
+        "steps": [
+          {
+            "do": "rest",
+            "target": {
+              "side": "opponent",
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "TEST-COUNTER-EVENT",
+    "name": "Test Counter Event",
+    "category": "event",
+    "colors": ["red"],
+    "cost": 0,
+    "effects": [
+      {
+        "timing": "counter",
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "self",
+              "zone": "leaderOrCharacters",
+              "upTo": true
+            },
+            "amount": 1000,
+            "duration": "battle"
+          }
+        ]
+      }
+    ]
   }
 ]

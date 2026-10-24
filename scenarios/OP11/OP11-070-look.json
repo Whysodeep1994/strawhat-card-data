@@ -1,0 +1,34 @@
+{
+  "name": "Charlotte Pudding returns a DON!! and rests to look at the opponent's top card",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["OP11-070"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 1
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": []
+    }
+  ],
+  "expect": {
+    "p1.donDeck": 1,
+    "p1.characters.0.rested": true
+  }
+}

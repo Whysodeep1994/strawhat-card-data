@@ -1,0 +1,31 @@
+{
+  "name": "Kujyaku trashes itself to give a Character +1000",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["OP11-004", "TEST-C4-4000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 1
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 1,
+    "p1.characters.0.power": 5000
+  }
+}

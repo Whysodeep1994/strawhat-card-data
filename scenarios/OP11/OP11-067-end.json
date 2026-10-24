@@ -1,0 +1,39 @@
+{
+  "name": "Charlotte Katakuri sets 2 {Big Mom Pirates} Characters active and adds a rested DON!!",
+  "rules": ["10-2-7"],
+  "setup": {
+    "p1": {
+      "characters": [
+        "OP11-067",
+        {
+          "card": "OP11-068",
+          "rested": true
+        },
+        {
+          "card": "OP11-078",
+          "rested": true
+        }
+      ],
+      "don": {
+        "active": 0,
+        "deck": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "endTurn",
+      "player": "p1"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.1", "p1.characters.2"]
+    }
+  ],
+  "expect": {
+    "p1.characters.1.rested": false,
+    "p1.characters.2.rested": false,
+    "p1.donRested": 1
+  }
+}

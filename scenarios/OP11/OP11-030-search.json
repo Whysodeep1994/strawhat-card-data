@@ -1,0 +1,42 @@
+{
+  "name": "Shirahoshi rests to add a {Neptunian} card",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["OP11-030"],
+      "don": {
+        "active": 1
+      },
+      "deck": [
+        "TEST-FILLER",
+        "OP11-026",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER"
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.1"]
+    }
+  ],
+  "expect": {
+    "p1.hand.0.cardId": "OP11-026",
+    "p1.donRested": 1
+  }
+}

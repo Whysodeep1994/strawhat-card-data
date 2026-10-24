@@ -1,0 +1,36 @@
+{
+  "name": "Shirahoshi rests a DON!! and turns a Life card face-up to play a {Neptunian}",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "OP11-022",
+      "hand": ["OP11-026"],
+      "don": {
+        "active": 6
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 1
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters.0.cardId": "OP11-026",
+    "p1.life.0.faceUp": true,
+    "p1.donActive": 5
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Merman Combat Ultramarine [Trigger] adds a cost 4 Character to Life",
+  "rules": ["10-1-5"],
+  "setup": {
+    "p1": {
+      "characters": ["TEST-C4-4000"]
+    },
+    "p2": {
+      "life": ["OP11-116", "TEST-FILLER", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p1.characters.0"]
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": false
+    }
+  ],
+  "expect": {
+    "p1.characters": 0,
+    "p1.life": 5
+  }
+}

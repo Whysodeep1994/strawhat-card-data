@@ -1,0 +1,25 @@
+{
+  "name": "Luffy does nothing at the start of the turn with 7 DON!!",
+  "rules": ["6-2-1"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "leader": "OP11-040",
+      "don": {
+        "active": 7
+      }
+    },
+    "p2": {}
+  },
+  "actions": [
+    {
+      "type": "endTurn",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "turnPlayer": "p1",
+    "p1.hand": 1
+  }
+}

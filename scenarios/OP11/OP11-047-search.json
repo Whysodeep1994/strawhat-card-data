@@ -1,0 +1,37 @@
+{
+  "name": "Vinsmoke Reiju adds a GERMA card and trashes the rest",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "leader": "TEST-LEADER-VINSMOKE",
+      "hand": ["OP11-047"],
+      "don": {
+        "active": 4
+      },
+      "deck": [
+        "TEST-FILLER",
+        "OP11-045",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER"
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.1"]
+    }
+  ],
+  "expect": {
+    "p1.hand.0.cardId": "OP11-045",
+    "p1.trash": 4
+  }
+}

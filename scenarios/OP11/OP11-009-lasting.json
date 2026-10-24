@@ -1,0 +1,42 @@
+{
+  "name": "Nico Robin's −2000 lasts through the opponent's next turn",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "OP11-009",
+          "don": 2
+        }
+      ]
+    },
+    "p2": {
+      "characters": ["TEST-C4-4000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "endTurn",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "turnPlayer": "p2",
+    "p2.characters.0.power": 2000
+  }
+}

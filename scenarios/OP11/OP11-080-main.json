@@ -1,0 +1,30 @@
+{
+  "name": "Gear Two rests 2 DON!! to add a rested DON!! with a blue Leader",
+  "rules": ["10-2-3"],
+  "setup": {
+    "p1": {
+      "leader": "TEST-LEADER-NAVY",
+      "hand": ["OP11-080"],
+      "don": {
+        "active": 3,
+        "deck": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.donRested": 4,
+    "p1.donDeck": 1
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "Charlotte Katakuri returns 1 DON!!, looks at the opponent's top card and gains +1000",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "leader": "OP11-062",
+      "don": {
+        "active": 1
+      }
+    },
+    "p2": {
+      "leader": "TEST-LEADER-6000"
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": []
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p1.donActive": 0,
+    "p2.life": 3
+  }
+}

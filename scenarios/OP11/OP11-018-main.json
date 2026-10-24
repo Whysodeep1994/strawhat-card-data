@@ -1,0 +1,35 @@
+{
+  "name": "Honesty Impact gives −4000, then K.O.s a 6000 power Character",
+  "rules": ["10-2-3"],
+  "setup": {
+    "p1": {
+      "hand": ["OP11-018"],
+      "don": {
+        "active": 6
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C8-8000", "TEST-C6-6000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 1
+  }
+}

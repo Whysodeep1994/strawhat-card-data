@@ -1,0 +1,31 @@
+{
+  "name": "Coribou trashes itself to play [Caribou] from the trash",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["OP11-086"],
+      "trash": ["OP11-083"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 1
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.trash.1"]
+    }
+  ],
+  "expect": {
+    "p1.characters.0.cardId": "OP11-083"
+  }
+}

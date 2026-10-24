@@ -1,0 +1,42 @@
+{
+  "name": "Topknot Neptunian sets itself active at the end of the turn",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "OP11-022",
+      "lifeFaceUp": 1,
+      "characters": ["OP11-107"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "endTurn",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "turnPlayer": "p2",
+    "p1.characters.0.rested": false
+  }
+}

@@ -1,0 +1,4938 @@
+[
+  {
+    "id": "OP11-001",
+    "name": "Koby",
+    "category": "leader",
+    "colors": ["red", "black"],
+    "life": 4,
+    "power": 5000,
+    "types": ["Navy", "SWORD"],
+    "attribute": "Strike",
+    "rarity": "L",
+    "blockIcon": 3,
+    "text": "Your {SWORD} type Characters can attack Characters on the turn in which they are played.\n[Once Per Turn] If your {Navy} type Character with 7000 base power or less would be removed from the field by your opponent's effect, you may place 3 cards from your trash at the bottom of your deck in any order instead.",
+    "image": "images/OP11-001.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "permanent",
+        "steps": [
+          {
+            "do": "grantKeyword",
+            "target": {
+              "side": "self",
+              "count": 5,
+              "filter": {
+                "type": "SWORD"
+              }
+            },
+            "keyword": "rushCharacter"
+          }
+        ]
+      },
+      {
+        "timing": "replaceRemoval",
+        "replaces": {
+          "side": "self",
+          "filter": {
+            "category": "character",
+            "type": "Navy",
+            "basePowerAtMost": 7000
+          },
+          "removal": "remove",
+          "byOpponent": true
+        },
+        "oncePerTurn": true,
+        "optional": true,
+        "costs": [
+          {
+            "trashToDeckBottom": 3
+          }
+        ],
+        "steps": []
+      }
+    ]
+  },
+  {
+    "id": "OP11-002",
+    "name": "Ain",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 3,
+    "power": 4000,
+    "counter": 1000,
+    "types": ["FILM", "Neo Navy"],
+    "attribute": "Special",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[On Play] Give up to 1 of your opponent's Characters −1000 power during this turn. Then, K.O. up to 1 of your opponent's Characters with 0 power or less.",
+    "image": "images/OP11-002.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "opponent",
+              "upTo": true
+            },
+            "amount": -1000
+          },
+          {
+            "do": "ko",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "powerAtMost": 0
+              },
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-003",
+    "name": "Usopp",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 5,
+    "power": 6000,
+    "counter": 2000,
+    "types": ["Straw Hat Crew"],
+    "attribute": "Ranged",
+    "rarity": "UC",
+    "blockIcon": 3,
+    "text": "",
+    "image": "images/OP11-003.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111"
+  },
+  {
+    "id": "OP11-004",
+    "name": "Kujyaku",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 1,
+    "counter": 1000,
+    "types": ["Navy", "SWORD"],
+    "attribute": "Special",
+    "rarity": "SR",
+    "blockIcon": 3,
+    "text": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 {Navy} type card other than [Kujyaku] and add it to your hand. Then, place the rest at the bottom of your deck in any order.\n[Activate: Main] You may trash this Character: Up to 1 of your Characters gains +1000 power during this turn.",
+    "image": "images/OP11-004.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "searchDeck",
+            "look": 5,
+            "take": 1,
+            "filter": {
+              "type": "Navy",
+              "notName": "Kujyaku"
+            }
+          }
+        ]
+      },
+      {
+        "timing": "activateMain",
+        "optional": true,
+        "costs": [
+          {
+            "trashThis": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "self",
+              "upTo": true
+            },
+            "amount": 1000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-005",
+    "name": "Smoker",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 4,
+    "power": 5000,
+    "counter": 1000,
+    "types": ["Navy"],
+    "attribute": "Special",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)\n[DON!! x1] This Character cannot be K.O.'d by effects of Characters without the ＜Special＞ attribute.",
+    "image": "images/OP11-005.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "permanent",
+        "steps": [
+          {
+            "do": "grantStatus",
+            "target": {
+              "side": "this"
+            },
+            "status": "cannotBeKOdByNonSpecialCharacters"
+          }
+        ],
+        "conditions": [
+          {
+            "donAtLeast": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-006",
+    "name": "Zephyr",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 5,
+    "power": 6000,
+    "counter": 1000,
+    "types": ["FILM", "Neo Navy"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[DON!! x1] [When Attacking] Give up to 1 of your opponent's ＜Special＞ attribute Characters −5000 power during this turn.",
+    "image": "images/OP11-006.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "whenAttacking",
+        "conditions": [
+          {
+            "donAtLeast": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "attribute": "Special"
+              },
+              "upTo": true
+            },
+            "amount": -5000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-007",
+    "name": "Tashigi",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 1,
+    "power": 1000,
+    "counter": 1000,
+    "types": ["Navy"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[Activate: Main] You may rest this Character: If your Leader has the {Navy} type, up to 1 of your {Navy} type Characters gains +2000 power during this turn.",
+    "image": "images/OP11-007.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "optional": true,
+        "costs": [
+          {
+            "restThis": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "leaderHasType": "Navy"
+              }
+            ],
+            "steps": [
+              {
+                "do": "powerUp",
+                "target": {
+                  "side": "self",
+                  "upTo": true,
+                  "filter": {
+                    "type": "Navy"
+                  }
+                },
+                "amount": 2000
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-008",
+    "name": "Doll",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 4,
+    "power": 1000,
+    "counter": 1000,
+    "types": ["Navy"],
+    "attribute": "Strike",
+    "rarity": "R",
+    "blockIcon": 3,
+    "text": "[Blocker]\n[On Play] You may trash 1 card from your hand: If your Leader has the {Navy} type, give up to 1 of your opponent's Characters −6000 power during this turn.",
+    "image": "images/OP11-008.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "onPlay",
+        "optional": true,
+        "costs": [
+          {
+            "trashFromHand": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "leaderHasType": "Navy"
+              }
+            ],
+            "steps": [
+              {
+                "do": "powerUp",
+                "target": {
+                  "side": "opponent",
+                  "upTo": true
+                },
+                "amount": -6000
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-009",
+    "name": "Nico Robin",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 3,
+    "power": 4000,
+    "counter": 1000,
+    "types": ["Straw Hat Crew"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[DON!! x2] [When Attacking] Give up to 1 of your opponent's Characters −2000 power until the end of your opponent's next turn.",
+    "image": "images/OP11-009.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "whenAttacking",
+        "conditions": [
+          {
+            "donAtLeast": 2
+          }
+        ],
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "opponent",
+              "upTo": true
+            },
+            "amount": -2000,
+            "duration": "opponentsNextTurn"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-010",
+    "name": "Hibari",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 5,
+    "power": 6000,
+    "types": ["Navy", "SWORD"],
+    "attribute": "Ranged",
+    "rarity": "SR",
+    "blockIcon": 3,
+    "text": "[On Play] Give up to 1 of your opponent's Characters −2000 power during this turn.\n[When Attacking] This Character gains +1000 power during this turn. Then, up to 1 of your {Navy} type Leader can also attack active Characters during this turn.",
+    "image": "images/OP11-010.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "opponent",
+              "upTo": true
+            },
+            "amount": -2000
+          }
+        ]
+      },
+      {
+        "timing": "whenAttacking",
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "this"
+            },
+            "amount": 1000
+          },
+          {
+            "do": "grantKeyword",
+            "target": {
+              "side": "self",
+              "zone": "leader",
+              "upTo": true,
+              "filter": {
+                "type": "Navy"
+              }
+            },
+            "keyword": "canAttackActive"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-011",
+    "name": "Bins",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 5,
+    "power": 7000,
+    "counter": 1000,
+    "types": ["FILM", "Neo Navy"],
+    "attribute": "Special",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "",
+    "image": "images/OP11-011.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111"
+  },
+  {
+    "id": "OP11-012",
+    "name": "Franky",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 4,
+    "power": 4000,
+    "counter": 2000,
+    "types": ["Straw Hat Crew"],
+    "attribute": "Strike",
+    "rarity": "UC",
+    "blockIcon": 3,
+    "text": "[Your Turn] [Once Per Turn] When your opponent activates an Event, all of your Characters gain +2000 power during this turn.",
+    "image": "images/OP11-012.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "opponentActivatesEvent",
+        "oncePerTurn": true,
+        "conditions": [
+          {
+            "yourTurn": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "self",
+              "count": 5
+            },
+            "amount": 2000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-013",
+    "name": "Prince Grus",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 1,
+    "power": 2000,
+    "counter": 2000,
+    "types": ["Navy", "SWORD"],
+    "attribute": "Special",
+    "rarity": "R",
+    "blockIcon": 3,
+    "text": "[When Attacking] All of your opponent's Characters with 2000 power or less cannot activate [Blocker] during this turn.",
+    "image": "images/OP11-013.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "whenAttacking",
+        "steps": [
+          {
+            "do": "grantStatus",
+            "target": {
+              "side": "opponent",
+              "count": 5,
+              "filter": {
+                "powerAtMost": 2000
+              }
+            },
+            "status": "cannotBlock"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-014",
+    "name": "Borsalino",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 3,
+    "power": 3000,
+    "counter": 1000,
+    "types": ["FILM", "Navy"],
+    "attribute": "Special",
+    "rarity": "R",
+    "blockIcon": 3,
+    "text": "[Blocker]\n[Activate: Main] You may rest this Character: Up to 1 of your {Navy} type Leader or Character cards can also attack active Characters during this turn.",
+    "image": "images/OP11-014.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "activateMain",
+        "optional": true,
+        "costs": [
+          {
+            "restThis": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "grantKeyword",
+            "target": {
+              "side": "self",
+              "zone": "leaderOrCharacters",
+              "upTo": true,
+              "filter": {
+                "type": "Navy"
+              }
+            },
+            "keyword": "canAttackActive"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-015",
+    "name": "Mocha",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 4,
+    "power": 6000,
+    "counter": 1000,
+    "types": ["Punk Hazard"],
+    "attribute": "Wisdom",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "",
+    "image": "images/OP11-015.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111"
+  },
+  {
+    "id": "OP11-016",
+    "name": "Roronoa Zoro",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 5,
+    "power": 6000,
+    "counter": 1000,
+    "types": ["Straw Hat Crew"],
+    "attribute": "Slash",
+    "rarity": "UC",
+    "blockIcon": 3,
+    "text": "[Activate: Main] [Once Per Turn] Give up to 1 rested DON!! card to your Leader or 1 of your Characters.",
+    "image": "images/OP11-016.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "oncePerTurn": true,
+        "steps": [
+          {
+            "do": "giveRestedDon",
+            "target": {
+              "side": "self",
+              "zone": "leaderOrCharacters",
+              "upTo": true
+            },
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-017",
+    "name": "X.Drake",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 6,
+    "power": 7000,
+    "counter": 2000,
+    "types": ["Navy", "SWORD", "Drake Pirates"],
+    "attribute": "Slash",
+    "rarity": "UC",
+    "blockIcon": 3,
+    "text": "",
+    "image": "images/OP11-017.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111"
+  },
+  {
+    "id": "OP11-018",
+    "name": "Honesty Impact",
+    "category": "event",
+    "colors": ["red"],
+    "cost": 6,
+    "types": ["Navy", "SWORD"],
+    "rarity": "R",
+    "blockIcon": 3,
+    "text": "[Main] Give up to 1 of your opponent's Characters −4000 power during this turn. Then, K.O. up to 1 of your opponent's Characters with 6000 power or less.",
+    "trigger": "[Trigger] K.O. up to 1 of your opponent's Characters with 6000 power or less.",
+    "image": "images/OP11-018.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "main",
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "opponent",
+              "upTo": true
+            },
+            "amount": -4000
+          },
+          {
+            "do": "ko",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "powerAtMost": 6000
+              },
+              "upTo": true
+            }
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "ko",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "powerAtMost": 6000
+              },
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-019",
+    "name": "Glorp Web!!",
+    "category": "event",
+    "colors": ["red"],
+    "cost": 2,
+    "types": ["Navy", "SWORD"],
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[Counter] Up to 1 of your Leader or Character cards gains +2000 power during this battle. Then, if your opponent has a Character with 6000 power or more, up to 1 of your Leader or Character cards gains +1000 power during this turn.",
+    "trigger": "[Trigger] Up to 1 of your Leader or Character cards gains +1000 power during this turn.",
+    "image": "images/OP11-019.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "counter",
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "self",
+              "zone": "leaderOrCharacters",
+              "upTo": true
+            },
+            "amount": 2000,
+            "duration": "battle"
+          },
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "count": {
+                  "side": "opponent",
+                  "filter": {
+                    "powerAtLeast": 6000
+                  }
+                }
+              }
+            ],
+            "steps": [
+              {
+                "do": "powerUp",
+                "target": {
+                  "side": "self",
+                  "zone": "leaderOrCharacters",
+                  "upTo": true
+                },
+                "amount": 1000
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "self",
+              "zone": "leaderOrCharacters",
+              "upTo": true
+            },
+            "amount": 1000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-020",
+    "name": "X Calibur",
+    "category": "event",
+    "colors": ["red"],
+    "cost": 2,
+    "types": ["Navy", "SWORD", "Drake Pirates"],
+    "rarity": "UC",
+    "blockIcon": 3,
+    "text": "[Counter] Up to 1 of your Leader or Character cards gains +2000 power during this battle. Then, if your opponent has a Character with 6000 power or more, up to 1 of your Leader or Character cards gains +1000 power during this turn.",
+    "trigger": "[Trigger] Up to 1 of your Leader or Character cards gains +1000 power during this turn.",
+    "image": "images/OP11-020.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "counter",
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "self",
+              "zone": "leaderOrCharacters",
+              "upTo": true
+            },
+            "amount": 2000,
+            "duration": "battle"
+          },
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "count": {
+                  "side": "opponent",
+                  "filter": {
+                    "powerAtLeast": 6000
+                  }
+                }
+              }
+            ],
+            "steps": [
+              {
+                "do": "powerUp",
+                "target": {
+                  "side": "self",
+                  "zone": "leaderOrCharacters",
+                  "upTo": true
+                },
+                "amount": 1000
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "self",
+              "zone": "leaderOrCharacters",
+              "upTo": true
+            },
+            "amount": 1000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-021",
+    "name": "Jinbe",
+    "category": "leader",
+    "colors": ["green"],
+    "life": 5,
+    "power": 5000,
+    "types": ["Fish-Man", "Straw Hat Crew"],
+    "attribute": "Strike",
+    "rarity": "L",
+    "blockIcon": 3,
+    "text": "[End of Your Turn] If you have 6 or less cards in your hand, set up to 1 of your {Fish-Man} or {Merfolk} type Characters and up to 1 of your DON!! cards as active.",
+    "image": "images/OP11-021.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "endOfYourTurn",
+        "conditions": [
+          {
+            "handAtMost": 6
+          }
+        ],
+        "steps": [
+          {
+            "do": "setActive",
+            "target": {
+              "side": "self",
+              "upTo": true,
+              "filter": {
+                "anyOf": [
+                  {
+                    "type": "Fish-Man"
+                  },
+                  {
+                    "type": "Merfolk"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "do": "setDonActive",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-022",
+    "name": "Shirahoshi",
+    "category": "leader",
+    "colors": ["green", "yellow"],
+    "life": 5,
+    "power": 5000,
+    "types": ["Merfolk", "Fish-Man Island"],
+    "attribute": "Wisdom",
+    "rarity": "L",
+    "blockIcon": 3,
+    "text": "This Leader cannot attack.\n[Activate: Main] [Once Per Turn] You may rest 1 of your DON!! cards and turn 1 card from the top of your Life cards face-up: Play up to 1 {Neptunian} type Character card or [Megalo] with a cost equal to or less than the number of DON!! cards on your field from your hand.",
+    "image": "images/OP11-022.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "permanent",
+        "steps": [
+          {
+            "do": "grantStatus",
+            "target": {
+              "side": "this"
+            },
+            "status": "cannotAttack"
+          }
+        ]
+      },
+      {
+        "timing": "activateMain",
+        "oncePerTurn": true,
+        "optional": true,
+        "costs": [
+          {
+            "restDon": 1
+          },
+          {
+            "lifeFaceUp": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "playFromHand",
+            "filter": {
+              "category": "character",
+              "costAtMostDonOnField": true,
+              "anyOf": [
+                {
+                  "type": "Neptunian"
+                },
+                {
+                  "name": "Megalo"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-023",
+    "name": "Arlong",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 7,
+    "power": 7000,
+    "counter": 1000,
+    "types": ["Fish-Man", "Fish-Man Island", "The Sun Pirates"],
+    "attribute": "Slash",
+    "rarity": "R",
+    "blockIcon": 3,
+    "text": "If your Leader has the {Fish-Man} type, you have 3 or less Life cards and your opponent has 5 or more rested cards, give this card in your hand −3 cost.",
+    "trigger": "[Trigger] Rest up to 1 of your opponent's Characters with a cost of 4 or less.",
+    "image": "images/OP11-023.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "permanent",
+        "zone": "hand",
+        "conditions": [
+          {
+            "leaderHasType": "Fish-Man"
+          },
+          {
+            "lifeAtMost": 3
+          },
+          {
+            "opponentRestedCardsAtLeast": 5
+          }
+        ],
+        "steps": [
+          {
+            "do": "costChange",
+            "target": {
+              "side": "this"
+            },
+            "amount": -3
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "rest",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "costAtMost": 4
+              },
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-024",
+    "name": "Aladine",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 4,
+    "power": 5000,
+    "counter": 1000,
+    "types": ["Merfolk", "Fish-Man Island", "The Sun Pirates"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "When this Character is K.O.'d by your opponent's effect, you may trash 1 card from your hand and rest 1 of your DON!! cards. If you do, play up to 1 {Fish-Man} or {Merfolk} type Character card with a cost of 6 or less from your hand.",
+    "image": "images/OP11-024.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "koByOpponentsEffect",
+        "optional": true,
+        "costs": [
+          {
+            "trashFromHand": 1
+          },
+          {
+            "restDon": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "playFromHand",
+            "filter": {
+              "category": "character",
+              "costAtMost": 6,
+              "anyOf": [
+                {
+                  "type": "Fish-Man"
+                },
+                {
+                  "type": "Merfolk"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-025",
+    "name": "Ishilly",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 2,
+    "counter": 1000,
+    "types": ["Merfolk", "Fish-Man Island"],
+    "attribute": "Wisdom",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[On Your Opponent's Attack] [Once Per Turn] You may rest 1 of your DON!! cards and this Character: Up to 1 of your Leader or Character cards gains +1000 power during this battle.",
+    "image": "images/OP11-025.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "onOpponentsAttack",
+        "oncePerTurn": true,
+        "optional": true,
+        "costs": [
+          {
+            "restDon": 1
+          },
+          {
+            "restThis": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "self",
+              "zone": "leaderOrCharacters",
+              "upTo": true
+            },
+            "amount": 1000,
+            "duration": "battle"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-026",
+    "name": "Scaled Neptunian",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 6,
+    "power": 8000,
+    "counter": 1000,
+    "types": ["Neptunian"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "",
+    "image": "images/OP11-026.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111"
+  },
+  {
+    "id": "OP11-027",
+    "name": "Bulge-Eyed Neptunian",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 4,
+    "power": 6000,
+    "types": ["Neptunian"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "If your Leader is [Shirahoshi], this Character can attack Characters on the turn in which it is played.",
+    "image": "images/OP11-027.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "permanent",
+        "steps": [
+          {
+            "do": "grantKeyword",
+            "target": {
+              "side": "this"
+            },
+            "keyword": "rushCharacter"
+          }
+        ],
+        "conditions": [
+          {
+            "leaderIs": "Shirahoshi"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-028",
+    "name": "Lord of the Coast",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 4,
+    "power": 5000,
+    "counter": 1000,
+    "types": ["Neptunian", "East Blue"],
+    "attribute": "Strike",
+    "rarity": "R",
+    "blockIcon": 3,
+    "text": "[On Play] Up to 1 of your opponent's rested Characters will not become active in your opponent's next Refresh Phase.",
+    "trigger": "[Trigger] K.O. up to 1 of your opponent's rested Characters with a cost of 3 or less.",
+    "image": "images/OP11-028.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "grantStatus",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "rested": true
+              },
+              "upTo": true
+            },
+            "status": "noRefresh"
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "ko",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "rested": true,
+                "costAtMost": 3
+              },
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-029",
+    "name": "Charlotte Praline",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 3,
+    "power": 4000,
+    "counter": 1000,
+    "types": ["Merfolk", "Fish-Man Island", "The Sun Pirates"],
+    "attribute": "Wisdom",
+    "rarity": "UC",
+    "blockIcon": 3,
+    "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)\n[On Play] Rest up to 1 of your opponent's Characters with a cost of 1 or less.",
+    "image": "images/OP11-029.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "rest",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "costAtMost": 1
+              },
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-030",
+    "name": "Shirahoshi",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 1,
+    "counter": 1000,
+    "types": ["Merfolk", "Fish-Man Island"],
+    "attribute": "Wisdom",
+    "rarity": "R",
+    "blockIcon": 3,
+    "text": "[Activate: Main] You may rest 1 of your DON!! cards and this Character: Look at 5 cards from the top of your deck; reveal up to 1 {Neptunian} or {Fish-Man Island} type card and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+    "image": "images/OP11-030.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "optional": true,
+        "costs": [
+          {
+            "restDon": 1
+          },
+          {
+            "restThis": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "searchDeck",
+            "look": 5,
+            "take": 1,
+            "filter": {
+              "anyOf": [
+                {
+                  "type": "Neptunian"
+                },
+                {
+                  "type": "Fish-Man Island"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-031",
+    "name": "Jinbe",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 6,
+    "power": 8000,
+    "types": ["Fish-Man", "Fish-Man Island", "The Sun Pirates"],
+    "attribute": "Strike",
+    "rarity": "SR",
+    "blockIcon": 3,
+    "text": "[On Play] If your Leader has the {Fish-Man} or {Merfolk} type, rest up to 1 of your opponent's Characters with a cost of 5 or less.\n[Activate: Main] [Once Per Turn] Up to 1 of your {Fish-Man} or {Merfolk} type Characters can attack Characters on the turn in which it is played.",
+    "image": "images/OP11-031.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "conditions": [
+          {
+            "anyOf": [
+              {
+                "leaderHasType": "Fish-Man"
+              },
+              {
+                "leaderHasType": "Merfolk"
+              }
+            ]
+          }
+        ],
+        "steps": [
+          {
+            "do": "rest",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "costAtMost": 5
+              },
+              "upTo": true
+            }
+          }
+        ]
+      },
+      {
+        "timing": "activateMain",
+        "oncePerTurn": true,
+        "steps": [
+          {
+            "do": "grantKeyword",
+            "target": {
+              "side": "self",
+              "upTo": true,
+              "filter": {
+                "anyOf": [
+                  {
+                    "type": "Fish-Man"
+                  },
+                  {
+                    "type": "Merfolk"
+                  }
+                ]
+              }
+            },
+            "keyword": "rushCharacter"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-032",
+    "name": "Surume",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 5,
+    "power": 6000,
+    "counter": 2000,
+    "types": ["Animal", "Fish-Man Island"],
+    "attribute": "Strike",
+    "rarity": "UC",
+    "blockIcon": 3,
+    "text": "",
+    "image": "images/OP11-032.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111"
+  },
+  {
+    "id": "OP11-033",
+    "name": "Bird Neptunian",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 6,
+    "power": 7000,
+    "counter": 2000,
+    "types": ["Neptunian"],
+    "attribute": "Strike",
+    "rarity": "UC",
+    "blockIcon": 3,
+    "text": "",
+    "image": "images/OP11-033.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111"
+  },
+  {
+    "id": "OP11-034",
+    "name": "Hatchan",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 4,
+    "power": 5000,
+    "counter": 1000,
+    "types": ["Fish-Man", "Fish-Man Island", "Former Arlong Pirates"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[Activate: Main] You may rest this Character: If your Leader has the {Fish-Man} or {Merfolk} type, up to 1 of your opponent's Characters with a cost of 3 or less cannot be rested until the end of your opponent's next turn.",
+    "image": "images/OP11-034.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "optional": true,
+        "costs": [
+          {
+            "restThis": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "anyOf": [
+                  {
+                    "leaderHasType": "Fish-Man"
+                  },
+                  {
+                    "leaderHasType": "Merfolk"
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              {
+                "do": "grantStatus",
+                "target": {
+                  "side": "opponent",
+                  "filter": {
+                    "costAtMost": 3
+                  },
+                  "upTo": true
+                },
+                "status": "cannotBeRested",
+                "duration": "opponentsNextTurn"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-035",
+    "name": "Fisher Tiger",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 6,
+    "power": 7000,
+    "counter": 1000,
+    "types": ["Fish-Man", "Fish-Man Island", "The Sun Pirates"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "When this Character is K.O.'d by your opponent's effect, you may rest 1 of your DON!! cards. If you do, play up to 1 {Fish-Man} or {Merfolk} type Character card with a cost of 4 or less from your hand.\n[On Play] Rest up to 1 of your opponent's Characters.",
+    "image": "images/OP11-035.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "koByOpponentsEffect",
+        "optional": true,
+        "costs": [
+          {
+            "restDon": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "playFromHand",
+            "filter": {
+              "category": "character",
+              "costAtMost": 4,
+              "anyOf": [
+                {
+                  "type": "Fish-Man"
+                },
+                {
+                  "type": "Merfolk"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "rest",
+            "target": {
+              "side": "opponent",
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-036",
+    "name": "Spotted Neptunian",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 4,
+    "power": 5000,
+    "counter": 1000,
+    "types": ["Neptunian"],
+    "attribute": "Strike",
+    "rarity": "UC",
+    "blockIcon": 3,
+    "text": "[On Play] If your Leader is [Shirahoshi], look at 5 cards from the top of your deck; reveal up to 1 {Neptunian} type card or [Shirahoshi] and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+    "image": "images/OP11-036.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "conditions": [
+          {
+            "leaderIs": "Shirahoshi"
+          }
+        ],
+        "steps": [
+          {
+            "do": "searchDeck",
+            "look": 5,
+            "take": 1,
+            "filter": {
+              "anyOf": [
+                {
+                  "type": "Neptunian"
+                },
+                {
+                  "name": "Shirahoshi"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-037",
+    "name": "Ancient Weapon Poseidon",
+    "category": "event",
+    "colors": ["green"],
+    "cost": 1,
+    "types": ["Fish-Man Island"],
+    "rarity": "UC",
+    "blockIcon": 3,
+    "text": "[Main] Look at 4 cards from the top of your deck; reveal up to 1 {Neptunian} or {Fish-Man Island} type Character card and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+    "trigger": "[Trigger] Draw 1 card.",
+    "image": "images/OP11-037.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "main",
+        "steps": [
+          {
+            "do": "searchDeck",
+            "look": 4,
+            "take": 1,
+            "filter": {
+              "category": "character",
+              "anyOf": [
+                {
+                  "type": "Neptunian"
+                },
+                {
+                  "type": "Fish-Man Island"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "draw",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-038",
+    "name": "Gum-Gum Elephant Gatling",
+    "category": "event",
+    "colors": ["green"],
+    "cost": 1,
+    "types": ["Fish-Man Island", "Supernovas", "Straw Hat Crew"],
+    "rarity": "R",
+    "blockIcon": 3,
+    "text": "[Main] You may rest 1 of your DON!! cards: Rest up to 1 of your opponent's Characters with a cost of 5 or less.\n[Counter] Up to 1 of your Leader gains +3000 power during this battle.",
+    "image": "images/OP11-038.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "main",
+        "optional": true,
+        "costs": [
+          {
+            "restDon": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "rest",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "costAtMost": 5
+              },
+              "upTo": true
+            }
+          }
+        ]
+      },
+      {
+        "timing": "counter",
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "self",
+              "zone": "leader",
+              "upTo": true
+            },
+            "amount": 3000,
+            "duration": "battle"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-039",
+    "name": "Vagabond Drill",
+    "category": "event",
+    "colors": ["green"],
+    "cost": 1,
+    "types": ["Fish-Man", "Fish-Man Island", "The Sun Pirates"],
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[Counter] Up to 1 of your {Fish-Man} or {Merfolk} type Leader or Character cards gains +3000 power during this battle. Then, rest up to 1 of your opponent's Characters with a cost of 3 or less.",
+    "trigger": "[Trigger] Rest up to 1 of your opponent's Characters with a cost of 4 or less.",
+    "image": "images/OP11-039.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "counter",
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "self",
+              "zone": "leaderOrCharacters",
+              "upTo": true,
+              "filter": {
+                "anyOf": [
+                  {
+                    "type": "Fish-Man"
+                  },
+                  {
+                    "type": "Merfolk"
+                  }
+                ]
+              }
+            },
+            "amount": 3000,
+            "duration": "battle"
+          },
+          {
+            "do": "rest",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "costAtMost": 3
+              },
+              "upTo": true
+            }
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "rest",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "costAtMost": 4
+              },
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-040",
+    "name": "Monkey.D.Luffy",
+    "category": "leader",
+    "colors": ["blue", "purple"],
+    "life": 3,
+    "power": 6000,
+    "types": ["Straw Hat Crew"],
+    "attribute": "Strike",
+    "rarity": "L",
+    "blockIcon": 3,
+    "text": "This effect can be activated at the start of your turn. If you have 8 or more DON!! cards on your field, look at 5 cards from the top of your deck; reveal up to 1 {Straw Hat Crew} type card and add it to your hand. Then, place the rest at the top or bottom of the deck in any order.",
+    "image": "images/OP11-040.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "startOfYourTurn",
+        "optional": true,
+        "conditions": [
+          {
+            "donOnFieldAtLeast": 8
+          }
+        ],
+        "steps": [
+          {
+            "do": "searchDeck",
+            "look": 5,
+            "take": 1,
+            "filter": {
+              "type": "Straw Hat Crew"
+            },
+            "rest": "topOrBottom"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-041",
+    "name": "Nami",
+    "category": "leader",
+    "colors": ["blue", "yellow"],
+    "life": 4,
+    "power": 5000,
+    "types": ["Straw Hat Crew"],
+    "attribute": "Special",
+    "rarity": "L",
+    "blockIcon": 3,
+    "text": "[Your Turn] [Once Per Turn] This effect can be activated when a card is removed from your or your opponent's Life cards. If you have 7 or less cards in your hand, draw 1 card.\n[DON!! x1] [On Your Opponent's Attack] [Once Per Turn] You may trash 1 card from your hand: This Leader gains +2000 power during this turn.",
+    "image": "images/OP11-041.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "lifeCardRemoved",
+        "oncePerTurn": true,
+        "conditions": [
+          {
+            "yourTurn": true
+          },
+          {
+            "handAtMost": 7
+          }
+        ],
+        "steps": [
+          {
+            "do": "draw",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "timing": "onOpponentsAttack",
+        "oncePerTurn": true,
+        "optional": true,
+        "conditions": [
+          {
+            "donAtLeast": 1
+          }
+        ],
+        "costs": [
+          {
+            "trashFromHand": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "this"
+            },
+            "amount": 2000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-042",
+    "name": "Vito",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 3,
+    "power": 4000,
+    "counter": 1000,
+    "types": ["Firetank Pirates"],
+    "attribute": "Ranged",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[On Play] You may trash 1 {Firetank Pirates} type card from your hand: This Character gains [Rush] during this turn.\n(This card can attack on the turn in which it is played.)",
+    "image": "images/OP11-042.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "optional": true,
+        "costs": [
+          {
+            "trashFromHand": 1,
+            "filter": {
+              "type": "Firetank Pirates"
+            }
+          }
+        ],
+        "steps": [
+          {
+            "do": "grantKeyword",
+            "target": {
+              "side": "this"
+            },
+            "keyword": "rush"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-043",
+    "name": "Vinsmoke Ichiji",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 7,
+    "power": 7000,
+    "types": ["The Vinsmoke Family", "GERMA 66"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[Blocker]\n[On Your Opponent's Attack] [Once Per Turn] This effect can be activated when you only have Characters with a type including \"GERMA\". Up to 1 of your Leader or Character cards gains +1000 power during this battle. Then, trash 2 cards from the top of your deck.",
+    "image": "images/OP11-043.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "onOpponentsAttack",
+        "oncePerTurn": true,
+        "conditions": [
+          {
+            "count": {
+              "side": "self",
+              "filter": {
+                "notTypeIncludes": "GERMA"
+              }
+            },
+            "atMost": 0
+          }
+        ],
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "self",
+              "zone": "leaderOrCharacters",
+              "upTo": true
+            },
+            "amount": 1000,
+            "duration": "battle"
+          },
+          {
+            "do": "trashFromDeck",
+            "count": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-044",
+    "name": "Vinsmoke Judge",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 6,
+    "power": 8000,
+    "types": ["The Vinsmoke Family", "GERMA 66"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[Activate: Main] [Once Per Turn] You may trash 1 card from your hand: All of your {GERMA 66} type Characters gain +1000 power during this turn.",
+    "image": "images/OP11-044.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "oncePerTurn": true,
+        "optional": true,
+        "costs": [
+          {
+            "trashFromHand": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "self",
+              "count": 5,
+              "filter": {
+                "type": "GERMA 66"
+              }
+            },
+            "amount": 1000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-045",
+    "name": "Vinsmoke Niji",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 5,
+    "power": 6000,
+    "counter": 2000,
+    "types": ["The Vinsmoke Family", "GERMA 66"],
+    "attribute": "Special",
+    "rarity": "UC",
+    "blockIcon": 3,
+    "text": "",
+    "image": "images/OP11-045.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111"
+  },
+  {
+    "id": "OP11-046",
+    "name": "Vinsmoke Yonji",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 4,
+    "power": 5000,
+    "counter": 1000,
+    "types": ["The Vinsmoke Family", "GERMA 66"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)\nIf you only have Characters with a type including \"GERMA\", this Character cannot be K.O.'d or rested by your opponent's effects.",
+    "image": "images/OP11-046.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "permanent",
+        "steps": [
+          {
+            "do": "grantStatus",
+            "target": {
+              "side": "this"
+            },
+            "status": "cannotBeKOdByOpponentsEffects"
+          },
+          {
+            "do": "grantStatus",
+            "target": {
+              "side": "this"
+            },
+            "status": "cannotBeRestedByOpponentsEffects"
+          }
+        ],
+        "conditions": [
+          {
+            "count": {
+              "side": "self",
+              "filter": {
+                "notTypeIncludes": "GERMA"
+              }
+            },
+            "atMost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-047",
+    "name": "Vinsmoke Reiju",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 4,
+    "power": 5000,
+    "counter": 2000,
+    "types": ["The Vinsmoke Family", "GERMA 66"],
+    "attribute": "Special",
+    "rarity": "R",
+    "blockIcon": 3,
+    "text": "[On Play] If your Leader has the {The Vinsmoke Family} type, look at 5 cards from the top of your deck; reveal up to 1 card with a type including \"GERMA\" and add it to your hand. Then, trash the rest.",
+    "image": "images/OP11-047.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "conditions": [
+          {
+            "leaderHasType": "The Vinsmoke Family"
+          }
+        ],
+        "steps": [
+          {
+            "do": "searchDeck",
+            "look": 5,
+            "take": 1,
+            "filter": {
+              "typeIncludes": "GERMA"
+            },
+            "rest": "trash"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-048",
+    "name": "Capone\"Gang\"Bege",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 1,
+    "power": 2000,
+    "counter": 1000,
+    "types": ["Supernovas", "Firetank Pirates"],
+    "attribute": "Ranged",
+    "rarity": "R",
+    "blockIcon": 3,
+    "text": "[On Play] Look at 4 cards from the top of your deck; reveal up to 1 {Firetank Pirates} or {Straw Hat Crew} type card with a cost of 2 or more and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+    "image": "images/OP11-048.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "searchDeck",
+            "look": 4,
+            "take": 1,
+            "filter": {
+              "costAtLeast": 2,
+              "anyOf": [
+                {
+                  "type": "Firetank Pirates"
+                },
+                {
+                  "type": "Straw Hat Crew"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-049",
+    "name": "Carrot",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 1,
+    "power": 1000,
+    "counter": 1000,
+    "types": ["Minks"],
+    "attribute": "Special",
+    "rarity": "R",
+    "blockIcon": 3,
+    "text": "[On Play] Look at 3 cards from the top of your deck and place them at the top or bottom of the deck in any order.\n[On Your Opponent's Attack] You may trash this Character: Up to 1 of your Leader gains +1000 power during this battle.",
+    "image": "images/OP11-049.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "arrangeDeckTop",
+            "look": 3,
+            "bottom": true
+          }
+        ]
+      },
+      {
+        "timing": "onOpponentsAttack",
+        "optional": true,
+        "costs": [
+          {
+            "trashThis": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "self",
+              "zone": "leader",
+              "upTo": true
+            },
+            "amount": 1000,
+            "duration": "battle"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-050",
+    "name": "Gotti",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 3,
+    "power": 4000,
+    "counter": 2000,
+    "types": ["Firetank Pirates"],
+    "attribute": "Ranged",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[When Attacking] You may trash 1 {Firetank Pirates} type card from your hand: Return up to 1 Character with a cost of 1 or less to the owner's hand or place it at the bottom of their deck.",
+    "image": "images/OP11-050.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "whenAttacking",
+        "optional": true,
+        "costs": [
+          {
+            "trashFromHand": 1,
+            "filter": {
+              "type": "Firetank Pirates"
+            }
+          }
+        ],
+        "steps": [
+          {
+            "do": "chooseOne",
+            "options": [
+              {
+                "label": "Return to the owner's hand",
+                "steps": [
+                  {
+                    "do": "returnToHand",
+                    "target": {
+                      "side": "any",
+                      "upTo": true,
+                      "filter": {
+                        "costAtMost": 1
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "label": "Place at the bottom of the owner's deck",
+                "steps": [
+                  {
+                    "do": "returnToDeckBottom",
+                    "target": {
+                      "side": "any",
+                      "upTo": true,
+                      "filter": {
+                        "costAtMost": 1
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-051",
+    "name": "Sanji",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 6,
+    "power": 7000,
+    "types": ["The Vinsmoke Family", "Straw Hat Crew"],
+    "attribute": "Strike",
+    "rarity": "SR",
+    "blockIcon": 3,
+    "text": "When this Character is K.O.'d by your opponent's effect, look at 5 cards from the top of your deck and play up to 1 {Straw Hat Crew} type Character card with a cost of 5 or less. Then, place the rest at the bottom of your deck in any order.\n[On Play] Return up to 1 Character with 5000 base power or less to the owner's hand.",
+    "image": "images/OP11-051.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "koByOpponentsEffect",
+        "steps": [
+          {
+            "do": "searchDeck",
+            "look": 5,
+            "take": 1,
+            "filter": {
+              "category": "character",
+              "type": "Straw Hat Crew",
+              "costAtMost": 5
+            },
+            "play": true
+          }
+        ]
+      },
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "returnToHand",
+            "target": {
+              "side": "any",
+              "upTo": true,
+              "filter": {
+                "basePowerAtMost": 5000
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-052",
+    "name": "Charlotte Lola",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 5,
+    "power": 7000,
+    "counter": 1000,
+    "types": ["Firetank Pirates", "Former Rolling Pirates"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "",
+    "image": "images/OP11-052.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111"
+  },
+  {
+    "id": "OP11-053",
+    "name": "Tony Tony.Chopper",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 5,
+    "power": 6000,
+    "counter": 2000,
+    "types": ["Animal", "Straw Hat Crew"],
+    "attribute": "Strike",
+    "rarity": "UC",
+    "blockIcon": 3,
+    "text": "",
+    "image": "images/OP11-053.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111"
+  },
+  {
+    "id": "OP11-054",
+    "name": "Nami",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 5,
+    "power": 6000,
+    "counter": 1000,
+    "types": ["Straw Hat Crew"],
+    "attribute": "Special",
+    "rarity": "SR",
+    "blockIcon": 3,
+    "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)\n[On Play] If your Leader is multicolored, draw 3 cards and place 2 cards from your hand at the top or bottom of your deck in any order.",
+    "image": "images/OP11-054.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "onPlay",
+        "conditions": [
+          {
+            "leaderMulticolored": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "draw",
+            "count": 3
+          },
+          {
+            "do": "handToDeckTop",
+            "count": 2,
+            "topOrBottom": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-055",
+    "name": "Bartolomeo",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 6,
+    "power": 7000,
+    "counter": 2000,
+    "types": ["Dressrosa", "Supernovas"],
+    "attribute": "Special",
+    "rarity": "UC",
+    "blockIcon": 3,
+    "text": "",
+    "image": "images/OP11-055.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111"
+  },
+  {
+    "id": "OP11-056",
+    "name": "Brook",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 3,
+    "power": 4000,
+    "counter": 1000,
+    "types": ["Straw Hat Crew"],
+    "attribute": "Slash",
+    "rarity": "R",
+    "blockIcon": 3,
+    "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)\n[On Play] Place up to 1 Character with a base cost of 1 at the bottom of the owner's deck.",
+    "image": "images/OP11-056.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "returnToDeckBottom",
+            "target": {
+              "side": "any",
+              "upTo": true,
+              "filter": {
+                "baseCostAtLeast": 1,
+                "baseCostAtMost": 1
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-057",
+    "name": "Pedro",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 1,
+    "power": 1000,
+    "counter": 1000,
+    "types": ["Minks"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "If you have 4 or less cards in your hand, this Character gains [Blocker].\n(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)",
+    "image": "images/OP11-057.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "permanent",
+        "steps": [
+          {
+            "do": "grantKeyword",
+            "target": {
+              "side": "this"
+            },
+            "keyword": "blocker"
+          }
+        ],
+        "conditions": [
+          {
+            "handAtMost": 4
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-058",
+    "name": "Monkey.D.Luffy",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 5,
+    "power": 7000,
+    "counter": 1000,
+    "types": ["Straw Hat Crew"],
+    "attribute": "Strike",
+    "rarity": "UC",
+    "blockIcon": 3,
+    "text": "If you have 5 or more cards in your hand, this Character cannot attack.\n[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)",
+    "image": "images/OP11-058.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "permanent",
+        "steps": [
+          {
+            "do": "grantStatus",
+            "target": {
+              "side": "this"
+            },
+            "status": "cannotAttack"
+          }
+        ],
+        "conditions": [
+          {
+            "handAtLeast": 5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-059",
+    "name": "Gum-Gum King Cobra",
+    "category": "event",
+    "colors": ["blue"],
+    "cost": 1,
+    "types": ["Straw Hat Crew"],
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[Counter] Up to 1 of your Leader or Character cards gains +2000 power during this battle. Then, if you have 4 or less cards in your hand, that card gains an additional +2000 power during this battle.",
+    "trigger": "[Trigger] Return up to 1 Character with a cost of 2 or less to the owner's hand.",
+    "image": "images/OP11-059.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "counter",
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "self",
+              "zone": "leaderOrCharacters",
+              "upTo": true
+            },
+            "amount": 2000,
+            "duration": "battle"
+          },
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "handAtMost": 4
+              }
+            ],
+            "steps": [
+              {
+                "do": "powerUp",
+                "target": {
+                  "side": "that"
+                },
+                "amount": 2000,
+                "duration": "battle"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "returnToHand",
+            "target": {
+              "side": "any",
+              "upTo": true,
+              "filter": {
+                "costAtMost": 2
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-060",
+    "name": "Let's Crash This Wedding!!!",
+    "category": "event",
+    "colors": ["blue"],
+    "cost": 1,
+    "types": ["Straw Hat Crew"],
+    "rarity": "R",
+    "blockIcon": 3,
+    "text": "[Main] If your Leader is multicolored, look at 5 cards from the top of your deck; reveal up to 1 {Straw Hat Crew} type card other than [Let's Crash This Wedding!!!] and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+    "trigger": "[Trigger] Activate this card's [Main] effect.",
+    "image": "images/OP11-060.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "main",
+        "conditions": [
+          {
+            "leaderMulticolored": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "searchDeck",
+            "look": 5,
+            "take": 1,
+            "filter": {
+              "type": "Straw Hat Crew",
+              "notName": "Let's Crash This Wedding!!!"
+            }
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "conditions": [
+          {
+            "leaderMulticolored": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "searchDeck",
+            "look": 5,
+            "take": 1,
+            "filter": {
+              "type": "Straw Hat Crew",
+              "notName": "Let's Crash This Wedding!!!"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-061",
+    "name": "Gum-Gum Jet Culverin",
+    "category": "event",
+    "colors": ["blue"],
+    "cost": 3,
+    "types": ["Straw Hat Crew"],
+    "rarity": "UC",
+    "blockIcon": 3,
+    "text": "[Main] Place up to 1 of your opponent's Characters with a base cost of 4 or less at the bottom of the owner's deck.",
+    "trigger": "[Trigger] Place up to 1 Character with a cost of 1 or less at the bottom of the owner's deck.",
+    "image": "images/OP11-061.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "main",
+        "steps": [
+          {
+            "do": "returnToDeckBottom",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "baseCostAtMost": 4
+              },
+              "upTo": true
+            }
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "returnToDeckBottom",
+            "target": {
+              "side": "any",
+              "upTo": true,
+              "filter": {
+                "costAtMost": 1
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-062",
+    "name": "Charlotte Katakuri",
+    "category": "leader",
+    "colors": ["purple"],
+    "life": 5,
+    "power": 5000,
+    "types": ["Big Mom Pirates"],
+    "attribute": "Strike",
+    "rarity": "L",
+    "blockIcon": 3,
+    "text": "[When Attacking]/[On Your Opponent's Attack] [Once Per Turn] DON!! −1: Look at 1 card from the top of your opponent's deck. Then, this Leader gains +1000 power during this battle.",
+    "image": "images/OP11-062.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "whenAttacking",
+        "oncePerTurn": true,
+        "costs": [
+          {
+            "donMinus": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "lookAtOpponentDeckTop"
+          },
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "this"
+            },
+            "amount": 1000,
+            "duration": "battle"
+          }
+        ]
+      },
+      {
+        "timing": "onOpponentsAttack",
+        "oncePerTurn": true,
+        "costs": [
+          {
+            "donMinus": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "lookAtOpponentDeckTop"
+          },
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "this"
+            },
+            "amount": 1000,
+            "duration": "battle"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-063",
+    "name": "Little Sadi",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 2,
+    "power": 2000,
+    "counter": 2000,
+    "types": ["Impel Down"],
+    "attribute": "Wisdom",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[On Play] DON!! −1 (You may return the specified number of DON!! cards from your field to your DON!! deck.): If your Leader has the {Impel Down} type, rest up to 1 of your opponent's Characters with a cost of 3 or less.",
+    "image": "images/OP11-063.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "optional": true,
+        "costs": [
+          {
+            "donMinus": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "leaderHasType": "Impel Down"
+              }
+            ],
+            "steps": [
+              {
+                "do": "rest",
+                "target": {
+                  "side": "opponent",
+                  "filter": {
+                    "costAtMost": 3
+                  },
+                  "upTo": true
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-064",
+    "name": "Saldeath",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 6,
+    "power": 8000,
+    "counter": 1000,
+    "types": ["Impel Down"],
+    "attribute": "Wisdom",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "",
+    "image": "images/OP11-064.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111"
+  },
+  {
+    "id": "OP11-065",
+    "name": "Charlotte Anana",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 1,
+    "power": 1000,
+    "counter": 1000,
+    "types": ["Big Mom Pirates"],
+    "attribute": "Wisdom",
+    "rarity": "UC",
+    "blockIcon": 3,
+    "text": "If you have a purple {Big Mom Pirates} type Character other than [Charlotte Anana], this Character gains [Blocker].\n(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)",
+    "image": "images/OP11-065.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "permanent",
+        "steps": [
+          {
+            "do": "grantKeyword",
+            "target": {
+              "side": "this"
+            },
+            "keyword": "blocker"
+          }
+        ],
+        "conditions": [
+          {
+            "count": {
+              "side": "self",
+              "filter": {
+                "color": "purple",
+                "type": "Big Mom Pirates",
+                "notName": "Charlotte Anana"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-066",
+    "name": "Charlotte Oven",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 4,
+    "power": 5000,
+    "counter": 1000,
+    "types": ["Big Mom Pirates"],
+    "attribute": "Special",
+    "rarity": "R",
+    "blockIcon": 3,
+    "text": "[Activate: Main] You may rest this Character: Choose a cost and reveal 1 card from the top of your opponent's deck. If the revealed card has the chosen cost, K.O. up to 1 of your opponent's Characters with a base cost of 3 or less. Then, add up to 1 DON!! card from your DON!! deck and rest it.",
+    "image": "images/OP11-066.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "optional": true,
+        "costs": [
+          {
+            "restThis": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "guessCost",
+            "steps": [
+              {
+                "do": "ko",
+                "target": {
+                  "side": "opponent",
+                  "filter": {
+                    "baseCostAtMost": 3
+                  },
+                  "upTo": true
+                }
+              }
+            ]
+          },
+          {
+            "do": "addDon",
+            "count": 1,
+            "rested": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-067",
+    "name": "Charlotte Katakuri",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 8,
+    "power": 8000,
+    "types": ["Big Mom Pirates"],
+    "attribute": "Strike",
+    "rarity": "SR",
+    "blockIcon": 3,
+    "text": "[Blocker]\n[End of Your Turn] Set up to 2 of your {Big Mom Pirates} type Characters with a cost of 3 or more as active. Then, add up to 1 DON!! card from your DON!! deck and rest it.",
+    "image": "images/OP11-067.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "endOfYourTurn",
+        "steps": [
+          {
+            "do": "setActive",
+            "target": {
+              "side": "self",
+              "upTo": true,
+              "count": 2,
+              "filter": {
+                "type": "Big Mom Pirates",
+                "costAtLeast": 3
+              }
+            }
+          },
+          {
+            "do": "addDon",
+            "count": 1,
+            "rested": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-068",
+    "name": "Charlotte Daifuku",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 6,
+    "power": 7000,
+    "counter": 2000,
+    "types": ["Big Mom Pirates"],
+    "attribute": "Slash",
+    "rarity": "UC",
+    "blockIcon": 3,
+    "text": "",
+    "image": "images/OP11-068.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111"
+  },
+  {
+    "id": "OP11-069",
+    "name": "Charlotte Brulee",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 3,
+    "power": 4000,
+    "counter": 1000,
+    "types": ["Big Mom Pirates"],
+    "attribute": "Special",
+    "rarity": "R",
+    "blockIcon": 3,
+    "text": "[On Play] You may add 1 card from the top of your Life cards to your hand: If your Leader has the {Big Mom Pirates} type, add up to 1 DON!! card from your DON!! deck and set it as active.",
+    "image": "images/OP11-069.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "optional": true,
+        "costs": [
+          {
+            "lifeToHand": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "leaderHasType": "Big Mom Pirates"
+              }
+            ],
+            "steps": [
+              {
+                "do": "addDon",
+                "count": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-070",
+    "name": "Charlotte Pudding",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 1,
+    "counter": 1000,
+    "types": ["Big Mom Pirates"],
+    "attribute": "Wisdom",
+    "rarity": "SR",
+    "blockIcon": 3,
+    "text": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 {Big Mom Pirates} type card with a cost of 2 or more and add it to your hand. Then, place the rest at the bottom of your deck in any order.\n[Activate: Main] DON!! −1, You may rest this Character: Look at 1 card from the top of your opponent's deck.",
+    "image": "images/OP11-070.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "searchDeck",
+            "look": 5,
+            "take": 1,
+            "filter": {
+              "type": "Big Mom Pirates",
+              "costAtLeast": 2
+            }
+          }
+        ]
+      },
+      {
+        "timing": "activateMain",
+        "optional": true,
+        "costs": [
+          {
+            "donMinus": 1
+          },
+          {
+            "restThis": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "lookAtOpponentDeckTop"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-071",
+    "name": "Charlotte Perospero",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 5,
+    "power": 7000,
+    "types": ["Big Mom Pirates"],
+    "attribute": "Special",
+    "rarity": "R",
+    "blockIcon": 3,
+    "text": "[Activate: Main] [Once Per Turn] You may trash 1 card from your hand: Choose a cost and reveal 1 card from the top of your opponent's deck. If the revealed card has the chosen cost, draw 1 card and add up to 1 DON!! card from your DON!! deck and set it as active.",
+    "image": "images/OP11-071.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "oncePerTurn": true,
+        "optional": true,
+        "costs": [
+          {
+            "trashFromHand": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "guessCost",
+            "steps": [
+              {
+                "do": "draw",
+                "count": 1
+              },
+              {
+                "do": "addDon",
+                "count": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-072",
+    "name": "Charlotte Mont-d'or",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 3,
+    "power": 4000,
+    "counter": 2000,
+    "types": ["Big Mom Pirates"],
+    "attribute": "Special",
+    "rarity": "UC",
+    "blockIcon": 3,
+    "text": "[Activate: Main] [Once Per Turn] DON!! −1, You may rest this Character: Your opponent places 2 cards from their trash at the bottom of their deck in any order. Then, add 1 card from the top of your Life cards to your hand.",
+    "image": "images/OP11-072.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "oncePerTurn": true,
+        "optional": true,
+        "costs": [
+          {
+            "donMinus": 1
+          },
+          {
+            "restThis": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "trashToDeckBottom",
+            "side": "opponent",
+            "count": 2
+          },
+          {
+            "do": "lifeToHand",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-073",
+    "name": "Charlotte Linlin",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 10,
+    "power": 12000,
+    "types": ["The Four Emperors", "Big Mom Pirates"],
+    "attribute": "Special",
+    "rarity": "R",
+    "blockIcon": 3,
+    "text": "If your Leader has the {Big Mom Pirates} type, this Character gains [Rush].\n[On Your Opponent's Attack] [Once Per Turn] DON!! −5: Choose a cost and reveal 1 card from the top of your opponent's deck. If the revealed card has the chosen cost, up to 1 of your Leader gains +2000 power during this turn.",
+    "image": "images/OP11-073.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "permanent",
+        "steps": [
+          {
+            "do": "grantKeyword",
+            "target": {
+              "side": "this"
+            },
+            "keyword": "rush"
+          }
+        ],
+        "conditions": [
+          {
+            "leaderHasType": "Big Mom Pirates"
+          }
+        ]
+      },
+      {
+        "timing": "onOpponentsAttack",
+        "oncePerTurn": true,
+        "optional": true,
+        "costs": [
+          {
+            "donMinus": 5
+          }
+        ],
+        "steps": [
+          {
+            "do": "guessCost",
+            "steps": [
+              {
+                "do": "powerUp",
+                "target": {
+                  "side": "self",
+                  "zone": "leader",
+                  "upTo": true
+                },
+                "amount": 2000
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-074",
+    "name": "Streusen",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 3,
+    "power": 3000,
+    "counter": 2000,
+    "types": ["Big Mom Pirates"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[Activate: Main] [Once Per Turn] DON!! −1, You may rest this Character: Choose a cost and reveal 1 card from the top of your opponent's deck. If the revealed card has the chosen cost, rest up to 1 of your opponent's Characters with a cost of 4 or less.",
+    "image": "images/OP11-074.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "oncePerTurn": true,
+        "optional": true,
+        "costs": [
+          {
+            "donMinus": 1
+          },
+          {
+            "restThis": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "guessCost",
+            "steps": [
+              {
+                "do": "rest",
+                "target": {
+                  "side": "opponent",
+                  "filter": {
+                    "costAtMost": 4
+                  },
+                  "upTo": true
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-075",
+    "name": "Jaguar.D.Saul",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 6,
+    "power": 6000,
+    "types": ["Giant", "Ohara", "Former Navy"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[On Play] If your Leader is [Nico Robin] and you have 7 or more DON!! cards on your field, draw 2 cards.",
+    "trigger": "[Trigger] Activate this card's [On Play] effect.",
+    "image": "images/OP11-075.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "conditions": [
+          {
+            "leaderIs": "Nico Robin"
+          },
+          {
+            "donOnFieldAtLeast": 7
+          }
+        ],
+        "steps": [
+          {
+            "do": "draw",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "conditions": [
+          {
+            "leaderIs": "Nico Robin"
+          },
+          {
+            "donOnFieldAtLeast": 7
+          }
+        ],
+        "steps": [
+          {
+            "do": "draw",
+            "count": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-076",
+    "name": "Hannyabal",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 5,
+    "power": 5000,
+    "counter": 1000,
+    "types": ["Impel Down"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[Blocker]\n[On Play] If your Leader has the {Impel Down} type, play up to 1 {Impel Down} type Character card with a cost of 3 or less from your hand.",
+    "image": "images/OP11-076.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "onPlay",
+        "conditions": [
+          {
+            "leaderHasType": "Impel Down"
+          }
+        ],
+        "steps": [
+          {
+            "do": "playFromHand",
+            "filter": {
+              "category": "character",
+              "type": "Impel Down",
+              "costAtMost": 3
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-077",
+    "name": "Randolph",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 1,
+    "power": 2000,
+    "counter": 1000,
+    "types": ["Homies", "Big Mom Pirates"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[Your Turn] [Once Per Turn] When a DON!! card on your field is returned to your DON!! deck, up to 1 of your {Big Mom Pirates} type Characters gains +2 cost until the end of your opponent's next turn.",
+    "image": "images/OP11-077.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "donReturned",
+        "returnedAtLeast": 1,
+        "oncePerTurn": true,
+        "conditions": [
+          {
+            "yourTurn": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "costChange",
+            "target": {
+              "side": "self",
+              "upTo": true,
+              "filter": {
+                "type": "Big Mom Pirates"
+              }
+            },
+            "amount": 2,
+            "duration": "opponentsNextTurn"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-078",
+    "name": "Decuplets",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 5,
+    "power": 6000,
+    "counter": 2000,
+    "types": ["Big Mom Pirates"],
+    "attribute": "Wisdom",
+    "rarity": "UC",
+    "blockIcon": 3,
+    "text": "",
+    "image": "images/OP11-078.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111"
+  },
+  {
+    "id": "OP11-079",
+    "name": "When Two Men Are Fighting the Last Thing I Need Is Some Half-Hearted Assistance!!!!",
+    "category": "event",
+    "colors": ["purple"],
+    "cost": 1,
+    "types": ["Big Mom Pirates"],
+    "rarity": "UC",
+    "blockIcon": 3,
+    "text": "[Counter] Choose a cost and reveal 1 card from the top of your opponent's deck. If the revealed card has the chosen cost, up to 1 of your Leader or Character cards gains +5000 power during this battle.",
+    "trigger": "[Trigger] Draw 1 card.",
+    "image": "images/OP11-079.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "counter",
+        "steps": [
+          {
+            "do": "guessCost",
+            "steps": [
+              {
+                "do": "powerUp",
+                "target": {
+                  "side": "self",
+                  "zone": "leaderOrCharacters",
+                  "upTo": true
+                },
+                "amount": 5000,
+                "duration": "battle"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "draw",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-080",
+    "name": "Gear Two",
+    "category": "event",
+    "colors": ["purple"],
+    "cost": 1,
+    "types": ["Straw Hat Crew"],
+    "rarity": "R",
+    "blockIcon": 3,
+    "text": "[Main] You may rest 2 of your DON!! cards: If your Leader's colors include blue, add up to 1 DON!! card from your DON!! deck and rest it.\n[Counter] Up to 1 of your Leader gains +3000 power during this battle.",
+    "image": "images/OP11-080.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "main",
+        "optional": true,
+        "costs": [
+          {
+            "restDon": 2
+          }
+        ],
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "leaderColorIncludes": "blue"
+              }
+            ],
+            "steps": [
+              {
+                "do": "addDon",
+                "count": 1,
+                "rested": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "timing": "counter",
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "self",
+              "zone": "leader",
+              "upTo": true
+            },
+            "amount": 3000,
+            "duration": "battle"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-081",
+    "name": "Cognac Mama-Mash",
+    "category": "event",
+    "colors": ["purple"],
+    "cost": 6,
+    "types": ["The Four Emperors", "Big Mom Pirates"],
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[Main] Choose a cost and reveal 1 card from the top of your opponent's deck. If the revealed card has the chosen cost, K.O. up to 1 of your opponent's Characters with a base cost of 8 or less.",
+    "trigger": "[Trigger] Add up to 1 DON!! card from your DON!! deck and set it as active.",
+    "image": "images/OP11-081.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "main",
+        "steps": [
+          {
+            "do": "guessCost",
+            "steps": [
+              {
+                "do": "ko",
+                "target": {
+                  "side": "opponent",
+                  "filter": {
+                    "baseCostAtMost": 8
+                  },
+                  "upTo": true
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "addDon",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-082",
+    "name": "Aramaki",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 1,
+    "power": 2000,
+    "counter": 2000,
+    "types": ["Navy"],
+    "attribute": "Special",
+    "rarity": "R",
+    "blockIcon": 3,
+    "text": "[Activate: Main] You may trash this Character: If your Leader has the {Navy} type, up to 1 of your {Navy} type Characters can also attack active Characters during this turn. Then, trash 2 cards from the top of your deck.",
+    "image": "images/OP11-082.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "optional": true,
+        "costs": [
+          {
+            "trashThis": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "leaderHasType": "Navy"
+              }
+            ],
+            "steps": [
+              {
+                "do": "grantKeyword",
+                "target": {
+                  "side": "self",
+                  "upTo": true,
+                  "filter": {
+                    "type": "Navy"
+                  }
+                },
+                "keyword": "canAttackActive"
+              }
+            ]
+          },
+          {
+            "do": "trashFromDeck",
+            "count": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-083",
+    "name": "Caribou",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 1,
+    "power": 2000,
+    "counter": 2000,
+    "types": ["Caribou Pirates"],
+    "attribute": "Special",
+    "rarity": "R",
+    "blockIcon": 3,
+    "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)\n[On Play] Trash 2 cards from your hand.",
+    "image": "images/OP11-083.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "trashFromHand",
+            "count": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-084",
+    "name": "Kuzan",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 4,
+    "power": 5000,
+    "counter": 1000,
+    "types": ["Navy"],
+    "attribute": "Special",
+    "rarity": "R",
+    "blockIcon": 3,
+    "text": "[On Play] Trash 3 cards from the top of your deck.\n[When Attacking] Up to 1 of your {Navy} type Leader or Character cards can also attack active Characters during this turn.",
+    "image": "images/OP11-084.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "trashFromDeck",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "timing": "whenAttacking",
+        "steps": [
+          {
+            "do": "grantKeyword",
+            "target": {
+              "side": "self",
+              "zone": "leaderOrCharacters",
+              "upTo": true,
+              "filter": {
+                "type": "Navy"
+              }
+            },
+            "keyword": "canAttackActive"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-085",
+    "name": "Kurozumi Orochi",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 3,
+    "power": 4000,
+    "counter": 1000,
+    "types": ["Land of Wano", "Kurozumi Clan"],
+    "attribute": "Wisdom",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[On Play] Add up to 1 {SMILE} type card with a cost of 5 or less from your trash to your hand.",
+    "image": "images/OP11-085.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "trashToHand",
+            "count": 1,
+            "filter": {
+              "type": "SMILE",
+              "costAtMost": 5
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-086",
+    "name": "Coribou",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 3,
+    "power": 5000,
+    "counter": 1000,
+    "types": ["Caribou Pirates"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[On Play] Trash 1 card from your hand.\n[Activate: Main] You may trash this Character: Play up to 1 [Caribou] with a cost of 4 or less from your trash.",
+    "image": "images/OP11-086.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "trashFromHand",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "timing": "activateMain",
+        "optional": true,
+        "costs": [
+          {
+            "trashThis": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "playFromTrash",
+            "filter": {
+              "name": "Caribou",
+              "costAtMost": 4
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-087",
+    "name": "Miss Sarahebi",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 5,
+    "power": 6000,
+    "counter": 2000,
+    "types": ["Animal Kingdom Pirates", "SMILE"],
+    "attribute": "Wisdom",
+    "rarity": "UC",
+    "blockIcon": 3,
+    "text": "",
+    "image": "images/OP11-087.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111"
+  },
+  {
+    "id": "OP11-088",
+    "name": "Shu",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 4,
+    "power": 5000,
+    "counter": 1000,
+    "types": ["Navy"],
+    "attribute": "Special",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)\n[Once Per Turn] This effect can be activated when your opponent's Character attacks. If that Character has the ＜Slash＞ attribute, this Character gains +5000 power during this battle.",
+    "image": "images/OP11-088.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "onOpponentsAttack",
+        "oncePerTurn": true,
+        "conditions": [
+          {
+            "attackerMatches": {
+              "category": "character",
+              "attribute": "Slash"
+            }
+          }
+        ],
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "this"
+            },
+            "amount": 5000,
+            "duration": "battle"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-089",
+    "name": "Black Maria",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 5,
+    "power": 7000,
+    "counter": 1000,
+    "types": ["Animal Kingdom Pirates"],
+    "attribute": "Special",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "",
+    "image": "images/OP11-089.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111"
+  },
+  {
+    "id": "OP11-090",
+    "name": "Briscola",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 2,
+    "power": 2000,
+    "counter": 1000,
+    "types": ["Animal Kingdom Pirates", "SMILE"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)",
+    "image": "images/OP11-090.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "keywords": ["blocker"]
+  },
+  {
+    "id": "OP11-091",
+    "name": "Berry Good",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 4,
+    "power": 5000,
+    "counter": 2000,
+    "types": ["Navy"],
+    "attribute": "Special",
+    "rarity": "UC",
+    "blockIcon": 3,
+    "text": "[On Play] Your opponent places 3 Events from their trash at the bottom of their deck in any order.",
+    "image": "images/OP11-091.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "trashToDeckBottom",
+            "side": "opponent",
+            "count": 3,
+            "filter": {
+              "category": "event"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-092",
+    "name": "Helmeppo",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 6,
+    "power": 7000,
+    "types": ["Navy", "SWORD"],
+    "attribute": "Slash",
+    "rarity": "SR",
+    "blockIcon": 3,
+    "text": "[On Play] You may trash 1 card from your hand: Draw 1 card and play up to 1 {SWORD} type Character card with a cost of 8 or less other than [Helmeppo] from your trash. Then, place the 1 Character played by this effect at the bottom of the owner's deck at the end of this turn.",
+    "image": "images/OP11-092.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "optional": true,
+        "costs": [
+          {
+            "trashFromHand": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "draw",
+            "count": 1
+          },
+          {
+            "do": "playFromTrash",
+            "filter": {
+              "category": "character",
+              "type": "SWORD",
+              "costAtMost": 8,
+              "notName": "Helmeppo"
+            }
+          },
+          {
+            "do": "atEndOfTurn",
+            "steps": [
+              {
+                "do": "returnToDeckBottom",
+                "target": {
+                  "side": "that"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-093",
+    "name": "Bogard",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 6,
+    "power": 7000,
+    "counter": 2000,
+    "types": ["Navy"],
+    "attribute": "Slash",
+    "rarity": "UC",
+    "blockIcon": 3,
+    "text": "",
+    "image": "images/OP11-093.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111"
+  },
+  {
+    "id": "OP11-094",
+    "name": "Morgan",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 6,
+    "power": 8000,
+    "counter": 1000,
+    "types": ["Navy"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "",
+    "image": "images/OP11-094.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111"
+  },
+  {
+    "id": "OP11-095",
+    "name": "Monkey.D.Garp",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 8,
+    "power": 8000,
+    "types": ["Navy"],
+    "attribute": "Strike",
+    "rarity": "SR",
+    "blockIcon": 3,
+    "text": "[On Play] You may place 3 {Navy} type cards from your trash at the bottom of your deck in any order: Give up to 1 rested DON!! card to 1 of your Leader. Then, if there is a Character with a cost of 9 or more, K.O. up to 1 of your opponent's Characters with a cost of 7 or less.",
+    "image": "images/OP11-095.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "optional": true,
+        "costs": [
+          {
+            "trashToDeckBottom": 3,
+            "filter": {
+              "type": "Navy"
+            }
+          }
+        ],
+        "steps": [
+          {
+            "do": "giveRestedDon",
+            "target": {
+              "side": "self",
+              "zone": "leader"
+            },
+            "count": 1
+          },
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "anyOf": [
+                  {
+                    "count": {
+                      "side": "self",
+                      "filter": {
+                        "costAtLeast": 9
+                      }
+                    }
+                  },
+                  {
+                    "count": {
+                      "side": "opponent",
+                      "filter": {
+                        "costAtLeast": 9
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              {
+                "do": "ko",
+                "target": {
+                  "side": "opponent",
+                  "filter": {
+                    "costAtMost": 7
+                  },
+                  "upTo": true
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-096",
+    "name": "Ripper",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 1,
+    "power": 1000,
+    "counter": 1000,
+    "types": ["East Blue", "Navy"],
+    "attribute": "Wisdom",
+    "rarity": "UC",
+    "blockIcon": 3,
+    "text": "If you have a black {Navy} type Character other than [Ripper], this Character gains [Blocker].\n(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)",
+    "image": "images/OP11-096.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "permanent",
+        "steps": [
+          {
+            "do": "grantKeyword",
+            "target": {
+              "side": "this"
+            },
+            "keyword": "blocker"
+          }
+        ],
+        "conditions": [
+          {
+            "count": {
+              "side": "self",
+              "filter": {
+                "color": "black",
+                "type": "Navy",
+                "notName": "Ripper"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-097",
+    "name": "After All These Years I'm Losing My Edge!!!",
+    "category": "event",
+    "colors": ["black"],
+    "cost": 1,
+    "types": ["Navy"],
+    "rarity": "UC",
+    "blockIcon": 3,
+    "text": "[Counter] Up to 1 of your Leader or Character cards gains +1000 power during this battle. Then, if you have 10 or more cards in your trash, add up to 1 black Character card with a cost of 3 or less from your trash to your hand.",
+    "image": "images/OP11-097.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "counter",
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "self",
+              "zone": "leaderOrCharacters",
+              "upTo": true
+            },
+            "amount": 1000,
+            "duration": "battle"
+          },
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "trashAtLeast": 10
+              }
+            ],
+            "steps": [
+              {
+                "do": "trashToHand",
+                "count": 1,
+                "filter": {
+                  "category": "character",
+                  "color": "black",
+                  "costAtMost": 3
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-098",
+    "name": "Blue Hole",
+    "category": "event",
+    "colors": ["black"],
+    "cost": 3,
+    "types": ["Navy"],
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[Main] You may trash 3 cards from the top of your deck: K.O. up to 1 of your opponent's Characters with a cost of 2 or less.",
+    "trigger": "[Trigger] Up to 1 of your Leader or Character cards gains +1000 power during this turn.",
+    "image": "images/OP11-098.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "main",
+        "optional": true,
+        "costs": [
+          {
+            "trashFromDeckTop": 3
+          }
+        ],
+        "steps": [
+          {
+            "do": "ko",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "costAtMost": 2
+              },
+              "upTo": true
+            }
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "self",
+              "zone": "leaderOrCharacters",
+              "upTo": true
+            },
+            "amount": 1000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-099",
+    "name": "I'm Gonna Be a Navy Officer!!!",
+    "category": "event",
+    "colors": ["black"],
+    "cost": 1,
+    "types": ["East Blue", "Navy"],
+    "rarity": "R",
+    "blockIcon": 3,
+    "text": "[Main] Look at 3 cards from the top of your deck; reveal up to 1 {Navy} type card other than [I'm Gonna Be a Navy Officer!!!] and add it to your hand. Then, trash the rest.",
+    "trigger": "[Trigger] Activate this card's [Main] effect.",
+    "image": "images/OP11-099.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "main",
+        "steps": [
+          {
+            "do": "searchDeck",
+            "look": 3,
+            "take": 1,
+            "filter": {
+              "type": "Navy",
+              "notName": "I'm Gonna Be a Navy Officer!!!"
+            },
+            "rest": "trash"
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "searchDeck",
+            "look": 3,
+            "take": 1,
+            "filter": {
+              "type": "Navy",
+              "notName": "I'm Gonna Be a Navy Officer!!!"
+            },
+            "rest": "trash"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-100",
+    "name": "Otohime",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 1,
+    "counter": 2000,
+    "types": ["Merfolk", "Fish-Man Island"],
+    "attribute": "Wisdom",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[On Play] If your Leader is [Shirahoshi], you may turn 1 card from the top of your Life cards face-down: Draw 1 card.",
+    "image": "images/OP11-100.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "optional": true,
+        "conditions": [
+          {
+            "leaderIs": "Shirahoshi"
+          }
+        ],
+        "costs": [
+          {
+            "lifeFaceDown": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "draw",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-101",
+    "name": "Capone\"Gang\"Bege",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 2,
+    "power": 1000,
+    "counter": 1000,
+    "types": ["Supernovas", "Firetank Pirates"],
+    "attribute": "Ranged",
+    "rarity": "SR",
+    "blockIcon": 3,
+    "text": "[Blocker]\n[Once Per Turn] If your {Supernovas} type Character other than [Capone\"Gang\"Bege] would be removed from the field by your opponent's effect, you may add it to the top of your Life cards face-down instead.",
+    "image": "images/OP11-101.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "replaceRemoval",
+        "replaces": {
+          "side": "self",
+          "filter": {
+            "category": "character",
+            "type": "Supernovas",
+            "notName": "Capone\"Gang\"Bege"
+          },
+          "removal": "remove",
+          "byOpponent": true
+        },
+        "oncePerTurn": true,
+        "optional": true,
+        "steps": [
+          {
+            "do": "characterToLife",
+            "target": {
+              "side": "that"
+            },
+            "top": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-102",
+    "name": "Camie",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 1,
+    "power": 1000,
+    "counter": 2000,
+    "types": ["Merfolk", "Fish-Man Island"],
+    "attribute": "Wisdom",
+    "rarity": "UC",
+    "blockIcon": 3,
+    "text": "[Your Turn] [Once Per Turn] This effect can be activated when your opponent activates an Event or [Trigger]. If your opponent has 2 or more Life cards, trash 1 card from the top of each of your and your opponent's Life cards.",
+    "image": "images/OP11-102.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "opponentActivatesEvent",
+        "oncePerTurn": "eventOrTrigger",
+        "conditions": [
+          {
+            "yourTurn": true
+          },
+          {
+            "opponentLifeAtLeast": 2
+          }
+        ],
+        "steps": [
+          {
+            "do": "trashLife",
+            "side": "self",
+            "count": 1
+          },
+          {
+            "do": "trashLife",
+            "side": "opponent",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "timing": "opponentActivatesTrigger",
+        "oncePerTurn": "eventOrTrigger",
+        "conditions": [
+          {
+            "yourTurn": true
+          },
+          {
+            "opponentLifeAtLeast": 2
+          }
+        ],
+        "steps": [
+          {
+            "do": "trashLife",
+            "side": "self",
+            "count": 1
+          },
+          {
+            "do": "trashLife",
+            "side": "opponent",
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "notes": "\"When your opponent activates an Event or [Trigger]\" is two effects, one per timing, that share one [Once Per Turn]."
+  },
+  {
+    "id": "OP11-103",
+    "name": "Long-Jaw Neptunian",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 5,
+    "power": 7000,
+    "types": ["Neptunian"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[Activate: Main] If your Leader is [Shirahoshi], you may rest this Character and turn 1 card from the top of your Life cards face-down: K.O. up to 1 of your opponent's Characters with a cost of 3 or less.",
+    "image": "images/OP11-103.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "optional": true,
+        "conditions": [
+          {
+            "leaderIs": "Shirahoshi"
+          }
+        ],
+        "costs": [
+          {
+            "restThis": true
+          },
+          {
+            "lifeFaceDown": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "ko",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "costAtMost": 3
+              },
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-104",
+    "name": "Shirley",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 3,
+    "power": 4000,
+    "counter": 1000,
+    "types": ["Merfolk", "Fish-Man Island"],
+    "attribute": "Wisdom",
+    "rarity": "R",
+    "blockIcon": 3,
+    "text": "[Blocker]\n[On Play] You may turn 1 card from the top of your Life cards face-down: Look at 3 cards from the top of your deck; reveal up to 1 {Fish-Man Island} type card and add it to your hand. Then, place the rest at the top or bottom of the deck in any order.",
+    "image": "images/OP11-104.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "onPlay",
+        "optional": true,
+        "costs": [
+          {
+            "lifeFaceDown": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "searchDeck",
+            "look": 3,
+            "take": 1,
+            "filter": {
+              "type": "Fish-Man Island"
+            },
+            "rest": "topOrBottom"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-105",
+    "name": "Charlotte Chiffon",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 5,
+    "power": 6000,
+    "counter": 2000,
+    "types": ["Firetank Pirates", "Former Big Mom Pirates"],
+    "attribute": "Wisdom",
+    "rarity": "UC",
+    "blockIcon": 3,
+    "text": "",
+    "image": "images/OP11-105.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111"
+  },
+  {
+    "id": "OP11-106",
+    "name": "Zeus",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 2,
+    "power": 2000,
+    "counter": 2000,
+    "types": ["Homies", "Big Mom Pirates"],
+    "attribute": "Special",
+    "rarity": "R",
+    "blockIcon": 3,
+    "text": "[On Play] You may add 1 card from the top or bottom of your Life cards to your hand: K.O. up to 1 of your opponent's Characters with a cost of 5 or less.",
+    "image": "images/OP11-106.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "optional": true,
+        "costs": [
+          {
+            "lifeToHand": 1,
+            "from": "topOrBottom"
+          }
+        ],
+        "steps": [
+          {
+            "do": "ko",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "costAtMost": 5
+              },
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-107",
+    "name": "Topknot Neptunian",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 5,
+    "power": 6000,
+    "counter": 1000,
+    "types": ["Neptunian"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[Blocker]\n[Activate: Main] [Once Per Turn] If your Leader is [Shirahoshi], you may turn 1 card from the top of your Life cards face-down: Set this Character as active at the end of this turn.",
+    "image": "images/OP11-107.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "activateMain",
+        "oncePerTurn": true,
+        "optional": true,
+        "conditions": [
+          {
+            "leaderIs": "Shirahoshi"
+          }
+        ],
+        "costs": [
+          {
+            "lifeFaceDown": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "atEndOfTurn",
+            "steps": [
+              {
+                "do": "setActive",
+                "target": {
+                  "side": "this"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-108",
+    "name": "Neptune",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 5,
+    "power": 7000,
+    "types": ["Merfolk", "Fish-Man Island"],
+    "attribute": "Slash",
+    "rarity": "R",
+    "blockIcon": 3,
+    "text": "[On Play] If your Leader is [Shirahoshi], you may turn 1 card from the top of your Life cards face-down: Draw 2 cards and trash 1 card from your hand.",
+    "image": "images/OP11-108.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "optional": true,
+        "conditions": [
+          {
+            "leaderIs": "Shirahoshi"
+          }
+        ],
+        "costs": [
+          {
+            "lifeFaceDown": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "draw",
+            "count": 2
+          },
+          {
+            "do": "trashFromHand",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-109",
+    "name": "Pappag",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 1,
+    "counter": 1000,
+    "types": ["Animal", "Fish-Man Island"],
+    "attribute": "Wisdom",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[On Play] If you have [Camie], draw 2 cards and trash 2 cards from your hand.",
+    "image": "images/OP11-109.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "conditions": [
+          {
+            "count": {
+              "side": "self",
+              "filter": {
+                "name": "Camie"
+              }
+            }
+          }
+        ],
+        "steps": [
+          {
+            "do": "draw",
+            "count": 2
+          },
+          {
+            "do": "trashFromHand",
+            "count": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-110",
+    "name": "Fukaboshi",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 3,
+    "power": 5000,
+    "types": ["Merfolk", "Fish-Man Island"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "If this Character would be K.O.'d, you may rest 1 of your [Fish-Man Island] or your [Shirahoshi] Leader instead.\n[On Play] You may add 1 card from the top or bottom of your Life cards to your hand: K.O. up to 1 of your opponent's Characters with a cost of 1 or less.",
+    "image": "images/OP11-110.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "replaceRemoval",
+        "replaces": {
+          "side": "this",
+          "removal": "ko",
+          "battle": true
+        },
+        "optional": true,
+        "costs": [
+          {
+            "oneOf": [
+              {
+                "restOwn": {
+                  "name": "Fish-Man Island"
+                }
+              },
+              {
+                "restOwn": {
+                  "category": "leader",
+                  "name": "Shirahoshi"
+                }
+              }
+            ]
+          }
+        ],
+        "steps": []
+      },
+      {
+        "timing": "onPlay",
+        "optional": true,
+        "costs": [
+          {
+            "lifeToHand": 1,
+            "from": "topOrBottom"
+          }
+        ],
+        "steps": [
+          {
+            "do": "ko",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "costAtMost": 1
+              },
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-111",
+    "name": "Mamboshi",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 6,
+    "power": 7000,
+    "counter": 2000,
+    "types": ["Merfolk", "Fish-Man Island"],
+    "attribute": "Slash",
+    "rarity": "UC",
+    "blockIcon": 3,
+    "text": "",
+    "image": "images/OP11-111.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111"
+  },
+  {
+    "id": "OP11-112",
+    "name": "Megalo",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 3,
+    "power": 2000,
+    "counter": 1000,
+    "types": ["Animal", "Fish-Man Island"],
+    "attribute": "Wisdom",
+    "rarity": "UC",
+    "blockIcon": 3,
+    "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)\n[Opponent's Turn] If your Leader is [Shirahoshi], this Character gains +4000 power.",
+    "image": "images/OP11-112.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "permanent",
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "this"
+            },
+            "amount": 4000
+          }
+        ],
+        "conditions": [
+          {
+            "opponentsTurn": true
+          },
+          {
+            "leaderIs": "Shirahoshi"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-113",
+    "name": "Ryuboshi",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 5,
+    "power": 7000,
+    "counter": 1000,
+    "types": ["Merfolk", "Fish-Man Island"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "",
+    "image": "images/OP11-113.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111"
+  },
+  {
+    "id": "OP11-114",
+    "name": "Gum-Gum Fire-Fist Pistol Red Hawk",
+    "category": "event",
+    "colors": ["yellow"],
+    "cost": 1,
+    "types": ["Straw Hat Crew"],
+    "rarity": "R",
+    "blockIcon": 3,
+    "text": "[Main] You may rest 3 of your DON!! cards: If you and your opponent have a total of 5 or more Life cards, K.O. up to 1 of your opponent's Characters with a base cost of 5 or less.\n[Counter] Up to 1 of your Leader gains +3000 power during this battle.",
+    "image": "images/OP11-114.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "main",
+        "optional": true,
+        "costs": [
+          {
+            "restDon": 3
+          }
+        ],
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "totalLifeAtLeast": 5
+              }
+            ],
+            "steps": [
+              {
+                "do": "ko",
+                "target": {
+                  "side": "opponent",
+                  "filter": {
+                    "baseCostAtMost": 5
+                  },
+                  "upTo": true
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "timing": "counter",
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "self",
+              "zone": "leader",
+              "upTo": true
+            },
+            "amount": 3000,
+            "duration": "battle"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-115",
+    "name": "You're Just Not My Type!",
+    "category": "event",
+    "colors": ["yellow"],
+    "cost": 1,
+    "types": ["Merfolk", "Fish-Man Island"],
+    "rarity": "UC",
+    "blockIcon": 3,
+    "text": "[Counter] If your Leader is [Shirahoshi], up to 1 of your Leader or Character cards gains +4000 power during this battle.",
+    "trigger": "[Trigger] K.O. up to 1 of your opponent's Characters with a cost of 2 or less.",
+    "image": "images/OP11-115.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "counter",
+        "conditions": [
+          {
+            "leaderIs": "Shirahoshi"
+          }
+        ],
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "self",
+              "zone": "leaderOrCharacters",
+              "upTo": true
+            },
+            "amount": 4000,
+            "duration": "battle"
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "ko",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "costAtMost": 2
+              },
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-116",
+    "name": "Merman Combat Ultramarine",
+    "category": "event",
+    "colors": ["yellow"],
+    "cost": 6,
+    "types": ["Merfolk", "Fish-Man Island"],
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[Main] Add up to 1 Character with a cost of 6 or less to the top or bottom of the owner's Life cards face-up.",
+    "trigger": "[Trigger] Add up to 1 of your opponent's Characters with a cost of 4 or less to the top or bottom of the owner's Life cards face-up.",
+    "image": "images/OP11-116.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "main",
+        "steps": [
+          {
+            "do": "characterToLife",
+            "target": {
+              "side": "any",
+              "upTo": true,
+              "filter": {
+                "costAtMost": 6
+              }
+            },
+            "faceUp": true
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "characterToLife",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "costAtMost": 4
+              },
+              "upTo": true
+            },
+            "faceUp": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-117",
+    "name": "Fish-Man Island",
+    "category": "stage",
+    "colors": ["yellow"],
+    "cost": 2,
+    "types": ["Fish-Man Island"],
+    "rarity": "C",
+    "blockIcon": 3,
+    "text": "[Activate: Main] [Once Per Turn] If your Leader is [Shirahoshi], you may turn 1 card from the top of your Life cards face-up: Up to 1 of your {Neptunian}, {Fish-Man}, or {Merfolk} type Characters gains +1000 power during this turn.",
+    "image": "images/OP11-117.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "oncePerTurn": true,
+        "optional": true,
+        "conditions": [
+          {
+            "leaderIs": "Shirahoshi"
+          }
+        ],
+        "costs": [
+          {
+            "lifeFaceUp": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "self",
+              "upTo": true,
+              "filter": {
+                "anyOf": [
+                  {
+                    "type": "Neptunian"
+                  },
+                  {
+                    "type": "Fish-Man"
+                  },
+                  {
+                    "type": "Merfolk"
+                  }
+                ]
+              }
+            },
+            "amount": 1000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-118",
+    "name": "Monkey.D.Luffy",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 8,
+    "power": 8000,
+    "types": ["Straw Hat Crew"],
+    "attribute": "Strike",
+    "rarity": "SEC",
+    "blockIcon": 3,
+    "text": "[Rush]\n[When Attacking] You may trash 1 card from your hand: Return up to 1 Character with a cost of 4 or less to the owner's hand. Then, give up to 1 rested DON!! card to your Leader or 1 of your Characters.",
+    "image": "images/OP11-118.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "keywords": ["rush"],
+    "effects": [
+      {
+        "timing": "whenAttacking",
+        "optional": true,
+        "costs": [
+          {
+            "trashFromHand": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "returnToHand",
+            "target": {
+              "side": "any",
+              "upTo": true,
+              "filter": {
+                "costAtMost": 4
+              }
+            }
+          },
+          {
+            "do": "giveRestedDon",
+            "target": {
+              "side": "self",
+              "zone": "leaderOrCharacters",
+              "upTo": true
+            },
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OP11-119",
+    "name": "Koby",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 8,
+    "power": 9000,
+    "types": ["Navy", "SWORD"],
+    "attribute": "Strike",
+    "rarity": "SEC",
+    "blockIcon": 3,
+    "text": "[On Play] Up to 1 of your Characters can also attack active Characters during this turn.\n[When Attacking] You may place 2 cards from your trash at the bottom of your deck in any order: Up to 1 of your Leader or Character cards gains +1000 power until the end of your opponent's next turn.",
+    "image": "images/OP11-119.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569111",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "grantKeyword",
+            "target": {
+              "side": "self",
+              "upTo": true
+            },
+            "keyword": "canAttackActive"
+          }
+        ]
+      },
+      {
+        "timing": "whenAttacking",
+        "optional": true,
+        "costs": [
+          {
+            "trashToDeckBottom": 2
+          }
+        ],
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "self",
+              "zone": "leaderOrCharacters",
+              "upTo": true
+            },
+            "amount": 1000,
+            "duration": "opponentsNextTurn"
+          }
+        ]
+      }
+    ]
+  }
+]
