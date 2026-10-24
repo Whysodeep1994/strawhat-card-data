@@ -37,6 +37,10 @@
     {
       "type": "endTurn",
       "player": "p1"
+    },
+    {
+      "type": "endTurn",
+      "player": "p2"
     }
   ],
   "expect": {

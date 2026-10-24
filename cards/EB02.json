@@ -916,7 +916,7 @@
           {
             "do": "grantStatus",
             "target": {
-              "side": "previous"
+              "side": "that"
             },
             "status": "noRefresh",
             "duration": "opponentsNextTurn"
