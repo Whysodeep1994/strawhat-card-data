@@ -1,0 +1,51 @@
+{
+  "name": "Slow-Slow Beam Sword gives +2000 and rests a Character",
+  "rules": ["10-2-8"],
+  "setup": {
+    "p1": {
+      "characters": ["TEST-FILLER"]
+    },
+    "p2": {
+      "hand": ["OP07-076"],
+      "don": {
+        "active": 3
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "counterEvent",
+      "player": "p2",
+      "card": "p2.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.leader"]
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p1.characters.0"]
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 4,
+    "p1.characters.0.rested": true
+  }
+}

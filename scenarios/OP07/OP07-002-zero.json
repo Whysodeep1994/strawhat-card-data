@@ -1,0 +1,30 @@
+{
+  "name": "Ain sets an opponent's Character's power to 0",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "hand": ["OP07-002"],
+      "don": {
+        "active": 7
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C5-5000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "modifiers.0.power": -5000
+  }
+}

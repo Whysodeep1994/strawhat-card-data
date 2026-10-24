@@ -1,0 +1,37 @@
+{
+  "name": "Galaxy Wink gives a Revolutionary Army Character +2000 and an opponent's −1000",
+  "rules": ["10-2-7"],
+  "setup": {
+    "p1": {
+      "hand": ["OP07-016"],
+      "don": {
+        "active": 1
+      },
+      "characters": ["OP07-015"]
+    },
+    "p2": {
+      "characters": ["TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.0"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "modifiers.0.power": 2000,
+    "modifiers.1.power": -1000
+  }
+}

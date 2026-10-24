@@ -1,0 +1,36 @@
+{
+  "name": "Island of Women returns a Kuja Pirates Character to hand (Boa Hancock then draws 1)",
+  "rules": ["8-3-1"],
+  "setup": {
+    "p1": {
+      "leader": "OP07-038",
+      "stage": "OP07-058",
+      "hand": ["TEST-FILLER"],
+      "characters": ["OP07-054"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.stage",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 2,
+    "p1.hand.0.cardId": "OP07-054",
+    "p1.trash": 1,
+    "p1.stage.rested": true
+  }
+}
