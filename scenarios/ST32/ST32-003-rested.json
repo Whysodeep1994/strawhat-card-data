@@ -1,0 +1,22 @@
+{
+  "name": "Mihawk draws 1 and trashes 1 when he becomes rested on your turn",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": ["ST32-003"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    }
+  ],
+  "expect": {
+    "p1.hand": 0,
+    "p1.trash": 1,
+    "p1.deck": 19
+  }
+}

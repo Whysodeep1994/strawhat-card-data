@@ -1,0 +1,207 @@
+[
+  {
+    "id": "ST33-001",
+    "name": "Koby",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 2,
+    "power": 1000,
+    "counter": 1000,
+    "types": ["Navy"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 5,
+    "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)\n[On Play] You may trash 1 card from your hand: Draw 1 card.",
+    "image": "images/ST33-001.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569033",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "onPlay",
+        "optional": true,
+        "costs": [
+          {
+            "trashFromHand": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "draw",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST33-002",
+    "name": "Sakazuki",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 4,
+    "power": 5000,
+    "counter": 1000,
+    "types": ["Navy"],
+    "attribute": "Special",
+    "rarity": "C",
+    "blockIcon": 5,
+    "text": "[When Attacking] You may trash 1 card from your hand: If your opponent has 6 or more cards in their hand, your opponent trashes 1 card from their hand.\n[On K.O.] Play up to 1 {Navy} type Character card with a cost of 4 or less from your hand.",
+    "image": "images/ST33-002.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569033",
+    "effects": [
+      {
+        "timing": "whenAttacking",
+        "optional": true,
+        "costs": [
+          {
+            "trashFromHand": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "opponentHandAtLeast": 6
+              }
+            ],
+            "steps": [
+              {
+                "do": "opponentTrashesFromHand",
+                "count": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "timing": "onKO",
+        "steps": [
+          {
+            "do": "playFromHand",
+            "filter": {
+              "category": "character",
+              "type": "Navy",
+              "costAtMost": 4
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST33-003",
+    "name": "Smoker",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 2,
+    "power": 3000,
+    "counter": 2000,
+    "types": ["Navy"],
+    "attribute": "Special",
+    "rarity": "C",
+    "blockIcon": 5,
+    "text": "[On Play] You may trash 1 card from your hand: Place up to 2 of your opponent's Characters with a cost of 2 or less at the bottom of the owner's deck.",
+    "image": "images/ST33-003.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569033",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "optional": true,
+        "costs": [
+          {
+            "trashFromHand": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "returnToDeckBottom",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "costAtMost": 2
+              },
+              "count": 2,
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST33-004",
+    "name": "Borsalino",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 6,
+    "power": 6000,
+    "counter": 2000,
+    "types": ["Navy"],
+    "attribute": "Special",
+    "rarity": "SR",
+    "blockIcon": 5,
+    "text": "During the turn in which a card in your hand is trashed by an effect, give this card in your hand −3 cost.\n[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)",
+    "image": "images/ST33-004.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569033",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "permanent",
+        "zone": "hand",
+        "conditions": [
+          {
+            "handTrashedByEffectThisTurn": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "costChange",
+            "target": {
+              "side": "this"
+            },
+            "amount": -3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST33-005",
+    "name": "Monkey.D.Garp",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 6,
+    "power": 6000,
+    "counter": 1000,
+    "types": ["Navy"],
+    "attribute": "Strike",
+    "rarity": "SR",
+    "blockIcon": 5,
+    "text": "[On Play] If your Leader has the {Navy} type, play up to 1 blue {Navy} type Character card with 8000 power or less other than [Monkey.D.Garp] from your hand.",
+    "image": "images/ST33-005.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569033",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "conditions": [
+          {
+            "leaderHasType": "Navy"
+          }
+        ],
+        "steps": [
+          {
+            "do": "playFromHand",
+            "filter": {
+              "category": "character",
+              "type": "Navy",
+              "color": "blue",
+              "powerAtMost": 8000,
+              "notName": "Monkey.D.Garp"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

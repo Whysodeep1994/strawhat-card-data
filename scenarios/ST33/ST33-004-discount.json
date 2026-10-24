@@ -1,0 +1,38 @@
+{
+  "name": "Borsalino costs 3 less after a card in your hand is trashed by an effect",
+  "rules": ["2-7-6"],
+  "setup": {
+    "p1": {
+      "hand": ["ST33-001", "ST33-004", "TEST-FILLER"],
+      "don": {
+        "active": 5
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.1"]
+    },
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.characters": 2,
+    "p1.donActive": 0
+  }
+}
