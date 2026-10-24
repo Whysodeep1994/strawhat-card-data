@@ -1,0 +1,54 @@
+{
+  "name": "Let's Go!! sets your Leader and Characters active with 5 {Impel Down} names",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": {
+        "card": "OP16-022",
+        "rested": true
+      },
+      "hand": ["OP16-038"],
+      "don": {
+        "active": 7
+      },
+      "characters": [
+        {
+          "card": "OP16-023",
+          "rested": true
+        },
+        {
+          "card": "OP16-025",
+          "rested": true
+        },
+        {
+          "card": "OP16-029",
+          "rested": true
+        },
+        {
+          "card": "OP16-027",
+          "rested": true
+        },
+        {
+          "card": "OP16-037",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.leader.rested": false,
+    "p1.characters.0.rested": false
+  }
+}

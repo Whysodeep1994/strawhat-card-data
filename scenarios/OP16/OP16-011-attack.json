@@ -1,0 +1,33 @@
+{
+  "name": "Vista with DON!! K.O.s up to 2 Characters with 2000 base power when attacking",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "OP16-011",
+          "don": 1
+        }
+      ]
+    },
+    "p2": {
+      "characters": ["TEST-FILLER", "TEST-BLOCKER-2000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0", "p2.characters.1"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 0
+  }
+}

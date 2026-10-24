@@ -1,0 +1,34 @@
+{
+  "name": "Moby Dick trashes itself to give a rested DON!! to your Leader",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "stage": "OP16-021",
+      "don": {
+        "rested": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.stage",
+      "effect": 1
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.leader"]
+    }
+  ],
+  "expect": {
+    "p1.leader.givenDon": 1,
+    "p1.stage": null
+  }
+}

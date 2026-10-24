@@ -1,0 +1,23 @@
+{
+  "name": "Donquixote Doflamingo adds an active DON!! when played and when attacking",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["OP16-069"],
+      "don": {
+        "deck": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    }
+  ],
+  "expect": {
+    "p1.donActive": 1
+  }
+}

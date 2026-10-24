@@ -1,0 +1,32 @@
+{
+  "name": "Let's Show 'Em plays 2 Whitebeard Pirates Characters with 8000 power",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "hand": ["OP16-019", "OP16-004", "OP16-016"],
+      "don": {
+        "active": 9
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 2
+  }
+}

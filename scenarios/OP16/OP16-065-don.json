@@ -1,0 +1,30 @@
+{
+  "name": "Sakazuki rests a DON!! to add 2 active DON!! with a {Navy} Leader",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "OP16-060",
+      "characters": ["OP16-065"],
+      "don": {
+        "active": 1,
+        "deck": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 1
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.donActive": 2
+  }
+}

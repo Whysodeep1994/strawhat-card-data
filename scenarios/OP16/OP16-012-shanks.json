@@ -1,0 +1,38 @@
+{
+  "name": "Benn.Beckman rests a DON!! to play [Shanks] with a {Red-Haired Pirates} Leader and 10 DON!!",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "OP09-001",
+      "hand": ["OP16-012", "OP16-006"],
+      "don": {
+        "active": 10
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": false
+    }
+  ],
+  "expect": {
+    "p1.characters": 2
+  }
+}

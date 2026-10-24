@@ -1,0 +1,33 @@
+{
+  "name": "Mr.1 with DON!! gains +3000 with 5 cards in hand",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "OP16-054",
+          "don": 1
+        }
+      ],
+      "hand": ["TEST-FILLER", "TEST-FILLER", "TEST-FILLER", "TEST-FILLER", "TEST-FILLER"]
+    },
+    "p2": {
+      "leader": "TEST-LEADER-6000"
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 3
+  }
+}

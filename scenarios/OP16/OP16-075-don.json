@@ -1,0 +1,25 @@
+{
+  "name": "Monkey.D.Garp adds an active and a rested DON!! with a {Navy} Leader",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "OP16-060",
+      "hand": ["OP16-075"],
+      "don": {
+        "active": 5,
+        "deck": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.donActive": 1,
+    "p1.donRested": 6
+  }
+}
