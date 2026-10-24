@@ -1,0 +1,213 @@
+[
+  {
+    "id": "ST34-001",
+    "name": "Charlotte Katakuri",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 5,
+    "power": 7000,
+    "types": ["Big Mom Pirates"],
+    "attribute": "Strike",
+    "rarity": "SR",
+    "blockIcon": 5,
+    "text": "[Your Turn] [Once Per Turn] When a DON!! card on your field is returned to your DON!! deck, if your Leader has the {Big Mom Pirates} type, add up to 2 DON!! cards from your DON!! deck and rest them.\n[On K.O.] Play up to 1 Character card with 8000 power or less from your hand.",
+    "image": "images/ST34-001.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569034",
+    "effects": [
+      {
+        "timing": "donReturned",
+        "returnedAtLeast": 1,
+        "oncePerTurn": true,
+        "conditions": [
+          {
+            "yourTurn": true
+          },
+          {
+            "leaderHasType": "Big Mom Pirates"
+          }
+        ],
+        "steps": [
+          {
+            "do": "addDon",
+            "count": 2,
+            "rested": true
+          }
+        ]
+      },
+      {
+        "timing": "onKO",
+        "steps": [
+          {
+            "do": "playFromHand",
+            "filter": {
+              "category": "character",
+              "powerAtMost": 8000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST34-002",
+    "name": "Charlotte Cracker",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 4,
+    "power": 5000,
+    "counter": 1000,
+    "types": ["Big Mom Pirates"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 5,
+    "text": "[On Play] If your Leader has the {Big Mom Pirates} type, add up to 1 DON!! card from your DON!! deck and rest it. Then, K.O. up to 1 of your opponent's Characters with a cost of 2 or less.",
+    "image": "images/ST34-002.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569034",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "leaderHasType": "Big Mom Pirates"
+              }
+            ],
+            "steps": [
+              {
+                "do": "addDon",
+                "count": 1,
+                "rested": true
+              }
+            ]
+          },
+          {
+            "do": "ko",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "costAtMost": 2
+              },
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST34-003",
+    "name": "Charlotte Brulee",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 1,
+    "power": 2000,
+    "counter": 2000,
+    "types": ["Big Mom Pirates"],
+    "attribute": "Special",
+    "rarity": "C",
+    "blockIcon": 5,
+    "text": "[On Play] Look at 3 cards from the top of your deck; reveal up to 1 {Big Mom Pirates} type card and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+    "image": "images/ST34-003.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569034",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "searchDeck",
+            "look": 3,
+            "take": 1,
+            "filter": {
+              "type": "Big Mom Pirates"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST34-004",
+    "name": "Charlotte Linlin",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 10,
+    "power": 12000,
+    "types": ["The Four Emperors", "Big Mom Pirates"],
+    "attribute": "Special",
+    "rarity": "SR",
+    "blockIcon": 5,
+    "text": "[On Play] DON!! −4, you may trash 1 card from your hand: Add up to 1 card from the top of your deck to the top of your Life cards. Then, up to 1 of your opponent's Characters' base power becomes 0 during this turn.",
+    "image": "images/ST34-004.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569034",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "optional": true,
+        "costs": [
+          {
+            "donMinus": 4
+          },
+          {
+            "trashFromHand": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "deckToLife",
+            "count": 1
+          },
+          {
+            "do": "setBasePower",
+            "target": {
+              "side": "opponent",
+              "upTo": true
+            },
+            "power": 0,
+            "duration": "turn"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST34-005",
+    "name": "Baron Tamago & Pekoms",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 3,
+    "power": 4000,
+    "counter": 2000,
+    "types": ["Minks", "Big Mom Pirates"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 5,
+    "text": "[When Attacking] DON!! −1: K.O. up to 1 of your opponent's Characters with 2000 base power or less.",
+    "image": "images/ST34-005.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569034",
+    "effects": [
+      {
+        "timing": "whenAttacking",
+        "optional": true,
+        "costs": [
+          {
+            "donMinus": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "ko",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "basePowerAtMost": 2000
+              },
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

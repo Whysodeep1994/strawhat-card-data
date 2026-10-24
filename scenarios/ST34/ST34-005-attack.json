@@ -1,0 +1,37 @@
+{
+  "name": "Pekoms returns 1 DON!! to K.O. a 2000 base power Character",
+  "rules": ["8-3-1-6"],
+  "setup": {
+    "p1": {
+      "characters": ["ST34-005"],
+      "don": {
+        "active": 1
+      }
+    },
+    "p2": {
+      "characters": ["TEST-BLOCKER-2000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 0,
+    "p1.donDeck": 1
+  }
+}

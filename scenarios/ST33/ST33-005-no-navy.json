@@ -1,0 +1,22 @@
+{
+  "name": "Garp plays nothing without a {Navy} Leader",
+  "rules": ["8-3-1"],
+  "setup": {
+    "p1": {
+      "hand": ["ST33-005", "ST33-004"],
+      "don": {
+        "active": 6
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.characters": 1
+  }
+}

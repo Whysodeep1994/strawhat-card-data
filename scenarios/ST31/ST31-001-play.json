@@ -1,0 +1,29 @@
+{
+  "name": "Sanji draws 1 and plays a {Straw Hat Crew} Character from hand",
+  "rules": ["8-3-1"],
+  "setup": {
+    "p1": {
+      "hand": ["ST31-001", "ST31-003"],
+      "don": {
+        "active": 7
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 2,
+    "p1.characters.1.cardId": "ST31-003",
+    "p1.donActive": 2
+  }
+}

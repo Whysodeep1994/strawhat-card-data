@@ -1,0 +1,19 @@
+{
+  "name": "Sanji with 2 DON!! can attack the turn it is played",
+  "rules": ["10-1-1"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "ST31-001",
+          "don": 2,
+          "playedThisTurn": true
+        }
+      ]
+    }
+  },
+  "actions": [],
+  "expect": {
+    "legal.p1.attack": 2
+  }
+}
