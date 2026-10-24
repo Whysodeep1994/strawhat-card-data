@@ -1,0 +1,62 @@
+{
+  "name": "Luffy's face-up Life cards go to the bottom of the deck when he takes damage",
+  "rules": ["7-1-4-1-1-2"],
+  "setup": {
+    "p1": {
+      "leader": {
+        "card": "ST13-003",
+        "don": 2
+      },
+      "life": 0,
+      "hand": ["TEST-FILLER", "TEST-C5-5000"]
+    },
+    "p2": {
+      "characters": ["TEST-C7-7000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 1
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    },
+    {
+      "type": "endTurn",
+      "player": "p1"
+    },
+    {
+      "type": "attack",
+      "player": "p2",
+      "attacker": "p2.characters.0",
+      "target": "p1.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "p1.life": 0,
+    "p1.hand": 0,
+    "p1.deck": 21,
+    "p1.deck.20.cardId": "TEST-C5-5000",
+    "winner": null,
+    "p1.trash": 1
+  }
+}

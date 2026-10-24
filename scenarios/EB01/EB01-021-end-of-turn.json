@@ -1,0 +1,28 @@
+{
+  "name": "Hannyabal returns an {Impel Down} Character at the end of the turn to add an active DON!!",
+  "rules": ["10-2-7"],
+  "setup": {
+    "p1": {
+      "leader": "EB01-021",
+      "characters": ["EB01-026"],
+      "don": {
+        "deck": 5
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "endTurn",
+      "player": "p1"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p1.donActive": 1
+  }
+}

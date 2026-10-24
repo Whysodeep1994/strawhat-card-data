@@ -1,0 +1,24 @@
+{
+  "name": "Luffy adds 1 active DON!! with 0 DON!! on the field",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "ST10-002",
+      "don": {
+        "deck": 10
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 0
+    }
+  ],
+  "expect": {
+    "p1.donActive": 1,
+    "p1.donDeck": 9
+  }
+}

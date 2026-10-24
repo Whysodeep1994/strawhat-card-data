@@ -1,0 +1,45 @@
+{
+  "name": "Sakazuki rests 3 DON!! and trashes 1 card to K.O. a cost 0 Character",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "ST06-001",
+      "hand": ["TEST-FILLER", "TEST-C4-4000"],
+      "don": {
+        "active": 3
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C0-1000", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 1,
+    "p2.characters.0.cardId": "TEST-FILLER",
+    "p2.trash": 1,
+    "p1.trash": 1
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Fourtricks can be played for its cost",
+  "rules": ["6-5-3-1"],
+  "setup": {
+    "p1": {
+      "hand": ["EB01-025"],
+      "don": {
+        "active": 3
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.characters": 1,
+    "p1.donActive": 0
+  }
+}

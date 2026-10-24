@@ -1,5 +1,65 @@
 [
   {
+    "id": "ST14-001",
+    "name": "Monkey.D.Luffy",
+    "category": "leader",
+    "colors": ["black"],
+    "life": 5,
+    "power": 5000,
+    "types": ["Straw Hat Crew"],
+    "attribute": "Strike",
+    "rarity": "L",
+    "blockIcon": 2,
+    "text": "[DON!! x1] All of your Characters gain +1 cost. If you have a Character with a cost of 8 or more, this Leader gains +1000 power.",
+    "image": "images/ST14-001.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569014",
+    "effects": [
+      {
+        "timing": "permanent",
+        "conditions": [
+          {
+            "donAtLeast": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "costChange",
+            "target": {
+              "side": "self",
+              "zone": "characters"
+            },
+            "amount": 1
+          }
+        ]
+      },
+      {
+        "timing": "permanent",
+        "conditions": [
+          {
+            "donAtLeast": 1
+          },
+          {
+            "count": {
+              "side": "self",
+              "filter": {
+                "costAtLeast": 8
+              }
+            }
+          }
+        ],
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "this"
+            },
+            "amount": 1000
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "ST14-010",
     "name": "Brook",
     "category": "character",

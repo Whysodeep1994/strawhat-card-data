@@ -1,0 +1,48 @@
+{
+  "name": "Chopper swaps a Life card for a card from hand when K.O.'d",
+  "rules": ["10-2-17"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "characters": ["ST29-007"],
+      "life": ["ST29-010", "TEST-FILLER"],
+      "hand": ["TEST-C4-4000"]
+    },
+    "p2": {
+      "hand": ["TEST-KO-EVENT"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p2",
+      "card": "p2.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p1.characters.0"]
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": false
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.life": 2,
+    "p1.life.0.cardId": "TEST-C4-4000",
+    "p1.hand.0.cardId": "ST29-010"
+  }
+}

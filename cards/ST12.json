@@ -1,0 +1,49 @@
+[
+  {
+    "id": "ST12-001",
+    "name": "Roronoa Zoro & Sanji",
+    "category": "leader",
+    "colors": ["green", "blue"],
+    "life": 4,
+    "power": 5000,
+    "types": ["Straw Hat Crew"],
+    "attribute": "Slash/Strike",
+    "rarity": "L",
+    "blockIcon": 2,
+    "text": "[DON!! x1] [When Attacking] [Once Per Turn] You may return 1 of your Characters with a cost of 2 or more to the owner's hand: Set up to 1 of your Characters with 7000 power or less as active.",
+    "image": "images/ST12-001.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569012",
+    "effects": [
+      {
+        "timing": "whenAttacking",
+        "conditions": [
+          {
+            "donAtLeast": 1
+          }
+        ],
+        "oncePerTurn": true,
+        "optional": true,
+        "costs": [
+          {
+            "returnOwnCharacter": 1,
+            "filter": {
+              "costAtLeast": 2
+            }
+          }
+        ],
+        "steps": [
+          {
+            "do": "setActive",
+            "target": {
+              "side": "self",
+              "filter": {
+                "powerAtMost": 7000
+              },
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

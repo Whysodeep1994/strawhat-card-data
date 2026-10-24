@@ -1,0 +1,38 @@
+{
+  "name": "Uta gives +2000 to a Character with no base effect",
+  "rules": ["2-8-5"],
+  "setup": {
+    "p1": {
+      "leader": "P-011",
+      "characters": ["TEST-ONPLAY-DRAW", "TEST-FILLER"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 0
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.0"],
+      "illegal": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.1"]
+    }
+  ],
+  "expect": {
+    "modifiers": 1,
+    "modifiers.0.power": 2000,
+    "modifiers.0.target": "c3",
+    "p1.donRested": 1
+  }
+}

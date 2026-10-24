@@ -1,0 +1,29 @@
+{
+  "name": "Franky returns 2 DON!! and trashes 1 to draw 2",
+  "rules": ["10-2-10-1"],
+  "setup": {
+    "p1": {
+      "hand": ["OP09-072", "TEST-FILLER"],
+      "don": {
+        "active": 6
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.hand": 2,
+    "p1.trash": 1,
+    "p1.donDeck": 2
+  }
+}

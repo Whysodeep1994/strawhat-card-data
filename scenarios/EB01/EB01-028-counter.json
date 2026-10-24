@@ -1,0 +1,37 @@
+{
+  "name": "Gum-Gum Champion Rifle: your opponent returns 1 of their active Characters",
+  "rules": ["10-2-4"],
+  "setup": {
+    "p1": {
+      "characters": ["TEST-FILLER", "TEST-C5-5000"]
+    },
+    "p2": {
+      "hand": ["EB01-028"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "counterEvent",
+      "player": "p2",
+      "card": "p2.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.1"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p1.characters": 1
+  }
+}

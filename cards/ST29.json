@@ -1,0 +1,705 @@
+[
+  {
+    "id": "ST29-001",
+    "name": "Monkey.D.Luffy",
+    "category": "leader",
+    "colors": ["yellow"],
+    "life": 6,
+    "power": 5000,
+    "types": ["Egghead", "The Four Emperors", "Straw Hat Crew"],
+    "attribute": "Strike",
+    "rarity": "L",
+    "blockIcon": 4,
+    "text": "[When Attacking] If you have 2 or less Life cards, draw 1 card and trash 1 card from your hand.",
+    "image": "images/ST29-001.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569029",
+    "effects": [
+      {
+        "timing": "whenAttacking",
+        "conditions": [
+          {
+            "lifeAtMost": 2
+          }
+        ],
+        "steps": [
+          {
+            "do": "draw",
+            "count": 1
+          },
+          {
+            "do": "trashFromHand",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST29-002",
+    "name": "Usopp",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 3,
+    "power": 4000,
+    "counter": 1000,
+    "types": ["Egghead", "Straw Hat Crew"],
+    "attribute": "Ranged",
+    "rarity": "C",
+    "blockIcon": 4,
+    "text": "[On Play]/[When Attacking] Rest up to 1 of your opponent's Characters with a cost equal to or less than the number of your opponent's Life cards.",
+    "image": "images/ST29-002.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569029",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "rest",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "costAtMostOpponentLife": true
+              },
+              "upTo": true
+            }
+          }
+        ]
+      },
+      {
+        "timing": "whenAttacking",
+        "steps": [
+          {
+            "do": "rest",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "costAtMostOpponentLife": true
+              },
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST29-003",
+    "name": "Kaku",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 4,
+    "power": 5000,
+    "counter": 1000,
+    "types": ["Egghead", "CP0"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 4,
+    "text": "If the number of your Life cards is equal to or less than the number of your opponent's Life cards, this Character gains +1000 power.",
+    "trigger": "[Trigger] K.O. up to 1 of your opponent's Characters with a cost of 3 or less.",
+    "image": "images/ST29-003.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569029",
+    "effects": [
+      {
+        "timing": "permanent",
+        "conditions": [
+          {
+            "lifeAtMostOpponents": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "this"
+            },
+            "amount": 1000
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "ko",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "costAtMost": 3
+              },
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST29-004",
+    "name": "Sanji",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 4,
+    "power": 5000,
+    "counter": 1000,
+    "types": ["Egghead", "Straw Hat Crew"],
+    "attribute": "Strike",
+    "rarity": "SR",
+    "blockIcon": 4,
+    "text": "[On Play] Look at 4 cards from the top of your deck; reveal up to 1 {Straw Hat Crew} type card and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+    "trigger": "[Trigger] You may trash 1 card from your hand: Play this card.",
+    "image": "images/ST29-004.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569029",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "searchDeck",
+            "look": 4,
+            "take": 1,
+            "filter": {
+              "type": "Straw Hat Crew"
+            }
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "optional": true,
+        "costs": [
+          {
+            "trashFromHand": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "playThis"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST29-005",
+    "name": "Jinbe",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 6,
+    "power": 5000,
+    "counter": 2000,
+    "types": ["Fish-Man", "Egghead", "Straw Hat Crew"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 4,
+    "text": "",
+    "trigger": "[Trigger] If your Leader is [Monkey.D.Luffy], play this card.",
+    "image": "images/ST29-005.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569029",
+    "effects": [
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "leaderIs": "Monkey.D.Luffy"
+              }
+            ],
+            "steps": [
+              {
+                "do": "playThis"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST29-006",
+    "name": "Stussy",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 6,
+    "power": 7000,
+    "counter": 2000,
+    "types": ["Egghead"],
+    "attribute": "Special",
+    "rarity": "C",
+    "blockIcon": 4,
+    "text": "",
+    "image": "images/ST29-006.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569029"
+  },
+  {
+    "id": "ST29-007",
+    "name": "Tony Tony.Chopper",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 4,
+    "power": 5000,
+    "counter": 1000,
+    "types": ["Animal", "Egghead", "Straw Hat Crew"],
+    "attribute": "Wisdom",
+    "rarity": "C",
+    "blockIcon": 4,
+    "text": "[On K.O.] You may add 1 card from the top or bottom of your Life cards to your hand: Add up to 1 card from your hand to the top of your Life cards.",
+    "trigger": "[Trigger] Up to 1 of your [Monkey.D.Luffy] cards gains +2000 power during this turn.",
+    "image": "images/ST29-007.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569029",
+    "effects": [
+      {
+        "timing": "onKO",
+        "optional": true,
+        "costs": [
+          {
+            "lifeToHand": 1,
+            "from": "topOrBottom"
+          }
+        ],
+        "steps": [
+          {
+            "do": "handToLife",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "self",
+              "zone": "leaderOrCharacters",
+              "filter": {
+                "name": "Monkey.D.Luffy"
+              },
+              "upTo": true
+            },
+            "amount": 2000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST29-008",
+    "name": "Nami",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 3,
+    "power": 1000,
+    "counter": 1000,
+    "types": ["Egghead", "Straw Hat Crew"],
+    "attribute": "Special",
+    "rarity": "C",
+    "blockIcon": 4,
+    "text": "If your {Egghead} type Character would be K.O.'d by your opponent's effect, you may turn 1 card from the top of your Life cards face-up instead.",
+    "trigger": "[Trigger] If your Leader is [Monkey.D.Luffy], play this card.",
+    "image": "images/ST29-008.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569029",
+    "effects": [
+      {
+        "timing": "replaceRemoval",
+        "replaces": {
+          "side": "self",
+          "filter": {
+            "type": "Egghead"
+          },
+          "removal": "ko",
+          "byOpponent": true
+        },
+        "optional": true,
+        "costs": [
+          {
+            "lifeFaceUp": 1
+          }
+        ],
+        "steps": []
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "leaderIs": "Monkey.D.Luffy"
+              }
+            ],
+            "steps": [
+              {
+                "do": "playThis"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST29-009",
+    "name": "Nico Robin",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 4,
+    "power": 2000,
+    "counter": 2000,
+    "types": ["Egghead", "Straw Hat Crew"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 4,
+    "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)",
+    "trigger": "[Trigger] If your Leader is [Monkey.D.Luffy], play this card.",
+    "image": "images/ST29-009.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569029",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "leaderIs": "Monkey.D.Luffy"
+              }
+            ],
+            "steps": [
+              {
+                "do": "playThis"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST29-010",
+    "name": "Franky",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 5,
+    "power": 6000,
+    "counter": 2000,
+    "types": ["Egghead", "Straw Hat Crew"],
+    "attribute": "Ranged",
+    "rarity": "C",
+    "blockIcon": 4,
+    "text": "",
+    "image": "images/ST29-010.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569029"
+  },
+  {
+    "id": "ST29-011",
+    "name": "Brook",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 2,
+    "power": 2000,
+    "counter": 1000,
+    "types": ["Egghead", "Straw Hat Crew"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 4,
+    "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)",
+    "image": "images/ST29-011.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569029",
+    "keywords": ["blocker"]
+  },
+  {
+    "id": "ST29-012",
+    "name": "Monkey.D.Luffy",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 1,
+    "counter": 1000,
+    "types": ["Egghead", "The Four Emperors", "Straw Hat Crew"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 4,
+    "text": "[Activate: Main] [Once Per Turn] Give up to 1 rested DON!! card to 1 of your [Monkey.D.Luffy] cards.",
+    "trigger": "[Trigger] Play this card.",
+    "image": "images/ST29-012.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569029",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "oncePerTurn": true,
+        "steps": [
+          {
+            "do": "giveRestedDon",
+            "target": {
+              "side": "self",
+              "zone": "leaderOrCharacters",
+              "filter": {
+                "name": "Monkey.D.Luffy"
+              },
+              "upTo": true
+            },
+            "count": 1
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "playThis"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST29-013",
+    "name": "Rob Lucci",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 5,
+    "power": 6000,
+    "counter": 1000,
+    "types": ["Egghead", "CP0"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 4,
+    "text": "",
+    "trigger": "[Trigger] K.O. up to 1 of your opponent's Characters with a cost equal to or less than the total of your and your opponent's Life cards.",
+    "image": "images/ST29-013.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569029",
+    "effects": [
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "ko",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "costAtMostTotalLife": true
+              },
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST29-014",
+    "name": "Roronoa Zoro",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 6,
+    "power": 8000,
+    "types": ["Egghead", "Straw Hat Crew"],
+    "attribute": "Slash",
+    "rarity": "SR",
+    "blockIcon": 4,
+    "text": "[Rush: Character] (This card can attack Characters on the turn in which it is played.)\n[Activate: Main] [Once Per Turn] You may trash 1 card with a [Trigger] from your hand: Draw 1 card and give up to 1 rested DON!! card to your Leader or 1 of your Characters.",
+    "image": "images/ST29-014.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569029",
+    "keywords": ["rushCharacter"],
+    "effects": [
+      {
+        "timing": "activateMain",
+        "oncePerTurn": true,
+        "optional": true,
+        "costs": [
+          {
+            "trashFromHand": 1,
+            "filter": {
+              "hasTrigger": true
+            }
+          }
+        ],
+        "steps": [
+          {
+            "do": "draw",
+            "count": 1
+          },
+          {
+            "do": "giveRestedDon",
+            "target": {
+              "side": "self",
+              "zone": "leaderOrCharacters",
+              "upTo": true
+            },
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST29-015",
+    "name": "Raw Heat Strike",
+    "category": "event",
+    "colors": ["yellow"],
+    "cost": 1,
+    "types": ["Egghead", "Straw Hat Crew"],
+    "rarity": "C",
+    "blockIcon": 4,
+    "text": "[Counter] Up to 1 of your Leader or Character cards gains +2000 power during this battle. Then, if you have 1 or less Life cards, give up to 1 of your opponent's Leader or Character cards −2000 power during this turn.",
+    "trigger": "[Trigger] Draw 1 card.",
+    "image": "images/ST29-015.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569029",
+    "effects": [
+      {
+        "timing": "counter",
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "self",
+              "zone": "leaderOrCharacters",
+              "upTo": true
+            },
+            "amount": 2000,
+            "duration": "battle"
+          },
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "lifeAtMost": 1
+              }
+            ],
+            "steps": [
+              {
+                "do": "powerUp",
+                "target": {
+                  "side": "opponent",
+                  "zone": "leaderOrCharacters",
+                  "upTo": true
+                },
+                "amount": -2000
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "draw",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST29-016",
+    "name": "Kizaru!! Compared to Two Years Ago We're a Hundred Times Stronger Now!!",
+    "category": "event",
+    "colors": ["yellow"],
+    "cost": 1,
+    "types": ["Egghead", "The Four Emperors", "Straw Hat Crew"],
+    "rarity": "C",
+    "blockIcon": 4,
+    "text": "[Main] Your [Monkey.D.Luffy] Leader gains [Unblockable] during this turn.\n(This card cannot be blocked.)\n[Counter] Your Leader gains +3000 power during this battle.",
+    "image": "images/ST29-016.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569029",
+    "effects": [
+      {
+        "timing": "main",
+        "steps": [
+          {
+            "do": "grantKeyword",
+            "target": {
+              "side": "self",
+              "zone": "leader",
+              "filter": {
+                "name": "Monkey.D.Luffy"
+              }
+            },
+            "keyword": "unblockable"
+          }
+        ]
+      },
+      {
+        "timing": "counter",
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "self",
+              "zone": "leader"
+            },
+            "amount": 3000,
+            "duration": "battle"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST29-017",
+    "name": "Iai Death Lion Song",
+    "category": "event",
+    "colors": ["yellow"],
+    "cost": 2,
+    "types": ["Egghead", "Straw Hat Crew"],
+    "rarity": "C",
+    "blockIcon": 4,
+    "text": "[Counter] Up to 1 of your Leader or Character cards gains +4000 power during this battle. Then, if you have 2 or less Life cards, K.O. up to 1 of your opponent's Characters with a cost of 3 or less.",
+    "trigger": "[Trigger] Draw 2 cards and trash 1 card from your hand.",
+    "image": "images/ST29-017.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569029",
+    "effects": [
+      {
+        "timing": "counter",
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "self",
+              "zone": "leaderOrCharacters",
+              "upTo": true
+            },
+            "amount": 4000,
+            "duration": "battle"
+          },
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "lifeAtMost": 2
+              }
+            ],
+            "steps": [
+              {
+                "do": "ko",
+                "target": {
+                  "side": "opponent",
+                  "filter": {
+                    "costAtMost": 3
+                  },
+                  "upTo": true
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "draw",
+            "count": 2
+          },
+          {
+            "do": "trashFromHand",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  }
+]

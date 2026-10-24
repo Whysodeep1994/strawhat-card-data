@@ -1,0 +1,29 @@
+{
+  "name": "Lim adds an {ODYSSEY} card other than [Lim]",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP09-037"],
+      "don": {
+        "active": 3
+      },
+      "deck": ["OP09-037", "OP09-038", "TEST-FILLER", "TEST-FILLER", "TEST-FILLER", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.1"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p1.hand.0.cardId": "OP09-038"
+  }
+}

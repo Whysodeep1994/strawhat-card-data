@@ -1,0 +1,24 @@
+{
+  "name": "Kaido can't activate with only 6 DON!! on the field",
+  "rules": ["8-3-1-3"],
+  "setup": {
+    "p1": {
+      "leader": "ST04-001",
+      "don": {
+        "active": 6
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 0,
+      "illegal": true
+    }
+  ],
+  "expect": {
+    "p2.life": 4
+  }
+}

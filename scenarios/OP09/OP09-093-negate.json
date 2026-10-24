@@ -1,0 +1,45 @@
+{
+  "name": "Marshall.D.Teach negates a Leader and a Character, which then cannot attack",
+  "rules": ["8-2-1"],
+  "setup": {
+    "p1": {
+      "leader": "OP09-081",
+      "characters": [
+        {
+          "card": "OP09-093",
+          "playedThisTurn": true
+        }
+      ]
+    },
+    "p2": {
+      "leader": "OP09-001",
+      "characters": ["OP09-004"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.leader"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    },
+    {
+      "type": "endTurn",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "legal.p2.attack": 1,
+    "modifiers": 2
+  }
+}

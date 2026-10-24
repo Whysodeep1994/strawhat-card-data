@@ -1,0 +1,41 @@
+{
+  "name": "Izo adds a {Land of Wano} card when attacking, then trashes 1",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": ["OP09-044"],
+      "hand": ["TEST-FILLER"],
+      "deck": [
+        "OP09-047",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER"
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.0"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p1.hand.0.cardId": "OP09-047",
+    "p1.trash": 1
+  }
+}

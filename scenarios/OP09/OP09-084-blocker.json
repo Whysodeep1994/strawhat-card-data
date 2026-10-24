@@ -1,0 +1,36 @@
+{
+  "name": "Catarina Devon's [Blocker] lasts through the opponent's turn",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "OP09-081",
+      "characters": ["OP09-084"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "chooseOne",
+      "player": "p1",
+      "option": 2
+    },
+    {
+      "type": "endTurn",
+      "player": "p1"
+    },
+    {
+      "type": "attack",
+      "player": "p2",
+      "attacker": "p2.leader",
+      "target": "p1.leader"
+    }
+  ],
+  "expect": {
+    "prompt.kind": "block"
+  }
+}

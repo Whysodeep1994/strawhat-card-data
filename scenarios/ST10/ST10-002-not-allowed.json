@@ -1,0 +1,25 @@
+{
+  "name": "Luffy can't activate with 5 DON!! on the field",
+  "rules": ["8-3-2-1"],
+  "setup": {
+    "p1": {
+      "leader": "ST10-002",
+      "don": {
+        "active": 5,
+        "deck": 5
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 0,
+      "illegal": true
+    }
+  ],
+  "expect": {
+    "p1.donActive": 5
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "Blueno's DON!! −1 is paid, but without a {Water Seven} Leader nothing is played",
+  "rules": ["10-2-6", "8-3-3"],
+  "setup": {
+    "p1": {
+      "hand": ["EB01-033"],
+      "don": {
+        "active": 5
+      },
+      "trash": ["EB01-031"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.characters": 1,
+    "p1.donRested": 3
+  }
+}
