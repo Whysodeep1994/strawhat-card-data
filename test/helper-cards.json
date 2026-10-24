@@ -464,5 +464,32 @@
     "cost": 2,
     "power": 3000,
     "types": ["Thriller Bark Pirates"]
+  },
+  {
+    "id": "TEST-LEADER-THRILLER",
+    "name": "Test Leader Thriller Bark",
+    "category": "leader",
+    "colors": ["black"],
+    "power": 5000,
+    "life": 4,
+    "types": ["Thriller Bark Pirates"]
+  },
+  {
+    "id": "TEST-LEADER-BLACKBEARD",
+    "name": "Test Leader Blackbeard",
+    "category": "leader",
+    "colors": ["black"],
+    "power": 5000,
+    "life": 4,
+    "types": ["Blackbeard Pirates"]
+  },
+  {
+    "id": "TEST-SABO-2",
+    "name": "Sabo",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 2,
+    "power": 3000,
+    "types": []
   }
 ]

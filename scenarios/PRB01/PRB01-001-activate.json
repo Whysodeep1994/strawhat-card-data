@@ -1,0 +1,26 @@
+{
+  "name": "Sanji gives [Rush] to a Character without an [On Play] effect",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "PRB01-001",
+      "characters": ["TEST-C8-8000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 0
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.0"]
+    }
+  ],
+  "expect": {
+    "modifiers.0.keyword": "rush"
+  }
+}

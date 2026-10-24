@@ -1,0 +1,26 @@
+{
+  "name": "Portgas.D.Ace returns itself to hand to arrange the top 5 cards",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["P-074"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.characters": 0,
+    "p1.hand": 1
+  }
+}
