@@ -1,0 +1,36 @@
+{
+  "name": "O-Nami gains [Blocker] with 10 DON!! on the field",
+  "rules": ["10-1-4-1"],
+  "setup": {
+    "turnPlayer": "p2",
+    "p1": {
+      "characters": ["OP05-062"],
+      "don": {
+        "active": 10
+      }
+    },
+    "p2": {
+      "turnsTaken": 2
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p2",
+      "attacker": "p2.leader",
+      "target": "p1.leader"
+    },
+    {
+      "type": "block",
+      "player": "p1",
+      "blocker": "p1.characters.0"
+    },
+    {
+      "type": "pass",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "p1.life": 4
+  }
+}

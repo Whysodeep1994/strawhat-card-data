@@ -1,0 +1,39 @@
+{
+  "name": "Mr.1 returns 1 DON!! to play a {Baroque Works} Character when attacked",
+  "rules": ["10-2-16"],
+  "setup": {
+    "p2": {
+      "characters": ["OP05-075"],
+      "hand": ["OP05-075"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.hand.0"]
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.characters": 2,
+    "p2.donDeck": 1
+  }
+}
