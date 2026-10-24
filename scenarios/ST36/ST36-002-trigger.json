@@ -1,0 +1,36 @@
+{
+  "name": "[Trigger] plays this card when the opponent has 3 or less Life",
+  "rules": ["10-1-5"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "life": ["ST36-002", "TEST-FILLER"]
+    },
+    "p2": {
+      "characters": ["TEST-C5-5000"],
+      "life": 3
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p2",
+      "attacker": "p2.characters.0",
+      "target": "p1.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p1"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.characters": 1,
+    "p1.characters.0.cardId": "ST36-002"
+  }
+}
