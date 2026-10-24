@@ -1,0 +1,23 @@
+{
+  "name": "Pincers costs 2 less when your Leader has 0 power",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "leader": "TEST-LEADER-0",
+      "hand": ["OP15-013"],
+      "don": {
+        "active": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.characters": 1
+  }
+}
