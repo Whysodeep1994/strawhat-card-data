@@ -1,0 +1,28 @@
+{
+  "name": "Shanks rests a 7000 base power Character when he becomes rested",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "characters": ["OP14-027"]
+    },
+    "p2": {
+      "characters": ["TEST-C7-7000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters.0.rested": true
+  }
+}

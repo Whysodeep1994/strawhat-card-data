@@ -1,0 +1,34 @@
+{
+  "name": "Boa Hancock with 1 DON!! takes an opponent's Life card when a 5000 base power Kuja Character is K.O.'d",
+  "rules": ["10-2-1"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "leader": {
+        "card": "OP14-041",
+        "don": 1
+      },
+      "characters": ["OP14-114"]
+    },
+    "p2": {
+      "hand": ["TEST-KO-EVENT"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p2",
+      "card": "p2.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p1.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.life": 3,
+    "p2.hand": 1
+  }
+}

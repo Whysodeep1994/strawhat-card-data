@@ -1,0 +1,32 @@
+{
+  "name": "Gorgon Sisters reveal 3 Kuja cards to give the Leader and each Character a rested DON!!",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["OP14-105", "TEST-C4-4000"],
+      "hand": ["OP14-114", "OP14-113", "OP14-107"],
+      "don": {
+        "rested": 3
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.leader.givenDon": 1,
+    "p1.characters.0.givenDon": 1,
+    "p1.characters.1.givenDon": 1,
+    "p1.hand": 3
+  }
+}

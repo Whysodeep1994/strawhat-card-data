@@ -1,0 +1,25 @@
+{
+  "name": "Shakuyaku draws 2 and trashes 2 when your opponent has 3 Life",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "hand": ["OP14-107"],
+      "don": {
+        "active": 6
+      }
+    },
+    "p2": {
+      "life": 3
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.trash": 2
+  }
+}
