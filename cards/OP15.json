@@ -336,7 +336,7 @@
         "conditions": [
           {
             "trashAtLeast": 4,
-            "filter": {
+            "trashFilter": {
               "category": "event"
             }
           }
@@ -1012,7 +1012,7 @@
         "conditions": [
           {
             "trashAtLeast": 4,
-            "filter": {
+            "trashFilter": {
               "category": "event"
             }
           }
