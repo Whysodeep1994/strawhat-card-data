@@ -1,0 +1,31 @@
+{
+  "name": "Oden trashes a Land of Wano card to set 2 DON!! active",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "OP01-031",
+      "hand": ["OP01-036", "TEST-FILLER"],
+      "don": {
+        "rested": 3
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.donActive": 2,
+    "p1.donRested": 1,
+    "p1.hand": 1
+  }
+}

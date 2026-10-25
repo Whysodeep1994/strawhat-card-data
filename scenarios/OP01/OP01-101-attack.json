@@ -1,0 +1,34 @@
+{
+  "name": "Sasaki trashes a card to add a rested DON!!",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "hand": ["TEST-FILLER"],
+      "characters": [
+        {
+          "card": "OP01-101",
+          "don": 1
+        }
+      ],
+      "don": {
+        "deck": 3
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.donRested": 1
+  }
+}

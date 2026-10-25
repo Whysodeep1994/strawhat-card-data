@@ -1,0 +1,26 @@
+{
+  "name": "A rested Kid with DON!! is the only card the opponent can attack",
+  "rules": ["8-1-3-3"],
+  "setup": {
+    "p1": {
+      "characters": ["TEST-FILLER"]
+    },
+    "p2": {
+      "characters": [
+        {
+          "card": "OP01-051",
+          "don": 1,
+          "rested": true
+        },
+        {
+          "card": "TEST-FILLER",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [],
+  "expect": {
+    "legal.p1.attack": 2
+  }
+}

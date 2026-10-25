@@ -1,0 +1,31 @@
+{
+  "name": "Mr.2 finds a Baroque Works Event",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "deck": ["OP01-083", "OP01-090"],
+      "characters": [
+        {
+          "card": "OP01-084",
+          "don": 1
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.1"]
+    }
+  ],
+  "expect": {
+    "p1.hand.0.cardId": "OP01-090"
+  }
+}

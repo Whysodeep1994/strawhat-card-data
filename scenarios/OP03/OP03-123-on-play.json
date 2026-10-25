@@ -1,0 +1,36 @@
+{
+  "name": "Katakuri adds a Character to the top of its owner's Life face-up",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP03-123"],
+      "don": {
+        "active": 8
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C8-8000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": false
+    }
+  ],
+  "expect": {
+    "p2.life": 5,
+    "p2.characters": 0
+  }
+}

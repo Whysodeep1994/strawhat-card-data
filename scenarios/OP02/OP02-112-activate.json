@@ -1,0 +1,39 @@
+{
+  "name": "Bell-mère gives −1 cost and +1000",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["OP02-112"]
+    },
+    "p2": {
+      "characters": ["OP02-097"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.leader"]
+    }
+  ],
+  "expect": {
+    "cost.p2.characters.0": 0,
+    "power.p1.leader": 6000
+  }
+}

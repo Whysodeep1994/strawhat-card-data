@@ -1,0 +1,30 @@
+{
+  "name": "Boa Hancock draws when blocking",
+  "rules": ["10-2-15"],
+  "setup": {
+    "p2": {
+      "characters": [
+        {
+          "card": "OP01-078",
+          "don": 1
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "block",
+      "player": "p2",
+      "blocker": "p2.characters.0"
+    }
+  ],
+  "expect": {
+    "p2.hand": 1
+  }
+}
