@@ -1,0 +1,27 @@
+{
+  "name": "Shuraiya's base power becomes the opponent's Leader's 7000",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": ["OP06-009"]
+    },
+    "p2": {
+      "leader": "TEST-LEADER-7000"
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 3
+  }
+}

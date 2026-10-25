@@ -1,0 +1,32 @@
+{
+  "name": "Monkey.D.Garp stops [Blocker] with a small hand",
+  "rules": ["10-1-4-1"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "OP06-055",
+          "don": 2
+        }
+      ]
+    },
+    "p2": {
+      "characters": ["TEST-BLOCKER-2000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "block",
+      "player": "p2",
+      "blocker": "p2.characters.0",
+      "illegal": true
+    }
+  ],
+  "expect": {}
+}

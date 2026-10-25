@@ -1,0 +1,36 @@
+{
+  "name": "Ama no Murakumo Sword bottoms a cost 2 and a cost 1 Character",
+  "rules": ["10-2-3"],
+  "setup": {
+    "p1": {
+      "hand": ["OP06-056"],
+      "don": {
+        "active": 2
+      }
+    },
+    "p2": {
+      "characters": ["TEST-BLOCKER-2000", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 0,
+    "p2.deck": 22
+  }
+}

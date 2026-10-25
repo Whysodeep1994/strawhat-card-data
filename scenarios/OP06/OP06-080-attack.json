@@ -1,0 +1,57 @@
+{
+  "name": "Gecko Moria trashes 2 from the deck and plays a {Thriller Bark Pirates} Character",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "leader": {
+        "card": "OP06-080",
+        "don": 1
+      },
+      "hand": ["TEST-FILLER"],
+      "don": {
+        "active": 2
+      },
+      "deck": [
+        "OP06-087",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER"
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.trash.1"]
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p1.characters": 1,
+    "p1.characters.0.cardId": "OP06-087",
+    "p1.trash": 2
+  }
+}

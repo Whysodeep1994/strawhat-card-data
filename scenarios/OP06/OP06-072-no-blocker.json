@@ -1,0 +1,25 @@
+{
+  "name": "Cosette has no [Blocker] with as many DON!! as the opponent",
+  "rules": ["10-1-4"],
+  "setup": {
+    "p2": {
+      "leader": "OP06-042",
+      "characters": ["OP06-072"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "block",
+      "player": "p2",
+      "blocker": "p2.characters.0",
+      "illegal": true
+    }
+  ],
+  "expect": {}
+}

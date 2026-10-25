@@ -1,0 +1,47 @@
+{
+  "name": "Hody Jones rests 2 Characters, takes a Life card and attacks with [Rush]",
+  "rules": ["10-2-6", "10-1-1"],
+  "setup": {
+    "p1": {
+      "hand": ["OP06-035"],
+      "don": {
+        "active": 7
+      }
+    },
+    "p2": {
+      "characters": ["TEST-FILLER", "TEST-C4-4000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "chooseOne",
+      "player": "p1",
+      "option": 0
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0", "p2.characters.1"]
+    },
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.characters.1"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p1.life": 3,
+    "p2.characters": 1,
+    "p2.characters.0.rested": true
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "Tot Musica rests Uta to gain +5000",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "OP06-001",
+      "characters": ["OP06-011"]
+    },
+    "p2": {
+      "leader": "TEST-LEADER-7000"
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p1.leader.rested": true,
+    "p2.life": 3
+  }
+}

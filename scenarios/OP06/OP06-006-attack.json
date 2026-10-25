@@ -1,0 +1,45 @@
+{
+  "name": "Saga gains +1000, then a {FILM} Character is trashed at the end of the turn",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "OP06-006",
+          "don": 1
+        },
+        "OP06-005"
+      ]
+    },
+    "p2": {
+      "leader": "TEST-LEADER-7000"
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "endTurn",
+      "player": "p1"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.1"]
+    }
+  ],
+  "expect": {
+    "p2.life": 3,
+    "p1.characters": 1,
+    "p1.characters.0.cardId": "OP06-006",
+    "p1.trash": 1
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Tokikake with a DON!! and a small hand can't be K.O.'d in battle",
+  "rules": ["7-1-4-2"],
+  "setup": {
+    "p1": {
+      "characters": ["TEST-C5-5000"]
+    },
+    "p2": {
+      "characters": [
+        {
+          "card": "OP06-052",
+          "rested": true,
+          "don": 1
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.characters.0"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.characters": 1
+  }
+}
