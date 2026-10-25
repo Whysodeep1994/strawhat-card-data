@@ -1,0 +1,34 @@
+{
+  "name": "Brook trashes 4 from the deck; with 0 cards left you don't lose yet and set a Character active",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "OP15-022",
+      "deck": 4,
+      "characters": [
+        {
+          "card": "TEST-FILLER",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 1
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.0"]
+    }
+  ],
+  "expect": {
+    "winner": null,
+    "p1.deck": 0,
+    "p1.characters.0.rested": false
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "Gum-Gum Golden Rifle trashes a Life card, adds a deck card to Life, and trashes 1",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "OP15-022",
+      "hand": ["OP15-116", "TEST-FILLER"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.life": 4,
+    "p1.trash": 3,
+    "p1.hand": 0
+  }
+}
