@@ -1,0 +1,39 @@
+{
+  "name": "Captain McKinley plays Conis when K.O.'d",
+  "rules": ["10-2-17"],
+  "setup": {
+    "p1": {
+      "characters": ["TEST-C7-7000"]
+    },
+    "p2": {
+      "characters": [
+        {
+          "card": "OP05-112",
+          "rested": true
+        }
+      ],
+      "hand": ["OP05-104"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.characters.0"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.hand.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 1,
+    "p2.characters.0.cardId": "OP05-104"
+  }
+}

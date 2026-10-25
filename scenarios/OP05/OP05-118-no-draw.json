@@ -1,0 +1,22 @@
+{
+  "name": "Kaido draws nothing when the opponent has 4 Life",
+  "rules": ["8-3-3"],
+  "setup": {
+    "p1": {
+      "hand": ["OP05-118"],
+      "don": {
+        "active": 10
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.hand": 0
+  }
+}

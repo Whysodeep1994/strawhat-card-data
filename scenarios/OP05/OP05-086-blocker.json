@@ -1,0 +1,45 @@
+{
+  "name": "Nefeltari Vivi gains [Blocker] with 10 cards in the trash",
+  "rules": ["10-1-4-1"],
+  "setup": {
+    "turnPlayer": "p2",
+    "p1": {
+      "characters": ["OP05-086"],
+      "trash": [
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER"
+      ]
+    },
+    "p2": {
+      "turnsTaken": 2
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p2",
+      "attacker": "p2.leader",
+      "target": "p1.leader"
+    },
+    {
+      "type": "block",
+      "player": "p1",
+      "blocker": "p1.characters.0"
+    },
+    {
+      "type": "pass",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "p1.life": 4
+  }
+}

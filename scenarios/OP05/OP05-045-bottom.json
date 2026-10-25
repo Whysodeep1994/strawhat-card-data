@@ -1,0 +1,35 @@
+{
+  "name": "Stainless places a cost 2 Character at the bottom of the owner's deck",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["OP05-045"],
+      "hand": ["TEST-FILLER"]
+    },
+    "p2": {
+      "characters": ["TEST-BLOCKER-2000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 0,
+    "p2.deck": 21
+  }
+}
