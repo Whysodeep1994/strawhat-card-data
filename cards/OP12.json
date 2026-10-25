@@ -1663,7 +1663,7 @@
         ],
         "steps": [
           {
-            "do": "activateEventFromHand",
+            "do": "activateEvent",
             "filter": {
               "type": "Straw Hat Crew",
               "baseCostAtMost": 3
@@ -2376,7 +2376,7 @@
         "conditions": [
           {
             "trashAtLeast": 4,
-            "filter": {
+            "trashFilter": {
               "category": "event"
             }
           }
@@ -2597,7 +2597,7 @@
         "conditions": [
           {
             "trashAtLeast": 4,
-            "filter": {
+            "trashFilter": {
               "category": "event"
             }
           }
@@ -2651,7 +2651,7 @@
         "conditions": [
           {
             "trashAtLeast": 4,
-            "filter": {
+            "trashFilter": {
               "category": "event"
             }
           }
@@ -2701,7 +2701,7 @@
         "conditions": [
           {
             "trashAtLeast": 4,
-            "filter": {
+            "trashFilter": {
               "category": "event"
             }
           }
