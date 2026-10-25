@@ -1,0 +1,35 @@
+{
+  "name": "Ryuma K.O.s a rested cost 4 Character when played",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "hand": ["OP15-036"],
+      "don": {
+        "active": 6
+      }
+    },
+    "p2": {
+      "characters": [
+        {
+          "card": "TEST-C4-4000",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 0
+  }
+}

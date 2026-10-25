@@ -1,0 +1,32 @@
+{
+  "name": "Chopper trashes himself to add a {Straw Hat Crew} Character from the trash",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "OP15-022",
+      "characters": ["OP15-085"],
+      "trash": ["OP15-089"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 1
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.trash.1"]
+    }
+  ],
+  "expect": {
+    "p1.hand.0.cardId": "OP15-089"
+  }
+}

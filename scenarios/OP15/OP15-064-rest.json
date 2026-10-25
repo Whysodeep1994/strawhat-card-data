@@ -1,0 +1,37 @@
+{
+  "name": "Kotori rests a 5000 power Character with [Satori] and [Hotori]",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["OP15-064", "OP15-066", "OP15-072"],
+      "don": {
+        "active": 2
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C5-5000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters.0.rested": true,
+    "p1.donDeck": 2
+  }
+}

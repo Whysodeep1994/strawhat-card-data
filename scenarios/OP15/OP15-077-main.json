@@ -1,0 +1,41 @@
+{
+  "name": "Lightning Dragon draws 1 and keeps a rested 6000 power Character rested",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "hand": ["OP15-077"],
+      "don": {
+        "active": 1
+      }
+    },
+    "p2": {
+      "characters": [
+        {
+          "card": "TEST-C6-6000",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "modifiers.0.status": "noRefresh"
+  }
+}

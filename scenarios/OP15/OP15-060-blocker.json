@@ -1,0 +1,31 @@
+{
+  "name": "Enel returns 1 DON!! to gain [Blocker], then trashes 1 card",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["OP15-060"],
+      "hand": ["TEST-FILLER"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 1
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.donDeck": 1,
+    "p1.trash": 1,
+    "modifiers.0.keyword": "blocker"
+  }
+}

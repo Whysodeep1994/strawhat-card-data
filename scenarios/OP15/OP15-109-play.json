@@ -1,0 +1,35 @@
+{
+  "name": "Nico Robin adds a Life card, adds a deck card to Life and plays a {Sky Island} Character",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "OP15-022",
+      "hand": ["OP15-109", "OP15-107"],
+      "don": {
+        "active": 7
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 2,
+    "p1.life": 4,
+    "p1.hand": 1
+  }
+}
