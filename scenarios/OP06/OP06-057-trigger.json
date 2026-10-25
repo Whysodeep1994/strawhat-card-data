@@ -1,0 +1,35 @@
+{
+  "name": "Its [Trigger] plays a cost 2 Character from hand",
+  "rules": ["10-1-5"],
+  "setup": {
+    "p2": {
+      "life": ["OP06-057", "TEST-FILLER"],
+      "hand": ["OP06-052"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.hand.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 1
+  }
+}

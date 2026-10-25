@@ -1,0 +1,31 @@
+{
+  "name": "Gravity Blade Raging Tiger bottoms 2 cost 6 Characters",
+  "rules": ["10-2-3"],
+  "setup": {
+    "p1": {
+      "hand": ["OP06-058"],
+      "don": {
+        "active": 7
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C6-6000", "TEST-C5-5000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0", "p2.characters.1"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 0,
+    "p2.deck": 22
+  }
+}

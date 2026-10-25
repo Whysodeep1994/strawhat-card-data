@@ -1,0 +1,39 @@
+{
+  "name": "Ratchet trashes 2 {FILM} cards to give the Leader +2000 for the battle",
+  "rules": ["10-2-16"],
+  "setup": {
+    "p1": {
+      "leader": "TEST-LEADER-6000"
+    },
+    "p2": {
+      "characters": ["OP06-014"],
+      "hand": ["OP06-005", "OP06-008"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.hand.0", "p2.hand.1"]
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.leader"]
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.trash": 2,
+    "p2.life": 4
+  }
+}

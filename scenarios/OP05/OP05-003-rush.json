@@ -1,0 +1,33 @@
+{
+  "name": "Inazuma gains [Rush] next to a 7000 power Character",
+  "rules": ["10-1-1"],
+  "setup": {
+    "p1": {
+      "hand": ["OP05-003"],
+      "don": {
+        "active": 3
+      },
+      "characters": ["OP05-007"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.1",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 4
+  }
+}

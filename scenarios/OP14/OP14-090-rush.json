@@ -1,0 +1,36 @@
+{
+  "name": "Mr.1 can attack Characters the turn he is played when there is a cost 8 Character",
+  "rules": ["10-1-1"],
+  "setup": {
+    "p1": {
+      "hand": ["OP14-090"],
+      "don": {
+        "active": 5
+      }
+    },
+    "p2": {
+      "characters": [
+        {
+          "card": "TEST-C8-8000",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.characters.0"
+    }
+  ],
+  "expect": {
+    "prompt.kind": "counter"
+  }
+}

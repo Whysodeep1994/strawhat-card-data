@@ -1,0 +1,42 @@
+{
+  "name": "Shirahoshi makes an opponent with 6 cards trash 1",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["OP05-082"],
+      "trash": ["TEST-FILLER", "TEST-FILLER"]
+    },
+    "p2": {
+      "hand": [
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER"
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.hand.0"]
+    }
+  ],
+  "expect": {
+    "p2.hand": 5,
+    "p1.trash": 0
+  }
+}

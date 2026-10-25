@@ -1,0 +1,39 @@
+{
+  "name": "Buffalo returns a DON!! to set itself active when rested by a Character's effect",
+  "rules": ["10-2-1"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "characters": ["OP14-070"],
+      "don": {
+        "active": 1
+      }
+    },
+    "p2": {
+      "characters": ["OP14-032"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p2",
+      "attacker": "p2.characters.0",
+      "target": "p1.leader"
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p1.characters.0"]
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.characters.0.rested": false,
+    "p1.donDeck": 1
+  }
+}

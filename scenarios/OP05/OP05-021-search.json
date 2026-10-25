@@ -1,0 +1,46 @@
+{
+  "name": "Revolutionary Army HQ trashes a card and finds Hack",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "stage": "OP05-021",
+      "hand": ["TEST-FILLER"],
+      "deck": [
+        "OP05-012",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER"
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.stage",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.0"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p1.trash": 1,
+    "p1.stage.rested": true
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "Cavendish with 2000 power can't attack the turn it is played",
+  "rules": ["10-1-1"],
+  "setup": {
+    "p1": {
+      "hand": ["OP14-004"],
+      "don": {
+        "active": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader",
+      "illegal": true
+    }
+  ],
+  "expect": {
+    "p1.characters.0.rested": false
+  }
+}

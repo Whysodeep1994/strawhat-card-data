@@ -1,0 +1,27 @@
+{
+  "name": "Buggy with a Roger Pirates Leader and a given DON!! adds a DON!! rested",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "leader": {
+        "card": "OP13-003",
+        "don": 1
+      },
+      "hand": ["OP13-072"],
+      "don": {
+        "active": 2,
+        "deck": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.donRested": 3
+  }
+}

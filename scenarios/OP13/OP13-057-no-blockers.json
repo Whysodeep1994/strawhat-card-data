@@ -1,0 +1,37 @@
+{
+  "name": "If I Bowed Down... with 1 Life stops [Blocker] when your Leader attacks",
+  "rules": ["10-2-3"],
+  "setup": {
+    "p1": {
+      "hand": ["OP13-057"],
+      "life": 1,
+      "don": {
+        "active": 2
+      }
+    },
+    "p2": {
+      "characters": ["TEST-BLOCKER-2000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    }
+  ],
+  "expect": {
+    "prompt.kind": "counter"
+  }
+}

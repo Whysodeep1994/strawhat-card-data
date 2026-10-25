@@ -1,0 +1,40 @@
+{
+  "name": "Law's swap does nothing with only 1 Supernovas Character",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "OP14-001",
+      "characters": ["OP14-008", "TEST-C9-10000"]
+    },
+    "p2": {
+      "characters": [
+        {
+          "card": "TEST-C6-6000",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 0
+    },
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.characters.0"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.characters": 1,
+    "modifiers": 0
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Enel's protection is negated while there is a Monkey.D.Luffy Character",
+  "rules": ["8-1-3-4"],
+  "setup": {
+    "p1": {
+      "characters": ["TEST-C9-10000", "OP05-119"]
+    },
+    "p2": {
+      "characters": [
+        {
+          "card": "OP05-100",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.characters.0"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.characters": 0,
+    "p2.life": 4
+  }
+}

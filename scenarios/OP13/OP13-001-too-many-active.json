@@ -1,0 +1,32 @@
+{
+  "name": "Luffy's effect needs 5 or less active DON!!",
+  "rules": ["8-3-2-1"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "leader": {
+        "card": "OP13-001",
+        "don": 1
+      },
+      "don": {
+        "active": 6
+      }
+    },
+    "p2": {
+      "leader": "TEST-LEADER-7000"
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p2",
+      "attacker": "p2.leader",
+      "target": "p1.leader"
+    }
+  ],
+  "expect": {
+    "p1.donActive": 6,
+    "prompt.kind": "counter"
+  }
+}

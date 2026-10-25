@@ -1,0 +1,39 @@
+{
+  "name": "Kouzuki Hiyori swaps a Life card for a card from hand",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP06-106", "TEST-C4-4000"],
+      "don": {
+        "active": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": false
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.life": 4,
+    "p1.hand": 1,
+    "p1.life.0.cardId": "TEST-C4-4000"
+  }
+}

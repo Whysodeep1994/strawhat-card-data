@@ -1,0 +1,25 @@
+{
+  "name": "Yamato with 3 Life draws 2, then gives your Leader 1 rested DON!!",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP13-054"],
+      "life": 3,
+      "don": {
+        "active": 5,
+        "rested": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.hand": 2,
+    "p1.leader.givenDon": 1
+  }
+}

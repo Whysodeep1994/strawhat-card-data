@@ -1,0 +1,27 @@
+{
+  "name": "Oars gains +7000 with a 10000 power [Gecko Moria]",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "characters": ["OP15-080", "OP14-104"]
+    },
+    "p2": {
+      "leader": "TEST-LEADER-7000"
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 3
+  }
+}

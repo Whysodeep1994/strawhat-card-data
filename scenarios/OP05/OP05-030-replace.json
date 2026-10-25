@@ -1,0 +1,44 @@
+{
+  "name": "Donquixote Rosinante is trashed instead of a rested Character being K.O.'d",
+  "rules": ["8-1-3-4"],
+  "setup": {
+    "p1": {
+      "characters": ["TEST-C7-7000"]
+    },
+    "p2": {
+      "characters": [
+        "OP05-030",
+        {
+          "card": "TEST-C4-4000",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.characters.1"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p2.characters": 1,
+    "p2.characters.0.cardId": "TEST-C4-4000",
+    "p2.trash": 1
+  }
+}

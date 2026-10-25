@@ -1,0 +1,32 @@
+{
+  "name": "Silvers Rayleigh K.O.s a 7000 base power Character with a multicolored Leader",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "leader": "OP14-041",
+      "hand": ["OP14-108"],
+      "don": {
+        "active": 6
+      }
+    },
+    "p2": {
+      "life": 3,
+      "characters": ["TEST-C7-7000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 0
+  }
+}

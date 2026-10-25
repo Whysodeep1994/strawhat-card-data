@@ -1,0 +1,28 @@
+{
+  "name": "Kikunojo sets itself active at the end of your turn",
+  "rules": ["10-2-3"],
+  "setup": {
+    "p1": {
+      "characters": ["OP14-023"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "endTurn",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "p1.characters.0.rested": false
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "Oars K.O.s a {Thriller Bark Pirates} Character to negate itself and attack",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["OP06-083", "OP06-087"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 1
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p1.characters": 1,
+    "p2.life": 3
+  }
+}

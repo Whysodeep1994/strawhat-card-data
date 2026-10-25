@@ -1,0 +1,50 @@
+{
+  "name": "Trebol adds a rested DON!! when a DON!! is returned on your opponent's turn",
+  "rules": ["10-2-1"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "leader": "OP14-060",
+      "characters": ["OP14-068", "OP14-062"],
+      "don": {
+        "active": 1,
+        "deck": 1
+      }
+    },
+    "p2": {
+      "hand": ["TEST-KO-EVENT"],
+      "characters": ["TEST-C6-6000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p2",
+      "card": "p2.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p1.characters.1"]
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "chooseOne",
+      "player": "p1",
+      "option": 0
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.donRested": 1
+  }
+}

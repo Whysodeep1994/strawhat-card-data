@@ -1,0 +1,29 @@
+{
+  "name": "Shanks adds a Roger Pirates card other than Shanks",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP13-065"],
+      "deck": ["OP13-065", "OP13-062", "TEST-FILLER", "TEST-FILLER", "TEST-FILLER", "TEST-FILLER"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.1"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p1.hand.0.cardId": "OP13-062"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Dalmatian draws 1 and places 1 at the bottom when K.O.'d",
+  "rules": ["10-2-17"],
+  "setup": {
+    "p1": {
+      "characters": ["TEST-C7-7000"]
+    },
+    "p2": {
+      "characters": [
+        {
+          "card": "OP05-046",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.characters.0"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.hand": 0,
+    "p2.deck": 20,
+    "p2.trash": 1
+  }
+}

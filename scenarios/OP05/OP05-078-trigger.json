@@ -1,0 +1,32 @@
+{
+  "name": "Punk Rotten's [Trigger] adds an active DON!!",
+  "rules": ["10-1-5"],
+  "setup": {
+    "p2": {
+      "don": {
+        "deck": 2
+      },
+      "life": ["OP05-078", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p2.donActive": 1
+  }
+}
