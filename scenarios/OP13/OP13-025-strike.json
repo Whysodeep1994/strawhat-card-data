@@ -1,0 +1,23 @@
+{
+  "name": "Koby with a <Strike> Leader sets 1 DON!! active",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "leader": "OP13-001",
+      "hand": ["OP13-025"],
+      "don": {
+        "active": 5
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.donActive": 1
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "Curly.Dadan alone deals 1 damage",
+  "rules": ["10-1-2-1"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "OP13-009",
+          "don": 3
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 3
+  }
+}

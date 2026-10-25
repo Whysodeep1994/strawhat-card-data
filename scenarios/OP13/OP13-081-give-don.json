@@ -1,0 +1,36 @@
+{
+  "name": "Koala places 1 trash card at the bottom of your deck to give 1 rested DON!!",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["OP13-081"],
+      "trash": ["TEST-FILLER"],
+      "don": {
+        "rested": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 1
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.leader"]
+    }
+  ],
+  "expect": {
+    "p1.leader.givenDon": 1,
+    "p1.trash": 0,
+    "p1.deck": 21
+  }
+}

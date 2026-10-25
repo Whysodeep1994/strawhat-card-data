@@ -1,0 +1,28 @@
+{
+  "name": "Ivankov doesn't replace a K.O. by your own effect",
+  "rules": ["8-1-3-4"],
+  "setup": {
+    "p1": {
+      "hand": ["OP13-013"],
+      "characters": [
+        "OP13-008",
+        {
+          "card": "OP13-005"
+        }
+      ],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.characters": 3
+  }
+}

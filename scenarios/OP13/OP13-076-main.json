@@ -1,0 +1,54 @@
+{
+  "name": "Divine Departure with a given DON!! gives −8000",
+  "rules": ["10-2-3"],
+  "setup": {
+    "p1": {
+      "leader": {
+        "card": "TEST-LEADER",
+        "don": 1
+      },
+      "hand": ["OP13-076"],
+      "don": {
+        "active": 5
+      }
+    },
+    "p2": {
+      "characters": [
+        {
+          "card": "TEST-C8-8000",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    },
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.characters.0"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.characters": 0
+  }
+}

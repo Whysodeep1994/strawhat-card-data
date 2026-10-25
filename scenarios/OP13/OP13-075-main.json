@@ -1,0 +1,33 @@
+{
+  "name": "Guess We'll Have Another Scrap... with a Roger Leader and a given DON!! adds a DON!!",
+  "rules": ["10-2-3"],
+  "setup": {
+    "p1": {
+      "leader": {
+        "card": "OP13-003",
+        "don": 1
+      },
+      "hand": ["OP13-075"],
+      "don": {
+        "active": 2,
+        "deck": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.donRested": 3,
+    "p1.donDeck": 0
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "Curly.Dadan has [Double Attack] with another Mountain Bandits Character",
+  "rules": ["10-1-2-1"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "OP13-009",
+          "don": 3
+        },
+        "OP13-013"
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 2
+  }
+}

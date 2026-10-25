@@ -1,0 +1,35 @@
+{
+  "name": "Saint Shalria adds a Celestial Dragons card, trashes the rest and 1 card from hand",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP13-086", "TEST-FILLER"],
+      "deck": ["OP13-085", "TEST-FILLER", "TEST-FILLER", "TEST-FILLER"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.0"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p1.trash": 3,
+    "p1.deck": 1
+  }
+}
