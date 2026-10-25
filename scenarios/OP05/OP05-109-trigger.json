@@ -1,0 +1,32 @@
+{
+  "name": "Pagaya draws 2 and trashes 2 when a [Trigger] activates",
+  "rules": ["10-1-5"],
+  "setup": {
+    "p2": {
+      "characters": ["OP05-109"],
+      "life": ["OP05-106", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p2.hand": 0,
+    "p2.trash": 2,
+    "p2.characters": 2
+  }
+}

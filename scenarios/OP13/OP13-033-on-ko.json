@@ -1,0 +1,40 @@
+{
+  "name": "Franky's [On K.O.] rests up to 2 of your opponent's cards",
+  "rules": ["10-2-17"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "characters": [
+        {
+          "card": "OP13-033",
+          "rested": true
+        }
+      ]
+    },
+    "p2": {
+      "characters": ["TEST-C9-10000", "TEST-C4-4000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p2",
+      "attacker": "p2.characters.0",
+      "target": "p1.characters.0"
+    },
+    {
+      "type": "pass",
+      "player": "p1"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.leader", "p2.characters.1"]
+    }
+  ],
+  "expect": {
+    "p2.leader.rested": true,
+    "p2.characters.1.rested": true
+  }
+}

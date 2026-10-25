@@ -1,0 +1,30 @@
+{
+  "name": "Uta sets 2 DON!! active, then you can't play base cost 5 or more Characters",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP13-023", "TEST-C5-5000"],
+      "don": {
+        "active": 4,
+        "rested": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0",
+      "illegal": true
+    }
+  ],
+  "expect": {
+    "p1.donActive": 2,
+    "legal.p1.playCard": 0
+  }
+}

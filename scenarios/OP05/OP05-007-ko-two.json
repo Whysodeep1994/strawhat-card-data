@@ -1,0 +1,30 @@
+{
+  "name": "Sabo K.O.s two Characters with 2000 total power",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP05-007"],
+      "don": {
+        "active": 6
+      }
+    },
+    "p2": {
+      "characters": ["TEST-FILLER", "TEST-FILLER", "TEST-C4-4000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0", "p2.characters.1"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 1
+  }
+}

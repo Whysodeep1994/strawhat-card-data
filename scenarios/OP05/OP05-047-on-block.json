@@ -1,0 +1,30 @@
+{
+  "name": "Basil Hawkins draws 1 and survives with +1000 when blocking",
+  "rules": ["10-2-15"],
+  "setup": {
+    "p2": {
+      "characters": ["OP05-047"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "block",
+      "player": "p2",
+      "blocker": "p2.characters.0"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.hand": 1,
+    "p2.characters": 1
+  }
+}

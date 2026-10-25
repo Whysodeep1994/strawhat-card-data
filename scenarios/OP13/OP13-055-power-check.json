@@ -1,0 +1,32 @@
+{
+  "name": "Rakuyo's +1000 lets a 4000 Whitebeard Character K.O. a 5000 one",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": ["OP13-055"]
+    },
+    "p2": {
+      "characters": [
+        {
+          "card": "TEST-C5-5000",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.characters.0"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.characters": 0
+  }
+}

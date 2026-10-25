@@ -1,0 +1,36 @@
+{
+  "name": "Lindbergh's [Trigger] does nothing without a multicolored Leader",
+  "rules": ["10-1-5"],
+  "setup": {
+    "p2": {
+      "hand": ["TEST-FILLER"],
+      "life": ["OP05-017", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p2.characters": 0,
+    "p2.hand": 0
+  }
+}

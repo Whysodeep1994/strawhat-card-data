@@ -1,0 +1,46 @@
+{
+  "name": "Gol.D.Roger's DON!! −3 gives your Leader +2000 and opponent's Characters −2000",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP13-064"],
+      "don": {
+        "active": 10
+      }
+    },
+    "p2": {
+      "characters": [
+        {
+          "card": "TEST-C6-6000",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.characters.0"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p1.donActive": 0,
+    "p2.characters": 0
+  }
+}

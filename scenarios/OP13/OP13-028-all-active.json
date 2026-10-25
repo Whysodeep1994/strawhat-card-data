@@ -1,0 +1,23 @@
+{
+  "name": "Shanks sets all DON!! active, then you can't play cards from your hand",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP13-028", "TEST-FILLER"],
+      "don": {
+        "active": 10
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.donActive": 10,
+    "legal.p1.playCard": 0
+  }
+}

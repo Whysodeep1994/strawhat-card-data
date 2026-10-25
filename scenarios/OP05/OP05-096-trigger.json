@@ -1,0 +1,43 @@
+{
+  "name": "I Bid 500 Million!!'s [Trigger] returns a cost 6 Character to hand",
+  "rules": ["10-1-5"],
+  "setup": {
+    "p1": {
+      "characters": ["TEST-C6-6000"]
+    },
+    "p2": {
+      "life": ["OP05-096", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    },
+    {
+      "type": "chooseOne",
+      "player": "p2",
+      "option": 1
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p1.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 0,
+    "p1.hand": 1
+  }
+}

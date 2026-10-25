@@ -1,0 +1,38 @@
+{
+  "name": "Riku Doldo III gives Viola +2000",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP05-090"],
+      "don": {
+        "active": 4
+      },
+      "characters": ["OP05-079"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.0"]
+    },
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 3
+  }
+}

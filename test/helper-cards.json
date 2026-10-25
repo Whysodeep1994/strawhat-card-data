@@ -181,6 +181,42 @@
     "types": ["Egghead"]
   },
   {
+    "id": "TEST-HANCOCK",
+    "name": "Boa Hancock",
+    "category": "leader",
+    "colors": ["blue"],
+    "life": 5,
+    "power": 5000,
+    "types": ["Kuja Pirates"]
+  },
+  {
+    "id": "TEST-FILM-LEADER",
+    "name": "Test FILM Leader",
+    "category": "leader",
+    "colors": ["green"],
+    "life": 5,
+    "power": 5000,
+    "types": ["FILM"],
+    "attribute": "Slash"
+  },
+  {
+    "id": "TEST-HOMIE",
+    "name": "Test Homie",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 1,
+    "power": 3000,
+    "types": ["Homies"]
+  },
+  {
+    "id": "TEST-MARY-GEOISE",
+    "name": "Test Mary Geoise",
+    "category": "stage",
+    "colors": ["black"],
+    "cost": 1,
+    "types": ["Mary Geoise"]
+  },
+  {
     "id": "TEST-BOUNCE-EVENT",
     "name": "Test Bounce Event",
     "category": "event",

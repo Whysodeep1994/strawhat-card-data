@@ -1,0 +1,22 @@
+{
+  "name": "Sanji with a Straw Hat Leader sets 1 DON!! active at the end of your turn",
+  "rules": ["10-2-7"],
+  "setup": {
+    "p1": {
+      "leader": "OP13-001",
+      "characters": ["OP13-027"],
+      "don": {
+        "rested": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "endTurn",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "p1.donActive": 1
+  }
+}

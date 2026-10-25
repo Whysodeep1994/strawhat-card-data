@@ -1,0 +1,40 @@
+{
+  "name": "Buffalo sets a rested cost 1 Character active",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": [
+        "OP05-031",
+        {
+          "card": "TEST-FILLER",
+          "rested": true
+        },
+        {
+          "card": "TEST-FILLER",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.1"]
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p1.characters.1.rested": false,
+    "p1.characters.2.rested": true
+  }
+}
