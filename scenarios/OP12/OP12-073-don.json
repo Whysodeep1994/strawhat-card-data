@@ -1,0 +1,29 @@
+{
+  "name": "Trafalgar Law adds an active DON!!, then {Heart Pirates} Characters gain +1000",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP12-073"],
+      "don": {
+        "active": 7,
+        "deck": 3
+      }
+    },
+    "p2": {
+      "don": {
+        "active": 7
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.donActive": 1,
+    "p1.characters.0.power": 9000
+  }
+}

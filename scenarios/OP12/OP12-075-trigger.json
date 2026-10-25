@@ -1,0 +1,34 @@
+{
+  "name": "Ms. All Sunday's [Trigger] uses DON!! −1 to play her",
+  "rules": ["10-1-5"],
+  "setup": {
+    "p1": {},
+    "p2": {
+      "don": {
+        "active": 1
+      },
+      "life": ["OP12-075", "TEST-FILLER", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p2.characters": 1,
+    "p2.donActive": 0
+  }
+}

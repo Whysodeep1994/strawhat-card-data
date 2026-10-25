@@ -1,0 +1,33 @@
+{
+  "name": "Crocodile uses DON!! −1 to give +2000 with a {Baroque Works} Leader",
+  "rules": ["10-2-16"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "leader": "TEST-LEADER-BAROQUE",
+      "characters": ["OP12-069"],
+      "don": {
+        "active": 1
+      }
+    },
+    "p2": {}
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p2",
+      "attacker": "p2.leader",
+      "target": "p1.leader"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.leader"]
+    }
+  ],
+  "expect": {
+    "p1.leader.power": 7000,
+    "p1.donActive": 0
+  }
+}

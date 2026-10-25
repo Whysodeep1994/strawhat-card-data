@@ -1,0 +1,34 @@
+{
+  "name": "To Never Doubt gives [Silvers Rayleigh] +2000 as a counter",
+  "rules": ["10-2-4"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "leader": "OP12-001",
+      "hand": ["OP12-016"]
+    },
+    "p2": {}
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p2",
+      "attacker": "p2.leader",
+      "target": "p1.leader"
+    },
+    {
+      "type": "counterEvent",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.leader"]
+    }
+  ],
+  "expect": {
+    "p1.leader.power": 7000
+  }
+}

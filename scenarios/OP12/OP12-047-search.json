@@ -1,0 +1,40 @@
+{
+  "name": "Sengoku trashes a card to add 2 {Navy} cards other than [Sengoku]",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP12-047", "TEST-FILLER"],
+      "don": {
+        "active": 3
+      },
+      "deck": ["OP12-047", "OP12-045", "OP12-052", "TEST-FILLER", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.0", "p1.deck.1"],
+      "illegal": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.1", "p1.deck.2"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 2,
+    "p1.hand.0.cardId": "OP12-045"
+  }
+}

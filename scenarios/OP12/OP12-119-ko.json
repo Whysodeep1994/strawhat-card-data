@@ -1,0 +1,29 @@
+{
+  "name": "Bartholomew Kuma adds a deck card to Life when K.O.'d on the opponent's turn",
+  "rules": ["8-1-3-4"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "characters": ["OP12-119"]
+    },
+    "p2": {
+      "hand": ["TEST-KO-EVENT"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p2",
+      "card": "p2.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p1.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.life": 5
+  }
+}

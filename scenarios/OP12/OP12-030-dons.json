@@ -1,0 +1,29 @@
+{
+  "name": "Dracule Mihawk sets 4 DON!! active, then cost 7+ Characters can't be played",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP12-030", "TEST-C7-7000"],
+      "don": {
+        "active": 8
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0",
+      "illegal": true
+    }
+  ],
+  "expect": {
+    "p1.donActive": 4,
+    "p1.characters": 1
+  }
+}

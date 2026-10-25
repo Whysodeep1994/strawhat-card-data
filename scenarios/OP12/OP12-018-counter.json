@@ -1,0 +1,44 @@
+{
+  "name": "Color of the Supreme King Haki gives +2000, then rests a DON!! to give the opponent −1000",
+  "rules": ["10-2-4"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "leader": "OP12-001",
+      "hand": ["OP12-018"],
+      "don": {
+        "active": 1
+      }
+    },
+    "p2": {}
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p2",
+      "attacker": "p2.leader",
+      "target": "p1.leader"
+    },
+    {
+      "type": "counterEvent",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.leader"]
+    },
+    {
+      "type": "chooseOne",
+      "player": "p1",
+      "option": 1
+    }
+  ],
+  "expect": {
+    "p1.leader.power": 7000,
+    "p2.leader.power": 4000,
+    "p1.donRested": 1
+  }
+}

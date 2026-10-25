@@ -1,0 +1,30 @@
+{
+  "name": "Donquixote Rosinante makes the next [Trafalgar Law] cost 2 less",
+  "rules": ["6-5-3-1"],
+  "setup": {
+    "p1": {
+      "leader": "OP12-061",
+      "hand": ["OP12-106"],
+      "don": {
+        "active": 5
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 1
+    },
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.characters": 1,
+    "p1.donActive": 0
+  }
+}

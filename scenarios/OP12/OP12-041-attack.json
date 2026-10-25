@@ -1,0 +1,24 @@
+{
+  "name": "Sanji adds a rested DON!! when attacking with no more DON!! than the opponent",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "leader": "OP12-041",
+      "don": {
+        "deck": 5
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    }
+  ],
+  "expect": {
+    "p1.donRested": 1,
+    "p1.donDeck": 4
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Sanji uses DON!! −1 to activate a {Straw Hat Crew} Event from the hand",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "OP12-041",
+      "hand": ["OP12-059"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 0
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p1.trash.0.cardId": "OP12-059",
+    "p1.donActive": 0
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Kouzuki Oden reveals 2 Events for +2000 power",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["OP12-004"],
+      "hand": ["TEST-KO-EVENT", "TEST-BOUNCE-EVENT"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.characters.0.power": 5000
+  }
+}

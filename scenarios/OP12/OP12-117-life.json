@@ -1,0 +1,43 @@
+{
+  "name": "Slam Gibson rests 5 DON!! to add a Character to its owner's Life",
+  "rules": ["10-2-3"],
+  "setup": {
+    "p1": {
+      "leader": "TEST-LEADER-SUPERNOVAS",
+      "hand": ["OP12-117"],
+      "don": {
+        "active": 6
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C9-10000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": false
+    }
+  ],
+  "expect": {
+    "p2.characters": 0,
+    "p2.life": 5,
+    "p2.life.0.cardId": "TEST-C9-10000"
+  }
+}
