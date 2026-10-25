@@ -1,0 +1,40 @@
+{
+  "name": "Octoballoon's [Trigger] draws 1 and plays a yellow cost 2 Character",
+  "rules": ["10-1-5"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "hand": ["OP15-108"],
+      "life": ["OP15-106", "TEST-FILLER"]
+    },
+    "p2": {
+      "leader": "TEST-LEADER-7000"
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p2",
+      "attacker": "p2.leader",
+      "target": "p1.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p1"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 1
+  }
+}

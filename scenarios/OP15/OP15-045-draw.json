@@ -1,0 +1,28 @@
+{
+  "name": "Sai trashes an Event to draw 2",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "hand": ["OP15-045", "OP15-019"],
+      "don": {
+        "active": 5
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.hand": 2,
+    "p1.trash": 1
+  }
+}

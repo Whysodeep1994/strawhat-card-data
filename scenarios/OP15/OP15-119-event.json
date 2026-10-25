@@ -1,0 +1,30 @@
+{
+  "name": "Luffy gains +1000 per cost of the top Life card when your opponent activates an Event",
+  "rules": ["10-2-2"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "characters": ["OP15-119"],
+      "life": ["TEST-C5-5000", "TEST-FILLER"]
+    },
+    "p2": {
+      "hand": ["TEST-KO-EVENT"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p2",
+      "card": "p2.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": []
+    }
+  ],
+  "expect": {
+    "modifiers.0.power": 5000
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "Swallow Bond en Avant rests a DON!! to trash 5",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "OP15-022",
+      "hand": ["OP15-096"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.trash": 6
+  }
+}

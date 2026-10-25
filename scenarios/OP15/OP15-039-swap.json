@@ -1,0 +1,39 @@
+{
+  "name": "Rebecca rests and returns a {Dressrosa} Character to play a cost 3 {Dressrosa} Character",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "OP15-039",
+      "characters": ["OP15-040"],
+      "hand": ["OP15-042"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 1
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": false
+    }
+  ],
+  "expect": {
+    "p1.characters.0.cardId": "OP15-042",
+    "p1.leader.rested": true,
+    "p1.hand": 1
+  }
+}

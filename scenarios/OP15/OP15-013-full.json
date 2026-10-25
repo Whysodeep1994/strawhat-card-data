@@ -1,0 +1,23 @@
+{
+  "name": "Pincers costs 4 when your Leader has power",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "hand": ["OP15-013"],
+      "don": {
+        "active": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0",
+      "illegal": true
+    }
+  ],
+  "expect": {
+    "p1.characters": 0
+  }
+}

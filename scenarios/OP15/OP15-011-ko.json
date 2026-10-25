@@ -1,0 +1,37 @@
+{
+  "name": "Pearl K.O.s a 6000 base power Character when K.O.'d",
+  "rules": ["10-2-17"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "leader": "OP15-001",
+      "characters": ["OP15-011"]
+    },
+    "p2": {
+      "characters": ["TEST-C6-6000"],
+      "hand": ["TEST-KO-EVENT"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p2",
+      "card": "p2.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p1.characters.0"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 0,
+    "p2.characters": 0
+  }
+}

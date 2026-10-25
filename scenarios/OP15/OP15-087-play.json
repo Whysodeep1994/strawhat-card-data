@@ -1,0 +1,23 @@
+{
+  "name": "Nico Robin draws 2 and trashes 2",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "hand": ["OP15-087"],
+      "don": {
+        "active": 5
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.hand": 0,
+    "p1.trash": 2
+  }
+}

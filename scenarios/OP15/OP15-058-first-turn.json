@@ -1,0 +1,25 @@
+{
+  "name": "Enel does nothing on your first turn",
+  "rules": ["10-2-2"],
+  "setup": {
+    "turn": 1,
+    "p1": {
+      "leader": "OP15-058",
+      "characters": ["TEST-FILLER"],
+      "don": {
+        "deck": 6
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 1
+    }
+  ],
+  "expect": {
+    "p1.donDeck": 6
+  }
+}

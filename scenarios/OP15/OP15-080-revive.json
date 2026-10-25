@@ -1,0 +1,36 @@
+{
+  "name": "Oars places 3 trash cards at the bottom of the deck to come back when K.O.'d",
+  "rules": ["10-2-17"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "characters": ["OP15-080"],
+      "trash": ["TEST-FILLER", "TEST-FILLER", "TEST-FILLER"]
+    },
+    "p2": {
+      "hand": ["TEST-KO-EVENT"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p2",
+      "card": "p2.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p1.characters.0"]
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.characters": 1,
+    "p1.trash": 0
+  }
+}

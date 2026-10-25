@@ -1,0 +1,28 @@
+{
+  "name": "Nezumi gives 1 rested DON!! to your Leader",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["OP15-010"],
+      "don": {
+        "rested": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.leader"]
+    }
+  ],
+  "expect": {
+    "p1.leader.givenDon": 1
+  }
+}
