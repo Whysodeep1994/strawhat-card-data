@@ -1,0 +1,50 @@
+{
+  "name": "Vivi draws 1 and gives a Character Rush",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "OP04-001",
+      "characters": [
+        {
+          "card": "OP04-015",
+          "playedThisTurn": true
+        }
+      ],
+      "don": {
+        "active": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 1
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.0"]
+    },
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p2.life": 3
+  }
+}

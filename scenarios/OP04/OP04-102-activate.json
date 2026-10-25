@@ -1,0 +1,40 @@
+{
+  "name": "Kin'emon adds a Life card to his hand to set himself active",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "OP04-102",
+          "rested": true
+        }
+      ],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": false
+    }
+  ],
+  "expect": {
+    "p1.characters.0.rested": false,
+    "p1.life": 3,
+    "p1.hand": 1
+  }
+}

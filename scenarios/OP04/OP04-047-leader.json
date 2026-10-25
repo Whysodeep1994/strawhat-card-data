@@ -1,0 +1,33 @@
+{
+  "name": "Ice Oni attacking the Leader moves no Character",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "OP04-047",
+          "don": 5
+        }
+      ]
+    },
+    "p2": {
+      "characters": ["TEST-C5-5000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.characters": 1,
+    "p2.life": 3
+  }
+}

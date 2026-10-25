@@ -1,0 +1,32 @@
+{
+  "name": "Rosinante rests to play a green cost 5 Character",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP04-119", "OP04-028"],
+      "don": {
+        "active": 8
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 2
+  }
+}

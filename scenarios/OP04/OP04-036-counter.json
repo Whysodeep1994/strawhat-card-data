@@ -1,0 +1,37 @@
+{
+  "name": "Donquixote Family finds a Donquixote Pirates card",
+  "rules": ["10-2-4"],
+  "setup": {
+    "p1": {
+      "characters": ["TEST-C5-5000"]
+    },
+    "p2": {
+      "hand": ["OP04-036"],
+      "deck": ["TEST-FILLER", "OP04-029"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "counterEvent",
+      "player": "p2",
+      "card": "p2.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.deck.1"]
+    }
+  ],
+  "expect": {
+    "p2.hand.0.cardId": "OP04-029"
+  }
+}

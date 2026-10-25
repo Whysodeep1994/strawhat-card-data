@@ -1,0 +1,31 @@
+{
+  "name": "Tonoyasu trashes himself to give +3000",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["OP04-109", "OP04-102"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.0"]
+    }
+  ],
+  "expect": {
+    "power.p1.characters.0": 9000,
+    "p1.trash": 1
+  }
+}

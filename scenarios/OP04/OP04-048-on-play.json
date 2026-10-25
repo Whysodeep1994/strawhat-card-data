@@ -1,0 +1,23 @@
+{
+  "name": "Sasaki shuffles your hand into the deck and draws the same number",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP04-048", "TEST-FILLER", "TEST-FILLER"],
+      "don": {
+        "active": 3
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.hand": 2,
+    "p1.deck": 20
+  }
+}

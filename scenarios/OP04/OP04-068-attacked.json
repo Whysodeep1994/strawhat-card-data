@@ -1,0 +1,36 @@
+{
+  "name": "Yokozuna returns a DON!! to return a cost 2 Character",
+  "rules": ["10-2-16"],
+  "setup": {
+    "p1": {
+      "characters": ["TEST-BLOCKER-2000"]
+    },
+    "p2": {
+      "characters": ["OP04-068"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p1.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 1
+  }
+}
