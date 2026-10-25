@@ -1,0 +1,31 @@
+{
+  "name": "Charlotte Smoothie rests 2 DON!! to add Life, then your opponent trashes a card",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP17-106"],
+      "don": {
+        "active": 7
+      }
+    },
+    "p2": {
+      "hand": ["TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.life": 5,
+    "p2.hand": 0
+  }
+}

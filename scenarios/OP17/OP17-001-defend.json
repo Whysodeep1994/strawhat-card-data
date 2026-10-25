@@ -1,0 +1,41 @@
+{
+  "name": "Edward.Newgate trashes a card to give your Leader +4000 against an attack",
+  "rules": ["10-2-16"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "leader": "OP17-001",
+      "hand": ["TEST-FILLER"]
+    },
+    "p2": {
+      "characters": ["TEST-C6-6000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p2",
+      "attacker": "p2.characters.0",
+      "target": "p1.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.leader"]
+    },
+    {
+      "type": "pass",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "p1.life": 4,
+    "p1.trash": 1
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "Monkey.D.Luffy has [Rush] while there is a cost 12 Character",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "hand": ["OP17-093"],
+      "characters": ["OP17-085"],
+      "don": {
+        "active": 8
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.1",
+      "target": "p2.leader"
+    }
+  ],
+  "expect": {
+    "prompt.kind": "counter"
+  }
+}

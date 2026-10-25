@@ -1,0 +1,23 @@
+{
+  "name": "Monkey.D.Luffy sets a DON!! active with 5 or fewer cards in hand",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["OP17-030"],
+      "don": {
+        "rested": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 1
+    }
+  ],
+  "expect": {
+    "p1.donActive": 1
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Building Snake gives a rested DON!! to your [Shanks] Leader",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "OP17-020",
+      "characters": ["OP17-025"],
+      "don": {
+        "rested": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 1
+    }
+  ],
+  "expect": {
+    "p1.leader.givenDon": 1
+  }
+}

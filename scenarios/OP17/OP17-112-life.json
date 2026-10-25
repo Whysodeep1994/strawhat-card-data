@@ -1,0 +1,28 @@
+{
+  "name": "Charlotte Linlin draws 1 and adds the top card of your deck to Life",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP17-112"],
+      "don": {
+        "active": 10
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "chooseOne",
+      "player": "p1",
+      "option": 0
+    }
+  ],
+  "expect": {
+    "p1.life": 5,
+    "p1.hand": 1
+  }
+}

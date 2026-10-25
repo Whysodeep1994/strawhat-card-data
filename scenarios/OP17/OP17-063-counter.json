@@ -1,0 +1,36 @@
+{
+  "name": "Kaido gives Character cards without a Counter a +1000 Counter",
+  "rules": ["10-2-1"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "characters": ["OP17-063"],
+      "hand": ["OP17-064"]
+    },
+    "p2": {
+      "characters": ["TEST-C5-5000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p2",
+      "attacker": "p2.characters.0",
+      "target": "p1.leader"
+    },
+    {
+      "type": "counter",
+      "player": "p1",
+      "card": "p1.hand.0",
+      "target": "p1.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "p1.life": 4
+  }
+}

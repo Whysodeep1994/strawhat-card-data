@@ -1,0 +1,35 @@
+{
+  "name": "Charlotte Mont-d'or reveals 2 [Trigger] cards to K.O. up to 2 cost 1 Characters",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP17-111", "OP17-107", "OP17-108"],
+      "don": {
+        "active": 3
+      }
+    },
+    "p2": {
+      "characters": ["TEST-FILLER", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0", "p2.characters.1"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 0
+  }
+}

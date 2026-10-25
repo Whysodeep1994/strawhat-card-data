@@ -1,0 +1,32 @@
+{
+  "name": "Charlotte Katakuri adds Life with a {Big Mom Pirates} Leader, then gives −3000",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "leader": "OP17-099",
+      "hand": ["OP17-103"],
+      "don": {
+        "active": 6
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C5-5000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.life": 5,
+    "modifiers.0.power": -3000
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Benn.Beckman draws 1 and rests 2 Characters with a {Red-Haired Pirates} Leader",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "leader": "OP17-020",
+      "hand": ["OP17-027"],
+      "don": {
+        "active": 7
+      }
+    },
+    "p2": {
+      "characters": ["TEST-FILLER", "TEST-C5-5000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0", "p2.characters.1"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p2.characters.1.rested": true
+  }
+}

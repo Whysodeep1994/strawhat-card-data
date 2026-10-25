@@ -1,0 +1,36 @@
+{
+  "name": "Charlotte Katakuri's [Trigger] plays the card, and its [Your Turn] effect doesn't happen",
+  "rules": ["10-1-5"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "leader": "OP17-099",
+      "life": ["OP17-103", "TEST-FILLER"]
+    },
+    "p2": {
+      "leader": "TEST-LEADER-7000"
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p2",
+      "attacker": "p2.leader",
+      "target": "p1.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p1"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.characters": 1,
+    "p1.life": 1
+  }
+}

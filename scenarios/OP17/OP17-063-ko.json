@@ -1,0 +1,41 @@
+{
+  "name": "Kaido returns a DON!! to negate and K.O. a cost 6 Character on the turn he is played",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "OP17-063",
+          "playedThisTurn": true
+        }
+      ],
+      "don": {
+        "active": 1
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C6-6000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 1
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 0
+  }
+}

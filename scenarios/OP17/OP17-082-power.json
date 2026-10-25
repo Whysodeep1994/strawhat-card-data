@@ -1,0 +1,24 @@
+{
+  "name": "Sanji has +3000 while there is a cost 12 Character",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "characters": ["OP17-082", "OP17-085"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 3
+  }
+}

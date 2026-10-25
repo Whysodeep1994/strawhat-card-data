@@ -1,0 +1,30 @@
+{
+  "name": "X.Drake returns 2 DON!! to make your opponent trash a card",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP17-075"],
+      "don": {
+        "active": 4
+      }
+    },
+    "p2": {
+      "hand": ["TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p2.hand": 0
+  }
+}

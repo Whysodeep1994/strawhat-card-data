@@ -1,0 +1,46 @@
+{
+  "name": "Caribou's [Trigger] trashes a card to K.O. a cost 5 Character",
+  "rules": ["10-1-5"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "hand": ["TEST-FILLER"],
+      "life": ["OP17-101", "TEST-FILLER"]
+    },
+    "p2": {
+      "characters": ["TEST-C5-5000"],
+      "leader": "TEST-LEADER-7000"
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p2",
+      "attacker": "p2.leader",
+      "target": "p1.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p1"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 0
+  }
+}

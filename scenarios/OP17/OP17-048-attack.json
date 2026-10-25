@@ -1,0 +1,34 @@
+{
+  "name": "Shiki trashes a {Rocks Pirates} card to give −3000 when attacking",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": ["OP17-048"],
+      "hand": ["OP17-050"]
+    },
+    "p2": {
+      "characters": ["TEST-C5-5000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "modifiers.0.power": -3000
+  }
+}
