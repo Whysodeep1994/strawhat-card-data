@@ -1,0 +1,38 @@
+{
+  "name": "Kanjuro K.O.s a rested cost 2 Character",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "OP01-038",
+          "don": 1
+        }
+      ]
+    },
+    "p2": {
+      "characters": [
+        {
+          "card": "OP01-012",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 0
+  }
+}

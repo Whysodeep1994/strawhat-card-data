@@ -1,0 +1,35 @@
+{
+  "name": "Whitebeard Pirates' Trigger searches too",
+  "rules": ["10-1-5"],
+  "setup": {
+    "p2": {
+      "deck": ["OP02-003"],
+      "life": ["OP02-022"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.deck.0"]
+    }
+  ],
+  "expect": {
+    "p2.hand.0.cardId": "OP02-003"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "Lim K.O.'d on the opponent's turn gives −2000",
+  "rules": ["10-2-17"],
+  "setup": {
+    "p1": {
+      "characters": ["TEST-C5-5000"]
+    },
+    "p2": {
+      "characters": [
+        {
+          "card": "OP03-015",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.characters.0"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p1.leader"]
+    }
+  ],
+  "expect": {
+    "power.p1.leader": 3000
+  }
+}

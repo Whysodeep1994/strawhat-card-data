@@ -1,0 +1,33 @@
+{
+  "name": "Magellan makes the opponent return a DON!!",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP02-085"],
+      "don": {
+        "active": 6
+      }
+    },
+    "p2": {
+      "don": {
+        "active": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p2.donActive": 1,
+    "p2.donDeck": 1
+  }
+}

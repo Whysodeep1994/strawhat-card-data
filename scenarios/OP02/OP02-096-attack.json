@@ -1,0 +1,28 @@
+{
+  "name": "Kuzan gives −4 cost",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": ["OP02-096"]
+    },
+    "p2": {
+      "characters": ["TEST-C6-6000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "cost.p2.characters.0": 2
+  }
+}

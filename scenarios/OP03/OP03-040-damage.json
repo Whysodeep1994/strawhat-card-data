@@ -1,0 +1,33 @@
+{
+  "name": "Nami trashes the top card when her attack deals damage",
+  "rules": ["attackDealsDamage"],
+  "setup": {
+    "p1": {
+      "leader": {
+        "card": "OP03-040",
+        "don": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.trash": 1,
+    "p1.deck": 19
+  }
+}

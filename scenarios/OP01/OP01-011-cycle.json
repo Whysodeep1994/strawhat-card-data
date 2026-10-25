@@ -1,0 +1,30 @@
+{
+  "name": "Gordon places a card at the bottom of the deck to draw",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP01-011", "OP01-010"],
+      "deck": ["OP01-012", "TEST-FILLER"],
+      "don": {
+        "active": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p1.hand.0.cardId": "OP01-012",
+    "p1.deck.1.cardId": "OP01-010"
+  }
+}
