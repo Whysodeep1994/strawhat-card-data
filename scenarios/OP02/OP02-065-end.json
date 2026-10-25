@@ -1,0 +1,30 @@
+{
+  "name": "Mr.3 trashes a card to set itself active at the end of the turn",
+  "rules": ["10-2-7"],
+  "setup": {
+    "p1": {
+      "hand": ["TEST-FILLER"],
+      "characters": [
+        {
+          "card": "OP02-065",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "endTurn",
+      "player": "p1"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.characters.0.rested": false,
+    "p1.trash": 1
+  }
+}

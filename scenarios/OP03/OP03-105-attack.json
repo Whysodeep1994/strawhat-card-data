@@ -1,0 +1,31 @@
+{
+  "name": "Oven trashes a Trigger card to gain +3000",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "hand": ["OP03-116"],
+      "characters": [
+        {
+          "card": "OP03-105",
+          "don": 1
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "power.p1.characters.0": 8000
+  }
+}

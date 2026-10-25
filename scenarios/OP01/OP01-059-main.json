@@ -1,0 +1,39 @@
+{
+  "name": "BE-BENG!! sets a Land of Wano Character active",
+  "rules": ["10-2-3"],
+  "setup": {
+    "p1": {
+      "hand": ["OP01-059", "OP01-036"],
+      "characters": [
+        {
+          "card": "OP01-033",
+          "rested": true
+        }
+      ],
+      "don": {
+        "active": 3
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters.0.rested": false,
+    "p1.trash": 2
+  }
+}

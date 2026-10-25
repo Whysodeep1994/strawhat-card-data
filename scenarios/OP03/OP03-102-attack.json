@@ -1,0 +1,37 @@
+{
+  "name": "Sanji takes a Life card to add the top card of the deck to Life",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "OP03-102",
+          "don": 2
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": false
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p1.life": 4,
+    "p1.deck": 19
+  }
+}

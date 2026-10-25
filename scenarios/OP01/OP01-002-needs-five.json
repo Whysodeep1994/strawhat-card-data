@@ -1,0 +1,27 @@
+{
+  "name": "Law does nothing with fewer than 5 Characters",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "OP01-002",
+      "hand": ["OP01-076"],
+      "characters": ["OP01-036"],
+      "don": {
+        "active": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 0
+    }
+  ],
+  "expect": {
+    "p1.characters": 1,
+    "p1.hand": 1,
+    "p1.donRested": 2
+  }
+}

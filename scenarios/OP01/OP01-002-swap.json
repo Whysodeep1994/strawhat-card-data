@@ -1,0 +1,37 @@
+{
+  "name": "Law returns a Character and plays one of a different color",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "OP01-002",
+      "hand": ["OP01-076", "OP01-023"],
+      "characters": ["OP01-036", "TEST-FILLER", "TEST-FILLER", "TEST-FILLER", "TEST-FILLER"],
+      "don": {
+        "active": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 0
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.0"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 5,
+    "p1.characters.4.cardId": "OP01-076",
+    "p1.hand": 2
+  }
+}

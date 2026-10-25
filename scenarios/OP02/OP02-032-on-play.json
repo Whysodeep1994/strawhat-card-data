@@ -1,0 +1,38 @@
+{
+  "name": "Shishilian sets a Minks Character active",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP02-032"],
+      "characters": [
+        {
+          "card": "OP02-029",
+          "rested": true
+        }
+      ],
+      "don": {
+        "active": 4
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters.0.rested": false
+  }
+}

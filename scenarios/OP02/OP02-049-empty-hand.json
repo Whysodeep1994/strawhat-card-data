@@ -1,0 +1,18 @@
+{
+  "name": "Ivankov draws 2 with an empty hand at the end of the turn",
+  "rules": ["10-2-7"],
+  "setup": {
+    "p1": {
+      "leader": "OP02-049"
+    }
+  },
+  "actions": [
+    {
+      "type": "endTurn",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "p1.hand": 2
+  }
+}
