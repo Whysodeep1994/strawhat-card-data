@@ -1,0 +1,36 @@
+{
+  "name": "Jinbe trashes 1 card to give 2 rested DON!! to a Fish-Man Character",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "OP14-040",
+      "characters": ["OP14-055"],
+      "hand": ["TEST-FILLER"],
+      "don": {
+        "rested": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters.0.givenDon": 2,
+    "p1.trash": 1
+  }
+}

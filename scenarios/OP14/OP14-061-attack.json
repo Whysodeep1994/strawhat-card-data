@@ -1,0 +1,36 @@
+{
+  "name": "Vergo returns a DON!! to give −2000 when attacking",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["OP14-061"],
+      "don": {
+        "active": 1
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C4-4000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "modifiers.0.power": -2000
+  }
+}

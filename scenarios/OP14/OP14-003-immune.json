@@ -1,0 +1,37 @@
+{
+  "name": "Capone Bege can't be K.O.'d by a 5000 base power Character's effect",
+  "rules": ["10-2-1"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "characters": ["OP14-003"]
+    },
+    "p2": {
+      "hand": ["OP14-002"],
+      "characters": [
+        {
+          "card": "OP14-002",
+          "don": 3
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p2",
+      "attacker": "p2.characters.0",
+      "target": "p1.leader"
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p1.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 1,
+    "p2.hand": 2
+  }
+}

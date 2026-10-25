@@ -1,0 +1,22 @@
+{
+  "name": "Usopp sets 2 DON!! active at the end of your turn with a FILM Leader",
+  "rules": ["10-2-3"],
+  "setup": {
+    "p1": {
+      "leader": "TEST-FILM-LEADER",
+      "characters": ["OP14-022"],
+      "don": {
+        "rested": 3
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "endTurn",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "p1.donActive": 2
+  }
+}

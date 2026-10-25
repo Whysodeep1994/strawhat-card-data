@@ -1,0 +1,23 @@
+{
+  "name": "Bartolomeo without DON!! has no [Blocker]",
+  "rules": ["10-1-3"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "characters": ["OP14-011"]
+    },
+    "p2": {}
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p2",
+      "attacker": "p2.leader",
+      "target": "p1.leader"
+    }
+  ],
+  "expect": {
+    "prompt.kind": "counter"
+  }
+}

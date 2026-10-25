@@ -1,0 +1,25 @@
+{
+  "name": "Boa Hancock adds a Life card with a Warlord Leader, then your opponent adds 1 Life to hand",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "leader": "OP14-041",
+      "hand": ["OP14-112"],
+      "don": {
+        "active": 9
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.life": 5,
+    "p2.life": 3,
+    "p2.hand": 1
+  }
+}

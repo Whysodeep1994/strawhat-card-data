@@ -1,0 +1,28 @@
+{
+  "name": "Kuro plays an East Blue Character with a Kuro Leader",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "leader": "OP14-025",
+      "hand": ["OP14-025", "OP14-028"],
+      "don": {
+        "active": 7
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 2
+  }
+}
