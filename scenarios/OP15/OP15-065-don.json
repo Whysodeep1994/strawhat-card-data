@@ -1,0 +1,23 @@
+{
+  "name": "Goro adds a rested DON!! when the top card costs 2 or less",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "hand": ["OP15-065"],
+      "don": {
+        "active": 3,
+        "deck": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.donRested": 4
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Kalgara trashes a card to add up to 2 {Shandian Warrior} cards from the top 5",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "hand": ["OP15-101", "TEST-FILLER"],
+      "don": {
+        "active": 3
+      },
+      "deck": ["OP15-103", "OP15-110", "TEST-FILLER", "TEST-FILLER", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.0", "p1.deck.1"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 2
+  }
+}

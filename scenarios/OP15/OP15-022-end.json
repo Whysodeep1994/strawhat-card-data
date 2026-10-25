@@ -1,0 +1,25 @@
+{
+  "name": "With Brook you lose at the end of the turn in which your deck becomes 0",
+  "rules": ["9-2-1"],
+  "setup": {
+    "p1": {
+      "leader": "OP15-022",
+      "deck": 4
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 1
+    },
+    {
+      "type": "endTurn",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "winner": "p2"
+  }
+}

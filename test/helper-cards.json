@@ -293,6 +293,23 @@
     "types": ["Supernovas"]
   },
   {
+    "id": "TEST-LEADER-0",
+    "name": "Test Leader 0",
+    "category": "leader",
+    "colors": ["red"],
+    "power": 0,
+    "life": 4
+  },
+  {
+    "id": "TEST-LEADER-SKY",
+    "name": "Test Leader Sky",
+    "category": "leader",
+    "colors": ["yellow"],
+    "power": 5000,
+    "life": 4,
+    "types": ["Sky Island", "Shandian Warrior"]
+  },
+  {
     "id": "TEST-LEADER-ODYSSEY",
     "name": "Test ODYSSEY Leader",
     "category": "leader",

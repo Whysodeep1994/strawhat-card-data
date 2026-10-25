@@ -1,0 +1,20 @@
+{
+  "name": "Lucy doesn't draw without an Event activated this turn",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "OP15-002"
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 2
+    }
+  ],
+  "expect": {
+    "p1.hand": 0
+  }
+}
