@@ -147,7 +147,7 @@
         ]
       },
       {
-        "timing": "eventActivated",
+        "timing": "youActivateEvent",
         "oncePerTurn": true,
         "conditions": [
           {

@@ -1,0 +1,23 @@
+{
+  "name": "Shanks stops 2000 power Blockers",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": ["OP01-120"]
+    },
+    "p2": {
+      "characters": ["TEST-BLOCKER-2000", "TEST-BLOCKER-5000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    }
+  ],
+  "expect": {
+    "legal.p2.block": 1
+  }
+}

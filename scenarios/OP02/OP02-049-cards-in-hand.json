@@ -1,0 +1,19 @@
+{
+  "name": "Ivankov doesn't draw with cards in hand",
+  "rules": ["10-2-7"],
+  "setup": {
+    "p1": {
+      "leader": "OP02-049",
+      "hand": ["TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "endTurn",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "p1.hand": 1
+  }
+}

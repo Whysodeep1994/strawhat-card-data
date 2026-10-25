@@ -1,0 +1,32 @@
+{
+  "name": "Boa Hancock draws 1, trashes 1, then up to 3 more",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "hand": ["TEST-FILLER", "TEST-FILLER"],
+      "characters": ["OP02-059"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0", "p1.hand.1"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 0,
+    "p1.trash": 3
+  }
+}

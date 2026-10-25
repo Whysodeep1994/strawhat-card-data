@@ -1,0 +1,39 @@
+{
+  "name": "Oni Giri gives +6000 and plays a vanilla Character",
+  "rules": ["10-2-4"],
+  "setup": {
+    "p2": {
+      "hand": ["OP02-045", "OP02-028"],
+      "don": {
+        "active": 3
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "counterEvent",
+      "player": "p2",
+      "card": "p2.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.leader"]
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.hand.0"]
+    }
+  ],
+  "expect": {
+    "power.p2.leader": 11000,
+    "p2.characters": 1
+  }
+}
