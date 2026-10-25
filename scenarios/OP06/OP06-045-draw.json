@@ -1,0 +1,23 @@
+{
+  "name": "Kuzan draws 2 and places 2 at the bottom of the deck",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP06-045"],
+      "don": {
+        "active": 3
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.hand": 0,
+    "p1.deck": 20
+  }
+}

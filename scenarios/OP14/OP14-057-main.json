@@ -1,0 +1,25 @@
+{
+  "name": "Don't Worry!! I'm Here!! gives Fish-Man cards +1000",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "leader": "OP14-040",
+      "hand": ["OP14-057"],
+      "characters": ["OP14-055"],
+      "don": {
+        "active": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "modifiers.0.power": 1000,
+    "modifiers.1.power": 1000
+  }
+}

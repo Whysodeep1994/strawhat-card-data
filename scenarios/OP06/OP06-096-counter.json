@@ -1,0 +1,47 @@
+{
+  "name": "...Nothing...at All!!! keeps a Character from being K.O.'d in battle",
+  "rules": ["10-2-4"],
+  "setup": {
+    "p1": {
+      "characters": ["TEST-C7-7000"]
+    },
+    "p2": {
+      "hand": ["OP06-096"],
+      "characters": [
+        {
+          "card": "TEST-C5-5000",
+          "rested": true
+        }
+      ],
+      "don": {
+        "active": 3
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.characters.0"
+    },
+    {
+      "type": "counterEvent",
+      "player": "p2",
+      "card": "p2.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.characters": 1,
+    "p2.life": 3
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "Gyro rests a cost 1 Character when it is K.O.'d",
+  "rules": ["10-2-17"],
+  "setup": {
+    "p1": {
+      "characters": ["TEST-C5-5000", "TEST-FILLER"]
+    },
+    "p2": {
+      "characters": [
+        {
+          "card": "OP06-027",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.characters.0"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p1.characters.1"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 0,
+    "p1.characters.1.rested": true
+  }
+}

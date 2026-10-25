@@ -1,0 +1,25 @@
+{
+  "name": "Inuppe draws 2 and trashes 2",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "leader": "OP06-080",
+      "hand": ["OP06-082"],
+      "don": {
+        "active": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.hand": 0,
+    "p1.trash": 2,
+    "p1.deck": 18
+  }
+}

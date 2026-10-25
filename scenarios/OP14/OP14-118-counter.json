@@ -1,0 +1,39 @@
+{
+  "name": "You'll Frighten Me stops an active Character from attacking with 2 or less Life",
+  "rules": ["10-2-3"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "hand": ["OP14-118"],
+      "life": 2,
+      "don": {
+        "active": 1
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C8-8000", "TEST-C4-4000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p2",
+      "attacker": "p2.characters.0",
+      "target": "p1.leader"
+    },
+    {
+      "type": "counterEvent",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.1"]
+    }
+  ],
+  "expect": {
+    "modifiers.0.status": "cannotAttack"
+  }
+}

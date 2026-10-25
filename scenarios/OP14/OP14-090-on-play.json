@@ -1,0 +1,30 @@
+{
+  "name": "Mr.1 rests a cost 0 Character",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "hand": ["OP14-090"],
+      "don": {
+        "active": 5
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C0-1000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters.0.rested": true
+  }
+}

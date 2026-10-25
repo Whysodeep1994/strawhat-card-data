@@ -1,0 +1,28 @@
+{
+  "name": "Sai gains +2000 with an active {Dressrosa} Leader",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "leader": "ST13-001",
+      "characters": ["OP06-088"]
+    },
+    "p2": {
+      "leader": "TEST-LEADER-6000"
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 3
+  }
+}

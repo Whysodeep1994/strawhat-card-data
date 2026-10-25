@@ -1,0 +1,34 @@
+{
+  "name": "Tashigi rests 2 of your cards for +2000 until your opponent's next turn ends",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["OP14-029"],
+      "don": {
+        "active": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 1
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": []
+    }
+  ],
+  "expect": {
+    "modifiers.0.power": 2000,
+    "p1.donRested": 2
+  }
+}

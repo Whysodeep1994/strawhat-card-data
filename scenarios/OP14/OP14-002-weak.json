@@ -1,0 +1,24 @@
+{
+  "name": "Urouge with less than 5000 power does nothing",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["OP14-002"]
+    },
+    "p2": {
+      "characters": ["TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    }
+  ],
+  "expect": {
+    "p1.hand": 0,
+    "p2.characters": 1
+  }
+}

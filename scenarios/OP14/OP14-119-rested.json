@@ -1,0 +1,28 @@
+{
+  "name": "Dracule Mihawk stops a cost 9 Character from being rested when he becomes rested",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "characters": ["OP14-119"]
+    },
+    "p2": {
+      "characters": ["TEST-C9-10000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "modifiers.0.status": "cannotBeRested"
+  }
+}

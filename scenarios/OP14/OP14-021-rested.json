@@ -1,0 +1,43 @@
+{
+  "name": "Issho takes a Life card to keep a rested Character from becoming active",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "characters": ["OP14-021"]
+    },
+    "p2": {
+      "characters": [
+        {
+          "card": "TEST-C4-4000",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p1.life": 3
+  }
+}

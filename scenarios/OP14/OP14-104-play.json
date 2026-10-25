@@ -1,0 +1,33 @@
+{
+  "name": "Gecko Moria plays a cost 4 Thriller Bark Pirates Character from trash",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "hand": ["OP14-104"],
+      "trash": ["OP14-110"],
+      "don": {
+        "active": 8
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "chooseOne",
+      "player": "p1",
+      "option": 0
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.trash.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 2
+  }
+}

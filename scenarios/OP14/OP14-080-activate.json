@@ -1,0 +1,28 @@
+{
+  "name": "Gecko Moria K.O.s a Thriller Bark Pirates Character for +1000 to the Leader and Characters",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "OP14-080",
+      "characters": ["OP14-101", "TEST-C4-4000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.characters": 1,
+    "modifiers.0.power": 1000,
+    "modifiers.1.power": 1000
+  }
+}

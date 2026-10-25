@@ -1,0 +1,23 @@
+{
+  "name": "Baby 5 adds 1 active DON!!",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "hand": ["OP14-072"],
+      "don": {
+        "active": 4,
+        "deck": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.donActive": 1
+  }
+}
