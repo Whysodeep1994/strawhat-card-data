@@ -1,0 +1,38 @@
+{
+  "name": "Crescent Cutlass returns the attacking Character",
+  "rules": ["10-2-4"],
+  "setup": {
+    "p1": {
+      "characters": ["TEST-C5-5000"]
+    },
+    "p2": {
+      "leader": "OP01-062",
+      "hand": ["OP01-089"],
+      "don": {
+        "active": 3
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "counterEvent",
+      "player": "p2",
+      "card": "p2.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p1.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 0,
+    "p1.hand": 1
+  }
+}

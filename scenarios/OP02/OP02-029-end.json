@@ -1,0 +1,21 @@
+{
+  "name": "Carrot sets 1 DON!! active at the end of the turn",
+  "rules": ["10-2-7"],
+  "setup": {
+    "p1": {
+      "characters": ["OP02-029"],
+      "don": {
+        "rested": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "endTurn",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "p1.donActive": 1
+  }
+}

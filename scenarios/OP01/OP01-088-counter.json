@@ -1,0 +1,45 @@
+{
+  "name": "Desert Spada gives +2000 and arranges the deck",
+  "rules": ["10-2-4"],
+  "setup": {
+    "p2": {
+      "hand": ["OP01-088"],
+      "deck": ["OP01-010", "TEST-FILLER", "TEST-FILLER"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "counterEvent",
+      "player": "p2",
+      "card": "p2.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.leader"]
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.deck.0"]
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.deck.1", "p2.deck.2"]
+    }
+  ],
+  "expect": {
+    "power.p2.leader": 7000,
+    "p2.deck.2.cardId": "OP01-010"
+  }
+}

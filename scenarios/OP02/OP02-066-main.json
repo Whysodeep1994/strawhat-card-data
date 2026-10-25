@@ -1,0 +1,29 @@
+{
+  "name": "Impel Down All Stars trashes 2 to draw 2",
+  "rules": ["10-2-3"],
+  "setup": {
+    "p1": {
+      "leader": "OP02-049",
+      "hand": ["OP02-066", "TEST-FILLER", "TEST-FILLER"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.hand": 2,
+    "p1.trash": 3
+  }
+}

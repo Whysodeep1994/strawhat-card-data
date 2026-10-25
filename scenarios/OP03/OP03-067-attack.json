@@ -1,0 +1,29 @@
+{
+  "name": "Lulu adds a rested DON!!",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "leader": "OP03-058",
+      "characters": [
+        {
+          "card": "OP03-067",
+          "don": 1
+        }
+      ],
+      "don": {
+        "deck": 5
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    }
+  ],
+  "expect": {
+    "p1.donRested": 1
+  }
+}

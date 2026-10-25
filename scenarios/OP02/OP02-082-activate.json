@@ -1,0 +1,23 @@
+{
+  "name": "Byrnndi World returns 8 DON!! for +792000",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["OP02-082"],
+      "don": {
+        "active": 8
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    }
+  ],
+  "expect": {
+    "power.p1.characters.0": 800000
+  }
+}

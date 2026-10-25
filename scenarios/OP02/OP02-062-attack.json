@@ -1,0 +1,30 @@
+{
+  "name": "Luffy does it again when attacking",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "hand": ["TEST-FILLER", "TEST-FILLER"],
+      "characters": ["OP02-062"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 2
+  }
+}

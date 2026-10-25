@@ -1,0 +1,38 @@
+{
+  "name": "Arlong does nothing more if the card isn't an Event",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "OP01-063",
+          "don": 1
+        }
+      ]
+    },
+    "p2": {
+      "hand": ["OP01-027", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.hand.1"]
+    }
+  ],
+  "expect": {
+    "p2.life": 4
+  }
+}

@@ -25,6 +25,8 @@ if (!set || !series) {
 const decode = (s) =>
   s
     .replace(/<br\s*\/?>/g, "\n")
+    // Some cards print attributes as raw "<Slash>", which would look like a tag.
+    .replace(/<(Slash|Strike|Ranged|Special|Wisdom)>/g, "&lt;$1&gt;")
     .replace(/<[^>]+>/g, "")
     .replace(/&quot;/g, '"')
     .replace(/&#0?39;/g, "'")
@@ -92,7 +94,13 @@ const existing = existsSync(file) ? JSON.parse(readFileSync(file, "utf8")) : [];
 const handWritten = new Map(
   existing.map((c) => [
     c.id,
-    { aliases: c.aliases, keywords: c.keywords, effects: c.effects, notes: c.notes },
+    {
+      keywords: c.keywords,
+      aliases: c.aliases,
+      anyNumberInDeck: c.anyNumberInDeck,
+      effects: c.effects,
+      notes: c.notes,
+    },
   ]),
 );
 const imported = found.map((c) => {

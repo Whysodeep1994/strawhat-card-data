@@ -1,0 +1,22 @@
+{
+  "name": "Kyoshirou draws with 8 DON!!",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP01-095"],
+      "don": {
+        "active": 8
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.hand": 1
+  }
+}
