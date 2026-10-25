@@ -1,0 +1,22 @@
+{
+  "name": "Edward.Newgate draws nothing when the top card isn't Whitebeard Pirates",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "hand": ["OP14-044"],
+      "don": {
+        "active": 8
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.hand": 0
+  }
+}

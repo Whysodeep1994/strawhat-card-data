@@ -1,0 +1,22 @@
+{
+  "name": "Pica adds an active DON!! at the end of your turn with a Donquixote Pirates Leader",
+  "rules": ["10-2-3"],
+  "setup": {
+    "p1": {
+      "leader": "OP14-060",
+      "characters": ["OP14-071"],
+      "don": {
+        "deck": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "endTurn",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "p1.donActive": 1
+  }
+}

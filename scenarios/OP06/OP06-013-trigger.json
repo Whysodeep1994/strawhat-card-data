@@ -1,0 +1,48 @@
+{
+  "name": "Monkey.D.Luffy's [Trigger] activates its [On Play] effect",
+  "rules": ["10-1-5"],
+  "setup": {
+    "p2": {
+      "life": ["OP06-013", "TEST-FILLER"],
+      "deck": [
+        "OP06-005",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER"
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.deck.0"]
+    }
+  ],
+  "expect": {
+    "p2.hand": 1,
+    "p2.hand.0.cardId": "OP06-005"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Crocodile K.O.s a Baroque Works Character for −10 cost and may trash 2 from the deck",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "OP14-079",
+      "characters": ["OP14-095"]
+    },
+    "p2": {
+      "characters": ["TEST-C9-10000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 1
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    },
+    {
+      "type": "chooseOne",
+      "player": "p1",
+      "option": 0
+    }
+  ],
+  "expect": {
+    "p1.characters": 0,
+    "modifiers.0.cost": -10,
+    "p1.trash": 3
+  }
+}

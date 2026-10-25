@@ -1,0 +1,37 @@
+{
+  "name": "Gum-Gum King Kong Gatling's [Trigger] K.O.s a 5000 power Character",
+  "rules": ["10-1-5"],
+  "setup": {
+    "p1": {
+      "characters": ["TEST-C5-5000"]
+    },
+    "p2": {
+      "life": ["OP06-018", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p1.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 0
+  }
+}

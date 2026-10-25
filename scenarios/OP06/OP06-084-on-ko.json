@@ -1,0 +1,38 @@
+{
+  "name": "Jigoro of the Wind gives +1000 when it is K.O.'d",
+  "rules": ["10-2-17"],
+  "setup": {
+    "p1": {
+      "characters": ["TEST-C5-5000"]
+    },
+    "p2": {
+      "characters": [
+        {
+          "card": "OP06-084",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.characters.0"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.leader"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 0,
+    "modifiers.0.power": 1000
+  }
+}

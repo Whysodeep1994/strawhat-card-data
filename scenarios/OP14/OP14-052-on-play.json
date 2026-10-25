@@ -1,0 +1,32 @@
+{
+  "name": "Hannyabal trashes 3 cards to play a cost 6 Impel Down Character",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "hand": ["OP14-052", "OP14-048", "TEST-FILLER", "TEST-FILLER", "TEST-FILLER"],
+      "don": {
+        "active": 5
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.1", "p1.hand.2", "p1.hand.3"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 1
+  }
+}

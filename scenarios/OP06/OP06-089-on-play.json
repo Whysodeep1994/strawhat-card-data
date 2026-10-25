@@ -1,0 +1,23 @@
+{
+  "name": "Taralan trashes 3 from the top of the deck",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP06-089"],
+      "don": {
+        "active": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.trash": 3,
+    "p1.deck": 17
+  }
+}

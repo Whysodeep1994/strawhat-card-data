@@ -1,0 +1,30 @@
+{
+  "name": "Shadows Asgard K.O.s 2 of your Characters for +3000 in all",
+  "rules": ["10-2-3"],
+  "setup": {
+    "p1": {
+      "hand": ["OP06-095"],
+      "characters": ["OP06-087", "OP06-087"],
+      "don": {
+        "active": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.0", "p1.characters.1"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 0,
+    "modifiers.0.power": 1000,
+    "modifiers.1.power": 2000
+  }
+}

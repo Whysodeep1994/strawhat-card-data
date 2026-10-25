@@ -2258,7 +2258,7 @@
           {
             "do": "handToDeckTop",
             "count": 2,
-            "topOrBottom": true
+            "orBottom": true
           }
         ]
       }

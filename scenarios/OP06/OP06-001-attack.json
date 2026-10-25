@@ -1,0 +1,44 @@
+{
+  "name": "Uta trashes a {FILM} card to give −2000 and add a rested DON!!",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "leader": "OP06-001",
+      "hand": ["OP06-005"],
+      "don": {
+        "deck": 5
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C4-4000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p1.trash": 1,
+    "p1.donRested": 1,
+    "p1.donDeck": 4,
+    "p2.life": 3
+  }
+}

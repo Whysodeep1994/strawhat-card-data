@@ -1309,7 +1309,7 @@
         ],
         "steps": [
           {
-            "do": "freezeOpponentDon",
+            "do": "opponentDonNoRefresh",
             "count": 1
           }
         ]
@@ -4688,7 +4688,7 @@
         ],
         "conditions": [
           {
-            "lifeLessThanOpponents": true
+            "lifeFewerThanOpponent": true
           }
         ]
       },

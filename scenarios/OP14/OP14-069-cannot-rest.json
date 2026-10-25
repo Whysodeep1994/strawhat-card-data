@@ -1,0 +1,40 @@
+{
+  "name": "Donquixote Doflamingo stops 3 cost 7 Characters from being rested",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "hand": ["OP14-069"],
+      "don": {
+        "active": 10
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C7-7000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "chooseOne",
+      "player": "p1",
+      "option": 1
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "modifiers.0.status": "cannotBeRested"
+  }
+}

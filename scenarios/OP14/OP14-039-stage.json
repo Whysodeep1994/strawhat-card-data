@@ -1,0 +1,28 @@
+{
+  "name": "Coffin Boat draws 1 and sets a DON!! active at the end of your turn with a Mihawk Leader",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "leader": "OP14-020",
+      "hand": ["OP14-039"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "endTurn",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p1.donActive": 1
+  }
+}

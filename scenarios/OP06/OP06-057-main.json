@@ -1,0 +1,47 @@
+{
+  "name": "But I Will Never Doubt a Woman's Tears!!!! plays a cost 2 Character from the top",
+  "rules": ["10-2-3"],
+  "setup": {
+    "p1": {
+      "hand": ["OP06-057"],
+      "don": {
+        "active": 1
+      },
+      "deck": [
+        "OP06-052",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER"
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.leader"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 1,
+    "p1.characters.0.cardId": "OP06-052",
+    "modifiers.0.power": 1000
+  }
+}

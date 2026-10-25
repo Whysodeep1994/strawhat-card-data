@@ -1,0 +1,43 @@
+{
+  "name": "Cavendish with 5000 power can attack the turn it is played",
+  "rules": ["10-1-1"],
+  "setup": {
+    "p1": {
+      "hand": ["OP14-004"],
+      "don": {
+        "active": 5
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "giveDon",
+      "player": "p1",
+      "target": "p1.characters.0"
+    },
+    {
+      "type": "giveDon",
+      "player": "p1",
+      "target": "p1.characters.0"
+    },
+    {
+      "type": "giveDon",
+      "player": "p1",
+      "target": "p1.characters.0"
+    },
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    }
+  ],
+  "expect": {
+    "prompt.kind": "counter"
+  }
+}

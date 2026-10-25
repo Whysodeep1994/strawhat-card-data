@@ -1,0 +1,41 @@
+{
+  "name": "Yosaku keeps a rested cost 4 Character from becoming active",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "characters": ["OP14-035"]
+    },
+    "p2": {
+      "characters": [
+        {
+          "card": "TEST-C4-4000",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "endTurn",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "p2.characters.0.rested": true
+  }
+}
