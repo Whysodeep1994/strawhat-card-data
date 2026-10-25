@@ -1,0 +1,23 @@
+{
+  "name": "Barrier Bulls draws 1 and gives your Leader +1000",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "hand": ["OP15-019"],
+      "don": {
+        "active": 3
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "modifiers.0.power": 1000
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Cabaji gains nothing when the opponent has no DON!! given",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["OP15-005"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    }
+  ],
+  "expect": {
+    "modifiers": 0
+  }
+}

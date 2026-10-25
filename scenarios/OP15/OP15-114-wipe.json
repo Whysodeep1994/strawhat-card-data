@@ -1,0 +1,31 @@
+{
+  "name": "Wyper turns a Life card face-up to give −2000 and K.O. 0 power Characters",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "hand": ["OP15-114"],
+      "don": {
+        "active": 5
+      }
+    },
+    "p2": {
+      "characters": ["TEST-BLOCKER-2000", "TEST-C4-4000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p2.characters": 1,
+    "p1.life.0.faceUp": true
+  }
+}

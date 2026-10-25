@@ -1,0 +1,13 @@
+{
+  "name": "Rebecca cannot attack",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "leader": "OP15-039"
+    }
+  },
+  "actions": [],
+  "expect": {
+    "legal.p1.attack": 0
+  }
+}

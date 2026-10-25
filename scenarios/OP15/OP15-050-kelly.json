@@ -1,0 +1,27 @@
+{
+  "name": "Bobby Funk gains +3000 with [Kelly Funk]",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "characters": ["OP15-050", "OP15-043"]
+    },
+    "p2": {
+      "leader": "TEST-LEADER-6000"
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 3
+  }
+}

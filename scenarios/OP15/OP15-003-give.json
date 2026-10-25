@@ -1,0 +1,41 @@
+{
+  "name": "Alvida gives the opponent's rested DON!! to their Character, then gives your rested DON!! to your Leader",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["OP15-003"],
+      "don": {
+        "rested": 1
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C4-4000"],
+      "don": {
+        "rested": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 1
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.leader"]
+    }
+  ],
+  "expect": {
+    "p2.characters.0.givenDon": 1,
+    "p1.leader.givenDon": 1,
+    "p1.donRested": 0
+  }
+}
