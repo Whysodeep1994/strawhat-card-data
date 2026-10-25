@@ -1,0 +1,22 @@
+{
+  "name": "Ivankov with 5000 power can't activate",
+  "rules": ["8-3-2"],
+  "setup": {
+    "p1": {
+      "characters": ["OP05-004"],
+      "hand": ["OP05-012"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0,
+      "illegal": true
+    }
+  ],
+  "expect": {
+    "p1.characters": 1
+  }
+}

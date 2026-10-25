@@ -1,0 +1,21 @@
+{
+  "name": "Donquixote Rosinante sets itself active at the end of the turn",
+  "rules": ["10-2-7"],
+  "setup": {
+    "p1": {
+      "leader": {
+        "card": "OP05-022",
+        "rested": true
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "endTurn",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "p1.leader.rested": false
+  }
+}

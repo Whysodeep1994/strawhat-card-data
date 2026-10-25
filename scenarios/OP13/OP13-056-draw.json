@@ -1,0 +1,21 @@
+{
+  "name": "LittleOars Jr. with a Whitebeard Pirates Leader draws 1 when attacking",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "leader": "OP13-002",
+      "characters": ["OP13-056"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    }
+  ],
+  "expect": {
+    "p1.hand": 1
+  }
+}

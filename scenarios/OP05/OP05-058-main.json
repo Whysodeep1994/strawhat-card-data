@@ -1,0 +1,56 @@
+{
+  "name": "It's a Waste of Human Life!! clears cost 3 or less Characters and both hands go down to 5",
+  "rules": ["10-2-3"],
+  "setup": {
+    "p1": {
+      "hand": [
+        "OP05-058",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER"
+      ],
+      "don": {
+        "active": 8
+      },
+      "characters": ["TEST-FILLER"]
+    },
+    "p2": {
+      "hand": [
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER"
+      ],
+      "characters": ["TEST-FILLER", "TEST-C4-4000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.hand.0", "p2.hand.1"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 0,
+    "p2.characters": 1,
+    "p1.hand": 5,
+    "p2.hand": 5
+  }
+}

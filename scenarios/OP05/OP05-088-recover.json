@@ -1,0 +1,40 @@
+{
+  "name": "Mansherry adds a black cost 4 Character from the trash",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["OP05-088"],
+      "don": {
+        "active": 1
+      },
+      "trash": ["TEST-FILLER", "TEST-FILLER", "OP05-091"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.trash.0", "p1.trash.1"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.trash.0"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p1.hand.0.cardId": "OP05-091"
+  }
+}

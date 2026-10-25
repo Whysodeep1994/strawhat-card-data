@@ -1,0 +1,41 @@
+{
+  "name": "Donquixote Doflamingo rests an opposing Character when attacked",
+  "rules": ["10-2-16"],
+  "setup": {
+    "p1": {
+      "characters": ["TEST-C4-4000"]
+    },
+    "p2": {
+      "characters": ["OP05-029"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p1.characters.0"]
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p1.characters.0.rested": true,
+    "p2.donRested": 1
+  }
+}

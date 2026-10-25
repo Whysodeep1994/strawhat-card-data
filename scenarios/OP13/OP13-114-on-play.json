@@ -1,0 +1,35 @@
+{
+  "name": "S-Snake turns a Life card face-up to give −2000",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP13-114"],
+      "don": {
+        "active": 4
+      }
+    },
+    "p2": {
+      "characters": [
+        {
+          "card": "TEST-C6-6000",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.life.0.faceUp": true
+  }
+}
