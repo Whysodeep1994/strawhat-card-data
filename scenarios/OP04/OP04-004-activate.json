@@ -1,0 +1,31 @@
+{
+  "name": "Karoo gives a rested DON!! to each Alabasta Character",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["OP04-004", "OP04-007", "OP04-015", "TEST-FILLER"],
+      "don": {
+        "rested": 5
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.characters.1.givenDon": 1,
+    "p1.characters.2.givenDon": 1,
+    "p1.characters.3.givenDon": 0,
+    "p1.donRested": 2
+  }
+}

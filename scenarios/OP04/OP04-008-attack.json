@@ -1,0 +1,39 @@
+{
+  "name": "Chaka gives −3000, then K.O.s a 0 power Character",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "leader": "OP04-001",
+      "characters": [
+        {
+          "card": "OP04-008",
+          "don": 1
+        }
+      ]
+    },
+    "p2": {
+      "characters": ["TEST-C4-4000", "TEST-C0-1000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.1"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.1"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 1
+  }
+}
