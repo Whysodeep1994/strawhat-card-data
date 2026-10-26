@@ -1,0 +1,35 @@
+{
+  "name": "Kouzuki Hiyori adds a <Slash> card with a [Roronoa Zoro] Leader",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "OP12-020",
+      "characters": ["OP12-028"],
+      "don": {
+        "active": 1
+      },
+      "deck": ["TEST-SLASH-5000", "TEST-FILLER", "TEST-FILLER", "TEST-FILLER", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.0"]
+    }
+  ],
+  "expect": {
+    "p1.hand.0.cardId": "TEST-SLASH-5000"
+  }
+}

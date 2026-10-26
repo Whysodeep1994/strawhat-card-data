@@ -1,0 +1,44 @@
+{
+  "name": "Extinguishes All Sound gives [Trafalgar Law] +2000 and stops blockers",
+  "rules": ["10-2-3"],
+  "setup": {
+    "p1": {
+      "characters": ["OP12-106"],
+      "hand": ["OP12-077"],
+      "don": {
+        "active": 2
+      }
+    },
+    "p2": {
+      "characters": ["TEST-BLOCKER-5000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.0"]
+    },
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "block",
+      "player": "p2",
+      "blocker": "p2.characters.0",
+      "illegal": true
+    }
+  ],
+  "expect": {
+    "p1.characters.0.power": 9000,
+    "p2.characters.0.rested": false
+  }
+}

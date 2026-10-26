@@ -1,0 +1,39 @@
+{
+  "name": "Kuzan trashes a card so a Character can't attack in the opponent's next turn",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP12-043", "TEST-FILLER"],
+      "don": {
+        "active": 6
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C5-5000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    },
+    {
+      "type": "endTurn",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "legal.p2.attack": 1
+  }
+}

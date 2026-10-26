@@ -466,5 +466,32 @@
         ]
       }
     ]
+  },
+  {
+    "id": "TEST-LEADER-WB",
+    "name": "Test Whitebeard Pirates Leader",
+    "category": "leader",
+    "colors": ["blue"],
+    "power": 5000,
+    "life": 5,
+    "types": ["Whitebeard Pirates"]
+  },
+  {
+    "id": "TEST-LEADER-BAROQUE",
+    "name": "Test Baroque Works Leader",
+    "category": "leader",
+    "colors": ["purple"],
+    "power": 5000,
+    "life": 5,
+    "types": ["Baroque Works"]
+  },
+  {
+    "id": "TEST-LEADER-WARLORDS",
+    "name": "Test Seven Warlords Leader",
+    "category": "leader",
+    "colors": ["blue"],
+    "power": 5000,
+    "life": 5,
+    "types": ["The Seven Warlords of the Sea"]
   }
 ]

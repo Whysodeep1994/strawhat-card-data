@@ -1,0 +1,23 @@
+{
+  "name": "Sakazuki draws 2 with a {Navy} Leader",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "leader": "TEST-LEADER-NAVY",
+      "hand": ["OP12-044"],
+      "don": {
+        "active": 7
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.hand": 2
+  }
+}

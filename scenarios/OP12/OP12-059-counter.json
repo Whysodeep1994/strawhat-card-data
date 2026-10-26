@@ -1,0 +1,37 @@
+{
+  "name": "Concasser gives the Leader +4000 with 4 Events in the trash",
+  "rules": ["10-2-4"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "hand": ["OP12-059"],
+      "don": {
+        "active": 1
+      },
+      "trash": ["TEST-KO-EVENT", "TEST-BOUNCE-EVENT", "TEST-KO-EVENT", "TEST-BOUNCE-EVENT"]
+    },
+    "p2": {}
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p2",
+      "attacker": "p2.leader",
+      "target": "p1.leader"
+    },
+    {
+      "type": "counterEvent",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.leader"]
+    }
+  ],
+  "expect": {
+    "p1.leader.power": 9000
+  }
+}

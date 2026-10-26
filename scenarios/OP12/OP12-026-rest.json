@@ -1,0 +1,39 @@
+{
+  "name": "Kuina rests a Character and gives 3 rested DON!! to the [Roronoa Zoro] Leader",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "OP12-020",
+      "characters": ["OP12-026"],
+      "don": {
+        "active": 0,
+        "rested": 3
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C4-4000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters.0.rested": true,
+    "p1.leader.givenDon": 3
+  }
+}

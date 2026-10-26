@@ -1,0 +1,28 @@
+{
+  "name": "Bartholomew Kuma trashes a card to add a deck card to Life and gain +2 cost",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP12-119", "TEST-FILLER"],
+      "don": {
+        "active": 6
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.life": 5,
+    "p1.characters.0.cost": 8
+  }
+}

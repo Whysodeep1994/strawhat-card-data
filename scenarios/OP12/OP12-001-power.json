@@ -1,0 +1,33 @@
+{
+  "name": "Silvers Rayleigh reveals 2 Events to give a 4000 base power Character +2000",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "OP12-001",
+      "characters": ["TEST-C4-4000"],
+      "hand": ["TEST-KO-EVENT", "TEST-BOUNCE-EVENT"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 1
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters.0.power": 6000,
+    "p1.hand": 2
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "Shanks trashes a card to give the attacker −2000",
+  "rules": ["10-2-16"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "characters": ["OP12-008"],
+      "hand": ["TEST-FILLER"]
+    },
+    "p2": {}
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p2",
+      "attacker": "p2.leader",
+      "target": "p1.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.leader"]
+    }
+  ],
+  "expect": {
+    "p2.leader.power": 3000,
+    "p1.hand": 0
+  }
+}
