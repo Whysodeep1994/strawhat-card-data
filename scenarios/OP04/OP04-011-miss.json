@@ -1,0 +1,22 @@
+{
+  "name": "Nami reveals a weaker card and gains nothing",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "deck": ["TEST-FILLER", "TEST-C6-6000"],
+      "characters": ["OP04-011"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    }
+  ],
+  "expect": {
+    "power.p1.characters.0": 3000,
+    "p1.deck.0.cardId": "TEST-C6-6000"
+  }
+}

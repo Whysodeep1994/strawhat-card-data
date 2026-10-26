@@ -1,0 +1,24 @@
+{
+  "name": "Queen draws 1 with 4 or less cards in Life and hand",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "leader": {
+        "card": "OP04-040",
+        "don": 1
+      },
+      "life": 3
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    }
+  ],
+  "expect": {
+    "p1.hand": 1
+  }
+}

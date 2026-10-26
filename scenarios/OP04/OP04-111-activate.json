@@ -1,0 +1,38 @@
+{
+  "name": "Hera trashes a Homies Character to set Charlotte Linlin active",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": [
+        "OP04-111",
+        "OP04-113",
+        {
+          "card": "OP04-099",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.1"]
+    }
+  ],
+  "expect": {
+    "p1.characters.1.rested": false,
+    "p1.characters": 2
+  }
+}

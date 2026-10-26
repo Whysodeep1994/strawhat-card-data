@@ -1,0 +1,29 @@
+{
+  "name": "Crocodile returns 2 DON!! to add a Life card",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "leader": "OP04-058",
+      "hand": ["OP04-060"],
+      "don": {
+        "active": 10
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.life": 5,
+    "p1.donDeck": 2
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Doflamingo sets 2 DON!! active at the end of your turn",
+  "rules": ["10-2-7"],
+  "setup": {
+    "p1": {
+      "leader": "OP04-019",
+      "don": {
+        "rested": 3
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "endTurn",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "p1.donActive": 2,
+    "p1.donRested": 1
+  }
+}

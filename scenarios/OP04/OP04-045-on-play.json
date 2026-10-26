@@ -1,0 +1,22 @@
+{
+  "name": "King draws 1",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP04-045"],
+      "don": {
+        "active": 7
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.hand": 1
+  }
+}

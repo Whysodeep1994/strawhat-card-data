@@ -1,0 +1,39 @@
+{
+  "name": "Carmel's Trigger plays her and K.O.s a cost 2 Character, without drawing",
+  "rules": ["10-1-5"],
+  "setup": {
+    "p1": {
+      "characters": ["TEST-BLOCKER-2000"]
+    },
+    "p2": {
+      "life": ["OP04-101", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p1.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 1,
+    "p1.characters": 0,
+    "p2.hand": 0
+  }
+}

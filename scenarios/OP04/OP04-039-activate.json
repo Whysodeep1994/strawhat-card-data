@@ -1,0 +1,35 @@
+{
+  "name": "Rebecca finds a Dressrosa card and trashes the rest",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "OP04-039",
+      "deck": ["TEST-FILLER", "OP04-077"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 1
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.1"]
+    }
+  ],
+  "expect": {
+    "p1.hand.0.cardId": "OP04-077",
+    "p1.trash": 1
+  }
+}
