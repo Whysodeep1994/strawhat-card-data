@@ -1,0 +1,20 @@
+{
+  "name": "Roronoa Zoro draws 1 when attacking with 6 or less cards in hand",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["OP16-053"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    }
+  ],
+  "expect": {
+    "p1.hand": 1
+  }
+}

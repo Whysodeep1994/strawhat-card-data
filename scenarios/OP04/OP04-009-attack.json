@@ -1,0 +1,34 @@
+{
+  "name": "The Duck Troops return to your hand at the end of the turn",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": ["OP04-009"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "endTurn",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "p1.characters": 0,
+    "p1.hand": 1
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "Marineford returns a DON!! and rests to draw 1 and trash 1",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "stage": "OP16-078",
+      "hand": ["TEST-FILLER"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.stage",
+      "effect": 1
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p1.trash": 1
+  }
+}

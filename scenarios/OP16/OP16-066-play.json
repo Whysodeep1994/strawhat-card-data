@@ -1,0 +1,25 @@
+{
+  "name": "Sengoku adds 2 rested DON!! with a {Navy} Leader, then draws 2 and trashes 2",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "OP16-060",
+      "hand": ["OP16-066"],
+      "don": {
+        "active": 5,
+        "deck": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.donRested": 7,
+    "p1.trash": 2
+  }
+}

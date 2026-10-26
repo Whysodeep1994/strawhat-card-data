@@ -1,0 +1,27 @@
+{
+  "name": "LittleOars Jr. keeps 8000 power with a cost 8 {Whitebeard Pirates} Character",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "characters": ["OP16-017", "OP16-003"]
+    },
+    "p2": {
+      "leader": "TEST-LEADER-6000"
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 3
+  }
+}

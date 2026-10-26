@@ -1,0 +1,31 @@
+{
+  "name": "Borsalino returns 2 DON!! at the end of your turn to set himself active with [Blocker]",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "OP16-073",
+          "rested": true
+        }
+      ],
+      "don": {
+        "active": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "endTurn",
+      "player": "p1"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.characters.0.rested": false
+  }
+}

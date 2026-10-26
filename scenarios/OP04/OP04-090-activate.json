@@ -1,0 +1,55 @@
+{
+  "name": "Luffy returns 7 trash cards to set himself active",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "trash": [
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER"
+      ],
+      "characters": [
+        {
+          "card": "OP04-090",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 1
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": [
+        "p1.trash.0",
+        "p1.trash.1",
+        "p1.trash.2",
+        "p1.trash.3",
+        "p1.trash.4",
+        "p1.trash.5",
+        "p1.trash.6"
+      ]
+    }
+  ],
+  "expect": {
+    "p1.characters.0.rested": false,
+    "p1.trash": 1,
+    "p1.deck": 27
+  }
+}

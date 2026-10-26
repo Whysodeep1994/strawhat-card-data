@@ -1,0 +1,29 @@
+{
+  "name": "Rebecca finds a Dressrosa card and trashes the rest",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP04-092"],
+      "deck": ["OP04-092", "OP04-077", "TEST-FILLER"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.1"]
+    }
+  ],
+  "expect": {
+    "p1.hand.0.cardId": "OP04-077",
+    "p1.trash": 2
+  }
+}

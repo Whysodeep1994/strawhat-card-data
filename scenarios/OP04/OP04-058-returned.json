@@ -1,0 +1,39 @@
+{
+  "name": "Crocodile adds an active DON!! when a DON!! is returned on the opponent's turn",
+  "rules": ["donReturned"],
+  "setup": {
+    "p1": {
+      "characters": ["TEST-C5-5000"]
+    },
+    "p2": {
+      "leader": "OP04-058",
+      "characters": ["OP04-070"],
+      "don": {
+        "active": 1,
+        "deck": 5
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p1.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.donActive": 1,
+    "power.p1.characters.0": 4000
+  }
+}

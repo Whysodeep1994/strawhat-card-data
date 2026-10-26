@@ -1,0 +1,22 @@
+{
+  "name": "Nami reveals a 6000 power Character and gains +3000",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "deck": ["TEST-C6-6000", "TEST-FILLER"],
+      "characters": ["OP04-011"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    }
+  ],
+  "expect": {
+    "power.p1.characters.0": 6000,
+    "p1.deck.0.cardId": "TEST-FILLER"
+  }
+}

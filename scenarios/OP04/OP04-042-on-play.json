@@ -1,0 +1,29 @@
+{
+  "name": "Ipponmatsu gives a <Slash> Character +3000 and trashes the top card",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP04-042"],
+      "characters": ["OP04-015"],
+      "don": {
+        "active": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.0"]
+    }
+  ],
+  "expect": {
+    "power.p1.characters.0": 9000,
+    "p1.trash": 1
+  }
+}

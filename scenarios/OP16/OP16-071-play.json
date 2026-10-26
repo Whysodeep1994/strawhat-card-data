@@ -1,0 +1,28 @@
+{
+  "name": "Benevolent King of the Waves trashes a card to add a rested DON!!",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "hand": ["OP16-071", "TEST-FILLER"],
+      "don": {
+        "active": 3,
+        "deck": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.donRested": 4
+  }
+}

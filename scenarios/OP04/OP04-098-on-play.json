@@ -1,0 +1,29 @@
+{
+  "name": "Toko trashes 2 Land of Wano cards to add a Life card",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP04-098", "OP04-097", "OP04-097"],
+      "life": 1,
+      "don": {
+        "active": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.life": 2,
+    "p1.trash": 2
+  }
+}

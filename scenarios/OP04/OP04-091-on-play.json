@@ -1,0 +1,37 @@
+{
+  "name": "Leo rests the Leader to K.O. a cost 1 Character",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "leader": "OP04-039",
+      "hand": ["OP04-091"],
+      "don": {
+        "active": 1
+      }
+    },
+    "p2": {
+      "characters": ["TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 0,
+    "p1.trash": 2
+  }
+}

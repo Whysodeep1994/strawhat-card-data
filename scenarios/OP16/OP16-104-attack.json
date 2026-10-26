@@ -1,0 +1,33 @@
+{
+  "name": "Catarina Devon copies a selected Character's power when attacking",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["OP16-104"]
+    },
+    "p2": {
+      "leader": "TEST-LEADER-6000",
+      "characters": ["TEST-C6-6000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 3
+  }
+}

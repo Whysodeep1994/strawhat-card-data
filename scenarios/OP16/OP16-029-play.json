@@ -1,0 +1,26 @@
+{
+  "name": "Antlerkov plays a cost 2 Character with [Bunkov]",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["OP16-029", "OP16-025"],
+      "hand": ["TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 3
+  }
+}

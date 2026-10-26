@@ -1,0 +1,35 @@
+{
+  "name": "Crocodile returns a DON!! to draw 1 and trash 1 when attacked",
+  "rules": ["10-2-16"],
+  "setup": {
+    "p2": {
+      "hand": ["TEST-FILLER"],
+      "characters": ["OP04-060"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.hand.0"]
+    }
+  ],
+  "expect": {
+    "p2.hand": 1,
+    "p2.trash": 1
+  }
+}

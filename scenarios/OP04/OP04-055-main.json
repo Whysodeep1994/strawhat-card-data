@@ -1,0 +1,36 @@
+{
+  "name": "Plague Rounds trashes Ice Oni and places a Character at the bottom to play Ice Oni",
+  "rules": ["10-2-3"],
+  "setup": {
+    "p1": {
+      "hand": ["OP04-055", "OP04-047"],
+      "don": {
+        "active": 2
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C4-4000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.trash.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters.0.cardId": "OP04-047",
+    "p2.characters": 0
+  }
+}
