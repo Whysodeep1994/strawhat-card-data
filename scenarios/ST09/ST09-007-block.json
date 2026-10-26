@@ -1,0 +1,44 @@
+{
+  "name": "Shinobu takes a Life card to gain +4000 when blocking",
+  "rules": ["10-2-15"],
+  "setup": {
+    "p1": {
+      "characters": ["TEST-C5-5000"]
+    },
+    "p2": {
+      "characters": ["ST09-007"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "block",
+      "player": "p2",
+      "blocker": "p2.characters.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": false
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.characters": 1,
+    "p2.hand": 1,
+    "p2.life": 3
+  }
+}

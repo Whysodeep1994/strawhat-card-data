@@ -1,0 +1,46 @@
+{
+  "name": "Gum-Gum Giant Sumo Slap gives +2000 and K.O.s a 2000 power Character",
+  "rules": ["10-2-4"],
+  "setup": {
+    "p1": {
+      "characters": ["TEST-C6-6000", "TEST-FILLER"]
+    },
+    "p2": {
+      "hand": ["ST10-015"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "counterEvent",
+      "player": "p2",
+      "card": "p2.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.leader"]
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p1.characters.1"]
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 4,
+    "p1.characters": 1
+  }
+}

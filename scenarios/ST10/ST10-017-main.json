@@ -1,0 +1,32 @@
+{
+  "name": "Punk Vise rests a cost 2 Character and adds a rested DON!!",
+  "rules": ["10-2-3"],
+  "setup": {
+    "p1": {
+      "hand": ["ST10-017"],
+      "don": {
+        "active": 3,
+        "deck": 2
+      }
+    },
+    "p2": {
+      "characters": ["TEST-GERMA-3000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters.0.rested": true,
+    "p1.donRested": 4
+  }
+}

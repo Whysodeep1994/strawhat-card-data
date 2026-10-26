@@ -36,6 +36,49 @@
     ]
   },
   {
+    "id": "ST11-002",
+    "name": "Uta",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 3,
+    "power": 4000,
+    "counter": 1000,
+    "types": ["Music", "FILM"],
+    "attribute": "Special",
+    "rarity": "SR",
+    "blockIcon": 2,
+    "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)\n[End of Your Turn] You may trash 1 Event from your hand: Set up to 1 of your {FILM} type Characters as active.",
+    "image": "images/ST11-002.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569011",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "endOfYourTurn",
+        "optional": true,
+        "costs": [
+          {
+            "trashFromHand": 1,
+            "filter": {
+              "category": "event"
+            }
+          }
+        ],
+        "steps": [
+          {
+            "do": "setActive",
+            "target": {
+              "side": "self",
+              "filter": {
+                "type": "FILM"
+              },
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "ST11-003",
     "name": "Backlight",
     "category": "event",

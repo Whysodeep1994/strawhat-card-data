@@ -1,0 +1,53 @@
+{
+  "name": "Thunder Bagua gives +4000 and adds a cost 3 Character to its owner's Life",
+  "rules": ["10-2-4"],
+  "setup": {
+    "p1": {
+      "characters": ["TEST-C8-8000", "TEST-PINK"]
+    },
+    "p2": {
+      "hand": ["ST09-015"],
+      "don": {
+        "active": 2
+      },
+      "life": 2
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "counterEvent",
+      "player": "p2",
+      "card": "p2.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.leader"]
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p1.characters.1"]
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 2,
+    "p1.characters": 1,
+    "p1.life": 5
+  }
+}

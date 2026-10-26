@@ -159,6 +159,517 @@
     ]
   },
   {
+    "id": "ST13-004",
+    "name": "Edward.Newgate",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 6,
+    "power": 7000,
+    "counter": 1000,
+    "types": ["The Four Emperors", "Whitebeard Pirates"],
+    "attribute": "Special",
+    "rarity": "C",
+    "blockIcon": 2,
+    "text": "[On Play] Add 1 card from the top of your deck to the top of your Life cards. Then, look at all your Life cards; place 1 card at the top of your deck and place the rest back in your Life area in any order.",
+    "image": "images/ST13-004.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569013",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "deckToLife",
+            "count": 1
+          },
+          {
+            "do": "lifeToDeckTop"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST13-005",
+    "name": "Emporio.Ivankov",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 3,
+    "power": 4000,
+    "counter": 1000,
+    "types": ["Revolutionary Army"],
+    "attribute": "Special",
+    "rarity": "R",
+    "blockIcon": 2,
+    "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)\n[On Play] You may trash 1 card from the top or bottom of your Life cards: Reveal up to 1 Character card with a cost of 5 from your hand and add it to the top of your Life cards face-down.",
+    "image": "images/ST13-005.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569013",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "onPlay",
+        "optional": true,
+        "costs": [
+          {
+            "trashLife": 1,
+            "from": "topOrBottom"
+          }
+        ],
+        "steps": [
+          {
+            "do": "handToLife",
+            "count": 1,
+            "filter": {
+              "category": "character",
+              "costAtLeast": 5,
+              "costAtMost": 5
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST13-006",
+    "name": "Curly.Dadan",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 5,
+    "power": 4000,
+    "counter": 1000,
+    "types": ["Mountain Bandits"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 2,
+    "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)\n[On Play] Play up to 1 each of [Sabo], [Portgas.D.Ace], and [Monkey.D.Luffy] with a cost of 2 from your hand.",
+    "image": "images/ST13-006.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569013",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "playFromHand",
+            "filter": {
+              "category": "character",
+              "costAtLeast": 2,
+              "costAtMost": 2,
+              "anyOf": [
+                {
+                  "name": "Sabo"
+                },
+                {
+                  "name": "Portgas.D.Ace"
+                },
+                {
+                  "name": "Monkey.D.Luffy"
+                }
+              ]
+            },
+            "count": 3,
+            "differentNames": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST13-007",
+    "name": "Sabo",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 2,
+    "power": 2000,
+    "counter": 1000,
+    "types": ["Goa Kingdom"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 2,
+    "text": "[Activate: Main] You may trash this Character: Reveal 1 card from the top of your Life cards. If that card is a [Sabo] with a cost of 5, you may play that card. If you do, up to 1 of your Leader gains +2000 power until the end of your opponent's next turn.",
+    "image": "images/ST13-007.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569013",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "optional": true,
+        "costs": [
+          {
+            "trashThis": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "playFromLifeTop",
+            "filter": {
+              "name": "Sabo",
+              "costAtLeast": 5,
+              "costAtMost": 5
+            },
+            "ifYouDo": [
+              {
+                "do": "powerUp",
+                "target": {
+                  "side": "self",
+                  "zone": "leader",
+                  "upTo": true
+                },
+                "amount": 2000,
+                "duration": "opponentsNextTurn"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST13-008",
+    "name": "Sabo",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 5,
+    "power": 6000,
+    "counter": 1000,
+    "types": ["Dressrosa", "Revolutionary Army"],
+    "attribute": "Special",
+    "rarity": "SR",
+    "blockIcon": 2,
+    "text": "[On Play] You may trash 1 card from the top or bottom of your Life cards: K.O. up to 1 of your opponent's Characters with a cost of 5 or less.",
+    "image": "images/ST13-008.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569013",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "optional": true,
+        "costs": [
+          {
+            "trashLife": 1,
+            "from": "topOrBottom"
+          }
+        ],
+        "steps": [
+          {
+            "do": "ko",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "costAtMost": 5
+              },
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST13-009",
+    "name": "Shanks",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 7,
+    "power": 7000,
+    "types": ["The Four Emperors", "Red-Haired Pirates"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 2,
+    "text": "[On Play] You may turn 1 of your face-up Life cards face-down: If your opponent has 7 or more cards in their hand, trash up to 1 card from the top of your opponent's Life cards.",
+    "image": "images/ST13-009.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569013",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "optional": true,
+        "costs": [
+          {
+            "lifeFaceDown": 1,
+            "from": "topOrBottom"
+          }
+        ],
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "opponentHandAtLeast": 7
+              }
+            ],
+            "steps": [
+              {
+                "do": "trashLife",
+                "side": "opponent",
+                "count": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST13-010",
+    "name": "Portgas.D.Ace",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 2,
+    "power": 2000,
+    "counter": 1000,
+    "types": ["Goa Kingdom"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 2,
+    "text": "[Activate: Main] You may trash this Character: Reveal 1 card from the top of your Life cards. If that card is a [Portgas.D.Ace] with a cost of 5, you may play that card. If you do, up to 1 of your Leader gains +2000 power until the end of your opponent's next turn.",
+    "image": "images/ST13-010.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569013",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "optional": true,
+        "costs": [
+          {
+            "trashThis": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "playFromLifeTop",
+            "filter": {
+              "name": "Portgas.D.Ace",
+              "costAtLeast": 5,
+              "costAtMost": 5
+            },
+            "ifYouDo": [
+              {
+                "do": "powerUp",
+                "target": {
+                  "side": "self",
+                  "zone": "leader",
+                  "upTo": true
+                },
+                "amount": 2000,
+                "duration": "opponentsNextTurn"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST13-011",
+    "name": "Portgas.D.Ace",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 5,
+    "power": 7000,
+    "types": ["Whitebeard Pirates"],
+    "attribute": "Special",
+    "rarity": "SR",
+    "blockIcon": 2,
+    "text": "[On Play] If you have 2 or less Life cards, this Character gains [Rush].\n(This card can attack on the turn in which it is played.)",
+    "image": "images/ST13-011.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569013",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "lifeAtMost": 2
+              }
+            ],
+            "steps": [
+              {
+                "do": "grantKeyword",
+                "target": {
+                  "side": "this"
+                },
+                "keyword": "rush"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST13-012",
+    "name": "Makino",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 1,
+    "counter": 2000,
+    "types": ["Windmill Village"],
+    "attribute": "Wisdom",
+    "rarity": "C",
+    "blockIcon": 2,
+    "text": "[On Play] You may add 1 card from the top or bottom of your Life cards to your hand: Look at all of your Life cards and place them back in your Life area in any order.",
+    "image": "images/ST13-012.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569013",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "optional": true,
+        "costs": [
+          {
+            "lifeToHand": 1,
+            "from": "topOrBottom"
+          }
+        ],
+        "steps": [
+          {
+            "do": "reorderLife",
+            "side": "self"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST13-013",
+    "name": "Monkey.D.Garp",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 1,
+    "power": 2000,
+    "counter": 1000,
+    "types": ["Navy"],
+    "attribute": "Strike",
+    "rarity": "SR",
+    "blockIcon": 2,
+    "text": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 [Sabo], [Portgas.D.Ace], or [Monkey.D.Luffy] with a cost of 5 or less and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+    "image": "images/ST13-013.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569013",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "searchDeck",
+            "look": 5,
+            "take": 1,
+            "filter": {
+              "anyOf": [
+                {
+                  "name": "Sabo"
+                },
+                {
+                  "name": "Portgas.D.Ace"
+                },
+                {
+                  "name": "Monkey.D.Luffy"
+                }
+              ],
+              "costAtMost": 5
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST13-014",
+    "name": "Monkey.D.Luffy",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 2,
+    "power": 2000,
+    "counter": 1000,
+    "types": ["Goa Kingdom"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 2,
+    "text": "[Activate: Main] You may trash this Character: Reveal 1 card from the top of your Life cards. If that card is a [Monkey.D.Luffy] with a cost of 5, you may play that card. If you do, up to 1 of your Leader gains +2000 power until the end of your opponent's next turn.",
+    "image": "images/ST13-014.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569013",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "optional": true,
+        "costs": [
+          {
+            "trashThis": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "playFromLifeTop",
+            "filter": {
+              "name": "Monkey.D.Luffy",
+              "costAtLeast": 5,
+              "costAtMost": 5
+            },
+            "ifYouDo": [
+              {
+                "do": "powerUp",
+                "target": {
+                  "side": "self",
+                  "zone": "leader",
+                  "upTo": true
+                },
+                "amount": 2000,
+                "duration": "opponentsNextTurn"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST13-015",
+    "name": "Monkey.D.Luffy",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 5,
+    "power": 6000,
+    "counter": 1000,
+    "types": ["Supernovas", "Straw Hat Crew"],
+    "attribute": "Strike",
+    "rarity": "SR",
+    "blockIcon": 2,
+    "text": "[Activate: Main] [Once Per Turn] This Character gains +2000 power until the start of your next turn. Then, if you have 1 or more Life cards, draw 1 card and trash 1 card from the top of your Life cards.",
+    "image": "images/ST13-015.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569013",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "oncePerTurn": true,
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "this"
+            },
+            "amount": 2000,
+            "duration": "opponentsNextTurn"
+          },
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "lifeAtLeast": 1
+              }
+            ],
+            "steps": [
+              {
+                "do": "draw",
+                "count": 1
+              },
+              {
+                "do": "trashLife",
+                "side": "self",
+                "count": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "ST13-016",
     "name": "Yamato",
     "category": "character",
@@ -180,6 +691,182 @@
         "steps": [
           {
             "do": "lifeToDeckTop"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST13-017",
+    "name": "Flame Dragon King",
+    "category": "event",
+    "colors": ["yellow"],
+    "cost": 2,
+    "types": ["Dressrosa", "Revolutionary Army"],
+    "rarity": "C",
+    "blockIcon": 2,
+    "text": "[Counter] Up to 1 of your Leader or Character cards gains +4000 power during this battle. Then, look at all your Life cards and place them back in your Life area in any order.",
+    "trigger": "[Trigger] You may add 1 card from the top or bottom of your Life cards to your hand: Add up to 1 card from your hand to the top of your Life cards.",
+    "image": "images/ST13-017.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569013",
+    "effects": [
+      {
+        "timing": "counter",
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "self",
+              "zone": "leaderOrCharacters",
+              "upTo": true
+            },
+            "amount": 4000,
+            "duration": "battle"
+          },
+          {
+            "do": "reorderLife",
+            "side": "self"
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "optional": true,
+        "costs": [
+          {
+            "lifeToHand": 1,
+            "from": "topOrBottom"
+          }
+        ],
+        "steps": [
+          {
+            "do": "handToLife",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST13-018",
+    "name": "Gum-Gum Jet Spear",
+    "category": "event",
+    "colors": ["yellow"],
+    "cost": 1,
+    "types": ["Punk Hazard", "Straw Hat Crew"],
+    "rarity": "C",
+    "blockIcon": 2,
+    "text": "[Counter] Up to 1 of your Leader or Character cards gains +2000 power during this battle. Then, if you have 0 Life cards, draw 1 card.",
+    "trigger": "[Trigger] You may add 1 card from the top or bottom of your Life cards to your hand: Add up to 1 card from your hand to the top of your Life cards.",
+    "image": "images/ST13-018.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569013",
+    "effects": [
+      {
+        "timing": "counter",
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "self",
+              "zone": "leaderOrCharacters",
+              "upTo": true
+            },
+            "amount": 2000,
+            "duration": "battle"
+          },
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "lifeAtMost": 0
+              }
+            ],
+            "steps": [
+              {
+                "do": "draw",
+                "count": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "optional": true,
+        "costs": [
+          {
+            "lifeToHand": 1,
+            "from": "topOrBottom"
+          }
+        ],
+        "steps": [
+          {
+            "do": "handToLife",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST13-019",
+    "name": "The Three Brothers' Bond",
+    "category": "event",
+    "colors": ["yellow"],
+    "cost": 1,
+    "types": ["Goa Kingdom"],
+    "rarity": "C",
+    "blockIcon": 2,
+    "text": "[Main] Look at 5 cards from the top of your deck; reveal up to 1 [Sabo], [Portgas.D.Ace], or [Monkey.D.Luffy] with a cost of 5 or less and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+    "trigger": "[Trigger] Activate this card's [Main] effect.",
+    "image": "images/ST13-019.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569013",
+    "effects": [
+      {
+        "timing": "main",
+        "steps": [
+          {
+            "do": "searchDeck",
+            "look": 5,
+            "take": 1,
+            "filter": {
+              "anyOf": [
+                {
+                  "name": "Sabo"
+                },
+                {
+                  "name": "Portgas.D.Ace"
+                },
+                {
+                  "name": "Monkey.D.Luffy"
+                }
+              ],
+              "costAtMost": 5
+            }
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "searchDeck",
+            "look": 5,
+            "take": 1,
+            "filter": {
+              "anyOf": [
+                {
+                  "name": "Sabo"
+                },
+                {
+                  "name": "Portgas.D.Ace"
+                },
+                {
+                  "name": "Monkey.D.Luffy"
+                }
+              ],
+              "costAtMost": 5
+            }
           }
         ]
       }

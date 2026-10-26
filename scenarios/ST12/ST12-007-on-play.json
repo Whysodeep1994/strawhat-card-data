@@ -1,0 +1,38 @@
+{
+  "name": "Rika sets a <Slash> Character active",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["ST12-007"],
+      "characters": [
+        {
+          "card": "TEST-SLASH-5000",
+          "rested": true
+        }
+      ],
+      "don": {
+        "active": 4
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters.0.rested": false
+  }
+}

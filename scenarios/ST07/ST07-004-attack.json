@@ -1,0 +1,43 @@
+{
+  "name": "Charlotte Snack takes a Life card to gain [Banish] and +1000",
+  "rules": ["10-1-6"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "ST07-004",
+          "don": 1
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": false
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p1.life": 3,
+    "p2.life": 3,
+    "p2.hand": 0,
+    "p2.trash": 1
+  }
+}

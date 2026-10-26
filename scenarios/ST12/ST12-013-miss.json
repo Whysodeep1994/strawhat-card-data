@@ -1,0 +1,31 @@
+{
+  "name": "Zeff puts a card it can't play at the bottom of the deck",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": ["ST12-013"],
+      "deck": ["TEST-C5-5000", "TEST-FILLER", "TEST-FILLER", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.0"]
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p1.characters": 1,
+    "p1.deck.3.cardId": "TEST-C5-5000"
+  }
+}

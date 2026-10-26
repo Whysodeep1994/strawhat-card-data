@@ -1,0 +1,36 @@
+{
+  "name": "Lion's Threat Imperial Earth Bind returns 2 DON!! to K.O. a cost 5 Character",
+  "rules": ["10-2-3"],
+  "setup": {
+    "p1": {
+      "hand": ["ST05-016"],
+      "don": {
+        "active": 3
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C5-5000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 0,
+    "p1.donDeck": 2
+  }
+}

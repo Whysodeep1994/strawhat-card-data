@@ -1,0 +1,47 @@
+{
+  "name": "Flame Dragon King gives +4000 and reorders your Life",
+  "rules": ["10-2-4"],
+  "setup": {
+    "p1": {
+      "characters": ["TEST-C8-8000"]
+    },
+    "p2": {
+      "hand": ["ST13-017"],
+      "don": {
+        "active": 2
+      },
+      "life": ["TEST-FILLER", "TEST-C5-5000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "counterEvent",
+      "player": "p2",
+      "card": "p2.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.leader"]
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.life.1", "p2.life.0"]
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 2,
+    "p2.life.0.cardId": "TEST-C5-5000"
+  }
+}

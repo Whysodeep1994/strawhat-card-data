@@ -1,0 +1,35 @@
+{
+  "name": "Navy HQ rests to give −1 cost with a {Navy} Leader",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "TEST-LEADER-NAVY",
+      "stage": "ST06-017"
+    },
+    "p2": {
+      "characters": ["TEST-C4-4000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.stage",
+      "effect": 1
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "cost.p2.characters.0": 3,
+    "p1.stage.rested": true
+  }
+}

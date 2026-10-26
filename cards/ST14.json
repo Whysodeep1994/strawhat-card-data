@@ -60,6 +60,396 @@
     ]
   },
   {
+    "id": "ST14-002",
+    "name": "Usopp",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 3,
+    "power": 4000,
+    "counter": 1000,
+    "types": ["Straw Hat Crew"],
+    "attribute": "Ranged",
+    "rarity": "C",
+    "blockIcon": 2,
+    "text": "[DON!! x1] [When Attacking] If you have a Character with a cost of 8 or more, K.O. up to 1 of your opponent's Characters with a cost of 4 or less.",
+    "image": "images/ST14-002.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569014",
+    "effects": [
+      {
+        "timing": "whenAttacking",
+        "conditions": [
+          {
+            "donAtLeast": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "count": {
+                  "side": "self",
+                  "filter": {
+                    "costAtLeast": 8
+                  }
+                }
+              }
+            ],
+            "steps": [
+              {
+                "do": "ko",
+                "target": {
+                  "side": "opponent",
+                  "filter": {
+                    "costAtMost": 4
+                  },
+                  "upTo": true
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST14-003",
+    "name": "Sanji",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 5,
+    "power": 6000,
+    "types": ["Straw Hat Crew"],
+    "attribute": "Strike",
+    "rarity": "SR",
+    "blockIcon": 2,
+    "text": "[On Play] If you have a Character with a cost of 6 or more, K.O. up to 1 of your opponent's Characters with a cost of 5 or less.",
+    "image": "images/ST14-003.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569014",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "count": {
+                  "side": "self",
+                  "filter": {
+                    "costAtLeast": 6
+                  }
+                }
+              }
+            ],
+            "steps": [
+              {
+                "do": "ko",
+                "target": {
+                  "side": "opponent",
+                  "filter": {
+                    "costAtMost": 5
+                  },
+                  "upTo": true
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST14-004",
+    "name": "Jinbe",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 3,
+    "power": 4000,
+    "counter": 1000,
+    "types": ["Fish-Man", "The Sun Pirates"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 2,
+    "text": "[Activate: Main] [Once Per Turn] Up to 1 of your black {Straw Hat Crew} type Characters gains +2 cost until the end of your opponent's next turn.",
+    "image": "images/ST14-004.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569014",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "oncePerTurn": true,
+        "steps": [
+          {
+            "do": "costChange",
+            "target": {
+              "side": "self",
+              "filter": {
+                "color": "black",
+                "type": "Straw Hat Crew"
+              },
+              "upTo": true
+            },
+            "amount": 2,
+            "duration": "opponentsNextTurn"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST14-005",
+    "name": "Tony Tony.Chopper",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 4,
+    "power": 6000,
+    "counter": 1000,
+    "types": ["Animal", "Straw Hat Crew"],
+    "attribute": "Wisdom",
+    "rarity": "C",
+    "blockIcon": 2,
+    "text": "",
+    "image": "images/ST14-005.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569014"
+  },
+  {
+    "id": "ST14-006",
+    "name": "Nami",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 3,
+    "power": 2000,
+    "counter": 1000,
+    "types": ["Straw Hat Crew"],
+    "attribute": "Special",
+    "rarity": "SR",
+    "blockIcon": 2,
+    "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)\n[On Play] If you have 6 or less cards in your hand and a Character with a cost of 8 or more, draw 1 card.",
+    "image": "images/ST14-006.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569014",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "handAtMost": 6
+              },
+              {
+                "count": {
+                  "side": "self",
+                  "filter": {
+                    "costAtLeast": 8
+                  }
+                }
+              }
+            ],
+            "steps": [
+              {
+                "do": "draw",
+                "count": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST14-007",
+    "name": "Nico Robin",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 6,
+    "power": 7000,
+    "counter": 1000,
+    "types": ["Straw Hat Crew"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 2,
+    "text": "[On Play]/[When Attacking] If you have a Character with a cost of 8 or more, give up to 1 of your opponent's Characters −5 cost during this turn.",
+    "image": "images/ST14-007.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569014",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "count": {
+                  "side": "self",
+                  "filter": {
+                    "costAtLeast": 8
+                  }
+                }
+              }
+            ],
+            "steps": [
+              {
+                "do": "costChange",
+                "target": {
+                  "side": "opponent",
+                  "upTo": true
+                },
+                "amount": -5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "timing": "whenAttacking",
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "count": {
+                  "side": "self",
+                  "filter": {
+                    "costAtLeast": 8
+                  }
+                }
+              }
+            ],
+            "steps": [
+              {
+                "do": "costChange",
+                "target": {
+                  "side": "opponent",
+                  "upTo": true
+                },
+                "amount": -5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST14-008",
+    "name": "Haredas",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 1,
+    "counter": 2000,
+    "types": ["Sky Island"],
+    "attribute": "Wisdom",
+    "rarity": "C",
+    "blockIcon": 2,
+    "text": "[Activate: Main] You may rest this Character: Up to 1 of your black {Straw Hat Crew} type Characters gains +2 cost until the end of your opponent's next turn. Then, if you have a Character with a cost of 8 or more, draw 1 card and trash 1 card from your hand.",
+    "image": "images/ST14-008.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569014",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "optional": true,
+        "costs": [
+          {
+            "restThis": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "costChange",
+            "target": {
+              "side": "self",
+              "filter": {
+                "color": "black",
+                "type": "Straw Hat Crew"
+              },
+              "upTo": true
+            },
+            "amount": 2,
+            "duration": "opponentsNextTurn"
+          },
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "count": {
+                  "side": "self",
+                  "filter": {
+                    "costAtLeast": 8
+                  }
+                }
+              }
+            ],
+            "steps": [
+              {
+                "do": "draw",
+                "count": 1
+              },
+              {
+                "do": "trashFromHand",
+                "count": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST14-009",
+    "name": "Franky",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 5,
+    "power": 6000,
+    "counter": 1000,
+    "types": ["Straw Hat Crew"],
+    "attribute": "Special",
+    "rarity": "C",
+    "blockIcon": 2,
+    "text": "[DON!! x1] [Opponent's Turn] If you have a Character with a cost of 6 or more, this Character cannot be K.O.'d by your opponent's effects and gains +2000 power.",
+    "image": "images/ST14-009.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569014",
+    "effects": [
+      {
+        "timing": "permanent",
+        "conditions": [
+          {
+            "donAtLeast": 1
+          },
+          {
+            "opponentsTurn": true
+          },
+          {
+            "count": {
+              "side": "self",
+              "filter": {
+                "costAtLeast": 6
+              }
+            }
+          }
+        ],
+        "steps": [
+          {
+            "do": "grantStatus",
+            "target": {
+              "side": "this"
+            },
+            "status": "cannotBeKOdByOpponentsEffects"
+          },
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "this"
+            },
+            "amount": 2000
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "ST14-010",
     "name": "Brook",
     "category": "character",
@@ -74,5 +464,346 @@
     "text": "",
     "image": "images/ST14-010.png",
     "source": "https://en.onepiece-cardgame.com/cardlist/?series=569014"
+  },
+  {
+    "id": "ST14-011",
+    "name": "Heracles",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 1,
+    "power": 2000,
+    "counter": 2000,
+    "types": ["Bowin Island"],
+    "attribute": "Wisdom",
+    "rarity": "C",
+    "blockIcon": 2,
+    "text": "[Activate: Main] You may rest this Character: Up to 1 of your black {Straw Hat Crew} type Characters gains +2 cost until the end of your opponent's next turn.",
+    "image": "images/ST14-011.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569014",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "optional": true,
+        "costs": [
+          {
+            "restThis": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "costChange",
+            "target": {
+              "side": "self",
+              "filter": {
+                "color": "black",
+                "type": "Straw Hat Crew"
+              },
+              "upTo": true
+            },
+            "amount": 2,
+            "duration": "opponentsNextTurn"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST14-012",
+    "name": "Monkey.D.Luffy",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 8,
+    "power": 10000,
+    "types": ["Straw Hat Crew"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 2,
+    "text": "If you have a Character with a cost of 10 or more, this Character gains [Rush].\n(This card can attack on the turn in which it is played.)",
+    "image": "images/ST14-012.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569014",
+    "effects": [
+      {
+        "timing": "permanent",
+        "conditions": [
+          {
+            "count": {
+              "side": "self",
+              "filter": {
+                "costAtLeast": 10
+              }
+            }
+          }
+        ],
+        "steps": [
+          {
+            "do": "grantKeyword",
+            "target": {
+              "side": "this"
+            },
+            "keyword": "rush"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST14-013",
+    "name": "Roronoa Zoro",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 6,
+    "power": 8000,
+    "counter": 1000,
+    "types": ["Straw Hat Crew"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 2,
+    "text": "",
+    "image": "images/ST14-013.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569014"
+  },
+  {
+    "id": "ST14-014",
+    "name": "Gum-Gum Giant Rifle",
+    "category": "event",
+    "colors": ["black"],
+    "cost": 1,
+    "types": ["Straw Hat Crew"],
+    "rarity": "C",
+    "blockIcon": 2,
+    "text": "[Counter] If you have a Character with a cost of 8 or more, up to 1 of your Leader or Character cards gains +3000 power during this battle.",
+    "trigger": "[Trigger] Add up to 1 of your Character cards with a cost of 2 or less from your trash to your hand.",
+    "image": "images/ST14-014.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569014",
+    "effects": [
+      {
+        "timing": "counter",
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "count": {
+                  "side": "self",
+                  "filter": {
+                    "costAtLeast": 8
+                  }
+                }
+              }
+            ],
+            "steps": [
+              {
+                "do": "powerUp",
+                "target": {
+                  "side": "self",
+                  "zone": "leaderOrCharacters",
+                  "upTo": true
+                },
+                "amount": 3000,
+                "duration": "battle"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "trashToHand",
+            "filter": {
+              "category": "character",
+              "costAtMost": 2
+            },
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST14-015",
+    "name": "Gum-Gum Diable Three-Swords Style Mouten Jet Six Hundred Pound Phoenix Cannon",
+    "category": "event",
+    "colors": ["black"],
+    "cost": 2,
+    "types": ["Straw Hat Crew"],
+    "rarity": "C",
+    "blockIcon": 2,
+    "text": "[Main] Up to 1 of your Leader or Character cards gains +3000 power during this turn. Then, if you have a Character with a cost of 8 or more, K.O. up to 1 of your opponent's Characters with a cost of 2 or less.",
+    "trigger": "[Trigger] If you have a Character with a cost of 8 or more, K.O. up to 1 of your opponent's Characters with a cost of 5 or less.",
+    "image": "images/ST14-015.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569014",
+    "effects": [
+      {
+        "timing": "main",
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "self",
+              "zone": "leaderOrCharacters",
+              "upTo": true
+            },
+            "amount": 3000
+          },
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "count": {
+                  "side": "self",
+                  "filter": {
+                    "costAtLeast": 8
+                  }
+                }
+              }
+            ],
+            "steps": [
+              {
+                "do": "ko",
+                "target": {
+                  "side": "opponent",
+                  "filter": {
+                    "costAtMost": 2
+                  },
+                  "upTo": true
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "count": {
+                  "side": "self",
+                  "filter": {
+                    "costAtLeast": 8
+                  }
+                }
+              }
+            ],
+            "steps": [
+              {
+                "do": "ko",
+                "target": {
+                  "side": "opponent",
+                  "filter": {
+                    "costAtMost": 5
+                  },
+                  "upTo": true
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST14-016",
+    "name": "I Have My Crew!!",
+    "category": "event",
+    "colors": ["black"],
+    "cost": 1,
+    "types": ["Straw Hat Crew"],
+    "rarity": "C",
+    "blockIcon": 2,
+    "text": "[Main] Draw 1 card. Then, up to 1 of your Characters gains +3 cost until the end of your opponent's next turn.",
+    "trigger": "[Trigger] K.O. up to 1 of your opponent's Characters with a cost of 3 or less.",
+    "image": "images/ST14-016.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569014",
+    "effects": [
+      {
+        "timing": "main",
+        "steps": [
+          {
+            "do": "draw",
+            "count": 1
+          },
+          {
+            "do": "costChange",
+            "target": {
+              "side": "self",
+              "upTo": true
+            },
+            "amount": 3,
+            "duration": "opponentsNextTurn"
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "ko",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "costAtMost": 3
+              },
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST14-017",
+    "name": "Thousand Sunny",
+    "category": "stage",
+    "colors": ["black"],
+    "cost": 1,
+    "types": ["Straw Hat Crew"],
+    "rarity": "C",
+    "blockIcon": 2,
+    "text": "All of your black {Straw Hat Crew} type Characters gain +1 cost.\n[On Play] If your Leader has the {Straw Hat Crew} type, draw 1 card.",
+    "image": "images/ST14-017.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569014",
+    "effects": [
+      {
+        "timing": "permanent",
+        "steps": [
+          {
+            "do": "costChange",
+            "target": {
+              "side": "self",
+              "filter": {
+                "color": "black",
+                "type": "Straw Hat Crew"
+              },
+              "count": 99
+            },
+            "amount": 1
+          }
+        ]
+      },
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "leaderHasType": "Straw Hat Crew"
+              }
+            ],
+            "steps": [
+              {
+                "do": "draw",
+                "count": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
   }
 ]

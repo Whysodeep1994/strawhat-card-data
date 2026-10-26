@@ -1,0 +1,34 @@
+{
+  "name": "Tashigi rests to give −2 cost",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["ST06-006"]
+    },
+    "p2": {
+      "characters": ["TEST-C4-4000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "cost.p2.characters.0": 2,
+    "p1.characters.0.rested": true
+  }
+}

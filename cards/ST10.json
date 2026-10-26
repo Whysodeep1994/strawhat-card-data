@@ -137,5 +137,593 @@
         ]
       }
     ]
+  },
+  {
+    "id": "ST10-004",
+    "name": "Sanji",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 6,
+    "power": 6000,
+    "counter": 1000,
+    "types": ["Straw Hat Crew"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 2,
+    "text": "[On Play] If your opponent has a Character with 5000 or more power, this Character gains [Rush] during this turn.\n(This card can attack on the turn in which it is played.)",
+    "image": "images/ST10-004.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569010",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "count": {
+                  "side": "opponent",
+                  "filter": {
+                    "powerAtLeast": 5000
+                  }
+                }
+              }
+            ],
+            "steps": [
+              {
+                "do": "grantKeyword",
+                "target": {
+                  "side": "this"
+                },
+                "keyword": "rush"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST10-005",
+    "name": "Jinbe",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 2,
+    "power": 2000,
+    "counter": 2000,
+    "types": ["Fish-Man", "Straw Hat Crew"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 2,
+    "text": "[DON!! x1] [When Attacking] Give up to 1 of your opponent's Characters −2000 power during this turn.",
+    "image": "images/ST10-005.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569010",
+    "effects": [
+      {
+        "timing": "whenAttacking",
+        "conditions": [
+          {
+            "donAtLeast": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "opponent",
+              "upTo": true
+            },
+            "amount": -2000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST10-006",
+    "name": "Monkey.D.Luffy",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 10,
+    "power": 11000,
+    "types": ["Straw Hat Crew"],
+    "attribute": "Strike",
+    "rarity": "SR",
+    "blockIcon": 2,
+    "text": "[Rush] (This card can attack on the turn in which it is played.)\n[Once Per Turn] When your opponent activates a [Blocker], K.O. up to 1 of your opponent's Characters with 8000 power or less.",
+    "image": "images/ST10-006.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569010",
+    "keywords": ["rush"],
+    "effects": [
+      {
+        "timing": "onOpponentsBlock",
+        "oncePerTurn": true,
+        "steps": [
+          {
+            "do": "ko",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "powerAtMost": 8000
+              },
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST10-007",
+    "name": "Killer",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 5,
+    "power": 6000,
+    "counter": 1000,
+    "types": ["Kid Pirates"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 2,
+    "text": "[Your Turn] [Once Per Turn] When a DON!! card on your field is returned to your DON!! deck, K.O. up to 1 of your opponent's rested Characters with a cost of 3 or less.",
+    "image": "images/ST10-007.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569010",
+    "effects": [
+      {
+        "timing": "donReturned",
+        "conditions": [
+          {
+            "yourTurn": true
+          }
+        ],
+        "oncePerTurn": true,
+        "steps": [
+          {
+            "do": "ko",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "rested": true,
+                "costAtMost": 3
+              },
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST10-008",
+    "name": "Shachi & Penguin",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 4,
+    "power": 5000,
+    "counter": 2000,
+    "types": ["Heart Pirates"],
+    "attribute": "Ranged",
+    "rarity": "C",
+    "blockIcon": 2,
+    "text": "[On Play] If you have 3 or less DON!! cards on your field, add up to 2 DON!! cards from your DON!! deck and rest them.",
+    "image": "images/ST10-008.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569010",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "donOnFieldAtMost": 3
+              }
+            ],
+            "steps": [
+              {
+                "do": "addDon",
+                "count": 2,
+                "rested": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST10-009",
+    "name": "Jean Bart",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 4,
+    "power": 5000,
+    "counter": 1000,
+    "types": ["Heart Pirates"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 2,
+    "text": "[On Play] ➀ (You may rest the specified number of DON!! cards in your cost area.): Add up to 1 DON!! card from your DON!! deck and set it as active.",
+    "image": "images/ST10-009.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569010",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "optional": true,
+        "costs": [
+          {
+            "restDon": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "addDon",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST10-010",
+    "name": "Trafalgar Law",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 4,
+    "power": 5000,
+    "counter": 1000,
+    "types": ["Heart Pirates"],
+    "attribute": "Slash",
+    "rarity": "SR",
+    "blockIcon": 2,
+    "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)\n[On Play] DON!! −1 (You may return the specified number of DON!! cards from your field to your DON!! deck.): If your opponent has 7 or more cards in their hand, trash 2 cards from your opponent's hand.",
+    "image": "images/ST10-010.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569010",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "onPlay",
+        "optional": true,
+        "costs": [
+          {
+            "donMinus": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "opponentHandAtLeast": 7
+              }
+            ],
+            "steps": [
+              {
+                "do": "opponentTrashesFromHand",
+                "count": 2
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST10-011",
+    "name": "Heat",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 3,
+    "power": 4000,
+    "counter": 1000,
+    "types": ["Kid Pirates"],
+    "attribute": "Special",
+    "rarity": "C",
+    "blockIcon": 2,
+    "text": "[Your Turn] [Once Per Turn] When a DON!! card on your field is returned to your DON!! deck, this Character gains +2000 power until the start of your next turn.",
+    "image": "images/ST10-011.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569010",
+    "effects": [
+      {
+        "timing": "donReturned",
+        "conditions": [
+          {
+            "yourTurn": true
+          }
+        ],
+        "oncePerTurn": true,
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "this"
+            },
+            "amount": 2000,
+            "duration": "opponentsNextTurn"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST10-012",
+    "name": "Bepo",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 4,
+    "power": 5000,
+    "counter": 1000,
+    "types": ["Minks", "Heart Pirates"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 2,
+    "text": "[On Play]/[When Attacking] If your opponent has more DON!! cards on their field than you, add up to 1 DON!! card from your DON!! deck and rest it.",
+    "image": "images/ST10-012.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569010",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "opponentHasMoreDon": true
+              }
+            ],
+            "steps": [
+              {
+                "do": "addDon",
+                "count": 1,
+                "rested": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "timing": "whenAttacking",
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "opponentHasMoreDon": true
+              }
+            ],
+            "steps": [
+              {
+                "do": "addDon",
+                "count": 1,
+                "rested": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST10-013",
+    "name": "Eustass\"Captain\"Kid",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 7,
+    "power": 8000,
+    "types": ["Kid Pirates"],
+    "attribute": "Special",
+    "rarity": "SR",
+    "blockIcon": 2,
+    "text": "[On Play]/[When Attacking] DON!! −1 (You may return the specified number of DON!! cards from your field to your DON!! deck.): Up to 1 of your Leader gains +1000 power until the start of your next turn.",
+    "image": "images/ST10-013.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569010",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "optional": true,
+        "costs": [
+          {
+            "donMinus": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "self",
+              "zone": "leader",
+              "upTo": true
+            },
+            "amount": 1000,
+            "duration": "opponentsNextTurn"
+          }
+        ]
+      },
+      {
+        "timing": "whenAttacking",
+        "optional": true,
+        "costs": [
+          {
+            "donMinus": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "self",
+              "zone": "leader",
+              "upTo": true
+            },
+            "amount": 1000,
+            "duration": "opponentsNextTurn"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST10-014",
+    "name": "Wire",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 3,
+    "power": 3000,
+    "counter": 1000,
+    "types": ["Kid Pirates"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 2,
+    "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)\n[Once Per Turn] When a DON!! card on your field is returned to your DON!! deck, draw 1 card and trash 1 card from your hand.",
+    "image": "images/ST10-014.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569010",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "donReturned",
+        "oncePerTurn": true,
+        "steps": [
+          {
+            "do": "draw",
+            "count": 1
+          },
+          {
+            "do": "trashFromHand",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST10-015",
+    "name": "Gum-Gum Giant Sumo Slap",
+    "category": "event",
+    "colors": ["red"],
+    "cost": 1,
+    "types": ["Straw Hat Crew"],
+    "rarity": "C",
+    "blockIcon": 2,
+    "text": "[Counter] Up to 1 of your Leader or Character cards gains +2000 power during this battle, and K.O. up to 1 of your opponent's Characters with 2000 power or less.",
+    "image": "images/ST10-015.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569010",
+    "effects": [
+      {
+        "timing": "counter",
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "self",
+              "zone": "leaderOrCharacters",
+              "upTo": true
+            },
+            "amount": 2000,
+            "duration": "battle"
+          },
+          {
+            "do": "ko",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "powerAtMost": 2000
+              },
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST10-016",
+    "name": "Gum-Gum Kong Gatling",
+    "category": "event",
+    "colors": ["red"],
+    "cost": 5,
+    "types": ["Straw Hat Crew"],
+    "rarity": "C",
+    "blockIcon": 2,
+    "text": "[Main] K.O. up to 1 of your opponent's Characters with 7000 power or less.",
+    "trigger": "[Trigger] Up to 1 of your Leader gains +1000 power until the end of your next turn.",
+    "image": "images/ST10-016.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569010",
+    "effects": [
+      {
+        "timing": "main",
+        "steps": [
+          {
+            "do": "ko",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "powerAtMost": 7000
+              },
+              "upTo": true
+            }
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "self",
+              "zone": "leader",
+              "upTo": true
+            },
+            "amount": 1000,
+            "duration": "yourNextTurn"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST10-017",
+    "name": "Punk Vise",
+    "category": "event",
+    "colors": ["purple"],
+    "cost": 3,
+    "types": ["Kid Pirates"],
+    "rarity": "C",
+    "blockIcon": 2,
+    "text": "[Main] Rest up to 1 of your opponent's Characters with a cost of 2 or less, and add up to 1 DON!! card from your DON!! deck and rest it.",
+    "trigger": "[Trigger] Add up to 1 DON!! card from your DON!! deck and set it as active.",
+    "image": "images/ST10-017.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569010",
+    "effects": [
+      {
+        "timing": "main",
+        "steps": [
+          {
+            "do": "rest",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "costAtMost": 2
+              },
+              "upTo": true
+            }
+          },
+          {
+            "do": "addDon",
+            "count": 1,
+            "rested": true
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "addDon",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 ]

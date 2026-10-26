@@ -1,0 +1,24 @@
+{
+  "name": "Eustass\"Captain\"Kid sets itself active at the end of your turn",
+  "rules": ["10-2-7"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "ST02-013",
+          "don": 1,
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "endTurn",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "p1.characters.0.rested": false
+  }
+}

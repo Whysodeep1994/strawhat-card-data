@@ -1,0 +1,38 @@
+{
+  "name": "Haredas gives +2 cost, then draws 1 and trashes 1 with a cost 8 Character out",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["ST14-008", "ST14-012"],
+      "hand": ["TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.1"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "cost.p1.characters.1": 10,
+    "p1.hand": 1,
+    "p1.trash": 1
+  }
+}

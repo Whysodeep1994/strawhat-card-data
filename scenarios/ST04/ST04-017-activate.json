@@ -1,0 +1,30 @@
+{
+  "name": "Onigashima Island rests to add a rested DON!!",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "TEST-LEADER-AKP",
+      "stage": "ST04-017",
+      "don": {
+        "deck": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.stage",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.donRested": 1,
+    "p1.stage.rested": true
+  }
+}

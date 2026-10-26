@@ -1,0 +1,33 @@
+{
+  "name": "Gild Tesoro returns 2 DON!! to draw 2 when attacking",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": ["ST05-006"],
+      "don": {
+        "active": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p1.hand": 2,
+    "p1.donDeck": 2
+  }
+}

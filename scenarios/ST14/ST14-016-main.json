@@ -1,0 +1,29 @@
+{
+  "name": "I Have My Crew!! draws 1 and gives +3 cost",
+  "rules": ["10-2-3"],
+  "setup": {
+    "p1": {
+      "hand": ["ST14-016"],
+      "characters": ["TEST-C5-5000"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "cost.p1.characters.0": 8
+  }
+}

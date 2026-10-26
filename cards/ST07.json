@@ -48,6 +48,114 @@
     ]
   },
   {
+    "id": "ST07-002",
+    "name": "Charlotte Anana",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 1,
+    "power": 3000,
+    "counter": 1000,
+    "types": ["Big Mom Pirates"],
+    "attribute": "Wisdom",
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "",
+    "image": "images/ST07-002.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569007"
+  },
+  {
+    "id": "ST07-003",
+    "name": "Charlotte Katakuri",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 4,
+    "power": 6000,
+    "types": ["Big Mom Pirates"],
+    "attribute": "Strike",
+    "rarity": "SR",
+    "blockIcon": 1,
+    "text": "[On Play] Look at up to 1 card from the top of your or your opponent's Life cards, and place it at the top or bottom of the Life cards. Then, if you have less Life cards than your opponent, this Character gains [Rush] during this turn.\n(This card can attack on the turn in which it is played.)",
+    "image": "images/ST07-003.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569007",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "arrangeLife"
+          },
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "lifeLessThanOpponents": true
+              }
+            ],
+            "steps": [
+              {
+                "do": "grantKeyword",
+                "target": {
+                  "side": "this"
+                },
+                "keyword": "rush"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST07-004",
+    "name": "Charlotte Snack",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 5,
+    "power": 6000,
+    "types": ["Big Mom Pirates"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "[DON!! x1] [When Attacking] You may add 1 card from the top or bottom of your Life cards to your hand: This Character gains [Banish] and +1000 power during this battle.\n(When this card deals damage, the target card is trashed without activating its Trigger.)",
+    "image": "images/ST07-004.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569007",
+    "effects": [
+      {
+        "timing": "whenAttacking",
+        "conditions": [
+          {
+            "donAtLeast": 1
+          }
+        ],
+        "optional": true,
+        "costs": [
+          {
+            "lifeToHand": 1,
+            "from": "topOrBottom"
+          }
+        ],
+        "steps": [
+          {
+            "do": "grantKeyword",
+            "target": {
+              "side": "this"
+            },
+            "keyword": "banish",
+            "duration": "battle"
+          },
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "this"
+            },
+            "amount": 1000,
+            "duration": "battle"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "ST07-005",
     "name": "Charlotte Daifuku",
     "category": "character",
@@ -87,6 +195,297 @@
     ]
   },
   {
+    "id": "ST07-006",
+    "name": "Charlotte Flampe",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 2,
+    "power": 4000,
+    "counter": 1000,
+    "types": ["Big Mom Pirates"],
+    "attribute": "Ranged",
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "",
+    "image": "images/ST07-006.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569007"
+  },
+  {
+    "id": "ST07-007",
+    "name": "Charlotte Brulee",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 3,
+    "power": 1000,
+    "counter": 1000,
+    "types": ["Big Mom Pirates"],
+    "attribute": "Special",
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)",
+    "trigger": "[Trigger] Play this card.",
+    "image": "images/ST07-007.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569007",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "playThis"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST07-008",
+    "name": "Charlotte Pudding",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 2,
+    "power": 3000,
+    "counter": 2000,
+    "types": ["Big Mom Pirates"],
+    "attribute": "Wisdom",
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "[On Play] Look at up to 1 card from the top of your or your opponent's Life cards, and place it at the top or bottom of the Life cards.",
+    "image": "images/ST07-008.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569007",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "arrangeLife"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST07-009",
+    "name": "Charlotte Mont-d'or",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 3,
+    "power": 4000,
+    "counter": 1000,
+    "types": ["Big Mom Pirates"],
+    "attribute": "Special",
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "[Activate: Main] You may rest this Character and add 1 card from the top or bottom of your Life cards to your hand: K.O. up to 1 of your opponent's Characters with a cost of 3 or less.",
+    "trigger": "[Trigger] You may trash 1 card from your hand: Play this card.",
+    "image": "images/ST07-009.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569007",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "optional": true,
+        "costs": [
+          {
+            "restThis": true
+          },
+          {
+            "lifeToHand": 1,
+            "from": "topOrBottom"
+          }
+        ],
+        "steps": [
+          {
+            "do": "ko",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "costAtMost": 3
+              },
+              "upTo": true
+            }
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "optional": true,
+        "costs": [
+          {
+            "trashFromHand": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "playThis"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST07-010",
+    "name": "Charlotte Linlin",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 7,
+    "power": 8000,
+    "types": ["The Four Emperors", "Big Mom Pirates"],
+    "attribute": "Special",
+    "rarity": "SR",
+    "blockIcon": 1,
+    "text": "[On Play] Your opponent chooses one:\n- Trash 1 card from the top of your opponent's Life cards.\n- Add 1 card from the top of your deck to the top of your Life cards.",
+    "image": "images/ST07-010.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569007",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "chooseOne",
+            "chooser": "opponent",
+            "options": [
+              {
+                "label": "Trash 1 card from the top of your Life cards",
+                "steps": [
+                  {
+                    "do": "trashLife",
+                    "side": "opponent",
+                    "count": 1
+                  }
+                ]
+              },
+              {
+                "label": "Your opponent adds 1 card from their deck to their Life",
+                "steps": [
+                  {
+                    "do": "deckToLife",
+                    "count": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST07-011",
+    "name": "Zeus",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 3,
+    "power": 3000,
+    "counter": 1000,
+    "types": ["Big Mom Pirates", "Homies"],
+    "attribute": "Special",
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "[Activate: Main] You may rest this Character: Up to 1 of your [Charlotte Linlin] cards gains [Banish] during this turn.\n(When this card deals damage, the target card is trashed without activating its Trigger.)",
+    "trigger": "[Trigger] Play this card.",
+    "image": "images/ST07-011.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569007",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "optional": true,
+        "costs": [
+          {
+            "restThis": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "grantKeyword",
+            "target": {
+              "side": "self",
+              "filter": {
+                "name": "Charlotte Linlin"
+              },
+              "zone": "leaderOrCharacters",
+              "upTo": true
+            },
+            "keyword": "banish"
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "playThis"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST07-012",
+    "name": "Baron Tamago",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 4,
+    "power": 6000,
+    "counter": 1000,
+    "types": ["Big Mom Pirates"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "",
+    "image": "images/ST07-012.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569007"
+  },
+  {
+    "id": "ST07-013",
+    "name": "Prometheus",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 3,
+    "power": 3000,
+    "counter": 1000,
+    "types": ["Big Mom Pirates", "Homies"],
+    "attribute": "Special",
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "[Activate: Main] You may rest this Character: Up to 1 of your [Charlotte Linlin] cards gains [Double Attack] during this turn.\n(This card deals 2 damage.)",
+    "trigger": "[Trigger] Play this card.",
+    "image": "images/ST07-013.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569007",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "optional": true,
+        "costs": [
+          {
+            "restThis": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "grantKeyword",
+            "target": {
+              "side": "self",
+              "filter": {
+                "name": "Charlotte Linlin"
+              },
+              "zone": "leaderOrCharacters",
+              "upTo": true
+            },
+            "keyword": "doubleAttack"
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "playThis"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "ST07-014",
     "name": "Pekoms",
     "category": "character",
@@ -101,5 +500,170 @@
     "text": "",
     "image": "images/ST07-014.png",
     "source": "https://en.onepiece-cardgame.com/cardlist/?series=569007"
+  },
+  {
+    "id": "ST07-015",
+    "name": "Soul Pocus",
+    "category": "event",
+    "colors": ["yellow"],
+    "cost": 5,
+    "types": ["The Four Emperors", "Big Mom Pirates"],
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "[Main] Your opponent chooses one:\n- Trash 1 card from the top of your opponent's Life cards.\n- Add 1 card from the top of your deck to the top of your Life cards.",
+    "trigger": "[Trigger] Activate this card's [Main] effect.",
+    "image": "images/ST07-015.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569007",
+    "effects": [
+      {
+        "timing": "main",
+        "steps": [
+          {
+            "do": "chooseOne",
+            "chooser": "opponent",
+            "options": [
+              {
+                "label": "Trash 1 card from the top of your Life cards",
+                "steps": [
+                  {
+                    "do": "trashLife",
+                    "side": "opponent",
+                    "count": 1
+                  }
+                ]
+              },
+              {
+                "label": "Your opponent adds 1 card from their deck to their Life",
+                "steps": [
+                  {
+                    "do": "deckToLife",
+                    "count": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "chooseOne",
+            "chooser": "opponent",
+            "options": [
+              {
+                "label": "Trash 1 card from the top of your Life cards",
+                "steps": [
+                  {
+                    "do": "trashLife",
+                    "side": "opponent",
+                    "count": 1
+                  }
+                ]
+              },
+              {
+                "label": "Your opponent adds 1 card from their deck to their Life",
+                "steps": [
+                  {
+                    "do": "deckToLife",
+                    "count": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST07-016",
+    "name": "Power Mochi",
+    "category": "event",
+    "colors": ["yellow"],
+    "cost": 1,
+    "types": ["Big Mom Pirates"],
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "[Counter] Look at up to 1 card from the top of your or your opponent's Life cards, and place it at the top or bottom of the Life cards. Then, up to 1 of your Leader or Character cards gains +2000 power during this battle.",
+    "trigger": "[Trigger] Draw 1 card, look at up to 1 card from the top of your or your opponent's Life cards, and place it at the top or bottom of the Life cards.",
+    "image": "images/ST07-016.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569007",
+    "effects": [
+      {
+        "timing": "counter",
+        "steps": [
+          {
+            "do": "arrangeLife"
+          },
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "self",
+              "zone": "leaderOrCharacters",
+              "upTo": true
+            },
+            "amount": 2000,
+            "duration": "battle"
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "draw",
+            "count": 1
+          },
+          {
+            "do": "arrangeLife"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST07-017",
+    "name": "Queen Mama Chanter",
+    "category": "stage",
+    "colors": ["yellow"],
+    "cost": 2,
+    "types": ["Big Mom Pirates", "Homies"],
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "[Activate: Main] You may rest this Stage and add 1 card from the top or bottom of your Life cards to your hand: Add up to 1 of your Characters with a cost of 3 to the top of the owner's Life cards face-up.",
+    "image": "images/ST07-017.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569007",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "optional": true,
+        "costs": [
+          {
+            "restThis": true
+          },
+          {
+            "lifeToHand": 1,
+            "from": "topOrBottom"
+          }
+        ],
+        "steps": [
+          {
+            "do": "characterToLife",
+            "target": {
+              "side": "self",
+              "filter": {
+                "costAtLeast": 3,
+                "costAtMost": 3
+              },
+              "upTo": true
+            },
+            "faceUp": true,
+            "top": true
+          }
+        ]
+      }
+    ]
   }
 ]

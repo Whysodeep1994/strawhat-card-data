@@ -1,0 +1,44 @@
+{
+  "name": "Trafalgar Law returns a DON!! to trash 2 from a 7 card hand",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["ST10-010"],
+      "don": {
+        "active": 4
+      }
+    },
+    "p2": {
+      "hand": [
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER"
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.hand.0", "p2.hand.1"]
+    }
+  ],
+  "expect": {
+    "p2.hand": 5,
+    "p2.trash": 2
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "name": "Douglas Bullet returns 4 DON!! to rest 2 Characters and gain [Double Attack]",
+  "rules": ["10-2-2", "10-1-2"],
+  "setup": {
+    "p1": {
+      "characters": ["ST05-011"],
+      "don": {
+        "active": 4
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C6-6000", "TEST-C4-4000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0", "p2.characters.1"]
+    },
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.characters.0.rested": true,
+    "p2.characters.1.rested": true,
+    "p2.life": 2
+  }
+}

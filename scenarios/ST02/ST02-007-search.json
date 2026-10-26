@@ -1,0 +1,43 @@
+{
+  "name": "Jewelry Bonney rests to find a {Supernovas} card",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["ST02-007"],
+      "don": {
+        "active": 1
+      },
+      "deck": [
+        "TEST-FILLER",
+        "ST02-003",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER"
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.1"]
+    }
+  ],
+  "expect": {
+    "p1.hand.0.cardId": "ST02-003",
+    "p1.characters.0.rested": true
+  }
+}

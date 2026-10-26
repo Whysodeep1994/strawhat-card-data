@@ -1,0 +1,33 @@
+{
+  "name": "Queen returns a DON!! to draw 2 and trash 1",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["ST04-005"],
+      "don": {
+        "active": 5
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p1.trash": 1
+  }
+}

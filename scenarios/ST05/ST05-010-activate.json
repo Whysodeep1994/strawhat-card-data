@@ -1,0 +1,28 @@
+{
+  "name": "Zephyr returns a DON!! to gain +2000",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["ST05-010"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 2
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "power.p1.characters.0": 10000
+  }
+}

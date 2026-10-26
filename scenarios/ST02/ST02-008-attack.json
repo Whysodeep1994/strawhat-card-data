@@ -1,0 +1,34 @@
+{
+  "name": "Scratchmen Apoo rests 1 of the opponent's DON!! when attacking",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "ST02-008",
+          "don": 1
+        }
+      ]
+    },
+    "p2": {
+      "don": {
+        "active": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.donRested": 1
+  }
+}

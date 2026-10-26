@@ -1,0 +1,35 @@
+{
+  "name": "Monkey.D.Garp finds a cost 5 Sabo",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["ST13-013"],
+      "don": {
+        "active": 1
+      },
+      "deck": [
+        "TEST-FILLER",
+        "ST13-008",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER"
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.1"]
+    }
+  ],
+  "expect": {
+    "p1.hand.0.cardId": "ST13-008"
+  }
+}

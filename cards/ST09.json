@@ -38,5 +38,499 @@
         ]
       }
     ]
+  },
+  {
+    "id": "ST09-002",
+    "name": "Uzuki Tempura",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 4,
+    "power": 5000,
+    "counter": 1000,
+    "types": ["Land of Wano"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "",
+    "trigger": "[Trigger] Rest up to 1 of your opponent's Characters with a cost of 2 or less and add this card to your hand.",
+    "image": "images/ST09-002.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569009",
+    "effects": [
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "rest",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "costAtMost": 2
+              },
+              "upTo": true
+            }
+          },
+          {
+            "do": "addThisToHand"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST09-003",
+    "name": "Ulti",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 4,
+    "power": 6000,
+    "counter": 1000,
+    "types": ["Animal Kingdom Pirates"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "",
+    "image": "images/ST09-003.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569009"
+  },
+  {
+    "id": "ST09-004",
+    "name": "Kaido",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 4,
+    "power": 5000,
+    "counter": 1000,
+    "types": ["The Four Emperors", "Animal Kingdom Pirates"],
+    "attribute": "Special",
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "[DON!! x1] If you have 2 or less Life cards, this Character cannot be K.O.'d in battle.",
+    "image": "images/ST09-004.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569009",
+    "effects": [
+      {
+        "timing": "permanent",
+        "conditions": [
+          {
+            "donAtLeast": 1
+          },
+          {
+            "lifeAtMost": 2
+          }
+        ],
+        "steps": [
+          {
+            "do": "grantStatus",
+            "target": {
+              "side": "this"
+            },
+            "status": "cannotBeKOdInBattle"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST09-005",
+    "name": "Kouzuki Oden",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 7,
+    "power": 7000,
+    "types": ["Land of Wano", "Kouzuki Clan"],
+    "attribute": "Slash",
+    "rarity": "SR",
+    "blockIcon": 1,
+    "text": "[DON!! x1] This Character gains [Double Attack].\n(This card deals 2 damage.)\n[On K.O.] You may trash 2 cards from your hand: Add up to 1 card from the top of your deck to the top of your Life cards.",
+    "image": "images/ST09-005.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569009",
+    "effects": [
+      {
+        "timing": "permanent",
+        "conditions": [
+          {
+            "donAtLeast": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "grantKeyword",
+            "target": {
+              "side": "this"
+            },
+            "keyword": "doubleAttack"
+          }
+        ]
+      },
+      {
+        "timing": "onKO",
+        "optional": true,
+        "costs": [
+          {
+            "trashFromHand": 2
+          }
+        ],
+        "steps": [
+          {
+            "do": "deckToLife",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST09-006",
+    "name": "Kouzuki Momonosuke",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 2,
+    "power": 4000,
+    "counter": 1000,
+    "types": ["Land of Wano", "Kouzuki Clan"],
+    "attribute": "Special",
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "",
+    "image": "images/ST09-006.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569009"
+  },
+  {
+    "id": "ST09-007",
+    "name": "Shinobu",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 3,
+    "power": 2000,
+    "types": ["Land of Wano"],
+    "attribute": "Special",
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)\n[On Block] You may add 1 card from the top or bottom of your Life cards to your hand: This Character gains +4000 power during this battle.",
+    "image": "images/ST09-007.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569009",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "onBlock",
+        "optional": true,
+        "costs": [
+          {
+            "lifeToHand": 1,
+            "from": "topOrBottom"
+          }
+        ],
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "this"
+            },
+            "amount": 4000,
+            "duration": "battle"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST09-008",
+    "name": "Shimotsuki Ushimaru",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 5,
+    "power": 6000,
+    "types": ["Land of Wano"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "[DON!! x1] [When Attacking] You may add 1 card from the top or bottom of your Life cards to your hand: Play up to 1 yellow {Land of Wano} type Character card with a cost of 4 or less from your hand.",
+    "image": "images/ST09-008.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569009",
+    "effects": [
+      {
+        "timing": "whenAttacking",
+        "conditions": [
+          {
+            "donAtLeast": 1
+          }
+        ],
+        "optional": true,
+        "costs": [
+          {
+            "lifeToHand": 1,
+            "from": "topOrBottom"
+          }
+        ],
+        "steps": [
+          {
+            "do": "playFromHand",
+            "filter": {
+              "category": "character",
+              "color": "yellow",
+              "type": "Land of Wano",
+              "costAtMost": 4
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST09-009",
+    "name": "Fugetsu Omusubi",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 3,
+    "power": 4000,
+    "counter": 1000,
+    "types": ["Land of Wano"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "",
+    "trigger": "[Trigger] K.O. up to 1 of your opponent's Characters with a cost of 1 or less and add this card to your hand.",
+    "image": "images/ST09-009.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569009",
+    "effects": [
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "ko",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "costAtMost": 1
+              },
+              "upTo": true
+            }
+          },
+          {
+            "do": "addThisToHand"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST09-010",
+    "name": "Portgas.D.Ace",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 6,
+    "power": 7000,
+    "types": ["Land of Wano", "Whitebeard Pirates"],
+    "attribute": "Special",
+    "rarity": "SR",
+    "blockIcon": 1,
+    "text": "[Once Per Turn] If this Character would be K.O.'d, you may trash 1 card from the top or bottom of your Life cards instead.",
+    "image": "images/ST09-010.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569009",
+    "effects": [
+      {
+        "timing": "replaceRemoval",
+        "replaces": {
+          "side": "this",
+          "removal": "ko",
+          "battle": true
+        },
+        "oncePerTurn": true,
+        "optional": true,
+        "costs": [
+          {
+            "trashLife": 1,
+            "from": "topOrBottom"
+          }
+        ],
+        "steps": []
+      }
+    ]
+  },
+  {
+    "id": "ST09-011",
+    "name": "Monkey.D.Luffy",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 3,
+    "power": 5000,
+    "counter": 1000,
+    "types": ["Land of Wano", "Straw Hat Crew"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "",
+    "image": "images/ST09-011.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569009"
+  },
+  {
+    "id": "ST09-012",
+    "name": "Yamato",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 3,
+    "power": 3000,
+    "counter": 2000,
+    "types": ["Land of Wano"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "[When Attacking] You may add 1 card from the top or bottom of your Life cards to your hand: This Character gains +2000 power until the start of your next turn.",
+    "image": "images/ST09-012.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569009",
+    "effects": [
+      {
+        "timing": "whenAttacking",
+        "optional": true,
+        "costs": [
+          {
+            "lifeToHand": 1,
+            "from": "topOrBottom"
+          }
+        ],
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "this"
+            },
+            "amount": 2000,
+            "duration": "opponentsNextTurn"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST09-013",
+    "name": "Yamato",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 5,
+    "power": 7000,
+    "counter": 1000,
+    "types": ["Land of Wano"],
+    "attribute": "Special",
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "",
+    "image": "images/ST09-013.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569009"
+  },
+  {
+    "id": "ST09-014",
+    "name": "Narikabura Arrow",
+    "category": "event",
+    "colors": ["yellow"],
+    "cost": 1,
+    "types": ["Land of Wano"],
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "[Counter] If you have 2 or less Life cards, give up to 1 of your opponent's Leader or Character cards −3000 power during this turn.",
+    "trigger": "[Trigger] You may trash 2 cards from your hand: Add up to 1 card from the top of your deck to the top of your Life cards.",
+    "image": "images/ST09-014.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569009",
+    "effects": [
+      {
+        "timing": "counter",
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "lifeAtMost": 2
+              }
+            ],
+            "steps": [
+              {
+                "do": "powerUp",
+                "target": {
+                  "side": "opponent",
+                  "zone": "leaderOrCharacters",
+                  "upTo": true
+                },
+                "amount": -3000
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "optional": true,
+        "costs": [
+          {
+            "trashFromHand": 2
+          }
+        ],
+        "steps": [
+          {
+            "do": "deckToLife",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST09-015",
+    "name": "Thunder Bagua",
+    "category": "event",
+    "colors": ["yellow"],
+    "cost": 2,
+    "types": ["Land of Wano"],
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "[Counter] Up to 1 of your Leader or Character cards gains +4000 power during this battle. Then, if you have 2 or less Life cards, add up to 1 of your opponent's Characters with a cost of 3 or less to the top or bottom of the owner's Life cards face-up.",
+    "trigger": "[Trigger] Draw 1 card.",
+    "image": "images/ST09-015.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569009",
+    "effects": [
+      {
+        "timing": "counter",
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "self",
+              "zone": "leaderOrCharacters",
+              "upTo": true
+            },
+            "amount": 4000,
+            "duration": "battle"
+          },
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "lifeAtMost": 2
+              }
+            ],
+            "steps": [
+              {
+                "do": "characterToLife",
+                "target": {
+                  "side": "opponent",
+                  "filter": {
+                    "costAtMost": 3
+                  },
+                  "upTo": true
+                },
+                "faceUp": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "draw",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 ]

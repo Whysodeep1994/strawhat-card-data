@@ -1,0 +1,22 @@
+{
+  "name": "Monkey.D.Luffy gains +2000, draws 1 and trashes a Life card",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["ST13-015"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    }
+  ],
+  "expect": {
+    "power.p1.characters.0": 8000,
+    "p1.hand": 1,
+    "p1.life": 3
+  }
+}

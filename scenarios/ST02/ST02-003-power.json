@@ -1,0 +1,20 @@
+{
+  "name": "Urouge gains +2000 with 3 Characters and a DON!!",
+  "rules": ["8-3-2-3"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "ST02-003",
+          "don": 1
+        },
+        "TEST-FILLER",
+        "TEST-FILLER"
+      ]
+    }
+  },
+  "actions": [],
+  "expect": {
+    "power.p1.characters.0": 6000
+  }
+}

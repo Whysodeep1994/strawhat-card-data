@@ -1,0 +1,47 @@
+{
+  "name": "Kaido returns 5 DON!! to K.O. a cost 6 Character and gain [Rush]",
+  "rules": ["10-2-6", "10-1-1"],
+  "setup": {
+    "p1": {
+      "hand": ["ST04-003"],
+      "don": {
+        "active": 10
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C6-6000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    },
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.characters": 0,
+    "p2.life": 3,
+    "p1.donDeck": 5
+  }
+}

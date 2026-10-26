@@ -1,0 +1,27 @@
+{
+  "name": "Tsuru can block",
+  "rules": ["10-1-4"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "characters": ["ST06-007"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p2",
+      "attacker": "p2.leader",
+      "target": "p1.leader"
+    },
+    {
+      "type": "block",
+      "player": "p1",
+      "blocker": "p1.characters.0"
+    }
+  ],
+  "expect": {
+    "p1.characters.0.rested": true
+  }
+}
