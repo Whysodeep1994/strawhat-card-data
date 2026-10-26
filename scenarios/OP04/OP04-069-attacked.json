@@ -1,0 +1,31 @@
+{
+  "name": "Mr.2 copies the attacker's power",
+  "rules": ["10-2-16"],
+  "setup": {
+    "p1": {
+      "characters": ["TEST-C8-8000"]
+    },
+    "p2": {
+      "characters": ["OP04-069"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "power.p2.characters.0": 8000
+  }
+}

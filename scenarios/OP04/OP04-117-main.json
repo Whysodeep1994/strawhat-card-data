@@ -1,0 +1,36 @@
+{
+  "name": "Heavenly Fire adds a Character to the top of the opponent's Life face-up",
+  "rules": ["10-2-3"],
+  "setup": {
+    "p1": {
+      "hand": ["OP04-117"],
+      "don": {
+        "active": 1
+      }
+    },
+    "p2": {
+      "characters": ["TEST-BLOCKER-2000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": false
+    }
+  ],
+  "expect": {
+    "p2.life": 5,
+    "p2.life.0.faceUp": true
+  }
+}

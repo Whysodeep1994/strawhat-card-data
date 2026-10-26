@@ -1,0 +1,33 @@
+{
+  "name": "Yamato K.O.s a Character with a cost up to the total Life and adds a Life card",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP04-112"],
+      "life": 1,
+      "don": {
+        "active": 9
+      }
+    },
+    "p2": {
+      "life": 4,
+      "characters": ["TEST-C5-5000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 0,
+    "p1.life": 2
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Viola rests one of the opponent's DON!! when attacked",
+  "rules": ["10-2-16"],
+  "setup": {
+    "p1": {
+      "don": {
+        "active": 2
+      }
+    },
+    "p2": {
+      "characters": ["OP04-021"],
+      "don": {
+        "active": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.donActive": 1,
+    "p2.donActive": 0
+  }
+}

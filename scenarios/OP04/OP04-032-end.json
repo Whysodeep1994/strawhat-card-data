@@ -1,0 +1,27 @@
+{
+  "name": "Baby 5 trashes herself to set 2 DON!! active",
+  "rules": ["10-2-7"],
+  "setup": {
+    "p1": {
+      "characters": ["OP04-032"],
+      "don": {
+        "rested": 3
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "endTurn",
+      "player": "p1"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.donActive": 2,
+    "p1.characters": 0
+  }
+}

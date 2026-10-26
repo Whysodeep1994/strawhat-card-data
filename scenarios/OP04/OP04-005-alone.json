@@ -1,0 +1,26 @@
+{
+  "name": "Alone, Kung Fu Jugon can't block",
+  "rules": ["10-1-4-1"],
+  "setup": {
+    "p2": {
+      "characters": ["OP04-005"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "block",
+      "player": "p2",
+      "blocker": "p2.characters.0",
+      "illegal": true
+    }
+  ],
+  "expect": {
+    "prompt.kind": "counter"
+  }
+}

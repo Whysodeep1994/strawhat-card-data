@@ -1,0 +1,35 @@
+{
+  "name": "Orlumbus gives −4 cost, trashes 2 and K.O.s a Dressrosa Character",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["OP04-079", "OP04-077"]
+    },
+    "p2": {
+      "characters": ["TEST-C5-5000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.1"]
+    }
+  ],
+  "expect": {
+    "cost.p2.characters.0": 1,
+    "p1.trash": 3,
+    "p1.characters": 1
+  }
+}
