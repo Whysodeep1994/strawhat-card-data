@@ -1,0 +1,37 @@
+{
+  "name": "Cloven Rose gives your Characters +1000 and an opponent's −2000",
+  "rules": ["10-2-7"],
+  "setup": {
+    "p1": {
+      "hand": ["OP08-018"],
+      "don": {
+        "active": 2
+      },
+      "characters": ["TEST-FILLER", "TEST-FILLER"]
+    },
+    "p2": {
+      "characters": ["TEST-C4-4000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.0", "p1.characters.1"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "modifiers": 3,
+    "modifiers.2.power": -2000
+  }
+}

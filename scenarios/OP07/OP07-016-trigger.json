@@ -1,0 +1,44 @@
+{
+  "name": "Galaxy Wink's [Trigger] activates its [Main] effect",
+  "rules": ["10-1-5"],
+  "setup": {
+    "p1": {
+      "characters": ["TEST-FILLER"]
+    },
+    "p2": {
+      "life": ["OP07-016", "TEST-FILLER"],
+      "characters": ["OP07-015"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.characters.0"]
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p1.characters.0"]
+    }
+  ],
+  "expect": {
+    "modifiers.0.power": 2000,
+    "modifiers.1.power": -1000
+  }
+}

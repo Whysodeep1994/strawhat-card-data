@@ -1,0 +1,28 @@
+{
+  "name": "Trafalgar Law trashes a card and itself to add a Life card",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["EB03-062"],
+      "hand": ["TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.life": 5,
+    "p1.trash": 2,
+    "p1.characters": 0
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Sanji's base power becomes the opponent's Leader's power",
+  "rules": ["10-2-4"],
+  "setup": {
+    "p1": {
+      "characters": ["EB04-052"]
+    },
+    "p2": {
+      "leader": "TEST-LEADER-7000"
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    }
+  ],
+  "expect": {
+    "modifiers.0.basePower": 7000
+  }
+}

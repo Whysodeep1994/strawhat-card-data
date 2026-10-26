@@ -1,0 +1,23 @@
+{
+  "name": "Jozu makes your [Edward.Newgate] Leader's base power 8000",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "leader": "OP17-001",
+      "hand": ["OP17-008"],
+      "don": {
+        "active": 6
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "modifiers.0.basePower": 8000
+  }
+}

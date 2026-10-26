@@ -1,0 +1,26 @@
+{
+  "name": "Shirahoshi trashes itself; no Life without a [Shirahoshi] Leader",
+  "rules": ["10-2-2", "8-3-3"],
+  "setup": {
+    "p1": {
+      "characters": ["EB03-052"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.trash": 1,
+    "p1.life": 4
+  }
+}

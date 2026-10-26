@@ -1,0 +1,31 @@
+{
+  "name": "Ursa Shock's [Trigger] draws 1 and trashes 1 from the deck",
+  "rules": ["10-1-5"],
+  "setup": {
+    "p1": {},
+    "p2": {
+      "life": ["OP12-096", "TEST-FILLER", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p2.hand": 1,
+    "p2.deck": 18
+  }
+}

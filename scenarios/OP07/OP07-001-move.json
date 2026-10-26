@@ -1,0 +1,40 @@
+{
+  "name": "Monkey.D.Dragon moves 2 given DON!! from the Leader to 1 Character",
+  "rules": ["10-2-13"],
+  "setup": {
+    "p1": {
+      "leader": {
+        "card": "OP07-001",
+        "don": 2
+      },
+      "characters": ["TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 0
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.leader"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.0"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.leader"]
+    }
+  ],
+  "expect": {
+    "p1.leader.givenDon": 0,
+    "p1.characters.0.givenDon": 2
+  }
+}

@@ -128,6 +128,44 @@
     "source": "https://en.onepiece-cardgame.com/cardlist/?series=569901"
   },
   {
+    "id": "P-044",
+    "name": "Sabo",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 3,
+    "power": 4000,
+    "counter": 1000,
+    "types": ["Revolutionary Army"],
+    "attribute": "Special",
+    "rarity": "P",
+    "blockIcon": 2,
+    "text": "[DON!! x1] If you have 4 or less cards in your hand, this Character gains +2000 power.",
+    "image": "images/P-044.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569302",
+    "effects": [
+      {
+        "timing": "permanent",
+        "conditions": [
+          {
+            "donAtLeast": 1
+          },
+          {
+            "handAtMost": 4
+          }
+        ],
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "this"
+            },
+            "amount": 2000
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "P-047",
     "name": "Monkey.D.Luffy",
     "category": "leader",
@@ -390,6 +428,170 @@
     "text": "",
     "image": "images/P-061.png",
     "source": "https://en.onepiece-cardgame.com/cardlist/?series=569901"
+  },
+  {
+    "id": "P-063",
+    "name": "Jinbe",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 4,
+    "power": 5000,
+    "counter": 2000,
+    "types": ["Fish-Man"],
+    "attribute": "Strike",
+    "rarity": "P",
+    "blockIcon": 2,
+    "text": "[On Play] Rest up to 1 of your opponent's Characters with a cost of 1 or less.",
+    "image": "images/P-063.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569302",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "rest",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "costAtMost": 1
+              },
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "P-073",
+    "name": "Sabo",
+    "category": "character",
+    "colors": ["yellow"],
+    "cost": 5,
+    "power": 5000,
+    "counter": 2000,
+    "types": ["Dressrosa", "Revolutionary Army"],
+    "attribute": "Special",
+    "rarity": "P",
+    "blockIcon": 2,
+    "text": "[Activate: Main] [Once Per Turn] You may add 1 card from the top or bottom of your Life cards to your hand: This Character gains +1000 power during this turn.",
+    "image": "images/P-073.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569302",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "oncePerTurn": true,
+        "optional": true,
+        "costs": [
+          {
+            "lifeToHand": 1,
+            "from": "topOrBottom"
+          }
+        ],
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "this"
+            },
+            "amount": 1000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "P-074",
+    "name": "Portgas.D.Ace",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 3,
+    "power": 4000,
+    "counter": 1000,
+    "types": ["Whitebeard Pirates"],
+    "attribute": "Special",
+    "rarity": "P",
+    "blockIcon": 2,
+    "text": "[Activate: Main] You may return this Character to the owner's hand: Look at 5 cards from the top of your deck and place them at the top or bottom of the deck in any order.",
+    "image": "images/P-074.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569302",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "optional": true,
+        "costs": [
+          {
+            "thisToHand": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "arrangeDeckTop",
+            "look": 5,
+            "bottom": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "P-075",
+    "name": "Monkey.D.Luffy",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 7,
+    "power": 7000,
+    "types": ["Supernovas", "Straw Hat Crew"],
+    "attribute": "Strike",
+    "rarity": "P",
+    "blockIcon": 2,
+    "text": "[On Play] Give up to 1 rested DON!! card to your Leader or 1 of your Characters.\n[When Attacking] If you have a Character with a cost of 8 or more on your field, draw 1 card and trash 1 card from your hand.",
+    "image": "images/P-075.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569302",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "giveRestedDon",
+            "target": {
+              "side": "self",
+              "zone": "leaderOrCharacters",
+              "upTo": true
+            },
+            "count": 1
+          }
+        ]
+      },
+      {
+        "timing": "whenAttacking",
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "count": {
+                  "side": "self",
+                  "filter": {
+                    "costAtLeast": 8
+                  }
+                }
+              }
+            ],
+            "steps": [
+              {
+                "do": "draw",
+                "count": 1
+              },
+              {
+                "do": "trashFromHand",
+                "count": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "P-076",

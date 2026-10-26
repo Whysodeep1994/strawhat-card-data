@@ -1,0 +1,29 @@
+{
+  "name": "Black Maria adds 5 rested DON!!",
+  "rules": ["10-2-13"],
+  "setup": {
+    "p1": {
+      "characters": ["OP08-074"],
+      "don": {
+        "deck": 5
+      }
+    },
+    "p2": {
+      "don": {
+        "active": 3
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    }
+  ],
+  "expect": {
+    "p1.donRested": 5,
+    "p1.donDeck": 0
+  }
+}

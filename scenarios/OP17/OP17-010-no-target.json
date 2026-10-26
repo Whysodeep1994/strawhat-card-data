@@ -1,0 +1,21 @@
+{
+  "name": "Fossa can't activate without a 10000 power opposing Character",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["OP17-010"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0,
+      "illegal": true
+    }
+  ],
+  "expect": {
+    "modifiers": 0
+  }
+}

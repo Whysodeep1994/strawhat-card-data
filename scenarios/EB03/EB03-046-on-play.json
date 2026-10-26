@@ -1,0 +1,25 @@
+{
+  "name": "Miss Doublefinger(Zala) draws when there's a cost 0 Character",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["EB03-046"],
+      "don": {
+        "active": 4
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C0-1000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.hand": 1
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Jinbe plays a Seven Warlords Character from hand",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "hand": ["OP07-045", "OP07-039"],
+      "don": {
+        "active": 4
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 2
+  }
+}

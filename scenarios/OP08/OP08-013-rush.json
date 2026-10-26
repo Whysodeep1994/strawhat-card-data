@@ -1,0 +1,30 @@
+{
+  "name": "Robson with 2 DON!! has [Rush]",
+  "rules": ["10-1-1"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "OP08-013",
+          "don": 2,
+          "playedThisTurn": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 3
+  }
+}

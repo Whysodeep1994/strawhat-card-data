@@ -1,0 +1,35 @@
+{
+  "name": "Charlotte Opera K.O.s a Character with cost up to your Life",
+  "rules": ["8-3-1"],
+  "setup": {
+    "p1": {
+      "hand": ["OP08-102", "TEST-FILLER"],
+      "don": {
+        "active": 6
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C4-4000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 0
+  }
+}

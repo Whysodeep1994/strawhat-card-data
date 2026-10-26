@@ -1,0 +1,30 @@
+{
+  "name": "Charlotte Linlin draws, puts a card on top of the deck, and adds an active DON!!",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["EB03-034", "TEST-C5-5000"],
+      "don": {
+        "active": 7,
+        "deck": 3
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p1.deck.0.cardId": "TEST-C5-5000",
+    "p1.donActive": 1
+  }
+}

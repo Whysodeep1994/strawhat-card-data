@@ -1,0 +1,30 @@
+{
+  "name": "Monkey.D.Luffy costs 1 less with 1 Life and trashes a card for +2000 and [Blocker]",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["EB04-061", "TEST-FILLER"],
+      "don": {
+        "active": 9
+      },
+      "life": 1
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.donActive": 0,
+    "modifiers.0.power": 2000,
+    "modifiers.1.keyword": "blocker"
+  }
+}

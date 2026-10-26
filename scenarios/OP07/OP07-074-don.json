@@ -1,0 +1,30 @@
+{
+  "name": "Monda trashes itself to add a rested DON!! card",
+  "rules": ["8-3-1"],
+  "setup": {
+    "p1": {
+      "leader": "OP07-059",
+      "characters": ["OP07-074"],
+      "don": {
+        "deck": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.characters": 0,
+    "p1.donRested": 1
+  }
+}

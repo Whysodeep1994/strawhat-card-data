@@ -1,0 +1,23 @@
+{
+  "name": "Roronoa Zoro gains [Rush: Character] when the opponent has an 8000 power Character",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["EB04-007"]
+    },
+    "p2": {
+      "characters": ["TEST-C8-8000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 1
+    }
+  ],
+  "expect": {
+    "modifiers.0.keyword": "rushCharacter"
+  }
+}

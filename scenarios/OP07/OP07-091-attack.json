@@ -1,0 +1,41 @@
+{
+  "name": "Monkey.D.Luffy trashes a Character and gains +1000 for 3 cards placed",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": ["OP07-091"],
+      "trash": ["TEST-C4-4000", "TEST-C4-4000", "TEST-C4-4000"]
+    },
+    "p2": {
+      "characters": ["TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.trash.0", "p1.trash.1", "p1.trash.2"]
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.characters": 0,
+    "p2.trash": 1,
+    "modifiers.0.power": 1000,
+    "p2.life": 3
+  }
+}

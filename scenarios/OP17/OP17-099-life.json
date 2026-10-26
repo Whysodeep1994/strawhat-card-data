@@ -1,0 +1,40 @@
+{
+  "name": "Charlotte Linlin: your opponent lets you trash a card and add Life",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "leader": "OP17-099",
+      "hand": ["TEST-FILLER", "TEST-FILLER"]
+    },
+    "p2": {
+      "hand": ["TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    },
+    {
+      "type": "chooseOne",
+      "player": "p2",
+      "option": 0
+    }
+  ],
+  "expect": {
+    "p1.life": 5,
+    "p1.hand": 0
+  }
+}

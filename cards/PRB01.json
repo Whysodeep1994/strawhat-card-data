@@ -1,0 +1,38 @@
+[
+  {
+    "id": "PRB01-001",
+    "name": "Sanji",
+    "category": "leader",
+    "colors": ["red"],
+    "life": 5,
+    "power": 5000,
+    "types": ["Straw Hat Crew"],
+    "attribute": "Strike",
+    "rarity": "L",
+    "blockIcon": 3,
+    "text": "[Activate: Main] [Once Per Turn] Up to 1 of your Characters without an [On Play] effect and with a cost of 8 or less gains [Rush] during this turn.\n(This card can attack on the turn in which it is played.)",
+    "image": "images/PRB01-001.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569301",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "oncePerTurn": true,
+        "steps": [
+          {
+            "do": "grantKeyword",
+            "target": {
+              "side": "self",
+              "filter": {
+                "category": "character",
+                "costAtMost": 8,
+                "lacksTiming": "onPlay"
+              },
+              "upTo": true
+            },
+            "keyword": "rush"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,40 @@
+{
+  "name": "Vegapunk adds an Egghead card to the top of the Life cards face-up",
+  "rules": ["10-2-13"],
+  "setup": {
+    "p1": {
+      "leader": "OP07-097",
+      "hand": ["OP07-101"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 1
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "chooseOne",
+      "player": "p1",
+      "option": 1
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.life": 5,
+    "p1.life.0.faceUp": true
+  }
+}

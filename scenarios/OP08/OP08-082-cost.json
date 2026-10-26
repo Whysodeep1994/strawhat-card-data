@@ -1,0 +1,38 @@
+{
+  "name": "Sasaki rests 1 DON!! and itself to give −2 cost",
+  "rules": ["8-3-1"],
+  "setup": {
+    "p1": {
+      "characters": ["OP08-082"],
+      "don": {
+        "active": 1
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C4-4000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "modifiers.0.cost": -2,
+    "p1.characters.0.rested": true,
+    "p1.donRested": 1
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "Miss Buckingham Stussy rests 3 DON!! and herself to stop a Character from attacking",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["OP17-054"],
+      "don": {
+        "active": 3
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C9-10000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 1
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "modifiers.0.status": "cannotAttack"
+  }
+}

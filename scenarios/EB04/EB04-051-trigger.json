@@ -1,0 +1,33 @@
+{
+  "name": "Emet [Trigger] gives the opponent's Characters −3000",
+  "rules": ["10-1-5"],
+  "setup": {
+    "p1": {
+      "characters": ["TEST-C4-4000", "TEST-C5-5000"]
+    },
+    "p2": {
+      "life": ["EB04-051", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "modifiers.0.power": -3000,
+    "modifiers.1.power": -3000
+  }
+}

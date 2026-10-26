@@ -1,0 +1,26 @@
+{
+  "name": "Ginrummy draws 2 and trashes 2 when the opponent has a cost 0 Character",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "hand": ["OP08-086"],
+      "don": {
+        "active": 2
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C0-1000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.hand": 0,
+    "p1.trash": 2
+  }
+}

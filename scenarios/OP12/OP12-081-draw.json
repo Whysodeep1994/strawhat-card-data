@@ -1,0 +1,21 @@
+{
+  "name": "Koala draws 1 when attacking the Leader with 2 Characters with a cost of 8 or more",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "leader": "OP12-081",
+      "characters": ["TEST-C8-8000", "TEST-C8-8000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    }
+  ],
+  "expect": {
+    "p1.hand": 1
+  }
+}

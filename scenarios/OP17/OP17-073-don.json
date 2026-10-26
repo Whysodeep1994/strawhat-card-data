@@ -1,0 +1,29 @@
+{
+  "name": "Basil Hawkins trashes a card to add an active DON!! with an {Animal Kingdom Pirates} Leader",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "leader": "OP17-058",
+      "hand": ["OP17-073", "TEST-FILLER"],
+      "don": {
+        "active": 3,
+        "deck": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.donActive": 1
+  }
+}

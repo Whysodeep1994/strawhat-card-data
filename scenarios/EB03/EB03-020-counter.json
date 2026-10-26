@@ -1,0 +1,41 @@
+{
+  "name": "There You Are, Sore Loser! gives +4000 with 2 {FILM} Characters",
+  "rules": ["10-2-4"],
+  "setup": {
+    "p1": {
+      "leader": "TEST-LEADER-7000"
+    },
+    "p2": {
+      "characters": ["EB03-002", "EB03-002"],
+      "hand": ["EB03-020"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "counterEvent",
+      "player": "p2",
+      "card": "p2.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.leader"]
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 4
+  }
+}

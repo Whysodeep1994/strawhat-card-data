@@ -1,0 +1,45 @@
+{
+  "name": "I'd Never Shoot You!!!! gives +4000 and the attacker −1000",
+  "rules": ["10-2-8"],
+  "setup": {
+    "p1": {
+      "leader": "TEST-LEADER-7000"
+    },
+    "p2": {
+      "hand": ["OP08-017"],
+      "don": {
+        "active": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "counterEvent",
+      "player": "p2",
+      "card": "p2.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.leader"]
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p1.leader"]
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 4
+  }
+}

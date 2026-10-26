@@ -1,0 +1,30 @@
+{
+  "name": "Egghead sets an Egghead Character active at the end of your turn",
+  "rules": ["10-2-11"],
+  "setup": {
+    "p1": {
+      "life": 3,
+      "stage": "OP07-117",
+      "characters": [
+        {
+          "card": "OP07-108",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "endTurn",
+      "player": "p1"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters.0.rested": false
+  }
+}

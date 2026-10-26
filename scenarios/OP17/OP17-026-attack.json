@@ -1,0 +1,29 @@
+{
+  "name": "Fugar rests a cost 2 Character when attacking with a {Red-Haired Pirates} Leader",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "leader": "OP17-020",
+      "characters": ["OP17-026"]
+    },
+    "p2": {
+      "characters": ["TEST-BLOCKER-2000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters.0.rested": true
+  }
+}

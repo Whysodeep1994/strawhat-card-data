@@ -1,0 +1,35 @@
+{
+  "name": "Aphelandra returns itself to place a cost 1 Character at the bottom",
+  "rules": ["8-3-1"],
+  "setup": {
+    "p1": {
+      "leader": "OP07-038",
+      "characters": ["OP08-041"]
+    },
+    "p2": {
+      "characters": ["TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 0,
+    "p1.characters": 0
+  }
+}

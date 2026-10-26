@@ -1,0 +1,23 @@
+{
+  "name": "Sugar plays nothing without a [Sugar] Leader",
+  "rules": ["10-2-6", "8-3-3"],
+  "setup": {
+    "p1": {
+      "hand": ["EB03-005", "EB03-005"],
+      "don": {
+        "active": 3
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.characters": 1,
+    "p1.hand": 1
+  }
+}

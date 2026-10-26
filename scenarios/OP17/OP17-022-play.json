@@ -1,0 +1,27 @@
+{
+  "name": "Shanks sets 2 DON!! active and rests all of your opponent's Characters",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP17-022"],
+      "don": {
+        "active": 10
+      }
+    },
+    "p2": {
+      "characters": ["TEST-FILLER", "TEST-C5-5000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.donActive": 2,
+    "p2.characters.0.rested": true,
+    "p2.characters.1.rested": true
+  }
+}

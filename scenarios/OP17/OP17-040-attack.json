@@ -1,0 +1,44 @@
+{
+  "name": "Edward.Newgate gives your {Rocks Pirates} Leader +3000 when it attacks",
+  "rules": ["8-1-3-1"],
+  "setup": {
+    "p1": {
+      "leader": "OP17-039",
+      "characters": ["OP17-040"],
+      "hand": ["TEST-FILLER", "TEST-FILLER"]
+    },
+    "p2": {
+      "leader": "TEST-LEADER-7000"
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": false
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 3
+  }
+}

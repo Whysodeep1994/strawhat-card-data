@@ -1,0 +1,44 @@
+{
+  "name": "Rob Lucci makes the opponent trash 1, then places it at the bottom of their deck",
+  "rules": ["8-3-1"],
+  "setup": {
+    "p1": {
+      "hand": ["OP07-093"],
+      "don": {
+        "active": 5
+      },
+      "trash": ["TEST-FILLER", "TEST-FILLER", "TEST-FILLER"]
+    },
+    "p2": {
+      "hand": ["TEST-FILLER", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.hand.0"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.trash.0"]
+    }
+  ],
+  "expect": {
+    "p2.hand": 1,
+    "p2.trash": 0,
+    "p2.deck": 21,
+    "p1.trash": 0
+  }
+}

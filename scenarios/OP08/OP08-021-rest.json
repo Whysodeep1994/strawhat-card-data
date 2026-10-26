@@ -1,0 +1,29 @@
+{
+  "name": "Carrot with a Minks Character rests a cost 5 Character",
+  "rules": ["10-2-13"],
+  "setup": {
+    "p1": {
+      "leader": "OP08-021",
+      "characters": ["OP08-027"]
+    },
+    "p2": {
+      "characters": ["TEST-C4-4000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 0
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters.0.rested": true
+  }
+}

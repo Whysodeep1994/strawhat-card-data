@@ -1,0 +1,36 @@
+{
+  "name": "Jewelry Bonney draws 2 and trashes 1 when the opponent loses a Life card",
+  "rules": ["10-2-13"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "OP08-105",
+          "don": 1
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p2.life": 3,
+    "p1.hand": 1,
+    "p1.trash": 1
+  }
+}

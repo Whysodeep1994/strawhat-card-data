@@ -1,0 +1,37 @@
+{
+  "name": "Sweet 3 Generals rest 2 DON!! to draw, add Life and give up to 2 Characters −3000",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP17-114"],
+      "don": {
+        "active": 8
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C5-5000", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0", "p2.characters.1"]
+    }
+  ],
+  "expect": {
+    "p1.life": 5,
+    "p1.hand": 1,
+    "modifiers.1.power": -3000
+  }
+}

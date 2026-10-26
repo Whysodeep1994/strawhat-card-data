@@ -1,0 +1,35 @@
+{
+  "name": "Gloriosa [Trigger] draws 2 and trashes 1",
+  "rules": ["10-1-5"],
+  "setup": {
+    "p2": {
+      "life": ["EB05-052", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.hand.0"]
+    }
+  ],
+  "expect": {
+    "p2.hand": 1,
+    "p2.trash": 2
+  }
+}

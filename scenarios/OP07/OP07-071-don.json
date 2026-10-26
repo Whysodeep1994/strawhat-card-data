@@ -1,0 +1,23 @@
+{
+  "name": "Foxy adds a rested DON!! card",
+  "rules": ["10-2-13"],
+  "setup": {
+    "p1": {
+      "characters": ["OP07-071"],
+      "don": {
+        "deck": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 1
+    }
+  ],
+  "expect": {
+    "p1.donRested": 1
+  }
+}

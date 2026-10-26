@@ -1,0 +1,31 @@
+{
+  "name": "I Heard the Sound... adds a [Sanji] with a [Sanji] Leader and trashes the rest",
+  "rules": ["10-2-3"],
+  "setup": {
+    "p1": {
+      "leader": "TEST-LEADER-SANJI",
+      "hand": ["EB04-029"],
+      "don": {
+        "active": 1
+      },
+      "deck": ["TEST-FILLER", "EB04-052", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.1"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p1.hand.0.cardId": "EB04-052",
+    "p1.trash": 3
+  }
+}

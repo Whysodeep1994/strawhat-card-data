@@ -1,0 +1,32 @@
+{
+  "name": "Vinsmoke Reiju trashes itself to add 4 active DON!! against an 8000 base power Character",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["EB05-031"],
+      "don": {
+        "deck": 4
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C8-8000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 1
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.donActive": 4,
+    "p1.characters": 0
+  }
+}

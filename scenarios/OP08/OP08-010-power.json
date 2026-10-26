@@ -1,0 +1,31 @@
+{
+  "name": "Hiking Bear gives another Animal +1000",
+  "rules": ["10-2-13"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "OP08-010",
+          "don": 1
+        },
+        "OP08-013"
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.1"]
+    }
+  ],
+  "expect": {
+    "modifiers.0.power": 1000
+  }
+}

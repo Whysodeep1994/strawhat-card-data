@@ -1,0 +1,28 @@
+{
+  "name": "Alvida negates a Character's effects",
+  "rules": ["10-2-4"],
+  "setup": {
+    "p1": {
+      "characters": ["EB05-021"]
+    },
+    "p2": {
+      "characters": ["EB05-012"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "modifiers.0.status": "negated"
+  }
+}

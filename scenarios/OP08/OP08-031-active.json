@@ -1,0 +1,33 @@
+{
+  "name": "Miyagi sets a cost 2 Minks Character active",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "hand": ["OP08-031"],
+      "don": {
+        "active": 3
+      },
+      "characters": [
+        {
+          "card": "OP08-026",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters.0.rested": false
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "Jack rests to draw 1, trash 1 and K.O. a cost 3 Character",
+  "rules": ["8-3-1"],
+  "setup": {
+    "p1": {
+      "characters": ["OP08-084"]
+    },
+    "p2": {
+      "characters": ["TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 1
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 0,
+    "p1.trash": 1,
+    "p2.characters": 0,
+    "p1.characters.0.rested": true
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "Rockstar sets a DON!! active and makes your {Red-Haired Pirates} Leader's base power 6000",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "OP17-020",
+      "characters": ["OP17-034"],
+      "don": {
+        "rested": 1
+      }
+    },
+    "p2": {
+      "leader": "TEST-LEADER-6000"
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    }
+  ],
+  "expect": {
+    "p1.donActive": 1,
+    "modifiers.0.basePower": 6000
+  }
+}

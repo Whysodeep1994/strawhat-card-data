@@ -1,0 +1,26 @@
+{
+  "name": "I'll Feed on This Rage... gives all of your opponent's Characters −1 cost",
+  "rules": ["10-2-3"],
+  "setup": {
+    "p1": {
+      "hand": ["OP17-097"],
+      "don": {
+        "active": 1
+      }
+    },
+    "p2": {
+      "characters": ["TEST-FILLER", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "modifiers.0.cost": -1,
+    "modifiers.1.cost": -1
+  }
+}

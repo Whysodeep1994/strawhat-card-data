@@ -1,0 +1,38 @@
+{
+  "name": "Kaido returns 2 DON!! to gain [Rush] with an {Animal Kingdom Pirates} Leader and rest a Character",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "leader": "TEST-LEADER-AKP",
+      "hand": ["EB04-030"],
+      "don": {
+        "active": 9
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C7-7000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.donDeck": 2,
+    "p2.characters.0.rested": true,
+    "modifiers.0.keyword": "rush"
+  }
+}

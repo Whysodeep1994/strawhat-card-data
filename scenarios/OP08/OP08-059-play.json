@@ -1,0 +1,36 @@
+{
+  "name": "Alber trashes itself to play King",
+  "rules": ["8-3-1"],
+  "setup": {
+    "p1": {
+      "leader": "OP08-057",
+      "characters": ["OP08-059"],
+      "hand": ["OP08-060"],
+      "don": {
+        "active": 10
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 1,
+    "p1.characters.0.cardId": "OP08-060"
+  }
+}

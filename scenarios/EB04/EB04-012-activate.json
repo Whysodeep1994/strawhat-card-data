@@ -1,0 +1,32 @@
+{
+  "name": "Kikunojo sets a {Land of Wano} Leader active on the turn it was played",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": {
+        "card": "TEST-LEADER-WANO",
+        "rested": true
+      },
+      "hand": ["EB04-012"],
+      "don": {
+        "active": 7
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    }
+  ],
+  "expect": {
+    "p1.leader.rested": false
+  }
+}

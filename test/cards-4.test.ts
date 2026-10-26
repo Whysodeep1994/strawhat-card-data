@@ -1,3 +1,3 @@
 import { cardTests } from "./card-tests.js";
 
-cardTests(3, 4);
+cardTests(3, 6);

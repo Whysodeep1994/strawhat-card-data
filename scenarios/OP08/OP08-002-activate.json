@@ -1,0 +1,38 @@
+{
+  "name": "Marco draws 1, places 1 at the top or bottom, and gives −2000",
+  "rules": ["10-2-13"],
+  "setup": {
+    "p1": {
+      "leader": {
+        "card": "OP08-002",
+        "don": 1
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C4-4000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 0
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.0"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 0,
+    "p1.deck": 20,
+    "modifiers.0.power": -2000
+  }
+}

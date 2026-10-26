@@ -1,0 +1,30 @@
+{
+  "name": "Sasaki trashes 2 cards to add 2 rested DON!! with an {Animal Kingdom Pirates} Leader",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "leader": "OP17-058",
+      "characters": ["OP17-068"],
+      "hand": ["TEST-FILLER", "TEST-FILLER"],
+      "don": {
+        "deck": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.donRested": 2
+  }
+}

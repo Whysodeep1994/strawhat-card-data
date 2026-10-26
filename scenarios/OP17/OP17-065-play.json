@@ -1,0 +1,36 @@
+{
+  "name": "Queen returns a DON!! to draw 1 and stop up to 2 cost 5 Characters from attacking",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP17-065"],
+      "don": {
+        "active": 9
+      }
+    },
+    "p2": {
+      "characters": ["TEST-FILLER", "TEST-C5-5000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0", "p2.characters.1"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "modifiers.1.status": "cannotAttack"
+  }
+}

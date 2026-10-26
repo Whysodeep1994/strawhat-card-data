@@ -1,0 +1,28 @@
+{
+  "name": "Jewelry Bonney gives a 6000 power card −1000",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["EB05-001"]
+    },
+    "p2": {
+      "characters": ["TEST-C6-6000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 1
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "modifiers.0.power": -1000
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "Monkey.D.Garp trashes a card to play a blue {Navy} Character from hand",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP12-056", "TEST-FILLER", "OP12-045"],
+      "don": {
+        "active": 8
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 2
+  }
+}

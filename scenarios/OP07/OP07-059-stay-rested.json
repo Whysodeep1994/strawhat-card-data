@@ -1,0 +1,55 @@
+{
+  "name": "Foxy keeps the opponent's rested Leader and a Character rested",
+  "rules": ["6-2-4"],
+  "setup": {
+    "p1": {
+      "leader": "OP07-059",
+      "don": {
+        "active": 3
+      },
+      "characters": ["OP07-074", "OP07-074", "OP07-074"]
+    },
+    "p2": {
+      "leader": {
+        "card": "TEST-LEADER",
+        "rested": true
+      },
+      "characters": [
+        {
+          "card": "TEST-FILLER",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "endTurn",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "p2.leader.rested": true,
+    "p2.characters.0.rested": true
+  }
+}

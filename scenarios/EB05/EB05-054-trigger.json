@@ -1,0 +1,40 @@
+{
+  "name": "Charlotte Brulee [Trigger] plays 2 {Big Mom Pirates} Characters with 4000 power",
+  "rules": ["10-1-5"],
+  "setup": {
+    "p2": {
+      "hand": ["EB05-054", "EB05-054"],
+      "life": ["EB05-054", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.hand.0"]
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.hand.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 2
+  }
+}

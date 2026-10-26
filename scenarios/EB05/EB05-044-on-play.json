@@ -1,0 +1,26 @@
+{
+  "name": "Ms. Father's Day gives the opponent's Leader −1000 when they have a cost 0 Character",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "leader": "TEST-LEADER-BAROQUE-BLACK",
+      "hand": ["EB05-044"],
+      "don": {
+        "active": 2
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C0-1000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "modifiers.0.power": -1000
+  }
+}

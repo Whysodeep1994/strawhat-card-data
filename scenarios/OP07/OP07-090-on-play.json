@@ -1,0 +1,32 @@
+{
+  "name": "Morgans makes the opponent trash 1 and draw 1",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "hand": ["OP07-090"],
+      "don": {
+        "active": 2
+      }
+    },
+    "p2": {
+      "hand": ["TEST-FILLER", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.hand.0"]
+    }
+  ],
+  "expect": {
+    "p2.hand": 2,
+    "p2.trash": 1,
+    "p2.deck": 19
+  }
+}

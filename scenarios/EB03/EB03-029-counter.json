@@ -1,0 +1,39 @@
+{
+  "name": "Insolent Fool!! Stand Down!! gives a [Boa Hancock] +3000",
+  "rules": ["10-2-4"],
+  "setup": {
+    "p2": {
+      "characters": [
+        {
+          "card": "EB03-026",
+          "rested": true
+        }
+      ],
+      "hand": ["EB03-029"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.characters.0"
+    },
+    {
+      "type": "counterEvent",
+      "player": "p2",
+      "card": "p2.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "modifiers.0.power": 3000
+  }
+}
