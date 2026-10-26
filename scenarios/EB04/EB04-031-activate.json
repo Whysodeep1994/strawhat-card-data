@@ -1,0 +1,25 @@
+{
+  "name": "King adds an active and a rested DON!! with an {Animal Kingdom Pirates} Leader",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "TEST-LEADER-AKP",
+      "characters": ["EB04-031"],
+      "don": {
+        "deck": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 1
+    }
+  ],
+  "expect": {
+    "p1.donActive": 1,
+    "p1.donRested": 1
+  }
+}

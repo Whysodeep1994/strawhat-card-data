@@ -1,0 +1,29 @@
+{
+  "name": "Domino adds an {Impel Down} card",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["EB05-025"],
+      "don": {
+        "active": 2
+      },
+      "deck": ["TEST-FILLER", "EB05-024", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.1"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p1.hand.0.cardId": "EB05-024"
+  }
+}

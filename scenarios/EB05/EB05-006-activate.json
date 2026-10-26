@@ -1,0 +1,40 @@
+{
+  "name": "Miss Buckingham Stussy adds a Life card to give −4000",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["EB05-006"]
+    },
+    "p2": {
+      "characters": ["TEST-C5-5000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "chooseOne",
+      "player": "p1",
+      "option": 1
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.life": 3,
+    "p1.hand": 1,
+    "modifiers.0.power": -4000
+  }
+}

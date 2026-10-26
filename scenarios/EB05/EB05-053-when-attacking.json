@@ -1,0 +1,40 @@
+{
+  "name": "Charlotte Praline adds a hand card to Life when the opponent has 9 cards",
+  "rules": ["10-2-4"],
+  "setup": {
+    "p1": {
+      "characters": ["EB05-053"],
+      "hand": ["TEST-FILLER"]
+    },
+    "p2": {
+      "hand": [
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER"
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.life": 5,
+    "p1.hand": 0
+  }
+}

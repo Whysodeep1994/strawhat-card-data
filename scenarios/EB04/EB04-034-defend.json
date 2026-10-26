@@ -1,0 +1,37 @@
+{
+  "name": "Charlotte Pudding trashes a card to give +2000 with 4 Events in the trash",
+  "rules": ["8-1-3-1"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "characters": ["EB04-034"],
+      "hand": ["TEST-FILLER"],
+      "trash": ["EB04-008", "EB04-008", "EB04-008", "EB04-008"]
+    },
+    "p2": {
+      "leader": "TEST-LEADER-6000"
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p2",
+      "attacker": "p2.leader",
+      "target": "p1.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.leader"]
+    }
+  ],
+  "expect": {
+    "modifiers.0.power": 2000
+  }
+}

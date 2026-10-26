@@ -1,0 +1,24 @@
+{
+  "name": "Charlotte Pudding!! draws 1 and protects 4000 {Big Mom Pirates} Characters in battle",
+  "rules": ["10-2-3"],
+  "setup": {
+    "p1": {
+      "hand": ["EB05-059"],
+      "characters": ["EB05-054"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "modifiers.0.status": "cannotBeKOdInBattle"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "Nami gives the Leader a DON!! and adds an opponent's Life card to their hand",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["EB03-053"],
+      "don": {
+        "active": 5
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.leader"]
+    }
+  ],
+  "expect": {
+    "p1.leader.givenDon": 1,
+    "p2.life": 3,
+    "p2.hand": 1
+  }
+}

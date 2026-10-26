@@ -1,0 +1,31 @@
+{
+  "name": "Makino rests to give +2000 to a Character with no base effect",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["EB03-009", "TEST-C5-5000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.1"]
+    }
+  ],
+  "expect": {
+    "modifiers.0.power": 2000,
+    "p1.characters.0.rested": true
+  }
+}

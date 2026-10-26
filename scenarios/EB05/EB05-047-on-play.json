@@ -1,0 +1,33 @@
+{
+  "name": "Ripley trashes a card to play a cost 2 Character from the trash",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["EB05-047", "TEST-FILLER"],
+      "trash": ["TEST-GERMA-3000"],
+      "don": {
+        "active": 4
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.trash.1"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 2
+  }
+}

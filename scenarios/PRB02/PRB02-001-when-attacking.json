@@ -1,0 +1,29 @@
+{
+  "name": "Koby K.O.s a 3000 base power Character and draws 1",
+  "rules": ["10-2-4"],
+  "setup": {
+    "p1": {
+      "characters": ["PRB02-001"]
+    },
+    "p2": {
+      "characters": ["TEST-GERMA-3000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 0,
+    "p1.hand": 1
+  }
+}

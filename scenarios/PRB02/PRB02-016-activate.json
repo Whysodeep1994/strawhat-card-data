@@ -1,0 +1,36 @@
+{
+  "name": "Otama rests and adds a Life card to give +3000",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["PRB02-016"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": false
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.leader"]
+    }
+  ],
+  "expect": {
+    "p1.life": 3,
+    "modifiers.0.power": 3000
+  }
+}

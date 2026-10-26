@@ -1,0 +1,39 @@
+{
+  "name": "Charlotte Pudding returns 2 DON!! to draw 2 and play a 6000 to 8000 power {Big Mom Pirates} Character",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "leader": "TEST-LEADER-BMP",
+      "hand": ["PRB02-010", "EB03-033"],
+      "don": {
+        "active": 9
+      }
+    },
+    "p2": {
+      "don": {
+        "active": 6
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 2,
+    "p1.characters": 2
+  }
+}

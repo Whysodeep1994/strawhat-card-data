@@ -1,0 +1,34 @@
+{
+  "name": "Thanks for the Treat. ♡ adds 2 rested DON!!",
+  "rules": ["10-2-3"],
+  "setup": {
+    "p1": {
+      "hand": ["EB03-038"],
+      "don": {
+        "active": 2,
+        "deck": 2
+      }
+    },
+    "p2": {
+      "don": {
+        "active": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.donRested": 4,
+    "p1.donDeck": 0
+  }
+}

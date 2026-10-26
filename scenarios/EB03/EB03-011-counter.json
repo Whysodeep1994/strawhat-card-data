@@ -1,0 +1,38 @@
+{
+  "name": "But If We Ever See Each Other Again... gives +4000 with a [Nefeltari Vivi] Leader",
+  "rules": ["10-2-4"],
+  "setup": {
+    "p2": {
+      "leader": "EB03-001",
+      "hand": ["EB03-011"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "counterEvent",
+      "player": "p2",
+      "card": "p2.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.leader"]
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 4
+  }
+}

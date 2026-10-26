@@ -1,0 +1,28 @@
+{
+  "name": "I'll Whip You Into Shape lets a {SWORD} Character attack active Characters",
+  "rules": ["10-2-3"],
+  "setup": {
+    "p1": {
+      "characters": ["EB04-047"],
+      "hand": ["EB04-050"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.0"]
+    }
+  ],
+  "expect": {
+    "modifiers.0.keyword": "canAttackActive"
+  }
+}

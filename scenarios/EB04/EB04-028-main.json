@@ -1,0 +1,37 @@
+{
+  "name": "Ice Time stops 2 Characters from attacking with a {Navy} Leader",
+  "rules": ["10-2-3"],
+  "setup": {
+    "p1": {
+      "leader": "TEST-LEADER-NAVY",
+      "hand": ["EB04-028", "TEST-FILLER"],
+      "don": {
+        "active": 5
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C5-5000", "TEST-C8-8000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0", "p2.characters.1"]
+    }
+  ],
+  "expect": {
+    "modifiers.0.status": "cannotAttack",
+    "modifiers.1.status": "cannotAttack"
+  }
+}

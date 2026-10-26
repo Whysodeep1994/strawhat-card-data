@@ -493,5 +493,223 @@
     "power": 5000,
     "life": 5,
     "types": ["The Seven Warlords of the Sea"]
+  },
+  {
+    "id": "TEST-LEADER-MINKS",
+    "name": "Test Leader Minks",
+    "category": "leader",
+    "colors": ["green"],
+    "power": 5000,
+    "life": 4,
+    "types": ["Minks"]
+  },
+  {
+    "id": "TEST-LEADER-FISHMAN",
+    "name": "Test Leader Fish-Man",
+    "category": "leader",
+    "colors": ["green"],
+    "power": 5000,
+    "life": 4,
+    "types": ["Fish-Man"]
+  },
+  {
+    "id": "TEST-LEADER-FOXY",
+    "name": "Test Leader Foxy",
+    "category": "leader",
+    "colors": ["purple"],
+    "power": 5000,
+    "life": 4,
+    "types": ["Foxy Pirates"]
+  },
+  {
+    "id": "TEST-LEADER-CP",
+    "name": "Test Leader CP",
+    "category": "leader",
+    "colors": ["black"],
+    "power": 5000,
+    "life": 4,
+    "types": ["CP9"]
+  },
+  {
+    "id": "TEST-LEADER-WANO",
+    "name": "Test Leader Wano",
+    "category": "leader",
+    "colors": ["green"],
+    "power": 5000,
+    "life": 4,
+    "types": ["Land of Wano"]
+  },
+  {
+    "id": "TEST-MINKS-2000",
+    "name": "Test Mink",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 1,
+    "power": 2000,
+    "types": ["Minks"]
+  },
+  {
+    "id": "TEST-GREEN-C6",
+    "name": "Test Green 6",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 6,
+    "power": 6000,
+    "types": []
+  },
+  {
+    "id": "TEST-NAVY-C1",
+    "name": "Test Marine",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 1,
+    "power": 1000,
+    "types": ["Navy"]
+  },
+  {
+    "id": "TEST-LEADER-AKP",
+    "name": "Test Leader Animal Kingdom",
+    "category": "leader",
+    "colors": ["purple"],
+    "power": 5000,
+    "life": 4,
+    "types": ["Animal Kingdom Pirates"]
+  },
+  {
+    "id": "TEST-LEADER-SANJI",
+    "name": "Sanji",
+    "category": "leader",
+    "colors": ["purple"],
+    "power": 5000,
+    "life": 4,
+    "types": ["Straw Hat Crew"]
+  },
+  {
+    "id": "TEST-LEADER-SHIRAHOSHI",
+    "name": "Shirahoshi",
+    "category": "leader",
+    "colors": ["green"],
+    "power": 5000,
+    "life": 4,
+    "types": ["Merfolk"]
+  },
+  {
+    "id": "TEST-LEADER-ROBIN",
+    "name": "Nico Robin",
+    "category": "leader",
+    "colors": ["yellow"],
+    "power": 5000,
+    "life": 4,
+    "types": ["Straw Hat Crew"],
+    "attribute": "Wisdom"
+  },
+  {
+    "id": "TEST-LEADER-NAMI",
+    "name": "Nami",
+    "category": "leader",
+    "colors": ["blue"],
+    "power": 5000,
+    "life": 4,
+    "types": ["Straw Hat Crew"]
+  },
+  {
+    "id": "TEST-LEADER-VINSMOKE-PURPLE",
+    "name": "Test Leader Vinsmoke (purple)",
+    "category": "leader",
+    "colors": ["purple"],
+    "power": 5000,
+    "life": 4,
+    "types": ["The Vinsmoke Family"]
+  },
+  {
+    "id": "TEST-LEADER-IMPEL",
+    "name": "Test Leader Impel Down",
+    "category": "leader",
+    "colors": ["blue"],
+    "power": 5000,
+    "life": 4,
+    "types": ["Impel Down"]
+  },
+  {
+    "id": "TEST-LEADER-BAROQUE-BLACK",
+    "name": "Test Leader Baroque (black)",
+    "category": "leader",
+    "colors": ["black"],
+    "power": 5000,
+    "life": 4,
+    "types": ["Baroque Works"]
+  },
+  {
+    "id": "TEST-WISDOM-3000",
+    "name": "Test Scholar",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 2,
+    "power": 3000,
+    "types": [],
+    "attribute": "Wisdom"
+  },
+  {
+    "id": "TEST-PINK",
+    "name": "Senor Pink",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 3,
+    "power": 4000,
+    "types": []
+  },
+  {
+    "id": "TEST-CROSS-GUILD",
+    "name": "Test Cross Guild",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 3,
+    "power": 4000,
+    "types": ["Cross Guild"]
+  },
+  {
+    "id": "TEST-SMILE",
+    "name": "Test SMILE",
+    "category": "character",
+    "colors": ["purple"],
+    "cost": 2,
+    "power": 3000,
+    "types": ["SMILE"]
+  },
+  {
+    "id": "TEST-NEPTUNIAN",
+    "name": "Test Neptunian",
+    "category": "character",
+    "colors": ["green"],
+    "cost": 2,
+    "power": 3000,
+    "types": ["Neptunian"]
+  },
+  {
+    "id": "TEST-THRILLER",
+    "name": "Test Thriller",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 2,
+    "power": 3000,
+    "types": ["Thriller Bark Pirates"]
+  },
+  {
+    "id": "TEST-LEADER-THRILLER",
+    "name": "Test Leader Thriller Bark",
+    "category": "leader",
+    "colors": ["black"],
+    "power": 5000,
+    "life": 4,
+    "types": ["Thriller Bark Pirates"]
+  },
+  {
+    "id": "TEST-SABO-2",
+    "name": "Sabo",
+    "category": "character",
+    "colors": ["red"],
+    "cost": 2,
+    "power": 3000,
+    "types": []
   }
 ]

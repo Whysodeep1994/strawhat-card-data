@@ -1,0 +1,23 @@
+{
+  "name": "Borsalino adds the top deck card to Life with 2 or less Life cards",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["EB04-058"],
+      "don": {
+        "active": 5
+      },
+      "life": 1
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.life": 2
+  }
+}

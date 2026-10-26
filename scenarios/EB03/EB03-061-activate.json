@@ -1,0 +1,34 @@
+{
+  "name": "Uta sets a DON!! active and rests an opponent's DON!!",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["EB03-061"],
+      "don": {
+        "rested": 1
+      }
+    },
+    "p2": {
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "chooseOne",
+      "player": "p1",
+      "option": 0
+    }
+  ],
+  "expect": {
+    "p1.donActive": 1,
+    "p2.donRested": 1
+  }
+}

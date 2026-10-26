@@ -1,0 +1,29 @@
+{
+  "name": "Nico Olvia trashes a [Trigger] card to draw 2 with a [Nico Robin] Leader",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "leader": "TEST-LEADER-ROBIN",
+      "hand": ["EB05-056", "EB05-051"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.hand": 2,
+    "p1.trash": 1
+  }
+}

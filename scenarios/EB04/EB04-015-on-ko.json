@@ -1,0 +1,55 @@
+{
+  "name": "Jinbe rests a DON!! to play a green cost 6 Character with a {Fish-Man} Leader",
+  "rules": ["10-2-17"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "leader": "TEST-LEADER-FISHMAN",
+      "hand": ["TEST-GREEN-C6"],
+      "characters": [
+        {
+          "card": "EB04-015",
+          "rested": true
+        }
+      ],
+      "don": {
+        "active": 1
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C9-10000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p2",
+      "attacker": "p2.characters.0",
+      "target": "p1.characters.0"
+    },
+    {
+      "type": "pass",
+      "player": "p1"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "chooseOne",
+      "player": "p1",
+      "option": 0
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 1,
+    "p1.characters.0.cardId": "TEST-GREEN-C6"
+  }
+}

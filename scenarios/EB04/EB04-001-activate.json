@@ -1,0 +1,35 @@
+{
+  "name": "Jewelry Bonney gives −1000 and adds a Life card to hand with 2 or more Life",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "EB04-001"
+    },
+    "p2": {
+      "characters": ["TEST-C5-5000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 1
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    },
+    {
+      "type": "chooseOne",
+      "player": "p1",
+      "option": 0
+    }
+  ],
+  "expect": {
+    "modifiers.0.power": -1000,
+    "p1.hand": 1,
+    "p1.life": 3
+  }
+}

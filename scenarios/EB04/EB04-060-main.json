@@ -1,0 +1,47 @@
+{
+  "name": "Gum-Gum Hawk Gatling adds an {Egghead} Character to Life face-up and gives −1000",
+  "rules": ["10-2-3"],
+  "setup": {
+    "p1": {
+      "hand": ["EB04-060", "EB04-058"],
+      "don": {
+        "active": 2
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C5-5000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": false
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.life": 4,
+    "p1.life.0.faceUp": true,
+    "modifiers.0.power": -1000
+  }
+}
