@@ -1,0 +1,39 @@
+{
+  "name": "S-Shark stops [Blocker] during its attack",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "OP08-111",
+          "don": 1
+        }
+      ]
+    },
+    "p2": {
+      "characters": ["TEST-BLOCKER-2000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "block",
+      "player": "p2",
+      "blocker": "p2.characters.0",
+      "illegal": true
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 3,
+    "p2.characters": 1
+  }
+}

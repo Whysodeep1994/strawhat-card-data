@@ -1,0 +1,29 @@
+{
+  "name": "Hamlet plays a cost 2 {SMILE} Character from the trash",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "hand": ["OP08-090"],
+      "don": {
+        "active": 3
+      },
+      "trash": ["OP08-086"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.trash.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 2,
+    "p1.trash": 0
+  }
+}

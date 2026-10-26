@@ -1,0 +1,39 @@
+{
+  "name": "Vegapunk plays an Egghead card from hand",
+  "rules": ["10-2-13"],
+  "setup": {
+    "p1": {
+      "leader": "OP07-097",
+      "hand": ["OP07-101"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 1
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "chooseOne",
+      "player": "p1",
+      "option": 0
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 1
+  }
+}

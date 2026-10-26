@@ -1,0 +1,41 @@
+{
+  "name": "Otama adds a green Land of Wano card",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "hand": ["OP07-022"],
+      "don": {
+        "active": 1
+      },
+      "deck": [
+        "EB01-013",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER"
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.0"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p1.hand.0.cardId": "EB01-013"
+  }
+}

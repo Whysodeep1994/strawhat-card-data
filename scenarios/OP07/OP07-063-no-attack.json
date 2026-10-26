@@ -1,0 +1,47 @@
+{
+  "name": "Capote stops a Character attacking in the opponent's next turn",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "leader": "OP07-059",
+      "hand": ["OP07-063"],
+      "don": {
+        "active": 3
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C6-6000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    },
+    {
+      "type": "endTurn",
+      "player": "p1"
+    },
+    {
+      "type": "attack",
+      "player": "p2",
+      "attacker": "p2.characters.0",
+      "target": "p1.leader",
+      "illegal": true
+    }
+  ],
+  "expect": {
+    "p1.donDeck": 1
+  }
+}

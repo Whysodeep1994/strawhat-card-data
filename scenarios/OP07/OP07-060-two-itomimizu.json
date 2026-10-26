@@ -1,0 +1,24 @@
+{
+  "name": "Itomimizu does nothing with another Itomimizu",
+  "rules": ["8-3-2-1"],
+  "setup": {
+    "p1": {
+      "leader": "OP07-059",
+      "characters": ["OP07-060", "OP07-060"],
+      "don": {
+        "deck": 5
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    }
+  ],
+  "expect": {
+    "p1.donRested": 0
+  }
+}

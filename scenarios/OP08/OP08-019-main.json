@@ -1,0 +1,37 @@
+{
+  "name": "Munch-Munch Mutation gives −3000 and +3000",
+  "rules": ["10-2-7"],
+  "setup": {
+    "p1": {
+      "hand": ["OP08-019"],
+      "don": {
+        "active": 3
+      },
+      "characters": ["TEST-FILLER"]
+    },
+    "p2": {
+      "characters": ["TEST-C4-4000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.0"]
+    }
+  ],
+  "expect": {
+    "modifiers.0.power": -3000,
+    "modifiers.1.power": 3000
+  }
+}

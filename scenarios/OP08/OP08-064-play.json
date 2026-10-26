@@ -1,0 +1,30 @@
+{
+  "name": "Charlotte Cracker returns 1 DON!! to play Biscuit Warrior",
+  "rules": ["10-2-13"],
+  "setup": {
+    "p1": {
+      "characters": ["OP08-064"],
+      "hand": ["OP08-072"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 2,
+    "p1.donDeck": 1
+  }
+}

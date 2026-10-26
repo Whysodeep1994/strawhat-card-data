@@ -1,0 +1,32 @@
+{
+  "name": "Charlotte Angel trashes a Life card and adds one back at the end of the turn",
+  "rules": ["10-2-13"],
+  "setup": {
+    "p1": {
+      "leader": "TEST-LEADER-BMP",
+      "characters": ["OP08-101"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "endTurn",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "p1.life": 4,
+    "p1.trash": 1,
+    "p1.deck": 19
+  }
+}

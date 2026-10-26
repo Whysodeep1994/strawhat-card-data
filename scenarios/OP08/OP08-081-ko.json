@@ -1,0 +1,40 @@
+{
+  "name": "Guernica places 3 CP cards from the trash at the bottom to K.O. a cost 0 Character",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["OP08-081"],
+      "trash": ["OP08-091", "OP08-091", "OP08-091"]
+    },
+    "p2": {
+      "characters": ["TEST-C0-1000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.characters": 0,
+    "p1.trash": 0,
+    "p1.deck": 23
+  }
+}

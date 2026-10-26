@@ -1,0 +1,36 @@
+{
+  "name": "Jewelry Bonney keeps a rested DON!! card rested",
+  "rules": ["6-2-4"],
+  "setup": {
+    "p1": {
+      "hand": ["OP07-026"],
+      "don": {
+        "active": 5
+      }
+    },
+    "p2": {
+      "don": {
+        "rested": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "chooseOne",
+      "player": "p1",
+      "option": 1
+    },
+    {
+      "type": "endTurn",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "p2.donRested": 1
+  }
+}

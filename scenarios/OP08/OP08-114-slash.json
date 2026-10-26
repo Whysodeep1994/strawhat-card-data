@@ -1,0 +1,37 @@
+{
+  "name": "S-Hawk can't be K.O.'d in battle by a <Slash> card while you have fewer Life cards",
+  "rules": ["10-2-11"],
+  "setup": {
+    "p1": {
+      "leader": {
+        "card": "TEST-LEADER-SLASH",
+        "don": 3
+      }
+    },
+    "p2": {
+      "characters": [
+        {
+          "card": "OP08-114",
+          "don": 1,
+          "rested": true
+        }
+      ],
+      "life": 2
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.characters.0"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.characters": 1
+  }
+}

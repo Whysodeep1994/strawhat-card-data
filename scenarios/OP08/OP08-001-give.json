@@ -1,0 +1,31 @@
+{
+  "name": "Tony Tony.Chopper gives Animal and Drum Kingdom Characters 1 rested DON!! each",
+  "rules": ["10-2-13"],
+  "setup": {
+    "p1": {
+      "leader": "OP08-001",
+      "characters": ["OP08-010", "OP08-013"],
+      "don": {
+        "rested": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 0
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.0", "p1.characters.1"]
+    }
+  ],
+  "expect": {
+    "p1.characters.0.givenDon": 1,
+    "p1.characters.1.givenDon": 1,
+    "p1.donRested": 0
+  }
+}

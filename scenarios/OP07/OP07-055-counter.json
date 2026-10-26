@@ -1,0 +1,45 @@
+{
+  "name": "Snake Dance gives +4000 and returns 1 of your Characters",
+  "rules": ["10-2-8"],
+  "setup": {
+    "p2": {
+      "hand": ["OP07-055"],
+      "don": {
+        "active": 2
+      },
+      "characters": ["TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "counterEvent",
+      "player": "p2",
+      "card": "p2.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.leader"]
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.characters.0"]
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 4,
+    "p2.hand": 1,
+    "p2.characters": 0
+  }
+}

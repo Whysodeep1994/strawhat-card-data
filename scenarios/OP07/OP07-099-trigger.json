@@ -1,0 +1,41 @@
+{
+  "name": "Usopp's [Trigger] gives +2000 until the end of your next turn",
+  "rules": ["10-1-5"],
+  "setup": {
+    "p1": {},
+    "p2": {
+      "leader": "TEST-LEADER-EGGHEAD",
+      "life": ["OP07-099", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.leader"]
+    },
+    {
+      "type": "endTurn",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "modifiers": 1,
+    "modifiers.0.power": 2000
+  }
+}

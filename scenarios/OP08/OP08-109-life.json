@@ -1,0 +1,24 @@
+{
+  "name": "Mont Blanc Noland adds a Life card with Kalgara on the field",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "leader": "OP08-098",
+      "characters": ["OP08-099"],
+      "hand": ["OP08-109"],
+      "don": {
+        "active": 5
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.life": 5
+  }
+}

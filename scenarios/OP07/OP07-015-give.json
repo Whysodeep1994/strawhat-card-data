@@ -1,0 +1,28 @@
+{
+  "name": "Monkey.D.Dragon gives 2 rested DON!! to the Leader",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "hand": ["OP07-015"],
+      "don": {
+        "active": 8
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.leader"]
+    }
+  ],
+  "expect": {
+    "p1.leader.givenDon": 2,
+    "p1.donRested": 6
+  }
+}

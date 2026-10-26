@@ -1,0 +1,43 @@
+{
+  "name": "KEEP OUT's +2000 lasts until the end of your next turn",
+  "rules": ["10-2-8"],
+  "setup": {
+    "p2": {
+      "hand": ["OP07-018"],
+      "don": {
+        "active": 1
+      },
+      "characters": ["OP07-015"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "counterEvent",
+      "player": "p2",
+      "card": "p2.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.characters.0"]
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "endTurn",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "modifiers": 1,
+    "modifiers.0.power": 2000
+  }
+}

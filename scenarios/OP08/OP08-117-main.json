@@ -1,0 +1,36 @@
+{
+  "name": "Burn Blade trashes a Life card to K.O. a cost 7 Character",
+  "rules": ["8-3-1"],
+  "setup": {
+    "p1": {
+      "hand": ["OP08-117"],
+      "don": {
+        "active": 5
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C7-7000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 0,
+    "p1.life": 3
+  }
+}

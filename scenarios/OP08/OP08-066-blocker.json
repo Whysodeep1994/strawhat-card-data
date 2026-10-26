@@ -1,0 +1,30 @@
+{
+  "name": "Charlotte Brulee can block with [Blocker]",
+  "rules": ["10-1-4-1"],
+  "setup": {
+    "p2": {
+      "characters": ["OP08-066"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "block",
+      "player": "p2",
+      "blocker": "p2.characters.0"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 4,
+    "p2.characters": 0
+  }
+}

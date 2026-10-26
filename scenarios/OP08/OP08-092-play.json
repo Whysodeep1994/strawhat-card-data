@@ -1,0 +1,29 @@
+{
+  "name": "Page One plays Ulti from the trash",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "hand": ["OP08-092"],
+      "don": {
+        "active": 5
+      },
+      "trash": ["OP08-078"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.trash.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 2,
+    "p1.characters.1.cardId": "OP08-078"
+  }
+}

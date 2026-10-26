@@ -1,0 +1,43 @@
+{
+  "name": "Edward Weevil looks at 3 and places them at the top or bottom",
+  "rules": ["11-3-1"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "OP07-039",
+          "don": 1
+        }
+      ],
+      "deck": ["TEST-C4-4000", "TEST-C5-5000", "TEST-C6-6000", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.0"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.2", "p1.deck.1"]
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p1.deck.0.cardId": "TEST-C6-6000",
+    "p1.deck.1.cardId": "TEST-C5-5000",
+    "p1.deck.3.cardId": "TEST-C4-4000",
+    "p2.life": 3
+  }
+}

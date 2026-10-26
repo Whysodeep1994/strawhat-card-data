@@ -1,0 +1,28 @@
+{
+  "name": "Scratchmen Apoo gives −1 cost",
+  "rules": ["10-2-13"],
+  "setup": {
+    "p1": {
+      "characters": ["OP08-087"]
+    },
+    "p2": {
+      "characters": ["TEST-C4-4000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "modifiers.0.cost": -1
+  }
+}
