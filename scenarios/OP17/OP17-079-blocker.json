@@ -1,0 +1,26 @@
+{
+  "name": "Monkey.D.Luffy gives your cost 12 Characters [Blocker]",
+  "rules": ["10-2-1"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "leader": "OP17-079",
+      "characters": ["OP17-085"]
+    },
+    "p2": {
+      "characters": ["TEST-C6-6000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p2",
+      "attacker": "p2.characters.0",
+      "target": "p1.leader"
+    }
+  ],
+  "expect": {
+    "prompt.kind": "block"
+  }
+}

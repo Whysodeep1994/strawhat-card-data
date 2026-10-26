@@ -1,0 +1,20 @@
+{
+  "name": "Gerd's cost is 14 with an {Elbaph} Leader",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "leader": "OP17-079",
+      "characters": ["OP17-081"]
+    },
+    "p2": {
+      "hand": ["OP17-090"],
+      "don": {
+        "active": 2
+      }
+    }
+  },
+  "actions": [],
+  "expect": {
+    "p1.characters": 1
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "Charlotte Linlin: your opponent trashes 2 cards",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP17-049"],
+      "don": {
+        "active": 5
+      }
+    },
+    "p2": {
+      "hand": ["TEST-FILLER", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "chooseOne",
+      "player": "p2",
+      "option": 1
+    }
+  ],
+  "expect": {
+    "p2.hand": 0
+  }
+}

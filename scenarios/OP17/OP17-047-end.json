@@ -1,0 +1,21 @@
+{
+  "name": "Shiki makes your opponent place a card from hand at the bottom of their deck",
+  "rules": ["10-2-7"],
+  "setup": {
+    "p1": {
+      "characters": ["OP17-047"]
+    },
+    "p2": {
+      "hand": ["TEST-FILLER", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "endTurn",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "p2.hand": 2
+  }
+}

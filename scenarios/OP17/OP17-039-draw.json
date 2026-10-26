@@ -1,0 +1,28 @@
+{
+  "name": "Rocks.D.Xebec trashes a card and draws 2 if the top card is {Rocks Pirates}",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "leader": "OP17-039",
+      "hand": ["TEST-FILLER"],
+      "deck": ["OP17-050", "TEST-FILLER", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.hand": 2,
+    "p1.trash": 1
+  }
+}

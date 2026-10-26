@@ -1,0 +1,29 @@
+{
+  "name": "Drunken Dragon Bagua adds 3 rested DON!! with an {Animal Kingdom Pirates} Leader",
+  "rules": ["10-2-3"],
+  "setup": {
+    "p1": {
+      "leader": "OP17-058",
+      "hand": ["OP17-078", "TEST-FILLER", "TEST-FILLER"],
+      "don": {
+        "active": 4,
+        "deck": 3
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.donRested": 7
+  }
+}

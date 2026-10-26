@@ -1,0 +1,31 @@
+{
+  "name": "Lead Performers trash themselves to play [King]",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["OP17-061"],
+      "hand": ["OP17-064"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 1
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters.0.cardId": "OP17-064"
+  }
+}

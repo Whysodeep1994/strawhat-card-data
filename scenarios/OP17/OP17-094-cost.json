@@ -1,0 +1,14 @@
+{
+  "name": "Rodo's cost is 13 with an {Elbaph} Leader",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "leader": "OP17-079",
+      "characters": ["OP17-094"]
+    }
+  },
+  "actions": [],
+  "expect": {
+    "legal.p1.attack": 2
+  }
+}

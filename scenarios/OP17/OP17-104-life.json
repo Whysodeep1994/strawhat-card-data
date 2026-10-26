@@ -1,0 +1,28 @@
+{
+  "name": "Charlotte Cracker rests 2 DON!! to add Life with a {Big Mom Pirates} Leader",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "leader": "OP17-099",
+      "hand": ["OP17-104"],
+      "don": {
+        "active": 5
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.life": 5
+  }
+}

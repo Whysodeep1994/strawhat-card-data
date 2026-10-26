@@ -1,0 +1,33 @@
+{
+  "name": "Gerd trashes a card to add a cost 8 Character other than [Gerd] from the trash",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP17-081", "TEST-FILLER"],
+      "don": {
+        "active": 2
+      },
+      "trash": ["OP17-088"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.trash.1"]
+    }
+  ],
+  "expect": {
+    "p1.hand.0.cardId": "OP17-088"
+  }
+}

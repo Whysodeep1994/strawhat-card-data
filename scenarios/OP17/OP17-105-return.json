@@ -1,0 +1,35 @@
+{
+  "name": "Charlotte Chiffon trashes a [Trigger] card to return a Character with a [Trigger]",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP17-105", "OP17-107"],
+      "don": {
+        "active": 5
+      }
+    },
+    "p2": {
+      "characters": ["OP17-108"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.hand": 1
+  }
+}
