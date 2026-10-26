@@ -1,0 +1,36 @@
+{
+  "name": "Gum-Gum Hammer Rifle keeps a rested cost 6 Character rested with [Luffy] and [Mr.3]",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "hand": ["OP16-040"],
+      "characters": ["OP16-034", "OP16-037"],
+      "don": {
+        "active": 1
+      }
+    },
+    "p2": {
+      "characters": [
+        {
+          "card": "TEST-C6-6000",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "modifiers.0.status": "noRefresh"
+  }
+}

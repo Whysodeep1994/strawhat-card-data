@@ -1,0 +1,27 @@
+{
+  "name": "Vista reveals an 8000 power Character to draw 1",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "hand": ["OP16-011", "OP16-004"],
+      "don": {
+        "active": 6
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.hand": 2
+  }
+}

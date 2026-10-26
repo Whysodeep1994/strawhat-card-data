@@ -1,0 +1,36 @@
+{
+  "name": "Kuzan returns 1 DON!! so a Character cannot block",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["OP16-063"],
+      "don": {
+        "active": 1
+      }
+    },
+    "p2": {
+      "characters": ["TEST-BLOCKER-2000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 1
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "modifiers.0.status": "cannotBlock"
+  }
+}

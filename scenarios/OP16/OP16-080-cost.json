@@ -1,0 +1,29 @@
+{
+  "name": "Your Characters gain +1 cost on your opponent's turn with Marshall.D.Teach",
+  "rules": ["10-2-1"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "leader": "OP16-080",
+      "characters": ["TEST-FILLER"]
+    },
+    "p2": {
+      "hand": ["OP16-090"],
+      "don": {
+        "active": 3
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p2",
+      "card": "p2.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.characters": 1,
+    "p2.trash": 2
+  }
+}

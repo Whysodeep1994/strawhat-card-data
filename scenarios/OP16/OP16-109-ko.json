@@ -1,0 +1,37 @@
+{
+  "name": "Doc Q draws 1 and K.O.s 2 cost 1 Characters when K.O.'d",
+  "rules": ["10-2-17"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "leader": "OP16-080",
+      "characters": ["OP16-109"]
+    },
+    "p2": {
+      "characters": ["TEST-FILLER", "TEST-C0-1000"],
+      "hand": ["TEST-KO-EVENT"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p2",
+      "card": "p2.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p1.characters.0"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0", "p2.characters.1"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 0,
+    "p1.hand": 1
+  }
+}

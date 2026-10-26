@@ -1,0 +1,33 @@
+{
+  "name": "The Three Admirals!! rests 3 DON!! to give {Admiral} Characters +2000",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "hand": ["OP16-076"],
+      "characters": ["OP16-063"],
+      "don": {
+        "active": 4
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.0"]
+    }
+  ],
+  "expect": {
+    "modifiers.0.power": 2000
+  }
+}

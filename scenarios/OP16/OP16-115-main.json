@@ -1,0 +1,29 @@
+{
+  "name": "Black Vortex adds a [Trigger] card from the trash with a {Blackbeard Pirates} Leader",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "OP16-080",
+      "hand": ["OP16-115"],
+      "trash": ["OP16-114"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.trash.1"]
+    }
+  ],
+  "expect": {
+    "p1.hand.0.cardId": "OP16-114"
+  }
+}

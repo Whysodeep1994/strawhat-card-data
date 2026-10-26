@@ -1,0 +1,37 @@
+{
+  "name": "Gum-Gum Twin Jet Pistol gives Luffy [Double Attack] and rests 2 cost 3 Characters",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "OP16-022",
+      "hand": ["OP16-039"],
+      "don": {
+        "active": 1
+      }
+    },
+    "p2": {
+      "characters": ["TEST-FILLER", "TEST-BLOCKER-2000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.leader"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0", "p2.characters.1"]
+    }
+  ],
+  "expect": {
+    "p2.characters.1.rested": true,
+    "modifiers.0.keyword": "doubleAttack"
+  }
+}

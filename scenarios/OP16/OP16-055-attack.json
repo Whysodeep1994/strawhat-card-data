@@ -1,0 +1,32 @@
+{
+  "name": "Mr.2 with DON!! copies your opponent's Leader's power when attacking",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "OP16-055",
+          "don": 1
+        }
+      ]
+    },
+    "p2": {
+      "leader": "TEST-LEADER-6000"
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 3
+  }
+}

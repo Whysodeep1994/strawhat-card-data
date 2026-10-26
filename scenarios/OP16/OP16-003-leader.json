@@ -1,0 +1,27 @@
+{
+  "name": "Edward.Newgate gives your Leader [Double Attack] and +2000 on your turn",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "characters": ["OP16-003"]
+    },
+    "p2": {
+      "leader": "TEST-LEADER-7000"
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 2
+  }
+}

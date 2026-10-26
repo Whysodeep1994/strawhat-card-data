@@ -1,0 +1,24 @@
+{
+  "name": "Borsalino adds an active and a rested DON!!",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "hand": ["OP16-073"],
+      "don": {
+        "active": 7,
+        "deck": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.donActive": 1,
+    "p1.donRested": 8
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "name": "Hallowed Glacier Slash sets your [Yamato] Leader active after an opponent's Character was K.O.'d",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": {
+        "card": "OP16-079",
+        "rested": true
+      },
+      "hand": ["TEST-KO-EVENT", "OP16-100"],
+      "don": {
+        "active": 3
+      }
+    },
+    "p2": {
+      "characters": ["TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    },
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.leader.rested": false
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "Buggy plays a [Prisoner of Impel Down] when K.O.'d",
+  "rules": ["10-2-17"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "characters": ["OP16-031"],
+      "hand": ["OP16-042"]
+    },
+    "p2": {
+      "hand": ["TEST-KO-EVENT"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p2",
+      "card": "p2.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p1.characters.0"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters.0.cardId": "OP16-042"
+  }
+}
