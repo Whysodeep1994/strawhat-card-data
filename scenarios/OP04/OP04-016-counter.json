@@ -1,0 +1,43 @@
+{
+  "name": "Bad Manners Kick Course trashes a card for +3000",
+  "rules": ["10-2-4"],
+  "setup": {
+    "p1": {
+      "characters": ["TEST-C7-7000"]
+    },
+    "p2": {
+      "hand": ["OP04-016", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "counterEvent",
+      "player": "p2",
+      "card": "p2.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.leader"]
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 4,
+    "p2.trash": 2
+  }
+}

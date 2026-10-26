@@ -1,0 +1,38 @@
+{
+  "name": "Chinjao draws 2 and trashes 2 after K.O.ing a Character in battle",
+  "rules": ["koInBattle"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "OP04-086",
+          "don": 1
+        }
+      ]
+    },
+    "p2": {
+      "characters": [
+        {
+          "card": "TEST-FILLER",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.characters.0"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p1.trash": 2,
+    "p2.characters": 0
+  }
+}

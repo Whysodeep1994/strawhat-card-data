@@ -1,0 +1,31 @@
+{
+  "name": "Queen with a cost 8 Character adds a Life card instead",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "leader": {
+        "card": "OP04-040",
+        "don": 1
+      },
+      "life": 3,
+      "characters": ["TEST-C8-8000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "chooseOne",
+      "player": "p1",
+      "option": 1
+    }
+  ],
+  "expect": {
+    "p1.life": 4,
+    "p1.hand": 0
+  }
+}

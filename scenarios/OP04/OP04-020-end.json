@@ -1,0 +1,37 @@
+{
+  "name": "Issho sets a rested cost 5 Character active at the end of your turn",
+  "rules": ["10-2-7"],
+  "setup": {
+    "p1": {
+      "leader": "OP04-020",
+      "characters": [
+        {
+          "card": "TEST-C5-5000",
+          "rested": true
+        }
+      ],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "endTurn",
+      "player": "p1"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters.0.rested": false
+  }
+}
