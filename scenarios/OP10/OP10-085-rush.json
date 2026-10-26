@@ -1,0 +1,37 @@
+{
+  "name": "Jesus Burgess gains [Rush] with 1 DON!! and 8 cards in the trash",
+  "rules": ["10-1-1-1"],
+  "setup": {
+    "p1": {
+      "hand": ["OP10-085"],
+      "trash": [
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER"
+      ],
+      "don": {
+        "active": 6
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "giveDon",
+      "player": "p1",
+      "target": "p1.characters.0"
+    }
+  ],
+  "expect": {
+    "legal.p1.attack": 2
+  }
+}

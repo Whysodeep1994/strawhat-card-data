@@ -1,0 +1,35 @@
+{
+  "name": "Vergo adds a {Punk Hazard} card other than [Vergo]",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP10-004"],
+      "don": {
+        "active": 1
+      },
+      "deck": ["OP10-004", "OP10-017", "TEST-FILLER", "TEST-FILLER", "TEST-FILLER", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.0"],
+      "illegal": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.1"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p1.hand.0.cardId": "OP10-017"
+  }
+}

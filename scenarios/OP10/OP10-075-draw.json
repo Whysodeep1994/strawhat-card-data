@@ -1,0 +1,34 @@
+{
+  "name": "Foxy trashes itself to draw with no more DON!! than the opponent",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["OP10-075"],
+      "don": {
+        "active": 2
+      }
+    },
+    "p2": {
+      "don": {
+        "active": 3
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p1.trash": 1
+  }
+}

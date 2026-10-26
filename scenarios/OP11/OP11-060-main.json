@@ -1,0 +1,35 @@
+{
+  "name": "Let's Crash This Wedding!!! adds a {Straw Hat Crew} card with a multicolored Leader",
+  "rules": ["10-2-3"],
+  "setup": {
+    "p1": {
+      "leader": "OP11-040",
+      "hand": ["OP11-060"],
+      "don": {
+        "active": 1
+      },
+      "deck": ["OP11-060", "OP11-053", "TEST-FILLER", "TEST-FILLER", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.0"],
+      "illegal": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.1"]
+    }
+  ],
+  "expect": {
+    "p1.hand.0.cardId": "OP11-053"
+  }
+}

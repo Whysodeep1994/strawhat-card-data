@@ -1,0 +1,40 @@
+{
+  "name": "Hibari gains +1000 and lets the {Navy} Leader attack active Characters",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "leader": "TEST-LEADER-NAVY",
+      "characters": ["OP11-010"]
+    },
+    "p2": {
+      "characters": ["TEST-C4-4000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.leader"]
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.characters.0"
+    }
+  ],
+  "expect": {
+    "p2.life": 3,
+    "p1.leader.rested": true
+  }
+}

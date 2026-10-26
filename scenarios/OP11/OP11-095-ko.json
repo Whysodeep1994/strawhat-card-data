@@ -1,0 +1,38 @@
+{
+  "name": "Monkey.D.Garp gives the Leader a DON!! and K.O.s a cost 7 Character",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP11-095"],
+      "don": {
+        "active": 8,
+        "rested": 1
+      },
+      "trash": ["OP11-093", "OP11-094", "OP11-005"]
+    },
+    "p2": {
+      "characters": ["TEST-C7-7000", "TEST-C9-10000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.leader.givenDon": 1,
+    "p2.characters": 1
+  }
+}

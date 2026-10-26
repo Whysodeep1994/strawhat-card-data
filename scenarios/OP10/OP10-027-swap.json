@@ -1,0 +1,34 @@
+{
+  "name": "Kin'emon (0) and a 1000 power Kin'emon go to the deck bottom to play a cost 6 Kin'emon",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["OP10-027"],
+      "trash": ["OP10-026"],
+      "hand": ["TEST-KINEMON-6"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.trash": 0,
+    "p1.deck": 22,
+    "p1.characters.0.cardId": "TEST-KINEMON-6"
+  }
+}

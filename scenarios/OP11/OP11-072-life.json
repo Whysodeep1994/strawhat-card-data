@@ -1,0 +1,38 @@
+{
+  "name": "Charlotte Mont-d'or makes the opponent place 2 trash cards at the bottom and takes a Life card",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["OP11-072"],
+      "don": {
+        "active": 1
+      }
+    },
+    "p2": {
+      "trash": ["TEST-FILLER", "TEST-FILLER", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.trash.0", "p2.trash.1"]
+    }
+  ],
+  "expect": {
+    "p2.trash": 1,
+    "p1.life": 3,
+    "p1.hand": 1
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "Shirahoshi can't play a card costing more than the DON!! on the field",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "OP11-022",
+      "hand": ["OP11-026"],
+      "don": {
+        "active": 5
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 1
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.characters": 0
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Smoker can't set DON!! active without a 7000 power Character",
+  "rules": ["8-3-2-1"],
+  "setup": {
+    "p1": {
+      "leader": "OP10-001",
+      "characters": ["TEST-FILLER"],
+      "don": {
+        "active": 0,
+        "rested": 3
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 1,
+      "illegal": true
+    }
+  ],
+  "expect": {
+    "p1.donActive": 0
+  }
+}

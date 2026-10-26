@@ -1,0 +1,29 @@
+{
+  "name": "Ryuma gains [Double Attack] with 1 DON!!",
+  "rules": ["10-1-2"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "OP10-094",
+          "don": 1
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 2
+  }
+}

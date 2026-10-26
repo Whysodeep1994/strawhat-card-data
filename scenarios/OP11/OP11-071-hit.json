@@ -1,0 +1,39 @@
+{
+  "name": "Charlotte Perospero guesses right: draw 1 and add an active DON!!",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["OP11-071"],
+      "hand": ["TEST-FILLER"],
+      "don": {
+        "active": 0,
+        "deck": 2
+      }
+    },
+    "p2": {
+      "deck": ["TEST-C5-5000", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "chooseOne",
+      "player": "p1",
+      "option": 5
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p1.donActive": 1
+  }
+}

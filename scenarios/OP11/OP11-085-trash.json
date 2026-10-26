@@ -1,0 +1,28 @@
+{
+  "name": "Kurozumi Orochi adds a cost 5 {SMILE} card from the trash",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP11-085"],
+      "don": {
+        "active": 3
+      },
+      "trash": ["OP11-087"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.trash.0"]
+    }
+  ],
+  "expect": {
+    "p1.hand.0.cardId": "OP11-087"
+  }
+}

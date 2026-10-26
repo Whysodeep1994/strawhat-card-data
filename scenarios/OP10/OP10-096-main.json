@@ -1,0 +1,36 @@
+{
+  "name": "There's No Longer Any Need... K.O.s a {The Seven Warlords of the Sea} Character",
+  "rules": ["10-2-3"],
+  "setup": {
+    "p1": {
+      "hand": ["OP10-096"],
+      "don": {
+        "active": 4
+      }
+    },
+    "p2": {
+      "characters": ["OP10-071", "TEST-C5-5000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.1"],
+      "illegal": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 1
+  }
+}

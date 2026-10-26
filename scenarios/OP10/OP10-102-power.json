@@ -1,0 +1,27 @@
+{
+  "name": "Emporio.Ivankov powers up 3 {Revolutionary Army} Characters and takes a Life card",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["OP10-102", "OP10-100"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.0", "p1.characters.1"]
+    }
+  ],
+  "expect": {
+    "modifiers": 2,
+    "p1.hand": 1,
+    "p1.life": 3
+  }
+}

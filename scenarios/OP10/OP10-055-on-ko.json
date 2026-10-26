@@ -1,0 +1,36 @@
+{
+  "name": "Marco returns a cost 4 Character when K.O.'d",
+  "rules": ["10-2-17"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "characters": ["OP10-055"]
+    },
+    "p2": {
+      "hand": ["TEST-KO-EVENT"],
+      "characters": ["TEST-C4-4000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p2",
+      "card": "p2.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p1.characters.0"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 0,
+    "p2.hand": 1
+  }
+}

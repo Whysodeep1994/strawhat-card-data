@@ -1,0 +1,42 @@
+{
+  "name": "Streusen guesses right and rests a cost 4 Character",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["OP11-074"],
+      "don": {
+        "active": 1
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C4-4000"],
+      "deck": ["TEST-FILLER", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "chooseOne",
+      "player": "p1",
+      "option": 1
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters.0.rested": true
+  }
+}

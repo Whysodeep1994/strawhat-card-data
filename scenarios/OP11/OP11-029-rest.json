@@ -1,0 +1,30 @@
+{
+  "name": "Charlotte Praline rests a cost 1 Character",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP11-029"],
+      "don": {
+        "active": 3
+      }
+    },
+    "p2": {
+      "characters": ["TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters.0.rested": true
+  }
+}

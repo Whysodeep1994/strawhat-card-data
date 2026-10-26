@@ -1,0 +1,33 @@
+{
+  "name": "Koala returns a cost 4 {Revolutionary Army} Character for +3000",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": ["OP10-047", "OP10-049"]
+    },
+    "p2": {
+      "leader": "TEST-LEADER-6000"
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p2.life": 3
+  }
+}

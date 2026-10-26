@@ -1,0 +1,36 @@
+{
+  "name": "Spotted Neptunian adds [Shirahoshi] with a Shirahoshi Leader",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "leader": "OP11-022",
+      "hand": ["OP11-036"],
+      "don": {
+        "active": 4
+      },
+      "deck": [
+        "TEST-FILLER",
+        "OP11-030",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER"
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.1"]
+    }
+  ],
+  "expect": {
+    "p1.hand.0.cardId": "OP11-030"
+  }
+}

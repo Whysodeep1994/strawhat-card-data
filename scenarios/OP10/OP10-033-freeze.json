@@ -1,0 +1,44 @@
+{
+  "name": "Nami keeps 1 of the opponent's rested DON!! rested in their next Refresh Phase",
+  "rules": ["6-2-3"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "OP10-038",
+          "rested": true
+        },
+        {
+          "card": "OP10-035",
+          "rested": true
+        }
+      ],
+      "hand": ["OP10-033"],
+      "don": {
+        "active": 2
+      }
+    },
+    "p2": {
+      "don": {
+        "active": 0,
+        "rested": 4
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "endTurn",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "turnPlayer": "p2",
+    "p2.donActive": 3,
+    "p2.donRested": 1
+  }
+}

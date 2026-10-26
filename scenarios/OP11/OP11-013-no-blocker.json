@@ -1,0 +1,34 @@
+{
+  "name": "Prince Grus stops 2000-power Characters from blocking",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": ["OP11-013"]
+    },
+    "p2": {
+      "characters": ["TEST-BLOCKER-2000", "TEST-BLOCKER-5000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "block",
+      "player": "p2",
+      "blocker": "p2.characters.0",
+      "illegal": true
+    },
+    {
+      "type": "block",
+      "player": "p2",
+      "blocker": "p2.characters.1"
+    }
+  ],
+  "expect": {
+    "p2.characters.1.rested": true
+  }
+}

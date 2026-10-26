@@ -1,0 +1,31 @@
+{
+  "name": "Charlotte Brulee takes a Life card for an active DON!! with a {Big Mom Pirates} Leader",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "leader": "TEST-LEADER-BMP",
+      "hand": ["OP11-069"],
+      "don": {
+        "active": 3,
+        "deck": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.life": 3,
+    "p1.hand": 1,
+    "p1.donActive": 1
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Koby places 2 trash cards at the bottom for +1000 through the opponent's next turn",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": ["OP11-119"],
+      "trash": ["TEST-FILLER", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.0"]
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    },
+    {
+      "type": "endTurn",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "turnPlayer": "p2",
+    "p1.characters.0.power": 10000,
+    "p1.trash": 0
+  }
+}
