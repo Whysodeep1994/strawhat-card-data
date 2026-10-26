@@ -1,0 +1,30 @@
+{
+  "name": "Nami adds a {Land of Wano} card from the top 4 and trashes the rest",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "OP16-079",
+      "hand": ["OP16-091"],
+      "don": {
+        "active": 1
+      },
+      "deck": ["OP16-086", "TEST-FILLER", "TEST-FILLER", "TEST-FILLER", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.0"]
+    }
+  ],
+  "expect": {
+    "p1.hand.0.cardId": "OP16-086",
+    "p1.trash": 3
+  }
+}

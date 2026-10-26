@@ -1,0 +1,27 @@
+{
+  "name": "Kouzuki Oden trashes a cost 8 Character card to draw 2",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "hand": ["OP16-083", "OP16-086"],
+      "don": {
+        "active": 5
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.hand": 2
+  }
+}

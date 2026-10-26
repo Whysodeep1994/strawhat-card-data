@@ -1,0 +1,24 @@
+{
+  "name": "Trafalgar Law sets your green cost 5 Characters active at the end of your turn",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": [
+        "OP16-030",
+        {
+          "card": "OP16-027",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "endTurn",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "p1.characters.1.rested": false
+  }
+}

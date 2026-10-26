@@ -1,0 +1,36 @@
+{
+  "name": "Portgas.D.Ace makes the Counter of your 8000 power Character cards +2000",
+  "rules": ["10-2-1"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "characters": ["OP16-118"],
+      "hand": ["OP16-004"]
+    },
+    "p2": {
+      "characters": ["TEST-C6-6000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p2",
+      "attacker": "p2.characters.0",
+      "target": "p1.leader"
+    },
+    {
+      "type": "counter",
+      "player": "p1",
+      "card": "p1.hand.0",
+      "target": "p1.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "p1.life": 4
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "Trafalgar Law gains +3000 when attacking with a {Donquixote Pirates} Leader",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "leader": "OP14-060",
+      "characters": ["OP16-068"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    }
+  ],
+  "expect": {
+    "modifiers.0.power": 3000
+  }
+}
