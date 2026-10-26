@@ -1,0 +1,28 @@
+{
+  "name": "Lim sets itself active with 2 rested {ODYSSEY} Characters",
+  "rules": ["10-2-7"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "P-079",
+          "rested": true
+        },
+        {
+          "card": "P-078",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "endTurn",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "p1.characters.0.rested": false,
+    "p1.characters.1.rested": true
+  }
+}

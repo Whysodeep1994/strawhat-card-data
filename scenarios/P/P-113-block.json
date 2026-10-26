@@ -1,0 +1,38 @@
+{
+  "name": "Jewelry Bonney blocks with +2000 on the opponent's turn with 2 DON!!",
+  "rules": ["10-1-4-1"],
+  "setup": {
+    "p2": {
+      "characters": [
+        {
+          "card": "P-113",
+          "don": 2
+        }
+      ]
+    },
+    "p1": {
+      "characters": ["TEST-C5-5000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "block",
+      "player": "p2",
+      "blocker": "p2.characters.0"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.characters": 1,
+    "power.p2.characters.0": 6000
+  }
+}

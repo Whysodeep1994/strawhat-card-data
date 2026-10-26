@@ -1,0 +1,45 @@
+{
+  "name": "Charlotte Smoothie returns a DON!! when K.O.'d to play a {Big Mom Pirates} Character",
+  "rules": ["10-2-17"],
+  "setup": {
+    "p1": {
+      "hand": ["TEST-KO-EVENT"],
+      "don": {
+        "active": 3
+      }
+    },
+    "p2": {
+      "characters": ["P-090"],
+      "hand": ["ST07-002"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.hand.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 1,
+    "p2.characters.0.cardId": "ST07-002"
+  }
+}

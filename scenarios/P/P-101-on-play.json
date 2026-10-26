@@ -1,0 +1,28 @@
+{
+  "name": "Tony Tony.Chopper gives a rested DON!! to the Leader",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["P-101"],
+      "don": {
+        "active": 4,
+        "rested": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.leader"]
+    }
+  ],
+  "expect": {
+    "p1.leader.givenDon": 1
+  }
+}

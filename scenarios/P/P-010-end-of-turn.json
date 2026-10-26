@@ -1,0 +1,22 @@
+{
+  "name": "Kaido adds an active DON!! at the end of your turn",
+  "rules": ["10-2-7"],
+  "setup": {
+    "p1": {
+      "characters": ["P-010"],
+      "don": {
+        "deck": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "endTurn",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "p1.donActive": 1,
+    "p1.donDeck": 1
+  }
+}

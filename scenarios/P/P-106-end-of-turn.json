@@ -1,0 +1,34 @@
+{
+  "name": "Monkey.D.Luffy turns a Life card face-up to set an {Egghead} Character active",
+  "rules": ["10-2-7"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "P-106",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "endTurn",
+      "player": "p1"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters.0.rested": false,
+    "p1.life.0.faceUp": true
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "I Smell Adventure!!! shuffles the hand into the deck and draws as many",
+  "rules": ["10-2-3"],
+  "setup": {
+    "p1": {
+      "hand": ["P-002", "TEST-C4-4000", "TEST-C5-5000"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.hand": 2,
+    "p1.deck": 20
+  }
+}

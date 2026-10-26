@@ -1,0 +1,23 @@
+{
+  "name": "Nami sets 2 DON!! active with a {Straw Hat Crew} Leader",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "leader": "TEST-LEADER-SANJI",
+      "hand": ["P-102"],
+      "don": {
+        "active": 4
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.donActive": 2
+  }
+}

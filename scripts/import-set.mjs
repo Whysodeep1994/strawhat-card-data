@@ -80,11 +80,24 @@ function parseCard(id, body) {
 const res = await fetch(`${SITE}/cardlist/?series=${series}`);
 if (!res.ok) throw new Error(`Card list returned ${res.status}`);
 const page = await res.text();
-const found = [...page.matchAll(/<dl class="modalCol" id="([^"]+)">([\s\S]*?)<\/dl>/g)]
+const prints = [...page.matchAll(/<dl class="modalCol" id="([^"]+)">([\s\S]*?)<\/dl>/g)];
+const found = prints
   // Alternate art prints (ids like ST01-012_p1) share their card's data.
   .filter(([, id]) => id.startsWith(set) && !id.includes("_"))
   .filter(([, id]) => only.length === 0 || only.includes(id))
   .map(([, id, body]) => parseCard(id, body));
+// Some promo cards are only listed as reprints (ids like P-101_r1) on another product's page.
+// When a card number asked for has no plain print here, take its first reprint instead.
+const artOf = new Map();
+for (const id of only) {
+  if (found.some((c) => c.id === id)) continue;
+  const reprint = prints.find(([, printId]) => printId.startsWith(`${id}_`));
+  if (!reprint) continue;
+  const card = parseCard(id, reprint[2]);
+  artOf.set(id, card.image.slice("images/".length));
+  card.image = `images/${id}${card.image.slice(card.image.lastIndexOf("."))}`;
+  found.push(card);
+}
 if (found.length === 0) throw new Error(`No ${set} cards found in series ${series}`);
 const missing = only.filter((id) => !found.some((c) => c.id === id));
 if (missing.length > 0) throw new Error(`Not in series ${series}: ${missing.join(", ")}`);
@@ -112,7 +125,9 @@ const cards = [...others, ...imported].sort((a, b) => a.id.localeCompare(b.id));
 
 mkdirSync(join(root, "images"), { recursive: true });
 for (const card of imported) {
-  const art = await fetch(`${SITE}/images/cardlist/card/${card.image.slice("images/".length)}`);
+  const art = await fetch(
+    `${SITE}/images/cardlist/card/${artOf.get(card.id) ?? card.image.slice("images/".length)}`,
+  );
   if (!art.ok) throw new Error(`${card.id}: art returned ${art.status}`);
   writeFileSync(join(root, card.image), Buffer.from(await art.arrayBuffer()));
 }

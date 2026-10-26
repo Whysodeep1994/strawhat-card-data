@@ -1,0 +1,18 @@
+{
+  "name": "Monkey.D.Luffy gains +2000 with 2 DON!! on your turn",
+  "rules": ["8-3-2-3"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "P-006",
+          "don": 2
+        }
+      ]
+    }
+  },
+  "actions": [],
+  "expect": {
+    "power.p1.characters.0": 7000
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "Shanks can't be removed by the opponent's effects when a player has 10 DON!!",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "hand": ["TEST-KO-EVENT"],
+      "don": {
+        "active": 10
+      }
+    },
+    "p2": {
+      "characters": ["P-104"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 1
+  }
+}

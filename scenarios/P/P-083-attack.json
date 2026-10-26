@@ -1,0 +1,45 @@
+{
+  "name": "Shanks trashes a Character card to give −1000 and draw 1",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "P-083",
+          "don": 1
+        }
+      ],
+      "hand": ["TEST-FILLER"]
+    },
+    "p2": {
+      "characters": ["TEST-C4-4000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "power.p2.characters.0": 3000,
+    "p1.hand": 1,
+    "p1.trash": 1
+  }
+}
