@@ -33,6 +33,11 @@
       "cards": ["p2.hand.0"]
     },
     {
+      "type": "choose",
+      "player": "p2",
+      "cards": []
+    },
+    {
       "type": "pass",
       "player": "p2"
     }

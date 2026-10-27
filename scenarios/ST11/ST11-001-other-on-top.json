@@ -16,6 +16,11 @@
       "player": "p1",
       "attacker": "p1.leader",
       "target": "p2.leader"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": []
     }
   ],
   "expect": {
