@@ -1,0 +1,19 @@
+{
+  "name": "X.Drake gives nothing while active",
+  "rules": ["8-3-2-3"],
+  "setup": {
+    "p1": {
+      "leader": "TEST-LEADER-SUPERNOVAS",
+      "characters": [
+        {
+          "card": "ST02-014",
+          "don": 1
+        }
+      ]
+    }
+  },
+  "actions": [],
+  "expect": {
+    "power.p1.leader": 5000
+  }
+}

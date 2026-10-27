@@ -1,0 +1,32 @@
+{
+  "name": "Smoker gains [Double Attack] when there is a cost 0 Character",
+  "rules": ["10-1-2"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "ST06-004",
+          "don": 1
+        }
+      ]
+    },
+    "p2": {
+      "characters": ["TEST-C0-1000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 2
+  }
+}

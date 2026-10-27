@@ -1,0 +1,36 @@
+{
+  "name": "Kaido can't be K.O.'d in battle with 2 or less Life",
+  "rules": ["7-1-4-1"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "characters": [
+        {
+          "card": "ST09-004",
+          "don": 1,
+          "rested": true
+        }
+      ],
+      "life": 2
+    },
+    "p2": {
+      "characters": ["TEST-C9-10000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p2",
+      "attacker": "p2.characters.0",
+      "target": "p1.characters.0"
+    },
+    {
+      "type": "pass",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "p1.characters": 1
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "Monkey.D.Luffy trashes 2 cards; the opponent places a Character at the bottom of the deck",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["P-055", "TEST-FILLER", "TEST-FILLER"],
+      "don": {
+        "active": 4
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C4-4000", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.characters.1"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 1,
+    "p2.characters.0.cardId": "TEST-C4-4000",
+    "p2.deck": 21
+  }
+}

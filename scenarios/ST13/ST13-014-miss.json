@@ -1,0 +1,28 @@
+{
+  "name": "Monkey.D.Luffy plays nothing when the top Life card isn't a cost 5 Monkey.D.Luffy",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["ST13-014"],
+      "life": ["TEST-C5-5000", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.characters": 0,
+    "p1.life": 2,
+    "power.p1.leader": 5000
+  }
+}

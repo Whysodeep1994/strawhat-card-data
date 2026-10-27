@@ -1,0 +1,18 @@
+{
+  "name": "Sanji gains +4000 with 3 or less cards in hand",
+  "rules": ["8-3-2-3"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "P-050",
+          "don": 1
+        }
+      ]
+    }
+  },
+  "actions": [],
+  "expect": {
+    "power.p1.characters.0": 7000
+  }
+}

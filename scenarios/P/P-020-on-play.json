@@ -1,0 +1,27 @@
+{
+  "name": "Helmeppo gives the Leader +1000",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["P-020"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.leader"]
+    }
+  ],
+  "expect": {
+    "power.p1.leader": 6000
+  }
+}

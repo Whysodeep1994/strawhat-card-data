@@ -1,0 +1,38 @@
+{
+  "name": "Arlong makes the opponent place a card from hand at the bottom of the deck",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "P-048",
+          "don": 1
+        }
+      ]
+    },
+    "p2": {
+      "hand": ["TEST-FILLER", "TEST-C4-4000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p2.hand.0"]
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.hand": 2,
+    "p2.deck": 21
+  }
+}

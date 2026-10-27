@@ -1,0 +1,29 @@
+{
+  "name": "Eustass\"Captain\"Kid has [Double Attack] with 2 DON!!",
+  "rules": ["10-1-2"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "P-003",
+          "don": 2
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 2
+  }
+}

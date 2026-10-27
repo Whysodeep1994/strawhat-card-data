@@ -55,6 +55,45 @@
     "source": "https://en.onepiece-cardgame.com/cardlist/?series=569003"
   },
   {
+    "id": "ST03-003",
+    "name": "Crocodile",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 5,
+    "power": 6000,
+    "types": ["The Seven Warlords of the Sea", "Baroque Works"],
+    "attribute": "Special",
+    "rarity": "SR",
+    "blockIcon": 1,
+    "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)\n[DON!! x1] [On Block] Place up to 1 Character with a cost of 2 or less at the bottom of the owner's deck.",
+    "image": "images/ST03-003.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569003",
+    "errata": true,
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "onBlock",
+        "conditions": [
+          {
+            "donAtLeast": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "returnToDeckBottom",
+            "target": {
+              "side": "any",
+              "filter": {
+                "costAtMost": 2
+              },
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "ST03-004",
     "name": "Gecko Moria",
     "category": "character",
@@ -131,6 +170,65 @@
     ]
   },
   {
+    "id": "ST03-006",
+    "name": "Jinbe",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 2,
+    "power": 4000,
+    "counter": 1000,
+    "types": ["Fish-Man", "The Seven Warlords of the Sea", "The Sun Pirates"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "",
+    "image": "images/ST03-006.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569003"
+  },
+  {
+    "id": "ST03-007",
+    "name": "Sentomaru",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 3,
+    "power": 4000,
+    "counter": 1000,
+    "types": ["Navy"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "[DON!! x1] [Activate: Main] [Once Per Turn] ➁ (You may rest the specified number of DON!! cards in your cost area.): Play up to 1 [Pacifista] with a cost of 4 or less from your deck, then shuffle your deck.",
+    "image": "images/ST03-007.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569003",
+    "errata": true,
+    "effects": [
+      {
+        "timing": "activateMain",
+        "conditions": [
+          {
+            "donAtLeast": 1
+          }
+        ],
+        "oncePerTurn": true,
+        "costs": [
+          {
+            "restDon": 2
+          }
+        ],
+        "steps": [
+          {
+            "do": "searchWholeDeck",
+            "filter": {
+              "name": "Pacifista",
+              "costAtMost": 4
+            },
+            "play": true
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "ST03-008",
     "name": "Trafalgar Law",
     "category": "character",
@@ -145,5 +243,307 @@
     "image": "images/ST03-008.png",
     "source": "https://en.onepiece-cardgame.com/cardlist/?series=569003",
     "keywords": ["blocker"]
+  },
+  {
+    "id": "ST03-009",
+    "name": "Donquixote Doflamingo",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 7,
+    "power": 7000,
+    "types": ["The Seven Warlords of the Sea", "Donquixote Pirates"],
+    "attribute": "Special",
+    "rarity": "SR",
+    "blockIcon": 1,
+    "text": "[On Play] Return up to 1 Character with a cost of 7 or less to the owner's hand.",
+    "image": "images/ST03-009.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569003",
+    "errata": true,
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "returnToHand",
+            "target": {
+              "side": "any",
+              "filter": {
+                "costAtMost": 7
+              },
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST03-010",
+    "name": "Bartholomew Kuma",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 2,
+    "power": 3000,
+    "types": ["The Seven Warlords of the Sea", "Revolutionary Army"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "[On Play] Look at 3 cards from the top of your deck and return them to the top or bottom of the deck in any order.",
+    "trigger": "[Trigger] Play this card.",
+    "image": "images/ST03-010.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569003",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "arrangeDeckTop",
+            "look": 3,
+            "bottom": true
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "playThis"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST03-011",
+    "name": "Buggy",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 1,
+    "power": 3000,
+    "counter": 1000,
+    "types": ["The Seven Warlords of the Sea", "Buggy's Delivery"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "",
+    "image": "images/ST03-011.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569003"
+  },
+  {
+    "id": "ST03-012",
+    "name": "Pacifista",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 4,
+    "power": 6000,
+    "counter": 1000,
+    "types": ["Biological Weapon", "Navy"],
+    "attribute": "Special",
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "",
+    "image": "images/ST03-012.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569003"
+  },
+  {
+    "id": "ST03-013",
+    "name": "Boa Hancock",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 3,
+    "power": 1000,
+    "counter": 1000,
+    "types": ["The Seven Warlords of the Sea", "Kuja Pirates"],
+    "attribute": "Special",
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)",
+    "trigger": "[Trigger] Play this card.",
+    "image": "images/ST03-013.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569003",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "playThis"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST03-014",
+    "name": "Marshall.D.Teach",
+    "category": "character",
+    "colors": ["blue"],
+    "cost": 4,
+    "power": 4000,
+    "counter": 1000,
+    "types": ["The Seven Warlords of the Sea", "Blackbeard Pirates"],
+    "attribute": "Special",
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "[On Play] Return up to 1 Character with a cost of 3 or less to the owner's hand.",
+    "image": "images/ST03-014.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569003",
+    "errata": true,
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "returnToHand",
+            "target": {
+              "side": "any",
+              "filter": {
+                "costAtMost": 3
+              },
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST03-015",
+    "name": "Sables",
+    "category": "event",
+    "colors": ["blue"],
+    "cost": 4,
+    "types": ["The Seven Warlords of the Sea", "Baroque Works"],
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "[Main] Return up to 1 Character with a cost of 7 or less to the owner's hand.",
+    "trigger": "[Trigger] Activate this card's [Main] effect.",
+    "image": "images/ST03-015.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569003",
+    "errata": true,
+    "effects": [
+      {
+        "timing": "main",
+        "steps": [
+          {
+            "do": "returnToHand",
+            "target": {
+              "side": "any",
+              "filter": {
+                "costAtMost": 7
+              },
+              "upTo": true
+            }
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "returnToHand",
+            "target": {
+              "side": "any",
+              "filter": {
+                "costAtMost": 7
+              },
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST03-016",
+    "name": "Thrust Pad Cannon",
+    "category": "event",
+    "colors": ["blue"],
+    "cost": 2,
+    "types": ["The Seven Warlords of the Sea", "Revolutionary Army"],
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "[Counter] Return up to 1 Character with a cost of 3 or less to the owner's hand.",
+    "trigger": "[Trigger] Activate this card's [Counter] effect.",
+    "image": "images/ST03-016.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569003",
+    "errata": true,
+    "effects": [
+      {
+        "timing": "counter",
+        "steps": [
+          {
+            "do": "returnToHand",
+            "target": {
+              "side": "any",
+              "filter": {
+                "costAtMost": 3
+              },
+              "upTo": true
+            }
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "returnToHand",
+            "target": {
+              "side": "any",
+              "filter": {
+                "costAtMost": 3
+              },
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST03-017",
+    "name": "Love-Love Mellow",
+    "category": "event",
+    "colors": ["blue"],
+    "cost": 2,
+    "types": ["The Seven Warlords of the Sea", "Kuja Pirates"],
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "[Counter] Up to 1 of your Leader or Character cards gains +4000 power during this battle. Then, draw 1 card if you have 3 or less cards in your hand.",
+    "image": "images/ST03-017.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569003",
+    "errata": true,
+    "effects": [
+      {
+        "timing": "counter",
+        "steps": [
+          {
+            "do": "powerUp",
+            "target": {
+              "side": "self",
+              "zone": "leaderOrCharacters",
+              "upTo": true
+            },
+            "amount": 4000,
+            "duration": "battle"
+          },
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "handAtMost": 3
+              }
+            ],
+            "steps": [
+              {
+                "do": "draw",
+                "count": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
   }
 ]

@@ -1,0 +1,38 @@
+{
+  "name": "Nico Robin rests a DON!! instead of a {Straw Hat Crew} Character being K.O.'d",
+  "rules": ["8-1-3-4"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "characters": ["P-111", "ST14-005"],
+      "don": {
+        "active": 1
+      }
+    },
+    "p2": {
+      "hand": ["TEST-KO-EVENT"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p2",
+      "card": "p2.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p1.characters.1"]
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.characters": 2,
+    "p1.donRested": 1
+  }
+}

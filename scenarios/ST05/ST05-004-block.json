@@ -1,0 +1,46 @@
+{
+  "name": "Uta blocks and returns a DON!! to rest a cost 5 Character",
+  "rules": ["10-2-15"],
+  "setup": {
+    "p1": {
+      "characters": ["TEST-C4-4000", "TEST-C5-5000"]
+    },
+    "p2": {
+      "characters": ["ST05-004"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "block",
+      "player": "p2",
+      "blocker": "p2.characters.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p2",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p2",
+      "cards": ["p1.characters.1"]
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p1.characters.1.rested": true,
+    "p2.donDeck": 1
+  }
+}

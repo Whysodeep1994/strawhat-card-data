@@ -1,0 +1,28 @@
+{
+  "name": "Charlotte Linlin: the opponent chooses to let you add a Life card",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["ST07-010"],
+      "don": {
+        "active": 7
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "chooseOne",
+      "player": "p2",
+      "option": 1
+    }
+  ],
+  "expect": {
+    "p1.life": 5,
+    "p2.life": 4
+  }
+}

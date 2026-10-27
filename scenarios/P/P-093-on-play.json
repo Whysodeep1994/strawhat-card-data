@@ -1,0 +1,28 @@
+{
+  "name": "Trafalgar Law adds a rested DON!! with no more DON!! than the opponent",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["P-093"],
+      "don": {
+        "active": 4,
+        "deck": 2
+      }
+    },
+    "p2": {
+      "don": {
+        "active": 5
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.donRested": 5
+  }
+}

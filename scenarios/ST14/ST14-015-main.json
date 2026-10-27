@@ -1,0 +1,37 @@
+{
+  "name": "Gum-Gum Diable ... Phoenix Cannon gives +3000 and K.O.s a cost 2 Character",
+  "rules": ["10-2-3"],
+  "setup": {
+    "p1": {
+      "hand": ["ST14-015"],
+      "characters": ["TEST-C8-8000"],
+      "don": {
+        "active": 2
+      }
+    },
+    "p2": {
+      "characters": ["TEST-GERMA-3000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.leader"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "power.p1.leader": 8000,
+    "p2.characters": 0
+  }
+}

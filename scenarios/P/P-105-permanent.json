@@ -1,0 +1,31 @@
+{
+  "name": "Sabo gains [Blocker] and +4 cost with a {Revolutionary Army} Leader",
+  "rules": ["10-1-4-1"],
+  "setup": {
+    "p2": {
+      "leader": "TEST-LEADER-RA",
+      "characters": ["P-105"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "block",
+      "player": "p2",
+      "blocker": "p2.characters.0"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 4,
+    "cost.p2.characters.0": 8
+  }
+}

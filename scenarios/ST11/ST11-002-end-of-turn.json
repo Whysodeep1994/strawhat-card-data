@@ -1,0 +1,36 @@
+{
+  "name": "Uta trashes an Event to set a {FILM} Character active",
+  "rules": ["10-2-7"],
+  "setup": {
+    "p1": {
+      "characters": [
+        "ST11-002",
+        {
+          "card": "ST05-007",
+          "rested": true
+        }
+      ],
+      "hand": ["TEST-KO-EVENT"]
+    }
+  },
+  "actions": [
+    {
+      "type": "endTurn",
+      "player": "p1"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.1"]
+    }
+  ],
+  "expect": {
+    "p1.characters.1.rested": false,
+    "p1.trash": 1
+  }
+}

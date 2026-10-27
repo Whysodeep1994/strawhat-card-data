@@ -1,0 +1,39 @@
+{
+  "name": "Monkey.D.Luffy trashes itself to play a cost 5 Monkey.D.Luffy from the top of your Life",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["ST13-014"],
+      "life": ["ST13-015", "TEST-FILLER", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.life.0"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.leader"]
+    }
+  ],
+  "expect": {
+    "p1.characters.0.cardId": "ST13-015",
+    "p1.life": 2,
+    "power.p1.leader": 7000,
+    "p1.trash": 1
+  }
+}

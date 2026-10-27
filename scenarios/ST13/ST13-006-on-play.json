@@ -1,0 +1,38 @@
+{
+  "name": "Curly.Dadan plays Sabo, Portgas.D.Ace and Monkey.D.Luffy",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["ST13-006", "ST13-007", "ST13-010", "ST13-014"],
+      "don": {
+        "active": 5
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 4,
+    "p1.hand": 0
+  }
+}

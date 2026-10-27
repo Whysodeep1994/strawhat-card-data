@@ -1,0 +1,30 @@
+{
+  "name": "Hody & Hyouzou rests a cost 4 Character and takes a Life card",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["P-062"]
+    },
+    "p2": {
+      "characters": ["TEST-C4-4000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters.0.rested": true,
+    "p1.life": 3,
+    "modifiers.0.power": 1000
+  }
+}

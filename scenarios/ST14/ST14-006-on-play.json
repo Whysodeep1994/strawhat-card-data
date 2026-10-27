@@ -1,0 +1,23 @@
+{
+  "name": "Nami draws 1 with a cost 8 Character out",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["ST14-006"],
+      "characters": ["TEST-C8-8000"],
+      "don": {
+        "active": 3
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "p1.hand": 1
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "Yamato rests to rest a cost 2 Character",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["P-008"]
+    },
+    "p2": {
+      "characters": ["TEST-GERMA-3000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p2.characters.0.rested": true
+  }
+}

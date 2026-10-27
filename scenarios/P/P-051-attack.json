@@ -1,0 +1,40 @@
+{
+  "name": "Shanks trashes 2 cards to gain +2000",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": ["P-051"],
+      "hand": ["TEST-FILLER", "TEST-FILLER", "TEST-C4-4000"]
+    },
+    "p2": {
+      "characters": [
+        {
+          "card": "TEST-C9-10000",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.characters.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0", "p1.hand.1"]
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p1.trash": 2,
+    "p2.characters": 0
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "Monkey.D.Luffy gains +1000 with 2 rested Characters",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": [
+        "P-037",
+        {
+          "card": "TEST-FILLER",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 3
+  }
+}

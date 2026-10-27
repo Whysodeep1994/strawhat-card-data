@@ -1,0 +1,33 @@
+{
+  "name": "Monkey.D.Luffy rests 3 DON!! to play Portgas.D.Ace",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "leader": "OP03-001",
+      "hand": ["P-154", "P-153"],
+      "don": {
+        "active": 9
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 2
+  }
+}

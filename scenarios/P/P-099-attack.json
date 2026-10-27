@@ -1,0 +1,33 @@
+{
+  "name": "Monkey.D.Luffy returns 10 DON!! to set itself active",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": ["P-099"],
+      "don": {
+        "active": 10
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p1.characters.0.rested": false,
+    "p1.donDeck": 10
+  }
+}

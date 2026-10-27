@@ -1,0 +1,30 @@
+{
+  "name": "Monkey.D.Luffy has [Rush] with 2 DON!!",
+  "rules": ["10-1-1"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "P-001",
+          "don": 2,
+          "playedThisTurn": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 3
+  }
+}

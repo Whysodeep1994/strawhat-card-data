@@ -1,0 +1,33 @@
+{
+  "name": "Bepo adds a rested DON!! when attacking if the opponent has more DON!!",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": ["ST10-012"],
+      "don": {
+        "active": 1,
+        "deck": 2
+      }
+    },
+    "p2": {
+      "don": {
+        "active": 3
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p1.donRested": 1
+  }
+}

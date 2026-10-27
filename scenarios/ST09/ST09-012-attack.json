@@ -1,0 +1,35 @@
+{
+  "name": "Yamato takes a Life card to gain +2000",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": ["ST09-012"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": false
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 3,
+    "p1.hand": 1
+  }
+}

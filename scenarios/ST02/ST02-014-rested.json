@@ -1,0 +1,23 @@
+{
+  "name": "X.Drake gives {Supernovas} and {Navy} cards +1000 while rested",
+  "rules": ["8-3-2-3"],
+  "setup": {
+    "p1": {
+      "leader": "TEST-LEADER-SUPERNOVAS",
+      "characters": [
+        {
+          "card": "ST02-014",
+          "don": 1,
+          "rested": true
+        },
+        "TEST-FILLER"
+      ]
+    }
+  },
+  "actions": [],
+  "expect": {
+    "power.p1.leader": 6000,
+    "power.p1.characters.0": 7000,
+    "power.p1.characters.1": 1000
+  }
+}

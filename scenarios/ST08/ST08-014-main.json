@@ -1,0 +1,36 @@
+{
+  "name": "Gum-Gum Bell takes a Life card to give −7 cost",
+  "rules": ["10-2-3"],
+  "setup": {
+    "p1": {
+      "hand": ["ST08-014"],
+      "don": {
+        "active": 2
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C7-7000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "cost.p2.characters.0": 0,
+    "p1.life": 3
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Edward.Newgate gives everything +2000 and K.O.s a 3000 power Character",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["P-152"],
+      "characters": ["TEST-FILLER"],
+      "don": {
+        "active": 10
+      }
+    },
+    "p2": {
+      "characters": ["TEST-GERMA-3000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "power.p1.leader": 7000,
+    "power.p1.characters.0": 3000,
+    "p2.characters": 0
+  }
+}

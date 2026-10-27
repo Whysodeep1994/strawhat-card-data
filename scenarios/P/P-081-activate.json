@@ -1,0 +1,33 @@
+{
+  "name": "Dracule Mihawk returns to the hand to play a cost 5 {Cross Guild} Character",
+  "rules": ["10-2-2"],
+  "setup": {
+    "p1": {
+      "characters": ["P-081", "TEST-CROSS-GUILD", "TEST-CROSS-GUILD", "TEST-CROSS-GUILD"],
+      "hand": ["P-082"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 4,
+    "p1.characters.3.cardId": "P-082",
+    "p1.hand": 1
+  }
+}

@@ -32,5 +32,501 @@
         ]
       }
     ]
+  },
+  {
+    "id": "ST08-002",
+    "name": "Uta",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 2,
+    "power": 3000,
+    "types": ["FILM"],
+    "attribute": "Special",
+    "rarity": "SR",
+    "blockIcon": 1,
+    "text": "This Character cannot be K.O.'d in battle by Leaders.\n[Activate: Main] You may rest this Character: Give up to 1 of your opponent's Characters −2 cost during this turn.",
+    "image": "images/ST08-002.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569008",
+    "effects": [
+      {
+        "timing": "permanent",
+        "steps": [
+          {
+            "do": "grantStatus",
+            "target": {
+              "side": "this"
+            },
+            "status": "cannotBeKOdInBattleByLeaders"
+          }
+        ]
+      },
+      {
+        "timing": "activateMain",
+        "optional": true,
+        "costs": [
+          {
+            "restThis": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "costChange",
+            "target": {
+              "side": "opponent",
+              "upTo": true
+            },
+            "amount": -2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST08-003",
+    "name": "Gaimon",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 2,
+    "power": 4000,
+    "counter": 1000,
+    "types": ["East Blue"],
+    "attribute": "Wisdom",
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "",
+    "image": "images/ST08-003.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569008"
+  },
+  {
+    "id": "ST08-004",
+    "name": "Koby",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 4,
+    "power": 1000,
+    "counter": 1000,
+    "types": ["Navy"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "[Activate: Main] You may rest this Character: K.O. up to 1 of your opponent's Characters with a cost of 2 or less.",
+    "image": "images/ST08-004.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569008",
+    "effects": [
+      {
+        "timing": "activateMain",
+        "optional": true,
+        "costs": [
+          {
+            "restThis": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "ko",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "costAtMost": 2
+              },
+              "upTo": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST08-005",
+    "name": "Shanks",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 9,
+    "power": 10000,
+    "types": ["Red-Haired Pirates"],
+    "attribute": "Slash",
+    "rarity": "SR",
+    "blockIcon": 1,
+    "text": "[On Play] You may trash 1 card from your hand: K.O. all Characters with a cost of 1 or less.",
+    "image": "images/ST08-005.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569008",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "optional": true,
+        "costs": [
+          {
+            "trashFromHand": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "ko",
+            "target": {
+              "side": "any",
+              "filter": {
+                "costAtMost": 1
+              },
+              "count": 99
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST08-006",
+    "name": "Shirahoshi",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 4,
+    "counter": 1000,
+    "types": ["Merfolk"],
+    "attribute": "Wisdom",
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)\n[On Play] Give up to 1 of your opponent's Characters −4 cost during this turn.",
+    "image": "images/ST08-006.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569008",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "costChange",
+            "target": {
+              "side": "opponent",
+              "upTo": true
+            },
+            "amount": -4
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST08-007",
+    "name": "Nefeltari Vivi",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 3,
+    "power": 1000,
+    "counter": 1000,
+    "types": ["Alabasta"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)",
+    "trigger": "[Trigger] Play this card.",
+    "image": "images/ST08-007.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569008",
+    "keywords": ["blocker"],
+    "effects": [
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "playThis"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST08-008",
+    "name": "Higuma",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 1,
+    "power": 2000,
+    "counter": 1000,
+    "types": ["Mountain Bandits"],
+    "attribute": "Slash",
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "[On Play] Give up to 1 of your opponent's Characters −2 cost during this turn.",
+    "image": "images/ST08-008.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569008",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "costChange",
+            "target": {
+              "side": "opponent",
+              "upTo": true
+            },
+            "amount": -2,
+            "duration": "turn"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST08-009",
+    "name": "Makino",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 2,
+    "counter": 2000,
+    "types": ["Windmill Village"],
+    "attribute": "Wisdom",
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "[On Play] If there is a Character with a cost of 0, draw 1 card.",
+    "image": "images/ST08-009.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569008",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "steps": [
+          {
+            "do": "if",
+            "conditions": [
+              {
+                "count": {
+                  "side": "any",
+                  "filter": {
+                    "costAtMost": 0
+                  }
+                }
+              }
+            ],
+            "steps": [
+              {
+                "do": "draw",
+                "count": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST08-010",
+    "name": "Monkey.D.Garp",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 5,
+    "power": 7000,
+    "counter": 1000,
+    "types": ["Navy"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "",
+    "image": "images/ST08-010.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569008"
+  },
+  {
+    "id": "ST08-011",
+    "name": "Monkey.D.Luffy",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 3,
+    "power": 5000,
+    "counter": 1000,
+    "types": ["Straw Hat Crew"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "",
+    "image": "images/ST08-011.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569008"
+  },
+  {
+    "id": "ST08-012",
+    "name": "Laboon",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 4,
+    "power": 6000,
+    "counter": 1000,
+    "types": ["Animal"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "",
+    "image": "images/ST08-012.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569008"
+  },
+  {
+    "id": "ST08-013",
+    "name": "Mr.2.Bon.Kurei(Bentham)",
+    "category": "character",
+    "colors": ["black"],
+    "cost": 5,
+    "power": 6000,
+    "types": ["Former Baroque Works"],
+    "attribute": "Strike",
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "[DON!! x1] At the end of a battle in which this Character battles your opponent's Character, you may K.O. the opponent’s Character you battled with. If you do, K.O. this Character.",
+    "image": "images/ST08-013.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569008",
+    "effects": [
+      {
+        "timing": "whenAttacking",
+        "conditions": [
+          {
+            "donAtLeast": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "atEndOfBattle",
+            "steps": [
+              {
+                "do": "ko",
+                "target": {
+                  "side": "opponent",
+                  "filter": {
+                    "inBattle": true
+                  },
+                  "upTo": true
+                },
+                "ifYouDo": [
+                  {
+                    "do": "ko",
+                    "target": {
+                      "side": "this"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "timing": "onOpponentsAttack",
+        "conditions": [
+          {
+            "donAtLeast": 1
+          },
+          {
+            "thisIsAttackTarget": true
+          }
+        ],
+        "steps": [
+          {
+            "do": "atEndOfBattle",
+            "steps": [
+              {
+                "do": "ko",
+                "target": {
+                  "side": "opponent",
+                  "filter": {
+                    "inBattle": true
+                  },
+                  "upTo": true
+                },
+                "ifYouDo": [
+                  {
+                    "do": "ko",
+                    "target": {
+                      "side": "this"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST08-014",
+    "name": "Gum-Gum Bell",
+    "category": "event",
+    "colors": ["black"],
+    "cost": 2,
+    "types": ["Straw Hat Crew"],
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "[Main] You may add 1 card from the top of your Life cards to your hand: Give up to 1 of your opponent's Characters −7 cost during this turn.",
+    "trigger": "[Trigger] Add up to 1 black Character card with a cost of 2 or less from your trash to your hand.",
+    "image": "images/ST08-014.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569008",
+    "effects": [
+      {
+        "timing": "main",
+        "optional": true,
+        "costs": [
+          {
+            "lifeToHand": 1
+          }
+        ],
+        "steps": [
+          {
+            "do": "costChange",
+            "target": {
+              "side": "opponent",
+              "upTo": true
+            },
+            "amount": -7
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "trashToHand",
+            "filter": {
+              "category": "character",
+              "color": "black",
+              "costAtMost": 2
+            },
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ST08-015",
+    "name": "Gum-Gum Pistol",
+    "category": "event",
+    "colors": ["black"],
+    "cost": 3,
+    "types": ["Straw Hat Crew"],
+    "rarity": "C",
+    "blockIcon": 1,
+    "text": "[Main] K.O. up to 1 of your opponent's Characters with a cost of 2 or less.",
+    "trigger": "[Trigger] Draw 1 card.",
+    "image": "images/ST08-015.png",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569008",
+    "effects": [
+      {
+        "timing": "main",
+        "steps": [
+          {
+            "do": "ko",
+            "target": {
+              "side": "opponent",
+              "filter": {
+                "costAtMost": 2
+              },
+              "upTo": true
+            }
+          }
+        ]
+      },
+      {
+        "timing": "trigger",
+        "steps": [
+          {
+            "do": "draw",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 ]

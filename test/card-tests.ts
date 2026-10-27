@@ -1,6 +1,6 @@
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
-import { describe, expect, it } from "vitest";
+import { afterEach, describe, expect, it } from "vitest";
 import {
   runScenario,
   type CardCatalog,
@@ -29,6 +29,10 @@ const catalog: CardCatalog = Object.fromEntries(
  * to time out, and so the files run in parallel.
  */
 export function cardTests(part: number, of: number): void {
+  // The scenarios run synchronously, so without a pause the worker never gets to answer
+  // vitest's progress messages and they time out. Letting the event loop turn after each
+  // test keeps those messages flowing.
+  afterEach(() => new Promise<void>((resolve) => setImmediate(resolve)));
   for (const [set, cards] of cardsBySet) {
     if (allSets.indexOf(set) % of !== part) continue;
     describe(set, () => {

@@ -1,0 +1,22 @@
+{
+  "name": "Gol.D.Roger gives the Leader +2000 when a player has 10 DON!!",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["P-107"],
+      "don": {
+        "active": 10
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    }
+  ],
+  "expect": {
+    "power.p1.leader": 7000
+  }
+}

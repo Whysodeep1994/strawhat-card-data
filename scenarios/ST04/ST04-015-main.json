@@ -1,0 +1,32 @@
+{
+  "name": "Brachio Bomber K.O.s a cost 6 Character and adds an active DON!!",
+  "rules": ["10-2-3"],
+  "setup": {
+    "p1": {
+      "hand": ["ST04-015"],
+      "don": {
+        "active": 6,
+        "deck": 2
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C6-6000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 0,
+    "p1.donActive": 1
+  }
+}

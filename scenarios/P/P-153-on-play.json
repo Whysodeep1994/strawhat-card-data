@@ -1,0 +1,31 @@
+{
+  "name": "Portgas.D.Ace gives 2 Characters −3000",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["P-153"],
+      "don": {
+        "active": 6
+      }
+    },
+    "p2": {
+      "characters": ["TEST-C4-4000", "TEST-C5-5000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0", "p2.characters.1"]
+    }
+  ],
+  "expect": {
+    "power.p2.characters.0": 1000,
+    "power.p2.characters.1": 2000
+  }
+}
