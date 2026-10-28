@@ -1,0 +1,717 @@
+{
+  "EB01-001": {
+    "tip": "Fill your deck with Land of Wano Characters: the Leader gives the ones without a Counter a +1000 Counter, so their strong effects don't leave you defenceless. Keep a 5-cost or bigger Wano Character out and attack with 1 DON!! on Oden so he stays powered up through your opponent's turn.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_035.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "EB01-021": {
+    "tip": "Play Impel Down Characters, then at the end of each turn return one to your hand to gain an extra active DON!!. Replay it for its effect next turn and use the extra DON!! to land big finishers before your opponent can.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_036.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "EB01-040": {
+    "tip": "Lower your opponent's Character costs with black cards, then turn your top Life card face-up to K.O. a 0-cost Character with Kyros, no DON!! needed. Yellow Life tricks help you pay that price.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_037.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "EB02-010": {
+    "tip": "Keep only Straw Hat Crew Characters on your field. Once a turn, return 2 DON!! to make 2 spent DON!! active again and give Luffy +1000 until your next turn, so you can play more cards than your opponent.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_062.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "EB03-001": {
+    "tip": "Rest Vivi to give an opposing Character −2000 and give [Rush] to one of your Characters without a [When Attacking] effect, so new Characters with strong On Play effects can attack straight away. She can also save your 4-cost or bigger Characters from a K.O. by trashing a card from your hand.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_094.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "EB04-001": {
+    "tip": "Use Bonney every turn to shrink an opposing Character and take a Life card into your hand for extra cards. At 1 Life or less she gets +2000 on defence, so hold on, recover Life with your Characters, then strike back with an all-out attack.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_101.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "EB05-010": {
+    "tip": "Build around <Wisdom> Characters: once a turn Robin makes one of them active again so it can attack or block twice, and when one without [Blocker] is K.O.'d you get a Life card back.",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569205",
+    "sourceName": "Official card text"
+  },
+  "OP01-001": {
+    "tip": "With 1 DON!! on Zoro, all your Characters get +1000 on your turn. Flood the board with cheap Characters and go for a quick win.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_001.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP01-002": {
+    "tip": "With 5 Characters out, pay 2 DON!! to return one to your hand and play a different-coloured Character (cost 5 or less), reusing strong On Play effects.",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569101",
+    "sourceName": "Official card text"
+  },
+  "OP01-003": {
+    "tip": "Pay 4 DON!! to stand up a Supernovas or Straw Hat Crew Character (cost 5 or less) and give it +1000, so it can attack twice in one turn.",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569101",
+    "sourceName": "Official card text"
+  },
+  "OP01-031": {
+    "tip": "Trash a Land of Wano card from your hand to make 2 DON!! active again, so you can play big Wano Characters early.",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569101",
+    "sourceName": "Official card text"
+  },
+  "OP01-060": {
+    "tip": "With 2 DON!! on Doflamingo, pay 1 more when he attacks to reveal your top card and play it for free if it's a Seven Warlords Character (cost 4 or less). Get Warlords out from the early turns.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_003.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP01-061": {
+    "tip": "With 1 DON!! on Kaido, the first time you K.O. an opposing Character each turn you gain an active DON!!. Remove Characters to ramp ahead.",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569101",
+    "sourceName": "Official card text"
+  },
+  "OP01-062": {
+    "tip": "Play lots of Events: with 1 DON!! on Crocodile, the first Event each turn draws you a card while you have 4 or fewer cards in hand.",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569101",
+    "sourceName": "Official card text"
+  },
+  "OP01-091": {
+    "tip": "At 10 DON!!, all opposing Characters get −1000 during your turn. Ramp DON!! with purple cards to get there fast.",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569101",
+    "sourceName": "Official card text"
+  },
+  "OP02-001": {
+    "tip": "Newgate moves a Life card into your hand at the end of each of your turns, so you'll have a big hand but less Life. Spend that hand on Counters and strike hard with [Rush] Whitebeard Pirates.",
+    "source": "https://en.onepiece-cardgame.com/products/decks/st15-20.php",
+    "sourceName": "Bandai starter deck page"
+  },
+  "OP02-002": {
+    "tip": "Each time you give a DON!! to your Leader or a Character on your turn, give an enemy Character (cost 7 or less) −1 cost. Then knock it out with black removal.",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569102",
+    "sourceName": "Official card text"
+  },
+  "OP02-025": {
+    "tip": "With 1 or fewer Characters, Kin'emon makes your next Land of Wano Character 1 cheaper. Put strong Wano Characters out early and finish with the 7-cost Kouzuki Oden.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_009.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP02-026": {
+    "tip": "Play Characters with no effect text: while you have 3 or fewer Characters, each one you play from hand makes 2 DON!! active again, so you can keep playing.",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569102",
+    "sourceName": "Official card text"
+  },
+  "OP02-049": {
+    "tip": "Empty your hand: if you end your turn with 0 cards, Ivankov draws 2. Use Counters and discard effects to keep the cards flowing.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_007.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP02-071": {
+    "tip": "Each time a DON!! is returned on your turn, Magellan gets +1000. Use Impel Down's On Play and K.O. effects to slow your opponent, then go for the finish.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_006.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP02-072": {
+    "tip": "When Zephyr attacks, return 4 DON!! to K.O. an enemy Character (cost 3 or less) and give him +1000.",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569102",
+    "sourceName": "Official card text"
+  },
+  "OP02-093": {
+    "tip": "With 1 DON!! on Smoker, give an opposing Character −1 cost each turn; if any Character is at 0 cost, he gets +1000. Use Navy cost-lowering and K.O. effects to steer the battle.",
+    "source": "https://en.onepiece-cardgame.com/products/decks/st15-20.php",
+    "sourceName": "Bandai starter deck page"
+  },
+  "OP03-001": {
+    "tip": "When Ace attacks or is attacked, trash Events or Stages for +1000 each. Search for removal Events and K.O. your opponent's Characters one after another.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_010.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP03-021": {
+    "tip": "Pay 3 DON!! and rest 2 East Blue Characters to stand Kuro up and rest an enemy Character (cost 5 or less). Go wide with small East Blue Characters and attack many times.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_011.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP03-022": {
+    "tip": "With 2 DON!! on Arlong, pay 1 more when he attacks to play a Character with a [Trigger] (cost 4 or less) from your hand, building your board fast.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_012.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP03-040": {
+    "tip": "You win when your deck runs out instead of losing. Use blue cards that draw and trash from your deck, and with 1 DON!! on Nami trash an extra card each time her attack deals damage.",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569103",
+    "sourceName": "Official card text"
+  },
+  "OP03-058": {
+    "tip": "Iceburg can't attack. Return 1 DON!! and rest him to play a Galley-La Company Character (cost 5 or less) from your hand.",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569103",
+    "sourceName": "Official card text"
+  },
+  "OP03-076": {
+    "tip": "On your turn, trash 2 cards to stand Lucci back up after you K.O. an enemy Character, so he attacks again. Use Air Door and mid-cost CP Characters to keep the beatdown going.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_014.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP03-077": {
+    "tip": "Black removal meets yellow Life tricks. With 2 DON!! on Linlin, pay 2 more and trash a card when she attacks to add a Life card while you're at 1 Life or less.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_015.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP03-099": {
+    "tip": "With 1 DON!! on Katakuri, when he attacks look at the top Life card of either player and leave it on top or move it to the bottom, then gain +1000. Line up your own Triggers or bury theirs.",
+    "source": "https://en.onepiece-cardgame.com/products/decks/st15-20.php",
+    "sourceName": "Bandai starter deck page"
+  },
+  "OP04-001": {
+    "tip": "Vivi can't attack. Instead, pay 2 DON!! each turn to draw a card and give a Character [Rush], then swing with Characters that have strong [When Attacking] effects on the turn they arrive.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_016.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP04-019": {
+    "tip": "Doflamingo makes 2 DON!! active again at the end of your turn, so you always have DON!! ready for Counter Events and Blockers on your opponent's turn. Play slow, defend well and win the long game.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_017.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP04-020": {
+    "tip": "With 1 DON!! on Issho, all opposing Characters get −1 cost during your turn, which makes them easy targets for your rest and K.O. effects. At the end of your turn, pay 1 DON!! to stand up one of your Characters so it can defend.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_018.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP04-039": {
+    "tip": "Rebecca can't attack. Pay 1 DON!! each turn to dig for Dressrosa cards, and use removal plus Characters that can attack active Characters to hold the board until you can finish.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_019.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP04-040": {
+    "tip": "Remove your opponent's mid-cost Characters and get an 8-cost or bigger Character out. Then attack with 1 DON!! on Queen: when you're low on cards he draws, and with a big Character out he can add a Life card instead.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_020.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP04-058": {
+    "tip": "On your opponent's turn, use purple effects that return DON!! (DON!! −): Crocodile gives you a fresh active DON!! back each time. Protect your Life with yellow cards and win late with high-cost Characters.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_021.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP05-001": {
+    "tip": "With 1 DON!! on Sabo, once on your opponent's turn a Character with 5000+ power takes −1000 instead of being K.O.'d. Your Blockers stay safe; then turn the tables.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_023.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP05-002": {
+    "tip": "Trash a Revolutionary Army card to give up to 3 Revolutionary Army or Trigger Characters +3000, then attack with all of them.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_024.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP05-022": {
+    "tip": "Rosinante is a [Blocker] himself and stands up at the end of your turn while you hold 6 or fewer cards. Defend with Blockers and a full hand, then bring out the 8-cost Kid.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_025.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP05-041": {
+    "tip": "Once a turn, trash a card to draw a new one. When Sakazuki attacks, give an enemy Character −1 cost to set up your removal.",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569105",
+    "sourceName": "Official card text"
+  },
+  "OP05-060": {
+    "tip": "Take a Life card into your hand to gain an active DON!! (when you have 0 or 3+ DON!!). Ramp quickly into high-cost Straw Hat Crew Characters and attack with them.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_027.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP05-098": {
+    "tip": "When your Life hits 0 on your opponent's turn, Enel adds a new Life card, once per turn. Use Sky Island cards that grow stronger when your Life is low.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_028.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP06-001": {
+    "tip": "When Uta attacks, trash a FILM card from your hand to give an opposing Character −2000 and gain an extra DON!!. Use that extra DON!! to play big red and purple FILM Characters early.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_029.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP06-020": {
+    "tip": "Rest Hody to rest an opposing DON!! or 3-cost-or-less Character. Your New Fish-Man Pirates cards cost you Life to use, but they build a fast, hard-hitting board, so attack before your Life runs out.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_030.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP06-021": {
+    "tip": "Each turn, use Perona to rest an opposing Character (cost 4 or less) or give one −1 cost. Then K.O. rested or cheap Characters with green and black removal, and finish with high-cost Characters.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_031.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP06-022": {
+    "tip": "Yamato has [Double Attack], so every hit takes 2 Life. Attack early and often; once your opponent is at 3 Life or less, give 2 rested DON!! to a Character and rest their Blockers to finish them.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_032.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP06-042": {
+    "tip": "Play GERMA 66 cards whose effects return DON!! (DON!! −). Each time you do that on your turn, Reiju draws you a card, so your hand stays full.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_033.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP06-080": {
+    "tip": "Attack with 1 DON!! on Moria, then pay 2 DON!! and a card to bring back a Thriller Bark Pirates Character (cost 4 or less) from your trash. Fill your trash early and use black cost-lowering removal to stay in control.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_034.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP07-001": {
+    "tip": "Once a turn, move up to 2 DON!! that are already given to your cards onto one Character, so several Revolutionary Army Characters can attack with power. Late game, load DON!! onto [Rush] Characters for a surprise finish.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_038.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP07-019": {
+    "tip": "When your opponent attacks, pay 1 DON!! to rest another of their Leader or Characters so it can't attack too. Use Supernovas cards that make your DON!! active again, then build to a high-cost finisher.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_042.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP07-038": {
+    "tip": "Play Seven Warlords of the Sea Characters and use your removal freely: whenever your effect removes a Character on your turn, Hancock draws you a card if your hand is small.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_041.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP07-059": {
+    "tip": "Get 3 Foxy Pirates Characters out, then attack with Foxy and return 3 DON!! to keep your opponent's Leader and a Character rested through their next turn. That stops their attacks while you rush them down.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_039.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP07-079": {
+    "tip": "When Lucci attacks, trash 2 cards from the top of your deck to give an opposing Character −1 cost. A full trash powers your CP cards, and lower costs make your K.O. effects hit more.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_043.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP07-097": {
+    "tip": "Vegapunk can't attack and starts with only 2 Life. Each turn, pay 1 DON!! to play an Egghead card (cost 5 or less) from your hand, or put it face-up into your Life, and win with your Characters while topping up Life.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_040.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP08-001": {
+    "tip": "Play lots of Animal and Drum Kingdom Characters, then each turn give up to 3 of them a rested DON!! each so the whole herd attacks with extra power.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_044.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP08-002": {
+    "tip": "With 1 DON!! on Marco, once a turn draw a card, put a card from your hand on the top or bottom of your deck, then give an opposing Character −2000. Set up cards that play Characters from the top of your deck and K.O. weakened enemies.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_045.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP08-021": {
+    "tip": "Keep a Minks Character on the field so Carrot can rest an opposing Character (cost 5 or less) every turn. Your Minks stop rested Characters from standing back up while you play big green Characters.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_046.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP08-057": {
+    "tip": "Ramp DON!! with purple cards and play high-cost Beasts Pirates fast. Once a turn, King can return 2 DON!! to draw a card when your hand is low, or to give an enemy −2 cost for your removal.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_047.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP08-058": {
+    "tip": "When Pudding attacks, turn 2 Life cards face-up to gain an extra DON!!. Use that ramp to play big Big Mom Pirates, especially the high-cost Charlotte Linlin, a turn early.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_048.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP08-098": {
+    "tip": "Attack with 1 DON!! on Kalgara to play a Shandian Warrior from your hand for free (its cost can be up to your DON!! count), taking a Life card into your hand. Fast and aggressive, with yellow's Life for staying power.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_049.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP09-001": {
+    "tip": "Once a turn, when your opponent attacks, Shanks gives one of their cards −1000. That makes your defence much sturdier, so keep playing strong Red-Haired Pirates and attack with every card.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_054.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP09-022": {
+    "tip": "Your Characters come in rested, but once a turn Lim lets you rest 3 DON!! to gain a DON!! and play an ODYSSEY Character (cost 5 or less) from your hand. Many ODYSSEY cards grow stronger while you have rested Characters.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_055.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP09-042": {
+    "tip": "Rest 5 DON!! and trash a card to play any Cross Guild Character from your hand, even the 10-cost Buggy. Build a board of big Cross Guild Characters like Crocodile and Mihawk.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_053.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP09-061": {
+    "tip": "Play Straw Hat Crew cards that return 2 or more DON!! for their effects: each time you do, Luffy gives you 2 DON!! back (one of them active). Race to play the high-cost Monkey.D.Luffy before your opponent is ready.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_052.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP09-062": {
+    "tip": "Robin has [Banish], so her damage trashes Life cards without letting their Triggers go off. When she attacks, trash a card with a Trigger to gain a DON!!, then finish with yellow Characters that hit Life directly.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_051.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP09-081": {
+    "tip": "Your own On Play effects don't work, so lean on cards that don't need them. Trash a card to switch off your opponent's On Play effects until their next turn ends, and control the board with black K.O. effects.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_050.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP10-001": {
+    "tip": "Get a Character with 7000 power or more out so Smoker can make 2 DON!! active again each turn. Spend the extra DON!! on big hitters and [Rush] cards and keep the pressure on.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_061.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP10-002": {
+    "tip": "With 2 DON!! on Caesar, when he attacks return a Punk Hazard Character (cost 2 or more) to your hand to K.O. an opposing Character with 4000 power or less. Replay the returned Character for its effect again.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_060.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP10-003": {
+    "tip": "Defend with Counter Events: each one you use on your opponent's turn gives you an extra active DON!!. Ramp ahead this way and be the first to play high-cost Characters.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_059.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP10-022": {
+    "tip": "Hide strong 5-cost Supernovas Characters in your Life. With 1 DON!! on Law and 5 or more total cost on your field, return a Character to reveal your top Life card and play it for free if it's a Supernovas (cost 5 or less).",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_056.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP10-042": {
+    "tip": "Usopp protects your Dressrosa Characters: they get +1 cost so they're harder to remove, and you draw when your opponent removes one. Defend with Blockers and outlast your opponent.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_058.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP10-099": {
+    "tip": "At the end of your turn, turn a Life card face-up to stand up a Supernovas Character and give it [Blocker]. It attacks on your turn and still defends on theirs. Late game, finish with Characters that care about your Life count.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_057.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP11-001": {
+    "tip": "Your SWORD Characters can attack Characters the turn they're played, so use them to clear the board straight away. Once a turn, your Navy Characters can also dodge your opponent's removal.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_064.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP11-021": {
+    "tip": "At the end of your turn, if you have 6 or fewer cards in hand, Jinbe stands up a Fish-Man or Merfolk Character and a DON!!, so you attack and still defend. Hold Counter Events and grind out the board.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_066.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP11-022": {
+    "tip": "Shirahoshi can't attack. Each turn, rest 1 DON!! and turn a Life card face-up to play a Neptunian (or Megalo) almost for free, filling your field with 7000 and 8000 power Characters.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_065.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP11-040": {
+    "tip": "Ramp to 8 DON!! as fast as you can. From then on Luffy looks at 5 cards at the start of each turn to find a Straw Hat Crew card, setting up turns with several high-cost Characters while his 6000 power attacks.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_068.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP11-041": {
+    "tip": "Each time a Life card leaves either player's Life on your turn, Nami draws you a card. On defence, with 1 DON!! on her, trash a card to give her +2000. A flexible deck that never runs out of cards.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_067.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP11-062": {
+    "tip": "When Katakuri attacks or is attacked, return 1 DON!! to look at your opponent's top card and give him +1000. Many purple Big Mom Pirates cards reward you for knowing what that card is.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_063.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP12-001": {
+    "tip": "Your deck can only hold cards costing 4 or less. Keep 2 Events in hand to give a small Character +2000 each turn, and attack fast with cheap Characters and Haki Events.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_073.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP12-020": {
+    "tip": "Give Zoro 3 DON!!, attack a Character, then use his ability to stand him back up and attack again (the second attack must go at the Leader or a big Character). Fill the deck with <Slash> swordsmen.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_074.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP12-040": {
+    "tip": "Play Navy cards that trash cards from your hand: Kuzan draws you the same number back. Late game, use Monkey.D.Garp to play several Characters at once.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_071.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP12-041": {
+    "tip": "Pack the deck with blue and purple Straw Hat Crew Events. Once a turn, return 1 DON!! to play a cheap one (base cost 3 or less) for free, and when Sanji attacks he gains a DON!! if you don't have more DON!! than your opponent.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_072.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP12-061": {
+    "tip": "Fill the deck with Trafalgar Law Characters. Once a turn, return 1 DON!! to make your next Law 2 cheaper; Rosinante can also save one from a K.O. by taking a Life card instead.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_070.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP12-081": {
+    "tip": "Play Revolutionary Army Characters that become 8-cost on your field; with two of them out, Koala draws when attacking the Leader. When your opponent plays a big Character, it costs them a Life card.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_069.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP13-001": {
+    "tip": "On your opponent's turn, with 1 DON!! on Luffy and 5 or fewer active DON!!, rest DON!! to give Luffy or a Straw Hat Crew Character +2000 each. FILM Characters that make your DON!! active again let you attack and still defend.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_081.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP13-002": {
+    "tip": "Ace draws a card whenever you take damage or one of your big Characters (6000+) is K.O.'d, and can trash a card to give an attacker −2000. He has only 3 Life, but he refuels every time you get hit.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_082.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP13-003": {
+    "tip": "Roger is weak (−2000) until you have 10 DON!!, and he gets a DON!! from each DON!! Phase. Ramp hard with Roger Pirates Characters; at 10 DON!! he becomes a huge attacker.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_083.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP13-004": {
+    "tip": "Sabo has 5 Life but starts at 4000 power. Play Revolutionary Army Characters whose costs rise on your field: with an 8-cost Character out and 1 DON!! on Sabo, your Leader and all your Characters get +1000. Play patiently for the late game.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_084.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP13-079": {
+    "tip": "Imu plays a Mary Geoise Stage for free at the start, but Events costing 2 or more aren't allowed. Fill your trash to power up the Five Elders, then bring them out together to take over. Trash a card each turn to draw a new one.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_085.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP13-100": {
+    "tip": "Whenever you play a Character with a [Trigger], Bonney gives 2 rested DON!! to your Leader or a Character. Attack hard from the start, and let the Triggers in your Life help you defend.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_086.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP14-001": {
+    "tip": "Play small Supernovas and Heart Pirates whose effects go off when their power rises, then swap their base power with a heavy hitter's to unleash a run of strong attacks.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_087.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP14-020": {
+    "tip": "With a 5-cost or bigger Character out, rest 1 of your cards to stand up 3 DON!! (you can't play Characters that turn). Use swordsmen whose effects trigger when they're rested. Mihawk gets +1000 against <Slash> Leaders.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_088.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP14-040": {
+    "tip": "Trash a card to give 2 rested DON!! to a Fish-Man or Merfolk. Many of your Characters have effects that go off when you trash with your own effect, so each use powers up twice.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_089.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP14-041": {
+    "tip": "Hancock draws whenever you play a Character on your opponent's turn, which pairs well with Characters played from [Trigger]. With 1 DON!! on her, K.O.ing your big Amazon Lily or Kuja Characters costs your opponent a Life card.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_090.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP14-060": {
+    "tip": "When your opponent attacks, return 1 DON!! to switch the target to your Leader or a Donquixote Pirates Character. Pick ones with [On K.O.] effects, so getting hit helps you.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_091.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP14-079": {
+    "tip": "You can't remove your opponent's Characters with effects. Instead, K.O. one of your Baroque Works to give an enemy −10 cost: many Baroque Works cards trigger when a 0-cost Character is on the field. Then win the fights.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_092.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP14-080": {
+    "tip": "K.O. one of your Thriller Bark Pirates to give your team +1000, then bring Characters back with [Trigger]s and [On K.O.] effects. When Moria attacks, trash 3 cards to add a Life card.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_093.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP15-001": {
+    "tip": "Make your opponent give DON!! to their Characters, then rest any Character with 2 or more DON!! using Krieg and beat it in battle. With only East Blue Characters out and 1 DON!! on Krieg, their Characters get −2000 on their turn.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_095.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP15-002": {
+    "tip": "Play lots of Dressrosa Events; after one costing 3 or more, Lucy draws a card. When she attacks or is attacked, trash Events or Stages for +1000 each, so you can defend even without Counter cards.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_096.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP15-022": {
+    "tip": "You don't lose at 0 cards until the end of that turn. Trash 4 cards from your deck each turn to fuel trash effects; once your deck is empty, stand up a Character and give it DON!! for a big final attack that turn.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_097.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP15-039": {
+    "tip": "Rebecca can't attack. Rest her and return a Dressrosa Character to your hand to play a 3-cost Dressrosa Character. Replay Characters with card-drawing On Play effects to keep up the pressure and a full hand.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_098.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP15-058": {
+    "tip": "You only have 6 DON!!. From your second turn, Enel adds 5 DON!! and gives 4 of them to a Character, so attack with cheap Vassals and finish by playing Enel at 10000 power.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_099.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP15-098": {
+    "tip": "Protect your big Sky Island Characters (6000+ base power): when your opponent would remove one, take a Life card into your hand instead. Build a board, then finish with Monkey.D.Luffy's [Rush].",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_100.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP16-001": {
+    "tip": "Once a turn, give [Rush] to a Luffy or Whitebeard Pirates Character with 8000 power or more. Play a big hitter every turn and attack right away; many lack Counters, so defend with your Luffy and Ace cards.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_102.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP16-022": {
+    "tip": "With only Impel Down Characters on your field, Luffy stands up 2 DON!! each turn so you can keep playing Characters and give DON!! to allies who love it.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_103.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP16-041": {
+    "tip": "With 1 DON!! on Buggy, whenever one of your Impel Down Characters leaves the field you play a Prisoner of Impel Down card from your hand for free. Keep your board up, then rally them with their own Event.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_104.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP16-060": {
+    "tip": "Ramp DON!! with purple Navy cards. Once you have 8 active DON!!, return them to play 3 different Admirals from your hand at once.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_105.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP16-079": {
+    "tip": "Fill your trash with Land of Wano cards; Characters you play from your trash gain [Rush]. Turn your 6-cost Yamato into one of the 8-cost versions when the time is right.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_106.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP16-080": {
+    "tip": "Your Characters get +1 cost on your opponent's turn. When attacked, trash a card with a Trigger to redirect the attack to your Leader or a Blackbeard Pirate, then combo into the high-cost Marshall.D.Teach.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_107.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP17-001": {
+    "tip": "When attacked, trash any card to give your Leader or a Character +4000, so even cards without Counters help you defend. Play heavy Whitebeard Pirates and power up your Leader for the finish.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_113.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP17-020": {
+    "tip": "Rest enemy Characters with green cards, then trash a card or rest 1 DON!! to keep one rested through their next turn. Close the game with the 10-cost Shanks and [Rush].",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_112.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP17-039": {
+    "tip": "When Rocks attacks, trash a card and reveal your top card; if it's a Rocks Pirates card, draw 2. Your crew has few Counters, so use your big hand wisely.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_111.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP17-058": {
+    "tip": "When Kaido attacks or is attacked, return 1 DON!! to give an enemy Character −2000. Ramp with Animal Kingdom Pirates, then take over with the 10-cost Kaido and high-cost Lead Performers.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_110.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP17-079": {
+    "tip": "All your Characters costing 12 or more gain [Blocker]. Giants become 12 cost or more on your field, so they defend well while cheap Straw Hat Crew Characters attack.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_109.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "OP17-099": {
+    "tip": "When Linlin attacks, trash a card to make your opponent choose: lose a card from their hand, or let you trade a card for a Life card. Use OP17-112 Charlotte Linlin to power up your Big Mom Pirates with Triggers.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_108.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "P-011": {
+    "tip": "Pay 1 DON!! to give one of your Characters with no effect text +2000 each turn. Fill the deck with simple, high-power Characters and attack with them.",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569901",
+    "sourceName": "Official card text"
+  },
+  "P-047": {
+    "tip": "With 1 DON!! on Luffy, he draws a card when attacking if you have 3 or fewer cards in hand. Play your cards freely and refill by attacking every turn.",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569901",
+    "sourceName": "Official card text"
+  },
+  "P-076": {
+    "tip": "Once a turn, trash a Navy card from your hand to give an opposing Character −1 cost, then knock it out with your blue and black Navy removal.",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569901",
+    "sourceName": "Official card text"
+  },
+  "P-117": {
+    "tip": "Only East Blue cards are allowed, and you win when your deck runs out. With 1 DON!! on Nami, trash your top card each time her attack deals damage, and defend while your deck runs down.",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569901",
+    "sourceName": "Official card text"
+  },
+  "PRB01-001": {
+    "tip": "Once a turn, give [Rush] to a Character with no On Play effect (cost 8 or less), so your big Characters attack the turn they're played.",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569301",
+    "sourceName": "Official card text"
+  },
+  "ST01-001": {
+    "tip": "The Straw Hat Crew deck is full of [Rush] Characters. Each turn, give one of Luffy's rested DON!! to your Leader or a Character and attack fast before your opponent sets up.",
+    "source": "https://en.onepiece-cardgame.com/products/decks/st01-04.php",
+    "sourceName": "Bandai starter deck page"
+  },
+  "ST02-001": {
+    "tip": "Defend with lots of Blockers, then pay 3 DON!! and trash a card to stand Kid back up and attack twice in one turn.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_002.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "ST03-001": {
+    "tip": "This deck has plenty of [Blocker] Characters to control the game. Return 4 DON!! with Crocodile to send an opposing Character (cost 5 or less) back to their hand.",
+    "source": "https://en.onepiece-cardgame.com/products/decks/st01-04.php",
+    "sourceName": "Bandai starter deck page"
+  },
+  "ST04-001": {
+    "tip": "Ramp DON!! quickly (Onigashima Island helps) and play high-cost cards ahead of your opponent. With 7 DON!! to spare, Kaido can trash one of your opponent's Life cards.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_004.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "ST05-001": {
+    "tip": "Fill your field with FILM Characters, then return 3 DON!! to give all of them +2000 for one big attacking turn.",
+    "source": "https://en.onepiece-cardgame.com/products/decks/st05.php",
+    "sourceName": "Bandai starter deck page"
+  },
+  "ST06-001": {
+    "tip": "Lower your opponent's Character costs with black cards, then pay 3 DON!! and a card to K.O. a 0-cost Character with Sakazuki.",
+    "source": "https://en.onepiece-cardgame.com/products/decks/st06.php",
+    "sourceName": "Bandai starter deck page"
+  },
+  "ST07-001": {
+    "tip": "This deck controls both players' Life cards. With 2 DON!! on Linlin, take a Life card into your hand when she attacks; at 2 Life or less, put a card from your hand back on top of your Life.",
+    "source": "https://en.onepiece-cardgame.com/products/decks/st07.php",
+    "sourceName": "Bandai starter deck page"
+  },
+  "ST08-001": {
+    "tip": "Each time a Character is K.O.'d on your turn, Luffy gets a rested DON!!. K.O. enemy Characters with black removal, then attack with a stronger Leader.",
+    "source": "https://en.onepiece-cardgame.com/products/decks/st08.php",
+    "sourceName": "Bandai starter deck page"
+  },
+  "ST09-001": {
+    "tip": "A defensive deck: at 2 Life or less, with 1 DON!! on Yamato, she gets +1000 on your opponent's turn. Block their attacks, then strike back.",
+    "source": "https://en.onepiece-cardgame.com/products/decks/st09.php",
+    "sourceName": "Bandai starter deck page"
+  },
+  "ST10-001": {
+    "tip": "Return 3 DON!! to put an opposing Character with 3000 power or less at the bottom of their deck and play a Character (cost 4 or less) from your hand.",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569010",
+    "sourceName": "Official card text"
+  },
+  "ST10-002": {
+    "tip": "Luffy has 6000 power but only 3 Life. At 0 or 8+ DON!! he adds an extra DON!!, so ramp hard and play huge Characters before your opponent; defend with red and purple Counter Events.",
+    "source": "https://en.onepiece-cardgame.com/feature/deck/deck_022.php",
+    "sourceName": "Bandai recommended deck guide"
+  },
+  "ST10-003": {
+    "tip": "Kid is 1000 weaker on your turn while you have 4 or more Life. When he attacks, return 1 DON!! to give him +2000 and hit hard.",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569010",
+    "sourceName": "Official card text"
+  },
+  "ST11-001": {
+    "tip": "With 1 DON!! on Uta, she reveals your top card when attacking and adds it to your hand if it's FILM. Build up your hand and save your music Events for later in the game.",
+    "source": "https://en.onepiece-cardgame.com/products/decks/st15-20.php",
+    "sourceName": "Bandai starter deck page"
+  },
+  "ST12-001": {
+    "tip": "With 1 DON!! on the Leader, when attacking return a Character (cost 2 or more) to your hand to stand up a Character with 7000 power or less so it attacks again. Zoro and Sanji's attack Events back you up.",
+    "source": "https://en.onepiece-cardgame.com/products/decks/st12.php",
+    "sourceName": "Bandai starter deck page"
+  },
+  "ST13-001": {
+    "tip": "With 1 DON!! on Sabo, put one of your big Characters (cost 3+, 7000+ power) face-up into your Life to give another Character +2000 until your next turn.",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569013",
+    "sourceName": "Official card text"
+  },
+  "ST13-002": {
+    "tip": "With 2 DON!! on Ace, look at 5 cards and put a 5-cost Character face-up on top of your Life. Face-up Life cards are trashed at the end of your turn, so plan to use it that turn.",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569013",
+    "sourceName": "Official card text"
+  },
+  "ST13-003": {
+    "tip": "Face-up Life cards go to the bottom of your deck instead of your hand. At 0 Life, with 2 DON!! on Luffy, trash a card to put up to two 5-cost Characters from your hand or trash face-up into your Life for a comeback.",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569013",
+    "sourceName": "Official card text"
+  },
+  "ST14-001": {
+    "tip": "With 1 DON!! on Luffy, all your Characters gain +1 cost, which switches on Straw Hat Crew effects that need a certain cost. With an 8-cost or bigger Character out, Luffy gets +1000.",
+    "source": "https://en.onepiece-cardgame.com/products/decks/st14.php",
+    "sourceName": "Bandai starter deck page"
+  },
+  "ST21-001": {
+    "tip": "With 1 DON!! on Luffy, give 2 rested DON!! to one of your Characters each turn and attack with big power. The Straw Hat Crew's new effects back him up.",
+    "source": "https://en.onepiece-cardgame.com/products/decks/st21.php",
+    "sourceName": "Bandai starter deck page"
+  },
+  "ST22-001": {
+    "tip": "Once a turn, show a Whitebeard Pirates card from your hand to draw a card and put the shown card on top of your deck. It smooths your draws so the Whitebeard Pirates' new abilities come together.",
+    "source": "https://en.onepiece-cardgame.com/products/decks/st22.php",
+    "sourceName": "Bandai starter deck page"
+  },
+  "ST29-001": {
+    "tip": "Luffy has 6 Life. At 2 Life or less he draws and discards a card each time he attacks, so manage your Life and win with [Rush: Character] and Unblockable cards.",
+    "source": "https://en.onepiece-cardgame.com/products/decks/st29.php",
+    "sourceName": "Bandai starter deck page"
+  },
+  "ST30-001": {
+    "tip": "On your opponent's turn every Luffy and Ace card gets +3000, so they defend well. The Leader is 2000 weaker while you have a 7000+ base power Character, so attack with your Characters: rest 1 DON!! on the new SR cards for [Rush] and strong attack effects.",
+    "source": "https://en.onepiece-cardgame.com/products/st30.html",
+    "sourceName": "Bandai starter deck page"
+  }
+}
