@@ -13,11 +13,13 @@
     "test": "vitest run",
     "status": "node scripts/status.mjs",
     "format": "prettier --write .",
-    "check": "prettier --check . && node scripts/status.mjs --check && pnpm test",
-    "import": "node scripts/import-set.mjs"
+    "check": "prettier --check . && node scripts/status.mjs --check && pnpm test && node scripts/check-shapes.mjs",
+    "import": "node scripts/import-set.mjs",
+    "shapes": "node scripts/fetch-engine.mjs && node scripts/check-shapes.mjs"
   },
   "devDependencies": {
     "prettier": "3.6.2",
+    "typescript": "5.9.3",
     "vitest": "3.2.4"
   }
 }

@@ -5814,11 +5814,9 @@
             "do": "ko",
             "target": {
               "side": "opponent",
-              "filter": {
-                "totalCostAtMost": 4
-              },
               "count": 99,
-              "upTo": true
+              "upTo": true,
+              "totalCostAtMost": 4
             }
           }
         ]

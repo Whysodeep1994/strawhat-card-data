@@ -1,0 +1,38 @@
+{
+  "name": "Loki can't K.O. a Character whose cost has been raised above 4",
+  "rules": ["2-7-1", "10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP17-119"],
+      "don": {
+        "active": 6
+      }
+    },
+    "p2": {
+      "characters": ["OP12-063", "TEST-FILLER"],
+      "trash": ["TEST-KO-EVENT", "TEST-BOUNCE-EVENT", "TEST-KO-EVENT", "TEST-BOUNCE-EVENT"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"],
+      "illegal": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.1"]
+    }
+  ],
+  "expect": {
+    "p2.characters": 1,
+    "p2.characters.0.cost": 9
+  }
+}
