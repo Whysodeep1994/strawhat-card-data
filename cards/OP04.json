@@ -3506,9 +3506,9 @@
         ],
         "replaces": {
           "side": "this",
-          "removal": "ko"
+          "removal": "ko",
+          "battle": true
         },
-        "battle": true,
         "steps": []
       },
       {
@@ -5045,7 +5045,8 @@
         ],
         "steps": [
           {
-            "do": "handToLife"
+            "do": "handToLife",
+            "count": 1
           }
         ]
       }
