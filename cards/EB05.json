@@ -692,7 +692,8 @@
           }
         ]
       }
-    ]
+    ],
+    "blockIcon": "X"
   },
   {
     "id": "EB05-015",
@@ -2379,6 +2380,14 @@
     "source": "https://en.onepiece-cardgame.com/cardlist/?series=569205",
     "effects": [
       {
+        "timing": "permanent",
+        "steps": [
+          {
+            "do": "trashInsteadOfDamage"
+          }
+        ]
+      },
+      {
         "timing": "trigger",
         "steps": [
           {
@@ -2392,7 +2401,7 @@
         ]
       }
     ],
-    "notes": "\"If you would take damage, you may trash this Character instead\" is not in the engine yet, so only the [Trigger] works."
+    "notes": "\"Trash this Character instead\" prevents the whole damage, including both damage of a Double Attack."
   },
   {
     "id": "EB05-053",
