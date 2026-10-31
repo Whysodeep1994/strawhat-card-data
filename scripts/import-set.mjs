@@ -67,7 +67,7 @@ function parseCard(id, body) {
     types: field(body, "feature").split("/"),
     attribute: attribute && attribute[1] ? decode(attribute[1]) : undefined,
     rarity,
-    blockIcon: number(field(body, "block")),
+    blockIcon: number(field(body, "block")) ?? (field(body, "block") === "X" ? "X" : undefined),
     text: text === "-" ? "" : text,
     trigger: trigger ? trigger : undefined,
     image: `images/${image}`,
