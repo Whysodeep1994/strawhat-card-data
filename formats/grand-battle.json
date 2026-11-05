@@ -1,0 +1,21 @@
+{
+  "id": "grand-battle",
+  "name": "Grand Battle",
+  "effective": "2026-10-12",
+  "source": [
+    "https://en.onepiece-cardgame.com/topics/013.php",
+    "https://en.onepiece-cardgame.com/topics/025.php",
+    "https://en.onepiece-cardgame.com/news/restriction.html",
+    "https://en.onepiece-cardgame.com/news/restriction-261001.html"
+  ],
+  "deckSize": 50,
+  "maxCopies": 4,
+  "banned": ["OP03-040", "OP06-047", "OP06-086", "OP06-116", "OP14-020", "ST10-001"],
+  "restricted": {},
+  "bannedPairs": [
+    ["OP07-115", "EB04-058"],
+    ["OP11-040", "OP11-067"],
+    ["OP11-040", "OP08-069"]
+  ],
+  "notes": "Strawhat Simulator's name for Bandai's Extra Regulation: decks may use cards of every block icon, from Block 1 to the newest, so older cards such as OP-01 to OP-04 and ST-01 to ST-09 can be played. Since April 1, 2026 Bandai uses the same banned, banned-pair and restricted lists for Standard and Extra Regulation, so they are copied from standard.json; keep the two in step when the list changes. Bandai lifted the old bans on ST06-015, OP02-024, OP03-098 and OP02-117 for Extra Regulation, so they are not banned here."
+}
