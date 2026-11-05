@@ -25,6 +25,17 @@ const files = readdirSync(join(root, "formats")).filter((f) => f.endsWith(".json
 describe("formats", () => {
   it("has a Standard format", () => expect(files).toContain("standard.json"));
 
+  it("gives Grand Battle every block and Standard's banned lists", () => {
+    const read = (file: string) =>
+      JSON.parse(readFileSync(join(root, "formats", file), "utf8")) as Format;
+    const standard = read("standard.json");
+    const grand = read("grand-battle.json");
+    expect(grand.legalBlocks).toBeUndefined();
+    expect(grand.banned).toEqual(standard.banned);
+    expect(grand.restricted).toEqual(standard.restricted);
+    expect(grand.bannedPairs).toEqual(standard.bannedPairs);
+  });
+
   for (const file of files) {
     const format = JSON.parse(readFileSync(join(root, "formats", file), "utf8")) as Format;
     describe(file, () => {
