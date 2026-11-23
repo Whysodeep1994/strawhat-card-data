@@ -1,0 +1,35 @@
+{
+  "name": "Banban trashes itself at the end of your turn to set a Character active",
+  "rules": ["10-2-9"],
+  "setup": {
+    "p1": {
+      "characters": [
+        "OP18-033",
+        {
+          "card": "TEST-FILLER",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "endTurn",
+      "player": "p1"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 1,
+    "p1.characters.0.rested": false
+  }
+}

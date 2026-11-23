@@ -1,0 +1,28 @@
+{
+  "name": "Kokoro trashes itself at the end of your turn to set your Leader active",
+  "rules": ["10-2-9"],
+  "setup": {
+    "p1": {
+      "leader": {
+        "card": "TEST-LEADER",
+        "rested": true
+      },
+      "characters": ["OP18-024"]
+    }
+  },
+  "actions": [
+    {
+      "type": "endTurn",
+      "player": "p1"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.leader.rested": false,
+    "p1.characters": 0
+  }
+}

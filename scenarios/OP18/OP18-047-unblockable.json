@@ -1,0 +1,32 @@
+{
+  "name": "Mr.1 gives your {Cross Guild} Leader [Unblockable]",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "leader": "OP09-042",
+      "hand": ["OP18-047"],
+      "don": {
+        "active": 2
+      }
+    },
+    "p2": {
+      "characters": ["TEST-BLOCKER-2000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    }
+  ],
+  "expect": {
+    "prompt.kind": "counter"
+  }
+}

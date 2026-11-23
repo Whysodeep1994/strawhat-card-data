@@ -1,0 +1,28 @@
+{
+  "name": "I Pray For Your Success. trashes a Baroque Works card to draw 2",
+  "rules": ["10-2-3"],
+  "setup": {
+    "p1": {
+      "hand": ["OP18-059", "OP18-044"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.hand": 2,
+    "p1.donRested": 1
+  }
+}

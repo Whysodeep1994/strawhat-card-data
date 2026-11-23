@@ -1,0 +1,32 @@
+{
+  "name": "Brogy trashes a card to add a cost 2 Character from the trash",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": ["OP18-091"],
+      "hand": ["TEST-FILLER"],
+      "trash": ["TEST-WISDOM-3000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.trash.1"]
+    }
+  ],
+  "expect": {
+    "p1.hand.0.cardId": "TEST-WISDOM-3000"
+  }
+}

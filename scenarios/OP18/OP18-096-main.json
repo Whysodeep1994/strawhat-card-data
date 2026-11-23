@@ -1,0 +1,33 @@
+{
+  "name": "I'll Make the Call rests 3 DON!! to play a {Holy Knights of God} Character from the trash",
+  "rules": ["10-2-3"],
+  "setup": {
+    "p1": {
+      "hand": ["OP18-096"],
+      "trash": ["OP18-064"],
+      "don": {
+        "active": 4
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.trash.1"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 1
+  }
+}

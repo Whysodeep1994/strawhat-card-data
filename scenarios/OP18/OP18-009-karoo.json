@@ -1,0 +1,35 @@
+{
+  "name": "Super Spot-Billed Duck Troops trashes itself to play [Karoo] with 9 DON!!",
+  "rules": ["10-2-11"],
+  "setup": {
+    "p1": {
+      "characters": ["OP18-009"],
+      "hand": ["OP18-004"],
+      "don": {
+        "active": 9
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 1,
+    "p1.characters.0.cardId": "OP18-004"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "Zambai K.O.s your Stage to gain [Rush]",
+  "rules": ["10-2-11"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "OP18-066",
+          "playedThisTurn": true
+        }
+      ],
+      "stage": "OP18-075"
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    }
+  ],
+  "expect": {
+    "prompt.kind": "counter",
+    "p1.stage": null
+  }
+}

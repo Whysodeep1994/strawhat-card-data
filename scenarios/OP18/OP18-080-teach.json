@@ -1,0 +1,23 @@
+{
+  "name": "Van Augur draws when your [Marshall.D.Teach] Leader's effect trashes a card",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "leader": "OP09-081",
+      "characters": ["OP18-080"],
+      "hand": ["TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 1
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p1.trash": 1
+  }
+}

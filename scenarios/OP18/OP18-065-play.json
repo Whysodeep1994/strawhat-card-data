@@ -1,0 +1,33 @@
+{
+  "name": "Saint Gunko plays a {Celestial Dragons} Character from the trash with DON!! −1",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP18-065"],
+      "trash": ["OP13-085"],
+      "don": {
+        "active": 11
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.trash.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 2
+  }
+}

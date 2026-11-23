@@ -1,14 +1,15 @@
 {
   "id": "standard",
   "name": "Standard",
-  "effective": "2026-10-12",
+  "effective": "2026-11-27",
   "season": { "from": "2026-04-01", "to": "2027-03-31" },
   "source": [
     "https://en.onepiece-cardgame.com/topics/013.php",
     "https://en.onepiece-cardgame.com/topics/025.php",
     "https://en.onepiece-cardgame.com/rules/blockicon-card/",
     "https://en.onepiece-cardgame.com/news/restriction.html",
-    "https://en.onepiece-cardgame.com/news/restriction-261001.html"
+    "https://en.onepiece-cardgame.com/news/restriction-261001.html",
+    "https://en.onepiece-cardgame.com/news/restriction-2611.html"
   ],
   "deckSize": 50,
   "maxCopies": 4,
@@ -19,6 +20,7 @@
     "EB03-061",
     "EB04-044",
     "EB04-061",
+    "EB05-014",
     "OP01-016",
     "OP01-120",
     "OP02-013",
@@ -52,7 +54,9 @@
     "OP17-022",
     "OP17-062",
     "OP17-112",
-    "OP17-118"
+    "OP17-118",
+    "OP18-031",
+    "OP18-065"
   ],
   "treatedAsBlock": {
     "OP01-039": 4,
@@ -76,7 +80,9 @@
   "bannedPairs": [
     ["OP07-115", "EB04-058"],
     ["OP11-040", "OP11-067"],
-    ["OP11-040", "OP08-069"]
+    ["OP11-040", "OP08-069"],
+    ["EB05-001", "OP13-001"],
+    ["EB05-001", "OP01-002"]
   ],
-  "notes": "English-region (NA/EU/OC/LATAM/ME) rules. The Japanese and English (Asia) banned, restricted and banned-pair lists are the same, with the same effective date (October 12, 2026). Standard for April 1, 2026 to March 31, 2027 allows cards whose block icon (lower right corner) is 2 to 5, plus Block X. A card is legal if any printing of its card number is legal: alwaysLegal lists the Super Parallel Rare card numbers Bandai says stay legal regardless of block (updated August 21, 2026), plus card numbers reprinted with a newer block icon (OP01-016, OP04-016, EB04-061). treatedAsBlock lists card numbers Bandai treats as Block 4, legal from April 1, 2026 to March 31, 2029. Banned and banned-pair rules include parallel (alt-art) prints. From April 1, 2027 Standard moves to blocks 3 to 6."
+  "notes": "English-region (NA/EU/OC/LATAM/ME) rules. The Japanese and English (Asia) banned, restricted and banned-pair lists are the same, with the same effective date (November 27, 2026). Standard for April 1, 2026 to March 31, 2027 allows cards whose block icon (lower right corner) is 2 to 5, plus Block X. A card is legal if any printing of its card number is legal: alwaysLegal lists the Super Parallel Rare card numbers Bandai says stay legal regardless of block (updated November 20, 2026), plus card numbers reprinted with a newer block icon (OP01-016, OP04-016, EB04-061). treatedAsBlock lists card numbers Bandai treats as Block 4, legal from April 1, 2026 to March 31, 2029. Banned and banned-pair rules include parallel (alt-art) prints. From April 1, 2027 Standard moves to blocks 3 to 6."
 }

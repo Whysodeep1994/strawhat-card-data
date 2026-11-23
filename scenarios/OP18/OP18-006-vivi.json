@@ -1,0 +1,27 @@
+{
+  "name": "Koza has [Rush] and +1000 with [Nefeltari Vivi]",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "leader": "OP04-001",
+      "characters": [
+        {
+          "card": "OP18-006",
+          "playedThisTurn": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    }
+  ],
+  "expect": {
+    "prompt.kind": "counter",
+    "power.p1.characters.0": 5000
+  }
+}

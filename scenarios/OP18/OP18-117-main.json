@@ -1,0 +1,73 @@
+{
+  "name": "Buster Call trashes your Life and all Characters, then plays 5 {Vice Admiral} Characters",
+  "rules": ["10-2-3"],
+  "setup": {
+    "p1": {
+      "leader": "OP18-079",
+      "hand": ["OP18-117"],
+      "characters": ["TEST-FILLER"],
+      "life": 2,
+      "don": {
+        "active": 10
+      },
+      "deck": [
+        "OP18-098",
+        "OP18-104",
+        "OP18-106",
+        "OP18-111",
+        "OP18-112",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER",
+        "TEST-FILLER"
+      ]
+    },
+    "p2": {
+      "characters": ["TEST-C5-5000"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.0"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.0"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.0"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.0"]
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.0"]
+    }
+  ],
+  "expect": {
+    "p1.life": 0,
+    "p2.characters": 0,
+    "p1.characters": 5,
+    "p1.deck": 5
+  }
+}

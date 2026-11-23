@@ -1,0 +1,27 @@
+{
+  "name": "Smoker has [Banish] and +1000 with a {Navy} Leader",
+  "rules": ["10-1-6"],
+  "setup": {
+    "p1": {
+      "leader": "TEST-LEADER-NAVY",
+      "characters": ["OP18-007"]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p2"
+    }
+  ],
+  "expect": {
+    "p2.life": 3,
+    "p2.trash": 1,
+    "power.p1.characters.0": 6000
+  }
+}

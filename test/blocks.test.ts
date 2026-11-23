@@ -26,6 +26,7 @@ const SET_BLOCK: Record<string, number> = {
   OP15: 4,
   OP16: 5,
   OP17: 5,
+  OP18: 5,
   EB01: 2,
   EB02: 3,
   EB03: 4,

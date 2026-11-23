@@ -1,0 +1,13 @@
+{
+  "name": "Stansen has +2000 while you only have cost 12 or more Characters",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "characters": ["OP18-087", "OP18-086"]
+    }
+  },
+  "actions": [],
+  "expect": {
+    "power.p1.characters.0": 6000
+  }
+}

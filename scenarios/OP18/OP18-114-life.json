@@ -1,0 +1,28 @@
+{
+  "name": "Wanze arranges your Life cards",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP18-114"],
+      "don": {
+        "active": 3
+      },
+      "life": ["TEST-FILLER", "OP18-102"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.life.1", "p1.life.0"]
+    }
+  ],
+  "expect": {
+    "p1.life.0.cardId": "OP18-102"
+  }
+}

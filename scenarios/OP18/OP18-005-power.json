@@ -1,0 +1,13 @@
+{
+  "name": "Kung Fu Jugon gets +1000 for every [Kung Fu Jugon] on your turn",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "characters": ["OP18-005", "OP18-005"]
+    }
+  },
+  "actions": [],
+  "expect": {
+    "power.p1.characters.0": 2000
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "Monkey.D.Luffy sets himself active when attacking with 3 DON!!",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "leader": {
+        "card": "OP18-022",
+        "don": 3
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.leader",
+      "target": "p2.leader"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.leader.rested": false,
+    "modifiers.0.status": "noRefresh"
+  }
+}

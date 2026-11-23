@@ -1,0 +1,30 @@
+{
+  "name": "Funkfreed rests itself to give [Spandam] +1000",
+  "rules": ["10-2-11"],
+  "setup": {
+    "p1": {
+      "characters": ["OP18-108", "OP18-105"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 1
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.1"]
+    }
+  ],
+  "expect": {
+    "power.p1.characters.1": 2000
+  }
+}

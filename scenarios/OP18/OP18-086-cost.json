@@ -1,0 +1,13 @@
+{
+  "name": "Goldberg has +12 cost",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "characters": ["OP18-086"]
+    }
+  },
+  "actions": [],
+  "expect": {
+    "cost.p1.characters.0": 15
+  }
+}

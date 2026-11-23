@@ -1,0 +1,29 @@
+{
+  "name": "Tony Tony.Chopper gives 3 DON!! to your Leader and sets himself active",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "OP18-029",
+          "playedThisTurn": true
+        }
+      ],
+      "don": {
+        "rested": 3
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    }
+  ],
+  "expect": {
+    "p1.characters.0.rested": false,
+    "p1.leader.givenDon": 3
+  }
+}

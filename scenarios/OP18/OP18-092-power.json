@@ -1,0 +1,13 @@
+{
+  "name": "Roronoa Zoro has +3000 while there is a cost 12 Character",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "characters": ["OP18-092", "OP18-086"]
+    }
+  },
+  "actions": [],
+  "expect": {
+    "power.p1.characters.0": 5000
+  }
+}

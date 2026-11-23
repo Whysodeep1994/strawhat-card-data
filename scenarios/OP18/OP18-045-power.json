@@ -1,0 +1,14 @@
+{
+  "name": "Mr.Prince gets +1000 for every 5 Events in your trash",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "characters": ["OP18-045"],
+      "trash": ["TEST-KO-EVENT", "TEST-KO-EVENT", "TEST-KO-EVENT", "TEST-KO-EVENT", "TEST-KO-EVENT"]
+    }
+  },
+  "actions": [],
+  "expect": {
+    "power.p1.characters.0": 5000
+  }
+}
