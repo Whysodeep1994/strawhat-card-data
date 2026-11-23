@@ -1,0 +1,48 @@
+{
+  "name": "Can You Please Sail on the Ship I Made?!'s [Trigger] adds 2 Stages from the trash",
+  "rules": ["10-1-5"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "trash": ["OP18-075", "OP18-076"],
+      "don": {
+        "active": 1
+      },
+      "life": ["OP18-074", "TEST-FILLER"]
+    },
+    "p2": {
+      "leader": "TEST-LEADER-7000"
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p2",
+      "attacker": "p2.leader",
+      "target": "p1.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p1"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.trash.0", "p1.trash.1"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 2
+  }
+}

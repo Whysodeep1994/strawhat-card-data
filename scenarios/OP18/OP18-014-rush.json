@@ -1,0 +1,31 @@
+{
+  "name": "Portgas.D.Ace gives an {Alabasta} Character [Rush] when attacking",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": [
+        "OP18-014",
+        {
+          "card": "OP18-003",
+          "playedThisTurn": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.1"]
+    }
+  ],
+  "expect": {
+    "modifiers.0.keyword": "rush"
+  }
+}

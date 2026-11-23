@@ -1,0 +1,23 @@
+{
+  "name": "Catarina Devon's base power becomes your opponent's Leader's power",
+  "rules": ["10-2-5"],
+  "setup": {
+    "p1": {
+      "characters": ["OP18-082"]
+    },
+    "p2": {
+      "leader": "TEST-LEADER-7000"
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p1",
+      "attacker": "p1.characters.0",
+      "target": "p2.leader"
+    }
+  ],
+  "expect": {
+    "power.p1.characters.0": 7000
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Nico Robin sets a {Water Seven} card and a DON!! active at the end of your turn",
+  "rules": ["10-2-9"],
+  "setup": {
+    "p1": {
+      "characters": [
+        "OP18-031",
+        {
+          "card": "OP18-035",
+          "rested": true
+        }
+      ],
+      "don": {
+        "rested": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "endTurn",
+      "player": "p1"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.1"]
+    }
+  ],
+  "expect": {
+    "p1.characters.1.rested": false,
+    "p1.donActive": 1
+  }
+}

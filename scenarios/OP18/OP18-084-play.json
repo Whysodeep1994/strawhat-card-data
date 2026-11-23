@@ -1,0 +1,34 @@
+{
+  "name": "Saint Gunko rests 4 DON!! to play a {Holy Knights of God} Character from the trash",
+  "rules": ["10-2-11"],
+  "setup": {
+    "p1": {
+      "characters": ["OP18-084"],
+      "trash": ["OP18-064"],
+      "don": {
+        "active": 4
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 1
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.trash.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 2
+  }
+}

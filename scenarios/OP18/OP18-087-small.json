@@ -1,0 +1,13 @@
+{
+  "name": "Stansen gets nothing with a smaller Character",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "characters": ["OP18-087", "TEST-FILLER"]
+    }
+  },
+  "actions": [],
+  "expect": {
+    "power.p1.characters.0": 4000
+  }
+}

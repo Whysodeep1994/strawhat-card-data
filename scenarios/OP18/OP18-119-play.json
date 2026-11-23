@@ -1,0 +1,31 @@
+{
+  "name": "Saint Shamrock plays a {Holy Knights of God} Character from the trash on the turn he was played",
+  "rules": ["10-2-11"],
+  "setup": {
+    "p1": {
+      "characters": [
+        {
+          "card": "OP18-119",
+          "playedThisTurn": true
+        }
+      ],
+      "trash": ["OP18-064"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 1
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.trash.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters": 2
+  }
+}

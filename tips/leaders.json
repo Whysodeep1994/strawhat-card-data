@@ -579,6 +579,36 @@
     "source": "https://en.onepiece-cardgame.com/feature/deck/deck_108.php",
     "sourceName": "Bandai recommended deck guide"
   },
+  "OP18-001": {
+    "tip": "Build around Characters with both the Animal and Alabasta types: Karoo gives them [Rush] and +1000, so they can attack the turn they land. Each turn your first Alabasta Character to be K.O.'d draws you a card, so trading Characters keeps your hand full.",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569118",
+    "sourceName": "Official card text"
+  },
+  "OP18-021": {
+    "tip": "Every Stage in your hand is a +3000 Counter, so pack plenty of Stages. Once a turn, pay DON!! −1 to play a Stage costing 5 or less for free; the Straw Hat ships draw a card and give the DON!! back rested.",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569118",
+    "sourceName": "Official card text"
+  },
+  "OP18-022": {
+    "tip": "Give Luffy 3 DON!! and attack: once a turn he sets himself active again, so he can attack a second time. He then stays rested through your next Refresh Phase, so play Water Seven cards like Kokoro and Gonbe that set your Leader active.",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569118",
+    "sourceName": "Official card text"
+  },
+  "OP18-041": {
+    "tip": "Fill your deck with Baroque Works Characters with 3000 base power or more. Each time one is K.O.'d you draw a card and your opponent trashes one, so every trade costs your opponent more than it costs you.",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569118",
+    "sourceName": "Official card text"
+  },
+  "OP18-060": {
+    "tip": "Play Characters from your trash, like Saint Killingham and Saint Shamrock, to draw 2 and trash 1 once a turn. With an 8000 base power Character out, trash a card once a turn to add an extra active DON!!.",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569118",
+    "sourceName": "Official card text"
+  },
+  "OP18-079": {
+    "tip": "Fill your deck with CP cards. Rest Spandam and 2 DON!! and trash a CP card to put the top card of your deck on your Life, then defend with CP Triggers. Late in the game Buster Call can flood the board with Vice Admirals.",
+    "source": "https://en.onepiece-cardgame.com/cardlist/?series=569118",
+    "sourceName": "Official card text"
+  },
   "P-011": {
     "tip": "Pay 1 DON!! to give one of your Characters with no effect text +2000 each turn. Fill the deck with simple, high-power Characters and attack with them.",
     "source": "https://en.onepiece-cardgame.com/cardlist/?series=569901",

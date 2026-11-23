@@ -1,0 +1,13 @@
+{
+  "name": "Nefeltari Vivi gives your {Animal} {Alabasta} Characters +1000",
+  "rules": ["10-2-1"],
+  "setup": {
+    "p1": {
+      "characters": ["OP18-011", "OP18-003"]
+    }
+  },
+  "actions": [],
+  "expect": {
+    "power.p1.characters.1": 7000
+  }
+}

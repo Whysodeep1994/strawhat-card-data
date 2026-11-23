@@ -1,0 +1,20 @@
+{
+  "name": "Zoro & Sogeking makes your active [Monkey.D.Luffy] Leader with 3 DON!! 7000 base power",
+  "rules": ["10-2-1"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "leader": {
+        "card": "OP18-022",
+        "don": 3
+      },
+      "characters": ["OP18-027"]
+    },
+    "p2": {}
+  },
+  "actions": [],
+  "expect": {
+    "power.p1.leader": 7000
+  }
+}

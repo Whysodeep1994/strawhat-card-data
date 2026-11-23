@@ -1,0 +1,31 @@
+{
+  "name": "Saint Gunko trashes a card to add an active DON!! with an 8000 base power Character",
+  "rules": ["10-2-11"],
+  "setup": {
+    "p1": {
+      "leader": "OP18-060",
+      "characters": ["OP18-062"],
+      "hand": ["TEST-FILLER"],
+      "don": {
+        "deck": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 1
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.donActive": 1,
+    "p1.hand": 0
+  }
+}

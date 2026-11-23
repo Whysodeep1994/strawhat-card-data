@@ -1,0 +1,33 @@
+{
+  "name": "Tom adds 2 Stages from the trash",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP18-070", "TEST-FILLER"],
+      "trash": ["OP18-075", "OP18-076"],
+      "don": {
+        "active": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.trash.1", "p1.trash.2"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 2
+  }
+}

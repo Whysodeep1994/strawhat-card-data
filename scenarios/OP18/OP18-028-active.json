@@ -1,0 +1,30 @@
+{
+  "name": "Chimney rests itself and [Gonbe] to set your [Monkey.D.Luffy] Leader active",
+  "rules": ["10-2-11"],
+  "setup": {
+    "p1": {
+      "leader": {
+        "card": "OP18-022",
+        "rested": true
+      },
+      "characters": ["OP18-028", "OP18-025"]
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.characters.0",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.leader.rested": false,
+    "p1.characters.1.rested": true
+  }
+}

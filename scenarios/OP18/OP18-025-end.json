@@ -1,0 +1,27 @@
+{
+  "name": "Gonbe sets your Leader active at the end of your turn while rested",
+  "rules": ["10-2-9"],
+  "setup": {
+    "p1": {
+      "leader": {
+        "card": "TEST-LEADER",
+        "rested": true
+      },
+      "characters": [
+        {
+          "card": "OP18-025",
+          "rested": true
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "type": "endTurn",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "p1.leader.rested": false
+  }
+}

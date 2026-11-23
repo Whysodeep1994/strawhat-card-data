@@ -1,0 +1,42 @@
+{
+  "name": "Ten Finger Pistol's [Trigger] draws and places a cost 7 Character at the bottom",
+  "rules": ["10-1-5"],
+  "setup": {
+    "turn": 4,
+    "turnPlayer": "p2",
+    "p1": {
+      "leader": "TEST-LEADER-CP",
+      "life": ["OP18-115", "TEST-FILLER"]
+    },
+    "p2": {
+      "characters": ["TEST-C7-7000"],
+      "leader": "TEST-LEADER-7000"
+    }
+  },
+  "actions": [
+    {
+      "type": "attack",
+      "player": "p2",
+      "attacker": "p2.leader",
+      "target": "p1.leader"
+    },
+    {
+      "type": "pass",
+      "player": "p1"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p2.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 1,
+    "p2.characters": 0
+  }
+}

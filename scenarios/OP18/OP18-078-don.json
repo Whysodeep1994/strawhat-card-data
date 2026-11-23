@@ -1,0 +1,36 @@
+{
+  "name": "Mini-Merry gives 1 rested DON!! each to up to 4 cards",
+  "rules": ["10-2-11"],
+  "setup": {
+    "p1": {
+      "stage": "OP18-078",
+      "characters": ["TEST-FILLER", "TEST-FILLER"],
+      "don": {
+        "rested": 3
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.stage",
+      "effect": 1
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.leader", "p1.characters.0", "p1.characters.1"]
+    }
+  ],
+  "expect": {
+    "p1.leader.givenDon": 1,
+    "p1.characters.1.givenDon": 1,
+    "p1.donRested": 0
+  }
+}

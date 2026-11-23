@@ -1,0 +1,28 @@
+{
+  "name": "Iceburg adds 2 Stage or {Water Seven} cards from the top 5",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP18-061"],
+      "don": {
+        "active": 2
+      },
+      "deck": ["OP18-075", "OP18-035", "TEST-FILLER", "TEST-FILLER", "TEST-FILLER"]
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.deck.0", "p1.deck.1"]
+    }
+  ],
+  "expect": {
+    "p1.hand": 2
+  }
+}

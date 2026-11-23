@@ -1,0 +1,37 @@
+{
+  "name": "Franky plays a cost 5 Stage with DON!! −1",
+  "rules": ["10-2-11"],
+  "setup": {
+    "p1": {
+      "leader": "OP18-021",
+      "hand": ["OP18-075"],
+      "don": {
+        "active": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 1
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.hand.0"]
+    }
+  ],
+  "expect": {
+    "p1.stage.cardId": "OP18-075",
+    "p1.donActive": 0,
+    "p1.donRested": 1,
+    "p1.donDeck": 0
+  }
+}

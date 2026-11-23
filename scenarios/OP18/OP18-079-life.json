@@ -1,0 +1,30 @@
+{
+  "name": "Spandam rests 2 DON!!, himself and trashes a CP card to add a Life card",
+  "rules": ["10-2-11"],
+  "setup": {
+    "p1": {
+      "leader": "OP18-079",
+      "hand": ["OP18-102"],
+      "don": {
+        "active": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.leader",
+      "effect": 0
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.life": 5,
+    "p1.leader.rested": true
+  }
+}

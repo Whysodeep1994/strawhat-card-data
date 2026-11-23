@@ -1,0 +1,39 @@
+{
+  "name": "Thousand Sunny sets a {Straw Hat Crew} Character active with DON!! −2",
+  "rules": ["10-2-11"],
+  "setup": {
+    "p1": {
+      "stage": "OP18-075",
+      "characters": [
+        {
+          "card": "OP18-030",
+          "rested": true
+        }
+      ],
+      "don": {
+        "active": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "activate",
+      "player": "p1",
+      "card": "p1.stage",
+      "effect": 1
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    },
+    {
+      "type": "choose",
+      "player": "p1",
+      "cards": ["p1.characters.0"]
+    }
+  ],
+  "expect": {
+    "p1.characters.0.rested": false
+  }
+}

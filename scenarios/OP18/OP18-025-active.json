@@ -1,0 +1,22 @@
+{
+  "name": "Gonbe does nothing while active",
+  "rules": ["10-2-9"],
+  "setup": {
+    "p1": {
+      "leader": {
+        "card": "TEST-LEADER",
+        "rested": true
+      },
+      "characters": ["OP18-025"]
+    }
+  },
+  "actions": [
+    {
+      "type": "endTurn",
+      "player": "p1"
+    }
+  ],
+  "expect": {
+    "p1.leader.rested": true
+  }
+}

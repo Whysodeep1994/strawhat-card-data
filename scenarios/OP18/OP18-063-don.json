@@ -1,0 +1,30 @@
+{
+  "name": "Kiwi & Mozu K.O.s your Stage to add a rested DON!!",
+  "rules": ["10-2-6"],
+  "setup": {
+    "p1": {
+      "hand": ["OP18-063"],
+      "stage": "OP18-075",
+      "don": {
+        "active": 3,
+        "deck": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "playCard",
+      "player": "p1",
+      "card": "p1.hand.0"
+    },
+    {
+      "type": "confirm",
+      "player": "p1",
+      "accept": true
+    }
+  ],
+  "expect": {
+    "p1.stage": null,
+    "p1.donRested": 4
+  }
+}
